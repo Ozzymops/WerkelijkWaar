@@ -1,0 +1,91 @@
+﻿/* Default */
+body {
+    background-color: orange;
+}
+
+body.dark {
+    background-color: darkorange;
+}
+
+h1 {
+    font-weight: bold;
+    font-size: 36px;
+    color: white;
+    text-align: center;
+}
+
+h2 {
+    font-size: 24px;
+    color: black;
+    text-align: center;
+}
+
+h3 {
+    font-size: 12px;
+    color: black;
+}
+
+p {
+    color: black;
+}
+
+button {
+    background-color: rebeccapurple;
+    color: white;
+    border: 2px solid black;
+    font-family: 'Comic Sans MS';
+    width: 100px;
+    height: 50px;
+}
+
+input.submit {
+    background-color: rebeccapurple;
+    color: white;
+    border: 2px solid black;
+    font-family: 'Comic Sans MS';
+}
+
+/* 64x64 image */
+img.small-icon {
+    width: 32px;
+    height: 32px;
+}
+
+/* 256x256 image */
+img.large-icon {
+    width: 256px;
+    height: 256px;
+}
+
+/* Flexbox */
+div.flex {
+    display: flex;
+}
+
+div.flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+div.flex-column {
+    display: flex;
+    flex-direction: column;
+}
+
+div.flex-column-top {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+}
+
+/* Home */
+img.mascot-home {
+    width: 40%;
+    height: 40%;
+    float: left;
+    margin-left: -244px;
+}

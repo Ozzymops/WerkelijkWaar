@@ -1,8 +1,38 @@
 ﻿@{
-    ViewData["Title"] = "Home Page";
+    ViewData["Title"] = "Werkelijk Waar?";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
-</div>
+<head>
+    <link rel="stylesheet" type="text/css" href="~/css/main.css" />
+</head>
+
+<header>
+    <div class="flex-column-top">
+        <div>
+            <a asp-controller="Config" asp-action="Configuratiescherm"><img class="small_icon" src="~/content/image/Gear.png" title="Opties" alt="Opties" /></a>
+        </div>
+        <div>
+            <a asp-controller="Data" asp-action="Inzagescherm"><img class="small_icon" src="~/content/image/Trophy.png" title="Inzage" alt="Inzage" /></a>
+        </div>
+    </div>
+</header>
+
+<body>
+    <div>
+        <img src="~/content/image/Squirrel.png" class="mascot-home" />
+    </div>
+    <div class="flex-center" style="margin-top: 20%; flex-direction: column;">
+        <div>
+            <h1>Werkelijk Waar?</h1>
+        </div>
+        <div>
+            <h2>Houd anderen voor de gek, maar probeer zelf de waarheid te vinden.<br />Weet jij het meest geloofwaardige nepnieuws te schrijven?</h2>
+        </div>
+        <div>
+            <form method="post">
+                <button asp-controller="Account" asp-action="Register" class="button">Aanmelden</button>
+                <button asp-controller="Account" asp-action="Login" class="button">Inloggen</button>
+            </form>
+        </div>
+    </div>
+</body>
