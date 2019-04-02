@@ -9,6 +9,10 @@ namespace WerkelijkWaar.Controllers
 {
     public class AccountController : Controller
     {
+        // Standaard, overal toepasselijk
+        Classes.Logger l = new Classes.Logger();
+        Classes.DatabaseQueries dq = new Classes.DatabaseQueries();
+
         public IActionResult Login(int screen, int destination)
         {
             LoginModel lm = new LoginModel();
@@ -25,30 +29,33 @@ namespace WerkelijkWaar.Controllers
         /// <returns>View</returns>
         public IActionResult LoginUser(LoginModel lm)
         {
-            if (lm.Screen == 0)
+            if (dq.CheckLogin(lm.Username, lm.Password))
             {
-                if (lm.Destination == 0)
+                if (lm.Screen == 0)
                 {
-                    // Configuration
-                    return RedirectToAction("Privacy", "Home");
+                    if (lm.Destination == 0)
+                    {
+                        // Configuration
+                        return RedirectToAction("Privacy", "Home");
+                    }
+                    else if (lm.Destination == 1)
+                    {
+                        // Inzage
+                        return RedirectToAction("Privacy", "Home");
+                    }
                 }
-                else if (lm.Destination == 1)
+                else if (lm.Screen == 1)
                 {
-                    // Inzage
+                    // Game
                     return RedirectToAction("Index", "Home");
                 }
-            }
-            else if (lm.Screen == 1)
-            {
-                // Game
-                return View("Home");
-            }
-            else
-            {
-                return View("Login");
+                else
+                {
+                    return RedirectToAction("Login", "Account");
+                }
             }
 
-            return View("Home");
+            return RedirectToAction("Index", "Home");
         }
 
         public IActionResult Register()

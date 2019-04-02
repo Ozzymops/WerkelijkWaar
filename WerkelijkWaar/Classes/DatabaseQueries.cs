@@ -9,12 +9,17 @@ namespace WerkelijkWaar.Classes
 {
     public class DatabaseQueries
     {
+        // Standaard, overal toepasselijk
+        Classes.Logger l = new Classes.Logger();
+
         private string connectionString = ConfigurationManager.AppSettings["connectionString"];
 
         // CRUD
         #region CREATE
         public bool CheckLogin(string username, string password)
         {
+            l.WriteToLog("[CheckLogin]", "Checking log in for user " + username, 0);
+
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
                 SqlCommand command = new SqlCommand("LogIn", connection);
@@ -35,15 +40,18 @@ namespace WerkelijkWaar.Classes
 
                     if (command.Parameters["@responseMessage"].Value.ToString().Contains("Success"))
                     {
+                        l.WriteToLog("[CheckLogin]", "Log in found for user " + username, 1);
                         return true;
                     }
                     else
                     {
+                        l.WriteToLog("[CheckLogin]", "Log in not found for user " + username, 1);
                         return false;
                     }
                 }
                 catch (Exception ex)
                 {
+                    l.WriteToLog("[CheckLogin]", "Something went wrong: " + ex, 1);
                     return false;
                 }
             }
