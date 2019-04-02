@@ -15,6 +15,23 @@ namespace WerkelijkWaar.Controllers
             return View();
         }
 
+        public IActionResult GoToLogin(int scr, int des)
+        {
+            return RedirectToAction("Login", "Account", new { screen = scr, destination = des });
+        }
+
+        public IActionResult GoToConfig()
+        {
+            // Check login
+            return GoToLogin(0, 0);
+        }
+
+        public IActionResult GoToData()
+        {
+            // Check login
+            return GoToLogin(0, 1);
+        }
+
         public IActionResult Privacy()
         {
             return View();

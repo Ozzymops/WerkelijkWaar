@@ -33,16 +33,22 @@ button {
     background-color: rebeccapurple;
     color: white;
     border: 2px solid black;
-    font-family: 'Comic Sans MS';
     width: 100px;
     height: 50px;
 }
 
-input.submit {
+input[type=submit], input[type=button] {
     background-color: rebeccapurple;
     color: white;
     border: 2px solid black;
-    font-family: 'Comic Sans MS';
+    width: 100px;
+    height: 50px;
+}
+
+input[type=text], input[type=password] {
+    background-color: rebeccapurple;
+    color: white;
+    border: 2px solid black;
 }
 
 /* 64x64 image */

@@ -1,15 +1,61 @@
-﻿
-@{
-    Layout = null;
+﻿@{
+    ViewData["Title"] = "Werkelijk Waar - Log in";
 }
+@model WerkelijkWaar.Models.LoginModel
 
-<!DOCTYPE html>
-
-<html>
 <head>
-    <meta name="viewport" content="width=device-width" />
-    <title>Login</title>
+    <link rel="stylesheet" type="text/css" href="~/css/main.css" />
 </head>
+
+<header>
+    <div class="flex-column-top">
+        <div>
+            <a asp-controller="Home" asp-action="Index"><img class="small_icon" src="~/content/image/BackArrow.png" title="Ga terug" alt="Ga terug" /></a>
+        </div>
+    </div>
+</header>
+
 <body>
+    <div>
+        <div class="flex-center" style="margin-top: 33%;">
+            @if (Model.Screen == 0)
+            {
+                <div>
+                    <h1>Welkom student/docent!</h1>
+                    <form asp-controller="Account" asp-action="LoginUser">
+                        <input asp-for="Screen" value="@Model.Screen" type="hidden" />
+                        <input asp-for="Destination" value="@Model.Destination" type="hidden" />
+                        <div>
+                            <h1>Gebruikersnaam:</h1>
+                            <input asp-for="Username" type="text" />
+                        </div>
+                        <div>
+                            <h1>Wachtwoord:</h1>
+                            <input asp-for="Password" type="password" />
+                        </div>
+                        <input type="submit" value="Inloggen" />
+                    </form>
+                </div>
+            }
+            else if (Model.Screen == 1)
+            {
+                <div>
+                    <h1>Welkom!</h1>
+                    <form asp-controller="Account" asp-action="LoginUser">
+                        <input asp-for="Screen" value="@Model.Screen" type="hidden" />
+                        <input asp-for="Destination" value="@Model.Destination" type="hidden" />
+                        <div>
+                            <h1>Gebruikersnaam:</h1>
+                            <input asp-for="Username" type="text" />
+                        </div>
+                        <div>
+                            <h1>Wachtwoord:</h1>
+                            <input asp-for="Password" type="password" />
+                        </div>
+                        <input type="submit" value="Inloggen" />
+                    </form>
+                </div>
+            }
+        </div>
+    </div>
 </body>
-</html>
