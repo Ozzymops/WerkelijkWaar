@@ -13,7 +13,6 @@
 
 
   <ItemGroup>
-    <Folder Include="Classes\" />
     <Folder Include="wwwroot\content\image\" />
     <Folder Include="wwwroot\content\audio\" />
   </ItemGroup>
