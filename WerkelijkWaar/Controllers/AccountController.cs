@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
@@ -86,6 +87,47 @@ namespace WerkelijkWaar.Controllers
                 else
                 {
                     return RedirectToAction("Login", "Account");
+                }
+            }
+
+            return RedirectToAction("Index", "Home");
+        }
+
+        public IActionResult RegisterUser(RegisterModel rm)
+        {
+            // Check inhoud
+            if (rm != null)
+            {
+                bool valid = false;
+                var reg = new Regex("[^a-zA-Z0-9_.]");
+
+                // Input validatie
+                if (!reg.IsMatch(rm.Name))
+                {
+                    if (!reg.IsMatch(rm.Surname))
+                    {
+                        if (rm.RoleId.GetType() == typeof(int))
+                        {
+                            // check code
+                            valid = true;
+                        }
+                    }
+                }
+                
+                if (valid)
+                {
+                    // register and login
+                    bool status = (dq.RegisterUser(new Classes.User
+                    {
+                        Name = rm.Name,
+                        Surname = rm.Surname,
+                        Username = rm.Surname,
+                        Password = rm.Password,
+                        RoleId = rm.RoleId
+                    }));
+
+                    int id = dq.CheckLogin(rm.Username, rm.Password);
+                    HttpContext.Session.SetString("User", Newtonsoft.Json.JsonConvert.SerializeObject(dq.RetrieveUser(id)));
                 }
             }
 

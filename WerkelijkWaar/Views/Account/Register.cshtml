@@ -1,0 +1,45 @@
+﻿@{
+    ViewData["Title"] = "Werkelijk Waar - Registreren";
+}
+@model WerkelijkWaar.Models.RegisterModel
+
+<header>
+    <div class="flex-column-top">
+        <div>
+            <a asp-controller="Home" asp-action="Index"><img class="small_icon" src="~/content/image/BackArrow.png" title="Ga terug" alt="Ga terug" /></a>
+        </div>
+    </div>
+</header>
+
+<body>
+    <div>
+        <div class="flex-center">
+            <div>
+                <form asp-controller="Account" asp-action="RegisterUser">
+                    <input asp-for="RoleId" value="0" type="hidden" />
+                    <div>
+                        <h2>Voornaam:</h2>
+                        <input asp-for="Name" type="text" />
+                    </div>
+                    <div>
+                        <h2>Achternaam:</h2>
+                        <input asp-for="Surname" type="text" />
+                    </div>
+                    <div style="margin-top: 20px;">
+                        <h2>Gebruikersnaam:</h2>
+                        <input asp-for="Username" type="text" />
+                    </div>
+                    <div>
+                        <h2>Wachtwoord:</h2>
+                        <input asp-for="Password" type="password" />
+                    </div>
+                    <div>
+                        <h2>Klascode:</h2>
+                        <input asp-for="Code" type="text" />
+                    </div>
+                    <input type="submit" value="Registreren" />
+                </form>
+            </div>
+        </div>
+    </div>
+</body>

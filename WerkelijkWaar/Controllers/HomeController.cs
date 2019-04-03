@@ -21,6 +21,11 @@ namespace WerkelijkWaar.Controllers
             return RedirectToAction("Login", "Account", new { screen = scr, destination = des });
         }
 
+        public IActionResult GoToRegister()
+        {
+            return RedirectToAction("Register", "Account");
+        }
+
         public IActionResult GoToConfig()
         {
             return GoToLogin(0, 0);

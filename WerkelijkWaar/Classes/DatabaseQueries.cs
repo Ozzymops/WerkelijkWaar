@@ -16,6 +16,56 @@ namespace WerkelijkWaar.Classes
 
         // CRUD
         #region CREATE
+        public bool RegisterUser(User user)
+        {
+            l.WriteToLog("[RegisterUser]", "Trying to register user " + user.Name, 0);
+
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                SqlCommand command = new SqlCommand("AddUser", connection);
+                command.CommandType = System.Data.CommandType.StoredProcedure;
+
+                command.Parameters.Add(new SqlParameter("@pRoleId", user.RoleId));
+                command.Parameters.Add(new SqlParameter("@pGroup", user.Group));
+                command.Parameters.Add(new SqlParameter("@pName", user.Name));
+                command.Parameters.Add(new SqlParameter("@pSurname", user.Surname));
+                command.Parameters.Add(new SqlParameter("@pUsername", user.Username));
+                command.Parameters.Add(new SqlParameter("@pPassword", user.Password));
+
+                var output = new SqlParameter("@responseMessage", System.Data.SqlDbType.NVarChar);
+                output.Direction = System.Data.ParameterDirection.Output;
+                output.Size = 255;
+                command.Parameters.Add(output);
+
+                try
+                {
+                    connection.Open();
+                    command.ExecuteNonQuery();
+
+                    if (command.Parameters["@responseMessage"].Value.ToString().Contains("Success"))
+                    {
+                        l.WriteToLog("[RegisterUser]", "User " + user.Name + " successfully added.", 1);
+                        return true;
+                    }
+                    else
+                    {
+                        l.WriteToLog("[RegisterUser]", "Failed to add user " + user.Name + ".", 1);
+                        return false;
+                    }
+
+                }
+                catch (Exception ex)
+                {
+                    l.WriteToLog("[RegisterUser]", ex.ToString(), 1);
+                    return false;
+                }
+            }
+
+        }
+
+        #endregion
+
+        #region READ
         /// <summary>
         /// Check of de gegeven combinatie bestaat in de database.
         /// </summary>
@@ -106,7 +156,8 @@ namespace WerkelijkWaar.Classes
                             {
                                 l.WriteToLog("[RetrieveUser]", "Found user with id " + userId, 1);
 
-                                return new User {
+                                return new User
+                                {
                                     Id = (int)reader["Id"],
                                     Group = (int)reader["uGroup"],
                                     Name = (string)reader["Name"],
@@ -129,9 +180,6 @@ namespace WerkelijkWaar.Classes
                 }
             }
         }
-        #endregion
-
-        #region READ
         #endregion
 
         #region UPDATE
