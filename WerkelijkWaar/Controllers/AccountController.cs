@@ -107,6 +107,21 @@ namespace WerkelijkWaar.Controllers
             return View();
         }
 
+        public IActionResult EditAccount()
+        {
+            return View();
+        }
+
+        public IActionResult RemoveAccount()
+        {
+            return View();
+        }
+
+        public IActionResult DownloadAccount()
+        {
+            return View();
+        }
+
         public IActionResult Personalize()
         {
             return View();

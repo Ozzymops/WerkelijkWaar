@@ -118,3 +118,39 @@ Startup - 11:41:29 : woensdag 3 april 2019
 >Found user with id 7
 ---[LOGGER  MSG  END]---
 
+---[LOGGER MSG START]---
+Startup - 11:44:05 : woensdag 3 april 2019
+>Starting server...
+>Server is up and running!
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+Startup - 11:46:48 : woensdag 3 april 2019
+>Starting server...
+>Server is up and running!
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+Startup - 12:08:26 : woensdag 3 april 2019
+>Starting server...
+>Server is up and running!
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+Startup - 12:09:11 : woensdag 3 april 2019
+>Starting server...
+>Server is up and running!
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[CheckLogin] - 12:09:42 : woensdag 3 april 2019
+>Checking log in for user test
+>Log in found for user with Id 7
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[RetrieveUser] - 12:09:42 : woensdag 3 april 2019
+>Attempting to retrieve user with id 7
+>Found user with id 7
+---[LOGGER  MSG  END]---
+
