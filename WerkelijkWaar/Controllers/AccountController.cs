@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using WerkelijkWaar.Models;
 
@@ -13,8 +14,37 @@ namespace WerkelijkWaar.Controllers
         Classes.Logger l = new Classes.Logger();
         Classes.DatabaseQueries dq = new Classes.DatabaseQueries();
 
+        /// <summary>
+        /// Navigeer naar Login.cshtml.
+        /// </summary>
+        /// <param name="screen">Schermtype.</param>
+        /// <param name="destination">Bestemming.</param>
+        /// <returns>View</returns>
         public IActionResult Login(int screen, int destination)
         {
+            // Check if logged in
+            if (!String.IsNullOrEmpty(HttpContext.Session.GetString("User")))
+            {
+                if (screen == 0)
+                {
+                    if (destination == 0)
+                    {
+                        // Configuration
+                        return RedirectToAction("Privacy", "Home");
+                    }
+                    else if (destination == 1)
+                    {
+                        // Inzage
+                        return RedirectToAction("Privacy", "Home");
+                    }
+                }
+                else if (screen == 1)
+                {
+                    // Game
+                    return RedirectToAction("Index", "Home");
+                }
+            }
+
             LoginModel lm = new LoginModel();
             lm.Screen = screen;
             lm.Destination = destination;
@@ -29,8 +59,12 @@ namespace WerkelijkWaar.Controllers
         /// <returns>View</returns>
         public IActionResult LoginUser(LoginModel lm)
         {
-            if (dq.CheckLogin(lm.Username, lm.Password))
+            int id = dq.CheckLogin(lm.Username, lm.Password);
+
+            if (id != 0)
             {
+                HttpContext.Session.SetString("User", Newtonsoft.Json.JsonConvert.SerializeObject(dq.RetrieveUser(id)));
+
                 if (lm.Screen == 0)
                 {
                     if (lm.Destination == 0)
@@ -55,6 +89,16 @@ namespace WerkelijkWaar.Controllers
                 }
             }
 
+            return RedirectToAction("Index", "Home");
+        }
+
+        /// <summary>
+        /// Verwijder de huidige sessie. Dit zorgt voor een logout.
+        /// </summary>
+        /// <returns>View</returns>
+        public IActionResult Logout()
+        {
+            HttpContext.Session.Remove("User");
             return RedirectToAction("Index", "Home");
         }
 

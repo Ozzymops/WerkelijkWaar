@@ -16,7 +16,13 @@ namespace WerkelijkWaar.Classes
 
         // CRUD
         #region CREATE
-        public bool CheckLogin(string username, string password)
+        /// <summary>
+        /// Check of de gegeven combinatie bestaat in de database.
+        /// </summary>
+        /// <param name="username">Gebruikersnaam</param>
+        /// <param name="password">Wachtwoord</param>
+        /// <returns>User ID</returns>
+        public int CheckLogin(string username, string password)
         {
             l.WriteToLog("[CheckLogin]", "Checking log in for user " + username, 0);
 
@@ -40,19 +46,86 @@ namespace WerkelijkWaar.Classes
 
                     if (command.Parameters["@responseMessage"].Value.ToString().Contains("Success"))
                     {
-                        l.WriteToLog("[CheckLogin]", "Log in found for user " + username, 1);
-                        return true;
+                        command = new SqlCommand("SELECT [Id] FROM [User] WHERE [Username] = @username", connection);
+                        command.Parameters.Add(new SqlParameter("@username", username));
+
+                        connection.Close();
+                        connection.Open();
+
+                        using (SqlDataReader reader = command.ExecuteReader())
+                        {
+                            if (reader.HasRows)
+                            {
+                                while (reader.Read())
+                                {
+                                    l.WriteToLog("[CheckLogin]", "Log in found for user with Id " + (int)reader["Id"], 1);
+                                    return (int)reader["Id"];
+                                }
+                            }
+                            l.WriteToLog("[CheckLogin]", "Log in not found for user " + username, 1);
+                            return 0;
+                        }
                     }
                     else
                     {
                         l.WriteToLog("[CheckLogin]", "Log in not found for user " + username, 1);
-                        return false;
+                        return 0;
                     }
                 }
                 catch (Exception ex)
                 {
                     l.WriteToLog("[CheckLogin]", "Something went wrong: " + ex, 1);
-                    return false;
+                    return 0;
+                }
+            }
+        }
+
+        /// <summary>
+        /// Haal een gebruiker op uit de database inclusief alle persoonsgegevens.
+        /// </summary>
+        /// <param name="userId">Id</param>
+        /// <returns>User</returns>
+        public User RetrieveUser(int userId)
+        {
+            l.WriteToLog("[RetrieveUser]", "Attempting to retrieve user with id " + userId, 0);
+
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                SqlCommand command = new SqlCommand("SELECT * FROM [User] WHERE [Id] = @id", connection);
+                command.Parameters.Add(new SqlParameter("@id", userId));
+
+                try
+                {
+                    connection.Open();
+
+                    using (SqlDataReader reader = command.ExecuteReader())
+                    {
+                        if (reader.HasRows)
+                        {
+                            while (reader.Read())
+                            {
+                                l.WriteToLog("[RetrieveUser]", "Found user with id " + userId, 1);
+
+                                return new User {
+                                    Id = (int)reader["Id"],
+                                    Group = (int)reader["uGroup"],
+                                    Name = (string)reader["Name"],
+                                    Surname = (string)reader["Surname"],
+                                    Username = (string)reader["Username"],
+                                    RoleId = Convert.ToInt32(reader["RoleId"]),
+                                    LoginAttempts = Convert.ToInt32(reader["Attempts"])
+                                };
+                            }
+                        }
+                    }
+
+                    l.WriteToLog("[RetrieveUser]", "Could not find user with id " + userId, 1);
+                    return null;
+                }
+                catch (Exception ex)
+                {
+                    l.WriteToLog("[RetrieveUser]", "Something went wrong: " + ex, 1);
+                    return null;
                 }
             }
         }

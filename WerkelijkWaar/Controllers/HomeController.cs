@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using WerkelijkWaar.Models;
 
@@ -22,13 +23,11 @@ namespace WerkelijkWaar.Controllers
 
         public IActionResult GoToConfig()
         {
-            // Check login
             return GoToLogin(0, 0);
         }
 
         public IActionResult GoToData()
         {
-            // Check login
             return GoToLogin(0, 1);
         }
 

@@ -16,7 +16,11 @@ namespace WerkelijkWaar
     {
         public Startup(IConfiguration configuration)
         {
+            Classes.Logger l = new Classes.Logger();
+
+            l.WriteToLog("Startup", "Starting server...", 0);
             Configuration = configuration;
+            l.WriteToLog("Startup", "Server is up and running!", 1);
         }
 
         public IConfiguration Configuration { get; }
@@ -31,7 +35,8 @@ namespace WerkelijkWaar
                 options.MinimumSameSitePolicy = SameSiteMode.None;
             });
 
-
+            services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
+            services.AddSession(s => s.IdleTimeout = TimeSpan.FromMinutes(30));
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
         }
 
@@ -52,6 +57,7 @@ namespace WerkelijkWaar
             app.UseHttpsRedirection();
             app.UseStaticFiles();
             app.UseCookiePolicy();
+            app.UseSession();
 
             app.UseMvc(routes =>
             {

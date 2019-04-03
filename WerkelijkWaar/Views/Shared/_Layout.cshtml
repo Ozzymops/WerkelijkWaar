@@ -1,4 +1,20 @@
-﻿<!DOCTYPE html>
+﻿@using Microsoft.AspNetCore.Http;
+@using Microsoft.AspNetCore.Http.Extensions;
+@using WerkelijkWaar.Classes;
+@inject Microsoft.AspNetCore.Http.IHttpContextAccessor HttpContextAccessor
+
+@{
+    User user = new User();
+
+    bool sessionExists = (!String.IsNullOrEmpty(HttpContextAccessor.HttpContext.Session.GetString("User")));
+
+    if (sessionExists)
+    {
+        user = Newtonsoft.Json.JsonConvert.DeserializeObject<User>(HttpContextAccessor.HttpContext.Session.GetString("User"));
+    }
+}
+
+<!DOCTYPE html>
 <html>
 <head>
     <meta charset="utf-8" />
@@ -13,10 +29,25 @@
               asp-fallback-href="~/lib/bootstrap/dist/css/bootstrap.min.css"
               asp-fallback-test-class="sr-only" asp-fallback-test-property="position" asp-fallback-test-value="absolute"
               crossorigin="anonymous"
-              integrity="sha256-eSi1q2PG6J7g7ib17yAaWMcrr5GrtohYChqibrV7PBE="/>
+              integrity="sha256-eSi1q2PG6J7g7ib17yAaWMcrr5GrtohYChqibrV7PBE=" />
     </environment>
+    <link rel="stylesheet" type="text/css" href="~/css/main.css" />
 </head>
 <body>
+    <header>
+        <ul style="list-style-type: none; margin: 0px;">
+            @if (sessionExists)
+            {
+                <li>
+                    Welkom, @user.Name!
+                </li>
+                <li>
+                    <a asp-controller="Account" asp-action="Logout">Uitloggen</a>
+                </li>
+            }
+        </ul>
+    </header>
+
     <div class="container">
         <partial name="_CookieConsentPartial" />
         <main role="main" class="pb-3">
