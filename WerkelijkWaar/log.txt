@@ -43,3 +43,96 @@ Startup - 14:15:25 : donderdag 4 april 2019
 >Deleted user with id 14
 ---[LOGGER  MSG  END]---
 
+---[LOGGER MSG START]---
+Startup - 14:19:37 : donderdag 4 april 2019
+>Starting server...
+>Server is up and running!
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[CheckLogin] - 14:19:43 : donderdag 4 april 2019
+>Checking log in for user dsa
+---[LOGGER MSG START]---
+[RetrieveUser] - 14:19:43 : donderdag 4 april 2019
+>Attempting to retrieve user with id 13
+>Found user with id 13
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[DeleteUser] - 14:19:50 : donderdag 4 april 2019
+>Attempting to delete user with id 13
+>Deleted user with id 13
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[CheckLogin] - 14:19:55 : donderdag 4 april 2019
+>Checking log in for user JMuris
+---[LOGGER MSG START]---
+[RetrieveUser] - 14:19:55 : donderdag 4 april 2019
+>Attempting to retrieve user with id 2
+>Found user with id 2
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+Startup - 14:21:39 : donderdag 4 april 2019
+>Starting server...
+>Server is up and running!
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[CheckLogin] - 14:21:44 : donderdag 4 april 2019
+>Checking log in for user test
+---[LOGGER MSG START]---
+[RetrieveUser] - 14:21:44 : donderdag 4 april 2019
+>Attempting to retrieve user with id 7
+>Found user with id 7
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[CheckLogin] - 14:21:51 : donderdag 4 april 2019
+>Checking log in for user 
+>Something went wrong: System.Data.SqlClient.SqlException (0x80131904): Procedure or function 'LogIn' expects parameter '@pUsername', which was not supplied.
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, SqlDataReader ds)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite, String method)
+   at System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, Boolean sendToPipe, Int32 timeout, Boolean asyncWrite, String methodName)
+   at System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   at WerkelijkWaar.Classes.DatabaseQueries.CheckLogin(String username, String password) in C:\Users\Justin Muris\source\repos\WerkelijkWaar\WerkelijkWaar\Classes\DatabaseQueries.cs:line 99
+ClientConnectionId:9db1c1fd-c5cd-434b-af0c-736b0f4eaf5a
+Error Number:201,State:4,Class:16
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+Startup - 14:22:52 : donderdag 4 april 2019
+>Starting server...
+>Server is up and running!
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[CheckLogin] - 14:22:57 : donderdag 4 april 2019
+>Checking log in for user test
+---[LOGGER MSG START]---
+[RetrieveUser] - 14:22:57 : donderdag 4 april 2019
+>Attempting to retrieve user with id 7
+>Found user with id 7
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+Startup - 14:23:47 : donderdag 4 april 2019
+>Starting server...
+>Server is up and running!
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[CheckLogin] - 14:23:52 : donderdag 4 april 2019
+>Checking log in for user test
+---[LOGGER MSG START]---
+[RetrieveUser] - 14:23:52 : donderdag 4 april 2019
+>Attempting to retrieve user with id 7
+>Found user with id 7
+---[LOGGER  MSG  END]---
+

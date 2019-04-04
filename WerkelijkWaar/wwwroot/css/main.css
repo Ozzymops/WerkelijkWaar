@@ -29,6 +29,12 @@ p {
     color: black;
 }
 
+p.center {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
 button {
     background-color: rebeccapurple;
     color: white;
@@ -88,6 +94,11 @@ img.large-icon {
     height: 256px;
 }
 
+img.large-icon.center {
+    margin-left: auto;
+    margin-right: auto;
+}
+
 /* Flexbox */
 div.flex {
     display: flex;
@@ -111,6 +122,11 @@ div.flex-column-top {
     position: absolute;
     top: 0px;
     right: 0px;
+}
+
+centered {
+    margin-left: auto;
+    margin-right: auto;
 }
 
 /* Home */

@@ -39,7 +39,7 @@
             @if (sessionExists)
             {
                 <li>
-                    Welkom, @user.Name!
+                    Welkom, @Html.ActionLink(@user.Name, "AccountView", "Account")
                 </li>
                 <li>
                     <a asp-controller="Account" asp-action="Logout">Uitloggen</a>

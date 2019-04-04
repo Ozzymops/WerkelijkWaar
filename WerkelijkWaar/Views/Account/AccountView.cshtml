@@ -16,12 +16,26 @@
         <div class="flex-center">
             <div>
                 <h1>Welkom @Model.User.Name @Model.User.Surname!</h1>
+                <hr />
                 <div>
-
+                    <img src="~/content/image/MissingAvatar.png" class="large-icon.center" alt="Foto van @Model.User.Name" title="Foto van @Model.User.Name" />
                 </div>
                 <div>
+                    <p class="center">Voornaam: @Model.User.Name</p>
+                    <p class="center">Achternaam: @Model.User.Surname</p>
+                    <p class="center">Gebruikersnaam: @Model.User.Username</p>
+                    <p class="center">Groep: @Model.User.Group</p>
+                </div>
+                <hr />
+                <div>
+                    <form asp-action="EditAccount" asp-controller="Account">
+                        <input type="submit" value="Accountinformatie bewerken" style="width: 300px;" class="center" />
+                    </form>
+                </div>
+                <hr />
+                <div>
                     <form asp-action="DeleteAccount" asp-controller="Account" asp-route-id="@Model.User.Id">
-                        <input type="submit" value="Verwijder account" style="width: 200px;" />
+                        <input type="submit" value="Verwijder account" style="width: 300px;" class="center" />
                     </form>
                 </div>
             </div>
