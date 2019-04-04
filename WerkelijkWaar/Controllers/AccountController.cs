@@ -236,8 +236,6 @@ namespace WerkelijkWaar.Controllers
             {
                 Classes.User newUser = new Classes.User { Id = eam.Id };
 
-                l.WriteToLog("[EditGenericData]", eam.Id + " " + eam.NewName + " " + eam.NewSurname + " " + eam.NewUsername, 0);
-
                 // Check data
                 if (String.IsNullOrEmpty(eam.NewName) || String.IsNullOrEmpty(eam.NewSurname) || String.IsNullOrEmpty(eam.NewUsername))
                 {
