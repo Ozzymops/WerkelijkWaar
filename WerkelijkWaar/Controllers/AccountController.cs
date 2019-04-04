@@ -93,6 +93,11 @@ namespace WerkelijkWaar.Controllers
             return RedirectToAction("Index", "Home");
         }
 
+        /// <summary>
+        /// Registreer een gebruiker.
+        /// </summary>
+        /// <param name="rm">RegisterModel</param>
+        /// <returns>View</returns>
         public IActionResult RegisterUser(RegisterModel rm)
         {
             // Check inhoud
