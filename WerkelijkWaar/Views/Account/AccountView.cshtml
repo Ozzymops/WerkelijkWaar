@@ -1,0 +1,30 @@
+﻿@{
+    ViewData["Title"] = "Werkelijk Waar - Registreren";
+}
+@model WerkelijkWaar.Models.AccountViewModel
+
+<header>
+    <div class="flex-column-top">
+        <div>
+            <a asp-controller="Home" asp-action="Index"><img class="small_icon" src="~/content/image/BackArrow.png" title="Ga terug" alt="Ga terug" /></a>
+        </div>
+    </div>
+</header>
+
+<body>
+    <div>
+        <div class="flex-center">
+            <div>
+                <h1>Welkom @Model.User.Name @Model.User.Surname!</h1>
+                <div>
+
+                </div>
+                <div>
+                    <form asp-action="DeleteAccount" asp-controller="Account" asp-route-id="@Model.User.Id">
+                        <input type="submit" value="Verwijder account" style="width: 200px;" />
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>

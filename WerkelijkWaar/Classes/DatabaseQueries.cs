@@ -192,6 +192,36 @@ namespace WerkelijkWaar.Classes
         #endregion
 
         #region DELETE
+        public bool DeleteUser(int userId)
+        {
+            l.WriteToLog("[DeleteUser]", "Attempting to delete user with id " + userId, 0);
+
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                SqlCommand command = new SqlCommand("DELETE FROM [User] WHERE [Id] = @id", connection);
+                command.Parameters.Add(new SqlParameter("@id", userId));
+
+                try
+                {
+                    connection.Open();
+                    int rows = command.ExecuteNonQuery();
+                    
+                    if (rows > 0)
+                    {
+                        l.WriteToLog("[DeleteUser]", "Deleted user with id " + userId, 1);
+                        return true;
+                    }
+
+                    l.WriteToLog("[DeleteUser]", "Could not find user with id " + userId, 1);
+                    return false;
+                }
+                catch (Exception ex)
+                {
+                    l.WriteToLog("[DeleteUser]", "Something went wrong: " + ex, 1);
+                    return false;
+                }
+            }
+        }
         #endregion
     }
 }

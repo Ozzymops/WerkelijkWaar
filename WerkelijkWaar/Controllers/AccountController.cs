@@ -188,14 +188,48 @@ namespace WerkelijkWaar.Controllers
             return View();
         }
 
+        /// <summary>
+        /// Open de accountoverzicht met gebruikersdata.
+        /// </summary>
+        /// <returns>View</returns>
+        public IActionResult AccountView()
+        {
+            // check if logged in
+            if (!String.IsNullOrEmpty(HttpContext.Session.GetString("User")))
+            {
+                AccountViewModel avm = new AccountViewModel();
+                avm.User = Newtonsoft.Json.JsonConvert.DeserializeObject<Classes.User>(HttpContext.Session.GetString("User"));
+
+                return View(avm);
+            }
+
+            return RedirectToAction("Index", "Home");
+        }
+
         public IActionResult EditAccount()
         {
             return View();
         }
 
-        public IActionResult RemoveAccount()
+        public IActionResult DeleteAccount(int id)
         {
-            return View();
+            // check if logged in as the user it's trying to destroy
+            if (!String.IsNullOrEmpty(HttpContext.Session.GetString("User")))
+            {
+                Classes.User tempUser = Newtonsoft.Json.JsonConvert.DeserializeObject<Classes.User>(HttpContext.Session.GetString("User"));
+
+                if (tempUser.Id == id)
+                {
+                    bool deleted = dq.DeleteUser(id);
+
+                    if (deleted)
+                    {
+                        HttpContext.Session.Remove("User");
+                    }
+                }
+            }
+
+            return RedirectToAction("Index", "Home");
         }
 
         public IActionResult DownloadAccount()
