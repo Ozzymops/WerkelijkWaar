@@ -1,0 +1,58 @@
+﻿@{
+    ViewData["Title"] = "Werkelijk Waar - Accountgegevens wijzigen";
+}
+@model WerkelijkWaar.Models.EditAccountModel
+
+<header>
+    <div class="flex-column-top">
+        <div>
+            <a asp-controller="Account" asp-action="AccountView"><img class="small_icon" src="~/content/image/BackArrow.png" title="Ga terug" alt="Ga terug" /></a>
+        </div>
+    </div>
+</header>
+
+<body>
+    <div>
+        <div class="flex-center">
+            <div>
+                <h1>Accountinstellingen wijzigen</h1>
+                <hr />
+                <div>
+                    @if (!String.IsNullOrEmpty(Model.StatusString))
+                    {
+                        <h2>@Model.StatusString</h2>
+                    }
+                </div>
+                <div>
+                    <img src="~/content/image/MissingAvatar.png" class="small-icon.center" alt="Foto van @Model.User.Name" title="Foto van @Model.User.Name" />
+                    <form>
+                        <p class="center">Avatar veranderen: <input type="file" /></p>
+                        <input type="submit" value="Upload" class="center" style="width: 250px;" />
+                        <input type="submit" value="Kies een standaard avatar" class="center" style="margin-top: 10px; width: 250px;" />
+                    </form>
+                </div>
+                <hr />
+                <div>
+                    <form asp-action="EditGenericData" asp-controller="Account">
+                        <h2>Inloggegevens:</h2>
+                        <input type="hidden" asp-for="Id" value="@Model.User.Id" />
+                        <p class="center">Voornaam veranderen: <input asp-for="NewName" type="text" class="center" value="@Model.User.Name" /></p>
+                        <p class="center">Achternaam veranderen: <input asp-for="NewSurname" type="text" class="center" value="@Model.User.Surname" /></p>
+                        <p class="center">Gebruikersnaam veranderen: <input asp-for="NewUsername" type="text" class="center" value="@Model.User.Username" /></p>
+                        <input type="submit" value="Gegevens wijzigen" class="center" style="width: 300px;" />
+                    </form>
+                    <hr />
+                    <form>
+                        <div>
+                            <h2>Wachtwoord wijzigen:</h2>
+                            <p class="center">Oud wachtwoord: <input type="password" class="center" /></p>
+                            <p class="center">Nieuw wachtwoord: <input type="password" class="center" /></p>
+                            <p class="center">Nieuw wachtwoord bevestigen: <input type="password" class="center" /></p>
+                        </div>
+                        <input type="submit" value="Wachtwoord wijzigen" class="center" style="width: 300px;" />
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>

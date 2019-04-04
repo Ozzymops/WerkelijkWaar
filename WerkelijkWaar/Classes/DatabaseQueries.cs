@@ -60,7 +60,6 @@ namespace WerkelijkWaar.Classes
                     return false;
                 }
             }
-
         }
 
         #endregion
@@ -189,9 +188,55 @@ namespace WerkelijkWaar.Classes
         #endregion
 
         #region UPDATE
+        /// <summary>
+        /// Wijzig de gegevens van een gebruiker.
+        /// </summary>
+        /// <param name="user">User</param>
+        /// <returns>true or false</returns>
+        public bool EditUser(User user)
+        {
+            l.WriteToLog("[EditUser]", "Trying to edit user " + user.Name, 0);
+
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                SqlCommand command = new SqlCommand();
+
+                command = new SqlCommand("UPDATE [User] SET [Name] = @name, [Surname] = @surname, [Username] = @username WHERE [Id] = @id", connection);
+                command.Parameters.Add(new SqlParameter("@name", user.Name));
+                command.Parameters.Add(new SqlParameter("@surname", user.Surname));
+                command.Parameters.Add(new SqlParameter("@username", user.Username));
+                command.Parameters.Add(new SqlParameter("@id", user.Id));
+
+                try
+                {
+                    connection.Open();
+
+                    int rows = command.ExecuteNonQuery();
+
+                    if (rows > 0)
+                    {
+                        l.WriteToLog("[EditUser]", "Edited user with id " + user.Id, 1);
+                        return true;
+                    }
+
+                    l.WriteToLog("[EditUser]", "Could not find user with id " + user.Id, 1);
+                    return false;
+                }
+                catch (Exception ex)
+                {
+                    l.WriteToLog("[EditUser]", ex.ToString(), 1);
+                    return false;
+                }
+            }
+        }
         #endregion
 
         #region DELETE
+        /// <summary>
+        /// Verwijder een gebruiker. (inclusief scores/verhalen)
+        /// </summary>
+        /// <param name="userId">User ID</param>
+        /// <returns>true or false</returns>
         public bool DeleteUser(int userId)
         {
             l.WriteToLog("[DeleteUser]", "Attempting to delete user with id " + userId, 0);

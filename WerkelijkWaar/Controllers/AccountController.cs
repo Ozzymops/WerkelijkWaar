@@ -206,9 +206,77 @@ namespace WerkelijkWaar.Controllers
             return RedirectToAction("Index", "Home");
         }
 
+        /// <summary>
+        /// Open het accountgegevens-veranderen-scherm.
+        /// </summary>
+        /// <returns>View</returns>
         public IActionResult EditAccount()
         {
-            return View();
+            // check if logged in
+            if (!String.IsNullOrEmpty(HttpContext.Session.GetString("User")))
+            {
+                EditAccountModel eam = new EditAccountModel();
+                eam.User = Newtonsoft.Json.JsonConvert.DeserializeObject<Classes.User>(HttpContext.Session.GetString("User"));
+
+                return View(eam);
+            }
+
+            return RedirectToAction("Index", "Home");
+        }
+
+        /// <summary>
+        /// Wijzig de gegevens van een gebruiker
+        /// </summary>
+        /// <param name="eam">EditAccountModel</param>
+        /// <returns>View</returns>
+        public IActionResult EditGenericData(EditAccountModel eam)
+        {
+            // check if logged in
+            if (!String.IsNullOrEmpty(HttpContext.Session.GetString("User")))
+            {
+                Classes.User newUser = new Classes.User { Id = eam.Id };
+
+                l.WriteToLog("[EditGenericData]", eam.Id + " " + eam.NewName + " " + eam.NewSurname + " " + eam.NewUsername, 0);
+
+                // Check data
+                if (String.IsNullOrEmpty(eam.NewName) || String.IsNullOrEmpty(eam.NewSurname) || String.IsNullOrEmpty(eam.NewUsername))
+                {
+                    eam.StatusString = "Vul a.u.b. de velden correct in.";
+                    return RedirectToAction("EditAccount", "Account", eam);
+                }
+
+                newUser.Name = eam.NewName;
+                newUser.Surname = eam.NewSurname;
+                newUser.Username = eam.NewUsername;
+
+                bool edited = dq.EditUser(newUser);
+
+                if (edited)
+                {
+                    eam.StatusString = "Succes!";
+                    HttpContext.Session.Remove("User");
+                    HttpContext.Session.SetString("User", Newtonsoft.Json.JsonConvert.SerializeObject(dq.RetrieveUser(eam.Id)));
+                }
+                else
+                {
+                    eam.StatusString = "Er is iets fout gegaan of je hebt niks ingevuld. Check je gegevens.";
+                }
+
+                return RedirectToAction("EditAccount", "Account", eam);
+            }
+
+            return RedirectToAction("Index", "Home");
+        }
+
+        public IActionResult EditPassword()
+        {
+            // match password with checklogin!
+            return RedirectToAction("EditAccount", "Account");
+        }
+
+        public IActionResult EditAvatar()
+        {
+            return RedirectToAction("EditAccount", "Account");
         }
 
         public IActionResult DeleteAccount(int id)

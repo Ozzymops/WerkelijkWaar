@@ -8,5 +8,6 @@ namespace WerkelijkWaar.Models
     public class AccountViewModel
     {
         public Classes.User User { get; set; }
+        public string StatusString { get; set; }
     }
 }
