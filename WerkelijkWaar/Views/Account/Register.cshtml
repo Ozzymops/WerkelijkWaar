@@ -16,31 +16,56 @@
         <div class="flex-center">
             <div>
                 <h1>Registreren</h1>
-                <form asp-controller="Account" asp-action="RegisterUser">
+                <form id="registerForm" asp-controller="Account" asp-action="RegisterUser">
                     <input asp-for="RoleId" value="0" type="hidden" />
                     <div>
                         <h2>Voornaam:</h2>
-                        <input asp-for="Name" type="text" />
+                        <input id="name" asp-for="Name" type="text" />
                     </div>
                     <div>
                         <h2>Achternaam:</h2>
-                        <input asp-for="Surname" type="text" />
+                        <input id="surname" asp-for="Surname" type="text" />
                     </div>
                     <div style="margin-top: 20px;">
                         <h2>Gebruikersnaam:</h2>
-                        <input asp-for="Username" type="text" />
+                        <input id="username" asp-for="Username" type="text" />
                     </div>
                     <div>
                         <h2>Wachtwoord:</h2>
-                        <input asp-for="Password" type="password" />
+                        <input id="password" asp-for="Password" type="password" />
                     </div>
                     <div>
                         <h2>Klascode:</h2>
-                        <input asp-for="Code" type="text" />
+                        <input id="code" asp-for="Code" type="text" />
                     </div>
-                    <input type="submit" value="Registreren" />
+                    <div>
+                        <h2>Ik ben 16 jaar of ouder of ik heb toestemming gekregen van mijn ouders / voogd.</h2>
+                        <input id="age" asp-for="AgeCheck" type="checkbox" class="center" />
+                        <h2>Ik heb @Html.ActionLink("de algemene voorwaarden", "Privacy", "Home") gelezen en ik ga akkoord met de privacy policy.</h2>
+                        <input id="privacy" asp-for="PrivacyCheck" type="checkbox" class="center" />
+                    </div>
+                    <input id="submitButton" disabled type="submit" value="Registreren" />
                 </form>
             </div>
         </div>
     </div>
 </body>
+
+@section Scripts{ 
+    <script>
+        $(document).ready(function () {
+            checkFields();
+            function checkFields() {
+                if ($('#name').val() && $('#surname').val() && $('#username').val() && $('#password').val() && $('#code').val() && document.getElementById('age').checked && document.getElementById('privacy').checked) {
+                    $('#submitButton').removeClass('disabled');
+                    $('#submitButton').removeAttr('disabled');
+                }
+                else {
+                    $('#submitButton').addClass('disabled');
+                    $('#submitButton').prop("disabled", true);
+                }
+                setTimeout(checkFields, 500);
+            }
+        });
+    </script>
+}

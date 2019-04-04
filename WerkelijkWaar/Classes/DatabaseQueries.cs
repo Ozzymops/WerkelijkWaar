@@ -89,6 +89,10 @@ namespace WerkelijkWaar.Classes
                 output.Size = 255;
                 command.Parameters.Add(output);
 
+                var id = new SqlParameter("@userId", System.Data.SqlDbType.Int);
+                id.Direction = System.Data.ParameterDirection.Output;
+                command.Parameters.Add(id);
+
                 try
                 {
                     connection.Open();
@@ -96,25 +100,27 @@ namespace WerkelijkWaar.Classes
 
                     if (command.Parameters["@responseMessage"].Value.ToString().Contains("Success"))
                     {
-                        command = new SqlCommand("SELECT [Id] FROM [User] WHERE [Username] = @username", connection);
-                        command.Parameters.Add(new SqlParameter("@username", username));
+                        //command = new SqlCommand("SELECT [Id] FROM [User] WHERE [Username] = @username", connection);
+                        //command.Parameters.Add(new SqlParameter("@username", username));
 
-                        connection.Close();
-                        connection.Open();
+                        //connection.Close();
+                        //connection.Open();
 
-                        using (SqlDataReader reader = command.ExecuteReader())
-                        {
-                            if (reader.HasRows)
-                            {
-                                while (reader.Read())
-                                {
-                                    l.WriteToLog("[CheckLogin]", "Log in found for user with Id " + (int)reader["Id"], 1);
-                                    return (int)reader["Id"];
-                                }
-                            }
-                            l.WriteToLog("[CheckLogin]", "Log in not found for user " + username, 1);
-                            return 0;
-                        }
+                        //using (SqlDataReader reader = command.ExecuteReader())
+                        //{
+                        //    if (reader.HasRows)
+                        //    {
+                        //        while (reader.Read())
+                        //        {
+                        //            l.WriteToLog("[CheckLogin]", "Log in found for user with Id " + (int)reader["Id"], 1);
+                        //            return (int)reader["Id"];
+                        //        }
+                        //    }
+                        //    l.WriteToLog("[CheckLogin]", "Log in not found for user " + username, 1);
+                        //    return 0;
+                        //}
+
+                        return (int)command.Parameters["@userId"].Value;
                     }
                     else
                     {

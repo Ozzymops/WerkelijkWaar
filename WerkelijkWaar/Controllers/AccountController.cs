@@ -98,42 +98,76 @@ namespace WerkelijkWaar.Controllers
         /// </summary>
         /// <param name="rm">RegisterModel</param>
         /// <returns>View</returns>
+        [HttpPost]
+        [ValidateAntiForgeryToken]
         public IActionResult RegisterUser(RegisterModel rm)
         {
+            l.WriteToLog("[RegisterUser]", "Executing RegisterUser.", 0);
+
+            // Check if already exists
+            if (dq.CheckLogin(rm.Username, rm.Password) != 0)
+            {
+                l.WriteToLog("[RegisterUser]", "Attempted combination is already in use.", 1);
+                return RedirectToAction("Index", "Home");
+            }
+
             // Check inhoud
             if (rm != null)
             {
+                l.WriteToLog("[RegisterUser]", "rm != null", 2);
+
                 bool valid = false;
                 var reg = new Regex("[^a-zA-Z0-9_.]");
 
                 // Input validatie
                 if (!reg.IsMatch(rm.Name))
                 {
+                    l.WriteToLog("[RegisterUser]", "Name matched.", 2);
                     if (!reg.IsMatch(rm.Surname))
                     {
+                        l.WriteToLog("[RegisterUser]", "Surname matched.", 2);
                         if (rm.RoleId.GetType() == typeof(int))
                         {
-                            // check code
-                            valid = true;
+                            l.WriteToLog("[RegisterUser]", "RoleId matched.", 2);
+                            if (rm.AgeCheck)
+                            {
+                                l.WriteToLog("[RegisterUser]", "Age matched.", 2);
+                                if (rm.PrivacyCheck)
+                                {
+                                    l.WriteToLog("[RegisterUser]", "Privacy matched.", 2);
+                                    // check code
+                                    valid = true;
+                                }
+                            }
                         }
                     }
-                }
-                
-                if (valid)
-                {
-                    // register and login
-                    bool status = (dq.RegisterUser(new Classes.User
-                    {
-                        Name = rm.Name,
-                        Surname = rm.Surname,
-                        Username = rm.Surname,
-                        Password = rm.Password,
-                        RoleId = rm.RoleId
-                    }));
 
-                    int id = dq.CheckLogin(rm.Username, rm.Password);
-                    HttpContext.Session.SetString("User", Newtonsoft.Json.JsonConvert.SerializeObject(dq.RetrieveUser(id)));
-                }
+                    if (valid)
+                    {
+                        l.WriteToLog("[RegisterUser]", "valid = true", 1);
+
+                        // register and login
+                        bool status = (dq.RegisterUser(new Classes.User
+                        {
+                            Name = rm.Name,
+                            Surname = rm.Surname,
+                            Username = rm.Surname,
+                            Password = rm.Password,
+                            RoleId = rm.RoleId
+                        }));
+
+                        int id = dq.CheckLogin(rm.Username, rm.Password);
+                        HttpContext.Session.SetString("User", Newtonsoft.Json.JsonConvert.SerializeObject(dq.RetrieveUser(id)));
+                    }
+                    else
+                    {
+                        l.WriteToLog("[RegisterUser]", "Aborting RegisterUser (valid = false).", 1);
+                    }
+                }           
+            }
+            else
+            {
+                l.WriteToLog("[RegisterUser]", "Aborting RegisterUser (rm = null).", 1);
             }
 
             return RedirectToAction("Index", "Home");
