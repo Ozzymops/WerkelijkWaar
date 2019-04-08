@@ -31,7 +31,7 @@ namespace WerkelijkWaar.Controllers
             return GoToLogin(0, 0);
         }
 
-        public IActionResult GoToData()
+        public IActionResult GoToOverviews()
         {
             return GoToLogin(0, 1);
         }

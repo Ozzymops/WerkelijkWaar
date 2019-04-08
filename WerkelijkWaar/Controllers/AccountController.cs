@@ -31,12 +31,12 @@ namespace WerkelijkWaar.Controllers
                     if (destination == 0)
                     {
                         // Configuration
-                        return RedirectToAction("Privacy", "Home");
+                        return RedirectToAction("Configuration", "Overview");
                     }
                     else if (destination == 1)
                     {
                         // Inzage
-                        return RedirectToAction("Privacy", "Home");
+                        return RedirectToAction("ScoreOverview", "Overview");
                     }
                 }
                 else if (screen == 1)
@@ -71,12 +71,12 @@ namespace WerkelijkWaar.Controllers
                     if (lm.Destination == 0)
                     {
                         // Configuration
-                        return RedirectToAction("Privacy", "Home");
+                        return RedirectToAction("Configuration", "Overview");
                     }
                     else if (lm.Destination == 1)
                     {
                         // Inzage
-                        return RedirectToAction("Privacy", "Home");
+                        return RedirectToAction("ScoreOverview", "Overview");
                     }
                 }
                 else if (lm.Screen == 1)

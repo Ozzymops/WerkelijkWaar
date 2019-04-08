@@ -185,6 +185,194 @@ namespace WerkelijkWaar.Classes
                 }
             }
         }
+
+        /// <summary>
+        /// Haal een lijst van gebruikers op die uit dezelfde groep komen.
+        /// </summary>
+        /// <param name="group">Groep</param>
+        /// <returns>Lijst van Users</returns>
+        public List<User> RetrieveUserListByGroup(int group)
+        {
+            l.WriteToLog("[RetrieveUserListByGroup]", "Attempting to retrieve users from group " + group, 0);
+
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                SqlCommand command = new SqlCommand("SELECT * FROM [User] WHERE [uGroup] = @group AND [RoleId] = 0", connection);
+                command.Parameters.Add(new SqlParameter("@group", group));
+
+                List<User> UserList = new List<User>();
+
+                try
+                {
+                    connection.Open();
+
+                    using (SqlDataReader reader = command.ExecuteReader())
+                    {
+                        if (reader.HasRows)
+                        {
+                            int rowCount = 0;
+
+                            while (reader.Read())
+                            {
+                                UserList.Add(new User
+                                {
+                                    Id = (int)reader["Id"],
+                                    Group = (int)reader["uGroup"],
+                                    Name = (string)reader["Name"],
+                                    Surname = (string)reader["Surname"],
+                                    Username = (string)reader["Username"],
+                                    RoleId = Convert.ToInt32(reader["RoleId"]),
+                                    LoginAttempts = Convert.ToInt32(reader["Attempts"])
+                                });
+
+                                rowCount++;
+                            }
+
+                            l.WriteToLog("[RetrieveUserListByGroup]", "Found " + rowCount + " users from group " + group, 1);
+                            return UserList;
+                        }
+                    }
+
+                    l.WriteToLog("[RetrieveUserListByGroup]", "Could not find any users from group " + group, 1);
+                    return null;
+                }
+                catch (Exception ex)
+                {
+                    l.WriteToLog("[RetrieveUserListByGroup]", "Something went wrong: " + ex, 1);
+                    return null;
+                }
+            }
+        }
+
+        /// <summary>
+        /// Haal een lijst van scores op die bij een bepaalde gebruiker horen.
+        /// </summary>
+        /// <param name="id">User ID</param>
+        /// <returns>Lijst van Scores</returns>
+        public List<Score> RetrieveScoresOfUser(int id)
+        {
+            l.WriteToLog("[RetrieveScoresOfUser]", "Attempting to retrieve scores of user " + id, 0);
+
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                SqlCommand command = new SqlCommand("SELECT * FROM [Score] WHERE [OwnerId] = @id", connection);
+                command.Parameters.Add(new SqlParameter("@id", id));
+
+                List<Score> ScoreList = new List<Score>();
+
+                try
+                {
+                    connection.Open();
+
+                    using (SqlDataReader reader = command.ExecuteReader())
+                    {
+                        if (reader.HasRows)
+                        {
+                            int rowCount = 0;
+
+                            while (reader.Read())
+                            {
+                                Score newScore = new Score
+                                {
+                                    Id = (int)reader["Id"],
+                                    OwnerId = (int)reader["OwnerId"],
+                                    Answers = (string)reader["Answers"],
+                                    Date = (DateTime)reader["Date"],
+                                    GameType = (int)reader["GameType"]
+                                };
+
+                                if (reader["AttainedVotes"] != System.DBNull.Value)
+                                {
+                                    newScore.AttainedVotes = (int)reader["AttainedVotes"];
+                                }
+
+                                if (reader["CashAmount"] != System.DBNull.Value)
+                                {
+                                    newScore.CashAmount = Convert.ToDouble(reader["CashAmount"]);
+                                }
+
+                                if (reader["FollowerAmount"] != System.DBNull.Value)
+                                {
+                                    newScore.FollowerAmount = (int)reader["FollowerAmount"];
+                                }
+
+                                ScoreList.Add(newScore);
+                                rowCount++;
+                            }
+
+                            l.WriteToLog("[RetrieveScoresOfUser]", "Found " + rowCount + " scores from user " + id, 1);
+                            return ScoreList;
+                        }
+                    }
+
+                    l.WriteToLog("[RetrieveScoresOfUser]", "Could not find any scores of user " + id, 1);
+                    return null;
+                }
+                catch (Exception ex)
+                {
+                    l.WriteToLog("[RetrieveScoresOfUser]", "Something went wrong: " + ex, 1);
+                    return null;
+                }
+            }
+        }
+
+        /// <summary>
+        /// Haal een lijst van verhalen op die bij een bepaalde gebruiker horen.
+        /// </summary>
+        /// <param name="id">User ID</param>
+        /// <returns>Lijst van Stories</returns>
+        public List<Story> RetrieveStoriesOfUser(int id)
+        {
+            l.WriteToLog("[RetrieveStoriesOfUser]", "Attempting to retrieve stories of user " + id, 0);
+
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                SqlCommand command = new SqlCommand("SELECT * FROM [Story] WHERE [OwnerId] = @id", connection);
+                command.Parameters.Add(new SqlParameter("@id", id));
+
+                List<Story> StoryList = new List<Story>();
+
+                try
+                {
+                    connection.Open();
+
+                    using (SqlDataReader reader = command.ExecuteReader())
+                    {
+                        if (reader.HasRows)
+                        {
+                            int rowCount = 0;
+
+                            while (reader.Read())
+                            {
+                                Story newStory = new Story
+                                {
+                                    Id = (int)reader["Id"],
+                                    OwnerId = (int)reader["OwnerId"],
+                                    Date = (DateTime)reader["Date"],
+                                    Description = (string)reader["Description"],
+                                    IsRoot = Convert.ToBoolean(reader["IsRoot"]),
+                                    Title = (string)reader["Title"]
+                                };
+
+                                StoryList.Add(newStory);
+                                rowCount++;
+                            }
+
+                            l.WriteToLog("[RetrieveStoriesOfUser]", "Found " + rowCount + " stories from user " + id, 1);
+                            return StoryList;
+                        }
+                    }
+
+                    l.WriteToLog("[RetrieveStoriesOfUser]", "Could not find any stories of user " + id, 1);
+                    return null;
+                }
+                catch (Exception ex)
+                {
+                    l.WriteToLog("[RetrieveStoriesOfUser]", "Something went wrong: " + ex, 1);
+                    return null;
+                }
+            }
+        }
         #endregion
 
         #region UPDATE

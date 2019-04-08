@@ -1,0 +1,73 @@
+﻿@{
+    ViewData["Title"] = "Scores van " + Model.User.Name;
+}
+@model WerkelijkWaar.Models.IndividualModel
+
+<header>
+    <div class="flex-column-top">
+        <div>
+            <a asp-controller="Overview" asp-action="ScoreOverview"><img class="small_icon" src="~/content/image/BackArrow.png" title="Ga terug" alt="Ga terug" /></a>
+        </div>
+    </div>
+</header>
+
+<body>
+    <div>
+        <div class="flex-center">
+            <div>
+                <h1>Score @Model.User.Name  @Model.User.Surname</h1>
+                <h2>Gemiddelde: @Model.User.AverageScore</h2>
+                <hr />
+                <div style="display: flex; flex-direction: row; width: 1000px;">
+                    @if (Model.Scores != null && Model.Scores.Count != 0)
+                    {
+                        <!-- left -->
+                        <div style="width: 25%; height: 1000px;">
+                            <ul style="list-style: none; margin: 0px; padding: 0px;">
+                                @foreach (WerkelijkWaar.Classes.Score s in Model.Scores)
+                                {
+                                <li>
+                                    <div>
+                                        <form asp-action="IndividualScores" asp-controller="Overview" asp-route-scoreId="@s.Id">
+                                            <input type="submit" value="Sessie op @s.Date.ToShortDateString()" style="width: 250px;" />
+                                        </form>
+                                    </div>
+                                </li>
+                                }
+                            </ul>
+                        </div>
+                        <!-- right -->
+                        <div style="margin-left: 10px; width: 75%; height: 100%; background-color: burlywood;">
+                            <div style="display: flex; flex-direction: column;">
+                                <div style="display: flex; flex-direction: row;">
+                                    <div style="width: 50%; height: 100px; border: 2px solid black">
+                                        @if (Model.Score != null)
+                                        {
+                                            <p style="text-align: center;">@Model.Score.Date.ToShortDateString()</p>
+                                        }
+                                    </div>
+                                    <div style="width: 50%; height: 100px; border: 2px solid black;">
+                                        @if (Model.Score != null)
+                                        {
+                                            <p><img src="~/content/image/Follower.png" class="small-icon" /> @Model.Score.FollowerAmount volgers | €@Model.Score.CashAmount-</p>
+                                        }
+                                    </div>
+                                </div>
+                                <div style="height: 900px; border: 2px solid black;">
+                                    @if (Model.Score != null)
+                                    {
+                                        @Model.Score.Answers
+                                    }
+                                </div>
+                            </div>
+                        </div>
+                    }
+                    else
+                    {
+                        <h2>Geen resultaten gevonden.</h2>
+                    }
+                </div>
+            </div>
+        </div>
+    </div>
+</body>

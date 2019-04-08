@@ -52,6 +52,11 @@ input[type=submit], input[type=button] {
     height: 50px;
 }
 
+input[type=submit].table, input[type=button].table {
+    width: 100%;
+    height: 100%;
+}
+
 input[type=checkbox], input[type=radio] {
     display: block;
     width: 25px;
@@ -124,9 +129,37 @@ div.flex-column-top {
     right: 0px;
 }
 
+div.overview-grid {
+    background-color: burlywood;
+    border: 1px solid black;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 1000px;
+    height: 1000px;
+}
+
+table.overview {
+    background-color: burlywood;
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+
+table.overview th, td {
+    height: 50px;
+    border-right: 1px solid black;
+    text-align: center;
+}
+
 centered {
     margin-left: auto;
     margin-right: auto;
+}
+
+ul.overview {
+    list-style: none;
+    margin: 0;
+    padding: 0;
 }
 
 /* Home */

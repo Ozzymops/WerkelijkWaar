@@ -1,0 +1,64 @@
+﻿@{
+    ViewData["Title"] = "Scoreoverzicht";
+    int amt = 0;
+}
+@model WerkelijkWaar.Models.ScoreOverviewModel
+
+<header>
+    <div class="flex-column-top">
+        <div>
+            <a asp-controller="Home" asp-action="Index"><img class="small_icon" src="~/content/image/BackArrow.png" title="Ga terug" alt="Ga terug" /></a>
+        </div>
+    </div>
+</header>
+
+<body>
+    <div>
+        <div class="flex-center">
+            <div>
+                <h1>Inzage</h1>
+                <h2>Klasgemiddelde: @Model.AverageScore</h2>
+                <hr />
+                <div>
+                    @if (Model.UserList != null && Model.UserList.Count != 0)
+                    {
+                    <table>
+                        @foreach (WerkelijkWaar.Classes.User u in Model.UserList)
+                        {
+                            @(amt++)
+                            <tr>
+                                <td style="width: 50px;">
+                                    #@amt.
+                                </td>
+                                <td style="width: 300px">
+                                    img
+                                </td>
+                                <td style="width: 300px;">
+                                    @u.Name  @u.Surname
+                                </td>
+                                <td style="width: 150px;">
+                                    Gemiddelde: x.x
+                                </td>
+                                <td style="border: none; width: 200px;">
+                                    <form asp-action="IndividualStories" asp-controller="Overview" asp-route-id="@u.Id" asp-route-rank="@amt">
+                                        <input type="submit" class="table" style="display: inline-block; vertical-align: middle;" value="Verhalen" />
+                                    </form>
+                                </td>
+                                <td style="border: none; width: 200px;">
+                                    <form asp-action="IndividualScores" asp-controller="Overview" asp-route-id="@u.Id" asp-route-rank="@amt">
+                                        <input type="submit" class="table" style="display: inline-block; vertical-align: middle;" value="Scores" />
+                                    </form>
+                                </td>
+                            </tr>
+                        }
+                    </table>
+                    }
+                    else
+                    {
+                        <h2>Geen resultaten gevonden.</h2>
+                    }
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
