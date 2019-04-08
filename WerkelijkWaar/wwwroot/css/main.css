@@ -63,7 +63,7 @@ input[type=checkbox], input[type=radio] {
     height: 25px;
 }
 
-input[type=text], input[type=password] {
+input[type=text], input[type=password], input[type=number] {
     display: block;
     background-color: rebeccapurple;
     color: white;
@@ -147,8 +147,12 @@ table.overview {
 
 table.overview th, td {
     height: 50px;
-    border-right: 1px solid black;
+    border: 1px solid black;
     text-align: center;
+}
+
+table.overview th {
+    border-bottom: 1px solid black;
 }
 
 centered {

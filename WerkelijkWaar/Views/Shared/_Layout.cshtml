@@ -41,6 +41,14 @@
                 <li>
                     Welkom, @Html.ActionLink(@user.Name, "AccountView", "Account")
                 </li>
+                @if (user.RoleId == 2)
+                {
+                    <li>
+                        <p>
+                            U bent een administrator. Klik <a asp-controller="Overview" asp-action="UserOverview">hier</a> om naar de gebruikersoverzicht te gaan.
+                        </p>
+                    </li>
+                }
                 <li>
                     <a asp-controller="Account" asp-action="Logout">Uitloggen</a>
                 </li>

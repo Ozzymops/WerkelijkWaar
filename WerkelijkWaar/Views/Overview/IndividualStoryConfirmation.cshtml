@@ -1,0 +1,57 @@
+﻿@{
+    ViewData["Title"] = "Verhaal " + Model.Story.Title;
+}
+@model WerkelijkWaar.Models.AdminModel
+
+<header>
+    <div class="flex-column-top">
+        <div>
+            <a asp-controller="Overview" asp-action="StoryOverview"><img class="small_icon" src="~/content/image/BackArrow.png" title="Ga terug" alt="Ga terug" /></a>
+        </div>
+    </div>
+</header>
+
+<body>
+    <div>
+        <div class="flex-center">
+            <div style="width: 1000px;">
+                <h1>@Model.Story.Title</h1>
+                <hr />
+                <div style="display: flex; flex-direction: row; justify-content: space-around;">
+                    <p class="center">Story ID: <input class="center disabled" style="width: 50px;" type="number" value="@Model.Story.Id" disabled /></p>
+                    <p class="center">
+                        @if (Model.Story.Status == 0)
+                        {
+                            @:Status: ongelezen
+                        }
+                        else if (Model.Story.Status == 1)
+                        {
+                            @:Status: gelezen, maar nog niet goedgekeurd
+                        }
+                        else if (Model.Story.Status == 2)
+                        {
+                            @:Status: goedgekeurd
+                        }
+                    </p>
+                    <p class="center">Bron: urlleke</p>
+                </div>
+                <hr />
+                <div style="border: 1px solid black; background-color: burlywood;">
+                    <p>@Model.Story.Description</p>
+                </div>
+                <div style="display: flex; flex-direction: row; justify-content: space-between; margin-top: 10px;">
+                    <div>
+                        <form asp-action="ModifyStory" asp-controller="Overview" asp-route-type="1" asp-route-id="@Model.Story.Id">
+                            <input style="background-color: green;" type="submit" class="center" value="Accepteren" />
+                        </form>
+                    </div>
+                    <div>
+                        <form asp-action="ModifyStory" asp-controller="Overview" asp-route-type="2" asp-route-id="@Model.Story.Id">
+                            <input style="background-color: red;" type="submit" class="center" value="Weigeren" />
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>

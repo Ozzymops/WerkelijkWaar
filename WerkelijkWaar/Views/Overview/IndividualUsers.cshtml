@@ -1,0 +1,42 @@
+﻿@{
+    ViewData["Title"] = "Gebruiker " + Model.User.Name;
+}
+@model WerkelijkWaar.Models.AdminModel
+
+<header>
+    <div class="flex-column-top">
+        <div>
+            <a asp-controller="Overview" asp-action="UserOverview"><img class="small_icon" src="~/content/image/BackArrow.png" title="Ga terug" alt="Ga terug" /></a>
+        </div>
+    </div>
+</header>
+
+<body>
+    <div>
+        <div class="flex-center">
+            <div>
+                <h1>@Model.User.Name  @Model.User.Surname</h1>
+                <hr />
+                <div>
+                    <h2>Onbewerkbaar:</h2>
+                    <p class="center">User ID: <input class="center" style="width: 50px;" type="number" value="@Model.User.Id" disabled /></p>
+                </div>
+                <hr />
+                <div>
+                    <h2>Bewerkbaar:</h2>
+                    <p class="center">Naam: <input class="center" type="text" value="@Model.User.Name" /></p>
+                    <p class="center">Achternaam: <input class="center" type="text" value="@Model.User.Surname" /></p>
+                    <p class="center">Gebruikersnaam: <input class="center" type="text" value="@Model.User.Username" /></p>
+                    <div style="display: flex; flex-direction: row; justify-content: space-around;">
+                        <div>
+                            Rol: <input class="center" style="width: 50px;" type="number" value="@Model.User.RoleId" />
+                        </div>
+                        <div>
+                            Groep: <input class="center" style="width: 50px;" type="number" value="@Model.User.Group" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>

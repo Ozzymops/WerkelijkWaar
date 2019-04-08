@@ -245,6 +245,62 @@ namespace WerkelijkWaar.Classes
         }
 
         /// <summary>
+        /// Haal alle gebruikers op uit het systeem.
+        /// </summary>
+        /// <returns>Lijst van Users</returns>
+        public List<User> RetrieveAllUsers()
+        {
+            l.WriteToLog("[RetrieveAllUsers]", "Attempting to retrieve all users", 0);
+
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                SqlCommand command = new SqlCommand("SELECT * FROM [User]", connection);
+
+                List<User> UserList = new List<User>();
+
+                try
+                {
+                    connection.Open();
+
+                    using (SqlDataReader reader = command.ExecuteReader())
+                    {
+                        if (reader.HasRows)
+                        {
+                            int rowCount = 0;
+
+                            while (reader.Read())
+                            {
+                                UserList.Add(new User
+                                {
+                                    Id = (int)reader["Id"],
+                                    Group = (int)reader["uGroup"],
+                                    Name = (string)reader["Name"],
+                                    Surname = (string)reader["Surname"],
+                                    Username = (string)reader["Username"],
+                                    RoleId = Convert.ToInt32(reader["RoleId"]),
+                                    LoginAttempts = Convert.ToInt32(reader["Attempts"])
+                                });
+
+                                rowCount++;
+                            }
+
+                            l.WriteToLog("[RetrieveAllUsers]", "Found " + rowCount + " users.", 1);
+                            return UserList;
+                        }
+                    }
+
+                    l.WriteToLog("[RetrieveAllUsers]", "Could not find any users.", 1);
+                    return null;
+                }
+                catch (Exception ex)
+                {
+                    l.WriteToLog("[RetrieveAllUsers]", "Something went wrong: " + ex, 1);
+                    return null;
+                }
+            }
+        }
+
+        /// <summary>
         /// Haal een lijst van scores op die bij een bepaalde gebruiker horen.
         /// </summary>
         /// <param name="id">User ID</param>
@@ -351,7 +407,8 @@ namespace WerkelijkWaar.Classes
                                     Date = (DateTime)reader["Date"],
                                     Description = (string)reader["Description"],
                                     IsRoot = Convert.ToBoolean(reader["IsRoot"]),
-                                    Title = (string)reader["Title"]
+                                    Title = (string)reader["Title"],
+                                    Status = (int)reader["Status"]
                                 };
 
                                 StoryList.Add(newStory);
@@ -369,6 +426,114 @@ namespace WerkelijkWaar.Classes
                 catch (Exception ex)
                 {
                     l.WriteToLog("[RetrieveStoriesOfUser]", "Something went wrong: " + ex, 1);
+                    return null;
+                }
+            }
+        }
+
+        /// <summary>
+        /// Haal alle verhalen op uit het systeem.
+        /// </summary>
+        /// <returns>Lijst van Verhalen</returns>
+        public List<Story> RetrieveAllStories()
+        {
+            l.WriteToLog("[RetrieveAllStories]", "Attempting to retrieve all stories.", 0);
+
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                SqlCommand command = new SqlCommand("SELECT * FROM [Story]", connection);
+
+                List<Story> StoryList = new List<Story>();
+
+                try
+                {
+                    connection.Open();
+
+                    using (SqlDataReader reader = command.ExecuteReader())
+                    {
+                        if (reader.HasRows)
+                        {
+                            int rowCount = 0;
+
+                            while (reader.Read())
+                            {
+                                Story newStory = new Story
+                                {
+                                    Id = (int)reader["Id"],
+                                    OwnerId = (int)reader["OwnerId"],
+                                    Date = (DateTime)reader["Date"],
+                                    Description = (string)reader["Description"],
+                                    IsRoot = Convert.ToBoolean(reader["IsRoot"]),
+                                    Title = (string)reader["Title"],
+                                    Status = (int)reader["Status"]
+                                };
+
+                                StoryList.Add(newStory);
+                                rowCount++;
+                            }
+
+                            l.WriteToLog("[RetrieveAllStories]", "Found " + rowCount + " stories.", 1);
+                            return StoryList;
+                        }
+                    }
+
+                    l.WriteToLog("[RetrieveAllStories]", "Could not find any stories", 1);
+                    return null;
+                }
+                catch (Exception ex)
+                {
+                    l.WriteToLog("[RetrieveAllStories]", "Something went wrong: " + ex, 1);
+                    return null;
+                }
+            }
+        }
+
+        /// <summary>
+        /// Haal een verhaal op uit de database.
+        /// </summary>
+        /// <param name="storyId">Story ID</param>
+        /// <returns>Story</returns>
+        public Story RetrieveStory(int storyId)
+        {
+            l.WriteToLog("[RetrieveStory]", "Attempting to retrieve story with id " + storyId, 0);
+
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                SqlCommand command = new SqlCommand("SELECT * FROM [Story] WHERE [Id] = @id", connection);
+                command.Parameters.Add(new SqlParameter("@id", storyId));
+
+                try
+                {
+                    connection.Open();
+
+                    using (SqlDataReader reader = command.ExecuteReader())
+                    {
+                        if (reader.HasRows)
+                        {
+                            while (reader.Read())
+                            {
+                                l.WriteToLog("[RetrieveStory]", "Found story with id " + storyId, 1);
+
+                                return new Story
+                                {
+                                    Id = (int)reader["Id"],
+                                    OwnerId = (int)reader["OwnerId"],
+                                    Title = (string)reader["Title"],
+                                    Description = (string)reader["Description"],
+                                    Date = (DateTime)reader["Date"],
+                                    IsRoot = Convert.ToBoolean(reader["IsRoot"]),
+                                    Status = (int)reader["Status"]
+                                };
+                            }
+                        }
+                    }
+
+                    l.WriteToLog("[RetrieveStory]", "Could not find story with id " + storyId, 1);
+                    return null;
+                }
+                catch (Exception ex)
+                {
+                    l.WriteToLog("[RetrieveStory]", "Something went wrong: " + ex, 1);
                     return null;
                 }
             }
@@ -417,6 +582,47 @@ namespace WerkelijkWaar.Classes
                 }
             }
         }
+
+        /// <summary>
+        /// Wijzig de status van een verhaal.
+        /// </summary>
+        /// <param name="storyId">Story ID</param>
+        /// <param name="status">Status</param>
+        /// <returns>true or false</returns>
+        public bool UpdateStoryStatus(int storyId, int status)
+        {
+            l.WriteToLog("[UpdateStoryStatus]", "Trying to edit story with id " + storyId, 0);
+
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                SqlCommand command = new SqlCommand();
+
+                command = new SqlCommand("UPDATE [Story] SET [Status] = @status WHERE [Id] = @id", connection);
+                command.Parameters.Add(new SqlParameter("@id", storyId));
+                command.Parameters.Add(new SqlParameter("@status", status));
+
+                try
+                {
+                    connection.Open();
+
+                    int rows = command.ExecuteNonQuery();
+
+                    if (rows > 0)
+                    {
+                        l.WriteToLog("[UpdateStoryStatus]", "Edited story with id " + storyId, 1);
+                        return true;
+                    }
+
+                    l.WriteToLog("[UpdateStoryStatus]", "Could not find story with id " + storyId, 1);
+                    return false;
+                }
+                catch (Exception ex)
+                {
+                    l.WriteToLog("[UpdateStoryStatus]", ex.ToString(), 1);
+                    return false;
+                }
+            }
+        }
         #endregion
 
         #region DELETE
@@ -451,6 +657,42 @@ namespace WerkelijkWaar.Classes
                 catch (Exception ex)
                 {
                     l.WriteToLog("[DeleteUser]", "Something went wrong: " + ex, 1);
+                    return false;
+                }
+            }
+        }
+
+        /// <summary>
+        /// Verwijder een verhaal.
+        /// </summary>
+        /// <param name="storyId">Story ID</param>
+        /// <returns>true or false</returns>
+        public bool DeleteStory(int storyId)
+        {
+            l.WriteToLog("[DeleteStory]", "Attempting to delete user with id " + storyId, 0);
+
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                SqlCommand command = new SqlCommand("DELETE FROM [Story] WHERE [Id] = @id", connection);
+                command.Parameters.Add(new SqlParameter("@id", storyId));
+
+                try
+                {
+                    connection.Open();
+                    int rows = command.ExecuteNonQuery();
+
+                    if (rows > 0)
+                    {
+                        l.WriteToLog("[DeleteStory]", "Deleted user with id " + storyId, 1);
+                        return true;
+                    }
+
+                    l.WriteToLog("[DeleteStory]", "Could not find user with id " + storyId, 1);
+                    return false;
+                }
+                catch (Exception ex)
+                {
+                    l.WriteToLog("[DeleteStory]", "Something went wrong: " + ex, 1);
                     return false;
                 }
             }

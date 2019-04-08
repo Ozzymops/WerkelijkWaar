@@ -1,0 +1,91 @@
+﻿@{
+    ViewData["Title"] = "Verhalenoverzicht";
+}
+@model WerkelijkWaar.Models.AdminModel
+
+<header>
+    <div class="flex-column-top">
+        <div>
+            <a asp-controller="Account" asp-action="Logout"><img class="small_icon" src="~/content/image/BackArrow.png" title="Ga terug" alt="Ga terug" /></a>
+        </div>
+    </div>
+</header>
+
+<body>
+    <div>
+        <div class="flex-center">
+            <div>
+                <h1>Verhalen</h1>
+                <div style="display: flex; flex-direction: row; justify-content: space-around;">
+                    <div>
+                        <a asp-controller="Overview" asp-action="UserOverview">Gebruikeroverzicht</a>
+                    </div>
+                    <div>
+                        <a asp-controller="Overview" asp-action="StoryOverview">Verhalenoverzicht</a>
+                    </div>
+                    <div>
+                        <a asp-controller="Overview" asp-action="ServerConfig">Serverconfiguratie</a>
+                    </div>
+                </div>
+                <hr />
+                <div style="display: flex; flex-direction: row; width: 1000px;">
+                    @if (Model.StoryList != null && Model.StoryList.Count != 0)
+                    {
+                        <div>
+                            <table class="overview">
+                                <tr>
+                                    <th style="width: 50px;">
+                                        Id
+                                    </th>
+                                    <th style="width: 200px;">
+                                        Titel
+                                    </th>
+                                    <th style="width: 200px;">
+                                        Status
+                                    </th>
+                                    <th style="width: 200px;">
+                                        Lezen
+                                    </th>
+                                </tr>
+                                @foreach (WerkelijkWaar.Classes.Story s in Model.StoryList)
+                                {
+                                    <tr>
+                                        <td>
+                                            @s.Id
+                                        </td>
+                                        <td>
+                                            @s.Title
+                                        </td>
+                                        <td>
+                                            @if (s.Status == 0)
+                                            {
+                                                @:Ongelezen
+                                            }
+                                            else if (s.Status == 1)
+                                            {
+                                                @:Gelezen
+                                            }
+                                            else if (s.Status == 2)
+                                            {
+                                                @:Goedgekeurd
+                                            }
+                                        </td>
+                                        <td>
+                                            <form asp-action="IndividualStoryConfirmation" asp-controller="Overview" asp-route-id="@s.Id">
+                                                <input class="table" type="submit" value="Lezen" style="width: 100%; height: 100%;" />
+                                            </form>
+                                        </td>
+                                    </tr>
+                                }
+                            </table>
+                        </div>
+                    }
+                    else
+                    {
+                        <h2>Geen resultaten gevonden.</h2>
+                    }
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
