@@ -985,3 +985,278 @@ Startup - 15:27:33 : maandag 8 april 2019
 >Found 3 stories.
 ---[LOGGER  MSG  END]---
 
+---[LOGGER MSG START]---
+[CheckLogin] - 15:42:19 : maandag 8 april 2019
+>Checking log in for user JMuris
+---[LOGGER MSG START]---
+[RetrieveUser] - 15:42:20 : maandag 8 april 2019
+>Attempting to retrieve user with id 2
+>Found user with id 2
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[RetrieveUserListByGroup] - 15:42:20 : maandag 8 april 2019
+>Attempting to retrieve users from group 1
+>Found 4 users from group 1
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+Startup - 09:59:35 : dinsdag 9 april 2019
+>Starting server...
+>Server is up and running!
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[CheckLogin] - 09:59:55 : dinsdag 9 april 2019
+>Checking log in for user Admin
+---[LOGGER MSG START]---
+[RetrieveUser] - 09:59:55 : dinsdag 9 april 2019
+>Attempting to retrieve user with id 1
+>Found user with id 1
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[RetrieveAllUsers] - 09:59:58 : dinsdag 9 april 2019
+>Attempting to retrieve all users
+>Found 6 users.
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[RetrieveStoryQueue] - 10:00:00 : dinsdag 9 april 2019
+>Attempting to retrieve stories with status 0 and 1.
+>Found 3 stories.
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[RetrieveStory] - 10:00:02 : dinsdag 9 april 2019
+>Attempting to retrieve story with id 5
+>Found story with id 5
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[UpdateStoryStatus] - 10:00:02 : dinsdag 9 april 2019
+>Trying to edit story with id 5
+>Edited story with id 5
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[RetrieveStoryQueue] - 10:00:17 : dinsdag 9 april 2019
+>Attempting to retrieve stories with status 0 and 1.
+>Found 3 stories.
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[RetrieveStory] - 10:00:19 : dinsdag 9 april 2019
+>Attempting to retrieve story with id 6
+>Found story with id 6
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[UpdateStoryStatus] - 10:00:19 : dinsdag 9 april 2019
+>Trying to edit story with id 6
+>Edited story with id 6
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[UpdateStoryStatus] - 10:00:23 : dinsdag 9 april 2019
+>Trying to edit story with id 6
+>Edited story with id 6
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[RetrieveStoryQueue] - 10:00:23 : dinsdag 9 april 2019
+>Attempting to retrieve stories with status 0 and 1.
+>Found 2 stories.
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[RetrieveStory] - 10:00:24 : dinsdag 9 april 2019
+>Attempting to retrieve story with id 7
+>Found story with id 7
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[UpdateStoryStatus] - 10:00:24 : dinsdag 9 april 2019
+>Trying to edit story with id 7
+>Edited story with id 7
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[DeleteStory] - 10:00:27 : dinsdag 9 april 2019
+>Attempting to delete user with id 7
+>Deleted user with id 7
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[RetrieveStoryQueue] - 10:00:27 : dinsdag 9 april 2019
+>Attempting to retrieve stories with status 0 and 1.
+>Found 1 stories.
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[RetrieveStory] - 10:00:28 : dinsdag 9 april 2019
+>Attempting to retrieve story with id 5
+>Found story with id 5
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[UpdateStoryStatus] - 10:00:29 : dinsdag 9 april 2019
+>Trying to edit story with id 5
+>Edited story with id 5
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[DeleteStory] - 10:00:30 : dinsdag 9 april 2019
+>Attempting to delete user with id 5
+>Deleted user with id 5
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[RetrieveStoryQueue] - 10:00:30 : dinsdag 9 april 2019
+>Attempting to retrieve stories with status 0 and 1.
+>Could not find any stories with status 0 or 1
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[RetrieveAllUsers] - 10:00:32 : dinsdag 9 april 2019
+>Attempting to retrieve all users
+>Found 6 users.
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[RetrieveUser] - 10:00:35 : dinsdag 9 april 2019
+>Attempting to retrieve user with id 5
+>Found user with id 5
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[RetrieveAllUsers] - 10:00:39 : dinsdag 9 april 2019
+>Attempting to retrieve all users
+>Found 6 users.
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[RetrieveStoryQueue] - 10:00:41 : dinsdag 9 april 2019
+>Attempting to retrieve stories with status 0 and 1.
+>Could not find any stories with status 0 or 1
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[RetrieveStoryQueue] - 10:00:42 : dinsdag 9 april 2019
+>Attempting to retrieve stories with status 0 and 1.
+>Could not find any stories with status 0 or 1
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+Startup - 13:28:21 : dinsdag 9 april 2019
+>Starting server...
+>Server is up and running!
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[CheckLogin] - 13:28:29 : dinsdag 9 april 2019
+>Checking log in for user JMuris
+>Something went wrong: System.InvalidOperationException: The ConnectionString property has not been initialized.
+   at System.Data.SqlClient.SqlConnection.PermissionDemand()
+   at System.Data.SqlClient.SqlConnectionFactory.PermissionDemand(DbConnection outerConnection)
+   at System.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at System.Data.ProviderBase.DbConnectionClosed.TryOpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at System.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry)
+   at System.Data.SqlClient.SqlConnection.Open()
+   at WerkelijkWaar.Classes.DatabaseQueries.CheckLogin(String username, String password) in C:\Users\Justin Muris\source\repos\WerkelijkWaar\WerkelijkWaar\Classes\DatabaseQueries.cs:line 97
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[CheckLogin] - 13:28:40 : dinsdag 9 april 2019
+>Checking log in for user Admin
+>Something went wrong: System.InvalidOperationException: The ConnectionString property has not been initialized.
+   at System.Data.SqlClient.SqlConnection.PermissionDemand()
+   at System.Data.SqlClient.SqlConnectionFactory.PermissionDemand(DbConnection outerConnection)
+   at System.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at System.Data.ProviderBase.DbConnectionClosed.TryOpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at System.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry)
+   at System.Data.SqlClient.SqlConnection.Open()
+   at WerkelijkWaar.Classes.DatabaseQueries.CheckLogin(String username, String password) in C:\Users\Justin Muris\source\repos\WerkelijkWaar\WerkelijkWaar\Classes\DatabaseQueries.cs:line 97
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+Startup - 13:34:12 : dinsdag 9 april 2019
+>Starting server...
+>Server is up and running!
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[CheckLogin] - 13:34:20 : dinsdag 9 april 2019
+>Checking log in for user Admin
+---[LOGGER MSG START]---
+[RetrieveUser] - 13:34:20 : dinsdag 9 april 2019
+>Attempting to retrieve user with id 1
+>Found user with id 1
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[RetrieveAllUsers] - 13:34:22 : dinsdag 9 april 2019
+>Attempting to retrieve all users
+>Found 6 users.
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[RetrieveStoryQueue] - 13:34:24 : dinsdag 9 april 2019
+>Attempting to retrieve stories with status 0 and 1.
+>Could not find any stories with status 0 or 1
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[RetrieveStoryQueue] - 13:34:27 : dinsdag 9 april 2019
+>Attempting to retrieve stories with status 0 and 1.
+>Could not find any stories with status 0 or 1
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[RetrieveStoryQueue] - 13:34:29 : dinsdag 9 april 2019
+>Attempting to retrieve stories with status 0 and 1.
+>Could not find any stories with status 0 or 1
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+Startup - 13:35:03 : dinsdag 9 april 2019
+>Starting server...
+>Server is up and running!
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[CheckLogin] - 13:35:14 : dinsdag 9 april 2019
+>Checking log in for user Admin
+---[LOGGER MSG START]---
+[RetrieveUser] - 13:35:14 : dinsdag 9 april 2019
+>Attempting to retrieve user with id 1
+>Found user with id 1
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[RetrieveAllUsers] - 13:35:16 : dinsdag 9 april 2019
+>Attempting to retrieve all users
+>Found 6 users.
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+Startup - 13:36:31 : dinsdag 9 april 2019
+>Starting server...
+>Server is up and running!
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[CheckLogin] - 13:36:39 : dinsdag 9 april 2019
+>Checking log in for user Admin
+---[LOGGER MSG START]---
+[RetrieveUser] - 13:36:39 : dinsdag 9 april 2019
+>Attempting to retrieve user with id 1
+>Found user with id 1
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[RetrieveAllUsers] - 13:36:41 : dinsdag 9 april 2019
+>Attempting to retrieve all users
+>Found 6 users.
+---[LOGGER  MSG  END]---
+

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Configuration;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http;
@@ -93,7 +94,7 @@ namespace WerkelijkWaar.Controllers
 
                 if (tempUser.RoleId == 2)
                 {
-                    am.StoryList = dq.RetrieveAllStories();
+                    am.StoryList = dq.RetrieveStoryQueue();
                     return View(am);
                 }
             }
@@ -265,9 +266,76 @@ namespace WerkelijkWaar.Controllers
             return RedirectToAction("Index", "Home");
         }
 
-        public IActionResult Configuration()
+        /// <summary>
+        /// Navigeer naar de serverconfiguratie.
+        /// </summary>
+        /// <returns>View</returns>
+        public IActionResult ServerConfiguration()
         {
-            return View();
+            // Check if logged in
+            if (!String.IsNullOrEmpty(HttpContext.Session.GetString("User")))
+            {
+                // Check if administrator
+                AdminModel am = new AdminModel();
+                Classes.User tempUser = Newtonsoft.Json.JsonConvert.DeserializeObject<Classes.User>(HttpContext.Session.GetString("User"));
+
+                if (tempUser.RoleId == 2)
+                {
+                    ServerConfigModel scm = new ServerConfigModel();
+                    scm.DbConnectionString = ConfigurationManager.AppSettings["connectionString"];
+                    scm.DbUsername = ConfigurationManager.AppSettings["dbUsername"];
+                    scm.DbPassword = ConfigurationManager.AppSettings["dbPassword"];
+
+                    return View(scm);
+                }
+            }
+
+            return RedirectToAction("Index", "Home");
+        }
+
+        /// <summary>
+        /// Update web.config met nieuwe waarden.
+        /// </summary>
+        /// <returns>View</returns>
+        public IActionResult UpdateConfig(ServerConfigModel scm)
+        {
+            // Check if logged in
+            if (!String.IsNullOrEmpty(HttpContext.Session.GetString("User")))
+            {
+                // Check if administrator
+                AdminModel am = new AdminModel();
+                Classes.User tempUser = Newtonsoft.Json.JsonConvert.DeserializeObject<Classes.User>(HttpContext.Session.GetString("User"));
+
+                if (tempUser.RoleId == 2)
+                {
+                    // todo
+                    return RedirectToAction("ServerConfiguration", "Overview");
+                }
+            }
+
+            return RedirectToAction("Index", "Home");
+        }
+
+        /// <summary>
+        /// Reset de server.
+        /// </summary>
+        /// <returns>View</returns>
+        public IActionResult ResetServer()
+        {
+            // Check if logged in
+            if (!String.IsNullOrEmpty(HttpContext.Session.GetString("User")))
+            {
+                // Check if administrator
+                AdminModel am = new AdminModel();
+                Classes.User tempUser = Newtonsoft.Json.JsonConvert.DeserializeObject<Classes.User>(HttpContext.Session.GetString("User"));
+
+                if (tempUser.RoleId == 2)
+                {
+                    // todo
+                }
+            }
+
+            return RedirectToAction("Index", "Home");
         }
     }
 }

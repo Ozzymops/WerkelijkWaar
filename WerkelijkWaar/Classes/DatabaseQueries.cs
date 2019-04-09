@@ -538,6 +538,63 @@ namespace WerkelijkWaar.Classes
                 }
             }
         }
+
+        /// <summary>
+        /// Haal alle verhalen op met status 0 (ongelezen) of 1 (gelezen, maar nog niet goedgekeurd).
+        /// </summary>
+        /// <returns>Lijst van Stories</returns>
+        public List<Story> RetrieveStoryQueue()
+        {
+            l.WriteToLog("[RetrieveStoryQueue]", "Attempting to retrieve stories with status 0 and 1.", 0);
+
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                SqlCommand command = new SqlCommand("SELECT * FROM [Story] WHERE [Status] = 0 OR [Status] = 1", connection);
+
+                List<Story> StoryList = new List<Story>();
+
+                try
+                {
+                    connection.Open();
+
+                    using (SqlDataReader reader = command.ExecuteReader())
+                    {
+                        if (reader.HasRows)
+                        {
+                            int rowCount = 0;
+
+                            while (reader.Read())
+                            {
+                                Story newStory = new Story
+                                {
+                                    Id = (int)reader["Id"],
+                                    OwnerId = (int)reader["OwnerId"],
+                                    Date = (DateTime)reader["Date"],
+                                    Description = (string)reader["Description"],
+                                    IsRoot = Convert.ToBoolean(reader["IsRoot"]),
+                                    Title = (string)reader["Title"],
+                                    Status = (int)reader["Status"]
+                                };
+
+                                StoryList.Add(newStory);
+                                rowCount++;
+                            }
+
+                            l.WriteToLog("[RetrieveStoryQueue]", "Found " + rowCount + " stories.", 1);
+                            return StoryList;
+                        }
+                    }
+
+                    l.WriteToLog("[RetrieveStoryQueue]", "Could not find any stories with status 0 or 1", 1);
+                    return null;
+                }
+                catch (Exception ex)
+                {
+                    l.WriteToLog("[RetrieveStoryQueue]", "Something went wrong: " + ex, 1);
+                    return null;
+                }
+            }
+        }
         #endregion
 
         #region UPDATE

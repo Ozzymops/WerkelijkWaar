@@ -1,0 +1,47 @@
+﻿@{
+    ViewData["Title"] = "Serverconfiguratie";
+}
+@model WerkelijkWaar.Models.ServerConfigModel
+
+<header>
+    <div class="flex-column-top">
+        <div>
+            <a asp-controller="Account" asp-action="Logout"><img class="small_icon" src="~/content/image/BackArrow.png" title="Ga terug" alt="Ga terug" /></a>
+        </div>
+    </div>
+</header>
+
+<body>
+    <div>
+        <div class="flex-center" style="width: 1000px;">
+            <div>
+                <h1>Serverconfiguratie</h1>
+                <div style="display: flex; flex-direction: row; justify-content: space-around;">
+                    <div>
+                        <a asp-controller="Overview" asp-action="UserOverview">Gebruikeroverzicht</a>
+                    </div>
+                    <div>
+                        <a asp-controller="Overview" asp-action="StoryOverview">Verhalenoverzicht</a>
+                    </div>
+                    <div>
+                        <a asp-controller="Overview" asp-action="ServerConfiguration">Serverconfiguratie</a>
+                    </div>
+                </div>
+                <hr />
+                <div>
+                    <h2 style="color: red;">Wees voorzichtig met de instellingen! Foute instellingen zorgen ervoor dat de database onbereikbaar is.</h2>
+                    <h3>Blijf hiervan af tenzij je weet wat je doet. Als je niet meer kan inloggen, open de web.config op de server en pas de connection string aan.</h3>
+                    <form asp-action="UpdateConfig" asp-controller="Overview">
+                        <p>Connection string: <input asp-for="DbConnectionString" type="text" class="center" style="width: 1000px;" value="@Model.DbConnectionString" /></p>
+                        <p>Database username: <input asp-for="DbUsername" type="text" class="center" value="@Model.DbUsername" /></p>
+                        <p>Database password: <input asp-for="DbPassword" type="text" class="center" value="@Model.DbPassword" /></p>
+                        <p><input type="submit" value="Update" /></p>
+                    </form>
+                    <form asp-action="ResetServer" asp-controller="Overview">
+                        <p style="color: red;">Reset server: <input type="button" class="center" style="width: 100px; color: white; background-color: red;" value="RESET" /></p>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
