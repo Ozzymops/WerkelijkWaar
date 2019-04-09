@@ -1260,3 +1260,94 @@ Startup - 13:36:31 : dinsdag 9 april 2019
 >Found 6 users.
 ---[LOGGER  MSG  END]---
 
+---[LOGGER MSG START]---
+Startup - 14:06:17 : dinsdag 9 april 2019
+>Starting server...
+>Server is up and running!
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[CheckLogin] - 14:06:39 : dinsdag 9 april 2019
+>Checking log in for user Admin
+---[LOGGER MSG START]---
+[RetrieveUser] - 14:06:39 : dinsdag 9 april 2019
+>Attempting to retrieve user with id 1
+>Found user with id 1
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[RetrieveAllUsers] - 14:06:41 : dinsdag 9 april 2019
+>Attempting to retrieve all users
+>Found 6 users.
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+Startup - 14:10:13 : dinsdag 9 april 2019
+>Starting server...
+>Server is up and running!
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[CheckLogin] - 14:10:24 : dinsdag 9 april 2019
+>Checking log in for user Admin
+---[LOGGER MSG START]---
+[RetrieveUser] - 14:10:24 : dinsdag 9 april 2019
+>Attempting to retrieve user with id 1
+>Found user with id 1
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[RetrieveAllUsers] - 14:10:26 : dinsdag 9 april 2019
+>Attempting to retrieve all users
+>Found 6 users.
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[RetrieveAllUsers] - 14:10:36 : dinsdag 9 april 2019
+>Attempting to retrieve all users
+>Something went wrong: System.Data.SqlClient.SqlException (0x80131904): Login failed for user 'MASTER1'.
+   at System.Data.SqlClient.SqlInternalConnectionTds..ctor(DbConnectionPoolIdentity identity, SqlConnectionString connectionOptions, SqlCredential credential, Object providerInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString userConnectionOptions, SessionData reconnectSessionData, Boolean applyTransientFaultHandling, String accessToken)
+   at System.Data.SqlClient.SqlConnectionFactory.CreateConnection(DbConnectionOptions options, DbConnectionPoolKey poolKey, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningConnection, DbConnectionOptions userOptions)
+   at System.Data.ProviderBase.DbConnectionFactory.CreatePooledConnection(DbConnectionPool pool, DbConnection owningObject, DbConnectionOptions options, DbConnectionPoolKey poolKey, DbConnectionOptions userOptions)
+   at System.Data.ProviderBase.DbConnectionPool.CreateObject(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at System.Data.ProviderBase.DbConnectionPool.UserCreateRequest(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at System.Data.ProviderBase.DbConnectionClosed.TryOpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at System.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry)
+   at System.Data.SqlClient.SqlConnection.Open()
+   at WerkelijkWaar.Classes.DatabaseQueries.RetrieveAllUsers() in C:\Users\Justin Muris\source\repos\WerkelijkWaar\WerkelijkWaar\Classes\DatabaseQueries.cs:line 265
+ClientConnectionId:9ca0cee2-b093-4e61-b512-9b5957aa71e9
+Error Number:18456,State:1,Class:14
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[RetrieveStoryQueue] - 14:10:37 : dinsdag 9 april 2019
+>Attempting to retrieve stories with status 0 and 1.
+>Something went wrong: System.Data.SqlClient.SqlException (0x80131904): Login failed for user 'MASTER1'.
+   at System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at System.Data.ProviderBase.DbConnectionClosed.TryOpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at System.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry)
+   at System.Data.SqlClient.SqlConnection.Open()
+   at WerkelijkWaar.Classes.DatabaseQueries.RetrieveStoryQueue() in C:\Users\Justin Muris\source\repos\WerkelijkWaar\WerkelijkWaar\Classes\DatabaseQueries.cs:line 560
+ClientConnectionId:9ca0cee2-b093-4e61-b512-9b5957aa71e9
+Error Number:18456,State:1,Class:14
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[RetrieveAllUsers] - 14:10:43 : dinsdag 9 april 2019
+>Attempting to retrieve all users
+>Found 6 users.
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[RetrieveStoryQueue] - 14:10:44 : dinsdag 9 april 2019
+>Attempting to retrieve stories with status 0 and 1.
+>Could not find any stories with status 0 or 1
+---[LOGGER  MSG  END]---
+

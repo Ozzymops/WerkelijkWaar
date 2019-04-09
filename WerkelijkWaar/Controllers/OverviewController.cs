@@ -1,11 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Configuration;
+using System.Web;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using WerkelijkWaar.Models;
+using System.Reflection;
 
 namespace WerkelijkWaar.Controllers
 {
@@ -308,7 +310,15 @@ namespace WerkelijkWaar.Controllers
 
                 if (tempUser.RoleId == 2)
                 {
-                    // todo
+                    Configuration configuration = ConfigurationManager.OpenExeConfiguration(Assembly.GetExecutingAssembly().Location);
+
+                    configuration.AppSettings.Settings["connectionString"].Value = scm.DbConnectionString;
+                    configuration.AppSettings.Settings["dbUsername"].Value = scm.DbUsername;
+                    configuration.AppSettings.Settings["dbPassword"].Value = scm.DbPassword;
+
+                    configuration.Save();
+                    ConfigurationManager.RefreshSection("appSettings");
+
                     return RedirectToAction("ServerConfiguration", "Overview");
                 }
             }

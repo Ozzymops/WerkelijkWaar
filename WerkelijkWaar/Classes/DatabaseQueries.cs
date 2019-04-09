@@ -12,7 +12,9 @@ namespace WerkelijkWaar.Classes
         // Standaard, overal toepasselijk
         Classes.Logger l = new Classes.Logger();
 
-        private string connectionString = ConfigurationManager.AppSettings["connectionString"];
+        // private string connectionString = ConfigurationManager.AppSettings["connectionString"];
+        private string connectionString = ConfigurationManager.AppSettings["connectionString"] + "User Id='" + ConfigurationManager.AppSettings["dbUsername"] + "';" +
+            "Password='" + ConfigurationManager.AppSettings["dbPassword"] + "';";
 
         // CRUD
         #region CREATE
