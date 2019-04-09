@@ -163,7 +163,7 @@ namespace WerkelijkWaar.Classes
                             {
                                 l.WriteToLog("[RetrieveUser]", "Found user with id " + userId, 1);
 
-                                return new User
+                                User newUser = new User
                                 {
                                     Id = (int)reader["Id"],
                                     Group = (int)reader["uGroup"],
@@ -173,6 +173,13 @@ namespace WerkelijkWaar.Classes
                                     RoleId = Convert.ToInt32(reader["RoleId"]),
                                     LoginAttempts = Convert.ToInt32(reader["Attempts"])
                                 };
+
+                                if (reader["ImageSource"] != System.DBNull.Value)
+                                {
+                                    newUser.ImageSource = (string)reader["ImageSource"];
+                                }
+
+                                return newUser;
                             }
                         }
                     }
@@ -216,7 +223,7 @@ namespace WerkelijkWaar.Classes
 
                             while (reader.Read())
                             {
-                                UserList.Add(new User
+                                User newUser = new User
                                 {
                                     Id = (int)reader["Id"],
                                     Group = (int)reader["uGroup"],
@@ -225,8 +232,14 @@ namespace WerkelijkWaar.Classes
                                     Username = (string)reader["Username"],
                                     RoleId = Convert.ToInt32(reader["RoleId"]),
                                     LoginAttempts = Convert.ToInt32(reader["Attempts"])
-                                });
+                                };
 
+                                if (reader["ImageSource"] != System.DBNull.Value)
+                                {
+                                    newUser.ImageSource = (string)reader["ImageSource"];
+                                }
+
+                                UserList.Add(newUser);
                                 rowCount++;
                             }
 
@@ -272,7 +285,7 @@ namespace WerkelijkWaar.Classes
 
                             while (reader.Read())
                             {
-                                UserList.Add(new User
+                                User newUser = new User
                                 {
                                     Id = (int)reader["Id"],
                                     Group = (int)reader["uGroup"],
@@ -281,8 +294,14 @@ namespace WerkelijkWaar.Classes
                                     Username = (string)reader["Username"],
                                     RoleId = Convert.ToInt32(reader["RoleId"]),
                                     LoginAttempts = Convert.ToInt32(reader["Attempts"])
-                                });
+                                };
 
+                                if (reader["ImageSource"] != System.DBNull.Value)
+                                {
+                                    newUser.ImageSource = (string)reader["ImageSource"];
+                                }
+
+                                UserList.Add(newUser);
                                 rowCount++;
                             }
 
@@ -637,6 +656,47 @@ namespace WerkelijkWaar.Classes
                 catch (Exception ex)
                 {
                     l.WriteToLog("[EditUser]", ex.ToString(), 1);
+                    return false;
+                }
+            }
+        }
+
+        /// <summary>
+        /// Wijzig de avatar van een gebruiker.
+        /// </summary>
+        /// <param name="id">User ID</param>
+        /// <param name="path">Bestandsnaam</param>
+        /// <returns>true or false</returns>
+        public bool EditUserAvatar(int id, string path)
+        {
+            l.WriteToLog("[EditUserAvatar]", "Trying to write to user " + id + "'s avatar.", 0);
+
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                SqlCommand command = new SqlCommand();
+
+                command = new SqlCommand("UPDATE [User] SET [ImageSource] = @path WHERE [Id] = @id", connection);
+                command.Parameters.Add(new SqlParameter("@path", path));
+                command.Parameters.Add(new SqlParameter("@id", id));
+
+                try
+                {
+                    connection.Open();
+
+                    int rows = command.ExecuteNonQuery();
+
+                    if (rows > 0)
+                    {
+                        l.WriteToLog("[EditUserAvatar]", "Edited user with id " + id, 1);
+                        return true;
+                    }
+
+                    l.WriteToLog("[EditUserAvatar]", "Could not find user with id " + id, 1);
+                    return false;
+                }
+                catch (Exception ex)
+                {
+                    l.WriteToLog("[EditUserAvatar]", ex.ToString(), 1);
                     return false;
                 }
             }

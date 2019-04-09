@@ -1351,3 +1351,846 @@ Error Number:18456,State:1,Class:14
 >Could not find any stories with status 0 or 1
 ---[LOGGER  MSG  END]---
 
+---[LOGGER MSG START]---
+Startup - 14:38:02 : dinsdag 9 april 2019
+>Starting server...
+>Server is up and running!
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[CheckLogin] - 14:38:11 : dinsdag 9 april 2019
+>Checking log in for user JMuris
+---[LOGGER MSG START]---
+[RetrieveUser] - 14:38:11 : dinsdag 9 april 2019
+>Attempting to retrieve user with id 2
+>Found user with id 2
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[RetrieveUserListByGroup] - 14:38:11 : dinsdag 9 april 2019
+>Attempting to retrieve users from group 1
+>Found 4 users from group 1
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+Startup - 14:38:40 : dinsdag 9 april 2019
+>Starting server...
+>Server is up and running!
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[CheckLogin] - 14:38:49 : dinsdag 9 april 2019
+>Checking log in for user JMuris
+---[LOGGER MSG START]---
+[RetrieveUser] - 14:38:49 : dinsdag 9 april 2019
+>Attempting to retrieve user with id 2
+>Found user with id 2
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[RetrieveUserListByGroup] - 14:38:49 : dinsdag 9 april 2019
+>Attempting to retrieve users from group 1
+>Found 4 users from group 1
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+Startup - 14:40:40 : dinsdag 9 april 2019
+>Starting server...
+>Server is up and running!
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[CheckLogin] - 14:40:47 : dinsdag 9 april 2019
+>Checking log in for user JMuris
+---[LOGGER MSG START]---
+[RetrieveUser] - 14:40:47 : dinsdag 9 april 2019
+>Attempting to retrieve user with id 2
+>Found user with id 2
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[RetrieveUserListByGroup] - 14:40:47 : dinsdag 9 april 2019
+>Attempting to retrieve users from group 1
+>Found 4 users from group 1
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+Startup - 14:41:27 : dinsdag 9 april 2019
+>Starting server...
+>Server is up and running!
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[CheckLogin] - 14:41:35 : dinsdag 9 april 2019
+>Checking log in for user JMuris
+---[LOGGER MSG START]---
+[RetrieveUser] - 14:41:35 : dinsdag 9 april 2019
+>Attempting to retrieve user with id 2
+>Found user with id 2
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[RetrieveUserListByGroup] - 14:41:35 : dinsdag 9 april 2019
+>Attempting to retrieve users from group 1
+>Found 4 users from group 1
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+Startup - 14:43:21 : dinsdag 9 april 2019
+>Starting server...
+>Server is up and running!
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[CheckLogin] - 14:43:29 : dinsdag 9 april 2019
+>Checking log in for user JMuris
+---[LOGGER MSG START]---
+[RetrieveUser] - 14:43:29 : dinsdag 9 april 2019
+>Attempting to retrieve user with id 2
+>Found user with id 2
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[RetrieveUserListByGroup] - 14:43:29 : dinsdag 9 april 2019
+>Attempting to retrieve users from group 1
+>Found 4 users from group 1
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[EditAvatar] - 14:43:36 : dinsdag 9 april 2019
+>
+>avatar_2.image/jpeg
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+Startup - 14:48:04 : dinsdag 9 april 2019
+>Starting server...
+>Server is up and running!
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[CheckLogin] - 14:48:11 : dinsdag 9 april 2019
+>Checking log in for user JMuris
+---[LOGGER MSG START]---
+[RetrieveUser] - 14:48:11 : dinsdag 9 april 2019
+>Attempting to retrieve user with id 2
+>Found user with id 2
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[RetrieveUserListByGroup] - 14:48:11 : dinsdag 9 april 2019
+>Attempting to retrieve users from group 1
+>Found 4 users from group 1
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[EditAvatar] - 14:48:19 : dinsdag 9 april 2019
+>
+>avatar_2.jpg
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[EditUserAvatar] - 14:48:19 : dinsdag 9 april 2019
+>Trying to write to user 2's avatar.
+>System.Data.SqlClient.SqlException (0x80131904): String or binary data would be truncated.
+The statement has been terminated.
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, SqlDataReader ds)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite, String method)
+   at System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, Boolean sendToPipe, Int32 timeout, Boolean asyncWrite, String methodName)
+   at System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   at WerkelijkWaar.Classes.DatabaseQueries.EditUserAvatar(Int32 id, String path) in C:\Users\Justin Muris\source\repos\WerkelijkWaar\WerkelijkWaar\Classes\DatabaseQueries.cs:line 660
+ClientConnectionId:78aaf20a-497c-4679-a29c-7d702d9c0aa5
+Error Number:8152,State:13,Class:16
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+Startup - 14:49:18 : dinsdag 9 april 2019
+>Starting server...
+>Server is up and running!
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[CheckLogin] - 14:49:25 : dinsdag 9 april 2019
+>Checking log in for user JMuris
+---[LOGGER MSG START]---
+[RetrieveUser] - 14:49:25 : dinsdag 9 april 2019
+>Attempting to retrieve user with id 2
+>Found user with id 2
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[RetrieveUserListByGroup] - 14:49:25 : dinsdag 9 april 2019
+>Attempting to retrieve users from group 1
+>Found 4 users from group 1
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[EditAvatar] - 14:49:32 : dinsdag 9 april 2019
+>
+---[LOGGER MSG START]---
+[EditAvatar] - 14:49:32 : dinsdag 9 april 2019
+>avatar_2.jpg
+>C:\Users\Justin Muris\source\repos\WerkelijkWaar\WerkelijkWaar\wwwroot\content\image\avatars\2\avatar_2.jpg
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[EditUserAvatar] - 14:49:32 : dinsdag 9 april 2019
+>Trying to write to user 2's avatar.
+>System.Data.SqlClient.SqlException (0x80131904): String or binary data would be truncated.
+The statement has been terminated.
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, SqlDataReader ds)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite, String method)
+   at System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, Boolean sendToPipe, Int32 timeout, Boolean asyncWrite, String methodName)
+   at System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   at WerkelijkWaar.Classes.DatabaseQueries.EditUserAvatar(Int32 id, String path) in C:\Users\Justin Muris\source\repos\WerkelijkWaar\WerkelijkWaar\Classes\DatabaseQueries.cs:line 660
+ClientConnectionId:f8203507-774d-47c8-802a-f3a72f208cfb
+Error Number:8152,State:13,Class:16
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+Startup - 14:53:42 : dinsdag 9 april 2019
+>Starting server...
+>Server is up and running!
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[CheckLogin] - 14:53:49 : dinsdag 9 april 2019
+>Checking log in for user JMuris
+---[LOGGER MSG START]---
+[RetrieveUser] - 14:53:49 : dinsdag 9 april 2019
+>Attempting to retrieve user with id 2
+>Found user with id 2
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[RetrieveUserListByGroup] - 14:53:49 : dinsdag 9 april 2019
+>Attempting to retrieve users from group 1
+>Found 4 users from group 1
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[EditAvatar] - 14:53:56 : dinsdag 9 april 2019
+>
+---[LOGGER MSG START]---
+[EditAvatar] - 14:53:56 : dinsdag 9 april 2019
+>avatar_2.jpg
+>C:\Users\Justin Muris\source\repos\WerkelijkWaar\WerkelijkWaar\wwwroot\content\image\avatars\2\avatar_2.jpg
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[EditUserAvatar] - 14:53:56 : dinsdag 9 april 2019
+>Trying to write to user 2's avatar.
+>Edited user with id 2
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+Startup - 14:57:00 : dinsdag 9 april 2019
+>Starting server...
+>Server is up and running!
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[CheckLogin] - 14:57:07 : dinsdag 9 april 2019
+>Checking log in for user JMuris
+---[LOGGER MSG START]---
+[RetrieveUser] - 14:57:07 : dinsdag 9 april 2019
+>Attempting to retrieve user with id 2
+>Found user with id 2
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[CheckLogin] - 14:57:11 : dinsdag 9 april 2019
+>Checking log in for user 
+>Something went wrong: System.Data.SqlClient.SqlException (0x80131904): Procedure or function 'LogIn' expects parameter '@pUsername', which was not supplied.
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, SqlDataReader ds)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite, String method)
+   at System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, Boolean sendToPipe, Int32 timeout, Boolean asyncWrite, String methodName)
+   at System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   at WerkelijkWaar.Classes.DatabaseQueries.CheckLogin(String username, String password) in C:\Users\Justin Muris\source\repos\WerkelijkWaar\WerkelijkWaar\Classes\DatabaseQueries.cs:line 100
+ClientConnectionId:a2d11562-0fd1-4a6e-bf66-140f10d26d2e
+Error Number:201,State:4,Class:16
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+Startup - 15:00:05 : dinsdag 9 april 2019
+>Starting server...
+>Server is up and running!
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[CheckLogin] - 15:00:12 : dinsdag 9 april 2019
+>Checking log in for user JMuris
+---[LOGGER MSG START]---
+[RetrieveUser] - 15:00:12 : dinsdag 9 april 2019
+>Attempting to retrieve user with id 2
+>Found user with id 2
+---[LOGGER  MSG  END]---
+
+>Could not find user with id 2
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+Startup - 15:00:58 : dinsdag 9 april 2019
+>Starting server...
+>Server is up and running!
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[CheckLogin] - 15:01:05 : dinsdag 9 april 2019
+>Checking log in for user JMuris
+---[LOGGER MSG START]---
+[RetrieveUser] - 15:01:05 : dinsdag 9 april 2019
+>Attempting to retrieve user with id 2
+>Found user with id 2
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[RetrieveUserListByGroup] - 15:01:05 : dinsdag 9 april 2019
+>Attempting to retrieve users from group 1
+>Found 4 users from group 1
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[EditAvatar] - 15:01:17 : dinsdag 9 april 2019
+>
+---[LOGGER MSG START]---
+[EditAvatar] - 15:01:17 : dinsdag 9 april 2019
+>avatar_2.jpg
+>C:\Users\Justin Muris\source\repos\WerkelijkWaar\WerkelijkWaar\wwwroot\content\image\avatars\2\avatar_2.jpg
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[EditUserAvatar] - 15:01:17 : dinsdag 9 april 2019
+>Trying to write to user 2's avatar.
+>Edited user with id 2
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+Startup - 15:02:37 : dinsdag 9 april 2019
+>Starting server...
+>Server is up and running!
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[RegisterUser] - 15:02:54 : dinsdag 9 april 2019
+>Executing RegisterUser.
+---[LOGGER MSG START]---
+[CheckLogin] - 15:02:54 : dinsdag 9 april 2019
+>Checking log in for user Bobbington
+>Log in not found for user Bobbington
+---[LOGGER  MSG  END]---
+
+>rm != null
+>Name matched.
+>Surname matched.
+>RoleId matched.
+>Age matched.
+>Privacy matched.
+>valid = true
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[RegisterUser] - 15:02:54 : dinsdag 9 april 2019
+>Trying to register user Bob
+>User Bob successfully added.
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[CheckLogin] - 15:02:54 : dinsdag 9 april 2019
+>Checking log in for user Bobbington
+>Log in not found for user Bobbington
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[RetrieveUser] - 15:02:54 : dinsdag 9 april 2019
+>Attempting to retrieve user with id 0
+>Could not find user with id 0
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[CheckLogin] - 15:04:33 : dinsdag 9 april 2019
+>Checking log in for user Admin
+---[LOGGER MSG START]---
+[RetrieveUser] - 15:04:33 : dinsdag 9 april 2019
+>Attempting to retrieve user with id 1
+>Found user with id 1
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[CheckLogin] - 15:04:42 : dinsdag 9 april 2019
+>Checking log in for user JMuris
+---[LOGGER MSG START]---
+[RetrieveUser] - 15:04:42 : dinsdag 9 april 2019
+>Attempting to retrieve user with id 2
+>Found user with id 2
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[RetrieveUserListByGroup] - 15:04:42 : dinsdag 9 april 2019
+>Attempting to retrieve users from group 1
+>Found 4 users from group 1
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[CheckLogin] - 15:04:56 : dinsdag 9 april 2019
+>Checking log in for user Bobbington
+>Log in not found for user Bobbington
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[CheckLogin] - 15:05:04 : dinsdag 9 april 2019
+>Checking log in for user Bobbington
+>Log in not found for user Bobbington
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[CheckLogin] - 15:05:16 : dinsdag 9 april 2019
+>Checking log in for user bington
+---[LOGGER MSG START]---
+[RetrieveUser] - 15:05:16 : dinsdag 9 april 2019
+>Attempting to retrieve user with id 7
+>Found user with id 7
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[RetrieveUser] - 15:05:16 : dinsdag 9 april 2019
+>Attempting to retrieve user with id 7
+>Found user with id 7
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[RetrieveScoresOfUser] - 15:05:16 : dinsdag 9 april 2019
+>Attempting to retrieve scores of user 7
+>Could not find any scores of user 7
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[EditAvatar] - 15:05:24 : dinsdag 9 april 2019
+>
+---[LOGGER MSG START]---
+[EditAvatar] - 15:05:24 : dinsdag 9 april 2019
+>avatar_7.jpg
+>C:\Users\Justin Muris\source\repos\WerkelijkWaar\WerkelijkWaar\wwwroot\content\image\avatars\7\avatar_7.jpg
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[EditUserAvatar] - 15:05:24 : dinsdag 9 april 2019
+>Trying to write to user 7's avatar.
+>Edited user with id 7
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+Startup - 15:06:55 : dinsdag 9 april 2019
+>Starting server...
+>Server is up and running!
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[RegisterUser] - 15:07:11 : dinsdag 9 april 2019
+>Executing RegisterUser.
+---[LOGGER MSG START]---
+[CheckLogin] - 15:07:11 : dinsdag 9 april 2019
+>Checking log in for user abcdef
+>Log in not found for user abcdef
+---[LOGGER  MSG  END]---
+
+>rm != null
+>Name matched.
+>Surname matched.
+>RoleId matched.
+>Age matched.
+>Privacy matched.
+>valid = true
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[RegisterUser] - 15:07:11 : dinsdag 9 april 2019
+>Trying to register user abc
+>User abc successfully added.
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[CheckLogin] - 15:07:11 : dinsdag 9 april 2019
+>Checking log in for user abcdef
+>Log in not found for user abcdef
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[RetrieveUser] - 15:07:11 : dinsdag 9 april 2019
+>Attempting to retrieve user with id 0
+>Could not find user with id 0
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+Startup - 15:08:01 : dinsdag 9 april 2019
+>Starting server...
+>Server is up and running!
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[RegisterUser] - 15:08:14 : dinsdag 9 april 2019
+>Executing RegisterUser.
+---[LOGGER MSG START]---
+[CheckLogin] - 15:08:14 : dinsdag 9 april 2019
+>Checking log in for user aabb
+>Log in not found for user aabb
+---[LOGGER  MSG  END]---
+
+>rm != null
+>Name matched.
+>Surname matched.
+>RoleId matched.
+>Age matched.
+>Privacy matched.
+>valid = true
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[RegisterUser] - 15:08:14 : dinsdag 9 april 2019
+>Trying to register user aaa
+>User aaa successfully added.
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[CheckLogin] - 15:08:14 : dinsdag 9 april 2019
+>Checking log in for user aabb
+---[LOGGER MSG START]---
+[RetrieveUser] - 15:08:14 : dinsdag 9 april 2019
+>Attempting to retrieve user with id 9
+>Found user with id 9
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[EditAvatar] - 15:08:23 : dinsdag 9 april 2019
+>
+---[LOGGER MSG START]---
+[EditAvatar] - 15:08:23 : dinsdag 9 april 2019
+>avatar_9.jpg
+>C:\Users\Justin Muris\source\repos\WerkelijkWaar\WerkelijkWaar\wwwroot\content\image\avatars\9\avatar_9.jpg
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[EditUserAvatar] - 15:08:23 : dinsdag 9 april 2019
+>Trying to write to user 9's avatar.
+>Edited user with id 9
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[RetrieveUser] - 15:08:23 : dinsdag 9 april 2019
+>Attempting to retrieve user with id 9
+>Found user with id 9
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[DeleteUser] - 15:08:31 : dinsdag 9 april 2019
+>Attempting to delete user with id 9
+>Deleted user with id 9
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[CheckLogin] - 15:08:37 : dinsdag 9 april 2019
+>Checking log in for user bington
+---[LOGGER MSG START]---
+[RetrieveUser] - 15:08:37 : dinsdag 9 april 2019
+>Attempting to retrieve user with id 7
+>Found user with id 7
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[RetrieveUser] - 15:08:37 : dinsdag 9 april 2019
+>Attempting to retrieve user with id 7
+>Found user with id 7
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[RetrieveScoresOfUser] - 15:08:37 : dinsdag 9 april 2019
+>Attempting to retrieve scores of user 7
+>Could not find any scores of user 7
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[DeleteUser] - 15:08:40 : dinsdag 9 april 2019
+>Attempting to delete user with id 7
+>Deleted user with id 7
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[CheckLogin] - 15:08:52 : dinsdag 9 april 2019
+>Checking log in for user def
+>Something went wrong: System.InvalidCastException: Unable to cast object of type 'System.DBNull' to type 'System.Int32'.
+   at WerkelijkWaar.Classes.DatabaseQueries.CheckLogin(String username, String password) in C:\Users\Justin Muris\source\repos\WerkelijkWaar\WerkelijkWaar\Classes\DatabaseQueries.cs:line 124
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[CheckLogin] - 15:08:56 : dinsdag 9 april 2019
+>Checking log in for user def
+---[LOGGER MSG START]---
+[RetrieveUser] - 15:08:56 : dinsdag 9 april 2019
+>Attempting to retrieve user with id 8
+>Found user with id 8
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[RetrieveUser] - 15:08:56 : dinsdag 9 april 2019
+>Attempting to retrieve user with id 8
+>Found user with id 8
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[RetrieveScoresOfUser] - 15:08:56 : dinsdag 9 april 2019
+>Attempting to retrieve scores of user 8
+>Could not find any scores of user 8
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[DeleteUser] - 15:08:59 : dinsdag 9 april 2019
+>Attempting to delete user with id 8
+>Deleted user with id 8
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[RegisterUser] - 15:09:18 : dinsdag 9 april 2019
+>Executing RegisterUser.
+---[LOGGER MSG START]---
+[CheckLogin] - 15:09:18 : dinsdag 9 april 2019
+>Checking log in for user Smiley
+>Log in not found for user Smiley
+---[LOGGER  MSG  END]---
+
+>rm != null
+>Name matched.
+>Surname matched.
+>RoleId matched.
+>Age matched.
+>Privacy matched.
+>valid = true
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[RegisterUser] - 15:09:18 : dinsdag 9 april 2019
+>Trying to register user Smi
+>User Smi successfully added.
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[CheckLogin] - 15:09:18 : dinsdag 9 april 2019
+>Checking log in for user Smiley
+---[LOGGER MSG START]---
+[RetrieveUser] - 15:09:18 : dinsdag 9 april 2019
+>Attempting to retrieve user with id 10
+>Found user with id 10
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[EditAvatar] - 15:09:24 : dinsdag 9 april 2019
+>
+---[LOGGER MSG START]---
+[EditAvatar] - 15:09:24 : dinsdag 9 april 2019
+>avatar_10.jpg
+>C:\Users\Justin Muris\source\repos\WerkelijkWaar\WerkelijkWaar\wwwroot\content\image\avatars\10\avatar_10.jpg
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[EditUserAvatar] - 15:09:24 : dinsdag 9 april 2019
+>Trying to write to user 10's avatar.
+>Edited user with id 10
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[RetrieveUser] - 15:09:24 : dinsdag 9 april 2019
+>Attempting to retrieve user with id 10
+>Found user with id 10
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[RetrieveUser] - 15:09:30 : dinsdag 9 april 2019
+>Attempting to retrieve user with id 10
+>Found user with id 10
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[RetrieveScoresOfUser] - 15:09:30 : dinsdag 9 april 2019
+>Attempting to retrieve scores of user 10
+>Could not find any scores of user 10
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[RetrieveUser] - 15:09:31 : dinsdag 9 april 2019
+>Attempting to retrieve user with id 10
+>Found user with id 10
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[RetrieveScoresOfUser] - 15:09:31 : dinsdag 9 april 2019
+>Attempting to retrieve scores of user 10
+>Could not find any scores of user 10
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[RetrieveUser] - 15:09:33 : dinsdag 9 april 2019
+>Attempting to retrieve user with id 10
+>Found user with id 10
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[RetrieveScoresOfUser] - 15:09:33 : dinsdag 9 april 2019
+>Attempting to retrieve scores of user 10
+>Could not find any scores of user 10
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[RetrieveUser] - 15:09:35 : dinsdag 9 april 2019
+>Attempting to retrieve user with id 10
+>Found user with id 10
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[RetrieveScoresOfUser] - 15:09:35 : dinsdag 9 april 2019
+>Attempting to retrieve scores of user 10
+>Could not find any scores of user 10
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[RetrieveUser] - 15:09:37 : dinsdag 9 april 2019
+>Attempting to retrieve user with id 10
+>Found user with id 10
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[RetrieveScoresOfUser] - 15:09:37 : dinsdag 9 april 2019
+>Attempting to retrieve scores of user 10
+>Could not find any scores of user 10
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+Startup - 15:10:24 : dinsdag 9 april 2019
+>Starting server...
+>Server is up and running!
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[CheckLogin] - 15:10:31 : dinsdag 9 april 2019
+>Checking log in for user JMuris
+---[LOGGER MSG START]---
+[RetrieveUser] - 15:10:31 : dinsdag 9 april 2019
+>Attempting to retrieve user with id 2
+>Found user with id 2
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[RetrieveUserListByGroup] - 15:10:31 : dinsdag 9 april 2019
+>Attempting to retrieve users from group 1
+>Found 4 users from group 1
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[RetrieveUser] - 15:10:36 : dinsdag 9 april 2019
+>Attempting to retrieve user with id 3
+>Found user with id 3
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[RetrieveScoresOfUser] - 15:10:36 : dinsdag 9 april 2019
+>Attempting to retrieve scores of user 3
+>Found 2 scores from user 3
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[RetrieveUser] - 15:10:37 : dinsdag 9 april 2019
+>Attempting to retrieve user with id 3
+>Found user with id 3
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[RetrieveScoresOfUser] - 15:10:37 : dinsdag 9 april 2019
+>Attempting to retrieve scores of user 3
+>Found 2 scores from user 3
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[RetrieveUser] - 15:10:38 : dinsdag 9 april 2019
+>Attempting to retrieve user with id 3
+>Found user with id 3
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[RetrieveScoresOfUser] - 15:10:38 : dinsdag 9 april 2019
+>Attempting to retrieve scores of user 3
+>Found 2 scores from user 3
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+Startup - 15:15:33 : dinsdag 9 april 2019
+>Starting server...
+>Server is up and running!
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[CheckLogin] - 15:15:40 : dinsdag 9 april 2019
+>Checking log in for user JMuris
+---[LOGGER MSG START]---
+[RetrieveUser] - 15:15:40 : dinsdag 9 april 2019
+>Attempting to retrieve user with id 2
+>Found user with id 2
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[RetrieveUserListByGroup] - 15:15:40 : dinsdag 9 april 2019
+>Attempting to retrieve users from group 1
+>Found 4 users from group 1
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[RetrieveUser] - 15:15:41 : dinsdag 9 april 2019
+>Attempting to retrieve user with id 3
+>Found user with id 3
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[RetrieveScoresOfUser] - 15:15:41 : dinsdag 9 april 2019
+>Attempting to retrieve scores of user 3
+>Found 2 scores from user 3
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[RetrieveUserListByGroup] - 15:15:44 : dinsdag 9 april 2019
+>Attempting to retrieve users from group 1
+>Found 4 users from group 1
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[CheckLogin] - 15:15:53 : dinsdag 9 april 2019
+>Checking log in for user AAppel
+---[LOGGER MSG START]---
+[RetrieveUser] - 15:15:53 : dinsdag 9 april 2019
+>Attempting to retrieve user with id 3
+>Found user with id 3
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[RetrieveUser] - 15:15:53 : dinsdag 9 april 2019
+>Attempting to retrieve user with id 3
+>Found user with id 3
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[RetrieveScoresOfUser] - 15:15:53 : dinsdag 9 april 2019
+>Attempting to retrieve scores of user 3
+>Found 2 scores from user 3
+---[LOGGER  MSG  END]---
+

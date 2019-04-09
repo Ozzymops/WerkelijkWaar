@@ -24,12 +24,20 @@
                     }
                 </div>
                 <div>
-                    <img src="~/content/image/MissingAvatar.png" class="small-icon.center" alt="Foto van @Model.User.Name" title="Foto van @Model.User.Name" />
-                    <form>
-                        <p class="center">Avatar veranderen: <input type="file" /></p>
+                    @if (!String.IsNullOrEmpty(Model.User.ImageSource))
+                    {
+                        <img src="~/content/image/avatars/@Model.User.Id/@Model.User.ImageSource" class="small-icon.center" alt="Foto van @Model.User.Name" title="Foto van @Model.User.Name" />
+                    }
+                    else
+                    {
+                        <img src="~/content/image/MissingAvatar.png" class="small-icon.center" alt="Geen foto" title="Geen foto" />
+                    }
+                    <form asp-action="EditAvatar" asp-controller="Account" enctype="multipart/form-data">
+                        <input type="hidden" asp-for="Id" value="@Model.User.Id" />
+                        <p class="center">Avatar veranderen: <input asp-for="NewAvatar" type="file" /></p>
                         <input type="submit" value="Upload" class="center" style="width: 250px;" />
-                        <input type="submit" value="Kies een standaard avatar" class="center" style="margin-top: 10px; width: 250px;" />
                     </form>
+                    <input type="submit" value="Kies een standaard avatar" class="center" style="margin-top: 10px; width: 250px;" />
                 </div>
                 <hr />
                 <div>

@@ -18,7 +18,14 @@
                 <h1>Welkom @Model.User.Name @Model.User.Surname!</h1>
                 <hr />
                 <div>
-                    <img src="~/content/image/MissingAvatar.png" class="large-icon.center" alt="Foto van @Model.User.Name" title="Foto van @Model.User.Name" />
+                    @if (!String.IsNullOrEmpty(Model.User.ImageSource))
+                    {
+                        <img src="~/content/image/avatars/@Model.User.Id/@Model.User.ImageSource" class="small-icon.center" alt="Foto van @Model.User.Name" title="Foto van @Model.User.Name" />
+                    }
+                    else
+                    {
+                        <img src="~/content/image/MissingAvatar.png" class="small-icon.center" alt="Geen foto" title="Geen foto" />
+                    }
                 </div>
                 <div>
                     <p class="center">Voornaam: @Model.User.Name</p>

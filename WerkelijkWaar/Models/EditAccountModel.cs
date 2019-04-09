@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.AspNetCore.Http;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
@@ -21,6 +22,6 @@ namespace WerkelijkWaar.Models
         public string NewSurname { get; set; }
         public string NewUsername { get; set; }
         public string NewPassword { get; set; }
-        public string NewAvatar { get; set; }
+        public IFormFile NewAvatar { get; set; }
     }
 }

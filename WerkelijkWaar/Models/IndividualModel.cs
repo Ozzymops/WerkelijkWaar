@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.AspNetCore.Http;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -18,6 +19,8 @@ namespace WerkelijkWaar.Models
         public int ScoreId { get; set; }
         public int StoryId { get; set; }
         public int Rank { get; set; }
+
+        public int Role { get; set; }
 
         public void GetUser(int id)
         {

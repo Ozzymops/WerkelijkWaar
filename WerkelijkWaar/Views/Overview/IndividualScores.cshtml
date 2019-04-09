@@ -6,7 +6,14 @@
 <header>
     <div class="flex-column-top">
         <div>
-            <a asp-controller="Overview" asp-action="ScoreOverview"><img class="small_icon" src="~/content/image/BackArrow.png" title="Ga terug" alt="Ga terug" /></a>
+            @if (Model.Role == 0)
+            {
+                <a asp-controller="Home" asp-action="Index"><img class="small_icon" src="~/content/image/BackArrow.png" title="Ga terug" alt="Ga terug" /></a>
+            }
+            else if (Model.Role == 1)
+            {
+                <a asp-controller="Overview" asp-action="ScoreOverview"><img class="small_icon" src="~/content/image/BackArrow.png" title="Ga terug" alt="Ga terug" /></a>
+            }
         </div>
     </div>
 </header>

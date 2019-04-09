@@ -120,6 +120,7 @@ namespace WerkelijkWaar.Controllers
                 ism.GetUser(id);
                 ism.Scores = dq.RetrieveScoresOfUser(ism.User.Id);
                 ism.Rank = rank;
+                ism.Role = Newtonsoft.Json.JsonConvert.DeserializeObject<Classes.User>(HttpContext.Session.GetString("User")).RoleId;
 
                 if (scoreId != 0)
                 {
@@ -155,6 +156,7 @@ namespace WerkelijkWaar.Controllers
                 ism.GetUser(id);
                 ism.Stories = dq.RetrieveStoriesOfUser(ism.User.Id);
                 ism.Rank = rank;
+                ism.Role = Newtonsoft.Json.JsonConvert.DeserializeObject<Classes.User>(HttpContext.Session.GetString("User")).RoleId;
 
                 if (storyId != 0)
                 {

@@ -1,8 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using WerkelijkWaar.Models;
@@ -14,6 +16,20 @@ namespace WerkelijkWaar.Controllers
         // Standaard, overal toepasselijk
         Classes.Logger l = new Classes.Logger();
         Classes.DatabaseQueries dq = new Classes.DatabaseQueries();
+
+        /// <summary>
+        /// Geeft informatie over de hosting environment terug - nodig om serverpad te kunnen krijgen.
+        /// </summary>
+        private readonly IHostingEnvironment hostingEnvironment;
+
+        /// <summary>
+        /// Constructor: haal de hosting environment op en sla deze in hostingEnvironment op.
+        /// </summary>
+        /// <param name="environment">De hosting environment.</param>
+        public AccountController(IHostingEnvironment environment)
+        {
+            hostingEnvironment = environment;
+        }
 
         /// <summary>
         /// Navigeer naar Login.cshtml.
@@ -151,13 +167,18 @@ namespace WerkelijkWaar.Controllers
                         {
                             Name = rm.Name,
                             Surname = rm.Surname,
-                            Username = rm.Surname,
+                            Username = rm.Username,
                             Password = rm.Password,
                             RoleId = rm.RoleId
                         }));
 
-                        int id = dq.CheckLogin(rm.Username, rm.Password);
-                        HttpContext.Session.SetString("User", Newtonsoft.Json.JsonConvert.SerializeObject(dq.RetrieveUser(id)));
+                        if (status)
+                        {
+                            int id = dq.CheckLogin(rm.Username, rm.Password);
+                            HttpContext.Session.SetString("User", Newtonsoft.Json.JsonConvert.SerializeObject(dq.RetrieveUser(id)));
+
+                            return RedirectToAction("AccountView", "Account");
+                        }                   
                     }
                     else
                     {
@@ -170,7 +191,7 @@ namespace WerkelijkWaar.Controllers
                 l.WriteToLog("[RegisterUser]", "Aborting RegisterUser (rm = null).", 1);
             }
 
-            return RedirectToAction("Index", "Home");
+            return RedirectToAction("Register", "Account");
         }
 
         /// <summary>
@@ -272,9 +293,65 @@ namespace WerkelijkWaar.Controllers
             return RedirectToAction("EditAccount", "Account");
         }
 
-        public IActionResult EditAvatar()
+        public IActionResult EditAvatar(EditAccountModel eam)
         {
-            return RedirectToAction("EditAccount", "Account");
+            // check if logged in
+            if (!String.IsNullOrEmpty(HttpContext.Session.GetString("User")))
+            {
+                // Sla de image tijdelijk op.
+                var img = eam.NewAvatar;
+
+                // Haal bestandstype op
+                var fileType = Path.GetFileName(img.FileName);
+
+                // Haal de filename van de image op.
+                l.WriteToLog("[EditAvatar]", "", 0);
+
+                var fileName = "";
+
+                if (fileType.EndsWith(".jpg"))
+                {
+                    fileName = "avatar_" + eam.Id.ToString() + ".jpg";
+                }
+                else if (fileType.EndsWith(".png"))
+                {
+                    fileName = "avatar_" + eam.Id.ToString() + ".png";
+                }
+                else
+                {
+                    return RedirectToAction("EditAccount", "Account", eam);
+                }
+
+                l.WriteToLog("[EditAvatar]", (string)fileName, 0);
+
+                // todo: check of image daadwerkelijk een image is.
+
+                // Haal de User ID op van de nieuwe gebruiker.
+                int userId = eam.Id;
+
+                // Bouw het pad naar de image op.
+                var loc = Path.Combine(hostingEnvironment.WebRootPath, "content\\image\\avatars\\" + userId);
+                var path = Path.Combine(loc, fileName);
+
+                // Creëer het pad naar de image.
+                Directory.CreateDirectory(loc);
+
+                // Kopiëer de image naar het pad.
+                img.CopyTo(new FileStream(path, FileMode.Create));
+
+                l.WriteToLog("[EditAvatar]", path, 1);
+
+                // Sla het pad op in de database bij de nieuwe gebruiker.
+                bool result = dq.EditUserAvatar(eam.Id, fileName);
+
+                if (result)
+                {
+                    HttpContext.Session.Remove("User");
+                    HttpContext.Session.SetString("User", Newtonsoft.Json.JsonConvert.SerializeObject(dq.RetrieveUser(eam.Id)));
+                }
+            }
+
+            return RedirectToAction("EditAccount", "Account", eam);
         }
 
         public IActionResult DeleteAccount(int id)
