@@ -160,3 +160,135 @@ Startup - 11:44:05 : woensdag 10 april 2019
 >Found 4 users from group 1
 ---[LOGGER  MSG  END]---
 
+---[LOGGER MSG START]---
+Startup - 11:45:22 : woensdag 10 april 2019
+>Starting server...
+>Server is up and running!
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[CheckLogin] - 11:45:30 : woensdag 10 april 2019
+>Checking log in for user JMuris
+---[LOGGER MSG START]---
+[RetrieveUser] - 11:45:30 : woensdag 10 april 2019
+>Attempting to retrieve user with id 2
+>Found user with id 2
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[RetrieveUserListByGroup] - 11:45:30 : woensdag 10 april 2019
+>Attempting to retrieve users from group 1
+>Found 4 users from group 1
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+Startup - 12:02:53 : woensdag 10 april 2019
+>Starting server...
+>Server is up and running!
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[CheckLogin] - 12:36:08 : woensdag 10 april 2019
+>Checking log in for user JMuris
+---[LOGGER MSG START]---
+[RetrieveUser] - 12:36:08 : woensdag 10 april 2019
+>Attempting to retrieve user with id 2
+>Found user with id 2
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[RetrieveUserListByGroup] - 12:36:08 : woensdag 10 april 2019
+>Attempting to retrieve users from group 1
+>Found 4 users from group 1
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[RetrieveUser] - 12:36:21 : woensdag 10 april 2019
+>Attempting to retrieve user with id 3
+>Found user with id 3
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[RetrieveScoresOfUser] - 12:36:21 : woensdag 10 april 2019
+>Attempting to retrieve scores of user 3
+>Found 7 scores from user 3
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[RetrieveUser] - 12:36:22 : woensdag 10 april 2019
+>Attempting to retrieve user with id 3
+>Found user with id 3
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[RetrieveScoresOfUser] - 12:36:22 : woensdag 10 april 2019
+>Attempting to retrieve scores of user 3
+>Found 7 scores from user 3
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[RetrieveUserListByGroup] - 12:36:35 : woensdag 10 april 2019
+>Attempting to retrieve users from group 1
+>Found 4 users from group 1
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[RetrieveUser] - 12:36:37 : woensdag 10 april 2019
+>Attempting to retrieve user with id 3
+>Found user with id 3
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[RetrieveStoriesOfUser] - 12:36:37 : woensdag 10 april 2019
+>Attempting to retrieve stories of user 3
+>Found 5 stories from user 3
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[RetrieveUser] - 12:36:38 : woensdag 10 april 2019
+>Attempting to retrieve user with id 3
+>Found user with id 3
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[RetrieveStoriesOfUser] - 12:36:38 : woensdag 10 april 2019
+>Attempting to retrieve stories of user 3
+>Found 5 stories from user 3
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[RetrieveUser] - 12:36:40 : woensdag 10 april 2019
+>Attempting to retrieve user with id 3
+>Found user with id 3
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[RetrieveStoriesOfUser] - 12:36:40 : woensdag 10 april 2019
+>Attempting to retrieve stories of user 3
+>Found 5 stories from user 3
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[RetrieveUser] - 12:36:42 : woensdag 10 april 2019
+>Attempting to retrieve user with id 3
+>Found user with id 3
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[RetrieveStoriesOfUser] - 12:36:42 : woensdag 10 april 2019
+>Attempting to retrieve stories of user 3
+>Found 5 stories from user 3
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+Startup - 15:30:20 : woensdag 10 april 2019
+>Starting server...
+>Server is up and running!
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+Startup - 15:30:49 : woensdag 10 april 2019
+>Starting server...
+>Server is up and running!
+---[LOGGER  MSG  END]---
+
