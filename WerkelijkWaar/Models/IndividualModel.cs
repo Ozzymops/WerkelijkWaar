@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Mvc.Rendering;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -21,6 +22,9 @@ namespace WerkelijkWaar.Models
         public int Rank { get; set; }
 
         public int Role { get; set; }
+
+        public int GameTypeIndex { get; set; }
+        public SelectList GameType { get; set; }
 
         public void GetUser(int id)
         {

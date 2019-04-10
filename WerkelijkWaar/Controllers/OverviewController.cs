@@ -8,6 +8,7 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using WerkelijkWaar.Models;
 using System.Reflection;
+using Microsoft.AspNetCore.Mvc.Rendering;
 
 namespace WerkelijkWaar.Controllers
 {
@@ -171,6 +172,67 @@ namespace WerkelijkWaar.Controllers
                 }
 
                 return View(ism);
+            }
+
+            return RedirectToAction("Index", "Home");
+        }
+
+        /// <summary>
+        /// Navigeer naar de CreateScore pagina
+        /// </summary>
+        /// <param name="id">User ID</param>
+        /// <returns>View</returns>
+        public IActionResult CreateScore(int id, int rank)
+        {
+            // Check if logged in
+            if (!String.IsNullOrEmpty(HttpContext.Session.GetString("User")))
+            {
+                // Check if teacher
+                Classes.User tempUser = Newtonsoft.Json.JsonConvert.DeserializeObject<Classes.User>(HttpContext.Session.GetString("User"));
+
+                if (tempUser.RoleId == 1)
+                {
+                    IndividualModel ism = new IndividualModel();
+                    ism.GetUser(id);
+                    ism.Rank = rank;
+                    ism.Score = new Classes.Score();
+
+                    List<Classes.GameType> gameTypeList = new List<Classes.GameType>();
+                    gameTypeList.Add(new Classes.GameType { TypeIndex = 2, TypeName = "Spel 1" });
+                    gameTypeList.Add(new Classes.GameType { TypeIndex = 3, TypeName = "Spel 2" });
+                    gameTypeList.Add(new Classes.GameType { TypeIndex = 4, TypeName = "Spel 3" });
+                    gameTypeList.Add(new Classes.GameType { TypeIndex = 5, TypeName = "Spel 4" });
+                    gameTypeList.Add(new Classes.GameType { TypeIndex = 6, TypeName = "Spel 5" });
+
+                    ism.GameType = new SelectList(gameTypeList, "TypeIndex", "TypeName");
+
+                    return View(ism);
+                }
+            }
+
+            return RedirectToAction("Index", "Home");
+        }
+
+        /// <summary>
+        /// Maak een score aan.
+        /// </summary>
+        /// <param name="ism">IndividualModel</param>
+        /// <returns></returns>
+        public IActionResult PushScore(IndividualModel im)
+        {
+            // Check if logged in
+            if (!String.IsNullOrEmpty(HttpContext.Session.GetString("User")))
+            {
+                // Check if teacher
+                Classes.User tempUser = Newtonsoft.Json.JsonConvert.DeserializeObject<Classes.User>(HttpContext.Session.GetString("User"));
+
+                if (tempUser.RoleId == 1)
+                {
+                    im.Score.GameType = im.GameTypeIndex;
+                    bool results = dq.CreateScore(im.Score);
+                }
+
+                return RedirectToAction("IndividualScores", "Overview", new { id = im.User.Id, rank = im.Rank, scoreId = 0 });
             }
 
             return RedirectToAction("Index", "Home");

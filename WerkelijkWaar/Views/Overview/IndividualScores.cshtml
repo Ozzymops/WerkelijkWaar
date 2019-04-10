@@ -41,6 +41,11 @@
                                     </div>
                                 </li>
                                 }
+                                <li>
+                                    <form asp-action="CreateScore" asp-controller="Overview" asp-route-id="@Model.User.Id">
+                                        <input type="submit" value="Score aanmaken" style="width: 250px;" />
+                                    </form>
+                                </li>
                             </ul>
                         </div>
                         <!-- right -->

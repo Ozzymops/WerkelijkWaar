@@ -18,6 +18,11 @@ namespace WerkelijkWaar.Classes
 
         // CRUD
         #region CREATE
+        /// <summary>
+        /// Maak een gebruiker aan in het systeem.
+        /// </summary>
+        /// <param name="user">User</param>
+        /// <returns>true or false</returns>
         public bool RegisterUser(User user)
         {
             l.WriteToLog("[RegisterUser]", "Trying to register user " + user.Name, 0);
@@ -64,6 +69,74 @@ namespace WerkelijkWaar.Classes
             }
         }
 
+        /// <summary>
+        /// Maak een score aan in de database.
+        /// </summary>
+        /// <param name="score">Score</param>
+        /// <returns>true or false</returns>
+        public bool CreateScore(Score score)
+        {
+            l.WriteToLog("[CreateScore]", "Trying to create score for user " + score.OwnerId, 0);
+
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                SqlCommand command = new SqlCommand("INSERT INTO [Score] SELECT @ownerId, @gameType, @followers, @cash, @votes, @answers, @date", connection);
+
+                command.Parameters.Add(new SqlParameter("@ownerId", score.OwnerId));
+                command.Parameters.Add(new SqlParameter("@gameType", score.GameType));
+                command.Parameters.Add(new SqlParameter("@answers", score.Answers));
+                command.Parameters.Add(new SqlParameter("@date", score.Date));
+
+                // Check for nullables
+                if (score.FollowerAmount == -1)
+                {
+                    command.Parameters.Add(new SqlParameter("@followers", DBNull.Value));
+                }
+                else
+                {
+                    command.Parameters.Add(new SqlParameter("@followers", score.FollowerAmount));
+                }
+
+                if (score.CashAmount == -1)
+                {
+                    command.Parameters.Add(new SqlParameter("@cash", DBNull.Value));
+                }
+                else
+                {
+                    command.Parameters.Add(new SqlParameter("@cash", Convert.ToDecimal(score.CashAmount)));
+                }
+
+                if (score.AttainedVotes == -1)
+                {
+                    command.Parameters.Add(new SqlParameter("@votes", DBNull.Value));
+                }
+                else
+                {
+                    command.Parameters.Add(new SqlParameter("@votes", score.AttainedVotes));
+                }
+
+                try
+                {
+                    connection.Open();
+
+                    int rows = command.ExecuteNonQuery();
+
+                    if (rows > 0)
+                    {
+                        l.WriteToLog("[CreateScore]", "Score for " + score.OwnerId + " successfully added.", 1);
+                        return true;
+                    }
+
+                    l.WriteToLog("[CreateScore]", "Failed to add score for " + score.OwnerId + ".", 1);
+                    return false;
+                }
+                catch (Exception ex)
+                {
+                    l.WriteToLog("[CreateScore]", ex.ToString(), 1);
+                    return false;
+                }
+            }
+        }
         #endregion
 
         #region READ
@@ -101,26 +174,6 @@ namespace WerkelijkWaar.Classes
 
                     if (command.Parameters["@responseMessage"].Value.ToString().Contains("Success"))
                     {
-                        //command = new SqlCommand("SELECT [Id] FROM [User] WHERE [Username] = @username", connection);
-                        //command.Parameters.Add(new SqlParameter("@username", username));
-
-                        //connection.Close();
-                        //connection.Open();
-
-                        //using (SqlDataReader reader = command.ExecuteReader())
-                        //{
-                        //    if (reader.HasRows)
-                        //    {
-                        //        while (reader.Read())
-                        //        {
-                        //            l.WriteToLog("[CheckLogin]", "Log in found for user with Id " + (int)reader["Id"], 1);
-                        //            return (int)reader["Id"];
-                        //        }
-                        //    }
-                        //    l.WriteToLog("[CheckLogin]", "Log in not found for user " + username, 1);
-                        //    return 0;
-                        //}
-
                         return (int)command.Parameters["@userId"].Value;
                     }
                     else
