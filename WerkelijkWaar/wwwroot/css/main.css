@@ -87,14 +87,25 @@ input[type=submit].disabled {
     color: darkslategray;
 }
 
-/* 64x64 image */
+/* 32x32 image */
 img.small-icon {
     width: 32px;
     height: 32px;
 }
 
-/* 256x256 image */
+img.medium-icon {
+    width: 64px;
+    height: 64px;
+}
+
+/* 128x128 image */
 img.large-icon {
+    width: 128px;
+    height: 128px;
+}
+
+/* 256x256 image */
+img.huge-icon {
     width: 256px;
     height: 256px;
 }
