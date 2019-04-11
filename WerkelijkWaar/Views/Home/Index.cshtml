@@ -1,34 +1,32 @@
 ﻿@{
     ViewData["Title"] = "Home";
 }
-
-<header>
-    <div class="flex-column-top">
-        <div>
-            <a asp-controller="Home" asp-action="GoToConfig"><img class="small_icon" src="~/content/image/Gear.png" title="Opties" alt="Opties" /></a>
-        </div>
-        <div>
-            <a asp-controller="Home" asp-action="GoToOverviews"><img class="small_icon" src="~/content/image/Trophy.png" title="Inzage" alt="Inzage" /></a>
-        </div>
-    </div>
-</header>
+@model LoginModel
 
 <body>
-    <div>
-        <img src="~/content/image/Squirrel.png" class="mascot-home" />
+    <div class="flex-center" style="flex-direction: column; margin-top: 10px;">
+        <h1>Werkelijk Waar?</h1>
+        <h2>Houd anderen voor de gek, maar<br />probeer zelf de waarheid te vinden.</h2>
+        <br />
+        <h2>Weet jij het meest geloofwaardige<br />nepnieuws te schrijven?</h2>
+        <h3>Heb je nog geen account? Maak deze <a asp-controller="Account" asp-action="Register">hier</a> aan!</h3>
+        <br />
+        <form asp-action="LoginUser" asp-controller="Account">
+            <div>
+                <p class="landing">Gebruikersnaam</p>
+                <input asp-for="Username" type="text" class="landing" />
+            </div>
+            <div style="margin-top: 10px;">
+                <p class="landing">Wachtwoord</p>
+                <input asp-for="Password" type="password" class="landing"/>
+            </div>
+            <input type="submit" value="Aanmelden" class="landing" />
+        </form>
     </div>
-    <div class="flex-center" style="margin-top: 20%; flex-direction: column;">
-        <div>
-            <h1>Werkelijk Waar?</h1>
-        </div>
-        <div>
-            <h2>Houd anderen voor de gek, maar probeer zelf de waarheid te vinden.<br />Weet jij het meest geloofwaardige nepnieuws te schrijven?</h2>
-        </div>
-        <div>
-            <form method="post">
-                <button asp-controller="Home" asp-action="GoToRegister" class="button">Aanmelden</button>
-                <button asp-controller="Home" asp-action="GoToLogin" class="button">Inloggen</button>
-            </form>
-        </div>
+    <div>
+        <img src="~/content/image/Squirrel.png" class="mascot-landing" />
+        <img src="~/content/image/SpeechBalloon.png" class="speech-landing" />
+        <p class="speech-landing">Leuk dat je er bent!<br />Weet je al hoe 'Werkelijk Waar' werkt?</p>
+        <a class="speech-landing" asp-controller="Home" asp-action="GameInfo">Hoe speel ik het spel?</a>
     </div>
 </body>

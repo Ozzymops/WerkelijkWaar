@@ -52,7 +52,8 @@ namespace WerkelijkWaar.Controllers
                     else if (destination == 1)
                     {
                         // Inzage
-                        return RedirectToAction("ScoreOverview", "Overview");
+                        // return RedirectToAction("ScoreOverview", "Overview");
+                        return RedirectToAction("Index", "Home");
                     }
                 }
                 else if (screen == 1)

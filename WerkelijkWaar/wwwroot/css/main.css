@@ -177,10 +177,105 @@ ul.overview {
     padding: 0;
 }
 
-/* Home */
-img.mascot-home {
-    width: 40%;
-    height: 40%;
-    float: left;
-    margin-left: -244px;
+/* #region _Layout */
+div.ww-navbar {
+    width: 100%;
+    height: 100px;
+    background-color: saddlebrown;
+    border-bottom: 2px solid black;
 }
+
+div.ww-navbar-container {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-between;
+}
+
+div.ww-navbar-profile {
+    display: flex;
+    flex-direction: row;
+    width: 400px;
+}
+
+div.ww-navbar-logout {
+    display: flex;
+    flex-direction: row;
+    width: 200px;
+    height: 100px;
+}
+
+p.ww-navbar-profile {
+    color: white;
+    font-size: 24px;
+    text-align: center;
+}
+
+p.ww-navbar-logout {
+    font-size: 24px;
+    margin-top: 30px;
+    color: white;
+    text-align: center;
+    vertical-align: central;
+}
+
+img.ww-navbar-profile {
+    width: 100px;
+    height: 100px;
+}
+
+img.ww-navbar-logout {
+    height: 100px;
+    width: 100px;
+    padding: 20px;
+}
+/* #endregion _Layout */
+
+/* #region Landing */
+img.mascot-landing {
+    height: 33%;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+}
+
+img.speech-landing {
+    height: 20%;
+    position: absolute;
+    right: 175px;
+    bottom: 225px;
+}
+
+p.landing {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 0px;
+}
+
+p.speech-landing {
+    width: 200px;
+    text-align: center;
+    position: absolute;
+    right: 170px;
+    bottom: 285px;
+}
+
+a.speech-landing {
+    text-align: center;
+    position: absolute;
+    right: 195px;
+    bottom: 275px;
+}
+
+input.landing {
+    width: 300px;
+    margin-top: 10px;
+    margin-left: auto;
+    margin-right: auto;
+}
+/* #endregion Landing */
+
+/* #region Hub */
+
+/* #endregion Hub */

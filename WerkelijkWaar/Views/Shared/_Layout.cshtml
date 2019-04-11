@@ -19,7 +19,7 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>@ViewData["Title"] - WerkelijkWaar</title>
+    <title>@ViewData["Title"] - Werkelijk Waar?</title>
 
     <environment include="Development">
         <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css" />
@@ -35,29 +35,31 @@
 </head>
 <body>
     <header>
-        <div style="width: 100%; height: 100px; background-color: saddlebrown;">
+        <div class="ww-navbar">
             @if (sessionExists)
             {
-                <div style="display: flex; flex-direction: row; width: 100%; justify-content: space-between;">
+                <div class="ww-navbar-container">
                     <!-- Left side -->
-                    <div style="display: flex; flex-direction: row; width: 400px;">
+                    <div class="ww-navbar-profile">
                         @if (!String.IsNullOrEmpty(user.ImageSource))
                         {
-                            <img src="~/content/image/avatars/@user.Id/@user.ImageSource" style="width: 100px; height: 100px;" alt="Profielfoto" title="Profielfoto" />
+                            <img class="ww-navbar-profile" src="~/content/image/avatars/@user.Id/@user.ImageSource" alt="Profielfoto" title="Profielfoto" />
                         }
                         else
                         {
-                            <img src="~/content/image/MissingAvatar.png" class="small-icon" alt="Profielfoto" title="Profielfoto" />
+                            <img class="ww-navbar-profile" src="~/content/image/MissingAvatar.png" alt="Profielfoto" title="Profielfoto" />
                         }
-                        <div style="padding-left: 20px;">
-                            <p style="color: white; font-size: 24px;">Welkom, @user.Name!</p>
+                        <div style="margin-left: 10px;">
+                            <p class="ww-navbar-profile">Welkom, @user.Name!</p>
                             <a style="font-size: 24px;" asp-controller="Account" asp-action="AccountView">Account</a>
                         </div>
                     </div>
                     <!-- Right side -->
-                    <div style="display: flex; flex-direction: row; width: 200px; height: 100px;">
-                        <p style="padding-top: 50px; color: white; text-align: center; vertical-align: central;">Uitloggen</p>
-                        <img src="~/content/image/Logout.png" class="medium-icon" alt="Logout" title="Logout" />
+                    <div class="ww-navbar-logout">
+                        <p class="ww-navbar-logout">Uitloggen</p>
+                        <a asp-controller="Account" asp-action="Logout">
+                            <img class="ww-navbar-logout" src="~/content/image/Logout.png" alt="Logout" title="Logout" />
+                        </a>
                     </div>
                 </div>
             }
