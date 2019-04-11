@@ -32,42 +32,34 @@ namespace WerkelijkWaar.Controllers
         }
 
         /// <summary>
-        /// Navigeer naar Login.cshtml.
+        /// Stuur de gebruiker door naar de juiste hub.
         /// </summary>
-        /// <param name="screen">Schermtype.</param>
-        /// <param name="destination">Bestemming.</param>
         /// <returns>View</returns>
-        public IActionResult Login(int screen, int destination)
+        public IActionResult Login()
         {
             // Check if logged in
             if (!String.IsNullOrEmpty(HttpContext.Session.GetString("User")))
             {
-                if (screen == 0)
+                Classes.User tempUser = Newtonsoft.Json.JsonConvert.DeserializeObject<Classes.User>(HttpContext.Session.GetString("User"));
+
+                // Student hub
+                if (tempUser.RoleId == 0)
                 {
-                    if (destination == 0)
-                    {
-                        // Configuration
-                        return RedirectToAction("Configuration", "Overview");
-                    }
-                    else if (destination == 1)
-                    {
-                        // Inzage
-                        // return RedirectToAction("ScoreOverview", "Overview");
-                        return RedirectToAction("Index", "Home");
-                    }
+                    return RedirectToAction("Index", "Home");
                 }
-                else if (screen == 1)
+                // Teacher hub
+                else if (tempUser.RoleId == 1)
                 {
-                    // Game
+                    return RedirectToAction("TeacherHub_StartGame", "Hub");
+                }
+                // Admin hub
+                else if (tempUser.RoleId == 2)
+                {
                     return RedirectToAction("Index", "Home");
                 }
             }
 
-            LoginModel lm = new LoginModel();
-            lm.Screen = screen;
-            lm.Destination = destination;
-
-            return View(lm);
+            return RedirectToAction("Index", "Home");
         }
 
         /// <summary>
@@ -81,29 +73,23 @@ namespace WerkelijkWaar.Controllers
 
             if (id != 0)
             {
-                HttpContext.Session.SetString("User", Newtonsoft.Json.JsonConvert.SerializeObject(dq.RetrieveUser(id)));
+                Classes.User tempUser = dq.RetrieveUser(id);
+                HttpContext.Session.SetString("User", Newtonsoft.Json.JsonConvert.SerializeObject(tempUser));
 
-                if (lm.Screen == 0)
+                // Student hub
+                if (tempUser.RoleId == 0)
                 {
-                    if (lm.Destination == 0)
-                    {
-                        // Configuration
-                        return RedirectToAction("Configuration", "Overview");
-                    }
-                    else if (lm.Destination == 1)
-                    {
-                        // Inzage
-                        return RedirectToAction("ScoreOverview", "Overview");
-                    }
-                }
-                else if (lm.Screen == 1)
-                {
-                    // Game
                     return RedirectToAction("Index", "Home");
                 }
-                else
+                // Teacher hub
+                else if (tempUser.RoleId == 1)
                 {
-                    return RedirectToAction("Login", "Account");
+                    return RedirectToAction("TeacherHub_StartGame", "Hub");
+                }
+                // Admin hub
+                else if (tempUser.RoleId == 2)
+                {
+                    return RedirectToAction("Index", "Home");
                 }
             }
 

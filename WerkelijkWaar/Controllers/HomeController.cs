@@ -13,6 +13,12 @@ namespace WerkelijkWaar.Controllers
     {
         public IActionResult Index()
         {
+            // login check
+            if (!String.IsNullOrEmpty(HttpContext.Session.GetString("User")))
+            {
+                return RedirectToAction("Login", "Account");
+            }
+
             return View();
         }
 

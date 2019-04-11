@@ -1,5 +1,5 @@
 ﻿/* Default */
-body {
+html, body {
     background-color: orange;
 }
 
@@ -185,6 +185,14 @@ div.ww-navbar {
     border-bottom: 2px solid black;
 }
 
+div.ww-navbar-side {
+    float: left;
+    height: 845px;
+    width: 300px;
+    background-color: saddlebrown;
+    border-right: 2px solid black;
+}
+
 div.ww-navbar-container {
     display: flex;
     flex-direction: row;
@@ -219,6 +227,12 @@ p.ww-navbar-logout {
     vertical-align: central;
 }
 
+p.ww-navbar-side {
+    color: white;
+    font-size: 24px;
+    text-align: center;
+}
+
 img.ww-navbar-profile {
     width: 100px;
     height: 100px;
@@ -228,6 +242,12 @@ img.ww-navbar-logout {
     height: 100px;
     width: 100px;
     padding: 20px;
+}
+
+img.ww-navbar-side-image {
+    height: 10%;
+    margin-top: 10px;
+    margin-left: 105px;
 }
 /* #endregion _Layout */
 
@@ -277,5 +297,31 @@ input.landing {
 /* #endregion Landing */
 
 /* #region Hub */
+div.overview-student {
+    margin-left: 200px;
+    width: 1000px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    border: 2px solid black;
+    background-color: burlywood;
+}
 
+div.overview-student-small {
+    width: 120px;
+    border-right: 2px solid black;
+}
+
+div.overview-student-medium {
+    width: 240px;
+    border-right: 2px solid black;
+}
+
+div.overview-student-buttons {
+    margin-right: 20px;
+    margin-left: -30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
 /* #endregion Hub */

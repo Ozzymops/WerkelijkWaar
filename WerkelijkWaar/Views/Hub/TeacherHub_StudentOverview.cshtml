@@ -1,0 +1,51 @@
+﻿@{
+    ViewData["Title"] = "Studentenoverzicht";
+    Layout = "_LayoutSide";
+}
+@model HubModel
+
+<body>
+    <div class="flex-center" style="flex-direction: column; margin-top: 10px;">
+        @if (Model.UserList != null || Model.UserList.Count != 0)
+        {
+            foreach (WerkelijkWaar.Classes.User u in Model.UserList)
+            {
+                <div class="overview-student">
+                    <div class="overview-student-small">
+                        <h2>x.</h2>
+                    </div>
+                    <div class="overview-student-small">
+                        @if (!String.IsNullOrEmpty(u.ImageSource))
+                        {
+                            <img src="~/content/image/avatars/@u.Id/@u.ImageSource" alt="Profielfoto" title="Profielfoto" class="medium-icon" />
+                        }
+                        else
+                        {
+                            <img src="~/content/image/MissingAvatar.png" alt="Geen foto" title="Geen foto" class="medium-icon" />
+                        }
+                    </div>
+                    <div class="overview-student-medium">
+                        <p>@u.Name @u.Surname</p>
+                    </div>
+                    <div class="overview-student-medium">
+                        <p>Gemiddelde: @u.AverageScore</p>
+                    </div>
+                    <div class="overview-student-buttons">
+                        <a asp-action="IndividualStories" asp-controller="Overview" asp-route-id="@u.Id" asp-route-rank="0" asp-route-storyId="0">Verhalen</a>
+                        <a asp-action="IndividualScores" asp-controller="Overview" asp-route-id="@u.Id" asp-route-rank="0" asp-route-scoreId="0">Scores</a>
+                    </div>
+                </div>
+            }
+        }
+        else
+        {
+            <h2>Geen studenten gevonden.</h2>
+        }
+    </div>
+</body>
+
+@section Scripts {
+    <script>
+        document.getElementById("overviewImage").style.border = "2px solid white";
+    </script>
+}
