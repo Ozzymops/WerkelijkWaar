@@ -1,374 +1,26 @@
 ---[LOGGER MSG START]---
-Startup - 11:43:02 : woensdag 10 april 2019
+Startup - 10:59:43 : woensdag 17 april 2019
 >Starting server...
 >Server is up and running!
 ---[LOGGER  MSG  END]---
 
 ---[LOGGER MSG START]---
-[CheckLogin] - 11:43:08 : woensdag 10 april 2019
+[CheckLogin] - 10:59:48 : woensdag 17 april 2019
+>Checking log in for user JMuris
+>Log in not found for user JMuris
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[CheckLogin] - 10:59:51 : woensdag 17 april 2019
 >Checking log in for user JMuris
 ---[LOGGER MSG START]---
-[RetrieveUser] - 11:43:09 : woensdag 10 april 2019
+[RetrieveUser] - 10:59:51 : woensdag 17 april 2019
 >Attempting to retrieve user with id 2
 >Found user with id 2
 ---[LOGGER  MSG  END]---
 
 ---[LOGGER MSG START]---
-[RetrieveUserListByGroup] - 11:43:09 : woensdag 10 april 2019
->Attempting to retrieve users from group 1
->Found 4 users from group 1
----[LOGGER  MSG  END]---
-
----[LOGGER MSG START]---
-[RetrieveUser] - 11:43:10 : woensdag 10 april 2019
->Attempting to retrieve user with id 3
->Found user with id 3
----[LOGGER  MSG  END]---
-
----[LOGGER MSG START]---
-[RetrieveScoresOfUser] - 11:43:10 : woensdag 10 april 2019
->Attempting to retrieve scores of user 3
->Found 5 scores from user 3
----[LOGGER  MSG  END]---
-
----[LOGGER MSG START]---
-[RetrieveUser] - 11:43:12 : woensdag 10 april 2019
->Attempting to retrieve user with id 3
->Found user with id 3
----[LOGGER  MSG  END]---
-
----[LOGGER MSG START]---
-[CreateScore] - 11:43:17 : woensdag 10 april 2019
->Trying to create score for user 3
->Score for 3 successfully added.
----[LOGGER  MSG  END]---
-
----[LOGGER MSG START]---
-[RetrieveUser] - 11:43:17 : woensdag 10 april 2019
->Attempting to retrieve user with id 3
->Found user with id 3
----[LOGGER  MSG  END]---
-
----[LOGGER MSG START]---
-[RetrieveScoresOfUser] - 11:43:17 : woensdag 10 april 2019
->Attempting to retrieve scores of user 3
->Found 6 scores from user 3
----[LOGGER  MSG  END]---
-
----[LOGGER MSG START]---
-[RetrieveUser] - 11:43:19 : woensdag 10 april 2019
->Attempting to retrieve user with id 3
->Found user with id 3
----[LOGGER  MSG  END]---
-
----[LOGGER MSG START]---
-[RetrieveScoresOfUser] - 11:43:19 : woensdag 10 april 2019
->Attempting to retrieve scores of user 3
->Found 6 scores from user 3
----[LOGGER  MSG  END]---
-
----[LOGGER MSG START]---
-[RetrieveUserListByGroup] - 11:43:21 : woensdag 10 april 2019
->Attempting to retrieve users from group 1
->Found 4 users from group 1
----[LOGGER  MSG  END]---
-
----[LOGGER MSG START]---
-Startup - 11:44:05 : woensdag 10 april 2019
->Starting server...
->Server is up and running!
----[LOGGER  MSG  END]---
-
----[LOGGER MSG START]---
-[CheckLogin] - 11:44:15 : woensdag 10 april 2019
->Checking log in for user JMuris
----[LOGGER MSG START]---
-[RetrieveUser] - 11:44:15 : woensdag 10 april 2019
->Attempting to retrieve user with id 2
->Found user with id 2
----[LOGGER  MSG  END]---
-
----[LOGGER MSG START]---
-[RetrieveUserListByGroup] - 11:44:15 : woensdag 10 april 2019
->Attempting to retrieve users from group 1
->Found 4 users from group 1
----[LOGGER  MSG  END]---
-
----[LOGGER MSG START]---
-[RetrieveUser] - 11:44:16 : woensdag 10 april 2019
->Attempting to retrieve user with id 3
->Found user with id 3
----[LOGGER  MSG  END]---
-
----[LOGGER MSG START]---
-[RetrieveScoresOfUser] - 11:44:16 : woensdag 10 april 2019
->Attempting to retrieve scores of user 3
->Found 6 scores from user 3
----[LOGGER  MSG  END]---
-
----[LOGGER MSG START]---
-[RetrieveUser] - 11:44:19 : woensdag 10 april 2019
->Attempting to retrieve user with id 3
->Found user with id 3
----[LOGGER  MSG  END]---
-
----[LOGGER MSG START]---
-[CreateScore] - 11:44:29 : woensdag 10 april 2019
->Trying to create score for user 3
->Score for 3 successfully added.
----[LOGGER  MSG  END]---
-
----[LOGGER MSG START]---
-[RetrieveUser] - 11:44:29 : woensdag 10 april 2019
->Attempting to retrieve user with id 3
->Found user with id 3
----[LOGGER  MSG  END]---
-
----[LOGGER MSG START]---
-[RetrieveScoresOfUser] - 11:44:29 : woensdag 10 april 2019
->Attempting to retrieve scores of user 3
->Found 7 scores from user 3
----[LOGGER  MSG  END]---
-
----[LOGGER MSG START]---
-[RetrieveUser] - 11:44:30 : woensdag 10 april 2019
->Attempting to retrieve user with id 3
->Found user with id 3
----[LOGGER  MSG  END]---
-
----[LOGGER MSG START]---
-[RetrieveScoresOfUser] - 11:44:30 : woensdag 10 april 2019
->Attempting to retrieve scores of user 3
->Found 7 scores from user 3
----[LOGGER  MSG  END]---
-
----[LOGGER MSG START]---
-[RetrieveUser] - 11:44:31 : woensdag 10 april 2019
->Attempting to retrieve user with id 3
->Found user with id 3
----[LOGGER  MSG  END]---
-
----[LOGGER MSG START]---
-[RetrieveScoresOfUser] - 11:44:31 : woensdag 10 april 2019
->Attempting to retrieve scores of user 3
->Found 7 scores from user 3
----[LOGGER  MSG  END]---
-
----[LOGGER MSG START]---
-[RetrieveUserListByGroup] - 11:44:33 : woensdag 10 april 2019
->Attempting to retrieve users from group 1
->Found 4 users from group 1
----[LOGGER  MSG  END]---
-
----[LOGGER MSG START]---
-Startup - 11:45:22 : woensdag 10 april 2019
->Starting server...
->Server is up and running!
----[LOGGER  MSG  END]---
-
----[LOGGER MSG START]---
-[CheckLogin] - 11:45:30 : woensdag 10 april 2019
->Checking log in for user JMuris
----[LOGGER MSG START]---
-[RetrieveUser] - 11:45:30 : woensdag 10 april 2019
->Attempting to retrieve user with id 2
->Found user with id 2
----[LOGGER  MSG  END]---
-
----[LOGGER MSG START]---
-[RetrieveUserListByGroup] - 11:45:30 : woensdag 10 april 2019
->Attempting to retrieve users from group 1
->Found 4 users from group 1
----[LOGGER  MSG  END]---
-
----[LOGGER MSG START]---
-Startup - 12:02:53 : woensdag 10 april 2019
->Starting server...
->Server is up and running!
----[LOGGER  MSG  END]---
-
----[LOGGER MSG START]---
-[CheckLogin] - 12:36:08 : woensdag 10 april 2019
->Checking log in for user JMuris
----[LOGGER MSG START]---
-[RetrieveUser] - 12:36:08 : woensdag 10 april 2019
->Attempting to retrieve user with id 2
->Found user with id 2
----[LOGGER  MSG  END]---
-
----[LOGGER MSG START]---
-[RetrieveUserListByGroup] - 12:36:08 : woensdag 10 april 2019
->Attempting to retrieve users from group 1
->Found 4 users from group 1
----[LOGGER  MSG  END]---
-
----[LOGGER MSG START]---
-[RetrieveUser] - 12:36:21 : woensdag 10 april 2019
->Attempting to retrieve user with id 3
->Found user with id 3
----[LOGGER  MSG  END]---
-
----[LOGGER MSG START]---
-[RetrieveScoresOfUser] - 12:36:21 : woensdag 10 april 2019
->Attempting to retrieve scores of user 3
->Found 7 scores from user 3
----[LOGGER  MSG  END]---
-
----[LOGGER MSG START]---
-[RetrieveUser] - 12:36:22 : woensdag 10 april 2019
->Attempting to retrieve user with id 3
->Found user with id 3
----[LOGGER  MSG  END]---
-
----[LOGGER MSG START]---
-[RetrieveScoresOfUser] - 12:36:22 : woensdag 10 april 2019
->Attempting to retrieve scores of user 3
->Found 7 scores from user 3
----[LOGGER  MSG  END]---
-
----[LOGGER MSG START]---
-[RetrieveUserListByGroup] - 12:36:35 : woensdag 10 april 2019
->Attempting to retrieve users from group 1
->Found 4 users from group 1
----[LOGGER  MSG  END]---
-
----[LOGGER MSG START]---
-[RetrieveUser] - 12:36:37 : woensdag 10 april 2019
->Attempting to retrieve user with id 3
->Found user with id 3
----[LOGGER  MSG  END]---
-
----[LOGGER MSG START]---
-[RetrieveStoriesOfUser] - 12:36:37 : woensdag 10 april 2019
->Attempting to retrieve stories of user 3
->Found 5 stories from user 3
----[LOGGER  MSG  END]---
-
----[LOGGER MSG START]---
-[RetrieveUser] - 12:36:38 : woensdag 10 april 2019
->Attempting to retrieve user with id 3
->Found user with id 3
----[LOGGER  MSG  END]---
-
----[LOGGER MSG START]---
-[RetrieveStoriesOfUser] - 12:36:38 : woensdag 10 april 2019
->Attempting to retrieve stories of user 3
->Found 5 stories from user 3
----[LOGGER  MSG  END]---
-
----[LOGGER MSG START]---
-[RetrieveUser] - 12:36:40 : woensdag 10 april 2019
->Attempting to retrieve user with id 3
->Found user with id 3
----[LOGGER  MSG  END]---
-
----[LOGGER MSG START]---
-[RetrieveStoriesOfUser] - 12:36:40 : woensdag 10 april 2019
->Attempting to retrieve stories of user 3
->Found 5 stories from user 3
----[LOGGER  MSG  END]---
-
----[LOGGER MSG START]---
-[RetrieveUser] - 12:36:42 : woensdag 10 april 2019
->Attempting to retrieve user with id 3
->Found user with id 3
----[LOGGER  MSG  END]---
-
----[LOGGER MSG START]---
-[RetrieveStoriesOfUser] - 12:36:42 : woensdag 10 april 2019
->Attempting to retrieve stories of user 3
->Found 5 stories from user 3
----[LOGGER  MSG  END]---
-
----[LOGGER MSG START]---
-Startup - 15:30:20 : woensdag 10 april 2019
->Starting server...
->Server is up and running!
----[LOGGER  MSG  END]---
-
----[LOGGER MSG START]---
-Startup - 15:30:49 : woensdag 10 april 2019
->Starting server...
->Server is up and running!
----[LOGGER  MSG  END]---
-
----[LOGGER MSG START]---
-Startup - 09:53:59 : donderdag 11 april 2019
->Starting server...
->Server is up and running!
----[LOGGER  MSG  END]---
-
----[LOGGER MSG START]---
-Startup - 09:55:13 : donderdag 11 april 2019
->Starting server...
->Server is up and running!
----[LOGGER  MSG  END]---
-
----[LOGGER MSG START]---
-Startup - 09:55:26 : donderdag 11 april 2019
->Starting server...
->Server is up and running!
----[LOGGER  MSG  END]---
-
----[LOGGER MSG START]---
-[CheckLogin] - 09:55:34 : donderdag 11 april 2019
->Checking log in for user JMuris
----[LOGGER MSG START]---
-[RetrieveUser] - 09:55:34 : donderdag 11 april 2019
->Attempting to retrieve user with id 2
->Found user with id 2
----[LOGGER  MSG  END]---
-
----[LOGGER MSG START]---
-[RetrieveUserListByGroup] - 09:55:35 : donderdag 11 april 2019
->Attempting to retrieve users from group 1
->Found 4 users from group 1
----[LOGGER  MSG  END]---
-
----[LOGGER MSG START]---
-Startup - 09:56:31 : donderdag 11 april 2019
->Starting server...
->Server is up and running!
----[LOGGER  MSG  END]---
-
----[LOGGER MSG START]---
-[CheckLogin] - 09:56:39 : donderdag 11 april 2019
->Checking log in for user JMuris
----[LOGGER MSG START]---
-[RetrieveUser] - 09:56:39 : donderdag 11 april 2019
->Attempting to retrieve user with id 2
->Found user with id 2
----[LOGGER  MSG  END]---
-
----[LOGGER MSG START]---
-[RetrieveUserListByGroup] - 09:56:39 : donderdag 11 april 2019
->Attempting to retrieve users from group 1
->Found 4 users from group 1
----[LOGGER  MSG  END]---
-
----[LOGGER MSG START]---
-Startup - 09:58:05 : donderdag 11 april 2019
->Starting server...
->Server is up and running!
----[LOGGER  MSG  END]---
-
----[LOGGER MSG START]---
-[CheckLogin] - 09:58:14 : donderdag 11 april 2019
->Checking log in for user JMuris
----[LOGGER MSG START]---
-[RetrieveUser] - 09:58:14 : donderdag 11 april 2019
->Attempting to retrieve user with id 2
->Found user with id 2
----[LOGGER  MSG  END]---
-
----[LOGGER MSG START]---
-[RetrieveUserListByGroup] - 09:58:14 : donderdag 11 april 2019
->Attempting to retrieve users from group 1
->Found 4 users from group 1
----[LOGGER  MSG  END]---
-
----[LOGGER MSG START]---
-[CheckLogin] - 09:58:21 : donderdag 11 april 2019
+[CheckLogin] - 10:59:55 : woensdag 17 april 2019
 >Checking log in for user 
 >Something went wrong: System.Data.SqlClient.SqlException (0x80131904): Procedure or function 'LogIn' expects parameter '@pUsername', which was not supplied.
    at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
@@ -380,55 +32,49 @@ Startup - 09:58:05 : donderdag 11 april 2019
    at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite, String method)
    at System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, Boolean sendToPipe, Int32 timeout, Boolean asyncWrite, String methodName)
    at System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
-   at WerkelijkWaar.Classes.DatabaseQueries.CheckLogin(String username, String password) in C:\Users\Justin Muris\source\repos\WerkelijkWaar\WerkelijkWaar\Classes\DatabaseQueries.cs:line 173
-ClientConnectionId:aa06119f-794c-4e1e-ba4e-d630d58bf565
+   at WerkelijkWaar.Classes.DatabaseQueries.CheckLogin(String username, String password) in C:\Users\Justin\Source\Repos\WerkelijkWaar\WerkelijkWaar\Classes\DatabaseQueries.cs:line 173
+ClientConnectionId:5c2d0236-2cd0-4f9b-94e1-1fb7f97cde00
 Error Number:201,State:4,Class:16
 ---[LOGGER  MSG  END]---
 
 ---[LOGGER MSG START]---
-Startup - 09:58:58 : donderdag 11 april 2019
+Startup - 11:00:58 : woensdag 17 april 2019
 >Starting server...
 >Server is up and running!
 ---[LOGGER  MSG  END]---
 
 ---[LOGGER MSG START]---
-[CheckLogin] - 09:59:06 : donderdag 11 april 2019
+[CheckLogin] - 11:01:03 : woensdag 17 april 2019
 >Checking log in for user JMuris
 ---[LOGGER MSG START]---
-[RetrieveUser] - 09:59:06 : donderdag 11 april 2019
+[RetrieveUser] - 11:01:03 : woensdag 17 april 2019
 >Attempting to retrieve user with id 2
 >Found user with id 2
 ---[LOGGER  MSG  END]---
 
 ---[LOGGER MSG START]---
-[RetrieveUserListByGroup] - 09:59:06 : donderdag 11 april 2019
->Attempting to retrieve users from group 1
->Found 4 users from group 1
+[CreateLobby] - 11:01:19 : woensdag 17 april 2019
+>Building lobby.
+>Attempting to return partial view.
 ---[LOGGER  MSG  END]---
 
 ---[LOGGER MSG START]---
-Startup - 09:59:32 : donderdag 11 april 2019
+Startup - 11:01:36 : woensdag 17 april 2019
 >Starting server...
 >Server is up and running!
 ---[LOGGER  MSG  END]---
 
 ---[LOGGER MSG START]---
-[CheckLogin] - 09:59:42 : donderdag 11 april 2019
+[CheckLogin] - 11:01:42 : woensdag 17 april 2019
 >Checking log in for user JMuris
 ---[LOGGER MSG START]---
-[RetrieveUser] - 09:59:42 : donderdag 11 april 2019
+[RetrieveUser] - 11:01:42 : woensdag 17 april 2019
 >Attempting to retrieve user with id 2
 >Found user with id 2
 ---[LOGGER  MSG  END]---
 
 ---[LOGGER MSG START]---
-[RetrieveUserListByGroup] - 09:59:42 : donderdag 11 april 2019
->Attempting to retrieve users from group 1
->Found 4 users from group 1
----[LOGGER  MSG  END]---
-
----[LOGGER MSG START]---
-[CheckLogin] - 09:59:47 : donderdag 11 april 2019
+[CheckLogin] - 11:01:46 : woensdag 17 april 2019
 >Checking log in for user 
 >Something went wrong: System.Data.SqlClient.SqlException (0x80131904): Procedure or function 'LogIn' expects parameter '@pUsername', which was not supplied.
    at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
@@ -440,166 +86,40 @@ Startup - 09:59:32 : donderdag 11 april 2019
    at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite, String method)
    at System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, Boolean sendToPipe, Int32 timeout, Boolean asyncWrite, String methodName)
    at System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
-   at WerkelijkWaar.Classes.DatabaseQueries.CheckLogin(String username, String password) in C:\Users\Justin Muris\source\repos\WerkelijkWaar\WerkelijkWaar\Classes\DatabaseQueries.cs:line 173
-ClientConnectionId:f1c3d00f-24c0-4819-929a-620574b67a88
+   at WerkelijkWaar.Classes.DatabaseQueries.CheckLogin(String username, String password) in C:\Users\Justin\Source\Repos\WerkelijkWaar\WerkelijkWaar\Classes\DatabaseQueries.cs:line 173
+ClientConnectionId:827ab11a-1110-4b37-a0cd-92f28aba965c
 Error Number:201,State:4,Class:16
 ---[LOGGER  MSG  END]---
 
 ---[LOGGER MSG START]---
-Startup - 10:00:20 : donderdag 11 april 2019
+[CreateLobby] - 11:01:54 : woensdag 17 april 2019
+>Building lobby.
+>Attempting to return partial view.
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+Startup - 11:03:46 : woensdag 17 april 2019
 >Starting server...
 >Server is up and running!
 ---[LOGGER  MSG  END]---
 
 ---[LOGGER MSG START]---
-[CheckLogin] - 10:00:26 : donderdag 11 april 2019
+[CheckLogin] - 11:03:51 : woensdag 17 april 2019
 >Checking log in for user JMuris
 ---[LOGGER MSG START]---
-[RetrieveUser] - 10:00:26 : donderdag 11 april 2019
+[RetrieveUser] - 11:03:51 : woensdag 17 april 2019
 >Attempting to retrieve user with id 2
 >Found user with id 2
 ---[LOGGER  MSG  END]---
 
 ---[LOGGER MSG START]---
-[RetrieveUserListByGroup] - 10:00:26 : donderdag 11 april 2019
->Attempting to retrieve users from group 1
->Found 4 users from group 1
+[CreateLobby] - 11:03:52 : woensdag 17 april 2019
+>Building lobby.
+>Attempting to return partial view.
 ---[LOGGER  MSG  END]---
 
 ---[LOGGER MSG START]---
-Startup - 10:03:08 : donderdag 11 april 2019
->Starting server...
->Server is up and running!
----[LOGGER  MSG  END]---
-
----[LOGGER MSG START]---
-[CheckLogin] - 10:03:14 : donderdag 11 april 2019
->Checking log in for user JMuris
----[LOGGER MSG START]---
-[RetrieveUser] - 10:03:15 : donderdag 11 april 2019
->Attempting to retrieve user with id 2
->Found user with id 2
----[LOGGER  MSG  END]---
-
----[LOGGER MSG START]---
-[RetrieveUserListByGroup] - 10:03:15 : donderdag 11 april 2019
->Attempting to retrieve users from group 1
->Found 4 users from group 1
----[LOGGER  MSG  END]---
-
----[LOGGER MSG START]---
-Startup - 10:04:56 : donderdag 11 april 2019
->Starting server...
->Server is up and running!
----[LOGGER  MSG  END]---
-
----[LOGGER MSG START]---
-[CheckLogin] - 10:05:03 : donderdag 11 april 2019
->Checking log in for user JMuris
----[LOGGER MSG START]---
-[RetrieveUser] - 10:05:03 : donderdag 11 april 2019
->Attempting to retrieve user with id 2
->Found user with id 2
----[LOGGER  MSG  END]---
-
----[LOGGER MSG START]---
-[RetrieveUserListByGroup] - 10:05:03 : donderdag 11 april 2019
->Attempting to retrieve users from group 1
->Found 4 users from group 1
----[LOGGER  MSG  END]---
-
----[LOGGER MSG START]---
-Startup - 10:06:53 : donderdag 11 april 2019
->Starting server...
->Server is up and running!
----[LOGGER  MSG  END]---
-
----[LOGGER MSG START]---
-[CheckLogin] - 10:06:59 : donderdag 11 april 2019
->Checking log in for user JMuris
----[LOGGER MSG START]---
-[RetrieveUser] - 10:06:59 : donderdag 11 april 2019
->Attempting to retrieve user with id 2
->Found user with id 2
----[LOGGER  MSG  END]---
-
----[LOGGER MSG START]---
-[RetrieveUserListByGroup] - 10:06:59 : donderdag 11 april 2019
->Attempting to retrieve users from group 1
->Found 4 users from group 1
----[LOGGER  MSG  END]---
-
----[LOGGER MSG START]---
-Startup - 10:07:37 : donderdag 11 april 2019
->Starting server...
->Server is up and running!
----[LOGGER  MSG  END]---
-
----[LOGGER MSG START]---
-[CheckLogin] - 10:07:54 : donderdag 11 april 2019
->Checking log in for user JMuris
----[LOGGER MSG START]---
-[RetrieveUser] - 10:07:54 : donderdag 11 april 2019
->Attempting to retrieve user with id 2
->Found user with id 2
----[LOGGER  MSG  END]---
-
----[LOGGER MSG START]---
-[RetrieveUserListByGroup] - 10:07:54 : donderdag 11 april 2019
->Attempting to retrieve users from group 1
->Found 4 users from group 1
----[LOGGER  MSG  END]---
-
----[LOGGER MSG START]---
-Startup - 10:08:27 : donderdag 11 april 2019
->Starting server...
->Server is up and running!
----[LOGGER  MSG  END]---
-
----[LOGGER MSG START]---
-Startup - 13:02:17 : donderdag 11 april 2019
->Starting server...
->Server is up and running!
----[LOGGER  MSG  END]---
-
----[LOGGER MSG START]---
-[CheckLogin] - 13:02:57 : donderdag 11 april 2019
->Checking log in for user JMuris
----[LOGGER MSG START]---
-[RetrieveUser] - 13:02:57 : donderdag 11 april 2019
->Attempting to retrieve user with id 2
->Found user with id 2
----[LOGGER  MSG  END]---
-
----[LOGGER MSG START]---
-[RetrieveUserListByGroup] - 13:02:57 : donderdag 11 april 2019
->Attempting to retrieve users from group 1
->Found 4 users from group 1
----[LOGGER  MSG  END]---
-
----[LOGGER MSG START]---
-Startup - 13:03:50 : donderdag 11 april 2019
->Starting server...
->Server is up and running!
----[LOGGER  MSG  END]---
-
----[LOGGER MSG START]---
-[CheckLogin] - 13:03:56 : donderdag 11 april 2019
->Checking log in for user JMuris
----[LOGGER MSG START]---
-[RetrieveUser] - 13:03:56 : donderdag 11 april 2019
->Attempting to retrieve user with id 2
->Found user with id 2
----[LOGGER  MSG  END]---
-
----[LOGGER MSG START]---
-[RetrieveUserListByGroup] - 13:03:56 : donderdag 11 april 2019
->Attempting to retrieve users from group 1
->Found 4 users from group 1
----[LOGGER  MSG  END]---
-
----[LOGGER MSG START]---
-[CheckLogin] - 13:04:05 : donderdag 11 april 2019
+[CheckLogin] - 11:03:55 : woensdag 17 april 2019
 >Checking log in for user 
 >Something went wrong: System.Data.SqlClient.SqlException (0x80131904): Procedure or function 'LogIn' expects parameter '@pUsername', which was not supplied.
    at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
@@ -611,256 +131,130 @@ Startup - 13:03:50 : donderdag 11 april 2019
    at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite, String method)
    at System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, Boolean sendToPipe, Int32 timeout, Boolean asyncWrite, String methodName)
    at System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
-   at WerkelijkWaar.Classes.DatabaseQueries.CheckLogin(String username, String password) in C:\Users\Justin Muris\source\repos\WerkelijkWaar\WerkelijkWaar\Classes\DatabaseQueries.cs:line 173
-ClientConnectionId:ac777cd4-be8c-432e-b86d-77b201b73376
+   at WerkelijkWaar.Classes.DatabaseQueries.CheckLogin(String username, String password) in C:\Users\Justin\Source\Repos\WerkelijkWaar\WerkelijkWaar\Classes\DatabaseQueries.cs:line 173
+ClientConnectionId:fe6806dd-2be0-40ac-b9aa-0a56e6a17441
 Error Number:201,State:4,Class:16
 ---[LOGGER  MSG  END]---
 
 ---[LOGGER MSG START]---
-Startup - 13:06:25 : donderdag 11 april 2019
+[CreateLobby] - 11:03:56 : woensdag 17 april 2019
+>Building lobby.
+>Attempting to return partial view.
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[CreateLobby] - 11:03:56 : woensdag 17 april 2019
+>Building lobby.
+>Attempting to return partial view.
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[CreateLobby] - 11:03:56 : woensdag 17 april 2019
+>Building lobby.
+>Attempting to return partial view.
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[CreateLobby] - 11:03:56 : woensdag 17 april 2019
+>Building lobby.
+>Attempting to return partial view.
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[CreateLobby] - 11:03:57 : woensdag 17 april 2019
+>Building lobby.
+>Attempting to return partial view.
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[CreateLobby] - 11:03:57 : woensdag 17 april 2019
+>Building lobby.
+>Attempting to return partial view.
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[CreateLobby] - 11:03:57 : woensdag 17 april 2019
+>Building lobby.
+>Attempting to return partial view.
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[CreateLobby] - 11:03:57 : woensdag 17 april 2019
+>Building lobby.
+>Attempting to return partial view.
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[CreateLobby] - 11:03:57 : woensdag 17 april 2019
+>Building lobby.
+>Attempting to return partial view.
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[CreateLobby] - 11:03:58 : woensdag 17 april 2019
+>Building lobby.
+>Attempting to return partial view.
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[CreateLobby] - 11:03:58 : woensdag 17 april 2019
+>Building lobby.
+>Attempting to return partial view.
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[CreateLobby] - 11:03:58 : woensdag 17 april 2019
+>Building lobby.
+>Attempting to return partial view.
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[CreateLobby] - 11:03:59 : woensdag 17 april 2019
+>Building lobby.
+>Attempting to return partial view.
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[CreateLobby] - 11:04:00 : woensdag 17 april 2019
+>Building lobby.
+>Attempting to return partial view.
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[CreateLobby] - 11:04:00 : woensdag 17 april 2019
+>Building lobby.
+>Attempting to return partial view.
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[CreateLobby] - 11:04:00 : woensdag 17 april 2019
+>Building lobby.
+>Attempting to return partial view.
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[CreateLobby] - 11:04:03 : woensdag 17 april 2019
+>Building lobby.
+>Attempting to return partial view.
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+Startup - 11:05:57 : woensdag 17 april 2019
 >Starting server...
 >Server is up and running!
 ---[LOGGER  MSG  END]---
 
 ---[LOGGER MSG START]---
-[CheckLogin] - 13:06:32 : donderdag 11 april 2019
+[CheckLogin] - 11:06:01 : woensdag 17 april 2019
 >Checking log in for user JMuris
 ---[LOGGER MSG START]---
-[RetrieveUser] - 13:06:32 : donderdag 11 april 2019
+[RetrieveUser] - 11:06:01 : woensdag 17 april 2019
 >Attempting to retrieve user with id 2
 >Found user with id 2
 ---[LOGGER  MSG  END]---
 
 ---[LOGGER MSG START]---
-[RetrieveUserListByGroup] - 13:06:32 : donderdag 11 april 2019
->Attempting to retrieve users from group 1
->Found 4 users from group 1
----[LOGGER  MSG  END]---
-
----[LOGGER MSG START]---
-Startup - 13:07:36 : donderdag 11 april 2019
->Starting server...
->Server is up and running!
----[LOGGER  MSG  END]---
-
----[LOGGER MSG START]---
-[CheckLogin] - 13:07:46 : donderdag 11 april 2019
->Checking log in for user JMuris
----[LOGGER MSG START]---
-[RetrieveUser] - 13:07:46 : donderdag 11 april 2019
->Attempting to retrieve user with id 2
->Found user with id 2
----[LOGGER  MSG  END]---
-
----[LOGGER MSG START]---
-[RetrieveUserListByGroup] - 13:07:47 : donderdag 11 april 2019
->Attempting to retrieve users from group 1
->Found 4 users from group 1
----[LOGGER  MSG  END]---
-
----[LOGGER MSG START]---
-Startup - 13:12:55 : donderdag 11 april 2019
->Starting server...
->Server is up and running!
----[LOGGER  MSG  END]---
-
----[LOGGER MSG START]---
-Startup - 13:13:14 : donderdag 11 april 2019
->Starting server...
->Server is up and running!
----[LOGGER  MSG  END]---
-
----[LOGGER MSG START]---
-Startup - 13:13:48 : donderdag 11 april 2019
->Starting server...
->Server is up and running!
----[LOGGER  MSG  END]---
-
----[LOGGER MSG START]---
-Startup - 13:14:10 : donderdag 11 april 2019
->Starting server...
->Server is up and running!
----[LOGGER  MSG  END]---
-
----[LOGGER MSG START]---
-Startup - 13:14:50 : donderdag 11 april 2019
->Starting server...
->Server is up and running!
----[LOGGER  MSG  END]---
-
----[LOGGER MSG START]---
-Startup - 13:15:19 : donderdag 11 april 2019
->Starting server...
->Server is up and running!
----[LOGGER  MSG  END]---
-
----[LOGGER MSG START]---
-Startup - 13:16:06 : donderdag 11 april 2019
->Starting server...
->Server is up and running!
----[LOGGER  MSG  END]---
-
----[LOGGER MSG START]---
-Startup - 13:16:33 : donderdag 11 april 2019
->Starting server...
->Server is up and running!
----[LOGGER  MSG  END]---
-
----[LOGGER MSG START]---
-Startup - 13:17:15 : donderdag 11 april 2019
->Starting server...
->Server is up and running!
----[LOGGER  MSG  END]---
-
----[LOGGER MSG START]---
-Startup - 13:17:52 : donderdag 11 april 2019
->Starting server...
->Server is up and running!
----[LOGGER  MSG  END]---
-
----[LOGGER MSG START]---
-Startup - 13:18:29 : donderdag 11 april 2019
->Starting server...
->Server is up and running!
----[LOGGER  MSG  END]---
-
----[LOGGER MSG START]---
-Startup - 13:18:43 : donderdag 11 april 2019
->Starting server...
->Server is up and running!
----[LOGGER  MSG  END]---
-
----[LOGGER MSG START]---
-Startup - 13:18:53 : donderdag 11 april 2019
->Starting server...
->Server is up and running!
----[LOGGER  MSG  END]---
-
----[LOGGER MSG START]---
-Startup - 13:19:04 : donderdag 11 april 2019
->Starting server...
->Server is up and running!
----[LOGGER  MSG  END]---
-
----[LOGGER MSG START]---
-Startup - 13:19:25 : donderdag 11 april 2019
->Starting server...
->Server is up and running!
----[LOGGER  MSG  END]---
-
----[LOGGER MSG START]---
-Startup - 13:19:43 : donderdag 11 april 2019
->Starting server...
->Server is up and running!
----[LOGGER  MSG  END]---
-
----[LOGGER MSG START]---
-Startup - 13:20:18 : donderdag 11 april 2019
->Starting server...
->Server is up and running!
----[LOGGER  MSG  END]---
-
----[LOGGER MSG START]---
-Startup - 13:20:35 : donderdag 11 april 2019
->Starting server...
->Server is up and running!
----[LOGGER  MSG  END]---
-
----[LOGGER MSG START]---
-Startup - 13:20:46 : donderdag 11 april 2019
->Starting server...
->Server is up and running!
----[LOGGER  MSG  END]---
-
----[LOGGER MSG START]---
-Startup - 13:23:45 : donderdag 11 april 2019
->Starting server...
->Server is up and running!
----[LOGGER  MSG  END]---
-
----[LOGGER MSG START]---
-Startup - 13:24:37 : donderdag 11 april 2019
->Starting server...
->Server is up and running!
----[LOGGER  MSG  END]---
-
----[LOGGER MSG START]---
-Startup - 13:27:00 : donderdag 11 april 2019
->Starting server...
->Server is up and running!
----[LOGGER  MSG  END]---
-
----[LOGGER MSG START]---
-Startup - 13:27:17 : donderdag 11 april 2019
->Starting server...
->Server is up and running!
----[LOGGER  MSG  END]---
-
----[LOGGER MSG START]---
-[CheckLogin] - 13:27:37 : donderdag 11 april 2019
->Checking log in for user JMuris
----[LOGGER MSG START]---
-[RetrieveUser] - 13:27:37 : donderdag 11 april 2019
->Attempting to retrieve user with id 2
->Found user with id 2
----[LOGGER  MSG  END]---
-
----[LOGGER MSG START]---
-Startup - 13:28:11 : donderdag 11 april 2019
->Starting server...
->Server is up and running!
----[LOGGER  MSG  END]---
-
----[LOGGER MSG START]---
-Startup - 13:36:53 : donderdag 11 april 2019
->Starting server...
->Server is up and running!
----[LOGGER  MSG  END]---
-
----[LOGGER MSG START]---
-Startup - 13:38:13 : donderdag 11 april 2019
->Starting server...
->Server is up and running!
----[LOGGER  MSG  END]---
-
----[LOGGER MSG START]---
-Startup - 13:40:21 : donderdag 11 april 2019
->Starting server...
->Server is up and running!
----[LOGGER  MSG  END]---
-
----[LOGGER MSG START]---
-Startup - 13:48:20 : donderdag 11 april 2019
->Starting server...
->Server is up and running!
----[LOGGER  MSG  END]---
-
----[LOGGER MSG START]---
-[CheckLogin] - 13:48:27 : donderdag 11 april 2019
->Checking log in for user JMuris
----[LOGGER MSG START]---
-[RetrieveUser] - 13:48:27 : donderdag 11 april 2019
->Attempting to retrieve user with id 2
->Found user with id 2
----[LOGGER  MSG  END]---
-
----[LOGGER MSG START]---
-Startup - 13:50:04 : donderdag 11 april 2019
->Starting server...
->Server is up and running!
----[LOGGER  MSG  END]---
-
----[LOGGER MSG START]---
-[CheckLogin] - 13:50:09 : donderdag 11 april 2019
->Checking log in for user JMuris
----[LOGGER MSG START]---
-[RetrieveUser] - 13:50:09 : donderdag 11 april 2019
->Attempting to retrieve user with id 2
->Found user with id 2
----[LOGGER  MSG  END]---
-
----[LOGGER MSG START]---
-[CheckLogin] - 13:50:16 : donderdag 11 april 2019
+[CheckLogin] - 11:06:06 : woensdag 17 april 2019
 >Checking log in for user 
 >Something went wrong: System.Data.SqlClient.SqlException (0x80131904): Procedure or function 'LogIn' expects parameter '@pUsername', which was not supplied.
    at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
@@ -872,43 +266,28 @@ Startup - 13:50:04 : donderdag 11 april 2019
    at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite, String method)
    at System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, Boolean sendToPipe, Int32 timeout, Boolean asyncWrite, String methodName)
    at System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
-   at WerkelijkWaar.Classes.DatabaseQueries.CheckLogin(String username, String password) in C:\Users\Justin Muris\source\repos\WerkelijkWaar\WerkelijkWaar\Classes\DatabaseQueries.cs:line 173
-ClientConnectionId:1496a1f1-8264-4e7d-a815-b804ed6d75b9
+   at WerkelijkWaar.Classes.DatabaseQueries.CheckLogin(String username, String password) in C:\Users\Justin\Source\Repos\WerkelijkWaar\WerkelijkWaar\Classes\DatabaseQueries.cs:line 173
+ClientConnectionId:758cece7-e973-487f-bd74-d42ac0c8ea69
 Error Number:201,State:4,Class:16
 ---[LOGGER  MSG  END]---
 
 ---[LOGGER MSG START]---
-Startup - 13:54:51 : donderdag 11 april 2019
+Startup - 11:06:36 : woensdag 17 april 2019
 >Starting server...
 >Server is up and running!
 ---[LOGGER  MSG  END]---
 
 ---[LOGGER MSG START]---
-[CheckLogin] - 13:54:56 : donderdag 11 april 2019
+[CheckLogin] - 11:06:40 : woensdag 17 april 2019
 >Checking log in for user JMuris
 ---[LOGGER MSG START]---
-[RetrieveUser] - 13:54:56 : donderdag 11 april 2019
+[RetrieveUser] - 11:06:40 : woensdag 17 april 2019
 >Attempting to retrieve user with id 2
 >Found user with id 2
 ---[LOGGER  MSG  END]---
 
 ---[LOGGER MSG START]---
-Startup - 13:55:39 : donderdag 11 april 2019
->Starting server...
->Server is up and running!
----[LOGGER  MSG  END]---
-
----[LOGGER MSG START]---
-[CheckLogin] - 13:55:43 : donderdag 11 april 2019
->Checking log in for user JMuris
----[LOGGER MSG START]---
-[RetrieveUser] - 13:55:44 : donderdag 11 april 2019
->Attempting to retrieve user with id 2
->Found user with id 2
----[LOGGER  MSG  END]---
-
----[LOGGER MSG START]---
-[CheckLogin] - 13:55:52 : donderdag 11 april 2019
+[CheckLogin] - 11:06:44 : woensdag 17 april 2019
 >Checking log in for user 
 >Something went wrong: System.Data.SqlClient.SqlException (0x80131904): Procedure or function 'LogIn' expects parameter '@pUsername', which was not supplied.
    at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
@@ -920,104 +299,28 @@ Startup - 13:55:39 : donderdag 11 april 2019
    at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite, String method)
    at System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, Boolean sendToPipe, Int32 timeout, Boolean asyncWrite, String methodName)
    at System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
-   at WerkelijkWaar.Classes.DatabaseQueries.CheckLogin(String username, String password) in C:\Users\Justin Muris\source\repos\WerkelijkWaar\WerkelijkWaar\Classes\DatabaseQueries.cs:line 173
-ClientConnectionId:d88d169b-ec65-4081-a40d-847a88e10bc0
+   at WerkelijkWaar.Classes.DatabaseQueries.CheckLogin(String username, String password) in C:\Users\Justin\Source\Repos\WerkelijkWaar\WerkelijkWaar\Classes\DatabaseQueries.cs:line 173
+ClientConnectionId:95796e23-da89-4a37-aaae-e7b694d8f3a1
 Error Number:201,State:4,Class:16
 ---[LOGGER  MSG  END]---
 
 ---[LOGGER MSG START]---
-Startup - 14:04:33 : donderdag 11 april 2019
+Startup - 11:07:09 : woensdag 17 april 2019
 >Starting server...
 >Server is up and running!
 ---[LOGGER  MSG  END]---
 
 ---[LOGGER MSG START]---
-[CheckLogin] - 14:04:39 : donderdag 11 april 2019
+[CheckLogin] - 11:07:13 : woensdag 17 april 2019
 >Checking log in for user JMuris
 ---[LOGGER MSG START]---
-[RetrieveUser] - 14:04:39 : donderdag 11 april 2019
+[RetrieveUser] - 11:07:13 : woensdag 17 april 2019
 >Attempting to retrieve user with id 2
 >Found user with id 2
 ---[LOGGER  MSG  END]---
 
 ---[LOGGER MSG START]---
-[CheckLogin] - 14:04:50 : donderdag 11 april 2019
->Checking log in for user JMuris
----[LOGGER MSG START]---
-[RetrieveUser] - 14:04:50 : donderdag 11 april 2019
->Attempting to retrieve user with id 2
->Found user with id 2
----[LOGGER  MSG  END]---
-
----[LOGGER MSG START]---
-Startup - 14:05:12 : donderdag 11 april 2019
->Starting server...
->Server is up and running!
----[LOGGER  MSG  END]---
-
----[LOGGER MSG START]---
-[CheckLogin] - 14:05:18 : donderdag 11 april 2019
->Checking log in for user JMuris
->Something went wrong: System.InvalidCastException: Unable to cast object of type 'System.DBNull' to type 'System.Int32'.
-   at WerkelijkWaar.Classes.DatabaseQueries.CheckLogin(String username, String password) in C:\Users\Justin Muris\source\repos\WerkelijkWaar\WerkelijkWaar\Classes\DatabaseQueries.cs:line 177
----[LOGGER  MSG  END]---
-
----[LOGGER MSG START]---
-[CheckLogin] - 14:05:22 : donderdag 11 april 2019
->Checking log in for user JMuris
----[LOGGER MSG START]---
-[RetrieveUser] - 14:05:22 : donderdag 11 april 2019
->Attempting to retrieve user with id 2
->Found user with id 2
----[LOGGER  MSG  END]---
-
----[LOGGER MSG START]---
-Startup - 14:08:21 : donderdag 11 april 2019
->Starting server...
->Server is up and running!
----[LOGGER  MSG  END]---
-
----[LOGGER MSG START]---
-[CheckLogin] - 14:08:26 : donderdag 11 april 2019
->Checking log in for user JMuris
----[LOGGER MSG START]---
-[RetrieveUser] - 14:08:26 : donderdag 11 april 2019
->Attempting to retrieve user with id 2
->Found user with id 2
----[LOGGER  MSG  END]---
-
----[LOGGER MSG START]---
-Startup - 14:10:02 : donderdag 11 april 2019
->Starting server...
->Server is up and running!
----[LOGGER  MSG  END]---
-
----[LOGGER MSG START]---
-[CheckLogin] - 14:10:07 : donderdag 11 april 2019
->Checking log in for user JMuris
----[LOGGER MSG START]---
-[RetrieveUser] - 14:10:07 : donderdag 11 april 2019
->Attempting to retrieve user with id 2
->Found user with id 2
----[LOGGER  MSG  END]---
-
----[LOGGER MSG START]---
-Startup - 14:11:08 : donderdag 11 april 2019
->Starting server...
->Server is up and running!
----[LOGGER  MSG  END]---
-
----[LOGGER MSG START]---
-[CheckLogin] - 14:11:13 : donderdag 11 april 2019
->Checking log in for user JMuris
----[LOGGER MSG START]---
-[RetrieveUser] - 14:11:13 : donderdag 11 april 2019
->Attempting to retrieve user with id 2
->Found user with id 2
----[LOGGER  MSG  END]---
-
----[LOGGER MSG START]---
-[CheckLogin] - 14:11:21 : donderdag 11 april 2019
+[CheckLogin] - 11:07:17 : woensdag 17 april 2019
 >Checking log in for user 
 >Something went wrong: System.Data.SqlClient.SqlException (0x80131904): Procedure or function 'LogIn' expects parameter '@pUsername', which was not supplied.
    at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
@@ -1029,73 +332,28 @@ Startup - 14:11:08 : donderdag 11 april 2019
    at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite, String method)
    at System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, Boolean sendToPipe, Int32 timeout, Boolean asyncWrite, String methodName)
    at System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
-   at WerkelijkWaar.Classes.DatabaseQueries.CheckLogin(String username, String password) in C:\Users\Justin Muris\source\repos\WerkelijkWaar\WerkelijkWaar\Classes\DatabaseQueries.cs:line 173
-ClientConnectionId:c67127e1-06b7-4b67-bc30-76721ea44874
+   at WerkelijkWaar.Classes.DatabaseQueries.CheckLogin(String username, String password) in C:\Users\Justin\Source\Repos\WerkelijkWaar\WerkelijkWaar\Classes\DatabaseQueries.cs:line 173
+ClientConnectionId:7eddb49f-7410-4057-80c2-2f03b954c1d3
 Error Number:201,State:4,Class:16
 ---[LOGGER  MSG  END]---
 
 ---[LOGGER MSG START]---
-Startup - 14:12:46 : donderdag 11 april 2019
+Startup - 11:09:42 : woensdag 17 april 2019
 >Starting server...
 >Server is up and running!
 ---[LOGGER  MSG  END]---
 
 ---[LOGGER MSG START]---
-[CheckLogin] - 14:12:51 : donderdag 11 april 2019
+[CheckLogin] - 11:09:46 : woensdag 17 april 2019
 >Checking log in for user JMuris
 ---[LOGGER MSG START]---
-[RetrieveUser] - 14:12:51 : donderdag 11 april 2019
+[RetrieveUser] - 11:09:46 : woensdag 17 april 2019
 >Attempting to retrieve user with id 2
 >Found user with id 2
 ---[LOGGER  MSG  END]---
 
 ---[LOGGER MSG START]---
-Startup - 14:14:48 : donderdag 11 april 2019
->Starting server...
->Server is up and running!
----[LOGGER  MSG  END]---
-
----[LOGGER MSG START]---
-[CheckLogin] - 14:14:53 : donderdag 11 april 2019
->Checking log in for user JMuris
----[LOGGER MSG START]---
-[RetrieveUser] - 14:14:53 : donderdag 11 april 2019
->Attempting to retrieve user with id 2
->Found user with id 2
----[LOGGER  MSG  END]---
-
----[LOGGER MSG START]---
-Startup - 14:19:44 : donderdag 11 april 2019
->Starting server...
->Server is up and running!
----[LOGGER  MSG  END]---
-
----[LOGGER MSG START]---
-[CheckLogin] - 14:19:50 : donderdag 11 april 2019
->Checking log in for user JMuris
----[LOGGER MSG START]---
-[RetrieveUser] - 14:19:50 : donderdag 11 april 2019
->Attempting to retrieve user with id 2
->Found user with id 2
----[LOGGER  MSG  END]---
-
----[LOGGER MSG START]---
-Startup - 14:24:47 : donderdag 11 april 2019
->Starting server...
->Server is up and running!
----[LOGGER  MSG  END]---
-
----[LOGGER MSG START]---
-[CheckLogin] - 14:24:52 : donderdag 11 april 2019
->Checking log in for user JMuris
----[LOGGER MSG START]---
-[RetrieveUser] - 14:24:52 : donderdag 11 april 2019
->Attempting to retrieve user with id 2
->Found user with id 2
----[LOGGER  MSG  END]---
-
----[LOGGER MSG START]---
-[CheckLogin] - 14:25:09 : donderdag 11 april 2019
+[CheckLogin] - 11:09:51 : woensdag 17 april 2019
 >Checking log in for user 
 >Something went wrong: System.Data.SqlClient.SqlException (0x80131904): Procedure or function 'LogIn' expects parameter '@pUsername', which was not supplied.
    at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
@@ -1107,127 +365,43 @@ Startup - 14:24:47 : donderdag 11 april 2019
    at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite, String method)
    at System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, Boolean sendToPipe, Int32 timeout, Boolean asyncWrite, String methodName)
    at System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
-   at WerkelijkWaar.Classes.DatabaseQueries.CheckLogin(String username, String password) in C:\Users\Justin Muris\source\repos\WerkelijkWaar\WerkelijkWaar\Classes\DatabaseQueries.cs:line 173
-ClientConnectionId:58dc3f5c-20c8-421a-b965-28846eecf85f
+   at WerkelijkWaar.Classes.DatabaseQueries.CheckLogin(String username, String password) in C:\Users\Justin\Source\Repos\WerkelijkWaar\WerkelijkWaar\Classes\DatabaseQueries.cs:line 173
+ClientConnectionId:a840b550-b5ca-482c-ae8b-b56650eaf702
 Error Number:201,State:4,Class:16
 ---[LOGGER  MSG  END]---
 
 ---[LOGGER MSG START]---
-Startup - 14:49:10 : donderdag 11 april 2019
+Startup - 11:10:04 : woensdag 17 april 2019
 >Starting server...
 >Server is up and running!
 ---[LOGGER  MSG  END]---
 
 ---[LOGGER MSG START]---
-[CheckLogin] - 14:49:18 : donderdag 11 april 2019
+[CheckLogin] - 11:10:08 : woensdag 17 april 2019
 >Checking log in for user JMuris
 ---[LOGGER MSG START]---
-[RetrieveUser] - 14:49:18 : donderdag 11 april 2019
+[RetrieveUser] - 11:10:08 : woensdag 17 april 2019
 >Attempting to retrieve user with id 2
 >Found user with id 2
 ---[LOGGER  MSG  END]---
 
 ---[LOGGER MSG START]---
-Startup - 14:52:54 : donderdag 11 april 2019
+Startup - 11:10:34 : woensdag 17 april 2019
 >Starting server...
 >Server is up and running!
 ---[LOGGER  MSG  END]---
 
 ---[LOGGER MSG START]---
-[CheckLogin] - 14:53:15 : donderdag 11 april 2019
+[CheckLogin] - 11:10:37 : woensdag 17 april 2019
 >Checking log in for user JMuris
 ---[LOGGER MSG START]---
-[RetrieveUser] - 14:53:15 : donderdag 11 april 2019
+[RetrieveUser] - 11:10:37 : woensdag 17 april 2019
 >Attempting to retrieve user with id 2
 >Found user with id 2
 ---[LOGGER  MSG  END]---
 
 ---[LOGGER MSG START]---
-Startup - 15:03:55 : donderdag 11 april 2019
->Starting server...
->Server is up and running!
----[LOGGER  MSG  END]---
-
----[LOGGER MSG START]---
-[CheckLogin] - 15:04:01 : donderdag 11 april 2019
->Checking log in for user JMuris
----[LOGGER MSG START]---
-[RetrieveUser] - 15:04:01 : donderdag 11 april 2019
->Attempting to retrieve user with id 2
->Found user with id 2
----[LOGGER  MSG  END]---
-
----[LOGGER MSG START]---
-[RetrieveUserListByGroup] - 15:04:04 : donderdag 11 april 2019
->Attempting to retrieve users from group 1
->Found 4 users from group 1
----[LOGGER  MSG  END]---
-
----[LOGGER MSG START]---
-Startup - 15:11:46 : donderdag 11 april 2019
->Starting server...
->Server is up and running!
----[LOGGER  MSG  END]---
-
----[LOGGER MSG START]---
-[CheckLogin] - 15:11:51 : donderdag 11 april 2019
->Checking log in for user JMuris
----[LOGGER MSG START]---
-[RetrieveUser] - 15:11:51 : donderdag 11 april 2019
->Attempting to retrieve user with id 2
->Found user with id 2
----[LOGGER  MSG  END]---
-
----[LOGGER MSG START]---
-[RetrieveUserListByGroup] - 15:11:53 : donderdag 11 april 2019
->Attempting to retrieve users from group 1
->Found 4 users from group 1
----[LOGGER  MSG  END]---
-
----[LOGGER MSG START]---
-Startup - 15:12:53 : donderdag 11 april 2019
->Starting server...
->Server is up and running!
----[LOGGER  MSG  END]---
-
----[LOGGER MSG START]---
-[CheckLogin] - 15:12:58 : donderdag 11 april 2019
->Checking log in for user JMuris
----[LOGGER MSG START]---
-[RetrieveUser] - 15:12:58 : donderdag 11 april 2019
->Attempting to retrieve user with id 2
->Found user with id 2
----[LOGGER  MSG  END]---
-
----[LOGGER MSG START]---
-[RetrieveUserListByGroup] - 15:12:59 : donderdag 11 april 2019
->Attempting to retrieve users from group 1
->Found 4 users from group 1
----[LOGGER  MSG  END]---
-
----[LOGGER MSG START]---
-Startup - 15:13:08 : donderdag 11 april 2019
->Starting server...
->Server is up and running!
----[LOGGER  MSG  END]---
-
----[LOGGER MSG START]---
-[CheckLogin] - 15:13:13 : donderdag 11 april 2019
->Checking log in for user JMuris
----[LOGGER MSG START]---
-[RetrieveUser] - 15:13:13 : donderdag 11 april 2019
->Attempting to retrieve user with id 2
->Found user with id 2
----[LOGGER  MSG  END]---
-
----[LOGGER MSG START]---
-[RetrieveUserListByGroup] - 15:13:14 : donderdag 11 april 2019
->Attempting to retrieve users from group 1
->Found 4 users from group 1
----[LOGGER  MSG  END]---
-
----[LOGGER MSG START]---
-[CheckLogin] - 15:13:19 : donderdag 11 april 2019
+[CheckLogin] - 11:10:41 : woensdag 17 april 2019
 >Checking log in for user 
 >Something went wrong: System.Data.SqlClient.SqlException (0x80131904): Procedure or function 'LogIn' expects parameter '@pUsername', which was not supplied.
    at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
@@ -1239,40 +413,34 @@ Startup - 15:13:08 : donderdag 11 april 2019
    at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite, String method)
    at System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, Boolean sendToPipe, Int32 timeout, Boolean asyncWrite, String methodName)
    at System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
-   at WerkelijkWaar.Classes.DatabaseQueries.CheckLogin(String username, String password) in C:\Users\Justin Muris\source\repos\WerkelijkWaar\WerkelijkWaar\Classes\DatabaseQueries.cs:line 173
-ClientConnectionId:82c8bedb-9e4b-47d2-a512-33ac11eb536f
+   at WerkelijkWaar.Classes.DatabaseQueries.CheckLogin(String username, String password) in C:\Users\Justin\Source\Repos\WerkelijkWaar\WerkelijkWaar\Classes\DatabaseQueries.cs:line 173
+ClientConnectionId:7bb2527a-6fab-4d66-8839-d31b1b3167ec
 Error Number:201,State:4,Class:16
 ---[LOGGER  MSG  END]---
 
 ---[LOGGER MSG START]---
-[RetrieveUserListByGroup] - 15:14:30 : donderdag 11 april 2019
->Attempting to retrieve users from group 1
->Found 4 users from group 1
----[LOGGER  MSG  END]---
-
----[LOGGER MSG START]---
-Startup - 15:16:32 : donderdag 11 april 2019
+Startup - 11:13:26 : woensdag 17 april 2019
 >Starting server...
 >Server is up and running!
 ---[LOGGER  MSG  END]---
 
 ---[LOGGER MSG START]---
-[CheckLogin] - 15:16:37 : donderdag 11 april 2019
+[CheckLogin] - 11:13:30 : woensdag 17 april 2019
 >Checking log in for user JMuris
 ---[LOGGER MSG START]---
-[RetrieveUser] - 15:16:37 : donderdag 11 april 2019
+[RetrieveUser] - 11:13:30 : woensdag 17 april 2019
 >Attempting to retrieve user with id 2
 >Found user with id 2
 ---[LOGGER  MSG  END]---
 
 ---[LOGGER MSG START]---
-[RetrieveUserListByGroup] - 15:16:39 : donderdag 11 april 2019
->Attempting to retrieve users from group 1
->Found 4 users from group 1
+[CreateLobby] - 11:13:32 : woensdag 17 april 2019
+>Building lobby.
+>Attempting to return partial view.
 ---[LOGGER  MSG  END]---
 
 ---[LOGGER MSG START]---
-[CheckLogin] - 15:16:49 : donderdag 11 april 2019
+[CheckLogin] - 11:13:34 : woensdag 17 april 2019
 >Checking log in for user 
 >Something went wrong: System.Data.SqlClient.SqlException (0x80131904): Procedure or function 'LogIn' expects parameter '@pUsername', which was not supplied.
    at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
@@ -1284,52 +452,73 @@ Startup - 15:16:32 : donderdag 11 april 2019
    at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite, String method)
    at System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, Boolean sendToPipe, Int32 timeout, Boolean asyncWrite, String methodName)
    at System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
-   at WerkelijkWaar.Classes.DatabaseQueries.CheckLogin(String username, String password) in C:\Users\Justin Muris\source\repos\WerkelijkWaar\WerkelijkWaar\Classes\DatabaseQueries.cs:line 173
-ClientConnectionId:e11a2ad9-0d5e-4a7e-81d6-260e0bdf7617
+   at WerkelijkWaar.Classes.DatabaseQueries.CheckLogin(String username, String password) in C:\Users\Justin\Source\Repos\WerkelijkWaar\WerkelijkWaar\Classes\DatabaseQueries.cs:line 173
+ClientConnectionId:a68f64a6-d371-4d13-b913-f67fc37bec80
 Error Number:201,State:4,Class:16
 ---[LOGGER  MSG  END]---
 
 ---[LOGGER MSG START]---
-Startup - 15:18:38 : donderdag 11 april 2019
+Startup - 11:14:06 : woensdag 17 april 2019
 >Starting server...
 >Server is up and running!
 ---[LOGGER  MSG  END]---
 
 ---[LOGGER MSG START]---
-[CheckLogin] - 15:18:43 : donderdag 11 april 2019
+[CheckLogin] - 11:14:10 : woensdag 17 april 2019
 >Checking log in for user JMuris
 ---[LOGGER MSG START]---
-[RetrieveUser] - 15:18:43 : donderdag 11 april 2019
+[RetrieveUser] - 11:14:10 : woensdag 17 april 2019
 >Attempting to retrieve user with id 2
 >Found user with id 2
 ---[LOGGER  MSG  END]---
 
 ---[LOGGER MSG START]---
-[RetrieveUserListByGroup] - 15:18:45 : donderdag 11 april 2019
->Attempting to retrieve users from group 1
->Found 4 users from group 1
+[CreateLobby] - 11:14:12 : woensdag 17 april 2019
+>Building lobby.
+>Attempting to return partial view.
 ---[LOGGER  MSG  END]---
 
 ---[LOGGER MSG START]---
-[RetrieveUser] - 15:18:50 : donderdag 11 april 2019
->Attempting to retrieve user with id 3
->Found user with id 3
+[CreateLobby] - 11:14:14 : woensdag 17 april 2019
+>Building lobby.
+>Attempting to return partial view.
 ---[LOGGER  MSG  END]---
 
 ---[LOGGER MSG START]---
-[RetrieveStoriesOfUser] - 15:18:50 : donderdag 11 april 2019
->Attempting to retrieve stories of user 3
->Found 5 stories from user 3
+[CreateLobby] - 11:14:14 : woensdag 17 april 2019
+>Building lobby.
+>Attempting to return partial view.
 ---[LOGGER  MSG  END]---
 
 ---[LOGGER MSG START]---
-[RetrieveUserListByGroup] - 15:18:52 : donderdag 11 april 2019
->Attempting to retrieve users from group 1
->Found 4 users from group 1
+[CreateLobby] - 11:14:14 : woensdag 17 april 2019
+>Building lobby.
+>Attempting to return partial view.
 ---[LOGGER  MSG  END]---
 
 ---[LOGGER MSG START]---
-[CheckLogin] - 15:19:00 : donderdag 11 april 2019
+[CreateLobby] - 11:14:14 : woensdag 17 april 2019
+>Building lobby.
+>Attempting to return partial view.
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+Startup - 11:15:52 : woensdag 17 april 2019
+>Starting server...
+>Server is up and running!
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[CheckLogin] - 11:15:56 : woensdag 17 april 2019
+>Checking log in for user JMuris
+---[LOGGER MSG START]---
+[RetrieveUser] - 11:15:56 : woensdag 17 april 2019
+>Attempting to retrieve user with id 2
+>Found user with id 2
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[CheckLogin] - 11:16:02 : woensdag 17 april 2019
 >Checking log in for user 
 >Something went wrong: System.Data.SqlClient.SqlException (0x80131904): Procedure or function 'LogIn' expects parameter '@pUsername', which was not supplied.
    at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
@@ -1341,191 +530,98 @@ Startup - 15:18:38 : donderdag 11 april 2019
    at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite, String method)
    at System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, Boolean sendToPipe, Int32 timeout, Boolean asyncWrite, String methodName)
    at System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
-   at WerkelijkWaar.Classes.DatabaseQueries.CheckLogin(String username, String password) in C:\Users\Justin Muris\source\repos\WerkelijkWaar\WerkelijkWaar\Classes\DatabaseQueries.cs:line 173
-ClientConnectionId:59d02020-a225-471a-bec4-9a13492c3c35
+   at WerkelijkWaar.Classes.DatabaseQueries.CheckLogin(String username, String password) in C:\Users\Justin\Source\Repos\WerkelijkWaar\WerkelijkWaar\Classes\DatabaseQueries.cs:line 173
+ClientConnectionId:40325de9-751f-4d27-bb0a-5b03d13e1931
 Error Number:201,State:4,Class:16
 ---[LOGGER  MSG  END]---
 
 ---[LOGGER MSG START]---
-Startup - 15:20:30 : donderdag 11 april 2019
+Startup - 11:16:40 : woensdag 17 april 2019
 >Starting server...
 >Server is up and running!
 ---[LOGGER  MSG  END]---
 
 ---[LOGGER MSG START]---
-[CheckLogin] - 15:20:38 : donderdag 11 april 2019
+[CheckLogin] - 11:16:45 : woensdag 17 april 2019
 >Checking log in for user JMuris
 ---[LOGGER MSG START]---
-[RetrieveUser] - 15:20:38 : donderdag 11 april 2019
+[RetrieveUser] - 11:16:45 : woensdag 17 april 2019
 >Attempting to retrieve user with id 2
 >Found user with id 2
 ---[LOGGER  MSG  END]---
 
 ---[LOGGER MSG START]---
-[RetrieveUserListByGroup] - 15:20:39 : donderdag 11 april 2019
->Attempting to retrieve users from group 1
->Found 4 users from group 1
+[CreateLobby] - 11:16:46 : woensdag 17 april 2019
+>Building lobby.
+>Attempting to return partial view.
 ---[LOGGER  MSG  END]---
 
 ---[LOGGER MSG START]---
-Startup - 15:22:28 : donderdag 11 april 2019
+Startup - 11:17:14 : woensdag 17 april 2019
 >Starting server...
 >Server is up and running!
 ---[LOGGER  MSG  END]---
 
 ---[LOGGER MSG START]---
-[CheckLogin] - 15:22:36 : donderdag 11 april 2019
+[CheckLogin] - 11:17:18 : woensdag 17 april 2019
 >Checking log in for user JMuris
 ---[LOGGER MSG START]---
-[RetrieveUser] - 15:22:36 : donderdag 11 april 2019
+[RetrieveUser] - 11:17:18 : woensdag 17 april 2019
 >Attempting to retrieve user with id 2
 >Found user with id 2
 ---[LOGGER  MSG  END]---
 
 ---[LOGGER MSG START]---
-[RetrieveUserListByGroup] - 15:22:39 : donderdag 11 april 2019
->Attempting to retrieve users from group 1
->Found 4 users from group 1
+[CreateLobby] - 11:17:19 : woensdag 17 april 2019
+>Building lobby.
+>Attempting to return partial view. Code is UDBIL
 ---[LOGGER  MSG  END]---
 
 ---[LOGGER MSG START]---
-Startup - 15:24:11 : donderdag 11 april 2019
+[CreateLobby] - 11:17:29 : woensdag 17 april 2019
+>Building lobby.
+>Attempting to return partial view. Code is TUGAP
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+Startup - 11:18:40 : woensdag 17 april 2019
 >Starting server...
 >Server is up and running!
 ---[LOGGER  MSG  END]---
 
 ---[LOGGER MSG START]---
-[CheckLogin] - 15:24:16 : donderdag 11 april 2019
+[CheckLogin] - 11:18:47 : woensdag 17 april 2019
 >Checking log in for user JMuris
 ---[LOGGER MSG START]---
-[RetrieveUser] - 15:24:16 : donderdag 11 april 2019
+[RetrieveUser] - 11:18:47 : woensdag 17 april 2019
 >Attempting to retrieve user with id 2
 >Found user with id 2
 ---[LOGGER  MSG  END]---
 
 ---[LOGGER MSG START]---
-[RetrieveUserListByGroup] - 15:24:17 : donderdag 11 april 2019
->Attempting to retrieve users from group 1
->Found 4 users from group 1
+[CreateLobby] - 11:18:48 : woensdag 17 april 2019
+>Building lobby.
+>Attempting to return partial view. Code is K5z90
 ---[LOGGER  MSG  END]---
 
 ---[LOGGER MSG START]---
-[RetrieveUser] - 15:24:20 : donderdag 11 april 2019
->Attempting to retrieve user with id 3
->Found user with id 3
----[LOGGER  MSG  END]---
-
----[LOGGER MSG START]---
-[RetrieveScoresOfUser] - 15:24:20 : donderdag 11 april 2019
->Attempting to retrieve scores of user 3
->Found 7 scores from user 3
----[LOGGER  MSG  END]---
-
----[LOGGER MSG START]---
-[RetrieveUser] - 15:24:22 : donderdag 11 april 2019
->Attempting to retrieve user with id 3
->Found user with id 3
----[LOGGER  MSG  END]---
-
----[LOGGER MSG START]---
-[RetrieveScoresOfUser] - 15:24:22 : donderdag 11 april 2019
->Attempting to retrieve scores of user 3
->Found 7 scores from user 3
----[LOGGER  MSG  END]---
-
----[LOGGER MSG START]---
-[RetrieveUserListByGroup] - 15:24:24 : donderdag 11 april 2019
->Attempting to retrieve users from group 1
->Found 4 users from group 1
----[LOGGER  MSG  END]---
-
----[LOGGER MSG START]---
-Startup - 15:27:43 : donderdag 11 april 2019
+Startup - 11:19:26 : woensdag 17 april 2019
 >Starting server...
 >Server is up and running!
 ---[LOGGER  MSG  END]---
 
 ---[LOGGER MSG START]---
-[CheckLogin] - 15:27:48 : donderdag 11 april 2019
+[CheckLogin] - 11:19:30 : woensdag 17 april 2019
 >Checking log in for user JMuris
 ---[LOGGER MSG START]---
-[RetrieveUser] - 15:27:48 : donderdag 11 april 2019
+[RetrieveUser] - 11:19:30 : woensdag 17 april 2019
 >Attempting to retrieve user with id 2
 >Found user with id 2
 ---[LOGGER  MSG  END]---
 
 ---[LOGGER MSG START]---
-[CheckLogin] - 15:27:58 : donderdag 11 april 2019
->Checking log in for user JMuris
----[LOGGER MSG START]---
-[RetrieveUser] - 15:27:58 : donderdag 11 april 2019
->Attempting to retrieve user with id 2
->Found user with id 2
----[LOGGER  MSG  END]---
-
----[LOGGER MSG START]---
-[CheckLogin] - 15:28:05 : donderdag 11 april 2019
->Checking log in for user AAppel
----[LOGGER MSG START]---
-[RetrieveUser] - 15:28:05 : donderdag 11 april 2019
->Attempting to retrieve user with id 3
->Found user with id 3
----[LOGGER  MSG  END]---
-
----[LOGGER MSG START]---
-[EditAvatar] - 15:28:15 : donderdag 11 april 2019
->
----[LOGGER MSG START]---
-[EditAvatar] - 15:28:15 : donderdag 11 april 2019
->avatar_3.jpg
->C:\Users\Justin Muris\source\repos\WerkelijkWaar\WerkelijkWaar\wwwroot\content\image\avatars\3\avatar_3.jpg
----[LOGGER  MSG  END]---
-
----[LOGGER MSG START]---
-[EditUserAvatar] - 15:28:15 : donderdag 11 april 2019
->Trying to write to user 3's avatar.
->Edited user with id 3
----[LOGGER  MSG  END]---
-
----[LOGGER MSG START]---
-[RetrieveUser] - 15:28:15 : donderdag 11 april 2019
->Attempting to retrieve user with id 3
->Found user with id 3
----[LOGGER  MSG  END]---
-
----[LOGGER MSG START]---
-[CheckLogin] - 15:28:30 : donderdag 11 april 2019
->Checking log in for user JMuris
----[LOGGER MSG START]---
-[RetrieveUser] - 15:28:30 : donderdag 11 april 2019
->Attempting to retrieve user with id 2
->Found user with id 2
----[LOGGER  MSG  END]---
-
----[LOGGER MSG START]---
-[RetrieveUserListByGroup] - 15:28:31 : donderdag 11 april 2019
->Attempting to retrieve users from group 1
->Found 4 users from group 1
----[LOGGER  MSG  END]---
-
----[LOGGER MSG START]---
-Startup - 15:54:57 : donderdag 11 april 2019
->Starting server...
->Server is up and running!
----[LOGGER  MSG  END]---
-
----[LOGGER MSG START]---
-[CheckLogin] - 15:55:08 : donderdag 11 april 2019
->Checking log in for user JMuris
----[LOGGER MSG START]---
-[RetrieveUser] - 15:55:08 : donderdag 11 april 2019
->Attempting to retrieve user with id 2
->Found user with id 2
----[LOGGER  MSG  END]---
-
----[LOGGER MSG START]---
-[RetrieveUserListByGroup] - 15:55:10 : donderdag 11 april 2019
->Attempting to retrieve users from group 1
->Found 4 users from group 1
+[CreateLobby] - 11:19:31 : woensdag 17 april 2019
+>Building lobby.
+>Attempting to return partial view. Code is Ga5874
 ---[LOGGER  MSG  END]---
 

@@ -32,7 +32,7 @@ namespace WerkelijkWaar.Controllers
         }
 
         /// <summary>
-        /// Stuur de gebruiker door naar de juiste hub.
+        /// Stuur de gebruiker door naar de juiste hub na het inloggen.
         /// </summary>
         /// <returns>View</returns>
         public IActionResult Login()
@@ -69,28 +69,17 @@ namespace WerkelijkWaar.Controllers
         /// <returns>View</returns>
         public IActionResult LoginUser(LoginModel lm)
         {
+            // Check of de gebruiker bestaat in de database.
             int id = dq.CheckLogin(lm.Username, lm.Password);
 
+            // Als de gebruiker bestaat, ophalen en in sessie opslaan
             if (id != 0)
             {
                 Classes.User tempUser = dq.RetrieveUser(id);
                 HttpContext.Session.SetString("User", Newtonsoft.Json.JsonConvert.SerializeObject(tempUser));
 
-                // Student hub
-                if (tempUser.RoleId == 0)
-                {
-                    return RedirectToAction("Index", "Home");
-                }
-                // Teacher hub
-                else if (tempUser.RoleId == 1)
-                {
-                    return RedirectToAction("TeacherHub_StartGame", "Hub");
-                }
-                // Admin hub
-                else if (tempUser.RoleId == 2)
-                {
-                    return RedirectToAction("Index", "Home");
-                }
+                // Doorsturen naar de juiste hub.
+                return RedirectToAction("Login", "Account");
             }
 
             return RedirectToAction("Index", "Home");
