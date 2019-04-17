@@ -4,6 +4,10 @@
 }
 @model HubModel;
 
+<head>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js"></script>
+</head>
+
 <body>
     <div class="flex-center" style="flex-direction: column; margin-top: 10px;">
         <div>
@@ -11,6 +15,7 @@
                 <button id="openLobby">Open een lobby</button>
             </div>
             <div id="lobbyContainer"></div>
+            <button asp-controller="Game" asp-action="CloseLobby" asp-code="">Sluit lobby en start het spel.</button>
         </div>
     </div>
 </body>
@@ -19,17 +24,26 @@
     <script type="text/javascript">
         document.getElementById("playImage").style.border = "2px solid white";
 
-        $("#openLobby").click(function () {        
-            $.ajax({
-                type: 'GET',
-                url: "@Url.Content("/Game/CreateLobby/")",            
-                dataType: 'html',
-                success:function(result)
-                {
-                    $('#lobbyContainer').html(result);
-                    $('#toHide').hide();
-                }
-             });           
-         });
+        $(document).ready(function () {
+            // Lobby openen
+            $("#openLobby").click(function () {
+                if (currentUserRole = 1) {
+                    $.ajax({
+                        type: 'GET',
+                        url: "/Game/CreateLobby/",
+                        dataType: 'html',
+                        success: function (result) {
+                            $('#lobbyContainer').html(result);
+                            $('#toHide').hide();
+                        }
+                    });
+                };
+            });
+
+            // Lobby verbinden
+            $("#connectLobby").click(function () {
+                // search
+            });
+        });
     </script>
 }

@@ -28,6 +28,8 @@ namespace WerkelijkWaar.Controllers
                     // Geef GameCode terug en open een PartialView
                     Models.GameModel gm = new Models.GameModel();
 
+                    gm.CurrentUserId = tempUser.Id;
+                    gm.CurrentUserRole = tempUser.RoleId;
                     gm.Lobby = new Classes.Lobby();
                     gm.Lobby.GenerateCode();
                     // Haal configuratie op
@@ -39,6 +41,16 @@ namespace WerkelijkWaar.Controllers
             }
 
             return RedirectToAction("Index", "Home");
+        }
+
+        public IActionResult FindLobby()
+        {
+            return View();
+        }
+
+        public IActionResult CloseLobby(string gameCode)
+        {
+            return View();
         }
     }
 }

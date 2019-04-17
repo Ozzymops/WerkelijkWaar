@@ -7,6 +7,8 @@ namespace WerkelijkWaar.Models
 {
     public class GameModel
     {
+        public int CurrentUserId { get; set; }
+        public int CurrentUserRole { get; set; }
         public string GameCode { get; set; }
         public bool LobbyHosted { get; set; }
         public Classes.Lobby Lobby { get; set; }

@@ -1,4 +1,33 @@
 ﻿@model GameModel;
+
+<head>
+    <script src="~/lib/signalr/dist/browser/signalr.js"></script>
+    <script src="~/js/game.js"></script>
+</head>
+
 <div>
-    Jouw gamecode is: @Model.GameCode
+    <div id="lobbyContainer">
+        Jouw ID is: @Model.CurrentUserId.
+        Jouw gamecode is: @Model.GameCode.
+
+        SignalR test!
+        <div>
+            Bericht: <input type="text" id="messageInput" />
+            <input type="hidden" id="userInput" value="@Model.CurrentUserId" />
+            <input type="button" id="sendButton" value="Versturen" />
+        </div>
+        <div>
+            Binnengekomen berichten:
+            <ul id="messageList"></ul>
+        </div>
+    </div>
 </div>
+
+@section Scripts {
+    <script type="text/javascript">
+    // Game stuff
+    $(document).ready(function () {
+        currentGameCode = @Model.GameCode;
+    });
+    </script>
+}
