@@ -45,7 +45,7 @@ namespace WerkelijkWaar.Controllers
                 // Student hub
                 if (tempUser.RoleId == 0)
                 {
-                    return RedirectToAction("Index", "Home");
+                    return RedirectToAction("StudentHub_JoinGame", "Hub");
                 }
                 // Teacher hub
                 else if (tempUser.RoleId == 1)

@@ -8,9 +8,9 @@ namespace WerkelijkWaar.Hubs
 {
     public class GameHub : Hub
     {
-        public async Task SendMessage(string userId, string action)
+        public async Task SendMessage(string userId, string action, string code, string type)
         {
-            await Clients.All.SendAsync("ReceiveMessage", userId, action);
+            await Clients.All.SendAsync("ReceiveMessage", userId, action, code, type);
         }
     }
 }

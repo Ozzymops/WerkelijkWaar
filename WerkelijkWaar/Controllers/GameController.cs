@@ -13,6 +13,11 @@ namespace WerkelijkWaar.Controllers
         Classes.Logger l = new Classes.Logger();
         Classes.DatabaseQueries dq = new Classes.DatabaseQueries();
 
+        public IActionResult OpenLobbyView()
+        {
+            return PartialView("_GameLobby");
+        }
+
         public IActionResult CreateLobby()
         {
             // Check if logged in
@@ -43,9 +48,34 @@ namespace WerkelijkWaar.Controllers
             return RedirectToAction("Index", "Home");
         }
 
-        public IActionResult FindLobby()
+        public IActionResult JoinLobby(string code)
         {
-            return View();
+            // Check if logged in
+            if (!String.IsNullOrEmpty(HttpContext.Session.GetString("User")))
+            {
+                Classes.User tempUser = Newtonsoft.Json.JsonConvert.DeserializeObject<Classes.User>(HttpContext.Session.GetString("User"));
+
+                // Check of gebruiker een student is
+                if (tempUser.RoleId == 0)
+                {
+                    l.WriteToLog("[JoinLobby]", "Building lobby.", 0);
+
+                    // Geef GameCode terug en open een PartialView
+                    Models.GameModel gm = new Models.GameModel();
+
+                    gm.CurrentUserId = tempUser.Id;
+                    gm.CurrentUserRole = tempUser.RoleId;
+                    gm.Lobby = new Classes.Lobby();
+                    gm.Lobby.Code = code;
+                    // Haal configuratie op
+                    gm.GameCode = code;
+
+                    l.WriteToLog("[JoinLobby]", "Attempting to return partial view. Code is " + gm.Lobby.Code, 1);
+                    return PartialView("_GameLobby", gm);
+                }
+            }
+
+            return RedirectToAction("Index", "Home");
         }
 
         public IActionResult CloseLobby(string gameCode)

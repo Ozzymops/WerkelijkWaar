@@ -34,6 +34,25 @@ namespace WerkelijkWaar.Controllers
         }
 
         /// <summary>
+        /// Navigeer naar StudentHub_JoinGame.cshtml
+        /// </summary>
+        /// <returns>View</returns>
+        public IActionResult StudentHub_JoinGame()
+        {
+            // login check
+            if (!String.IsNullOrEmpty(HttpContext.Session.GetString("User")))
+            {
+                HubModel hm = new HubModel();
+                hm.User = Newtonsoft.Json.JsonConvert.DeserializeObject<Classes.User>(HttpContext.Session.GetString("User"));
+                hm.GameModel = new GameModel();
+
+                return View(hm);
+            }
+
+            return RedirectToAction("Index", "Home");
+        }
+
+        /// <summary>
         /// Navigeer naar TeacherHub_Configuration.cshtml
         /// </summary>
         /// <returns>View</returns>
