@@ -9,5 +9,7 @@ namespace WerkelijkWaar.Models
     {
         public Classes.User User { get; set; }
         public List<Classes.User> UserList { get; set; }
+
+        public GameModel GameModel { get; set; }
     }
 }
