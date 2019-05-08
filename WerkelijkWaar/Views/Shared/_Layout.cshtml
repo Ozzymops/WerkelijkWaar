@@ -35,30 +35,30 @@
 </head>
 <body>
     <header>
-        <div class="ww-navbar">
+        <div class="layout top-bar">
             @if (sessionExists)
             {
-                <div class="ww-navbar-container">
+                <div class="layout top-bar-container">
                     <!-- Left side -->
-                    <div class="ww-navbar-profile">
+                    <div class="layout top-bar-profile">
                         @if (!String.IsNullOrEmpty(user.ImageSource))
                         {
-                            <img class="ww-navbar-profile" src="~/content/image/avatars/@user.Id/@user.ImageSource" alt="Profielfoto" title="Profielfoto" />
+                            <img class="layout top-bar-profile" src="~/content/image/avatars/@user.Id/@user.ImageSource" alt="Profielfoto" title="Profielfoto" />
                         }
                         else
                         {
-                            <img class="ww-navbar-profile" src="~/content/image/MissingAvatar.png" alt="Profielfoto" title="Profielfoto" />
+                            <img class="layout top-bar-profile" src="~/content/image/MissingAvatar.png" alt="Profielfoto" title="Profielfoto" />
                         }
                         <div style="margin-left: 10px;">
-                            <p class="ww-navbar-profile">Welkom, @user.Name!</p>
+                            <p class="layout top-bar-profile">Welkom, @user.Name!</p>
                             <a style="font-size: 24px;" asp-controller="Account" asp-action="AccountView">Account</a>
                         </div>
                     </div>
                     <!-- Right side -->
-                    <div class="ww-navbar-logout">
-                        <p class="ww-navbar-logout">Uitloggen</p>
+                    <div class="layout top-bar-logout">
+                        <p class="layout top-bar-logout">Uitloggen</p>
                         <a asp-controller="Account" asp-action="Logout">
-                            <img class="ww-navbar-logout" src="~/content/image/Logout.png" alt="Logout" title="Logout" />
+                            <img class="layout top-bar-logout" src="~/content/image/Logout.png" alt="Logout" title="Logout" />
                         </a>
                     </div>
                 </div>

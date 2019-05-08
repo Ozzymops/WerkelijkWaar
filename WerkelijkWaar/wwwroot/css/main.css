@@ -1,225 +1,144 @@
-﻿/* Default */
+﻿/* #region Default */
 html, body {
-    background-color: orange;
+    background-color: #f5b91a;
 }
 
-body.dark {
-    background-color: darkorange;
+html.light, body.light {
+    background-color: #f7c747;
 }
 
-h1 {
-    font-weight: bold;
-    font-size: 36px;
-    color: white;
-    text-align: center;
+html.dark, body.dark {
+    background-color: #ee860d;
 }
 
-h2 {
-    font-size: 24px;
-    color: black;
-    text-align: center;
+html.blue, body.blue {
+    background-color: #6ac2c4;
 }
 
-h3 {
-    font-size: 12px;
-    color: black;
+html.darkblue, body.darkblue {
+    background-color: #7b6ea4;
 }
+/* #endregion */
 
-p {
-    color: black;
-}
-
-p.center {
-    text-align: center;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-button {
-    background-color: rebeccapurple;
-    color: white;
-    border: 2px solid black;
-    width: 100px;
-    height: 50px;
-}
-
-input[type=submit], input[type=button] {
-    display: block;
-    background-color: rebeccapurple;
-    color: white;
-    border: 2px solid black;
-    width: 100px;
-    height: 50px;
-}
-
-input[type=submit].table, input[type=button].table {
-    width: 100%;
-    height: 100%;
-}
-
-input[type=checkbox], input[type=radio] {
-    display: block;
-    width: 25px;
-    height: 25px;
-}
-
-input[type=text], input[type=password], input[type=number] {
-    display: block;
-    background-color: rebeccapurple;
-    color: white;
-    width: 300px;
-    height: 30px;
-    border: 2px solid black;
-}
-
-input.center {
-    margin-left: auto;
-    margin-right: auto;
-}
-
-input[type=submit].enabled {
-    background-color: rebeccapurple;
-    color: white;
-}
-
-input[type=submit].disabled {
-    background-color: gray;
-    color: darkslategray;
-}
-
-/* 32x32 image */
-img.small-icon {
-    width: 32px;
-    height: 32px;
-}
-
-img.medium-icon {
-    width: 64px;
-    height: 64px;
-}
-
-/* 128x128 image */
-img.large-icon {
-    width: 128px;
-    height: 128px;
-}
-
-/* 256x256 image */
-img.huge-icon {
-    width: 256px;
-    height: 256px;
-}
-
-img.large-icon.center {
-    margin-left: auto;
-    margin-right: auto;
-}
-
-/* Flexbox */
-div.flex {
-    display: flex;
-}
-
+/* #region Shared */
 div.flex-center {
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-div.flex-column {
-    display: flex;
-    flex-direction: column;
+h1.big-title {
+    color: white;
+    font-size: 42px;
+    text-align: center;
+    font-weight: bold;
 }
 
-div.flex-column-top {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-    position: absolute;
-    top: 0px;
-    right: 0px;
+h2.subtitle {
+    color: black;
+    font-size: 24px;
+    text-align: center;
+    font-weight: 400;
 }
 
-div.overview-grid {
-    background-color: burlywood;
-    border: 1px solid black;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    width: 1000px;
-    height: 1000px;
-}
-
-table.overview {
-    background-color: burlywood;
-    border: 1px solid black;
-    border-collapse: collapse;
-}
-
-table.overview th, td {
-    height: 50px;
-    border: 1px solid black;
+h3.small-text {
+    color: black;
+    font-size: 12px;
     text-align: center;
 }
 
-table.overview th {
-    border-bottom: 1px solid black;
+p.before-input {
+    color: black;
+    font-size: 12px;
+    text-align: center;
 }
 
-centered {
+input[type=text].text-input, input[type=password].text-input, input[type=number].number-input {
+    display: block;
     margin-left: auto;
     margin-right: auto;
-}
-
-ul.overview {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-}
-
-/* #region _Layout */
-div.ww-navbar {
-    width: 100%;
-    height: 100px;
-    background-color: saddlebrown;
-    border-bottom: 2px solid black;
-}
-
-div.ww-navbar-side {
-    float: left;
-    height: 845px;
+    background-color: #2db6bc;
+    border: none;
+    color: white;
     width: 300px;
-    background-color: saddlebrown;
-    border-right: 2px solid black;
+    height: 33px;
 }
 
-div.ww-navbar-container {
+input[type=text].text-input:focus, input[type=password].text-input:focus, input[type=number].number-input:focus {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #58c5ca;
+    border: none;
+    color: white;
+    width: 300px;
+    height: 33px;
+}
+
+input[type=button].form-button, input[type=submit].form-button {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #2db6bc;
+    border: none;
+    color: white;
+    width: 300px;
+    height: 40px;
+}
+
+input[type=button].form-button:hover, input[type=submit].form-button:hover {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #58c5ca;
+    border: none;
+    color: white;
+    width: 300px;
+    height: 40px;
+}
+/* #endregion */
+
+/* #region Layout */
+div.layout.top-bar {
+    width: 100%;
+    height: 50px;
+    background-color: #ee860d;
+}
+
+div.layout.top-bar-container {
     display: flex;
     flex-direction: row;
     width: 100%;
     justify-content: space-between;
 }
 
-div.ww-navbar-profile {
+div.layout.top-bar-profile {
     display: flex;
     flex-direction: row;
     width: 400px;
 }
 
-div.ww-navbar-logout {
+div.layout.top-bar-logout {
     display: flex;
     flex-direction: row;
     width: 200px;
     height: 100px;
 }
 
-p.ww-navbar-profile {
+div.layout.side-bar {
+    float: left;
+    height: 845px;
+    width: 300px;
+    background-color: #ee860d;
+}
+
+p.layout.top-bar-profile {
     color: white;
     font-size: 24px;
     text-align: center;
 }
 
-p.ww-navbar-logout {
+p.layout.top-bar-logout {
     font-size: 24px;
     margin-top: 30px;
     color: white;
@@ -227,101 +146,85 @@ p.ww-navbar-logout {
     vertical-align: central;
 }
 
-p.ww-navbar-side {
+p.layout.side-bar-actions {
     color: white;
     font-size: 24px;
     text-align: center;
 }
 
-img.ww-navbar-profile {
+img.layout.top-bar-profile {
     width: 100px;
     height: 100px;
 }
 
-img.ww-navbar-logout {
+img.layout.top-bar-logout {
     height: 100px;
     width: 100px;
     padding: 20px;
 }
 
-img.ww-navbar-side-image {
+img.layout.side-bar-item {
     height: 10%;
     margin-top: 10px;
     margin-left: 105px;
 }
-/* #endregion _Layout */
+
+/* #endregion*/
 
 /* #region Landing */
-img.mascot-landing {
+div.landing.bubble-space {
+    position: absolute;
+    background-color: white;
+    width: 275px;
+    height: 100px;
+    right: 170px;
+    bottom: 285px;
+    border-radius: 25px;
+}
+
+img.landing.mascot-lowerright {
     height: 33%;
     position: absolute;
     right: 0;
     bottom: 0;
 }
 
-img.speech-landing {
-    height: 20%;
-    position: absolute;
-    right: 175px;
-    bottom: 225px;
+p.landing.text-balloon {
+    color: black;
+    font-size: 12px;
+    text-align: center;
+    margin-top: 5px;
 }
 
-p.landing {
-    text-align: center;
+input[type=submit].landing.button-balloon {
+    display: block;
     margin-left: auto;
     margin-right: auto;
-    margin-bottom: 0px;
-}
-
-p.speech-landing {
-    width: 200px;
     text-align: center;
-    position: absolute;
-    right: 170px;
-    bottom: 285px;
 }
+/* #endregion */
 
-a.speech-landing {
+/* #region GameInfo */
+h1.big-number {
+    color: black;
+    font-size: 24px;
     text-align: center;
-    position: absolute;
-    right: 195px;
-    bottom: 275px;
+    font-weight: bold;
+    margin-left: 20px;
 }
 
-input.landing {
-    width: 300px;
-    margin-top: 10px;
-    margin-left: auto;
-    margin-right: auto;
-}
-/* #endregion Landing */
-
-/* #region Hub */
-div.overview-student {
-    margin-left: 200px;
+div.gameinfo.big-bubble {
+    background-color: white;
+    height: 500px;
     width: 1000px;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    border: 2px solid black;
-    background-color: burlywood;
+    border-radius: 25px;
+    margin-left: -50%;
 }
 
-div.overview-student-small {
-    width: 120px;
-    border-right: 2px solid black;
+img.landing.mascot-bigright {
+    height: 66%;
+    position: absolute;
+    right: 10%;
+    bottom: 15%;
 }
-
-div.overview-student-medium {
-    width: 240px;
-    border-right: 2px solid black;
-}
-
-div.overview-student-buttons {
-    margin-right: 20px;
-    margin-left: -30px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-}
-/* #endregion Hub */
+/* #endregion */

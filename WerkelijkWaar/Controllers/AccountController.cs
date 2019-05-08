@@ -45,12 +45,12 @@ namespace WerkelijkWaar.Controllers
                 // Student hub
                 if (tempUser.RoleId == 0)
                 {
-                    return RedirectToAction("Index", "Home");
+                    return RedirectToAction("Both_Game", "Hub");
                 }
                 // Teacher hub
                 else if (tempUser.RoleId == 1)
                 {
-                    return RedirectToAction("TeacherHub_StartGame", "Hub");
+                    return RedirectToAction("Both_Game", "Hub");
                 }
                 // Admin hub
                 else if (tempUser.RoleId == 2)
@@ -79,12 +79,12 @@ namespace WerkelijkWaar.Controllers
                 // Student hub
                 if (tempUser.RoleId == 0)
                 {
-                    return RedirectToAction("Index", "Home");
+                    return RedirectToAction("Both_Game", "Hub");
                 }
                 // Teacher hub
                 else if (tempUser.RoleId == 1)
                 {
-                    return RedirectToAction("TeacherHub_StartGame", "Hub");
+                    return RedirectToAction("Both_Game", "Hub");
                 }
                 // Admin hub
                 else if (tempUser.RoleId == 2)

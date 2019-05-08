@@ -38,37 +38,37 @@
 <body>
     <header>
         <!-- Top bar -->
-        <div class="ww-navbar">
+        <div class="layout top-bar">
             @if (sessionExists)
             {
-            <div class="ww-navbar-container">
+            <div class="layout top-bar-container">
                 <!-- Left side -->
-                <div class="ww-navbar-profile">
+                <div class="layout top-bar-profile">
                     @if (!String.IsNullOrEmpty(user.ImageSource))
                     {
-                        <img class="ww-navbar-profile" src="~/content/image/avatars/@user.Id/@user.ImageSource" alt="Profielfoto" title="Profielfoto" />
+                        <img class="layout top-bar-profile" src="~/content/image/avatars/@user.Id/@user.ImageSource" alt="Profielfoto" title="Profielfoto" />
                     }
                     else
                     {
-                        <img class="ww-navbar-profile" src="~/content/image/MissingAvatar.png" alt="Profielfoto" title="Profielfoto" />
+                        <img class="layout top-bar-profile" src="~/content/image/MissingAvatar.png" alt="Profielfoto" title="Profielfoto" />
                     }
                     <div style="margin-left: 10px;">
-                        <p class="ww-navbar-profile">Welkom, @user.Name!</p>
+                        <p class="layout top-bar-profile">Welkom, @user.Name!</p>
                         <a style="font-size: 24px;" asp-controller="Account" asp-action="AccountView">Account</a>
                     </div>
                 </div>
                 <!-- Right side -->
-                <div class="ww-navbar-logout">
-                    <p class="ww-navbar-logout">Uitloggen</p>
+                <div class="layout top-bar-logout">
+                    <p class="layout top-bar-logout">Uitloggen</p>
                     <a asp-controller="Account" asp-action="Logout">
-                        <img class="ww-navbar-logout" src="~/content/image/Logout.png" alt="Logout" title="Logout" />
+                        <img class="layout top-bar-logout" src="~/content/image/Logout.png" alt="Logout" title="Logout" />
                     </a>
                 </div>
             </div>
             }
         </div>
         <!-- Side bar -->
-        <div class="ww-navbar-side">
+        <div class="layout side-bar">
             @if (sessionExists)
             {
                 if (roleId == 0)
@@ -78,19 +78,16 @@
                 else if (roleId == 1)
                 {
                     <a asp-controller="Hub" asp-action="TeacherHub_StartGame">
-                        <img id="playImage" class="ww-navbar-side-image" src="~/content/image/Play.png" alt="Spel starten" title="Spel starten" />
+                        <img id="playImage" class="layout side-bar-item" src="~/content/image/Play.png" alt="Spel starten" title="Spel starten" />
                     </a>
-                    <p class="ww-navbar-side">Spel starten</p>
                     <br />
                     <a asp-controller="Hub" asp-action="TeacherHub_Configuration">
-                        <img id="configImage" class="ww-navbar-side-image" src="~/content/image/Gear.png" alt="Configuratiescherm" title="Configuratiescherm" />
+                        <img id="configImage" class="layout side-bar-item" src="~/content/image/Gear.png" alt="Configuratiescherm" title="Configuratiescherm" />
                     </a>
-                    <p class="ww-navbar-side">Configuratiescherm</p>
                     <br />
                     <a asp-controller="Hub" asp-action="TeacherHub_StudentOverview">
-                        <img id="overviewImage" class="ww-navbar-side-image" src="~/content/image/People.png" alt="Studenteninzage" title="Studenteninzage" />
+                        <img id="overviewImage" class="layout side-bar-item" src="~/content/image/People.png" alt="Studenteninzage" title="Studenteninzage" />
                     </a>
-                    <p class="ww-navbar-side">Studenteninzage</p>
                 }
             }
         </div>
