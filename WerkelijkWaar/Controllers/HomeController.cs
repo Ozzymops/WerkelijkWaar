@@ -42,6 +42,11 @@ namespace WerkelijkWaar.Controllers
             return GoToLogin(0, 1);
         }
 
+        public IActionResult GameInfo()
+        {
+            return View();
+        }
+
         public IActionResult Privacy()
         {
             return View();

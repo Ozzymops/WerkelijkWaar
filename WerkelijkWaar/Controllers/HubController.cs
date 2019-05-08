@@ -15,10 +15,10 @@ namespace WerkelijkWaar.Controllers
         Classes.DatabaseQueries dq = new Classes.DatabaseQueries();
 
         /// <summary>
-        /// Navigeer naar TeacherHub_StartGame.cshtml
+        /// Navigeer naar Both_Game.cshtml
         /// </summary>
         /// <returns>View</returns>
-        public IActionResult TeacherHub_StartGame()
+        public IActionResult Both_Game()
         {
             // login check
             if (!String.IsNullOrEmpty(HttpContext.Session.GetString("User")))

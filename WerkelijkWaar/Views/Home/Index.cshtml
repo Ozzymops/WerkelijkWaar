@@ -1,32 +1,35 @@
 ﻿@{
     ViewData["Title"] = "Home";
+    Layout = "_Layout";
 }
 @model LoginModel
 
 <body>
     <div class="flex-center" style="flex-direction: column; margin-top: 10px;">
-        <h1>Werkelijk Waar?</h1>
-        <h2>Houd anderen voor de gek, maar<br />probeer zelf de waarheid te vinden.</h2>
+        <h1 class="big-title">Werkelijk Waar?</h1>
+        <h2 class="subtitle">Houd anderen voor de gek, maar<br />probeer zelf de waarheid te vinden:<br />weet jij het meest geloofwaardige<br />nepnieuws te schrijven?</h2>
         <br />
-        <h2>Weet jij het meest geloofwaardige<br />nepnieuws te schrijven?</h2>
-        <h3>Heb je nog geen account? Maak deze <a asp-controller="Account" asp-action="Register">hier</a> aan!</h3>
+        <h3 class="small-text">Heb je nog geen account? Maak deze <a asp-controller="Account" asp-action="Register">hier</a> aan!</h3>
         <br />
         <form asp-action="LoginUser" asp-controller="Account">
             <div>
-                <p class="landing">Gebruikersnaam</p>
-                <input asp-for="Username" type="text" class="landing" />
+                <p class="before-input">Gebruikersnaam:</p>
+                <input asp-for="Username" type="text" class="text-input" />
             </div>
             <div style="margin-top: 10px;">
-                <p class="landing">Wachtwoord</p>
-                <input asp-for="Password" type="password" class="landing"/>
+                <p class="before-input">Wachtwoord:</p>
+                <input asp-for="Password" type="password" class="text-input"/>
             </div>
-            <input type="submit" value="Aanmelden" class="landing" />
+            <input type="submit" value="Aanmelden" class="form-button" style="width: 300px; margin-top: 20px;" />
         </form>
     </div>
     <div>
-        <img src="~/content/image/Squirrel.png" class="mascot-landing" />
-        <img src="~/content/image/SpeechBalloon.png" class="speech-landing" />
-        <p class="speech-landing">Leuk dat je er bent!<br />Weet je al hoe 'Werkelijk Waar' werkt?</p>
-        <a class="speech-landing" asp-controller="Home" asp-action="GameInfo">Hoe speel ik het spel?</a>
+        <img src="~/content/image/Squirrel.png" class="landing mascot-lowerright" />
+        <div class="landing bubble-space">
+            <p class="landing text-balloon">Leuk dat je er bent!<br />Weet je al hoe 'Werkelijk Waar' werkt?</p>
+            <form>
+                <input asp-controller="Home" asp-action="GameInfo" type="submit" class="landing button-balloon" value="Hoe speel ik het spel?" />
+            </form>
+        </div>     
     </div>
 </body>
