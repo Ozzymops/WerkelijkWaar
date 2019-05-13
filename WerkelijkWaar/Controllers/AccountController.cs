@@ -55,7 +55,7 @@ namespace WerkelijkWaar.Controllers
                 // Admin hub
                 else if (tempUser.RoleId == 2)
                 {
-                    return RedirectToAction("Index", "Home");
+                    return RedirectToAction("Game", "Hub");
                 }
             }
 

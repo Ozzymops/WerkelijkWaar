@@ -239,3 +239,26 @@ img.landing.mascot-bigright {
     bottom: 15%;
 }
 /* #endregion */
+
+/* #region Game */
+/* #region Docent */
+div.game.docent.container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+}
+
+div.game.docent.side-part {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+div.game.docent.center-part {
+    display: flex;
+    flex-direction: column;
+}
+
+/* #endregion */
+/* #endregion */

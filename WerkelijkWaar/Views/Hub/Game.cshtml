@@ -5,12 +5,30 @@
 
 <body>
     <div class="flex-center" style="flex-direction: column; margin-top: 10px;">
-        <div id="game-teacher">
-            <input type="button" class="form-button" value="Lobby openen" />
-            <input type="button" class="form-button" value="Lobby annuleren" />
-            <input type="button" class="form-button" value="Starten met huidige lobby" />
+        <img class="landing mascot-lowerright" src="~/content/image/Squirrel.png" />
+        <div id="game-teacher" class="game docent container">
+            <div class="game docent side-part">
+                <input id="btn-openLobby" type="button" class="form-button" value="Lobby openen" />
+                <input id="btn-cancelLobby" type="button" class="form-button" style="margin-top: 10px; display: none;" value="Lobby annuleren" />
+                <input id="btn-startGame" type="button" class="form-button" style="margin-top: 10px; display: none;" value="Starten met huidige lobby" />
+            </div>
+            <div id="gameData" class="game docent center-part" style="display: none;">
+                <p id="gameCode">Jouw spelcode is: abcdefg</p>
+                <ul id="playerList">
+                    <li>
+                        a
+                    </li>
+                    <li>
+                        b
+                    </li>
+                    <li>
+                        c
+                    </li>
+                </ul>
+                <p id="amountConnected">3 spelers zijn verbonden.</p>
+            </div>
         </div>
-        <div id="game-student">
+        <div id="game-student" style="display: none;">
 
         </div>
     </div>
@@ -19,6 +37,5 @@
 @section Scripts {
     <script>
         // Game script here
-        document.getElementById("playImage").style.border = "2px solid white";
     </script>
 }
