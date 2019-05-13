@@ -37,56 +37,79 @@
 </head>
 <body>
     <header>
-        <!-- Top bar -->
+        <!-- Top -->
         <div class="layout top-bar">
             @if (sessionExists)
             {
-            <div class="layout top-bar-container">
-                <!-- Left side -->
-                <div class="layout top-bar-profile">
-                    @if (!String.IsNullOrEmpty(user.ImageSource))
-                    {
-                        <img class="layout top-bar-profile" src="~/content/image/avatars/@user.Id/@user.ImageSource" alt="Profielfoto" title="Profielfoto" />
-                    }
-                    else
-                    {
-                        <img class="layout top-bar-profile" src="~/content/image/MissingAvatar.png" alt="Profielfoto" title="Profielfoto" />
-                    }
-                    <div style="margin-left: 10px;">
-                        <p class="layout top-bar-profile">Welkom, @user.Name!</p>
-                        <a style="font-size: 24px;" asp-controller="Account" asp-action="AccountView">Account</a>
+                <div class="layout top-bar-container">
+                    <div class="layout top-bar-profile">
+                        @if (!String.IsNullOrEmpty(user.ImageSource))
+                        {
+                            <img class="layout top-bar-profile" src="~/content/image/avatars/@user.Id/@user.ImageSource" alt="Profielfoto" title="Profielfoto" />
+                        }
+                        else
+                        {
+                            <img class="layout top-bar-profile" src="~/content/image/Follower.png" alt="Profielfoto niet gevonden" title="Profielfoto niet gevonden" />
+                        }
+                        <div>
+                            <p class="layout top-bar-profile" style="margin-top: 25px;">Welkom, @user.Name!</p>
+                            <form style="margin-top: -10px;">
+                                <input asp-controller="Account" asp-action="AccountView" class="layout top-bar-profile" type="submit" value="Account" />
+                            </form>
+                        </div>
+                    </div>
+                    <div class="layout top-bar-logout">
+                        <p class="layout top-bar-logout">Uitloggen</p>
+                        <a asp-controller="Account" asp-action="Logout">
+                            <img class="layout top-bar-logout" src="~/content/image/Logout.png" alt="Logout" title="Logout" />
+                        </a>
                     </div>
                 </div>
-                <!-- Right side -->
-                <div class="layout top-bar-logout">
-                    <p class="layout top-bar-logout">Uitloggen</p>
-                    <a asp-controller="Account" asp-action="Logout">
-                        <img class="layout top-bar-logout" src="~/content/image/Logout.png" alt="Logout" title="Logout" />
-                    </a>
-                </div>
-            </div>
             }
         </div>
-        <!-- Side bar -->
+        <!-- Side -->
         <div class="layout side-bar">
             @if (sessionExists)
             {
-                if (roleId == 0)
+                <p class="layout side-bar-actions">Acties</p>
+
+                @if (roleId != 2)
                 {
-            @: studentooo
+                    <a asp-controller="Hub" asp-action="Game">
+                        <img class="layout side-bar-item" src="~/content/image/Play.png" alt="Game" title="Game" />
+                    </a>
                 }
-                else if (roleId == 1)
+
+                @if (roleId == 0)
                 {
-                    <a asp-controller="Hub" asp-action="TeacherHub_StartGame">
-                        <img id="playImage" class="layout side-bar-item" src="~/content/image/Play.png" alt="Spel starten" title="Spel starten" />
+                    <a asp-controller="Overview" asp-action="ScoreOverview">
+                        <img class="layout side-bar-item" src="~/content/image/Trophy.png" alt="Score" title="Score" />
                     </a>
-                    <br />
-                    <a asp-controller="Hub" asp-action="TeacherHub_Configuration">
-                        <img id="configImage" class="layout side-bar-item" src="~/content/image/Gear.png" alt="Configuratiescherm" title="Configuratiescherm" />
+                }
+
+                @if (roleId == 1)
+                {
+                    <a asp-controller="Hub" asp-action="Game">
+                        <img class="layout side-bar-item" src="~/content/image/Gear.png" alt="Configuration" title="Configuration" />
                     </a>
-                    <br />
-                    <a asp-controller="Hub" asp-action="TeacherHub_StudentOverview">
-                        <img id="overviewImage" class="layout side-bar-item" src="~/content/image/People.png" alt="Studenteninzage" title="Studenteninzage" />
+
+                    <a asp-controller="Overview" asp-action="ScoreOverview">
+                        <img class="layout side-bar-item" src="~/content/image/People.png" alt="Overview" title="Overview" />
+                    </a>
+                }
+
+                @if (roleId == 2)
+                {
+                    <a asp-controller="Home" asp-action="Index">
+                        <img class="layout side-bar-item" src="~/content/image/Info.png" alt="Log" title="Log" />
+                    </a>
+
+                    <a asp-controller="Home" asp-action="Index">
+                        <img class="layout side-bar-item" src="~/content/image/People.png" alt="Users" title="Users" />
+                    </a>
+
+                    <a asp-controller="Home" asp-action="Index">
+                        <img class="layout side-bar-item" src="~/content/image/Gear.png" alt="Configuration" title="Configuration" />
                     </a>
                 }
             }

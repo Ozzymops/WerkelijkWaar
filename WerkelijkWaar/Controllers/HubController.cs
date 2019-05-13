@@ -18,7 +18,7 @@ namespace WerkelijkWaar.Controllers
         /// Navigeer naar Both_Game.cshtml
         /// </summary>
         /// <returns>View</returns>
-        public IActionResult Both_Game()
+        public IActionResult Game()
         {
             // login check
             if (!String.IsNullOrEmpty(HttpContext.Session.GetString("User")))

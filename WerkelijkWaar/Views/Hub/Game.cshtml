@@ -1,0 +1,24 @@
+﻿@{
+    ViewData["Title"] = "Spel";
+    Layout = "_LayoutSide";
+}
+
+<body>
+    <div class="flex-center" style="flex-direction: column; margin-top: 10px;">
+        <div id="game-teacher">
+            <input type="button" class="form-button" value="Lobby openen" />
+            <input type="button" class="form-button" value="Lobby annuleren" />
+            <input type="button" class="form-button" value="Starten met huidige lobby" />
+        </div>
+        <div id="game-student">
+
+        </div>
+    </div>
+</body>
+
+@section Scripts {
+    <script>
+        // Game script here
+        document.getElementById("playImage").style.border = "2px solid white";
+    </script>
+}
