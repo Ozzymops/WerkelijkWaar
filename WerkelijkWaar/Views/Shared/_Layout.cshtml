@@ -7,10 +7,12 @@
     User user = new User();
 
     bool sessionExists = (!String.IsNullOrEmpty(HttpContextAccessor.HttpContext.Session.GetString("User")));
+    int roleId = -1;
 
     if (sessionExists)
     {
         user = Newtonsoft.Json.JsonConvert.DeserializeObject<User>(HttpContextAccessor.HttpContext.Session.GetString("User"));
+        roleId = user.RoleId;
     }
 }
 
@@ -35,11 +37,11 @@
 </head>
 <body>
     <header>
+        <!-- Top -->
         <div class="layout top-bar">
             @if (sessionExists)
             {
                 <div class="layout top-bar-container">
-                    <!-- Left side -->
                     <div class="layout top-bar-profile">
                         @if (!String.IsNullOrEmpty(user.ImageSource))
                         {
@@ -47,14 +49,15 @@
                         }
                         else
                         {
-                            <img class="layout top-bar-profile" src="~/content/image/MissingAvatar.png" alt="Profielfoto" title="Profielfoto" />
+                            <img class="layout top-bar-profile" src="~/content/image/Follower.png" alt="Profielfoto niet gevonden" title="Profielfoto niet gevonden" />
                         }
-                        <div style="margin-left: 10px;">
-                            <p class="layout top-bar-profile">Welkom, @user.Name!</p>
-                            <a style="font-size: 24px;" asp-controller="Account" asp-action="AccountView">Account</a>
+                        <div>
+                            <p class="layout top-bar-profile" style="margin-top: 25px;">Welkom, @user.Name!</p>
+                            <form style="margin-top: -10px;">
+                                <input asp-controller="Account" asp-action="AccountView" class="layout top-bar-profile" type="submit" value="Account" />
+                            </form>
                         </div>
                     </div>
-                    <!-- Right side -->
                     <div class="layout top-bar-logout">
                         <p class="layout top-bar-logout">Uitloggen</p>
                         <a asp-controller="Account" asp-action="Logout">

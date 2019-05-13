@@ -1354,3 +1354,9 @@ Startup - 11:46:32 : maandag 13 mei 2019
 >Found user with id 1
 ---[LOGGER  MSG  END]---
 
+---[LOGGER MSG START]---
+Startup - 11:49:01 : maandag 13 mei 2019
+>Starting server...
+>Server is up and running!
+---[LOGGER  MSG  END]---
+
