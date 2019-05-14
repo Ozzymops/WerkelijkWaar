@@ -74,7 +74,7 @@ namespace WerkelijkWaar.Controllers
         /// Navigeer naar TeacherHub_StudentOverview.cshtml
         /// </summary>
         /// <returns>View</returns>
-        public IActionResult TeacherHub_StudentOverview()
+        public IActionResult ClassOverview()
         {
             // login check
             if (!String.IsNullOrEmpty(HttpContext.Session.GetString("User")))
