@@ -25,7 +25,6 @@ namespace WerkelijkWaar.Controllers
             {
                 HubModel hm = new HubModel();
                 hm.User = Newtonsoft.Json.JsonConvert.DeserializeObject<Classes.User>(HttpContext.Session.GetString("User"));
-                hm.GameModel = new GameModel();
 
                 return View(hm);
             }
@@ -44,7 +43,6 @@ namespace WerkelijkWaar.Controllers
             {
                 HubModel hm = new HubModel();
                 hm.User = Newtonsoft.Json.JsonConvert.DeserializeObject<Classes.User>(HttpContext.Session.GetString("User"));
-                hm.GameModel = new GameModel();
 
                 return View(hm);
             }

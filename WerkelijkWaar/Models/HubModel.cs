@@ -10,6 +10,20 @@ namespace WerkelijkWaar.Models
         public Classes.User User { get; set; }
         public List<Classes.User> UserList { get; set; }
 
-        public GameModel GameModel { get; set; }
+        public double AverageScore { get; set; }
+        public void GenerateAverage()
+        {
+            if (UserList != null && UserList.Count != 0)
+            {
+                double totalAverage = 0.0;
+
+                foreach (Classes.User u in UserList)
+                {
+                    totalAverage += u.AverageScore;
+                }
+
+                AverageScore = (totalAverage / UserList.Count);
+            }
+        }
     }
 }

@@ -1921,3 +1921,114 @@ Startup - 13:14:44 : dinsdag 14 mei 2019
 >Found 4 users from group 1
 ---[LOGGER  MSG  END]---
 
+---[LOGGER MSG START]---
+Startup - 13:23:21 : dinsdag 14 mei 2019
+>Starting server...
+>Server is up and running!
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[CheckLogin] - 13:26:20 : dinsdag 14 mei 2019
+>Checking log in for user JMuris
+---[LOGGER MSG START]---
+[RetrieveUser] - 13:26:20 : dinsdag 14 mei 2019
+>Attempting to retrieve user with id 2
+>Found user with id 2
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[RetrieveUserListByGroup] - 13:26:21 : dinsdag 14 mei 2019
+>Attempting to retrieve users from group 1
+>Found 4 users from group 1
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[RetrieveUser] - 13:26:22 : dinsdag 14 mei 2019
+>Attempting to retrieve user with id 3
+>Found user with id 3
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[RetrieveScoresOfUser] - 13:26:22 : dinsdag 14 mei 2019
+>Attempting to retrieve scores of user 3
+>Found 2 scores from user 3
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[RetrieveUser] - 13:26:25 : dinsdag 14 mei 2019
+>Attempting to retrieve user with id 3
+>Found user with id 3
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[RetrieveScoresOfUser] - 13:26:25 : dinsdag 14 mei 2019
+>Attempting to retrieve scores of user 3
+>Found 2 scores from user 3
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[RetrieveUser] - 13:26:25 : dinsdag 14 mei 2019
+>Attempting to retrieve user with id 3
+>Found user with id 3
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[RetrieveScoresOfUser] - 13:26:25 : dinsdag 14 mei 2019
+>Attempting to retrieve scores of user 3
+>Found 2 scores from user 3
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[RetrieveUserListByGroup] - 13:26:26 : dinsdag 14 mei 2019
+>Attempting to retrieve users from group 1
+>Found 4 users from group 1
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[RetrieveUserListByGroup] - 13:26:29 : dinsdag 14 mei 2019
+>Attempting to retrieve users from group 1
+>Found 4 users from group 1
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[RetrieveUser] - 13:26:30 : dinsdag 14 mei 2019
+>Attempting to retrieve user with id 6
+>Found user with id 6
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[RetrieveScoresOfUser] - 13:26:30 : dinsdag 14 mei 2019
+>Attempting to retrieve scores of user 6
+>Could not find any scores of user 6
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[RetrieveUserListByGroup] - 13:26:31 : dinsdag 14 mei 2019
+>Attempting to retrieve users from group 1
+>Found 4 users from group 1
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[RetrieveUserListByGroup] - 13:26:34 : dinsdag 14 mei 2019
+>Attempting to retrieve users from group 1
+>Found 4 users from group 1
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[RetrieveUser] - 13:26:37 : dinsdag 14 mei 2019
+>Attempting to retrieve user with id 3
+>Found user with id 3
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[RetrieveScoresOfUser] - 13:26:37 : dinsdag 14 mei 2019
+>Attempting to retrieve scores of user 3
+>Found 2 scores from user 3
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[RetrieveUserListByGroup] - 13:26:38 : dinsdag 14 mei 2019
+>Attempting to retrieve users from group 1
+>Found 4 users from group 1
+---[LOGGER  MSG  END]---
+
