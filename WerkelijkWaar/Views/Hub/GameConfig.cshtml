@@ -1,0 +1,54 @@
+﻿@{
+    ViewData["Title"] = "Spel configuratie";
+    Layout = "_LayoutSide";
+}
+
+<body>
+    <div style="margin-top: 10px;">
+        <!-- top row -->
+        <div style="display: flex; flex-direction: row; justify-content: space-around;">
+            <div style="width: 600px;">
+                <h1 class="title">Systeeminstellingen</h1>
+                <div style="display: flex; flex-direction: row;">
+                    <p class="before-input" style="display: inline-block; text-align: left; width: 150px;">Thema</p>
+                    <input class="text-input-thin" type="text" style="margin-left: -10px;" />
+                </div>
+                <div style="display: flex; flex-direction: row;">
+                    <p class="before-input" style="display: inline-block; text-align: left; width: 150px;">RSS-feed</p>
+                    <input class="text-input-thin" type="text" style="margin-left: -10px;" />
+                </div>
+            </div>
+            <div style="width: 300px;">
+                <h2 class="subtitle">Huidige moeilijkheidsgraad: 5,0 / 10,0</h2>
+            </div>
+        </div>
+        <hr />
+        <div style="display: flex; flex-direction: row; justify-content: space-around;">
+            <div style="width: 1000px;">
+                <h1 class="title">Spelinstellingen</h1>
+                <div style="display: flex; flex-direction: row;">
+                    <p class="before-input" style="display: inline-block; text-align: left; width: 550px;">Het aantal verkregen volgers [+] voor een correct antwoord:</p>
+                    <input class="text-input-thin" type="text" style="margin-left: -150px; width: 50px;" value="5" />
+                </div>
+                <div style="display: flex; flex-direction: row;">
+                    <p class="before-input" style="display: inline-block; text-align: left; width: 550px;">Het aantal verloren volgers [-] voor een fout antwoord:</p>
+                    <input class="text-input-thin" type="text" style="margin-left: -150px; width: 50px;" value="5" />
+                </div>
+                <div style="display: flex; flex-direction: row;">
+                    <p class="before-input" style="display: inline-block; text-align: left; width: 550px;">Het aantal verkregen volgers per keer dat jouw verhaal is gekozen:</p>
+                    <input class="text-input-thin" type="text" style="margin-left: -150px; width: 50px;" value="1" />
+                </div>
+                <div style="display: flex; flex-direction: row;">
+                    <p class="before-input" style="display: inline-block; text-align: left; width: 550px;">Het aantal verkregen euro's per volger:</p>
+                    <input class="text-input-thin" type="text" style="margin-left: -150px; width: 50px;" value="1" />
+                    <input class="text-input-thin" type="text" style="margin-left: -475px; width: 50px;" value="00" />
+                </div>
+                <div style="display: flex; flex-direction: row;">
+                    <p class="before-input" style="display: inline-block; text-align: left; width: 550px;">Het aantal verkregen euro's per keer dat jouw verhaal is gekozen:</p>
+                    <input class="text-input-thin" type="text" style="margin-left: -150px; width: 50px;" value="0" />
+                    <input class="text-input-thin" type="text" style="margin-left: -475px; width: 50px;" value="50" />
+                </div>
+            </div>
+        </div>
+    </div>
+</body>

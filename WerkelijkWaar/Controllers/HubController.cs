@@ -56,7 +56,7 @@ namespace WerkelijkWaar.Controllers
         /// Navigeer naar TeacherHub_Configuration.cshtml
         /// </summary>
         /// <returns>View</returns>
-        public IActionResult TeacherHub_Configuration()
+        public IActionResult GameConfig()
         {
             // login check
             if (!String.IsNullOrEmpty(HttpContext.Session.GetString("User")))

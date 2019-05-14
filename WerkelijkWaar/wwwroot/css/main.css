@@ -75,6 +75,28 @@ input[type=text].text-input:focus, input[type=password].text-input:focus, input[
     height: 33px;
 }
 
+input[type=text].text-input-thin, input[type=password].text-input-thin, input[type=number].number-input-thin {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #2db6bc;
+    border: none;
+    color: white;
+    width: 150px;
+    height: 20px;
+}
+
+input[type=text].text-input-thin:focus, input[type=password].text-input-thin:focus, input[type=number].number-input-thin:focus {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #58c5ca;
+    border: none;
+    color: white;
+    width: 150px;
+    height: 20px;
+}
+
 input[type=button].form-button, input[type=submit].form-button {
     display: block;
     margin-left: auto;
