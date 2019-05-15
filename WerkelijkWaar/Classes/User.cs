@@ -8,6 +8,7 @@ namespace WerkelijkWaar.Classes
     public class User
     {
         public int Id { get; set; }
+        public string SocketId { get; set; }
         public int RoleId { get; set; }
         public int Group { get; set; }
         public string Name { get; set; }
@@ -19,5 +20,6 @@ namespace WerkelijkWaar.Classes
 
         // Other
         public double AverageScore { get; set; }
+        public int GameGroup { get; set; }
     }
 }

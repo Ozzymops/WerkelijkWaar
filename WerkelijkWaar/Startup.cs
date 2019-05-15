@@ -9,6 +9,7 @@ using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using WebSocketManager;
 using WerkelijkWaar.Hubs;
 
 namespace WerkelijkWaar
@@ -40,11 +41,11 @@ namespace WerkelijkWaar
             services.AddSession(s => s.IdleTimeout = TimeSpan.FromMinutes(30));
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
 
-            services.AddSignalR();
+            services.AddSingleton<GameManager>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
-        public void Configure(IApplicationBuilder app, IHostingEnvironment env)
+        public void Configure(IApplicationBuilder app, IHostingEnvironment env, IServiceProvider serviceProvider)
         {
             if (env.IsDevelopment())
             {
@@ -62,17 +63,15 @@ namespace WerkelijkWaar
             app.UseCookiePolicy();
             app.UseSession();
 
+            app.UseWebSockets();
+            app.MapWebSocketManager("/game", serviceProvider.GetService<GameHandler>());
+
             app.UseMvc(routes =>
             {
                 routes.MapRoute(
                     name: "default",
                     template: "{controller=Home}/{action=Index}/{id?}");
-            });
-
-            app.UseSignalR(routes =>
-            {
-                routes.MapHub<GameHub>("/gameHub");
-            });
+            });           
         }
     }
 }
