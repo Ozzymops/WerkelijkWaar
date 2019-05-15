@@ -10,7 +10,6 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using WebSocketManager;
-using WerkelijkWaar.Hubs;
 
 namespace WerkelijkWaar
 {
@@ -30,6 +29,9 @@ namespace WerkelijkWaar
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddWebSocketManager();
+
+            services.AddSingleton<GameManager>();
             services.Configure<CookiePolicyOptions>(options =>
             {
                 // This lambda determines whether user consent for non-essential cookies is needed for a given request.
@@ -40,8 +42,6 @@ namespace WerkelijkWaar
             services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
             services.AddSession(s => s.IdleTimeout = TimeSpan.FromMinutes(30));
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
-
-            services.AddSingleton<GameManager>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -58,13 +58,13 @@ namespace WerkelijkWaar
                 app.UseHsts();
             }
 
+            app.UseWebSockets();
+            app.MapWebSocketManager("/game", serviceProvider.GetService<GameHandler>());
+
             app.UseHttpsRedirection();
             app.UseStaticFiles();
             app.UseCookiePolicy();
             app.UseSession();
-
-            app.UseWebSockets();
-            app.MapWebSocketManager("/game", serviceProvider.GetService<GameHandler>());
 
             app.UseMvc(routes =>
             {

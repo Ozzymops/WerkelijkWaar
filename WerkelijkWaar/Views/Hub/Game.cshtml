@@ -2,12 +2,19 @@
     ViewData["Title"] = "Spel";
     Layout = "_LayoutSide";
 }
+@model HubModel
 
 <body>
     <div class="flex-center" style="flex-direction: column; margin-top: 10px;">
         <img class="landing mascot-lowerright" src="~/content/image/Squirrel.png" />
+        <div id="debug">
+            <p id="statusMessage"></p>
+            <p id="roomState"></p>
+            <ul id="ppList"></ul>
+        </div>
         <div id="game-teacher" class="game docent container">
             <div class="game docent side-part">
+                <input id="usernameInput" type="hidden" value="@Model.User.Username" />
                 <input id="btn-openLobby" type="button" class="form-button" value="Lobby openen" />
                 <input id="btn-cancelLobby" type="button" class="form-button" style="margin-top: 10px; display: none;" value="Lobby annuleren" />
                 <input id="btn-startGame" type="button" class="form-button" style="margin-top: 10px; display: none;" value="Starten met huidige lobby" />
@@ -35,7 +42,6 @@
 </body>
 
 @section Scripts {
-    <script>
-        // Game script here
-    </script>
+    <script data-main="scripts/main" src="https://rawgit.com/radu-matei/websocket-manager/master/src/WebSocketManager.Client.TS/dist/WebSocketManager.js"></script>
+    <script src="~/js/game.js" language="javascript" type="text/javascript"></script>
 }

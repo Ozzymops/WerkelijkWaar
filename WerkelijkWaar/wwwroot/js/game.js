@@ -1,7 +1,7 @@
 ﻿$(document).ready(function () {
     //#region WebSocketManager
     //#region connectionMethods
-    var connection = new WebSocketManager.Connection("ws://localhost:50000/game");
+    var connection = new WebSocketManager.Connection("ws://localhost:50001/game");
     connection.enableLogging = false;
 
     connection.connectionMethods.onConnected = () => {
@@ -220,11 +220,12 @@
     });
 
     // - Create room
-    $('#createButton').click(function () {
+    $('#btn-openLobby').click(function () {
         // Refresh connection
         connection.invoke("AddConnection", connection.connectionId);
 
         var user = $userContent.val().trim();
+        console.log("Opened lobby!");
 
         if (user.length != 0) {
             connection.invoke("CreateRoom", connection.connectionId, user);
