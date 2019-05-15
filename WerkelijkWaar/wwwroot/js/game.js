@@ -92,12 +92,15 @@
             $roomContent.val(roomCode);
 
             document.getElementById("statusMessage").innerHTML = "Kamer aangemaakt met code '" + roomCode + "' als '" + $userContent.val().trim() + "'. Jij bent de eigenaar van de kamer.";
-            document.getElementById("preparations").style.display = "none";
-            document.getElementById("chat").style.display = "block";
+            // document.getElementById("preparations").style.display = "none";
+            // document.getElementById("chat").style.display = "block";
             document.getElementById("roomState").style.display = "block";
 
             // Set host buttons
-            document.getElementById("startButton").style.display = "block";
+            // document.getElementById("startButton").style.display = "block";
+
+            // Hide navigation
+            hideNavigation();
         }
     }
 
@@ -107,12 +110,15 @@
             inRoom = true;
 
             document.getElementById("statusMessage").innerHTML = "Kamer met code '" + roomCode + "' ingegaan als '" + $userContent.val().trim() + "'.";
-            document.getElementById("preparations").style.display = "none";
-            document.getElementById("chat").style.display = "block";
+            // document.getElementById("preparations").style.display = "none";
+            // document.getElementById("chat").style.display = "block";
             document.getElementById("roomState").style.display = "block";
 
             // Set host buttons
-            document.getElementById("startButton").style.display = "none";
+            // document.getElementById("startButton").style.display = "none";
+
+            // Hide navigation
+            hideNavigation();
         }
     }
 
@@ -129,11 +135,14 @@
             }
 
             // Reset screen
-            $('#messages').empty();
+            // $('#messages').empty();
             $roomContent.val('');
-            document.getElementById("preparations").style.display = "flex";
-            document.getElementById("chat").style.display = "none";
+            // document.getElementById("preparations").style.display = "flex";
+            // document.getElementById("chat").style.display = "none";
             document.getElementById("roomState").style.display = "none";
+
+            // Show navigation
+            showNavigation();
         }
     }
 
@@ -305,6 +314,16 @@
             var room = $roomContent.val().trim();
             connection.invoke("CheckRoomState", room);
         }
+    }
+
+    function hideNavigation() {
+        document.getElementById("topBar").style.display = "none";
+        document.getElementById("sideBar").style.display = "none";
+    }
+
+    function showNavigation() {
+        document.getElementById("topBar").style.display = "block";
+        document.getElementById("sideBar").style.display = "block";
     }
 
     // - Open websocket connection
