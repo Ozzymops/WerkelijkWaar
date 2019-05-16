@@ -20,6 +20,10 @@ namespace WerkelijkWaar.Classes
 
         // Other
         public double AverageScore { get; set; }
+
+        // Game
         public int GameGroup { get; set; }
+        public bool WroteStory { get; set; }
+        public bool ChoseStory { get; set; }
     }
 }

@@ -126,13 +126,25 @@ $(document).ready(function () {
     // Start game with current lobby
     connection.clientMethods["startGame"] = (roomCode, ownerId) => {
         if ($roomContent.val() == roomCode) {
-            document.getElementById("statusMessage").innerHTML = "Started game.";
 
             // Hide irrelevant elements
             document.getElementById("game-connected").style.display = "none";
 
             // Show relevant elements
-            // - stuff
+            document.getElementById("statusMessage").innerHTML = "Started game.";
+            document.getElementById("game-tutorial-1").style.display = "block";
+        }
+    }
+
+    // Continue game from tutorial
+    connection.clientMethods["continueGame"] = (roomCode) => {
+        if ($roomContent.val() == roomCode) {
+            // Hide irrelevant elements
+            document.getElementById("game-tutorial-1").style.display = "none";
+            document.getElementById("game-tutorial-2").style.display = "none";         
+
+            // Show relevant elements
+            document.getElementById("game-write").style.display = "block";
         }
     }
     //#endregion
@@ -207,6 +219,16 @@ $(document).ready(function () {
         }
     }
 
+    // Continue tutorial
+    $('#btn-nextTutorial').click(function () {
+        nextTutorialPage();
+    });
+
+    // End tutorial
+    $('#btn-endTutorial').click(function () {
+        endTutorial();
+    });
+
     function hideNavigation() {
         document.getElementById("topBar").style.display = "none";
         document.getElementById("sideBar").style.display = "none";
@@ -215,6 +237,17 @@ $(document).ready(function () {
     function showNavigation() {
         document.getElementById("topBar").style.display = "block";
         document.getElementById("sideBar").style.display = "block";
+    }
+
+    function nextTutorialPage() {
+        document.getElementById("game-tutorial-1").style.display = "none";
+        document.getElementById("game-tutorial-2").style.display = "block";
+    }
+
+    function endTutorial() {
+        document.getElementById("game-tutorial-1").style.display = "none";
+        document.getElementById("game-tutorial-2").style.display = "none";
+        document.getElementById("game-write").style.display = "block";
     }
     //#endregion
 

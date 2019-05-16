@@ -199,7 +199,7 @@ namespace WerkelijkWaar
                         if (room.RoomState == Classes.Room.State.Waiting)
                         {
                             room.ResetTimer();
-                            room.Users.Add(new Classes.User { SocketId = socketId, Username = username });
+                            room.Users.Add(new Classes.User { SocketId = socketId, Username = username, WroteStory = false, ChoseStory = false });
                             await InvokeClientMethodToAllAsync("joinRoom", socketId, roomCode);
                             await RetrievePlayerList(room.RoomCode, false);
                         }
@@ -328,10 +328,9 @@ namespace WerkelijkWaar
                 {
                     room.RoomState = Classes.Room.State.InProgress;
                     room.CurrentStrikes = room.MaxProgressStrikes;
-                    room.GamePreparation();
+                    // room.GamePreparation();
 
                     await InvokeClientMethodToAllAsync("startGame", roomCode, socketId);
-                    await RetrievePlayerList(room.RoomCode, true);
                 }
             }
         }
