@@ -69,16 +69,13 @@ namespace WerkelijkWaar
             // Get current list of connections
             List<Classes.Connection> connectionList = _gameManager.Connections;
 
-            // Make everyone see the current connections
-            await RetrieveConnections();
-
             // Ping
             if (PingOrPong)
             {
                 // 'Ping' each connection
                 foreach (Classes.Connection c in connectionList)
                 {
-                    await InvokeClientMethodToAllAsync("takePingAndSendPong", c.SocketId);
+                    await InvokeClientMethodToAllAsync("pingToServer", c.SocketId);
                 }
             }
             // Pong
@@ -158,60 +155,6 @@ namespace WerkelijkWaar
         }
         #endregion
 
-        #region Chat
-        /// <summary>
-        /// Send a message to everyone else in the room.
-        /// </summary>
-        /// <param name="socketId">Sender ID</param>
-        /// <param name="username">Sender username</param>
-        /// <param name="message">Message</param>
-        /// <param name="roomCode">Room</param>
-        /// <returns></returns>
-        public async Task SendMessage(string socketId, string username, string message, string roomCode)
-        {
-            dynamic dynamicMessage = new ExpandoObject();
-
-            dynamicMessage.UserId = socketId;
-            dynamicMessage.Username = username;
-            dynamicMessage.Message = message;
-            dynamicMessage.RoomCode = roomCode;
-
-            foreach (Classes.Room room in _gameManager.Rooms)
-            {
-                if (room.RoomCode == roomCode)
-                {
-                    foreach (Classes.User user in room.Users)
-                    {
-                        if (user.SocketId == socketId)
-                        {
-                            room.Messages.Add(dynamicMessage);
-                            room.ResetTimer();
-                            await InvokeClientMethodToAllAsync("pingMessage", username, message, roomCode);
-                        }
-                    }
-                }
-            }
-        }
-
-        /// <summary>
-        /// Send a message to everyone else in the room without a sender.
-        /// </summary>
-        /// <param name="message">Message</param>
-        /// <param name="roomCode">Room</param>
-        /// <returns></returns>
-        public async Task ServerMessage(string message, string roomCode)
-        {
-            foreach (Classes.Room room in _gameManager.Rooms)
-            {
-                if (roomCode == room.RoomCode)
-                {
-                    room.ResetTimer();
-                }
-            }
-            await InvokeClientMethodToAllAsync("serverMessage", message, roomCode);
-        }
-        #endregion
-
         #region Rooms
         /// <summary>
         /// Open a room instance.
@@ -219,7 +162,7 @@ namespace WerkelijkWaar
         /// <param name="socketId">Owner ID</param>
         /// <param name="username">Owner username</param>
         /// <returns></returns>
-        public async Task CreateRoom(string socketId, string username)
+        public async Task HostRoom(string socketId, string username)
         {
             Classes.Room Room = new Classes.Room();
 
@@ -229,9 +172,8 @@ namespace WerkelijkWaar
 
             _gameManager.Rooms.Add(Room);
 
-            await InvokeClientMethodToAllAsync("returnRoomCode", socketId, Room.RoomCode);
-            await InvokeClientMethodToAllAsync("retrieveRoomCount", _gameManager.Rooms.Count);
-            await RetrieveUserList(Room.RoomCode, false);
+            await InvokeClientMethodToAllAsync("hostRoom", socketId, Room.RoomCode);
+            await RetrievePlayerList(Room.RoomCode, false);
         }
 
         /// <summary>
@@ -259,7 +201,7 @@ namespace WerkelijkWaar
                             room.ResetTimer();
                             room.Users.Add(new Classes.User { SocketId = socketId, Username = username });
                             await InvokeClientMethodToAllAsync("joinRoom", socketId, roomCode);
-                            await RetrieveUserList(room.RoomCode, false);
+                            await RetrievePlayerList(room.RoomCode, false);
                         }
                         else
                         {
@@ -321,7 +263,6 @@ namespace WerkelijkWaar
                         await InvokeClientMethodToAllAsync("setStateMessage", room.RoomOwnerId, message);
 
                         _gameManager.Rooms.Remove(room);
-                        await InvokeClientMethodToAllAsync("retrieveRoomCount", _gameManager.Rooms.Count);
                     }
 
                     // If regular user leaves
@@ -332,7 +273,7 @@ namespace WerkelijkWaar
                             room.Users.Remove(user);
                             room.ResetTimer();
                             await InvokeClientMethodToAllAsync("leaveRoom", socketId, kicked);
-                            await RetrieveUserList(room.RoomCode, false);
+                            await RetrievePlayerList(room.RoomCode, false);
                         }
                     }
                 }
@@ -369,7 +310,6 @@ namespace WerkelijkWaar
             }
 
             Task.WaitAll(taskList.ToArray());
-            await InvokeClientMethodToAllAsync("retrieveRoomCount", _gameManager.Rooms.Count);
         }
         #endregion
 
@@ -391,7 +331,7 @@ namespace WerkelijkWaar
                     room.GamePreparation();
 
                     await InvokeClientMethodToAllAsync("startGame", roomCode, socketId);
-                    await RetrieveUserList(room.RoomCode, true);
+                    await RetrievePlayerList(room.RoomCode, true);
                 }
             }
         }
@@ -403,7 +343,7 @@ namespace WerkelijkWaar
         /// </summary>
         /// <param name="roomCode">Room</param>
         /// <returns></returns>
-        public async Task RetrieveUserList(string roomCode, bool withGroup)
+        public async Task RetrievePlayerList(string roomCode, bool withGroup)
         {
             string ownerId = "";
             List<string> UsernameList = new List<string>();
@@ -432,35 +372,7 @@ namespace WerkelijkWaar
                 }
             }
 
-            await InvokeClientMethodToAllAsync("retrieveUserList", roomCode, ownerId, Newtonsoft.Json.JsonConvert.SerializeObject(UsernameList), withGroup);
-        }
-        #endregion
-
-        #region DEBUG/TESTING
-        public async Task CheckRoomState(string roomCode)
-        {
-            foreach (Classes.Room room in _gameManager.Rooms)
-            {
-                if (roomCode == room.RoomCode)
-                {
-                    string state = room.RoomState.ToString() + ": " + room.CurrentStrikes.ToString() + " minutes left before killing the room.";
-                    await InvokeClientMethodToAllAsync("checkRoomState", room.RoomCode, state);
-                }
-            }
-        }
-
-        public async Task RetrieveConnections()
-        {
-            List<string> connectionList = new List<string>();
-
-            foreach (Classes.Connection c in _gameManager.Connections)
-            {
-                string tempString = "";
-                tempString = c.SocketId + ":|!" + c.Timeouts;
-                connectionList.Add(tempString);
-            }
-
-            await InvokeClientMethodToAllAsync("retrieveConnections", Newtonsoft.Json.JsonConvert.SerializeObject(connectionList));
+            await InvokeClientMethodToAllAsync("retrievePlayerList", roomCode, ownerId, Newtonsoft.Json.JsonConvert.SerializeObject(UsernameList), withGroup);
         }
         #endregion
     }

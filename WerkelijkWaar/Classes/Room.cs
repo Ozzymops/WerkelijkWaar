@@ -23,8 +23,6 @@ namespace WerkelijkWaar.Classes
         public List<Classes.User> Users { get; set; } = new List<Classes.User>();
         public List<List<Classes.User>> Groups { get; set; } = new List<List<Classes.User>>();
         public List<Classes.Story> Stories { get; set; } = new List<Classes.Story>();
-        public List<dynamic> Messages { get; set; } = new List<dynamic>();
-
 
         // Configuration
 

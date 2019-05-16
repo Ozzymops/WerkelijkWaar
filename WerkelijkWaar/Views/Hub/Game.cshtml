@@ -7,36 +7,58 @@
 <body>
     <div class="flex-center" style="flex-direction: column; margin-top: 10px;">
         <img class="landing mascot-lowerright" src="~/content/image/Squirrel.png" />
-        <div id="debug">
+        <div id="game">
             <p id="statusMessage"></p>
-            <p id="roomState"></p>
-            <ul id="ppList"></ul>
-        </div>
-        <div id="game-teacher" class="game docent container">
-            <div class="game docent side-part">
-                <input id="usernameInput" type="hidden" value="@Model.User.Username" />
-                <input id="btn-openLobby" type="button" class="form-button" value="Lobby openen" />
-                <input id="btn-cancelLobby" type="button" class="form-button" style="margin-top: 10px; display: none;" value="Lobby annuleren" />
-                <input id="btn-startGame" type="button" class="form-button" style="margin-top: 10px; display: none;" value="Starten met huidige lobby" />
-            </div>
-            <div id="gameData" class="game docent center-part" style="display: none;">
-                <p id="gameCode">Jouw spelcode is: abcdefg</p>
-                <ul id="playerList">
-                    <li>
-                        a
-                    </li>
-                    <li>
-                        b
-                    </li>
-                    <li>
-                        c
-                    </li>
-                </ul>
-                <p id="amountConnected">3 spelers zijn verbonden.</p>
-            </div>
-        </div>
-        <div id="game-student" style="display: none;">
+            <input id="usernameInput" type="hidden" value="@Model.User.Username" />
+            <input id="roomInput" type="hidden" value="" />
+            <!-- Student -->
+            @if (Model.User.RoleId == 0)
+            {
+                <div id="game-prep">
+                    <h2 class="subtitle">Speel mee! Vul de spelcode op het bord in:</h2>
+                    <input id="codeInput" type="text" class="text-input" />
+                    <input id="btn-connectLobby" type="button" class="form-button" style="margin-top: 10px;" value="Verbinden met lobby" />
+                </div>
+                <div id="game-connected" style="display: none;">
+                    <div style="display: flex; flex-direction: row;">
+                        <div>
+                            <p id="statusString" class="before-input">...</p>
+                            <input id="btn-leaveLobby" type="button" class="form-button" value="Lobby verlaten" />
+                        </div>
+                        <div>
+                            <ul id="playerList" style="border: 1px solid black;"></ul>
+                            <p id="playerCount" class="before-input">x spelers zijn verbonden.</p>
+                        </div>
+                    </div>
+                </div>
+            }
+            <!-- Docent -->
+            @if (Model.User.RoleId == 1)
+            {
+                <div id="game-prep">
+                    <h2 class="subtitle">Speel het spel! Open een lobby en toon de code op het bord:</h2>
+                    <input id="btn-openLobby" type="button" class="form-button" value="Lobby openen" />
+                </div>
+                <div id="game-connected" style="display: none;">
+                    <div style="display: flex; flex-direction: row;">
+                        <div>
+                            <p id="statusString" class="before-input">...</p>
+                            <input id="btn-leaveLobby" type="button" class="form-button" style="margin-top: 10px;" value="Lobby sluiten" />
+                            <input id="btn-startGame" type="button" class="form-button" style="margin-top: 10px;" value="Starten met huidige lobby" />
+                        </div>
+                        <div>
+                            <h2 id="gameCode" class="subtitle">Jouw spelcode is:</h2>
+                            <ul id="playerList"></ul>
+                            <p id="playerCount" class="before-input">x spelers zijn verbonden.</p>
+                        </div>
+                    </div>
+                </div>
+            }
+            <!-- Beheerder -->
+            @if (Model.User.RoleId == 2)
+            {
 
+            }
         </div>
     </div>
 </body>
