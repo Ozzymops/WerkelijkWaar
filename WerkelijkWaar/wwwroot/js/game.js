@@ -1,16 +1,19 @@
 ﻿$(document).ready(function () {
     //#region WebSocketManager
     //#region connectionMethods
+    // Edit port based on solution settings!
     var connection = new WebSocketManager.Connection("ws://localhost:50001/game");
     connection.enableLogging = false;
 
+    // ~ When client connects with WebSocket
     connection.connectionMethods.onConnected = () => {
         connection.invoke("AddConnection", connection.connectionId);
         getRoomCount();
     }
 
+    // ~ When client disconnects with WebSocket
     connection.connectionMethods.onDisconnected = () => {
-
+        // blank
     }
     //#endregion
 
@@ -23,8 +26,8 @@
     }
     //#endregion
 
-    //#region Visual
-    // ~ Set status message (#statusMessage)
+    //#region Debugging
+    // ~ Set status message on specific client (#statusMessage)
     connection.clientMethods["setStateMessage"] = (socketId, message) => {
         if (socketId == connection.connectionId) {
             document.getElementById("statusMessage").innerHTML = message;
@@ -35,9 +38,7 @@
     connection.clientMethods["retrieveRoomCount"] = (roomCount) => {
         document.getElementById("rooms").innerHTML = "Kamers online: " + roomCount;
     }
-    //#endregion
 
-    //#region DEBUG/TESTING
     // ~ Check and print current room state
     connection.clientMethods["checkRoomState"] = (roomCode, state) => {
         if ($roomContent.val() == roomCode) {
@@ -65,26 +66,8 @@
     }
     //#endregion
 
-    //#region Chat
-    // Print message inside of chat
-    connection.clientMethods["pingMessage"] = (username, message, roomCode) => {
-        if ($roomContent.val() == roomCode) {
-            var messageText = username + ": " + message;
-            $('#messages').append('<li>' + messageText + '</li>');
-        }
-    }
-
-    // Print server message inside of chat
-    connection.clientMethods["serverMessage"] = (message, roomCode) => {
-        if ($roomContent.val() == roomCode) {
-            var messageText = message;
-            $('#messages').append('<li>' + messageText + '</li>');
-        }
-    }
-    //#endregion
-
     //#region Rooms
-    // ~ Open up a room.
+    // ~ Open up a room and become the owner of the room.
     connection.clientMethods["returnRoomCode"] = (socketId, roomCode) => {
         if (socketId == connection.connectionId) {
             inRoom = true;
@@ -92,8 +75,6 @@
             $roomContent.val(roomCode);
 
             document.getElementById("statusMessage").innerHTML = "Kamer aangemaakt met code '" + roomCode + "' als '" + $userContent.val().trim() + "'. Jij bent de eigenaar van de kamer.";
-            // document.getElementById("preparations").style.display = "none";
-            // document.getElementById("chat").style.display = "block";
             document.getElementById("roomState").style.display = "block";
 
             // Set host buttons
@@ -104,14 +85,12 @@
         }
     }
 
-    // ~ Join a open room.
+    // ~ Join a open room and become a player.
     connection.clientMethods["joinRoom"] = (socketId, roomCode) => {
         if (socketId == connection.connectionId) {
             inRoom = true;
 
             document.getElementById("statusMessage").innerHTML = "Kamer met code '" + roomCode + "' ingegaan als '" + $userContent.val().trim() + "'.";
-            // document.getElementById("preparations").style.display = "none";
-            // document.getElementById("chat").style.display = "block";
             document.getElementById("roomState").style.display = "block";
 
             // Set host buttons
@@ -122,7 +101,7 @@
         }
     }
 
-    // ~ Leave a room.
+    // ~ Leave a room and return to main application.
     connection.clientMethods["leaveRoom"] = (socketId, kicked) => {
         if (socketId == connection.connectionId) {
             inRoom = false;
@@ -135,10 +114,7 @@
             }
 
             // Reset screen
-            // $('#messages').empty();
             $roomContent.val('');
-            // document.getElementById("preparations").style.display = "flex";
-            // document.getElementById("chat").style.display = "none";
             document.getElementById("roomState").style.display = "none";
 
             // Show navigation
@@ -185,8 +161,6 @@
     connection.clientMethods["startGame"] = (roomCode, ownerId) => {
         if ($roomContent.val() == roomCode) {
             document.getElementById("statusMessage").innerHTML = "Started game with room '" + $roomContent.val() + "'.";
-            document.getElementById("preparations").style.display = "none";
-            // document.getElementById("chat").style.display = "none";
             document.getElementById("game").style.display = "block";
 
             // If owner
@@ -204,29 +178,9 @@
 
     // ------------------------------------------------------------------------- //
     // Functions
-    var $messageContent = $('#messageInput');
     var $userContent = $('#usernameInput');
     var $roomContent = $('#roomInput');
     var inRoom = false;
-
-    // - Send message on 'enter'
-    $messageContent.keyup(function (e) {
-        if (e.keyCode == 13) {
-            var message = $messageContent.val().trim();
-            var user = $userContent.val().trim();
-            var room = $roomContent.val().trim();
-
-            if (user.length != 0) {
-                if (room.length != 0) {
-                    if (message.length != 0) {
-                        connection.invoke("SendMessage", connection.connectionId, user, message, room);
-                    }
-                }
-            }
-
-            $messageContent.val('');
-        }
-    });
 
     // - Create room
     $('#btn-openLobby').click(function () {
@@ -248,12 +202,10 @@
 
         var user = $userContent.val().trim();
         var room = $roomContent.val().trim();
-        var message = "[User " + $userContent.val().trim() + " joined the room.]";
 
         if (user.length != 0) {
             if (room.length != 0) {
                 connection.invoke("JoinRoom", connection.connectionId, user, room);
-                connection.invoke("ServerMessage", message, room);
             }
         }
     });
@@ -261,14 +213,11 @@
     // - Leave room
     $('#leaveButton').click(function () {
         var room = $roomContent.val().trim();
-        var message = "[User " + $userContent.val().trim() + " left the room.]";
 
         if (room.length != 0) {
-            connection.invoke("ServerMessage", message, room);
             connection.invoke("LeaveRoom", connection.connectionId, room, false);
 
             $userContent.val('');
-            $messageContent.val('');
             $roomContent.val('');
         }
     });
@@ -279,8 +228,6 @@
 
         if (room.length != 0) {
             connection.invoke("StartGame", connection.connectionId, room);
-
-            $messageContent.val('');
         }
     });
 
@@ -288,10 +235,8 @@
     $.kickUser = function (user) {
         var room = $roomContent.val().trim();
         var tempArray = user.split(":|!");
-        var message = "[User " + tempArray[0] + " was kicked.]";
 
         if (room.length != 0) {
-            connection.invoke("ServerMessage", message, room);
             connection.invoke("LeaveRoom", tempArray[1], room, true);
         }
     }
