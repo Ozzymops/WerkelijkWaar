@@ -61,6 +61,8 @@
             <!-- Docent -->
             @if (Model.User.RoleId == 1)
             {
+                <ul id="playerList"></ul>
+                <p id="playerCount" class="before-input">x spelers zijn verbonden.</p>
                 <div id="game-prep">
                     <h2 class="subtitle">Speel het spel! Open een lobby en toon de code op het bord:</h2>
                     <input id="btn-openLobby" type="button" class="form-button" value="Lobby openen" />
@@ -74,8 +76,6 @@
                         </div>
                         <div>
                             <h2 id="gameCode" class="subtitle">Jouw spelcode is:</h2>
-                            <ul id="playerList"></ul>
-                            <p id="playerCount" class="before-input">x spelers zijn verbonden.</p>
                         </div>
                     </div>
                 </div>

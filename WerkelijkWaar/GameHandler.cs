@@ -332,9 +332,12 @@ namespace WerkelijkWaar
                 {
                     room.RoomState = Classes.Room.State.Writing;
                     room.CurrentStrikes = room.MaxProgressStrikes;
-                    // room.GamePreparation();
 
-                    await InvokeClientMethodToAllAsync("startGame", roomCode);
+                    if (room.GamePreparation())
+                    {
+                        await InvokeClientMethodToAllAsync("startGame", roomCode);
+                        await RetrievePlayerList(room.RoomCode, true);
+                    }
                 }
             }
         }
@@ -416,6 +419,7 @@ namespace WerkelijkWaar
         public async Task RetrievePlayerList(string roomCode, bool withGroup)
         {
             string ownerId = "";
+            Classes.Room.State roomState = Classes.Room.State.Waiting;
             List<string> UsernameList = new List<string>();
 
             foreach (Classes.Room room in _gameManager.Rooms)
@@ -428,8 +432,10 @@ namespace WerkelijkWaar
                     {
                         string tempString = "";
 
-                        if (withGroup)
+                        // if (withGroup)
+                        if (room.RoomState == Classes.Room.State.Writing || room.RoomState == Classes.Room.State.Reading)
                         {
+                            roomState = room.RoomState;
                             tempString = user.Username + ":|!" + user.SocketId + ":|!" + user.GameGroup + ":|!" + room.Stories[user.GameGroup - 1].Title;
                         }
                         else
@@ -442,7 +448,14 @@ namespace WerkelijkWaar
                 }
             }
 
-            await InvokeClientMethodToAllAsync("retrievePlayerList", roomCode, ownerId, Newtonsoft.Json.JsonConvert.SerializeObject(UsernameList), withGroup);
+            if (roomState == Classes.Room.State.Writing || roomState == Classes.Room.State.Reading)
+            {
+                await InvokeClientMethodToAllAsync("retrievePlayerList", roomCode, ownerId, Newtonsoft.Json.JsonConvert.SerializeObject(UsernameList), true);
+            }
+            else
+            {
+                await InvokeClientMethodToAllAsync("retrievePlayerList", roomCode, ownerId, Newtonsoft.Json.JsonConvert.SerializeObject(UsernameList), false);
+            }
         }
         #endregion
     }

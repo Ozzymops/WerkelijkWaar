@@ -128,84 +128,84 @@ namespace WerkelijkWaar.Classes
 
         public bool GamePreparation()
         {
+            DatabaseQueries dq = new DatabaseQueries();
             int playerCount = Users.Count();
 
-            if (playerCount >= MinPlayers)
+            // Enough players?
+            if (playerCount >= (MinPlayers*2))
             {
+                // Shuffle user list
                 Random rng = new Random();
-
-                // Shuffle list
                 List<User> shuffledUsers = Users;
 
-                int a = playerCount;
-                while (a > 1)
+                int playersToProcess = playerCount;
+                while (playersToProcess > 1)
                 {
-                    a--;
-                    int b = rng.Next(a + 1);
-                    User tempUser = shuffledUsers[b];
-                    shuffledUsers[b] = shuffledUsers[a];
-                    shuffledUsers[a] = tempUser;
+                    playersToProcess--;
+                    int userIndex = rng.Next(playersToProcess + 1);
+                    User selectedUser = shuffledUsers[userIndex];
+                    shuffledUsers[userIndex] = shuffledUsers[playersToProcess];
+                    shuffledUsers[playersToProcess] = selectedUser;
                 }
 
-                // Assign groups
-                int group = 1;
-                int maxInGroup = MinPlayers;
-                int extra = 0;
+                // Assign players to groups
+                int currentGroup = 1;
+                int maxPlayersInGroup = MinPlayers;
+                int unevenPlayers = 0;
 
+                // Groups of six
                 if (shuffledUsers.Count % MinPlayers == 0)
                 {
-                    extra = 0;
+                    unevenPlayers = 0;
                 }
-                else if (shuffledUsers.Count % MinPlayers == 1)
-                {
-                    extra = 1;
-                }
+                // Groups of x
                 else if (shuffledUsers.Count % MinPlayers >= 1)
                 {
-                    extra = (shuffledUsers.Count % MinPlayers);
+                    unevenPlayers = (shuffledUsers.Count % MinPlayers);
                 }
 
-                foreach (User u in shuffledUsers)
+                foreach (User user in shuffledUsers)
                 {
-                    if (extra == 1)
+                    // One extra player per group
+                    if (unevenPlayers == 1)
                     {
-                        maxInGroup += extra;
-                        extra--;
+                        maxPlayersInGroup += unevenPlayers;
+                        unevenPlayers--;
                     }
-                    else if (extra >= 2)
+                    // x extra players per group
+                    else if (unevenPlayers >= 2)
                     {
-                        maxInGroup += (extra / MinPlayers);
+                        maxPlayersInGroup += 1;
+                        unevenPlayers -= 1;
                     }
 
-                    u.GameGroup = group;
-                    maxInGroup--;
+                    user.GameGroup = currentGroup;
+                    maxPlayersInGroup--;
 
-                    if (maxInGroup <= 0)
+                    if (maxPlayersInGroup <= 0)
                     {
-                        group++;
-                        maxInGroup = MinPlayers;
+                        currentGroup++;
+                        maxPlayersInGroup = MinPlayers;
                     }
                 }
 
-                // Retrieve list of story ID's
-                DatabaseQueries dq = new DatabaseQueries();
-                List<Story> storyList = dq.RetrieveAllStories();
+                // Assign stories to groups
+                List<Story> shuffledStories = dq.RetrieveAllStories();
 
                 // Shuffle stories
-                int c = storyList.Count;
-                while (c > 1)
+                int storiesToProcess = shuffledStories.Count;
+                while (storiesToProcess > 1)
                 {
-                    c--;
-                    int d = rng.Next(c + 1);
-                    Story tempStory = storyList[d];
-                    storyList[d] = storyList[c];
-                    storyList[c] = tempStory;
+                    storiesToProcess--;
+                    int storyIndex = rng.Next(storiesToProcess + 1);
+                    Story selectedStory = shuffledStories[storyIndex];
+                    shuffledStories[storyIndex] = shuffledStories[storiesToProcess];
+                    shuffledStories[storiesToProcess] = selectedStory;
                 }
 
-                // Pick random stories from list for groups
-                for (int x = 1; x < group; x++)
+                for (int group = 1; group < currentGroup; group++)
                 {
-                    Stories.Add(storyList[x - 1]);
+                    Stories.Add(shuffledStories[group - 1]);
                 }
 
                 return true;
