@@ -9,9 +9,10 @@
         <img class="landing mascot-lowerright" src="~/content/image/Squirrel.png" />
         <div id="game">
             <p id="statusMessage"></p>
-            <div id="clockBar" style="display: none; width: 100vw; height: 50px; background-color: #f7c747;"><p id="clock"></p></div>
+            <div id="clockBar" style="display: none; width: 100vw; height: 50px; background-color: #f7c747;"><p class="before-input" style="text-align: center;" id="clock"></p></div>
             <input id="usernameInput" type="hidden" value="@Model.User.Username" />
             <input id="roomInput" type="hidden" value="" />
+            <input id="roleId" type="hidden" value="@Model.User.RoleId" />
             <!-- Student -->
             @if (Model.User.RoleId == 0)
             {
@@ -36,14 +37,25 @@
                     <p>Je wilt graag een nieuwe telefoon, maar je hebt nog niet genoeg geld gespaard om er een te kunnen kopen.</p>
                     <p>Je hebt gehoord dat mensen bakken met geld verdienen door het verspreiden van nepnieuws.<br />Hoe moeilijk kan het zijn om zelf nep berichten te verspreiden?</p>
                     <p>Schrijf zelf nep berichten en verdien genoeg om een nieuwe telefoon te kopen.</p>
-                    <input id="btn-nextTutorial" type="button" value="Volgende" />
+                    <input class="btn-nextTutorial" type="button" value="Volgende" />
                 </div>
                 <div id="game-tutorial-2" style="display: none; background-color: #6ac2c4;">
-                    <p>Pagina 2</p>
-                    <input id="btn-endTutorial" type="button" value="Volgende" />
+                    <p>Om geld te verdienen heb je volgers nodig.</p>
+                    <p>Zorg er dus voor dat lezers het door jou geschreven bericht delen.</p>
+                    <p>Daarnaast moet je er wel voor zorgen dat je zelf de juiste berichten deelt.</p>
+                    <p>Deel je een vals bericht, dan kost je dat volgers</p>
+                    <p>[foto's]</p>
+                    <input class="btn-nextTutorial" type="button" value="Volgende" />
+                </div>
+                <div id="game-tutorial-3" style="display: none; background-color: #6ac2c4;">
+                    <p>Maak van het originele artikel een eigen nep bericht.<br />Bedenk zelf ook een titel die nieuwsgierigheid wekt.</p>
+                    <input class="btn-nextTutorial" type="button" value="Aan de slag" />
+                </div>
+                <div id="game-waiting" style="display: none; background-color: #6ac2c4;">
+                    <p>Wachten op spelers...</p>
                 </div>
                 <div id="game-write" style="display: none; background-color: #6ac2c4;">
-                    <p>Schrijven</p>
+                    <p>schrijvuh</p>
                 </div>
             }
             <!-- Docent -->
@@ -71,14 +83,25 @@
                     <p>Je wilt graag een nieuwe telefoon, maar je hebt nog niet genoeg geld gespaard om er een te kunnen kopen.</p>
                     <p>Je hebt gehoord dat mensen bakken met geld verdienen door het verspreiden van nepnieuws.<br />Hoe moeilijk kan het zijn om zelf nep berichten te verspreiden?</p>
                     <p>Schrijf zelf nep berichten en verdien genoeg om een nieuwe telefoon te kopen.</p>
-                    <input id="btn-nextTutorial" type="button" value="Volgende" />
+                    <input class="btn-nextTutorial" type="button" value="Volgende" />
                 </div>
                 <div id="game-tutorial-2" style="display: none; background-color: #6ac2c4;">
-                    <p>Pagina 2</p>
-                    <input id="btn-endTutorial" type="button" value="Volgende" />
+                    <p>Om geld te verdienen heb je volgers nodig.</p>
+                    <p>Zorg er dus voor dat lezers het door jou geschreven bericht delen.</p>
+                    <p>Daarnaast moet je er wel voor zorgen dat je zelf de juiste berichten deelt.</p>
+                    <p>Deel je een vals bericht, dan kost je dat volgers</p>
+                    <p>[foto's]</p>
+                    <input class="btn-nextTutorial" type="button" value="Volgende" />
+                </div>
+                <div id="game-tutorial-3" style="display: none; background-color: #6ac2c4;">
+                    <p>Kijk nu naar je eigen scherm en volg de instructies.</p>
+                    <input class="btn-nextTutorial" type="button" value="Volgende" />
+                </div>
+                <div id="game-waiting" style="display: none; background-color: #6ac2c4;">
+                    <p>Wachten op spelers...</p>
                 </div>
                 <div id="game-write" style="display: none; background-color: #6ac2c4;">
-                    <p>Kijk nu naar je eigen scherm en volg de instructies.</p>
+                    <p>Wachten op verhalen...</p>
                 </div>
             }
             <!-- Beheerder -->

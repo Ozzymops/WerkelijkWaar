@@ -23,6 +23,7 @@ namespace WerkelijkWaar.Classes
 
         // Game
         public int GameGroup { get; set; }
+        public bool ReadyToPlay { get; set; }
         public bool WroteStory { get; set; }
         public bool ChoseStory { get; set; }
     }

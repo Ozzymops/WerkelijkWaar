@@ -324,22 +324,52 @@ namespace WerkelijkWaar
         {
             foreach (Classes.Room room in _gameManager.Rooms)
             {
-                if (room.RoomCode == roomCode)
+                if (room.RoomCode == roomCode && room.RoomOwnerId == socketId)
                 {
                     room.RoomState = Classes.Room.State.InProgress;
                     room.CurrentStrikes = room.MaxProgressStrikes;
                     // room.GamePreparation();
 
-                    await InvokeClientMethodToAllAsync("startGame", roomCode, socketId);
+                    await InvokeClientMethodToAllAsync("startGame", roomCode);
                 }
             }
         }
 
-        public async Task StartGameTimer(string roomCode, int time)
+        public async Task ReadyUpPlayer(string socketId, string roomCode)
         {
             foreach (Classes.Room room in _gameManager.Rooms)
             {
                 if (room.RoomCode == roomCode)
+                {
+                    room.NumberOfReadyPlayers = 0;
+
+                    foreach (Classes.User user in room.Users)
+                    {
+                        if (user.SocketId == socketId)
+                        {
+                            user.ReadyToPlay = true;
+                        }
+
+                        if (user.ReadyToPlay)
+                        {
+                            room.NumberOfReadyPlayers++;
+                        }
+                    }
+
+                    if (room.NumberOfReadyPlayers == room.Users.Count)
+                    {
+                        // continue to write phase
+                        await InvokeClientMethodToAllAsync("goToWritePhase", roomCode);
+                    }
+                }
+            }
+        }
+
+        public async Task StartGameTimer(string roomCode, int time, string ownerId)
+        {
+            foreach (Classes.Room room in _gameManager.Rooms)
+            {
+                if (room.RoomCode == roomCode && room.RoomOwnerId == ownerId)
                 {
                     room.RemainingTime = time;
                     room.gameTimer.Start();

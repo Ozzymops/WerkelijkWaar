@@ -55,6 +55,7 @@ $(document).ready(function () {
     connection.clientMethods["joinRoom"] = (socketId, roomCode) => {
         if (socketId == connection.connectionId) {
             inRoom = true;
+            $roomContent.val(roomCode);
 
             document.getElementById("statusMessage").innerHTML = "Kamer met code '" + roomCode + "' ingegaan als '" + $userContent.val().trim() + "'.";
 
@@ -124,7 +125,7 @@ $(document).ready(function () {
 
     //#region Game
     // Start game with current lobby
-    connection.clientMethods["startGame"] = (roomCode, ownerId) => {
+    connection.clientMethods["startGame"] = (roomCode) => {
         if ($roomContent.val() == roomCode) {
 
             // Hide irrelevant elements
@@ -145,6 +146,15 @@ $(document).ready(function () {
 
             // Show relevant elements
             document.getElementById("game-write").style.display = "block";
+
+            // Countdown timer for writing
+            connection.invoke("StartGameTimer", roomCode, 60, connection.connectionId);
+        }
+    }
+
+    connection.clientMethods["goToWritePhase"] = (roomCode) => {
+        if ($roomContent.val() == roomCode) {
+            startWriting();
         }
     }
 
@@ -167,6 +177,7 @@ $(document).ready(function () {
     // Variables
     var $userContent = $('#usernameInput');
     var $roomContent = $('#roomInput');
+    var tutorialState = 0;
     var inRoom = false;
     var timer = 0;
 
@@ -235,17 +246,14 @@ $(document).ready(function () {
     }
 
     // Continue tutorial
-    $('#btn-nextTutorial').click(function () {
-        nextTutorialPage();
-    });
-
-    // End tutorial
-    $('#btn-endTutorial').click(function () {
-        endTutorial();
+    $('.btn-nextTutorial').click(function () {
+        tutorialPage();
     });
 
     // Start timer
     function startTimer(duration) {
+        document.getElementById("clockBar").style.display = "block";
+
         var maxSeconds = duration;
         timer = duration, seconds;
 
@@ -264,6 +272,8 @@ $(document).ready(function () {
 
     // Stop timer
     function stopTimer() {
+        document.getElementById("clockBar").style.display = "none";
+
         timer = 0;
     }
 
@@ -277,14 +287,43 @@ $(document).ready(function () {
         document.getElementById("sideBar").style.display = "block";
     }
 
-    function nextTutorialPage() {
-        document.getElementById("game-tutorial-1").style.display = "none";
-        document.getElementById("game-tutorial-2").style.display = "block";
+    function tutorialPage() {
+        console.log("current tutorial state: " + tutorialState);
+
+        tutorialState += 1;
+
+        // pg 2
+        if (tutorialState == 1) {
+            document.getElementById("game-tutorial-1").style.display = "none";
+            document.getElementById("game-tutorial-2").style.display = "block";
+            document.getElementById("game-tutorial-3").style.display = "none";
+            document.getElementById("game-waiting").style.display = "none";
+        }
+
+        // pg 3
+        if (tutorialState == 2) {
+            document.getElementById("game-tutorial-1").style.display = "none";
+            document.getElementById("game-tutorial-2").style.display = "none";
+            document.getElementById("game-tutorial-3").style.display = "block";
+            document.getElementById("game-waiting").style.display = "none";
+        }
+
+        // end
+        if (tutorialState == 3) {
+            document.getElementById("game-tutorial-1").style.display = "none";
+            document.getElementById("game-tutorial-2").style.display = "none";
+            document.getElementById("game-tutorial-3").style.display = "none";
+            document.getElementById("game-waiting").style.display = "block";
+
+            connection.invoke("ReadyUpPlayer", connection.connectionId, $roomContent.val());
+        }
     }
 
-    function endTutorial() {
+    function startWriting() {
         document.getElementById("game-tutorial-1").style.display = "none";
         document.getElementById("game-tutorial-2").style.display = "none";
+        document.getElementById("game-tutorial-3").style.display = "none";
+        document.getElementById("game-waiting").style.display = "none";
         document.getElementById("game-write").style.display = "block";
     }
     //#endregion

@@ -24,6 +24,7 @@ namespace WerkelijkWaar.Classes
         public List<List<Classes.User>> Groups { get; set; } = new List<List<Classes.User>>();
         public List<Classes.Story> Stories { get; set; } = new List<Classes.Story>();
         public int RemainingTime { get; set; }
+        public int NumberOfReadyPlayers { get; set; }
 
         // Configuration
 
