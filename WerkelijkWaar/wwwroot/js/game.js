@@ -151,8 +151,7 @@ $(document).ready(function () {
     // Start countdown timer
     connection.clientMethods["startCountdownTimer"] = (roomCode, time) => {
         if ($roomContent.val() == roomCode) {
-            maxTime = time;
-            remainingTime = time;
+            startTimer(time);
         }
     }
     //#endregion
@@ -161,8 +160,6 @@ $(document).ready(function () {
     // Variables
     var $userContent = $('#usernameInput');
     var $roomContent = $('#roomInput');
-    var maxTime = 0;
-    var remainingTime = 0;
     var inRoom = false;
 
     // Host a room
@@ -259,8 +256,6 @@ $(document).ready(function () {
     function hideNavigation() {
         document.getElementById("topBar").style.display = "none";
         document.getElementById("sideBar").style.display = "none";
-
-        startTimer(60);
     }
 
     function showNavigation() {
