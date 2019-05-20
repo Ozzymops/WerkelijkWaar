@@ -9,7 +9,6 @@
         <img class="landing mascot-lowerright" src="~/content/image/Squirrel.png" />
         <div id="game">
             <p id="statusMessage"></p>
-            <div id="clockBar" style="display: none; width: 100vw; height: 50px; background-color: #f7c747;"><p class="before-input" style="text-align: center;" id="clock"></p></div>
             <input id="usernameInput" type="hidden" value="@Model.User.Username" />
             <input id="roomInput" type="hidden" value="" />
             <input id="roleId" type="hidden" value="@Model.User.RoleId" />
@@ -56,6 +55,7 @@
                 </div>
                 <div id="game-write" style="display: none; background-color: #6ac2c4;">
                     <p>schrijvuh</p>
+                    <div id="clockBar" style="display: none; width: 100vw; height: 50px; background-color: #f7c747;"><p class="before-input" style="text-align: center;" id="clock"></p></div>
                 </div>
             }
             <!-- Docent -->
@@ -102,6 +102,7 @@
                 </div>
                 <div id="game-write" style="display: none; background-color: #6ac2c4;">
                     <p>Wachten op verhalen...</p>
+                    <div id="clockBar" style="display: none; width: 100vw; height: 50px; background-color: #f7c747;"><p class="before-input" style="text-align: center;" id="clock"></p></div>
                 </div>
             }
             <!-- Beheerder -->

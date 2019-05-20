@@ -19,7 +19,7 @@ namespace WerkelijkWaar.Classes
         public int MinPlayers = 3;
         // Dynamic
         public int CurrentStrikes;
-        public enum State { Waiting, InProgress, Finished, Dead };
+        public enum State { Waiting, Writing, Reading, Finished, Dead };
         public List<Classes.User> Users { get; set; } = new List<Classes.User>();
         public List<List<Classes.User>> Groups { get; set; } = new List<List<Classes.User>>();
         public List<Classes.Story> Stories { get; set; } = new List<Classes.Story>();
@@ -116,7 +116,11 @@ namespace WerkelijkWaar.Classes
             {
                 CurrentStrikes = MaxIdleStrikes;
             }
-            else if (RoomState == State.InProgress)
+            else if (RoomState == State.Writing)
+            {
+                CurrentStrikes = MaxProgressStrikes;
+            }
+            else if (RoomState == State.Reading)
             {
                 CurrentStrikes = MaxProgressStrikes;
             }

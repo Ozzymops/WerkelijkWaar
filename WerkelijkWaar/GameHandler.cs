@@ -209,7 +209,11 @@ namespace WerkelijkWaar
 
                             switch (room.RoomState)
                             {
-                                case Classes.Room.State.InProgress:
+                                case Classes.Room.State.Writing:
+                                    message = "Kan niet meedoen met het spel - het gekozen spel is al begonnen.";
+                                    break;
+
+                                case Classes.Room.State.Reading:
                                     message = "Kan niet meedoen met het spel - het gekozen spel is al begonnen.";
                                     break;
 
@@ -326,7 +330,7 @@ namespace WerkelijkWaar
             {
                 if (room.RoomCode == roomCode && room.RoomOwnerId == socketId)
                 {
-                    room.RoomState = Classes.Room.State.InProgress;
+                    room.RoomState = Classes.Room.State.Writing;
                     room.CurrentStrikes = room.MaxProgressStrikes;
                     // room.GamePreparation();
 
@@ -360,6 +364,7 @@ namespace WerkelijkWaar
                     {
                         // continue to write phase
                         await InvokeClientMethodToAllAsync("goToWritePhase", roomCode);
+                        await StartGameTimer(roomCode, 10, room.RoomOwnerId);
                     }
                 }
             }
@@ -387,6 +392,16 @@ namespace WerkelijkWaar
                     room.RemainingTime = 0;
                     room.gameTimer.Stop();
                     await InvokeClientMethodToAllAsync("stopCountdownTimer", roomCode);
+
+                    if (room.RoomState == Classes.Room.State.Writing)
+                    {
+                        await InvokeClientMethodToAllAsync("goToReadPhase", roomCode);
+                        room.RoomState = Classes.Room.State.Reading;
+                    }
+                    else if (room.RoomState == Classes.Room.State.Reading)
+                    {
+                        await InvokeClientMethodToAllAsync("goToReadPhase", roomCode);
+                    }
                 }
             }
         }

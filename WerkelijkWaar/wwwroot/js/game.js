@@ -134,6 +134,12 @@ $(document).ready(function () {
             // Show relevant elements
             document.getElementById("statusMessage").innerHTML = "Started game.";
             document.getElementById("game-tutorial-1").style.display = "block";
+
+            // Debug
+            document.getElementById("game-tutorial-2").style.display = "none";
+            document.getElementById("game-tutorial-3").style.display = "none";
+            document.getElementById("game-write").style.display = "none";
+            document.getElementById("game-waiting").style.display = "none";
         }
     }
 
@@ -155,6 +161,12 @@ $(document).ready(function () {
     connection.clientMethods["goToWritePhase"] = (roomCode) => {
         if ($roomContent.val() == roomCode) {
             startWriting();
+        }
+    }
+
+    connection.clientMethods["goToReadPhase"] = (roomCode) => {
+        if ($roomContent.val() == roomCode) {
+            startReading();
         }
     }
 
@@ -255,7 +267,9 @@ $(document).ready(function () {
         document.getElementById("clockBar").style.display = "block";
 
         var maxSeconds = duration;
-        timer = duration, seconds;
+        // timer = duration, seconds;
+        var seconds = maxSeconds;
+        timer = maxSeconds;
 
         setInterval(function () {
             seconds = timer;
@@ -264,7 +278,7 @@ $(document).ready(function () {
 
             if (--timer < 0) {
                 timer = 0;
-                connection.invoke("StopGameTimer", room, connection.connectionId);
+                connection.invoke("StopGameTimer", $roomContent.val(), connection.connectionId);
             }
 
         }, 1000);
