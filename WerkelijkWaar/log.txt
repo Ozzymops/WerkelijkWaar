@@ -3403,3 +3403,150 @@ ClientConnectionId:278b1ec4-b20e-41ef-8240-6b2ede1c22a2
 Error Number:201,State:4,Class:16
 ---[LOGGER  MSG  END]---
 
+---[LOGGER MSG START]---
+Startup - 08:59:30 : maandag 20 mei 2019
+>Starting server...
+>Server is up and running!
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[CheckLogin] - 08:59:51 : maandag 20 mei 2019
+>Checking log in for user JMuris
+---[LOGGER MSG START]---
+[RetrieveUser] - 08:59:51 : maandag 20 mei 2019
+>Attempting to retrieve user with id 2
+>Found user with id 2
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+Startup - 09:02:39 : maandag 20 mei 2019
+>Starting server...
+>Server is up and running!
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[CheckLogin] - 09:02:42 : maandag 20 mei 2019
+>Checking log in for user JMuris
+---[LOGGER MSG START]---
+[RetrieveUser] - 09:02:42 : maandag 20 mei 2019
+>Attempting to retrieve user with id 2
+>Found user with id 2
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[CheckLogin] - 09:02:51 : maandag 20 mei 2019
+>Checking log in for user 
+>Something went wrong: System.Data.SqlClient.SqlException (0x80131904): Procedure or function 'LogIn' expects parameter '@pUsername', which was not supplied.
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, SqlDataReader ds)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite, String method)
+   at System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, Boolean sendToPipe, Int32 timeout, Boolean asyncWrite, String methodName)
+   at System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   at WerkelijkWaar.Classes.DatabaseQueries.CheckLogin(String username, String password) in C:\Users\Justin Muris\source\repos\WerkelijkWaar\WerkelijkWaar\Classes\DatabaseQueries.cs:line 173
+ClientConnectionId:81556fa0-66a5-45d3-92ab-edb7dd0d350d
+Error Number:201,State:4,Class:16
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+Startup - 09:03:46 : maandag 20 mei 2019
+>Starting server...
+>Server is up and running!
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[CheckLogin] - 09:03:50 : maandag 20 mei 2019
+>Checking log in for user JMuris
+---[LOGGER MSG START]---
+[RetrieveUser] - 09:03:50 : maandag 20 mei 2019
+>Attempting to retrieve user with id 2
+>Found user with id 2
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[CheckLogin] - 09:04:04 : maandag 20 mei 2019
+>Checking log in for user 
+>Something went wrong: System.Data.SqlClient.SqlException (0x80131904): Procedure or function 'LogIn' expects parameter '@pUsername', which was not supplied.
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, SqlDataReader ds)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite, String method)
+   at System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, Boolean sendToPipe, Int32 timeout, Boolean asyncWrite, String methodName)
+   at System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   at WerkelijkWaar.Classes.DatabaseQueries.CheckLogin(String username, String password) in C:\Users\Justin Muris\source\repos\WerkelijkWaar\WerkelijkWaar\Classes\DatabaseQueries.cs:line 173
+ClientConnectionId:1f6e9b91-a42b-4b8f-9ac1-ccbd1586e93e
+Error Number:201,State:4,Class:16
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+Startup - 09:05:37 : maandag 20 mei 2019
+>Starting server...
+>Server is up and running!
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[CheckLogin] - 09:05:40 : maandag 20 mei 2019
+>Checking log in for user JMuris
+---[LOGGER MSG START]---
+[RetrieveUser] - 09:05:40 : maandag 20 mei 2019
+>Attempting to retrieve user with id 2
+>Found user with id 2
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[CheckLogin] - 09:05:49 : maandag 20 mei 2019
+>Checking log in for user 
+>Something went wrong: System.Data.SqlClient.SqlException (0x80131904): Procedure or function 'LogIn' expects parameter '@pUsername', which was not supplied.
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, SqlDataReader ds)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite, String method)
+   at System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, Boolean sendToPipe, Int32 timeout, Boolean asyncWrite, String methodName)
+   at System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   at WerkelijkWaar.Classes.DatabaseQueries.CheckLogin(String username, String password) in C:\Users\Justin Muris\source\repos\WerkelijkWaar\WerkelijkWaar\Classes\DatabaseQueries.cs:line 173
+ClientConnectionId:c9ee2a33-69d2-48ab-893a-4a13a2a05337
+Error Number:201,State:4,Class:16
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+Startup - 09:06:42 : maandag 20 mei 2019
+>Starting server...
+>Server is up and running!
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[CheckLogin] - 09:06:45 : maandag 20 mei 2019
+>Checking log in for user JMuris
+---[LOGGER MSG START]---
+[RetrieveUser] - 09:06:45 : maandag 20 mei 2019
+>Attempting to retrieve user with id 2
+>Found user with id 2
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[CheckLogin] - 09:06:57 : maandag 20 mei 2019
+>Checking log in for user 
+>Something went wrong: System.Data.SqlClient.SqlException (0x80131904): Procedure or function 'LogIn' expects parameter '@pUsername', which was not supplied.
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, SqlDataReader ds)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite, String method)
+   at System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, Boolean sendToPipe, Int32 timeout, Boolean asyncWrite, String methodName)
+   at System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   at WerkelijkWaar.Classes.DatabaseQueries.CheckLogin(String username, String password) in C:\Users\Justin Muris\source\repos\WerkelijkWaar\WerkelijkWaar\Classes\DatabaseQueries.cs:line 173
+ClientConnectionId:a7523cc4-6776-44bf-97c3-8116f7c2e99b
+Error Number:201,State:4,Class:16
+---[LOGGER  MSG  END]---
+

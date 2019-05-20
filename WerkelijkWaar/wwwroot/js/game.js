@@ -147,12 +147,22 @@ $(document).ready(function () {
             document.getElementById("game-write").style.display = "block";
         }
     }
+
+    // Start countdown timer
+    connection.clientMethods["startCountdownTimer"] = (roomCode, time) => {
+        if ($roomContent.val() == roomCode) {
+            maxTime = time;
+            remainingTime = time;
+        }
+    }
     //#endregion
 
     //#region Functions
     // Variables
     var $userContent = $('#usernameInput');
     var $roomContent = $('#roomInput');
+    var maxTime = 0;
+    var remainingTime = 0;
     var inRoom = false;
 
     // Host a room
@@ -229,9 +239,28 @@ $(document).ready(function () {
         endTutorial();
     });
 
+    // Start timer
+    function startTimer(duration) {
+        var maxSeconds = duration;
+        var timer = duration, seconds;
+
+        setInterval(function () {
+            seconds = timer;
+            document.getElementById("clock").textContent = seconds;
+            document.getElementById("clockBar").style.width = (seconds / maxSeconds * 100) + "vw";
+
+            if (--timer < 0) {
+                timer = duration;
+            }
+
+        }, 1000);
+    }
+
     function hideNavigation() {
         document.getElementById("topBar").style.display = "none";
         document.getElementById("sideBar").style.display = "none";
+
+        startTimer(60);
     }
 
     function showNavigation() {
