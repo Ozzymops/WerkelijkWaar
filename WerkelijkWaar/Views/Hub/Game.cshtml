@@ -77,6 +77,15 @@
             <!-- Docent -->
             @if (Model.User.RoleId == 1)
             {
+                <audio id="snd-timer-1" src="~/content/audio/Timer1.wav"></audio>
+                <audio id="snd-timer-2" src="~/content/audio/Timer2.wav"></audio>
+                <audio id="snd-timer-3" src="~/content/audio/Timer3.wav"></audio>
+                <audio id="snd-ticktock-1" src="~/content/audio/TickTock1.wav"></audio>
+                <audio id="snd-ticktock-2" src="~/content/audio/TickTock2.wav"></audio>
+                <audio id="snd-ticktock-3" src="~/content/audio/TickTock3.wav"></audio>
+                <audio id="snd-timesup" src="~/content/audio/TimesUp.wav"></audio>
+                <audio id="snd-correct" src="~/content/audio/Correct.wav" autoplay></audio>
+                <audio id="snd-wrong" src="~/content/audio/Wrong.wav"></audio>
                 <ul id="playerList"></ul>
                 <p id="playerCount" class="before-input">x spelers zijn verbonden.</p>
                 <div id="game-prep">

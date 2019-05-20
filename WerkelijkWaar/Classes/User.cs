@@ -7,8 +7,7 @@ namespace WerkelijkWaar.Classes
 {
     public class User
     {
-        public int Id { get; set; }
-        public string SocketId { get; set; }
+        public int Id { get; set; }    
         public int RoleId { get; set; }
         public int Group { get; set; }
         public string Name { get; set; }
@@ -18,10 +17,11 @@ namespace WerkelijkWaar.Classes
         public int LoginAttempts { get; set; }
         public string ImageSource { get; set; }
 
-        // Other
+        // Overview
         public double AverageScore { get; set; }
 
         // Game
+        public string SocketId { get; set; }
         public int GameGroup { get; set; }
         public bool ReadyToPlay { get; set; }
         public bool WroteStory { get; set; }

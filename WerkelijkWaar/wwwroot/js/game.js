@@ -199,9 +199,11 @@ $(document).ready(function () {
     // Variables
     var $userContent = $('#usernameInput');
     var $roomContent = $('#roomInput');
+    var $roleContent = $('#roleId');
     var tutorialState = 0;
     var inRoom = false;
     var timer = 0;
+    var soundState = 0;
 
     // Host a room
     $('#btn-openLobby').click(function () {
@@ -285,14 +287,37 @@ $(document).ready(function () {
         var seconds = maxSeconds;
         timer = maxSeconds;
 
-        setInterval(function () {
+        var currentTimer = setInterval(function () {
             seconds = timer;
             document.getElementById("clock").textContent = seconds;
             document.getElementById("clockBar").style.width = (seconds / maxSeconds * 100) + "vw";
 
+            if ($roleContent.val() == 1) {
+                if ((seconds / maxSeconds * 100) > 25 && soundState == 0) {
+                    document.getElementById("snd-timer-1").play();
+                    soundState = 5;
+                }
+                else if ((seconds / maxSeconds * 100) > 10 && soundState == 0) {
+                    document.getElementById("snd-timer-2").play();
+                    soundState = 3;
+                }
+                else if (soundState == 0) {
+                    document.getElementById("snd-timer-3").play();
+                    soundState = 1;
+                }     
+            }
+
+            soundState--;
+
             if (--timer < 0) {
+                soundState = -1;
                 timer = 0;
+                clearInterval(currentTimer);
                 connection.invoke("StopGameTimer", $roomContent.val(), connection.connectionId);
+
+                if ($roleContent.val() == 1) {
+                    document.getElementById("snd-timesup").play();
+                }
             }
 
         }, 1000);

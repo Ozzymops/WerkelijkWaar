@@ -4976,3 +4976,168 @@ Startup - 14:02:40 : maandag 20 mei 2019
 >Found 11 stories from user 3
 ---[LOGGER  MSG  END]---
 
+---[LOGGER MSG START]---
+Startup - 14:20:58 : maandag 20 mei 2019
+>Starting server...
+>Server is up and running!
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[CheckLogin] - 14:21:06 : maandag 20 mei 2019
+>Checking log in for user AAppel
+---[LOGGER MSG START]---
+[RetrieveUser] - 14:21:06 : maandag 20 mei 2019
+>Attempting to retrieve user with id 3
+>Found user with id 3
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[CheckLogin] - 14:21:07 : maandag 20 mei 2019
+>Checking log in for user JMuris
+---[LOGGER MSG START]---
+[RetrieveUser] - 14:21:07 : maandag 20 mei 2019
+>Attempting to retrieve user with id 2
+>Found user with id 2
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[RetrieveAllStories] - 14:21:27 : maandag 20 mei 2019
+>Attempting to retrieve all stories.
+>Found 11 stories.
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+Startup - 14:24:01 : maandag 20 mei 2019
+>Starting server...
+>Server is up and running!
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[CheckLogin] - 14:24:04 : maandag 20 mei 2019
+>Checking log in for user JMuris
+---[LOGGER MSG START]---
+[RetrieveUser] - 14:24:04 : maandag 20 mei 2019
+>Attempting to retrieve user with id 2
+>Found user with id 2
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+Startup - 14:24:45 : maandag 20 mei 2019
+>Starting server...
+>Server is up and running!
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[CheckLogin] - 14:24:49 : maandag 20 mei 2019
+>Checking log in for user AAppel
+---[LOGGER MSG START]---
+[RetrieveUser] - 14:24:49 : maandag 20 mei 2019
+>Attempting to retrieve user with id 3
+>Found user with id 3
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[CheckLogin] - 14:24:50 : maandag 20 mei 2019
+>Checking log in for user JMuris
+---[LOGGER MSG START]---
+[RetrieveUser] - 14:24:50 : maandag 20 mei 2019
+>Attempting to retrieve user with id 2
+>Found user with id 2
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[RetrieveAllStories] - 14:25:10 : maandag 20 mei 2019
+>Attempting to retrieve all stories.
+>Found 11 stories.
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+Startup - 14:29:17 : maandag 20 mei 2019
+>Starting server...
+>Server is up and running!
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[CheckLogin] - 14:29:23 : maandag 20 mei 2019
+>Checking log in for user AAppel
+---[LOGGER MSG START]---
+[RetrieveUser] - 14:29:23 : maandag 20 mei 2019
+>Attempting to retrieve user with id 3
+>Found user with id 3
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[CheckLogin] - 14:29:24 : maandag 20 mei 2019
+>Checking log in for user JMuris
+---[LOGGER MSG START]---
+[RetrieveUser] - 14:29:24 : maandag 20 mei 2019
+>Attempting to retrieve user with id 2
+>Found user with id 2
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[RetrieveAllStories] - 14:29:41 : maandag 20 mei 2019
+>Attempting to retrieve all stories.
+>Found 11 stories.
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+Startup - 14:44:10 : maandag 20 mei 2019
+>Starting server...
+>Server is up and running!
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[CheckLogin] - 14:44:16 : maandag 20 mei 2019
+>Checking log in for user AAppel
+---[LOGGER MSG START]---
+[RetrieveUser] - 14:44:16 : maandag 20 mei 2019
+>Attempting to retrieve user with id 3
+>Found user with id 3
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[CheckLogin] - 14:44:16 : maandag 20 mei 2019
+>Checking log in for user JMuris
+---[LOGGER MSG START]---
+[RetrieveUser] - 14:44:16 : maandag 20 mei 2019
+>Attempting to retrieve user with id 2
+>Found user with id 2
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[RetrieveAllStories] - 14:44:39 : maandag 20 mei 2019
+>Attempting to retrieve all stories.
+>Found 11 stories.
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+Startup - 14:53:15 : maandag 20 mei 2019
+>Starting server...
+>Server is up and running!
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[CheckLogin] - 14:53:25 : maandag 20 mei 2019
+>Checking log in for user AAppel
+---[LOGGER MSG START]---
+[RetrieveUser] - 14:53:25 : maandag 20 mei 2019
+>Attempting to retrieve user with id 3
+>Found user with id 3
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[CheckLogin] - 14:53:26 : maandag 20 mei 2019
+>Checking log in for user JMuris
+---[LOGGER MSG START]---
+[RetrieveUser] - 14:53:26 : maandag 20 mei 2019
+>Attempting to retrieve user with id 2
+>Found user with id 2
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[RetrieveAllStories] - 14:53:46 : maandag 20 mei 2019
+>Attempting to retrieve all stories.
+>Found 11 stories.
+---[LOGGER  MSG  END]---
+
