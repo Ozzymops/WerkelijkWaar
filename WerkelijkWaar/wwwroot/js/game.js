@@ -154,6 +154,13 @@ $(document).ready(function () {
             startTimer(time);
         }
     }
+
+    // Stop countdown timer
+    connection.clientMethods["stopCountdownTimer"] = (roomCode) => {
+        if ($roomContent.val() == roomCode) {
+            stopTimer();
+        }
+    }
     //#endregion
 
     //#region Functions
@@ -161,6 +168,7 @@ $(document).ready(function () {
     var $userContent = $('#usernameInput');
     var $roomContent = $('#roomInput');
     var inRoom = false;
+    var timer = 0;
 
     // Host a room
     $('#btn-openLobby').click(function () {
@@ -239,7 +247,7 @@ $(document).ready(function () {
     // Start timer
     function startTimer(duration) {
         var maxSeconds = duration;
-        var timer = duration, seconds;
+        timer = duration, seconds;
 
         setInterval(function () {
             seconds = timer;
@@ -247,10 +255,16 @@ $(document).ready(function () {
             document.getElementById("clockBar").style.width = (seconds / maxSeconds * 100) + "vw";
 
             if (--timer < 0) {
-                timer = duration;
+                timer = 0;
+                connection.invoke("StopGameTimer", room, connection.connectionId);
             }
 
         }, 1000);
+    }
+
+    // Stop timer
+    function stopTimer() {
+        timer = 0;
     }
 
     function hideNavigation() {

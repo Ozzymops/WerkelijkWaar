@@ -23,10 +23,14 @@ namespace WerkelijkWaar.Classes
         public List<Classes.User> Users { get; set; } = new List<Classes.User>();
         public List<List<Classes.User>> Groups { get; set; } = new List<List<Classes.User>>();
         public List<Classes.Story> Stories { get; set; } = new List<Classes.Story>();
+        public int RemainingTime { get; set; }
 
         // Configuration
 
+        // Timers
         public Timer timer = new Timer(TimeSpan.FromSeconds(60).TotalMilliseconds); // Tick every sixty seconds
+        public Timer gameTimer = new Timer(TimeSpan.FromSeconds(1).TotalMilliseconds);
+
 
         /// <summary>
         /// Constructor: generate random code and set timer.
@@ -35,9 +39,14 @@ namespace WerkelijkWaar.Classes
         {
             GenerateCode();
 
+            // Idle timer
             timer.AutoReset = true;
             timer.Elapsed += new ElapsedEventHandler(IdleTimer);
             timer.Start();
+
+            // Game timer
+            gameTimer.AutoReset = true;
+            gameTimer.Elapsed += new ElapsedEventHandler(GameTimer);
         }
 
         /// <summary>
@@ -200,6 +209,11 @@ namespace WerkelijkWaar.Classes
             {
                 return false;
             }
+        }
+
+        public void GameTimer(object sender, ElapsedEventArgs e)
+        {
+            RemainingTime -= 1;
         }
     }
 }

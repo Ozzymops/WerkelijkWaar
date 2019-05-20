@@ -334,6 +334,32 @@ namespace WerkelijkWaar
                 }
             }
         }
+
+        public async Task StartGameTimer(string roomCode, int time)
+        {
+            foreach (Classes.Room room in _gameManager.Rooms)
+            {
+                if (room.RoomCode == roomCode)
+                {
+                    room.RemainingTime = time;
+                    room.gameTimer.Start();
+                    await InvokeClientMethodToAllAsync("startCountdownTimer", roomCode, time);
+                }
+            }
+        }
+
+        public async Task StopGameTimer(string roomCode, string ownerId)
+        {
+            foreach (Classes.Room room in _gameManager.Rooms)
+            {
+                if (room.RoomCode == roomCode && room.RoomOwnerId == ownerId)
+                {
+                    room.RemainingTime = 0;
+                    room.gameTimer.Stop();
+                    await InvokeClientMethodToAllAsync("stopCountdownTimer", roomCode);
+                }
+            }
+        }
         #endregion
 
         #region Visual
