@@ -183,6 +183,16 @@ $(document).ready(function () {
             stopTimer();
         }
     }
+
+    // Retrieve root stories
+    connection.clientMethods["retrieveRootStories"] = (roomCode, socketId, title, description) => {
+        if ($roomContent.val() == roomCode) {
+            if (socketId == connection.connectionId) {
+                document.getElementById("storyTitle").innerHTML = title;
+                document.getElementById("storyText").innerHTML = description;
+            }
+        }
+    }
     //#endregion
 
     //#region Functions
@@ -218,7 +228,7 @@ $(document).ready(function () {
         if (user.length != 0) {
             if (room.length != 0) {
                 console.log("Connecting!");
-                connection.invoke("JoinRoom", connection.connectionId, user, room);
+                connection.invoke("JoinRoom", connection.connectionId, $('#idInput').val(), user, room);
             }
         }
     });
@@ -260,6 +270,10 @@ $(document).ready(function () {
     // Continue tutorial
     $('.btn-nextTutorial').click(function () {
         tutorialPage();
+    });
+
+    $('#btn-sendStory').click(function () {
+        sendStory();
     });
 
     // Start timer
@@ -339,6 +353,16 @@ $(document).ready(function () {
         document.getElementById("game-tutorial-3").style.display = "none";
         document.getElementById("game-waiting").style.display = "none";
         document.getElementById("game-write").style.display = "block";
+    }
+
+    function sendStory() {
+        var $storyTitle = $('#writtenStoryTitle').val();
+        var $storyText = $('#writtenStoryText').val();
+
+        document.getElementById("write-busy").style.display = "none";
+        document.getElementById("write-finished").style.display = "block";
+
+        connection.invoke("UploadStory", $roomContent.val(), connection.connectionId, $storyTitle, $storyText);
     }
     //#endregion
 

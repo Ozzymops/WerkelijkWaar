@@ -11,6 +11,7 @@ namespace WerkelijkWaar
     public class GameHandler : WebSocketHandler
     {
         private readonly GameManager _gameManager;
+        private Classes.DatabaseQueries dq = new Classes.DatabaseQueries();
         private bool PingOrPong = false;
         private List<string> Pongs = new List<string>();
 
@@ -183,7 +184,7 @@ namespace WerkelijkWaar
         /// <param name="username">Client username</param>
         /// <param name="roomCode">Room</param>
         /// <returns></returns>
-        public async Task JoinRoom(string socketId, string username, string roomCode)
+        public async Task JoinRoom(string socketId, string userId, string username, string roomCode)
         {
             foreach (Classes.Room room in _gameManager.Rooms)
             {
@@ -199,7 +200,7 @@ namespace WerkelijkWaar
                         if (room.RoomState == Classes.Room.State.Waiting)
                         {
                             room.ResetTimer();
-                            room.Users.Add(new Classes.User { SocketId = socketId, Username = username, WroteStory = false, ChoseStory = false });
+                            room.Users.Add(new Classes.User { Id = Convert.ToInt32(userId), SocketId = socketId, Username = username, ReadyToPlay = false, WroteStory = false, ChoseStory = false });
                             await InvokeClientMethodToAllAsync("joinRoom", socketId, roomCode);
                             await RetrievePlayerList(room.RoomCode, false);
                         }
@@ -373,6 +374,20 @@ namespace WerkelijkWaar
             }
         }
 
+        public async Task RetrieveRootStory(string roomCode)
+        {
+            foreach (Classes.Room room in _gameManager.Rooms)
+            {
+                if (room.RoomCode == roomCode)
+                {
+                    foreach (Classes.User user in room.Users)
+                    {
+                        await InvokeClientMethodToAllAsync("retrieveRootStory", roomCode, user.SocketId, room.Stories[user.GameGroup].Title, room.Stories[user.GameGroup].Description);
+                    }
+                }
+            }
+        }
+
         public async Task StartGameTimer(string roomCode, int time, string ownerId)
         {
             foreach (Classes.Room room in _gameManager.Rooms)
@@ -404,6 +419,40 @@ namespace WerkelijkWaar
                     else if (room.RoomState == Classes.Room.State.Reading)
                     {
                         await InvokeClientMethodToAllAsync("goToReadPhase", roomCode);
+                    }
+                }
+            }
+        }
+
+        public async Task UploadStory(string roomCode, string socketId, string storyTitle, string storyText)
+        {
+            foreach (Classes.Room room in _gameManager.Rooms)
+            {
+                if (room.RoomCode == roomCode)
+                {
+                    int usersThatWroteStories = 0;
+
+                    foreach (Classes.User user in room.Users)
+                    {
+                        if (user.SocketId == socketId)
+                        {
+                            user.WroteStory = true;
+
+                            Classes.Story newStory = new Classes.Story { Date = DateTime.Now, IsRoot = false, Title = storyTitle, Description = storyText, OwnerId = user.Id };
+                            dq.CreateStory(newStory);
+                        }
+
+                        if (user.WroteStory)
+                        {
+                            usersThatWroteStories++;
+                        }
+                    }
+
+                    if (usersThatWroteStories == room.Users.Count)
+                    {
+                        // continue to read phase
+                        await InvokeClientMethodToAllAsync("goToReadPhase", roomCode);
+                        await StartGameTimer(roomCode, 10, room.RoomOwnerId);
                     }
                 }
             }

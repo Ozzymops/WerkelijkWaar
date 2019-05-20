@@ -4344,3 +4344,635 @@ Startup - 11:30:05 : maandag 20 mei 2019
 >Found 5 stories.
 ---[LOGGER  MSG  END]---
 
+---[LOGGER MSG START]---
+Startup - 11:41:17 : maandag 20 mei 2019
+>Starting server...
+>Server is up and running!
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[CheckLogin] - 11:41:22 : maandag 20 mei 2019
+>Checking log in for user JMuris
+---[LOGGER MSG START]---
+[RetrieveUser] - 11:41:22 : maandag 20 mei 2019
+>Attempting to retrieve user with id 2
+>Found user with id 2
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[CheckLogin] - 11:41:29 : maandag 20 mei 2019
+>Checking log in for user AAppel
+---[LOGGER MSG START]---
+[RetrieveUser] - 11:41:29 : maandag 20 mei 2019
+>Attempting to retrieve user with id 3
+>Found user with id 3
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[RetrieveAllStories] - 11:41:49 : maandag 20 mei 2019
+>Attempting to retrieve all stories.
+>Found 5 stories.
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+Startup - 11:43:16 : maandag 20 mei 2019
+>Starting server...
+>Server is up and running!
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[CheckLogin] - 11:43:19 : maandag 20 mei 2019
+>Checking log in for user JMuris
+---[LOGGER MSG START]---
+[RetrieveUser] - 11:43:19 : maandag 20 mei 2019
+>Attempting to retrieve user with id 2
+>Found user with id 2
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[CheckLogin] - 11:43:20 : maandag 20 mei 2019
+>Checking log in for user AAppel
+---[LOGGER MSG START]---
+[RetrieveUser] - 11:43:20 : maandag 20 mei 2019
+>Attempting to retrieve user with id 3
+>Found user with id 3
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[RetrieveAllStories] - 11:43:43 : maandag 20 mei 2019
+>Attempting to retrieve all stories.
+>Found 5 stories.
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+Startup - 11:45:26 : maandag 20 mei 2019
+>Starting server...
+>Server is up and running!
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[CheckLogin] - 11:45:35 : maandag 20 mei 2019
+>Checking log in for user JMuris
+---[LOGGER MSG START]---
+[RetrieveUser] - 11:45:35 : maandag 20 mei 2019
+>Attempting to retrieve user with id 2
+>Found user with id 2
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[CheckLogin] - 11:45:43 : maandag 20 mei 2019
+>Checking log in for user AAppel
+---[LOGGER MSG START]---
+[RetrieveUser] - 11:45:43 : maandag 20 mei 2019
+>Attempting to retrieve user with id 3
+>Found user with id 3
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[RetrieveAllStories] - 11:45:59 : maandag 20 mei 2019
+>Attempting to retrieve all stories.
+>Found 5 stories.
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+Startup - 13:43:30 : maandag 20 mei 2019
+>Starting server...
+>Server is up and running!
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+Startup - 13:48:27 : maandag 20 mei 2019
+>Starting server...
+>Server is up and running!
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[CheckLogin] - 13:48:38 : maandag 20 mei 2019
+>Checking log in for user JMuris
+---[LOGGER MSG START]---
+[RetrieveUser] - 13:48:38 : maandag 20 mei 2019
+>Attempting to retrieve user with id 2
+>Found user with id 2
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[CheckLogin] - 13:48:42 : maandag 20 mei 2019
+>Checking log in for user AAppel
+---[LOGGER MSG START]---
+[RetrieveUser] - 13:48:42 : maandag 20 mei 2019
+>Attempting to retrieve user with id 3
+>Found user with id 3
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[RetrieveAllStories] - 13:49:08 : maandag 20 mei 2019
+>Attempting to retrieve all stories.
+>Found 5 stories.
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[CreateStory] - 13:49:36 : maandag 20 mei 2019
+>Trying to create story for user 0
+>System.Data.SqlClient.SqlException (0x80131904): The INSERT statement conflicted with the FOREIGN KEY constraint "FK__Story__OwnerId__69FBBC1F". The conflict occurred in database "TrustMeDb", table "dbo.User", column 'Id'.
+The statement has been terminated.
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, SqlDataReader ds)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite, String method)
+   at System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, Boolean sendToPipe, Int32 timeout, Boolean asyncWrite, String methodName)
+   at System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   at WerkelijkWaar.Classes.DatabaseQueries.CreateStory(Story story) in C:\Users\Justin Muris\source\repos\WerkelijkWaar\WerkelijkWaar\Classes\DatabaseQueries.cs:line 160
+ClientConnectionId:cca64b46-e43d-4b22-8fa3-0a0e8ea13354
+Error Number:547,State:0,Class:16
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+Startup - 13:52:39 : maandag 20 mei 2019
+>Starting server...
+>Server is up and running!
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[CheckLogin] - 13:52:44 : maandag 20 mei 2019
+>Checking log in for user JMuris
+---[LOGGER MSG START]---
+[RetrieveUser] - 13:52:44 : maandag 20 mei 2019
+>Attempting to retrieve user with id 2
+>Found user with id 2
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[CheckLogin] - 13:52:46 : maandag 20 mei 2019
+>Checking log in for user AAppel
+---[LOGGER MSG START]---
+[RetrieveUser] - 13:52:46 : maandag 20 mei 2019
+>Attempting to retrieve user with id 3
+>Found user with id 3
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[RetrieveAllStories] - 13:53:08 : maandag 20 mei 2019
+>Attempting to retrieve all stories.
+>Found 5 stories.
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[CreateStory] - 13:53:34 : maandag 20 mei 2019
+>Trying to create story for user 0
+>System.Data.SqlClient.SqlException (0x80131904): The INSERT statement conflicted with the FOREIGN KEY constraint "FK__Story__OwnerId__69FBBC1F". The conflict occurred in database "TrustMeDb", table "dbo.User", column 'Id'.
+The statement has been terminated.
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, SqlDataReader ds)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite, String method)
+   at System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, Boolean sendToPipe, Int32 timeout, Boolean asyncWrite, String methodName)
+   at System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   at WerkelijkWaar.Classes.DatabaseQueries.CreateStory(Story story) in C:\Users\Justin Muris\source\repos\WerkelijkWaar\WerkelijkWaar\Classes\DatabaseQueries.cs:line 160
+ClientConnectionId:6278f4ef-7c2d-40f0-b3cf-b8498dca5222
+Error Number:547,State:0,Class:16
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+Startup - 13:57:10 : maandag 20 mei 2019
+>Starting server...
+>Server is up and running!
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[CheckLogin] - 13:57:19 : maandag 20 mei 2019
+>Checking log in for user JMuris
+---[LOGGER MSG START]---
+[RetrieveUser] - 13:57:19 : maandag 20 mei 2019
+>Attempting to retrieve user with id 2
+>Found user with id 2
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[CheckLogin] - 13:57:21 : maandag 20 mei 2019
+>Checking log in for user AAppel
+---[LOGGER MSG START]---
+[RetrieveUser] - 13:57:21 : maandag 20 mei 2019
+>Attempting to retrieve user with id 3
+>Found user with id 3
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[CheckLogin] - 13:57:41 : maandag 20 mei 2019
+>Checking log in for user 
+>Something went wrong: System.Data.SqlClient.SqlException (0x80131904): Procedure or function 'LogIn' expects parameter '@pUsername', which was not supplied.
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, SqlDataReader ds)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite, String method)
+   at System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, Boolean sendToPipe, Int32 timeout, Boolean asyncWrite, String methodName)
+   at System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   at WerkelijkWaar.Classes.DatabaseQueries.CheckLogin(String username, String password) in C:\Users\Justin Muris\source\repos\WerkelijkWaar\WerkelijkWaar\Classes\DatabaseQueries.cs:line 211
+ClientConnectionId:f6c505c7-3516-473e-a34b-c562d3f9a79c
+Error Number:201,State:4,Class:16
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+Startup - 14:00:23 : maandag 20 mei 2019
+>Starting server...
+>Server is up and running!
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[CheckLogin] - 14:00:26 : maandag 20 mei 2019
+>Checking log in for user JMuris
+---[LOGGER MSG START]---
+[RetrieveUser] - 14:00:26 : maandag 20 mei 2019
+>Attempting to retrieve user with id 2
+>Found user with id 2
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[CheckLogin] - 14:00:28 : maandag 20 mei 2019
+>Checking log in for user AAppel
+---[LOGGER MSG START]---
+[RetrieveUser] - 14:00:28 : maandag 20 mei 2019
+>Attempting to retrieve user with id 3
+>Found user with id 3
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[CheckLogin] - 14:00:32 : maandag 20 mei 2019
+>Checking log in for user 
+>Something went wrong: System.Data.SqlClient.SqlException (0x80131904): Procedure or function 'LogIn' expects parameter '@pUsername', which was not supplied.
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, SqlDataReader ds)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite, String method)
+   at System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, Boolean sendToPipe, Int32 timeout, Boolean asyncWrite, String methodName)
+   at System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   at WerkelijkWaar.Classes.DatabaseQueries.CheckLogin(String username, String password) in C:\Users\Justin Muris\source\repos\WerkelijkWaar\WerkelijkWaar\Classes\DatabaseQueries.cs:line 211
+ClientConnectionId:1a8f92a2-a434-4e6d-baf7-5bc15545ba63
+Error Number:201,State:4,Class:16
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+Startup - 14:01:16 : maandag 20 mei 2019
+>Starting server...
+>Server is up and running!
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[CheckLogin] - 14:01:21 : maandag 20 mei 2019
+>Checking log in for user JMuris
+---[LOGGER MSG START]---
+[RetrieveUser] - 14:01:21 : maandag 20 mei 2019
+>Attempting to retrieve user with id 2
+>Found user with id 2
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[CheckLogin] - 14:01:23 : maandag 20 mei 2019
+>Checking log in for user AAppel
+---[LOGGER MSG START]---
+[RetrieveUser] - 14:01:23 : maandag 20 mei 2019
+>Attempting to retrieve user with id 3
+>Found user with id 3
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+Startup - 14:02:40 : maandag 20 mei 2019
+>Starting server...
+>Server is up and running!
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[CheckLogin] - 14:02:57 : maandag 20 mei 2019
+>Checking log in for user JMuris
+---[LOGGER MSG START]---
+[RetrieveUser] - 14:02:57 : maandag 20 mei 2019
+>Attempting to retrieve user with id 2
+>Found user with id 2
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[CheckLogin] - 14:02:58 : maandag 20 mei 2019
+>Checking log in for user AAppel
+---[LOGGER MSG START]---
+[RetrieveUser] - 14:02:58 : maandag 20 mei 2019
+>Attempting to retrieve user with id 3
+>Found user with id 3
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[RetrieveAllStories] - 14:03:19 : maandag 20 mei 2019
+>Attempting to retrieve all stories.
+>Found 5 stories.
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[CreateStory] - 14:03:42 : maandag 20 mei 2019
+>Trying to create story for user 3
+>Story for 3 successfully added.
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[CreateStory] - 14:03:59 : maandag 20 mei 2019
+>Trying to create story for user 3
+>Story for 3 successfully added.
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[CreateStory] - 14:04:06 : maandag 20 mei 2019
+>Trying to create story for user 3
+>Story for 3 successfully added.
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[CreateStory] - 14:04:16 : maandag 20 mei 2019
+>Trying to create story for user 3
+>Story for 3 successfully added.
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[CreateStory] - 14:04:45 : maandag 20 mei 2019
+>Trying to create story for user 3
+>Story for 3 successfully added.
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[CreateStory] - 14:04:50 : maandag 20 mei 2019
+>Trying to create story for user 3
+>Story for 3 successfully added.
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[RetrieveUserListByGroup] - 14:05:13 : maandag 20 mei 2019
+>Attempting to retrieve users from group 1
+>Found 4 users from group 1
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[RetrieveUser] - 14:05:14 : maandag 20 mei 2019
+>Attempting to retrieve user with id 3
+>Found user with id 3
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[RetrieveScoresOfUser] - 14:05:14 : maandag 20 mei 2019
+>Attempting to retrieve scores of user 3
+>Found 7 scores from user 3
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[RetrieveUser] - 14:05:17 : maandag 20 mei 2019
+>Attempting to retrieve user with id 3
+>Found user with id 3
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[RetrieveScoresOfUser] - 14:05:17 : maandag 20 mei 2019
+>Attempting to retrieve scores of user 3
+>Found 7 scores from user 3
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[RetrieveUser] - 14:05:18 : maandag 20 mei 2019
+>Attempting to retrieve user with id 3
+>Found user with id 3
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[RetrieveScoresOfUser] - 14:05:18 : maandag 20 mei 2019
+>Attempting to retrieve scores of user 3
+>Found 7 scores from user 3
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[RetrieveUser] - 14:05:19 : maandag 20 mei 2019
+>Attempting to retrieve user with id 3
+>Found user with id 3
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[RetrieveScoresOfUser] - 14:05:19 : maandag 20 mei 2019
+>Attempting to retrieve scores of user 3
+>Found 7 scores from user 3
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[RetrieveUser] - 14:05:20 : maandag 20 mei 2019
+>Attempting to retrieve user with id 3
+>Found user with id 3
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[RetrieveScoresOfUser] - 14:05:20 : maandag 20 mei 2019
+>Attempting to retrieve scores of user 3
+>Found 7 scores from user 3
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[RetrieveUser] - 14:05:20 : maandag 20 mei 2019
+>Attempting to retrieve user with id 3
+>Found user with id 3
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[RetrieveScoresOfUser] - 14:05:20 : maandag 20 mei 2019
+>Attempting to retrieve scores of user 3
+>Found 7 scores from user 3
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[RetrieveUser] - 14:05:21 : maandag 20 mei 2019
+>Attempting to retrieve user with id 3
+>Found user with id 3
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[RetrieveScoresOfUser] - 14:05:21 : maandag 20 mei 2019
+>Attempting to retrieve scores of user 3
+>Found 7 scores from user 3
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[RetrieveUser] - 14:05:21 : maandag 20 mei 2019
+>Attempting to retrieve user with id 3
+>Found user with id 3
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[RetrieveScoresOfUser] - 14:05:21 : maandag 20 mei 2019
+>Attempting to retrieve scores of user 3
+>Found 7 scores from user 3
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[RetrieveUserListByGroup] - 14:05:24 : maandag 20 mei 2019
+>Attempting to retrieve users from group 1
+>Found 4 users from group 1
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[RetrieveUser] - 14:05:26 : maandag 20 mei 2019
+>Attempting to retrieve user with id 3
+>Found user with id 3
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[RetrieveStoriesOfUser] - 14:05:26 : maandag 20 mei 2019
+>Attempting to retrieve stories of user 3
+>Found 11 stories from user 3
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[RetrieveUser] - 14:05:27 : maandag 20 mei 2019
+>Attempting to retrieve user with id 3
+>Found user with id 3
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[RetrieveStoriesOfUser] - 14:05:27 : maandag 20 mei 2019
+>Attempting to retrieve stories of user 3
+>Found 11 stories from user 3
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[RetrieveUser] - 14:05:31 : maandag 20 mei 2019
+>Attempting to retrieve user with id 3
+>Found user with id 3
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[RetrieveStoriesOfUser] - 14:05:32 : maandag 20 mei 2019
+>Attempting to retrieve stories of user 3
+>Found 11 stories from user 3
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[RetrieveUser] - 14:05:32 : maandag 20 mei 2019
+>Attempting to retrieve user with id 3
+>Found user with id 3
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[RetrieveStoriesOfUser] - 14:05:32 : maandag 20 mei 2019
+>Attempting to retrieve stories of user 3
+>Found 11 stories from user 3
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[RetrieveUser] - 14:05:35 : maandag 20 mei 2019
+>Attempting to retrieve user with id 3
+>Found user with id 3
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[RetrieveStoriesOfUser] - 14:05:35 : maandag 20 mei 2019
+>Attempting to retrieve stories of user 3
+>Found 11 stories from user 3
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[RetrieveUser] - 14:05:36 : maandag 20 mei 2019
+>Attempting to retrieve user with id 3
+>Found user with id 3
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[RetrieveStoriesOfUser] - 14:05:36 : maandag 20 mei 2019
+>Attempting to retrieve stories of user 3
+>Found 11 stories from user 3
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[RetrieveUser] - 14:05:38 : maandag 20 mei 2019
+>Attempting to retrieve user with id 3
+>Found user with id 3
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[RetrieveStoriesOfUser] - 14:05:38 : maandag 20 mei 2019
+>Attempting to retrieve stories of user 3
+>Found 11 stories from user 3
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[RetrieveUser] - 14:05:38 : maandag 20 mei 2019
+>Attempting to retrieve user with id 3
+>Found user with id 3
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[RetrieveStoriesOfUser] - 14:05:38 : maandag 20 mei 2019
+>Attempting to retrieve stories of user 3
+>Found 11 stories from user 3
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[RetrieveUser] - 14:05:38 : maandag 20 mei 2019
+>Attempting to retrieve user with id 3
+>Found user with id 3
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[RetrieveStoriesOfUser] - 14:05:38 : maandag 20 mei 2019
+>Attempting to retrieve stories of user 3
+>Found 11 stories from user 3
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[RetrieveUser] - 14:05:39 : maandag 20 mei 2019
+>Attempting to retrieve user with id 3
+>Found user with id 3
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[RetrieveStoriesOfUser] - 14:05:39 : maandag 20 mei 2019
+>Attempting to retrieve stories of user 3
+>Found 11 stories from user 3
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[RetrieveUser] - 14:05:41 : maandag 20 mei 2019
+>Attempting to retrieve user with id 3
+>Found user with id 3
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[RetrieveStoriesOfUser] - 14:05:41 : maandag 20 mei 2019
+>Attempting to retrieve stories of user 3
+>Found 11 stories from user 3
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[RetrieveUser] - 14:05:42 : maandag 20 mei 2019
+>Attempting to retrieve user with id 3
+>Found user with id 3
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[RetrieveStoriesOfUser] - 14:05:42 : maandag 20 mei 2019
+>Attempting to retrieve stories of user 3
+>Found 11 stories from user 3
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[RetrieveUser] - 14:05:44 : maandag 20 mei 2019
+>Attempting to retrieve user with id 3
+>Found user with id 3
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[RetrieveStoriesOfUser] - 14:05:44 : maandag 20 mei 2019
+>Attempting to retrieve stories of user 3
+>Found 11 stories from user 3
+---[LOGGER  MSG  END]---
+

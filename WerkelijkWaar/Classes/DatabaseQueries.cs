@@ -137,6 +137,44 @@ namespace WerkelijkWaar.Classes
                 }
             }
         }
+
+        public bool CreateStory(Story story)
+        {
+            l.WriteToLog("[CreateStory]", "Trying to create story for user " + story.OwnerId, 0);
+
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                SqlCommand command = new SqlCommand("INSERT INTO [Story] SELECT @ownerId, @isRoot, @title, @description, @date, @status", connection);
+
+                command.Parameters.Add(new SqlParameter("@ownerId", story.OwnerId));
+                command.Parameters.Add(new SqlParameter("@isRoot", false));
+                command.Parameters.Add(new SqlParameter("@title", story.Title));
+                command.Parameters.Add(new SqlParameter("@description", story.Description));
+                command.Parameters.Add(new SqlParameter("@date", story.Date));
+                command.Parameters.Add(new SqlParameter("@status", 2));
+
+                try
+                {
+                    connection.Open();
+
+                    int rows = command.ExecuteNonQuery();
+
+                    if (rows > 0)
+                    {
+                        l.WriteToLog("[CreateStory]", "Story for " + story.OwnerId + " successfully added.", 1);
+                        return true;
+                    }
+
+                    l.WriteToLog("[CreateStory]", "Failed to add story for " + story.OwnerId + ".", 1);
+                    return false;
+                }
+                catch (Exception ex)
+                {
+                    l.WriteToLog("[CreateStory]", ex.ToString(), 1);
+                    return false;
+                }
+            }
+        }
         #endregion
 
         #region READ
