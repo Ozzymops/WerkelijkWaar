@@ -17,5 +17,8 @@ namespace WerkelijkWaar.Classes
         public DateTime Date { get; set; }
         public int Status { get; set; }
         public int Source { get; set; }
+
+        // Game
+        public int GameGroup { get; set; }
     }
 }

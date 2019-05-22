@@ -13,6 +13,7 @@
             <input id="usernameInput" type="hidden" value="@Model.User.Username" />
             <input id="roomInput" type="hidden" value="" />
             <input id="roleId" type="hidden" value="@Model.User.RoleId" />
+            <input id="storySource" type="hidden" value="0" />
             <!-- Student -->
             @if (Model.User.RoleId == 0)
             {
@@ -73,6 +74,38 @@
                     </div>
                     <span id="clockBar" style="display: none; margin-left: auto; margin-right: auto; width: 100vw; height: 50px; background-color: #f7c747;"><p class="before-input" style="text-align: center;" id="clock"></p></span>
                 </div>
+                <div id="game-read" style="display: none; background-color: #6ac2c4; width: 100vw;">
+                    <div style="display: flex; flex-direction: column;">
+                        <div style="display: flex; flex-direction: row;">
+                            <div>
+                                <p id="storySpot-1"></p>
+                                <input id="storyButton-1" class="form-button" type="button" value="story-1" />
+                            </div>
+                            <div>
+                                <p id="storySpot-2"></p>
+                                <input id="storyButton-2" class="form-button" type="button" value="story-2" />
+                            </div>
+                            <div>
+                                <p id="storySpot-3"></p>
+                                <input id="storyButton-3" class="form-button" type="button" value="story-3" />
+                            </div>
+                        </div>
+                        <div style="display: flex; flex-direction: row;">
+                            <div>
+                                <p id="storySpot-4"></p>
+                                <input id="storyButton-4" class="form-button" type="button" value="story-4" />
+                            </div>
+                            <div>
+                                <p id="storySpot-5"></p>
+                                <input id="storyButton-5" class="form-button" type="button" value="story-5" />
+                            </div>
+                            <div>
+                                <p id="storySpot-6"></p>
+                                <input id="storyButton-6" class="form-button" type="button" value="story-6" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
             }
             <!-- Docent -->
             @if (Model.User.RoleId == 1)
@@ -80,9 +113,6 @@
                 <audio id="snd-timer-1" src="~/content/audio/Timer1.wav"></audio>
                 <audio id="snd-timer-2" src="~/content/audio/Timer2.wav"></audio>
                 <audio id="snd-timer-3" src="~/content/audio/Timer3.wav"></audio>
-                <audio id="snd-ticktock-1" src="~/content/audio/TickTock1.wav"></audio>
-                <audio id="snd-ticktock-2" src="~/content/audio/TickTock2.wav"></audio>
-                <audio id="snd-ticktock-3" src="~/content/audio/TickTock3.wav"></audio>
                 <audio id="snd-timesup" src="~/content/audio/TimesUp.wav"></audio>
                 <audio id="snd-correct" src="~/content/audio/Correct.wav" autoplay></audio>
                 <audio id="snd-wrong" src="~/content/audio/Wrong.wav"></audio>
@@ -109,6 +139,7 @@
                     <p>Je hebt gehoord dat mensen bakken met geld verdienen door het verspreiden van nepnieuws.<br />Hoe moeilijk kan het zijn om zelf nep berichten te verspreiden?</p>
                     <p>Schrijf zelf nep berichten en verdien genoeg om een nieuwe telefoon te kopen.</p>
                     <input class="btn-nextTutorial" type="button" value="Volgende" />
+                    <input id="btn-skipTutorial" type="button" value="Overslaan" />
                 </div>
                 <div id="game-tutorial-2" style="display: none; background-color: #6ac2c4; width: 100vw;">
                     <p>Om geld te verdienen heb je volgers nodig.</p>
@@ -128,6 +159,38 @@
                 <div id="game-write" style="display: none; background-color: #6ac2c4; width: 100vw;">
                     <p>Wachten op verhalen...</p>
                     <span id="clockBar" style="display: none; margin-left: auto; margin-right: auto; width: 100vw; height: 50px; background-color: #f7c747;"><p class="before-input" style="text-align: center;" id="clock"></p></span>
+                </div>
+                <div id="game-read" style="display: none; background-color: #6ac2c4; width: 100vw;">
+                    <div style="display: flex; flex-direction: column;">
+                        <div style="display: flex; flex-direction: row;">
+                            <div>
+                                <p id="storySpot-1"></p>
+                                <input id="storyButton-1" class="form-button" type="button" value="story-1" />
+                            </div>
+                            <div>
+                                <p id="storySpot-2"></p>
+                                <input id="storyButton-2" class="form-button" type="button" value="story-2" />
+                            </div>
+                            <div>
+                                <p id="storySpot-3"></p>
+                                <input id="storyButton-3" class="form-button" type="button" value="story-3" />
+                            </div>
+                        </div>
+                        <div style="display: flex; flex-direction: row;">
+                            <div>
+                                <p id="storySpot-4"></p>
+                                <input id="storyButton-4" class="form-button" type="button" value="story-4" />
+                            </div>
+                            <div>
+                                <p id="storySpot-5"></p>
+                                <input id="storyButton-5" class="form-button" type="button" value="story-5" />
+                            </div>
+                            <div>
+                                <p id="storySpot-6"></p>
+                                <input id="storyButton-6" class="form-button" type="button" value="story-6" />
+                            </div>
+                        </div>
+                    </div>
                 </div>
             }
             <!-- Beheerder -->

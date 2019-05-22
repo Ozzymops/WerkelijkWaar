@@ -1,76 +1,171 @@
 ---[LOGGER MSG START]---
-Startup - 09:47:40 : woensdag 22 mei 2019
+Startup - 14:11:21 : woensdag 22 mei 2019
 >Starting server...
 >Server is up and running!
 ---[LOGGER  MSG  END]---
 
 ---[LOGGER MSG START]---
-[CheckLogin] - 09:47:43 : woensdag 22 mei 2019
->Checking log in for user JMuris
->Something went wrong: System.Data.SqlClient.SqlException (0x80131904): Cannot open database "TrustMeDb" requested by the login. The login failed.
-Login failed for user 'DBMASTER'.
-   at System.Data.SqlClient.SqlInternalConnectionTds..ctor(DbConnectionPoolIdentity identity, SqlConnectionString connectionOptions, SqlCredential credential, Object providerInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString userConnectionOptions, SessionData reconnectSessionData, Boolean applyTransientFaultHandling, String accessToken)
-   at System.Data.SqlClient.SqlConnectionFactory.CreateConnection(DbConnectionOptions options, DbConnectionPoolKey poolKey, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningConnection, DbConnectionOptions userOptions)
-   at System.Data.ProviderBase.DbConnectionFactory.CreatePooledConnection(DbConnectionPool pool, DbConnection owningObject, DbConnectionOptions options, DbConnectionPoolKey poolKey, DbConnectionOptions userOptions)
-   at System.Data.ProviderBase.DbConnectionPool.CreateObject(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
-   at System.Data.ProviderBase.DbConnectionPool.UserCreateRequest(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
-   at System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
-   at System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal& connection)
-   at System.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
-   at System.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
-   at System.Data.ProviderBase.DbConnectionClosed.TryOpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
-   at System.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry)
-   at System.Data.SqlClient.SqlConnection.Open()
-   at WerkelijkWaar.Classes.DatabaseQueries.CheckLogin(String username, String password) in C:\Users\Justin Muris\source\repos\WerkelijkWaar\WerkelijkWaar\Classes\DatabaseQueries.cs:line 211
-ClientConnectionId:7b7d77ac-37ef-4460-abdf-21d8bb9178a4
-Error Number:4060,State:1,Class:11
+[CheckLogin] - 14:11:28 : woensdag 22 mei 2019
+>Checking log in for user AAppel
+---[LOGGER MSG START]---
+[RetrieveUser] - 14:11:28 : woensdag 22 mei 2019
+>Attempting to retrieve user with id 5
+>Found user with id 5
 ---[LOGGER  MSG  END]---
 
 ---[LOGGER MSG START]---
-Startup - 09:48:13 : woensdag 22 mei 2019
->Starting server...
->Server is up and running!
----[LOGGER  MSG  END]---
-
----[LOGGER MSG START]---
-[CheckLogin] - 09:48:16 : woensdag 22 mei 2019
+[CheckLogin] - 14:11:29 : woensdag 22 mei 2019
 >Checking log in for user JMuris
 ---[LOGGER MSG START]---
-[RetrieveUser] - 09:48:16 : woensdag 22 mei 2019
+[RetrieveUser] - 14:11:29 : woensdag 22 mei 2019
 >Attempting to retrieve user with id 4
 >Found user with id 4
 ---[LOGGER  MSG  END]---
 
 ---[LOGGER MSG START]---
-[CheckLogin] - 09:48:28 : woensdag 22 mei 2019
->Checking log in for user Admin
----[LOGGER MSG START]---
-[RetrieveUser] - 09:48:28 : woensdag 22 mei 2019
->Attempting to retrieve user with id 3
->Found user with id 3
+[RetrieveAllStories] - 14:11:55 : woensdag 22 mei 2019
+>Attempting to retrieve all stories.
+>Found 9 stories.
 ---[LOGGER  MSG  END]---
 
 ---[LOGGER MSG START]---
-[CheckLogin] - 09:48:50 : woensdag 22 mei 2019
->Checking log in for user System
----[LOGGER MSG START]---
-[RetrieveUser] - 09:48:50 : woensdag 22 mei 2019
->Attempting to retrieve user with id 1
->Found user with id 1
+[Game] - 14:12:11 : woensdag 22 mei 2019
+>Find root story for AAppel
+>9:!|G:!|kjhfgfsdreaw
 ---[LOGGER  MSG  END]---
 
 ---[LOGGER MSG START]---
-[CheckLogin] - 09:49:25 : woensdag 22 mei 2019
->Checking log in for user ÜberAdmin
->Log in not found for user ÜberAdmin
+[Game] - 14:12:11 : woensdag 22 mei 2019
+>Find root story for AAppel
+>9:!|G:!|kjhfgfsdreaw
 ---[LOGGER  MSG  END]---
 
 ---[LOGGER MSG START]---
-[CheckLogin] - 09:49:36 : woensdag 22 mei 2019
->Checking log in for user UberAdmin
+[Game] - 14:12:11 : woensdag 22 mei 2019
+>Find root story for AAppel
+>9:!|G:!|kjhfgfsdreaw
+---[LOGGER  MSG  END]---
+
 ---[LOGGER MSG START]---
-[RetrieveUser] - 09:49:36 : woensdag 22 mei 2019
->Attempting to retrieve user with id 2
->Found user with id 2
+[Game] - 14:12:11 : woensdag 22 mei 2019
+>Find root story for AAppel
+---[LOGGER MSG START]---
+Startup - 14:13:04 : woensdag 22 mei 2019
+>Starting server...
+>Server is up and running!
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[CheckLogin] - 14:13:10 : woensdag 22 mei 2019
+>Checking log in for user AAppel
+---[LOGGER MSG START]---
+[RetrieveUser] - 14:13:10 : woensdag 22 mei 2019
+>Attempting to retrieve user with id 5
+>Found user with id 5
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[CheckLogin] - 14:13:11 : woensdag 22 mei 2019
+>Checking log in for user JMuris
+---[LOGGER MSG START]---
+[RetrieveUser] - 14:13:11 : woensdag 22 mei 2019
+>Attempting to retrieve user with id 4
+>Found user with id 4
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[RetrieveAllStories] - 14:13:30 : woensdag 22 mei 2019
+>Attempting to retrieve all stories.
+>Found 9 stories.
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[Game] - 14:13:31 : woensdag 22 mei 2019
+>Find root story for AAppel
+>8:!|F:!|hgdjdhjgdh
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[Game] - 14:13:31 : woensdag 22 mei 2019
+>Find root story for AAppel
+>8:!|F:!|hgdjdhjgdh
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[Game] - 14:13:31 : woensdag 22 mei 2019
+>Find root story for AAppel
+>8:!|F:!|hgdjdhjgdh
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[Game] - 14:13:31 : woensdag 22 mei 2019
+>Find root story for AAppel
+>6:!|C:!|jhgfjhfjhf
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[Game] - 14:13:31 : woensdag 22 mei 2019
+>Find root story for AAppel
+>6:!|C:!|jhgfjhfjhf
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[Game] - 14:13:31 : woensdag 22 mei 2019
+>Find root story for AAppel
+>6:!|C:!|jhgfjhfjhf
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[Game] - 14:13:41 : woensdag 22 mei 2019
+>7b487d8e-a7d5-43a0-a47e-d477150fa6f5
+---[LOGGER MSG START]---
+[Game] - 14:13:41 : woensdag 22 mei 2019
+>Story from 0 - Fff: asdsadasd
+>End
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[Game] - 14:13:44 : woensdag 22 mei 2019
+>020cac4c-b762-4f9a-854e-4a54b27808c1
+---[LOGGER MSG START]---
+[Game] - 14:13:44 : woensdag 22 mei 2019
+>Story from 0 - FASffffff: ASDsadas
+>End
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[Game] - 14:13:48 : woensdag 22 mei 2019
+>019b1cd6-fcfe-4da6-9266-639a11f98cf3
+---[LOGGER MSG START]---
+[Game] - 14:13:48 : woensdag 22 mei 2019
+>Story from 0 - Cccsadas: dsadasdsa
+>End
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[Game] - 14:13:51 : woensdag 22 mei 2019
+>6604fc5b-57ab-435f-91d1-8b84ecdadfa9
+---[LOGGER MSG START]---
+[Game] - 14:13:51 : woensdag 22 mei 2019
+>Story from 0 - Cdsad: hgfhdgdhfd
+>End
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[Game] - 14:13:54 : woensdag 22 mei 2019
+>1d043ebc-7e80-47e4-b36b-6d77b1d5f8e9
+---[LOGGER MSG START]---
+[Game] - 14:13:54 : woensdag 22 mei 2019
+>Story from 0 - C: dsadsadasd
+>End
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[Game] - 14:13:58 : woensdag 22 mei 2019
+>74f5aa72-d326-4968-932b-2831dd4249b6
+---[LOGGER MSG START]---
+[Game] - 14:13:58 : woensdag 22 mei 2019
+>Story from 0 - F: uyrjhg
+>End
 ---[LOGGER  MSG  END]---
 

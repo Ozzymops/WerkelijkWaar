@@ -185,11 +185,47 @@ $(document).ready(function () {
     }
 
     // Retrieve root stories
-    connection.clientMethods["retrieveRootStories"] = (roomCode, socketId, title, description) => {
+    connection.clientMethods["retrieveRootStory"] = (roomCode, socketId, story) => {
         if ($roomContent.val() == roomCode) {
             if (socketId == connection.connectionId) {
-                document.getElementById("storyTitle").innerHTML = title;
-                document.getElementById("storyText").innerHTML = description;
+                var tempStory = story;
+                var tempArray = tempStory.split(":!|");
+
+                currentStory = tempArray[0];
+                document.getElementById("storyTitle").innerHTML = tempArray[1];
+                document.getElementById("storyText").innerHTML = tempArray[2];
+            }
+        }
+    }
+
+    // Show written stories
+    connection.clientMethods["showStories"] = (socketId, roomCode, stories) => {
+        if (socketId == connection.connectionId) {
+            if ($roomContent.val() == roomCode) {
+                var stories = JSON.parse(stories);
+
+                $('#stories').empty();
+
+                var storyCount = 1;
+
+                for (var s in stories) {
+                    if (storyCount < 6) {
+                        var tempString = stories[s];
+                        var tempArray = tempString.split(':|!');
+
+                        // 0 = id, 1 = title, 2 = story
+                        //$('#stories').append('<li>' + tempArray[0] + " - " + + tempArray[1] + ": " + tempArray[2] + '</li>');
+                        var contentString = tempArray[0] + ". " + tempArray[1] + ": " + tempArray[2];
+                        console.Log(contentString);
+
+                        var paragraphToEdit = "storySpot-" + storyCount;
+                        var buttonToEdit = "#storyButton-" + storyCount;
+
+                        document.getElementById(paragraphToEdit).innerHTML = contentString;
+                        $(buttonToEdit).prop('value', tempArray[1]);
+                        storyCount++;
+                    }
+                }
             }
         }
     }
@@ -204,6 +240,8 @@ $(document).ready(function () {
     var inRoom = false;
     var timer = 0;
     var soundState = 0;
+    var currentTimer;
+    var currentStory = 0;
 
     // Host a room
     $('#btn-openLobby').click(function () {
@@ -274,6 +312,11 @@ $(document).ready(function () {
         tutorialPage();
     });
 
+    // Skip tutorial
+    $('#btn-skipTutorial').click(function () {
+        connection.invoke("SkipTutorial", $roomContent.val());
+    });
+
     $('#btn-sendStory').click(function () {
         sendStory();
     });
@@ -282,12 +325,14 @@ $(document).ready(function () {
     function startTimer(duration) {
         document.getElementById("clockBar").style.display = "block";
 
+        clearInterval(currentTimer);
+
         var maxSeconds = duration;
         // timer = duration, seconds;
         var seconds = maxSeconds;
         timer = maxSeconds;
 
-        var currentTimer = setInterval(function () {
+        currentTimer = setInterval(function () {
             seconds = timer;
             document.getElementById("clock").textContent = seconds;
             document.getElementById("clockBar").style.width = (seconds / maxSeconds * 100) + "vw";
@@ -328,6 +373,7 @@ $(document).ready(function () {
         document.getElementById("clockBar").style.display = "none";
 
         timer = 0;
+        clearInterval(currentTimer);
     }
 
     function hideNavigation() {
@@ -372,22 +418,38 @@ $(document).ready(function () {
         }
     }
 
+    function startReading() {
+        document.getElementById("game-tutorial-1").style.display = "none";
+        document.getElementById("game-tutorial-2").style.display = "none";
+        document.getElementById("game-tutorial-3").style.display = "none";
+        document.getElementById("game-waiting").style.display = "none";
+        document.getElementById("game-write").style.display = "none";
+        document.getElementById("game-read").style.display = "block";
+    }
+
     function startWriting() {
         document.getElementById("game-tutorial-1").style.display = "none";
         document.getElementById("game-tutorial-2").style.display = "none";
         document.getElementById("game-tutorial-3").style.display = "none";
         document.getElementById("game-waiting").style.display = "none";
         document.getElementById("game-write").style.display = "block";
+        document.getElementById("game-read").style.display = "none";
     }
 
     function sendStory() {
+        var $storySource = $('#storySource').val();
         var $storyTitle = $('#writtenStoryTitle').val();
         var $storyText = $('#writtenStoryText').val();
 
         document.getElementById("write-busy").style.display = "none";
         document.getElementById("write-finished").style.display = "block";
 
-        connection.invoke("UploadStory", $roomContent.val(), connection.connectionId, $storyTitle, $storyText);
+        console.log($storySource);
+        console.log($storyTitle);
+        console.log($storyText);
+
+        var story = $storySource + "_+_" + $storyTitle + "_+_" + $storyText;
+        connection.invoke("UploadStory", $roomContent.val(), connection.connectionId, story);
     }
     //#endregion
 

@@ -23,9 +23,11 @@ namespace WerkelijkWaar.Classes
         public enum State { Waiting, Writing, Reading, Finished, Dead };
         public List<Classes.User> Users { get; set; } = new List<Classes.User>();
         public List<List<Classes.User>> Groups { get; set; } = new List<List<Classes.User>>();
-        public List<Classes.Story> Stories { get; set; } = new List<Classes.Story>();
+        public List<Classes.Story> RetrievedStories { get; set; } = new List<Classes.Story>();
+        public List<Classes.Story> WrittenStories { get; set; } = new List<Classes.Story>();
         public int RemainingTime { get; set; }
         public int NumberOfReadyPlayers { get; set; }
+        public int CurrentGroup = 0;
 
         // Configuration
 
@@ -206,7 +208,7 @@ namespace WerkelijkWaar.Classes
 
                 for (int group = 1; group < currentGroup; group++)
                 {
-                    Stories.Add(shuffledStories[group - 1]);
+                    RetrievedStories.Add(shuffledStories[group - 1]);
                 }
 
                 return true;
