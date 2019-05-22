@@ -176,6 +176,74 @@ namespace WerkelijkWaar.Classes
                 }
             }
         }
+
+        public bool CreateGroup(Group group)
+        {
+            l.WriteToLog("[CreateGroup]", "Trying to create group with name " + group.GroupName, 0);
+
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                SqlCommand command = new SqlCommand("INSERT INTO [Group] SELECT @SchoolId, @GroupId, @GroupName", connection);
+
+                command.Parameters.Add(new SqlParameter("@SchoolId", group.SchoolId));
+                command.Parameters.Add(new SqlParameter("@GroupId", group.GroupId));
+                command.Parameters.Add(new SqlParameter("@GroupName", group.GroupName));
+
+                try
+                {
+                    connection.Open();
+
+                    int rows = command.ExecuteNonQuery();
+
+                    if (rows > 0)
+                    {
+                        l.WriteToLog("[CreateGroup]", "Group with name " + group.GroupName + " successfully added.", 1);
+                        return true;
+                    }
+
+                    l.WriteToLog("[CreateGroup]", "Failed to add group with name " + group.GroupName + ".", 1);
+                    return false;
+                }
+                catch (Exception ex)
+                {
+                    l.WriteToLog("[CreateGroup]", ex.ToString(), 1);
+                    return false;
+                }
+            }
+        }
+
+        public bool CreateSchool(School school)
+        {
+            l.WriteToLog("[CreateSchool]", "Trying to create school with name " + school.SchoolName, 0);
+
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                SqlCommand command = new SqlCommand("INSERT INTO [School] SELECT @SchoolName", connection);
+
+                command.Parameters.Add(new SqlParameter("@SchoolName", school.SchoolName));
+
+                try
+                {
+                    connection.Open();
+
+                    int rows = command.ExecuteNonQuery();
+
+                    if (rows > 0)
+                    {
+                        l.WriteToLog("[CreateSchool]", "School with name " + school.SchoolName + " successfully added.", 1);
+                        return true;
+                    }
+
+                    l.WriteToLog("[CreateSchool]", "Failed to add school with name " + school.SchoolName + ".", 1);
+                    return false;
+                }
+                catch (Exception ex)
+                {
+                    l.WriteToLog("[CreateSchool]", ex.ToString(), 1);
+                    return false;
+                }
+            }
+        }
         #endregion
 
         #region READ
