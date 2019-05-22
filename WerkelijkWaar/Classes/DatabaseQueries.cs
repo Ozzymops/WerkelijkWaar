@@ -144,7 +144,7 @@ namespace WerkelijkWaar.Classes
 
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
-                SqlCommand command = new SqlCommand("INSERT INTO [Story] SELECT @ownerId, @isRoot, @title, @description, @date, @status", connection);
+                SqlCommand command = new SqlCommand("INSERT INTO [Story] SELECT @ownerId, @isRoot, @title, @description, @date, @status, @source", connection);
 
                 command.Parameters.Add(new SqlParameter("@ownerId", story.OwnerId));
                 command.Parameters.Add(new SqlParameter("@isRoot", false));
@@ -152,6 +152,7 @@ namespace WerkelijkWaar.Classes
                 command.Parameters.Add(new SqlParameter("@description", story.Description));
                 command.Parameters.Add(new SqlParameter("@date", story.Date));
                 command.Parameters.Add(new SqlParameter("@status", 2));
+                command.Parameters.Add(new SqlParameter("@source", story.Source));
 
                 try
                 {
@@ -257,7 +258,7 @@ namespace WerkelijkWaar.Classes
                                 User newUser = new User
                                 {
                                     Id = (int)reader["Id"],
-                                    Group = (int)reader["uGroup"],
+                                    Group = (int)reader["GroupId"],
                                     Name = (string)reader["Name"],
                                     Surname = (string)reader["Surname"],
                                     Username = (string)reader["Username"],
@@ -297,7 +298,7 @@ namespace WerkelijkWaar.Classes
 
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
-                SqlCommand command = new SqlCommand("SELECT * FROM [User] WHERE [uGroup] = @group AND [RoleId] = 0", connection);
+                SqlCommand command = new SqlCommand("SELECT * FROM [User] WHERE [GroupId] = @group AND [RoleId] = 0", connection);
                 command.Parameters.Add(new SqlParameter("@group", group));
 
                 List<User> UserList = new List<User>();
@@ -317,7 +318,7 @@ namespace WerkelijkWaar.Classes
                                 User newUser = new User
                                 {
                                     Id = (int)reader["Id"],
-                                    Group = (int)reader["uGroup"],
+                                    Group = (int)reader["GroupId"],
                                     Name = (string)reader["Name"],
                                     Surname = (string)reader["Surname"],
                                     Username = (string)reader["Username"],
@@ -379,7 +380,7 @@ namespace WerkelijkWaar.Classes
                                 User newUser = new User
                                 {
                                     Id = (int)reader["Id"],
-                                    Group = (int)reader["uGroup"],
+                                    Group = (int)reader["GroupId"],
                                     Name = (string)reader["Name"],
                                     Surname = (string)reader["Surname"],
                                     Username = (string)reader["Username"],
@@ -520,7 +521,8 @@ namespace WerkelijkWaar.Classes
                                     Description = (string)reader["Description"],
                                     IsRoot = Convert.ToBoolean(reader["IsRoot"]),
                                     Title = (string)reader["Title"],
-                                    Status = (int)reader["Status"]
+                                    Status = (int)reader["Status"],
+                                    Source = (int)reader["Source"]
                                 };
 
                                 StoryList.Add(newStory);
@@ -577,7 +579,8 @@ namespace WerkelijkWaar.Classes
                                     Description = (string)reader["Description"],
                                     IsRoot = Convert.ToBoolean(reader["IsRoot"]),
                                     Title = (string)reader["Title"],
-                                    Status = (int)reader["Status"]
+                                    Status = (int)reader["Status"],
+                                    Source = (int)reader["Source"]
                                 };
 
                                 StoryList.Add(newStory);
@@ -634,7 +637,8 @@ namespace WerkelijkWaar.Classes
                                     Description = (string)reader["Description"],
                                     Date = (DateTime)reader["Date"],
                                     IsRoot = Convert.ToBoolean(reader["IsRoot"]),
-                                    Status = (int)reader["Status"]
+                                    Status = (int)reader["Status"],
+                                    Source = (int)reader["Source"]
                                 };
                             }
                         }
@@ -685,7 +689,8 @@ namespace WerkelijkWaar.Classes
                                     Description = (string)reader["Description"],
                                     IsRoot = Convert.ToBoolean(reader["IsRoot"]),
                                     Title = (string)reader["Title"],
-                                    Status = (int)reader["Status"]
+                                    Status = (int)reader["Status"],
+                                    Source = (int)reader["Source"]
                                 };
 
                                 StoryList.Add(newStory);

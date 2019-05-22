@@ -13,9 +13,10 @@ namespace WerkelijkWaar.Classes
         public string RoomOwnerId { get; set; }
         public string RoomOwner { get; set; }
         public State RoomState { get; set; }
+        public Configuration Config { get; set; }
         public int MaxIdleStrikes = 3;
         public int MaxProgressStrikes = 20;
-        public int MaxPlayers = 9;
+        public int MaxPlayers = 30;
         public int MinPlayers = 3;
         // Dynamic
         public int CurrentStrikes;
@@ -53,7 +54,7 @@ namespace WerkelijkWaar.Classes
         /// <summary>
         /// Generate code - random six digit code consisting of upper- and lowercase letters and numbers.
         /// </summary>
-        public void GenerateCode()
+        private void GenerateCode()
         {
             string code = "";
 

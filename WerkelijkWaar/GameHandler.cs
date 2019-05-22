@@ -368,7 +368,7 @@ namespace WerkelijkWaar
                     {
                         // continue to write phase
                         await InvokeClientMethodToAllAsync("goToWritePhase", roomCode);
-                        await StartGameTimer(roomCode, 120, room.RoomOwnerId);
+                        await StartGameTimer(roomCode, 600, room.RoomOwnerId);
                     }
                 }
             }
