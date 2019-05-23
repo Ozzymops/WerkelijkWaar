@@ -72,39 +72,30 @@
                     <div id="write-finished" style="display: none;">
                         <p class="before-input">Verhaal ingezonden! Wachten op de rest...</p>
                     </div>
-                    <span id="clockBar" style="display: none; margin-left: auto; margin-right: auto; width: 100vw; height: 50px; background-color: #f7c747;"><p class="before-input" style="text-align: center;" id="clock"></p></span>
+                    <span class="clockBar" style="display: none; margin-left: auto; margin-right: auto; width: 100vw; height: 50px; background-color: #f7c747; text-align: center;"></span>
                 </div>
                 <div id="game-read" style="display: none; background-color: #6ac2c4; width: 100vw;">
-                    <div style="display: flex; flex-direction: column;">
-                        <div style="display: flex; flex-direction: row;">
+                    <div style="display: flex; flex-direction: row;">
+                        <div style="display: flex; flex-direction: column;">
+                            <p>Welk artikel deel je?</p>
                             <div>
-                                <p id="storySpot-1"></p>
-                                <input id="storyButton-1" class="form-button" type="button" value="story-1" />
-                            </div>
-                            <div>
-                                <p id="storySpot-2"></p>
-                                <input id="storyButton-2" class="form-button" type="button" value="story-2" />
-                            </div>
-                            <div>
-                                <p id="storySpot-3"></p>
-                                <input id="storyButton-3" class="form-button" type="button" value="story-3" />
+                                <input id="storySpot-1" type="button" class="form-button" value="" />
+                                <input id="storySpot-2" type="button" class="form-button" value="" />
+                                <input id="storySpot-3" type="button" class="form-button" value="" />
+                                <input id="storySpot-4" type="button" class="form-button" value="" />
+                                <input id="storySpot-5" type="button" class="form-button" value="" />
+                                <input id="storySpot-6" type="button" class="form-button" value="" />
+                                <input id="storySpot-7" type="button" class="form-button" value="" />
                             </div>
                         </div>
-                        <div style="display: flex; flex-direction: row;">
-                            <div>
-                                <p id="storySpot-4"></p>
-                                <input id="storyButton-4" class="form-button" type="button" value="story-4" />
-                            </div>
-                            <div>
-                                <p id="storySpot-5"></p>
-                                <input id="storyButton-5" class="form-button" type="button" value="story-5" />
-                            </div>
-                            <div>
-                                <p id="storySpot-6"></p>
-                                <input id="storyButton-6" class="form-button" type="button" value="story-6" />
-                            </div>
+                        <div>
+                            <p id="readStoryTitle"></p>
+                            <text id="readStoryText"></text>
+                            <input id="btn-share" class="form-button" type="button" value="Delen" />
+                            <input id="btn-powerup" class="form-button" type="button" value="Hulplijn" />
                         </div>
                     </div>
+                    <span class="clockBar" style="display: none; margin-left: auto; margin-right: auto; width: 100vw; height: 50px; background-color: #f7c747; text-align: center;"></span>
                 </div>
             }
             <!-- Docent -->
@@ -158,39 +149,37 @@
                 </div>
                 <div id="game-write" style="display: none; background-color: #6ac2c4; width: 100vw;">
                     <p>Wachten op verhalen...</p>
-                    <span id="clockBar" style="display: none; margin-left: auto; margin-right: auto; width: 100vw; height: 50px; background-color: #f7c747;"><p class="before-input" style="text-align: center;" id="clock"></p></span>
+                    <span class="clockBar" style="display: none; margin-left: auto; margin-right: auto; width: 100vw; height: 50px; background-color: #f7c747; text-align: center;"></span>
                 </div>
                 <div id="game-read" style="display: none; background-color: #6ac2c4; width: 100vw;">
                     <div style="display: flex; flex-direction: column;">
                         <div style="display: flex; flex-direction: row;">
                             <div>
-                                <p id="storySpot-1"></p>
-                                <input id="storyButton-1" class="form-button" type="button" value="story-1" />
+                                <input id="storySpot-1" type="button" value="" />
                             </div>
                             <div>
-                                <p id="storySpot-2"></p>
-                                <input id="storyButton-2" class="form-button" type="button" value="story-2" />
+                                <input id="storySpot-2" type="button" value="" />
                             </div>
                             <div>
-                                <p id="storySpot-3"></p>
-                                <input id="storyButton-3" class="form-button" type="button" value="story-3" />
+                                <input id="storySpot-3" type="button" value="" />
                             </div>
                         </div>
                         <div style="display: flex; flex-direction: row;">
                             <div>
-                                <p id="storySpot-4"></p>
-                                <input id="storyButton-4" class="form-button" type="button" value="story-4" />
+                                <input id="storySpot-4" type="button" value="" />
                             </div>
                             <div>
-                                <p id="storySpot-5"></p>
-                                <input id="storyButton-5" class="form-button" type="button" value="story-5" />
+                                <input id="storySpot-5" type="button" value="" />
                             </div>
                             <div>
-                                <p id="storySpot-6"></p>
-                                <input id="storyButton-6" class="form-button" type="button" value="story-6" />
+                                <input id="storySpot-6" type="button" value="" />
+                            </div>
+                            <div>
+                                <input id="storySpot-7" type="button" value="" />
                             </div>
                         </div>
                     </div>
+                    <span class="clockBar" style="display: none; margin-left: auto; margin-right: auto; width: 100vw; height: 50px; background-color: #f7c747; text-align: center;"></span>
                 </div>
             }
             <!-- Beheerder -->

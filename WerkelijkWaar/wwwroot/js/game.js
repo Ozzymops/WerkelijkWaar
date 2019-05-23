@@ -125,8 +125,11 @@ $(document).ready(function () {
 
     //#region Game
     // Start game with current lobby
-    connection.clientMethods["startGame"] = (roomCode) => {
+    connection.clientMethods["startGame"] = (roomCode, gameGroup) => {
         if ($roomContent.val() == roomCode) {
+
+            myGroup = gameGroup;
+            console.log(myGroup + " " + gameGroup);
 
             // Hide irrelevant elements
             document.getElementById("game-connected").style.display = "none";
@@ -188,44 +191,60 @@ $(document).ready(function () {
     connection.clientMethods["retrieveRootStory"] = (roomCode, socketId, story) => {
         if ($roomContent.val() == roomCode) {
             if (socketId == connection.connectionId) {
-                var tempStory = story;
-                var tempArray = tempStory.split(":!|");
+                var rootStory = story;
+                var rootStoryContent = rootStory.split(':!|');
 
-                currentStory = tempArray[0];
-                document.getElementById("storyTitle").innerHTML = tempArray[1];
-                document.getElementById("storyText").innerHTML = tempArray[2];
+                var rootStoryId = rootStoryContent[0];
+                var rootStoryTitle = rootStoryContent[1];
+                var rootStoryText = rootStoryContent[2];
+                console.log("RootStory: " + rootStoryId + ". " + rootStoryTitle + ": " + rootStoryText);
+
+                currentRootId = rootStoryId;
+
+                $('#storyTitle').html(rootStoryTitle);
+                $('#storyText').html(rootStoryText);
             }
         }
     }
 
     // Show written stories
-    connection.clientMethods["showStories"] = (socketId, roomCode, stories) => {
-        if (socketId == connection.connectionId) {
-            if ($roomContent.val() == roomCode) {
-                var stories = JSON.parse(stories);
-
-                $('#stories').empty();
-
+    connection.clientMethods["showStories"] = (gameGroup, roomCode, stories) => {
+        if ($roomContent.val() == roomCode) {
+            if (gameGroup != myGroup) {
                 var storyCount = 1;
+                storyList = JSON.parse(stories);
 
-                for (var s in stories) {
-                    if (storyCount < 6) {
-                        var tempString = stories[s];
-                        var tempArray = tempString.split(':|!');
+                for (var story in storyList) {
+                    if (storyCount <= 7) {
+                        var selectedStory = storyList[story];
+                        var selectedStoryContent = selectedStory.split(':!|');
 
-                        // 0 = id, 1 = title, 2 = story
-                        //$('#stories').append('<li>' + tempArray[0] + " - " + + tempArray[1] + ": " + tempArray[2] + '</li>');
-                        var contentString = tempArray[0] + ". " + tempArray[1] + ": " + tempArray[2];
-                        console.Log(contentString);
+                        var storyId = selectedStoryContent[0];
+                        var storyTitle = selectedStoryContent[1];
+                        var storyText = selectedStoryContent[2];
+                        var storySpot = '#storySpot-' + storyCount;
 
-                        var paragraphToEdit = "storySpot-" + storyCount;
-                        var buttonToEdit = "#storyButton-" + storyCount;
+                        console.log("WrittenStory: " + storyId + ". " + storyTitle + ": " + storyText + " FOR spot " + storySpot);
 
-                        document.getElementById(paragraphToEdit).innerHTML = contentString;
-                        $(buttonToEdit).prop('value', tempArray[1]);
+                        $(storySpot).prop('value', storyTitle);
+
+                        console.log($(storySpot).val());
+
+                        if (storyCount == 1) {
+                            $('#readStoryTitle').html(storyTitle);
+                            $('#readStoryText').html(storyText);
+                        }
+
+                        if ($(storySpot).val() == undefined) {
+                            $(storySpot).prop('display', 'none');
+                        }
+
                         storyCount++;
                     }
                 }
+            }
+            else {
+                // show wait screen
             }
         }
     }
@@ -241,7 +260,9 @@ $(document).ready(function () {
     var timer = 0;
     var soundState = 0;
     var currentTimer;
-    var currentStory = 0;
+    var currentRootId = 0;
+    var myGroup = 0;
+    var tempStories;
 
     // Host a room
     $('#btn-openLobby').click(function () {
@@ -323,7 +344,7 @@ $(document).ready(function () {
 
     // Start timer
     function startTimer(duration) {
-        document.getElementById("clockBar").style.display = "block";
+        $('.clockBar').css('display', 'block');
 
         clearInterval(currentTimer);
 
@@ -334,8 +355,10 @@ $(document).ready(function () {
 
         currentTimer = setInterval(function () {
             seconds = timer;
-            document.getElementById("clock").textContent = seconds;
-            document.getElementById("clockBar").style.width = (seconds / maxSeconds * 100) + "vw";
+            $('.clockBar').html(seconds);
+            $('.clockBar').css('width', (seconds / maxSeconds * 100) + "vw")
+            // document.getElementById("clockBar").innerHTML = seconds;
+            // document.getElementById("clockBar").style.width = (seconds / maxSeconds * 100) + "vw";
 
             if ($roleContent.val() == 1) {
                 if ((seconds / maxSeconds * 100) > 25 && soundState == 0) {
@@ -370,7 +393,7 @@ $(document).ready(function () {
 
     // Stop timer
     function stopTimer() {
-        document.getElementById("clockBar").style.display = "none";
+        $('.clockBar').css('display', 'none');
 
         timer = 0;
         clearInterval(currentTimer);
@@ -434,19 +457,19 @@ $(document).ready(function () {
         document.getElementById("game-waiting").style.display = "none";
         document.getElementById("game-write").style.display = "block";
         document.getElementById("game-read").style.display = "none";
+
+        $('#btn-sendStory').prop('disabled', false);
     }
 
     function sendStory() {
+        $('#btn-sendStory').prop('disabled', true);
+
         var $storySource = $('#storySource').val();
         var $storyTitle = $('#writtenStoryTitle').val();
         var $storyText = $('#writtenStoryText').val();
 
         document.getElementById("write-busy").style.display = "none";
         document.getElementById("write-finished").style.display = "block";
-
-        console.log($storySource);
-        console.log($storyTitle);
-        console.log($storyText);
 
         var story = $storySource + "_+_" + $storyTitle + "_+_" + $storyText;
         connection.invoke("UploadStory", $roomContent.val(), connection.connectionId, story);

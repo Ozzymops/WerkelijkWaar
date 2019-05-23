@@ -169,3 +169,2292 @@ Startup - 14:13:04 : woensdag 22 mei 2019
 >End
 ---[LOGGER  MSG  END]---
 
+---[LOGGER MSG START]---
+Startup - 14:27:40 : woensdag 22 mei 2019
+>Starting server...
+>Server is up and running!
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[CheckLogin] - 14:27:52 : woensdag 22 mei 2019
+>Checking log in for user JMuris
+---[LOGGER MSG START]---
+[RetrieveUser] - 14:27:52 : woensdag 22 mei 2019
+>Attempting to retrieve user with id 4
+>Found user with id 4
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[CheckLogin] - 14:27:52 : woensdag 22 mei 2019
+>Checking log in for user AAppel
+---[LOGGER MSG START]---
+[RetrieveUser] - 14:27:52 : woensdag 22 mei 2019
+>Attempting to retrieve user with id 5
+>Found user with id 5
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[RetrieveAllStories] - 14:29:00 : woensdag 22 mei 2019
+>Attempting to retrieve all stories.
+>Found 9 stories.
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[Game] - 14:29:01 : woensdag 22 mei 2019
+>Find root story for AAppel
+>9:!|G:!|kjhfgfsdreaw
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[Game] - 14:29:01 : woensdag 22 mei 2019
+>Find root story for AAppel
+>9:!|G:!|kjhfgfsdreaw
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[Game] - 14:29:01 : woensdag 22 mei 2019
+>Find root story for AAppel
+>9:!|G:!|kjhfgfsdreaw
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[Game] - 14:29:01 : woensdag 22 mei 2019
+>Find root story for AAppel
+>4:!|A:!|aweaewaesa
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[Game] - 14:29:01 : woensdag 22 mei 2019
+>Find root story for AAppel
+>4:!|A:!|aweaewaesa
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[Game] - 14:29:01 : woensdag 22 mei 2019
+>Find root story for AAppel
+>4:!|A:!|aweaewaesa
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[Game] - 14:29:05 : woensdag 22 mei 2019
+>047bae7b-2a38-4595-a53b-1deb2917d37f
+---[LOGGER MSG START]---
+[Game] - 14:29:05 : woensdag 22 mei 2019
+>Story from 0 - Aaaaa: aa
+>End
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[Game] - 14:29:08 : woensdag 22 mei 2019
+>52e95d73-aeac-4f39-b7e2-d29a6f5578f5
+---[LOGGER MSG START]---
+[Game] - 14:29:08 : woensdag 22 mei 2019
+>Story from 0 - Ggggg: gg
+>End
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[Game] - 14:29:12 : woensdag 22 mei 2019
+>05c1c15a-708d-4a3d-a300-e2fc1f2309be
+---[LOGGER MSG START]---
+[Game] - 14:29:12 : woensdag 22 mei 2019
+>Story from 0 - gggaga: gggg
+>End
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[Game] - 14:29:15 : woensdag 22 mei 2019
+>abedb24b-b50d-48b4-bbc7-b2dcef500c2b
+---[LOGGER MSG START]---
+[Game] - 14:29:15 : woensdag 22 mei 2019
+>Story from 0 - aaaasaa: aaadsad
+>End
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[Game] - 14:29:20 : woensdag 22 mei 2019
+>c58284e6-0cd6-4217-b807-d1e8417ef6a0
+---[LOGGER MSG START]---
+[Game] - 14:29:20 : woensdag 22 mei 2019
+>Story from 0 - ggggaga: adasdasd
+>End
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[Game] - 14:29:24 : woensdag 22 mei 2019
+>9dce7fec-dd30-477e-8e02-e947eb9d81f2
+---[LOGGER MSG START]---
+[Game] - 14:29:24 : woensdag 22 mei 2019
+>Story from 0 - aaaaaaaaaaaaaaaaa: aaaaaaaaaaaaaaa
+>End
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+Startup - 14:41:40 : woensdag 22 mei 2019
+>Starting server...
+>Server is up and running!
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+Startup - 14:41:54 : woensdag 22 mei 2019
+>Starting server...
+>Server is up and running!
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[CheckLogin] - 14:42:14 : woensdag 22 mei 2019
+>Checking log in for user JMuris
+---[LOGGER MSG START]---
+[RetrieveUser] - 14:42:14 : woensdag 22 mei 2019
+>Attempting to retrieve user with id 4
+>Found user with id 4
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[CheckLogin] - 14:42:15 : woensdag 22 mei 2019
+>Checking log in for user AAppel
+---[LOGGER MSG START]---
+[RetrieveUser] - 14:42:15 : woensdag 22 mei 2019
+>Attempting to retrieve user with id 5
+>Found user with id 5
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[RetrieveAllStories] - 14:42:37 : woensdag 22 mei 2019
+>Attempting to retrieve all stories.
+>Found 9 stories.
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[CheckLogin] - 14:42:44 : woensdag 22 mei 2019
+>Checking log in for user 
+>Something went wrong: System.Data.SqlClient.SqlException (0x80131904): Procedure or function 'LogIn' expects parameter '@pUsername', which was not supplied.
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, SqlDataReader ds)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite, String method)
+   at System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, Boolean sendToPipe, Int32 timeout, Boolean asyncWrite, String methodName)
+   at System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   at WerkelijkWaar.Classes.DatabaseQueries.CheckLogin(String username, String password) in C:\Users\Justin Muris\source\repos\WerkelijkWaar\WerkelijkWaar\Classes\DatabaseQueries.cs:line 280
+ClientConnectionId:53bec72a-9f52-41b8-b50c-a96ce9512714
+Error Number:201,State:4,Class:16
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[CheckLogin] - 14:45:55 : woensdag 22 mei 2019
+>Checking log in for user AAppel
+---[LOGGER MSG START]---
+[RetrieveUser] - 14:45:55 : woensdag 22 mei 2019
+>Attempting to retrieve user with id 5
+>Found user with id 5
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[RetrieveAllStories] - 14:46:16 : woensdag 22 mei 2019
+>Attempting to retrieve all stories.
+>Found 9 stories.
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[CheckLogin] - 14:46:22 : woensdag 22 mei 2019
+>Checking log in for user 
+>Something went wrong: System.Data.SqlClient.SqlException (0x80131904): Procedure or function 'LogIn' expects parameter '@pUsername', which was not supplied.
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, SqlDataReader ds)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite, String method)
+   at System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, Boolean sendToPipe, Int32 timeout, Boolean asyncWrite, String methodName)
+   at System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   at WerkelijkWaar.Classes.DatabaseQueries.CheckLogin(String username, String password) in C:\Users\Justin Muris\source\repos\WerkelijkWaar\WerkelijkWaar\Classes\DatabaseQueries.cs:line 280
+ClientConnectionId:53bec72a-9f52-41b8-b50c-a96ce9512714
+Error Number:201,State:4,Class:16
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+Startup - 14:48:53 : woensdag 22 mei 2019
+>Starting server...
+>Server is up and running!
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[CheckLogin] - 14:49:01 : woensdag 22 mei 2019
+>Checking log in for user AAppel
+---[LOGGER MSG START]---
+[RetrieveUser] - 14:49:01 : woensdag 22 mei 2019
+>Attempting to retrieve user with id 5
+>Found user with id 5
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[CheckLogin] - 14:49:03 : woensdag 22 mei 2019
+>Checking log in for user JMuris
+---[LOGGER MSG START]---
+[RetrieveUser] - 14:49:03 : woensdag 22 mei 2019
+>Attempting to retrieve user with id 4
+>Found user with id 4
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[RetrieveAllStories] - 14:49:21 : woensdag 22 mei 2019
+>Attempting to retrieve all stories.
+>Found 9 stories.
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[CheckLogin] - 14:49:32 : woensdag 22 mei 2019
+>Checking log in for user 
+>Something went wrong: System.Data.SqlClient.SqlException (0x80131904): Procedure or function 'LogIn' expects parameter '@pUsername', which was not supplied.
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, SqlDataReader ds)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite, String method)
+   at System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, Boolean sendToPipe, Int32 timeout, Boolean asyncWrite, String methodName)
+   at System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   at WerkelijkWaar.Classes.DatabaseQueries.CheckLogin(String username, String password) in C:\Users\Justin Muris\source\repos\WerkelijkWaar\WerkelijkWaar\Classes\DatabaseQueries.cs:line 280
+ClientConnectionId:971501ac-7c99-420d-96f9-837d411cead4
+Error Number:201,State:4,Class:16
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[Game] - 14:50:58 : woensdag 22 mei 2019
+>4547a0f0-5015-4a7b-b2c2-3379b3e3d512
+---[LOGGER MSG START]---
+[Game] - 14:50:58 : woensdag 22 mei 2019
+>Story from 0 - asdasd: asdasd
+>End
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[Game] - 14:51:01 : woensdag 22 mei 2019
+>72618807-0df8-4c1a-b323-4a678baf835d
+---[LOGGER MSG START]---
+[Game] - 14:51:01 : woensdag 22 mei 2019
+>Story from 0 - asdasd: asdasd
+>End
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[Game] - 14:51:03 : woensdag 22 mei 2019
+>9ebc8dde-0977-4558-84dc-8d1210f9358d
+---[LOGGER MSG START]---
+[Game] - 14:51:03 : woensdag 22 mei 2019
+>Story from 0 - dsadsa: dsadsa
+>End
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[Game] - 14:51:06 : woensdag 22 mei 2019
+>4f70a7bb-c619-45ac-b05b-87b00b1cf1ef
+---[LOGGER MSG START]---
+[Game] - 14:51:06 : woensdag 22 mei 2019
+>Story from 0 - dsadsa: dsadsa
+>End
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[Game] - 14:51:08 : woensdag 22 mei 2019
+>a2047433-5c05-4d19-a3e8-68552cdbcd97
+---[LOGGER MSG START]---
+[Game] - 14:51:08 : woensdag 22 mei 2019
+>Story from 0 - dsadsa: dsadsa
+>End
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+Startup - 14:53:05 : woensdag 22 mei 2019
+>Starting server...
+>Server is up and running!
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[CheckLogin] - 14:54:38 : woensdag 22 mei 2019
+>Checking log in for user JMuris
+---[LOGGER MSG START]---
+[RetrieveUser] - 14:54:38 : woensdag 22 mei 2019
+>Attempting to retrieve user with id 4
+>Found user with id 4
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[CheckLogin] - 14:54:39 : woensdag 22 mei 2019
+>Checking log in for user AAppel
+---[LOGGER MSG START]---
+[RetrieveUser] - 14:54:39 : woensdag 22 mei 2019
+>Attempting to retrieve user with id 5
+>Found user with id 5
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[RetrieveAllStories] - 14:54:59 : woensdag 22 mei 2019
+>Attempting to retrieve all stories.
+>Found 9 stories.
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[CheckLogin] - 14:55:25 : woensdag 22 mei 2019
+>Checking log in for user 
+>Something went wrong: System.Data.SqlClient.SqlException (0x80131904): Procedure or function 'LogIn' expects parameter '@pUsername', which was not supplied.
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, SqlDataReader ds)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite, String method)
+   at System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, Boolean sendToPipe, Int32 timeout, Boolean asyncWrite, String methodName)
+   at System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   at WerkelijkWaar.Classes.DatabaseQueries.CheckLogin(String username, String password) in C:\Users\Justin Muris\source\repos\WerkelijkWaar\WerkelijkWaar\Classes\DatabaseQueries.cs:line 280
+ClientConnectionId:fb4c9eed-f829-4e51-a440-ae502394f3f0
+Error Number:201,State:4,Class:16
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+Startup - 09:21:59 : donderdag 23 mei 2019
+>Starting server...
+>Server is up and running!
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[CheckLogin] - 09:25:29 : donderdag 23 mei 2019
+>Checking log in for user JMuris
+---[LOGGER MSG START]---
+[RetrieveUser] - 09:25:30 : donderdag 23 mei 2019
+>Attempting to retrieve user with id 4
+>Found user with id 4
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[CheckLogin] - 09:25:31 : donderdag 23 mei 2019
+>Checking log in for user AAppel
+---[LOGGER MSG START]---
+[RetrieveUser] - 09:25:31 : donderdag 23 mei 2019
+>Attempting to retrieve user with id 5
+>Found user with id 5
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[RetrieveAllStories] - 09:25:53 : donderdag 23 mei 2019
+>Attempting to retrieve all stories.
+>Found 9 stories.
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[Game] - 09:26:04 : donderdag 23 mei 2019
+>a9727b08-62bf-4039-9629-005adc2a18ed
+---[LOGGER MSG START]---
+[Game] - 09:26:04 : donderdag 23 mei 2019
+>Story from 0 - A: asdasd
+>End
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[Game] - 09:26:07 : donderdag 23 mei 2019
+>4a5f8132-a6fb-4aa7-9db1-28ce6392da53
+---[LOGGER MSG START]---
+[Game] - 09:26:07 : donderdag 23 mei 2019
+>Story from 0 - dsadsa: dsadsa
+>End
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[Game] - 09:26:09 : donderdag 23 mei 2019
+>e51d291b-fa09-4b67-b339-d88dd71ac744
+---[LOGGER MSG START]---
+[Game] - 09:26:09 : donderdag 23 mei 2019
+>Story from 0 - fghgfh: 
+>End
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[Game] - 09:26:13 : donderdag 23 mei 2019
+>bdf37040-fd50-4aab-ae0b-4ec61d7ccb21
+---[LOGGER MSG START]---
+[Game] - 09:26:13 : donderdag 23 mei 2019
+>Story from 0 - tretre: tretre
+>End
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[Game] - 09:26:16 : donderdag 23 mei 2019
+>af10f8d2-ffe9-4876-bf6d-4c555484d766
+---[LOGGER MSG START]---
+[Game] - 09:26:16 : donderdag 23 mei 2019
+>Story from 0 - khjkhj: kjhkhjkhj
+>End
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[Game] - 09:26:20 : donderdag 23 mei 2019
+>31cefb8a-b3d1-4512-8831-bc8d421915b5
+---[LOGGER MSG START]---
+[Game] - 09:26:20 : donderdag 23 mei 2019
+>Story from 0 - cxzcxzcxz: cxzcxzcxzc
+>End
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+Startup - 09:41:14 : donderdag 23 mei 2019
+>Starting server...
+>Server is up and running!
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[CheckLogin] - 09:42:43 : donderdag 23 mei 2019
+>Checking log in for user JMuris
+---[LOGGER MSG START]---
+[RetrieveUser] - 09:42:43 : donderdag 23 mei 2019
+>Attempting to retrieve user with id 4
+>Found user with id 4
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[CheckLogin] - 09:42:44 : donderdag 23 mei 2019
+>Checking log in for user AAppel
+---[LOGGER MSG START]---
+[RetrieveUser] - 09:42:44 : donderdag 23 mei 2019
+>Attempting to retrieve user with id 5
+>Found user with id 5
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[RetrieveAllStories] - 09:43:06 : donderdag 23 mei 2019
+>Attempting to retrieve all stories.
+>Found 9 stories.
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[Game] - 09:43:12 : donderdag 23 mei 2019
+>3323c5e8-7b7c-43de-8128-3cfbde2ed7a0
+---[LOGGER MSG START]---
+[Game] - 09:43:12 : donderdag 23 mei 2019
+>Story from 0 - A: a
+>End
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[Game] - 09:43:15 : donderdag 23 mei 2019
+>30cb0078-9a2b-4338-a5ec-4ab5d018de42
+---[LOGGER MSG START]---
+[Game] - 09:43:15 : donderdag 23 mei 2019
+>Story from 0 - B: b
+>End
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[Game] - 09:43:17 : donderdag 23 mei 2019
+>e02c60ec-5396-45fc-8934-6fea2eed5f32
+---[LOGGER MSG START]---
+[Game] - 09:43:17 : donderdag 23 mei 2019
+>Story from 0 - C: c
+>End
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[Game] - 09:43:19 : donderdag 23 mei 2019
+>cb44e31f-df39-4160-a46c-47fd3c6dfabd
+---[LOGGER MSG START]---
+[Game] - 09:43:20 : donderdag 23 mei 2019
+>Story from 0 - D: d
+>End
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[Game] - 09:43:22 : donderdag 23 mei 2019
+>fa800608-b697-4570-982b-64f0ce697076
+---[LOGGER MSG START]---
+[Game] - 09:43:22 : donderdag 23 mei 2019
+>Story from 0 - E: e
+>End
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[Game] - 09:43:25 : donderdag 23 mei 2019
+>25e83021-da48-4064-b367-3d0b43f8c742
+---[LOGGER MSG START]---
+[Game] - 09:43:25 : donderdag 23 mei 2019
+>Story from 0 - F: f
+>End
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[CheckLogin] - 09:43:34 : donderdag 23 mei 2019
+>Checking log in for user 
+>Something went wrong: System.Data.SqlClient.SqlException (0x80131904): Procedure or function 'LogIn' expects parameter '@pUsername', which was not supplied.
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, SqlDataReader ds)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite, String method)
+   at System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, Boolean sendToPipe, Int32 timeout, Boolean asyncWrite, String methodName)
+   at System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   at WerkelijkWaar.Classes.DatabaseQueries.CheckLogin(String username, String password) in C:\Users\Justin Muris\source\repos\WerkelijkWaar\WerkelijkWaar\Classes\DatabaseQueries.cs:line 280
+ClientConnectionId:2dce993a-597e-4aad-8f8e-003727f26833
+Error Number:201,State:4,Class:16
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+Startup - 09:44:06 : donderdag 23 mei 2019
+>Starting server...
+>Server is up and running!
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+Startup - 09:44:19 : donderdag 23 mei 2019
+>Starting server...
+>Server is up and running!
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[CheckLogin] - 09:44:28 : donderdag 23 mei 2019
+>Checking log in for user AAppel
+---[LOGGER MSG START]---
+[RetrieveUser] - 09:44:28 : donderdag 23 mei 2019
+>Attempting to retrieve user with id 5
+>Found user with id 5
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[CheckLogin] - 09:44:30 : donderdag 23 mei 2019
+>Checking log in for user JMuris
+---[LOGGER MSG START]---
+[RetrieveUser] - 09:44:30 : donderdag 23 mei 2019
+>Attempting to retrieve user with id 4
+>Found user with id 4
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[RetrieveAllStories] - 09:44:53 : donderdag 23 mei 2019
+>Attempting to retrieve all stories.
+>Found 9 stories.
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[Game] - 09:44:57 : donderdag 23 mei 2019
+>afe03d2c-54f3-4aca-8392-b4e31caee8f5
+---[LOGGER MSG START]---
+[Game] - 09:44:57 : donderdag 23 mei 2019
+>Story from 0 - A: a
+>End
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[Game] - 09:44:59 : donderdag 23 mei 2019
+>d15caf1c-45fa-4c2e-b9c6-229a1b2ae97f
+---[LOGGER MSG START]---
+[Game] - 09:44:59 : donderdag 23 mei 2019
+>Story from 0 - B: b
+>End
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[Game] - 09:45:02 : donderdag 23 mei 2019
+>0e61df8c-6541-4eaa-aa45-73e562a4a0c1
+---[LOGGER MSG START]---
+[Game] - 09:45:02 : donderdag 23 mei 2019
+>Story from 0 - C: c
+>End
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[Game] - 09:45:05 : donderdag 23 mei 2019
+>4605085e-a93b-4ff5-9f84-435651c67aa4
+---[LOGGER MSG START]---
+[Game] - 09:45:05 : donderdag 23 mei 2019
+>Story from 0 - D: d
+>End
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[Game] - 09:45:08 : donderdag 23 mei 2019
+>b39c1fe1-6b75-409b-8c7d-549fa9418ec7
+---[LOGGER MSG START]---
+[Game] - 09:45:08 : donderdag 23 mei 2019
+>Story from 0 - E: e
+>End
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[Game] - 09:45:11 : donderdag 23 mei 2019
+>73627849-2ebc-4580-ba94-423874ea823d
+---[LOGGER MSG START]---
+[Game] - 09:45:11 : donderdag 23 mei 2019
+>Story from 0 - F: f
+>End
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+Startup - 09:48:27 : donderdag 23 mei 2019
+>Starting server...
+>Server is up and running!
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+Startup - 09:48:39 : donderdag 23 mei 2019
+>Starting server...
+>Server is up and running!
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[CheckLogin] - 09:48:46 : donderdag 23 mei 2019
+>Checking log in for user AAppel
+---[LOGGER MSG START]---
+[RetrieveUser] - 09:48:46 : donderdag 23 mei 2019
+>Attempting to retrieve user with id 5
+>Found user with id 5
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[CheckLogin] - 09:48:51 : donderdag 23 mei 2019
+>Checking log in for user AAppel
+---[LOGGER MSG START]---
+[RetrieveUser] - 09:48:51 : donderdag 23 mei 2019
+>Attempting to retrieve user with id 5
+>Found user with id 5
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[CheckLogin] - 09:48:53 : donderdag 23 mei 2019
+>Checking log in for user JMuris
+---[LOGGER MSG START]---
+[RetrieveUser] - 09:48:53 : donderdag 23 mei 2019
+>Attempting to retrieve user with id 4
+>Found user with id 4
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[RetrieveAllStories] - 09:49:14 : donderdag 23 mei 2019
+>Attempting to retrieve all stories.
+>Found 9 stories.
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[Game] - 09:49:21 : donderdag 23 mei 2019
+>bc426f9e-fec8-4eb1-bc79-aca1929029dc
+---[LOGGER MSG START]---
+[Game] - 09:49:21 : donderdag 23 mei 2019
+>Story from 0 - A: a
+>End
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[Game] - 09:49:23 : donderdag 23 mei 2019
+>9e3799ab-54aa-4d84-97f6-dd0d55d5ac5a
+---[LOGGER MSG START]---
+[Game] - 09:49:23 : donderdag 23 mei 2019
+>Story from 0 - B: b
+>End
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[Game] - 09:49:25 : donderdag 23 mei 2019
+>d27ea016-7823-46bd-a56d-94edef3b143a
+---[LOGGER MSG START]---
+[Game] - 09:49:25 : donderdag 23 mei 2019
+>Story from 0 - C: c
+>End
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[Game] - 09:49:28 : donderdag 23 mei 2019
+>efe9efe7-27e9-4a7c-958d-078487abdc61
+---[LOGGER MSG START]---
+[Game] - 09:49:28 : donderdag 23 mei 2019
+>Story from 0 - D: d
+>End
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[Game] - 09:49:30 : donderdag 23 mei 2019
+>35b3683f-eb7d-4f70-a149-b5af1399ed56
+---[LOGGER MSG START]---
+[Game] - 09:49:30 : donderdag 23 mei 2019
+>Story from 0 - E: e
+>End
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[Game] - 09:49:33 : donderdag 23 mei 2019
+>8dcd6ce2-181b-4826-93a0-72cd447fca93
+---[LOGGER MSG START]---
+[Game] - 09:49:33 : donderdag 23 mei 2019
+>Story from 0 - F: f
+>End
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+Startup - 09:51:49 : donderdag 23 mei 2019
+>Starting server...
+>Server is up and running!
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[CheckLogin] - 09:51:57 : donderdag 23 mei 2019
+>Checking log in for user AAppel
+---[LOGGER MSG START]---
+[RetrieveUser] - 09:51:57 : donderdag 23 mei 2019
+>Attempting to retrieve user with id 5
+>Found user with id 5
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[CheckLogin] - 09:52:00 : donderdag 23 mei 2019
+>Checking log in for user JMuris
+---[LOGGER MSG START]---
+[RetrieveUser] - 09:52:00 : donderdag 23 mei 2019
+>Attempting to retrieve user with id 4
+>Found user with id 4
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[RetrieveAllStories] - 09:52:19 : donderdag 23 mei 2019
+>Attempting to retrieve all stories.
+>Found 9 stories.
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[Game] - 09:52:24 : donderdag 23 mei 2019
+>66c874f9-5196-4d15-a799-1a3779035fa9
+---[LOGGER MSG START]---
+[Game] - 09:52:24 : donderdag 23 mei 2019
+>Story from 0 - A: a
+>End
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[Game] - 09:52:26 : donderdag 23 mei 2019
+>4d211693-a89d-4c3f-949f-b38b7b287de1
+---[LOGGER MSG START]---
+[Game] - 09:52:26 : donderdag 23 mei 2019
+>Story from 0 - B: b
+>End
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[Game] - 09:52:29 : donderdag 23 mei 2019
+>6250c759-cce3-454d-99b0-14a39dbd0733
+---[LOGGER MSG START]---
+[Game] - 09:52:29 : donderdag 23 mei 2019
+>Story from 0 - C: c
+>End
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[Game] - 09:52:31 : donderdag 23 mei 2019
+>12966763-c882-4333-a935-a65f332c1138
+---[LOGGER MSG START]---
+[Game] - 09:52:31 : donderdag 23 mei 2019
+>Story from 0 - D: d
+>End
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[Game] - 09:52:33 : donderdag 23 mei 2019
+>6fddcd69-b291-4c69-aa39-073e30bc7836
+---[LOGGER MSG START]---
+[Game] - 09:52:33 : donderdag 23 mei 2019
+>Story from 0 - E: e
+>End
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[Game] - 09:52:35 : donderdag 23 mei 2019
+>fb3f41eb-d624-4d8c-ac19-b831526b423a
+---[LOGGER MSG START]---
+[Game] - 09:52:35 : donderdag 23 mei 2019
+>Story from 0 - F: f
+>End
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[CheckLogin] - 09:53:46 : donderdag 23 mei 2019
+>Checking log in for user 
+>Something went wrong: System.Data.SqlClient.SqlException (0x80131904): Procedure or function 'LogIn' expects parameter '@pUsername', which was not supplied.
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, SqlDataReader ds)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite, String method)
+   at System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, Boolean sendToPipe, Int32 timeout, Boolean asyncWrite, String methodName)
+   at System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   at WerkelijkWaar.Classes.DatabaseQueries.CheckLogin(String username, String password) in C:\Users\Justin Muris\source\repos\WerkelijkWaar\WerkelijkWaar\Classes\DatabaseQueries.cs:line 280
+ClientConnectionId:1f6f512a-e931-40f9-be26-929c852c79b7
+Error Number:201,State:4,Class:16
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+Startup - 09:59:57 : donderdag 23 mei 2019
+>Starting server...
+>Server is up and running!
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[CheckLogin] - 10:00:01 : donderdag 23 mei 2019
+>Checking log in for user AAppel
+---[LOGGER MSG START]---
+[RetrieveUser] - 10:00:01 : donderdag 23 mei 2019
+>Attempting to retrieve user with id 5
+>Found user with id 5
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[CheckLogin] - 10:00:02 : donderdag 23 mei 2019
+>Checking log in for user JMuris
+---[LOGGER MSG START]---
+[RetrieveUser] - 10:00:02 : donderdag 23 mei 2019
+>Attempting to retrieve user with id 4
+>Found user with id 4
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[RetrieveAllStories] - 10:00:22 : donderdag 23 mei 2019
+>Attempting to retrieve all stories.
+>Found 9 stories.
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[Game] - 10:00:26 : donderdag 23 mei 2019
+>d1d0a0d8-1e20-4731-958d-a02a695b564e
+---[LOGGER MSG START]---
+[Game] - 10:00:26 : donderdag 23 mei 2019
+>Story from 0 - A: a
+>End
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[Game] - 10:00:29 : donderdag 23 mei 2019
+>ae2a8498-2919-4885-bab5-74c9c45bb930
+---[LOGGER MSG START]---
+[Game] - 10:00:29 : donderdag 23 mei 2019
+>Story from 0 - B: b
+>End
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[Game] - 10:00:31 : donderdag 23 mei 2019
+>92365805-920f-4dc5-8738-2286a7cc9dcb
+---[LOGGER MSG START]---
+[Game] - 10:00:31 : donderdag 23 mei 2019
+>Story from 0 - C: c
+>End
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[Game] - 10:00:33 : donderdag 23 mei 2019
+>c128d081-4b3a-46b5-b01d-72bffcb4ee01
+---[LOGGER MSG START]---
+[Game] - 10:00:33 : donderdag 23 mei 2019
+>Story from 0 - D: d
+>End
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[Game] - 10:00:35 : donderdag 23 mei 2019
+>dea1a119-f425-462c-987b-e1a4637bd996
+---[LOGGER MSG START]---
+[Game] - 10:00:35 : donderdag 23 mei 2019
+>Story from 0 - E: e
+>End
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[Game] - 10:00:41 : donderdag 23 mei 2019
+>91b43651-f7b8-492b-8dcc-caf8e75d6f4c
+---[LOGGER MSG START]---
+[Game] - 10:00:41 : donderdag 23 mei 2019
+>Story from 0 - F: f
+>End
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[CheckLogin] - 10:04:39 : donderdag 23 mei 2019
+>Checking log in for user 
+>Something went wrong: System.Data.SqlClient.SqlException (0x80131904): Procedure or function 'LogIn' expects parameter '@pUsername', which was not supplied.
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, SqlDataReader ds)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite, String method)
+   at System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, Boolean sendToPipe, Int32 timeout, Boolean asyncWrite, String methodName)
+   at System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   at WerkelijkWaar.Classes.DatabaseQueries.CheckLogin(String username, String password) in C:\Users\Justin Muris\source\repos\WerkelijkWaar\WerkelijkWaar\Classes\DatabaseQueries.cs:line 280
+ClientConnectionId:23a12112-d7ff-4e01-bb9c-624d4c65b143
+Error Number:201,State:4,Class:16
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+Startup - 10:09:40 : donderdag 23 mei 2019
+>Starting server...
+>Server is up and running!
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[CheckLogin] - 10:10:01 : donderdag 23 mei 2019
+>Checking log in for user AAppel
+---[LOGGER MSG START]---
+[RetrieveUser] - 10:10:01 : donderdag 23 mei 2019
+>Attempting to retrieve user with id 5
+>Found user with id 5
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[CheckLogin] - 10:10:01 : donderdag 23 mei 2019
+>Checking log in for user JMuris
+---[LOGGER MSG START]---
+[RetrieveUser] - 10:10:01 : donderdag 23 mei 2019
+>Attempting to retrieve user with id 4
+>Found user with id 4
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[RetrieveAllStories] - 10:10:24 : donderdag 23 mei 2019
+>Attempting to retrieve all stories.
+>Found 9 stories.
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[Game] - 10:10:30 : donderdag 23 mei 2019
+>974b147c-eafb-4bd1-8d40-7a454fe7f22d
+---[LOGGER MSG START]---
+[Game] - 10:10:30 : donderdag 23 mei 2019
+>Story from 0 - A: a
+>End
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[Game] - 10:10:32 : donderdag 23 mei 2019
+>13b9c1c5-54c3-4cac-b411-a12b231e0e27
+---[LOGGER MSG START]---
+[Game] - 10:10:32 : donderdag 23 mei 2019
+>Story from 0 - B: b
+>End
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[Game] - 10:10:34 : donderdag 23 mei 2019
+>990a45ee-a21e-4f5e-9069-ac219c4ed7b1
+---[LOGGER MSG START]---
+[Game] - 10:10:34 : donderdag 23 mei 2019
+>Story from 0 - C: c
+>End
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[Game] - 10:10:37 : donderdag 23 mei 2019
+>9bd59c67-5426-4c14-a089-ce62fc9f8451
+---[LOGGER MSG START]---
+[Game] - 10:10:37 : donderdag 23 mei 2019
+>Story from 0 - D: d
+>End
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[Game] - 10:10:39 : donderdag 23 mei 2019
+>4e9c7615-8367-47c9-bb6a-4828bb00c363
+---[LOGGER MSG START]---
+[Game] - 10:10:39 : donderdag 23 mei 2019
+>Story from 0 - E: e
+>End
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[Game] - 10:10:43 : donderdag 23 mei 2019
+>8df3ec4b-d3b7-40d6-8350-a3d8821301f7
+---[LOGGER MSG START]---
+[Game] - 10:10:43 : donderdag 23 mei 2019
+>Story from 0 - F: f
+>End
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[CheckLogin] - 10:10:54 : donderdag 23 mei 2019
+>Checking log in for user 
+>Something went wrong: System.Data.SqlClient.SqlException (0x80131904): Procedure or function 'LogIn' expects parameter '@pUsername', which was not supplied.
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, SqlDataReader ds)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite, String method)
+   at System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, Boolean sendToPipe, Int32 timeout, Boolean asyncWrite, String methodName)
+   at System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   at WerkelijkWaar.Classes.DatabaseQueries.CheckLogin(String username, String password) in C:\Users\Justin Muris\source\repos\WerkelijkWaar\WerkelijkWaar\Classes\DatabaseQueries.cs:line 280
+ClientConnectionId:8f59ea26-d88c-45fa-97c4-2169754b5309
+Error Number:201,State:4,Class:16
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+Startup - 10:38:02 : donderdag 23 mei 2019
+>Starting server...
+>Server is up and running!
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[CheckLogin] - 10:38:07 : donderdag 23 mei 2019
+>Checking log in for user JMuris
+---[LOGGER MSG START]---
+[RetrieveUser] - 10:38:07 : donderdag 23 mei 2019
+>Attempting to retrieve user with id 4
+>Found user with id 4
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[CheckLogin] - 10:38:07 : donderdag 23 mei 2019
+>Checking log in for user AAppel
+---[LOGGER MSG START]---
+[RetrieveUser] - 10:38:07 : donderdag 23 mei 2019
+>Attempting to retrieve user with id 5
+>Found user with id 5
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[RetrieveAllStories] - 10:38:30 : donderdag 23 mei 2019
+>Attempting to retrieve all stories.
+>Found 9 stories.
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[Game] - 10:38:35 : donderdag 23 mei 2019
+>1f7f4bfa-9018-456b-be14-4f0731ef90be
+---[LOGGER MSG START]---
+[Game] - 10:38:35 : donderdag 23 mei 2019
+>Story from 0 - A: a
+>End
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[Game] - 10:38:37 : donderdag 23 mei 2019
+>19decdc0-f021-43e7-94f8-a9f575b41c6a
+---[LOGGER MSG START]---
+[Game] - 10:38:37 : donderdag 23 mei 2019
+>Story from 0 - B: b
+>End
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[Game] - 10:38:40 : donderdag 23 mei 2019
+>d6c5ca22-49d8-46d9-805c-e3950e4b4411
+---[LOGGER MSG START]---
+[Game] - 10:38:40 : donderdag 23 mei 2019
+>Story from 0 - C: c
+>End
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[Game] - 10:38:44 : donderdag 23 mei 2019
+>2900ba87-b430-4df8-8078-7c470483fdc4
+---[LOGGER MSG START]---
+[Game] - 10:38:44 : donderdag 23 mei 2019
+>Story from 0 - D: d
+>End
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[Game] - 10:38:46 : donderdag 23 mei 2019
+>7cb74a72-5cdb-4f12-9c8f-439f4518ea70
+---[LOGGER MSG START]---
+[Game] - 10:38:46 : donderdag 23 mei 2019
+>Story from 0 - E: e
+>End
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[Game] - 10:38:49 : donderdag 23 mei 2019
+>d8375d1e-f3f2-40bf-92cd-b9bb306255df
+---[LOGGER MSG START]---
+[Game] - 10:38:49 : donderdag 23 mei 2019
+>Story from 0 - F: f
+>End
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+Startup - 10:40:40 : donderdag 23 mei 2019
+>Starting server...
+>Server is up and running!
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[CheckLogin] - 10:40:48 : donderdag 23 mei 2019
+>Checking log in for user JMuris
+---[LOGGER MSG START]---
+[RetrieveUser] - 10:40:48 : donderdag 23 mei 2019
+>Attempting to retrieve user with id 4
+>Found user with id 4
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[CheckLogin] - 10:40:49 : donderdag 23 mei 2019
+>Checking log in for user AAppel
+---[LOGGER MSG START]---
+[RetrieveUser] - 10:40:49 : donderdag 23 mei 2019
+>Attempting to retrieve user with id 5
+>Found user with id 5
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+Startup - 10:44:31 : donderdag 23 mei 2019
+>Starting server...
+>Server is up and running!
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[CheckLogin] - 10:44:41 : donderdag 23 mei 2019
+>Checking log in for user AAppel
+---[LOGGER MSG START]---
+[RetrieveUser] - 10:44:41 : donderdag 23 mei 2019
+>Attempting to retrieve user with id 5
+>Found user with id 5
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[CheckLogin] - 10:44:42 : donderdag 23 mei 2019
+>Checking log in for user JMuris
+---[LOGGER MSG START]---
+[RetrieveUser] - 10:44:42 : donderdag 23 mei 2019
+>Attempting to retrieve user with id 4
+>Found user with id 4
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[RetrieveAllStories] - 10:45:19 : donderdag 23 mei 2019
+>Attempting to retrieve all stories.
+>Found 9 stories.
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[Game] - 10:45:23 : donderdag 23 mei 2019
+>02e382e9-84bc-49f1-89b6-3cc27c6f019c
+---[LOGGER MSG START]---
+[Game] - 10:45:23 : donderdag 23 mei 2019
+>Story from 0 - A: a
+>End
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[Game] - 10:45:25 : donderdag 23 mei 2019
+>bd769eac-2812-439a-b7c7-7dfef3f5a925
+---[LOGGER MSG START]---
+[Game] - 10:45:25 : donderdag 23 mei 2019
+>Story from 0 - B: b
+>End
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[Game] - 10:45:28 : donderdag 23 mei 2019
+>06d45456-5374-4ec5-af88-221843e5c1d8
+---[LOGGER MSG START]---
+[Game] - 10:45:28 : donderdag 23 mei 2019
+>Story from 0 - C: c
+>End
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[Game] - 10:45:30 : donderdag 23 mei 2019
+>07a8fd52-7733-4de5-94c0-94bc422d7764
+---[LOGGER MSG START]---
+[Game] - 10:45:30 : donderdag 23 mei 2019
+>Story from 0 - D: d
+>End
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[Game] - 10:45:32 : donderdag 23 mei 2019
+>cdd6a806-6f1e-47ee-9641-134986101267
+---[LOGGER MSG START]---
+[Game] - 10:45:32 : donderdag 23 mei 2019
+>Story from 0 - E: e
+>End
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[Game] - 10:45:34 : donderdag 23 mei 2019
+>95ea5c14-c184-42b1-b861-817bffd3d80c
+---[LOGGER MSG START]---
+[Game] - 10:45:34 : donderdag 23 mei 2019
+>Story from 0 - F: f
+>End
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+Startup - 10:57:23 : donderdag 23 mei 2019
+>Starting server...
+>Server is up and running!
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[CheckLogin] - 10:57:29 : donderdag 23 mei 2019
+>Checking log in for user JMuris
+---[LOGGER MSG START]---
+[RetrieveUser] - 10:57:29 : donderdag 23 mei 2019
+>Attempting to retrieve user with id 4
+>Found user with id 4
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[CheckLogin] - 10:57:30 : donderdag 23 mei 2019
+>Checking log in for user AAppel
+---[LOGGER MSG START]---
+[RetrieveUser] - 10:57:30 : donderdag 23 mei 2019
+>Attempting to retrieve user with id 5
+>Found user with id 5
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[CheckLogin] - 10:57:48 : donderdag 23 mei 2019
+>Checking log in for user 
+>Something went wrong: System.Data.SqlClient.SqlException (0x80131904): Procedure or function 'LogIn' expects parameter '@pUsername', which was not supplied.
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, SqlDataReader ds)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite, String method)
+   at System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, Boolean sendToPipe, Int32 timeout, Boolean asyncWrite, String methodName)
+   at System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   at WerkelijkWaar.Classes.DatabaseQueries.CheckLogin(String username, String password) in C:\Users\Justin Muris\source\repos\WerkelijkWaar\WerkelijkWaar\Classes\DatabaseQueries.cs:line 280
+ClientConnectionId:07563410-77b5-4930-9378-16253d7d4ed5
+Error Number:201,State:4,Class:16
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[RetrieveAllStories] - 10:58:54 : donderdag 23 mei 2019
+>Attempting to retrieve all stories.
+>Found 9 stories.
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[Game] - 10:59:07 : donderdag 23 mei 2019
+>73366ba6-0fdd-4b9a-945e-d67811ce8ddb
+---[LOGGER MSG START]---
+[Game] - 10:59:07 : donderdag 23 mei 2019
+>Story from 0 - A: a
+>End
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[Game] - 10:59:11 : donderdag 23 mei 2019
+>1c210992-d68c-4252-aac5-191953f580c1
+---[LOGGER MSG START]---
+[Game] - 10:59:11 : donderdag 23 mei 2019
+>Story from 0 - B: b
+>End
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[Game] - 10:59:13 : donderdag 23 mei 2019
+>91f5d63a-513c-49f1-b780-b5a975e021d8
+---[LOGGER MSG START]---
+[Game] - 10:59:13 : donderdag 23 mei 2019
+>Story from 0 - C: c
+>End
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[Game] - 10:59:15 : donderdag 23 mei 2019
+>f58db072-4ec0-436a-a2af-71a1b53b1fdf
+---[LOGGER MSG START]---
+[Game] - 10:59:15 : donderdag 23 mei 2019
+>Story from 0 - D: d
+>End
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[Game] - 10:59:17 : donderdag 23 mei 2019
+>5761ee59-ad90-439b-97ac-c064abfa0ba1
+---[LOGGER MSG START]---
+[Game] - 10:59:17 : donderdag 23 mei 2019
+>Story from 0 - E: e
+>End
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[Game] - 10:59:18 : donderdag 23 mei 2019
+>2ea894bd-8289-4ed3-88c3-775e03f2a210
+---[LOGGER MSG START]---
+[Game] - 10:59:18 : donderdag 23 mei 2019
+>Story from 0 - F: f
+>End
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+Startup - 11:01:13 : donderdag 23 mei 2019
+>Starting server...
+>Server is up and running!
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[CheckLogin] - 11:02:06 : donderdag 23 mei 2019
+>Checking log in for user JMuris
+---[LOGGER MSG START]---
+[RetrieveUser] - 11:02:06 : donderdag 23 mei 2019
+>Attempting to retrieve user with id 4
+>Found user with id 4
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[CheckLogin] - 11:02:07 : donderdag 23 mei 2019
+>Checking log in for user AAppel
+---[LOGGER MSG START]---
+[RetrieveUser] - 11:02:07 : donderdag 23 mei 2019
+>Attempting to retrieve user with id 5
+>Found user with id 5
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[RetrieveAllStories] - 11:02:28 : donderdag 23 mei 2019
+>Attempting to retrieve all stories.
+>Found 9 stories.
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[Game] - 11:02:44 : donderdag 23 mei 2019
+>fd0b2705-45e2-45a4-b519-47a38aa0e3a4
+---[LOGGER MSG START]---
+[Game] - 11:02:44 : donderdag 23 mei 2019
+>Story from 0 - Dd: aaaaa
+>End
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[Game] - 11:02:49 : donderdag 23 mei 2019
+>63868d37-f58d-41fc-82d8-53e036acca1c
+---[LOGGER MSG START]---
+[Game] - 11:02:49 : donderdag 23 mei 2019
+>Story from 0 - Ddd: aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+>End
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[Game] - 11:02:52 : donderdag 23 mei 2019
+>a329a678-f99a-4e26-88ac-73a9b536ab0b
+---[LOGGER MSG START]---
+[Game] - 11:02:52 : donderdag 23 mei 2019
+>Story from 0 - Ff: zxczxc
+>End
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[Game] - 11:02:56 : donderdag 23 mei 2019
+>2601d52c-de3d-4eab-9f9f-ff541a28b1ee
+---[LOGGER MSG START]---
+[Game] - 11:02:56 : donderdag 23 mei 2019
+>Story from 0 - Fff: zxcbbfdgfdgsd
+>End
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[Game] - 11:03:00 : donderdag 23 mei 2019
+>bcde8bd0-1cb0-482d-acd5-4d5f5b626840
+---[LOGGER MSG START]---
+[Game] - 11:03:00 : donderdag 23 mei 2019
+>Story from 0 - Dddd: jyrtyrw543w
+>End
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[Game] - 11:03:05 : donderdag 23 mei 2019
+>45d1b71b-06c5-491c-be45-209c031039ef
+---[LOGGER MSG START]---
+[Game] - 11:03:05 : donderdag 23 mei 2019
+>Story from 0 - Ffff: 5413hngfnbv
+>End
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[CheckLogin] - 11:03:12 : donderdag 23 mei 2019
+>Checking log in for user 
+>Something went wrong: System.Data.SqlClient.SqlException (0x80131904): Procedure or function 'LogIn' expects parameter '@pUsername', which was not supplied.
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, SqlDataReader ds)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite, String method)
+   at System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, Boolean sendToPipe, Int32 timeout, Boolean asyncWrite, String methodName)
+   at System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   at WerkelijkWaar.Classes.DatabaseQueries.CheckLogin(String username, String password) in C:\Users\Justin Muris\source\repos\WerkelijkWaar\WerkelijkWaar\Classes\DatabaseQueries.cs:line 280
+ClientConnectionId:19243679-7c81-4457-bd67-fd60a53c3d0a
+Error Number:201,State:4,Class:16
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+Startup - 11:07:50 : donderdag 23 mei 2019
+>Starting server...
+>Server is up and running!
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[CheckLogin] - 11:08:11 : donderdag 23 mei 2019
+>Checking log in for user AAppel
+---[LOGGER MSG START]---
+[RetrieveUser] - 11:08:11 : donderdag 23 mei 2019
+>Attempting to retrieve user with id 5
+>Found user with id 5
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[CheckLogin] - 11:08:12 : donderdag 23 mei 2019
+>Checking log in for user JMuris
+---[LOGGER MSG START]---
+[RetrieveUser] - 11:08:12 : donderdag 23 mei 2019
+>Attempting to retrieve user with id 4
+>Found user with id 4
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[RetrieveAllStories] - 11:08:47 : donderdag 23 mei 2019
+>Attempting to retrieve all stories.
+>Found 9 stories.
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[CheckLogin] - 11:08:57 : donderdag 23 mei 2019
+>Checking log in for user 
+>Something went wrong: System.Data.SqlClient.SqlException (0x80131904): Procedure or function 'LogIn' expects parameter '@pUsername', which was not supplied.
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, SqlDataReader ds)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite, String method)
+   at System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, Boolean sendToPipe, Int32 timeout, Boolean asyncWrite, String methodName)
+   at System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   at WerkelijkWaar.Classes.DatabaseQueries.CheckLogin(String username, String password) in C:\Users\Justin Muris\source\repos\WerkelijkWaar\WerkelijkWaar\Classes\DatabaseQueries.cs:line 280
+ClientConnectionId:faeedb8e-3d7b-4176-9b31-a2b7dabffb1d
+Error Number:201,State:4,Class:16
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+Startup - 11:09:33 : donderdag 23 mei 2019
+>Starting server...
+>Server is up and running!
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[CheckLogin] - 11:09:43 : donderdag 23 mei 2019
+>Checking log in for user JMuris
+---[LOGGER MSG START]---
+[RetrieveUser] - 11:09:43 : donderdag 23 mei 2019
+>Attempting to retrieve user with id 4
+>Found user with id 4
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[CheckLogin] - 11:09:44 : donderdag 23 mei 2019
+>Checking log in for user AAppel
+---[LOGGER MSG START]---
+[RetrieveUser] - 11:09:44 : donderdag 23 mei 2019
+>Attempting to retrieve user with id 5
+>Found user with id 5
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[RetrieveAllStories] - 11:10:03 : donderdag 23 mei 2019
+>Attempting to retrieve all stories.
+>Found 9 stories.
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[Game] - 11:10:13 : donderdag 23 mei 2019
+>395fab1c-2589-4c62-a6d3-123ec297f8ec
+---[LOGGER MSG START]---
+[Game] - 11:10:13 : donderdag 23 mei 2019
+>Story from 0 - Verhaal 1: 123123
+>End
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[Game] - 11:10:16 : donderdag 23 mei 2019
+>6c794682-4298-4568-9353-caeab60abefe
+---[LOGGER MSG START]---
+[Game] - 11:10:16 : donderdag 23 mei 2019
+>Story from 0 - G1: 123123
+>End
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[Game] - 11:10:21 : donderdag 23 mei 2019
+>965dc0e3-24e0-46e0-a8b8-0bb3ffc23dfa
+---[LOGGER MSG START]---
+[Game] - 11:10:21 : donderdag 23 mei 2019
+>Story from 0 - Verhaal2: fdshfsdgsf
+>End
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[Game] - 11:10:27 : donderdag 23 mei 2019
+>6f2dfba1-7ad9-4b96-9927-4324c871973a
+---[LOGGER MSG START]---
+[Game] - 11:10:27 : donderdag 23 mei 2019
+>Story from 0 - G2: utiuyiutiut
+>End
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[Game] - 11:10:32 : donderdag 23 mei 2019
+>024f47d9-9f9f-4c6a-ab82-db30f1ce9868
+---[LOGGER MSG START]---
+[Game] - 11:10:32 : donderdag 23 mei 2019
+>Story from 0 - Verhaal3: nbcnbcn
+>End
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[Game] - 11:10:38 : donderdag 23 mei 2019
+>1d2de4b1-9b68-4069-affd-b2db4b16d9f6
+---[LOGGER MSG START]---
+[Game] - 11:10:38 : donderdag 23 mei 2019
+>Story from 0 - G3: xcbjyurafda543
+>End
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+Startup - 11:14:52 : donderdag 23 mei 2019
+>Starting server...
+>Server is up and running!
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[CheckLogin] - 11:14:56 : donderdag 23 mei 2019
+>Checking log in for user AAppel
+---[LOGGER MSG START]---
+[RetrieveUser] - 11:14:56 : donderdag 23 mei 2019
+>Attempting to retrieve user with id 5
+>Found user with id 5
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[CheckLogin] - 11:14:57 : donderdag 23 mei 2019
+>Checking log in for user JMuris
+---[LOGGER MSG START]---
+[RetrieveUser] - 11:14:57 : donderdag 23 mei 2019
+>Attempting to retrieve user with id 4
+>Found user with id 4
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[RetrieveAllStories] - 11:15:18 : donderdag 23 mei 2019
+>Attempting to retrieve all stories.
+>Found 9 stories.
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[Game] - 11:15:23 : donderdag 23 mei 2019
+>9d013cef-4771-4ae9-af52-f5dc08f008d4
+---[LOGGER MSG START]---
+[Game] - 11:15:23 : donderdag 23 mei 2019
+>Story from 0 - Ff: 123
+>End
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[Game] - 11:15:28 : donderdag 23 mei 2019
+>d3a405bc-bb61-4a79-826f-612f0251bbdb
+---[LOGGER MSG START]---
+[Game] - 11:15:28 : donderdag 23 mei 2019
+>Story from 0 - Fff: 123
+>End
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[Game] - 11:15:33 : donderdag 23 mei 2019
+>9d8c5f88-8087-41d0-9bb4-8479e3eddac8
+---[LOGGER MSG START]---
+[Game] - 11:15:33 : donderdag 23 mei 2019
+>Story from 0 - Verhaal1: asdasd
+>End
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[Game] - 11:15:37 : donderdag 23 mei 2019
+>d7bcac0a-3c1f-4601-8534-49c13828d3c1
+---[LOGGER MSG START]---
+[Game] - 11:15:37 : donderdag 23 mei 2019
+>Story from 0 - Ffff: 123
+>End
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[Game] - 11:15:43 : donderdag 23 mei 2019
+>e6809075-89f7-41a5-95ad-9f4ed6ff38f6
+---[LOGGER MSG START]---
+[Game] - 11:15:43 : donderdag 23 mei 2019
+>Story from 0 - Verhaal2: gfjdlkjglfdksjg
+>End
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[Game] - 11:15:48 : donderdag 23 mei 2019
+>9b8dc9e8-3312-43b6-9deb-390e99574664
+---[LOGGER MSG START]---
+[Game] - 11:15:48 : donderdag 23 mei 2019
+>Story from 0 - Verhaal3: nbhgdhgfdh
+>End
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[CheckLogin] - 11:15:53 : donderdag 23 mei 2019
+>Checking log in for user 
+>Something went wrong: System.Data.SqlClient.SqlException (0x80131904): Procedure or function 'LogIn' expects parameter '@pUsername', which was not supplied.
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, SqlDataReader ds)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite, String method)
+   at System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, Boolean sendToPipe, Int32 timeout, Boolean asyncWrite, String methodName)
+   at System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   at WerkelijkWaar.Classes.DatabaseQueries.CheckLogin(String username, String password) in C:\Users\Justin Muris\source\repos\WerkelijkWaar\WerkelijkWaar\Classes\DatabaseQueries.cs:line 280
+ClientConnectionId:ade15045-8168-46df-bb16-b43658748a51
+Error Number:201,State:4,Class:16
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+Startup - 11:18:24 : donderdag 23 mei 2019
+>Starting server...
+>Server is up and running!
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[CheckLogin] - 11:18:27 : donderdag 23 mei 2019
+>Checking log in for user AAppel
+---[LOGGER MSG START]---
+[RetrieveUser] - 11:18:27 : donderdag 23 mei 2019
+>Attempting to retrieve user with id 5
+>Found user with id 5
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[CheckLogin] - 11:18:27 : donderdag 23 mei 2019
+>Checking log in for user JMuris
+---[LOGGER MSG START]---
+[RetrieveUser] - 11:18:27 : donderdag 23 mei 2019
+>Attempting to retrieve user with id 4
+>Found user with id 4
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[RetrieveAllStories] - 11:18:49 : donderdag 23 mei 2019
+>Attempting to retrieve all stories.
+>Found 9 stories.
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[Game] - 11:18:54 : donderdag 23 mei 2019
+>05b7537a-2171-4d7d-b6c9-6ad1c3d6b33e
+---[LOGGER MSG START]---
+[Game] - 11:18:54 : donderdag 23 mei 2019
+>Story from 0 - V1: 123
+>End
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[Game] - 11:18:58 : donderdag 23 mei 2019
+>ada60020-dae2-4eee-a049-b5270e8c42ea
+---[LOGGER MSG START]---
+[Game] - 11:18:58 : donderdag 23 mei 2019
+>Story from 0 - D1: gfsgfsd
+>End
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[Game] - 11:19:01 : donderdag 23 mei 2019
+>d956eeb9-edbd-48b5-ab31-6c1fe1c78198
+---[LOGGER MSG START]---
+[Game] - 11:19:01 : donderdag 23 mei 2019
+>Story from 0 - V2: utiuity
+>End
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[Game] - 11:19:05 : donderdag 23 mei 2019
+>9f193c18-8358-4d2b-9882-577e8b558ef6
+---[LOGGER MSG START]---
+[Game] - 11:19:05 : donderdag 23 mei 2019
+>Story from 0 - D2: oiypiypyiopyi
+>End
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[Game] - 11:19:09 : donderdag 23 mei 2019
+>c04b08e1-66b0-409f-a27c-b231b6dda291
+---[LOGGER MSG START]---
+[Game] - 11:19:09 : donderdag 23 mei 2019
+>Story from 0 - D3: 7647654764
+>End
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[Game] - 11:19:15 : donderdag 23 mei 2019
+>895d0c87-3f04-4b28-a23d-306876c5835b
+---[LOGGER MSG START]---
+[Game] - 11:19:15 : donderdag 23 mei 2019
+>Story from 0 - V3: 76443423
+>End
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[CheckLogin] - 11:19:37 : donderdag 23 mei 2019
+>Checking log in for user 
+>Something went wrong: System.Data.SqlClient.SqlException (0x80131904): Procedure or function 'LogIn' expects parameter '@pUsername', which was not supplied.
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, SqlDataReader ds)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite, String method)
+   at System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, Boolean sendToPipe, Int32 timeout, Boolean asyncWrite, String methodName)
+   at System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   at WerkelijkWaar.Classes.DatabaseQueries.CheckLogin(String username, String password) in C:\Users\Justin Muris\source\repos\WerkelijkWaar\WerkelijkWaar\Classes\DatabaseQueries.cs:line 280
+ClientConnectionId:9fe0ad41-a2c8-473a-8f32-e4e8f8a7f7a1
+Error Number:201,State:4,Class:16
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+Startup - 11:20:36 : donderdag 23 mei 2019
+>Starting server...
+>Server is up and running!
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[CheckLogin] - 11:21:05 : donderdag 23 mei 2019
+>Checking log in for user AAppel
+---[LOGGER MSG START]---
+[RetrieveUser] - 11:21:05 : donderdag 23 mei 2019
+>Attempting to retrieve user with id 5
+>Found user with id 5
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[CheckLogin] - 11:21:05 : donderdag 23 mei 2019
+>Checking log in for user JMuris
+---[LOGGER MSG START]---
+[RetrieveUser] - 11:21:06 : donderdag 23 mei 2019
+>Attempting to retrieve user with id 4
+>Found user with id 4
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[RetrieveAllStories] - 11:21:28 : donderdag 23 mei 2019
+>Attempting to retrieve all stories.
+>Found 9 stories.
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[Game] - 11:21:33 : donderdag 23 mei 2019
+>6894c779-5e10-40f5-b74b-0882c158c6e8
+---[LOGGER MSG START]---
+[Game] - 11:21:33 : donderdag 23 mei 2019
+>Story from 0 - V1: 123
+>End
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[Game] - 11:21:38 : donderdag 23 mei 2019
+>77c2887e-1c0e-4e87-9058-79a6c579b4bc
+---[LOGGER MSG START]---
+[Game] - 11:21:38 : donderdag 23 mei 2019
+>Story from 0 - V2: 456
+>End
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[Game] - 11:21:43 : donderdag 23 mei 2019
+>f786e2fb-67f3-440f-af3d-19e17bb0851f
+---[LOGGER MSG START]---
+[Game] - 11:21:43 : donderdag 23 mei 2019
+>Story from 0 - C1: 678
+>End
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[Game] - 11:21:47 : donderdag 23 mei 2019
+>273e577c-522b-405f-b165-4e2282e05019
+---[LOGGER MSG START]---
+[Game] - 11:21:47 : donderdag 23 mei 2019
+>Story from 0 - C2: 90-
+>End
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[Game] - 11:21:52 : donderdag 23 mei 2019
+>540792bb-b0be-4111-bbf5-60db538105cc
+---[LOGGER MSG START]---
+[Game] - 11:21:52 : donderdag 23 mei 2019
+>Story from 0 - V2: vczvczvczvcz
+>End
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[Game] - 11:21:57 : donderdag 23 mei 2019
+>9de3a92f-842a-45d8-9fe1-f6409f8e0ba0
+---[LOGGER MSG START]---
+[Game] - 11:21:57 : donderdag 23 mei 2019
+>Story from 0 - C3: nbcnbcnbcnb
+>End
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+Startup - 11:25:12 : donderdag 23 mei 2019
+>Starting server...
+>Server is up and running!
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[CheckLogin] - 11:25:26 : donderdag 23 mei 2019
+>Checking log in for user AAppel
+---[LOGGER MSG START]---
+[RetrieveUser] - 11:25:26 : donderdag 23 mei 2019
+>Attempting to retrieve user with id 5
+>Found user with id 5
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[CheckLogin] - 11:25:27 : donderdag 23 mei 2019
+>Checking log in for user JMuris
+---[LOGGER MSG START]---
+[RetrieveUser] - 11:25:27 : donderdag 23 mei 2019
+>Attempting to retrieve user with id 4
+>Found user with id 4
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[RetrieveAllStories] - 11:25:51 : donderdag 23 mei 2019
+>Attempting to retrieve all stories.
+>Found 9 stories.
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[Game] - 11:25:55 : donderdag 23 mei 2019
+>29c680b4-33d9-4879-93be-4818c19be5ce
+---[LOGGER MSG START]---
+[Game] - 11:25:55 : donderdag 23 mei 2019
+>Story from 0 - V1: 123
+>End
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[Game] - 11:25:59 : donderdag 23 mei 2019
+>f36e4aa9-0a0e-4d06-bfd1-e2b19bc50f2c
+---[LOGGER MSG START]---
+[Game] - 11:25:59 : donderdag 23 mei 2019
+>Story from 0 - C1: 123
+>End
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[Game] - 11:26:02 : donderdag 23 mei 2019
+>e70ce472-d64f-4bbe-92c1-85dceb383159
+---[LOGGER MSG START]---
+[Game] - 11:26:02 : donderdag 23 mei 2019
+>Story from 0 - C2: 123
+>End
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[Game] - 11:26:04 : donderdag 23 mei 2019
+>9be34ea6-f222-49d2-9cc1-6783f1678704
+---[LOGGER MSG START]---
+[Game] - 11:26:04 : donderdag 23 mei 2019
+>Story from 0 - C3: 123
+>End
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[Game] - 11:26:08 : donderdag 23 mei 2019
+>cdc937a0-e36b-43bc-8b3e-6076c822dc92
+---[LOGGER MSG START]---
+[Game] - 11:26:08 : donderdag 23 mei 2019
+>Story from 0 - V2: 123
+>End
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[Game] - 11:26:10 : donderdag 23 mei 2019
+>9a401ea4-61ac-41d4-9e9d-2009c2e09a71
+---[LOGGER MSG START]---
+[Game] - 11:26:10 : donderdag 23 mei 2019
+>Story from 0 - V3: 123
+>End
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+Startup - 11:27:20 : donderdag 23 mei 2019
+>Starting server...
+>Server is up and running!
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[CheckLogin] - 11:27:28 : donderdag 23 mei 2019
+>Checking log in for user AAppel
+---[LOGGER MSG START]---
+[RetrieveUser] - 11:27:28 : donderdag 23 mei 2019
+>Attempting to retrieve user with id 5
+>Found user with id 5
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[CheckLogin] - 11:27:29 : donderdag 23 mei 2019
+>Checking log in for user JMuris
+---[LOGGER MSG START]---
+[RetrieveUser] - 11:27:29 : donderdag 23 mei 2019
+>Attempting to retrieve user with id 4
+>Found user with id 4
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[RetrieveAllStories] - 11:27:49 : donderdag 23 mei 2019
+>Attempting to retrieve all stories.
+>Found 9 stories.
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[Game] - 11:27:54 : donderdag 23 mei 2019
+>c8eee1c0-2068-4618-9781-54b85901e14a
+---[LOGGER MSG START]---
+[Game] - 11:27:54 : donderdag 23 mei 2019
+>Story from 0 - V1: 123
+>End
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[Game] - 11:27:56 : donderdag 23 mei 2019
+>a41173de-e7bc-4c0e-b489-1c57ebb1cff9
+---[LOGGER MSG START]---
+[Game] - 11:27:56 : donderdag 23 mei 2019
+>Story from 0 - F1: 123
+>End
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[Game] - 11:28:00 : donderdag 23 mei 2019
+>83c39f52-ee7a-4f13-ac22-d2725be85edd
+---[LOGGER MSG START]---
+[Game] - 11:28:00 : donderdag 23 mei 2019
+>Story from 0 - F2: 123
+>End
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[Game] - 11:28:03 : donderdag 23 mei 2019
+>c41bb5cf-af4e-4bae-91c4-15e7f4e188e1
+---[LOGGER MSG START]---
+[Game] - 11:28:03 : donderdag 23 mei 2019
+>Story from 0 - V2: 123
+>End
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[Game] - 11:28:05 : donderdag 23 mei 2019
+>8b1dd060-6c8d-444d-ad36-050f8c8f8f9f
+---[LOGGER MSG START]---
+[Game] - 11:28:05 : donderdag 23 mei 2019
+>Story from 0 - V3: 123
+>End
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[Game] - 11:28:07 : donderdag 23 mei 2019
+>e45c6704-a5a2-4c87-9b2e-15863d93d2ec
+---[LOGGER MSG START]---
+[Game] - 11:28:07 : donderdag 23 mei 2019
+>Story from 0 - F3: 123
+>End
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+Startup - 11:37:30 : donderdag 23 mei 2019
+>Starting server...
+>Server is up and running!
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[CheckLogin] - 11:37:34 : donderdag 23 mei 2019
+>Checking log in for user JMuris
+---[LOGGER MSG START]---
+[RetrieveUser] - 11:37:34 : donderdag 23 mei 2019
+>Attempting to retrieve user with id 4
+>Found user with id 4
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[CheckLogin] - 11:37:35 : donderdag 23 mei 2019
+>Checking log in for user AAppel
+---[LOGGER MSG START]---
+[RetrieveUser] - 11:37:35 : donderdag 23 mei 2019
+>Attempting to retrieve user with id 5
+>Found user with id 5
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[RetrieveAllStories] - 11:37:57 : donderdag 23 mei 2019
+>Attempting to retrieve all stories.
+>Found 9 stories.
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[Game] - 11:38:03 : donderdag 23 mei 2019
+>fda9521e-f380-4e3a-9eb8-497feb84965c
+---[LOGGER MSG START]---
+[Game] - 11:38:03 : donderdag 23 mei 2019
+>Story from 0 - G1: 123
+>End
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[Game] - 11:38:07 : donderdag 23 mei 2019
+>894a459f-f63e-4d91-8755-5039fdb07626
+---[LOGGER MSG START]---
+[Game] - 11:38:07 : donderdag 23 mei 2019
+>Story from 0 - V1: 123
+>End
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[Game] - 11:38:09 : donderdag 23 mei 2019
+>ce13fa5c-8456-47f1-a0b4-21f053572100
+---[LOGGER MSG START]---
+[Game] - 11:38:09 : donderdag 23 mei 2019
+>Story from 0 - V2: 123
+>End
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[Game] - 11:38:12 : donderdag 23 mei 2019
+>7904923a-7b22-4b79-9d35-851363d85f95
+---[LOGGER MSG START]---
+[Game] - 11:38:12 : donderdag 23 mei 2019
+>Story from 0 - G2: 123
+>End
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[Game] - 11:38:14 : donderdag 23 mei 2019
+>b0a83875-cf8e-4cae-9032-e15d752e215b
+---[LOGGER MSG START]---
+[Game] - 11:38:14 : donderdag 23 mei 2019
+>Story from 0 - V2: 123
+>End
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[Game] - 11:38:17 : donderdag 23 mei 2019
+>4733f335-329d-4f6e-ad5b-96b4a9341962
+---[LOGGER MSG START]---
+[Game] - 11:38:17 : donderdag 23 mei 2019
+>Story from 0 - G3: 213
+>End
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[Game] - 11:38:17 : donderdag 23 mei 2019
+>Planting correct answer...
+---[LOGGER MSG START]---
+Startup - 11:39:21 : donderdag 23 mei 2019
+>Starting server...
+>Server is up and running!
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[CheckLogin] - 11:39:28 : donderdag 23 mei 2019
+>Checking log in for user JMuris
+---[LOGGER MSG START]---
+[RetrieveUser] - 11:39:28 : donderdag 23 mei 2019
+>Attempting to retrieve user with id 4
+>Found user with id 4
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[CheckLogin] - 11:39:29 : donderdag 23 mei 2019
+>Checking log in for user AAppel
+---[LOGGER MSG START]---
+[RetrieveUser] - 11:39:29 : donderdag 23 mei 2019
+>Attempting to retrieve user with id 5
+>Found user with id 5
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[RetrieveAllStories] - 11:39:49 : donderdag 23 mei 2019
+>Attempting to retrieve all stories.
+>Found 9 stories.
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[Game] - 11:39:54 : donderdag 23 mei 2019
+>9f2676c6-ce4c-4247-8a6c-af326c2905b4
+---[LOGGER MSG START]---
+[Game] - 11:39:54 : donderdag 23 mei 2019
+>Story from 0 - G1: 123
+>End
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[Game] - 11:39:56 : donderdag 23 mei 2019
+>2d300a09-9fac-4ee3-ae25-194f71b920cf
+---[LOGGER MSG START]---
+[Game] - 11:39:56 : donderdag 23 mei 2019
+>Story from 0 - G2: 123
+>End
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[Game] - 11:40:02 : donderdag 23 mei 2019
+>27c22dc7-68bf-46af-be35-94edadfcc8f2
+---[LOGGER MSG START]---
+[Game] - 11:40:02 : donderdag 23 mei 2019
+>Story from 0 - G3: 123
+>End
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[Game] - 11:40:04 : donderdag 23 mei 2019
+>a739ab89-60a3-49b3-a30b-6ec18676b59f
+---[LOGGER MSG START]---
+[Game] - 11:40:04 : donderdag 23 mei 2019
+>Story from 0 - V1: 123
+>End
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[Game] - 11:40:07 : donderdag 23 mei 2019
+>a51da579-021f-48c1-a46d-adb60ad4b84a
+---[LOGGER MSG START]---
+[Game] - 11:40:07 : donderdag 23 mei 2019
+>Story from 0 - V2: 123
+>End
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[Game] - 11:40:10 : donderdag 23 mei 2019
+>540203ca-d08a-4a59-953c-8e4963d31882
+---[LOGGER MSG START]---
+[Game] - 11:40:10 : donderdag 23 mei 2019
+>Story from 0 - V3: 123
+>End
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[Game] - 11:40:10 : donderdag 23 mei 2019
+>Planting correct answer...
+>Correct answer is 0 with story string '5:!|Een verhaal:!|Lorem Ipsum bla bla bla'.
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[CheckLogin] - 11:40:46 : donderdag 23 mei 2019
+>Checking log in for user AAppel
+---[LOGGER MSG START]---
+[RetrieveUser] - 11:40:46 : donderdag 23 mei 2019
+>Attempting to retrieve user with id 5
+>Found user with id 5
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+Startup - 11:41:19 : donderdag 23 mei 2019
+>Starting server...
+>Server is up and running!
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[CheckLogin] - 11:41:23 : donderdag 23 mei 2019
+>Checking log in for user JMuris
+---[LOGGER MSG START]---
+[RetrieveUser] - 11:41:23 : donderdag 23 mei 2019
+>Attempting to retrieve user with id 4
+>Found user with id 4
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[CheckLogin] - 11:41:23 : donderdag 23 mei 2019
+>Checking log in for user AAppel
+---[LOGGER MSG START]---
+[RetrieveUser] - 11:41:23 : donderdag 23 mei 2019
+>Attempting to retrieve user with id 5
+>Found user with id 5
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[RetrieveAllStories] - 11:41:45 : donderdag 23 mei 2019
+>Attempting to retrieve all stories.
+>Found 9 stories.
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[Game] - 11:41:50 : donderdag 23 mei 2019
+>3c6fe9eb-516f-47a9-a9b4-f95df99b1974
+---[LOGGER MSG START]---
+[Game] - 11:41:50 : donderdag 23 mei 2019
+>Story from 0 - F1: 123
+>End
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[Game] - 11:41:53 : donderdag 23 mei 2019
+>87ddee79-d24e-462d-adac-63ccf99eafd4
+---[LOGGER MSG START]---
+[Game] - 11:41:53 : donderdag 23 mei 2019
+>Story from 0 - F2: 123
+>End
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[Game] - 11:41:56 : donderdag 23 mei 2019
+>eaab94e4-8222-425c-b80c-60a4e79f9084
+---[LOGGER MSG START]---
+[Game] - 11:41:56 : donderdag 23 mei 2019
+>Story from 0 - B1: 123
+>End
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[Game] - 11:41:58 : donderdag 23 mei 2019
+>5489ac84-99e9-4a7c-8ecd-d8771db84a39
+---[LOGGER MSG START]---
+[Game] - 11:41:58 : donderdag 23 mei 2019
+>Story from 0 - B2: 123
+>End
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[Game] - 11:42:01 : donderdag 23 mei 2019
+>57fd32e5-0f39-4a67-b942-79fb6b2c4e35
+---[LOGGER MSG START]---
+[Game] - 11:42:01 : donderdag 23 mei 2019
+>Story from 0 - F3: 123
+>End
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[Game] - 11:42:03 : donderdag 23 mei 2019
+>058a87a7-3295-4c99-817d-14a17d55cffe
+---[LOGGER MSG START]---
+[Game] - 11:42:03 : donderdag 23 mei 2019
+>Story from 0 - B3: 123
+>End
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[Game] - 11:42:03 : donderdag 23 mei 2019
+>Planting correct answer...
+>Correct answer is 2 with story string '5:!|F:!|hgdjdhjgdh'.
+---[LOGGER  MSG  END]---
+

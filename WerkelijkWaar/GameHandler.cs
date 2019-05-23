@@ -337,13 +337,20 @@ namespace WerkelijkWaar
 
                     if (room.GamePreparation())
                     {
-                        await InvokeClientMethodToAllAsync("startGame", roomCode);
+                        await InvokeClientMethodToAllAsync("startGame", roomCode, room.CurrentGroup);
                         await RetrievePlayerList(room.RoomCode, true);
                     }
                 }
             }
         }
 
+        /// <summary>
+        /// Wacht tot alle spelers gereed zijn om te spelen.
+        /// Start vervolgens het spel.
+        /// </summary>
+        /// <param name="socketId"></param>
+        /// <param name="roomCode"></param>
+        /// <returns></returns>
         public async Task ReadyUpPlayer(string socketId, string roomCode)
         {
             foreach (Classes.Room room in _gameManager.Rooms)
@@ -367,10 +374,7 @@ namespace WerkelijkWaar
 
                     if (room.NumberOfReadyPlayers == room.Users.Count)
                     {
-                        // continue to write phase
-                        await InvokeClientMethodToAllAsync("goToWritePhase", roomCode);
-                        await RetrieveRootStory(roomCode);
-                        await StartGameTimer(roomCode, 30, room.RoomOwnerId); // timer 600
+                        await GoToWritePhase(roomCode, room.RoomOwnerId, false);
                     }
                 }
             }
@@ -387,31 +391,64 @@ namespace WerkelijkWaar
                         user.ReadyToPlay = true;
                     }
 
-                    room.RoomState = Classes.Room.State.Writing;
-                    await InvokeClientMethodToAllAsync("goToWritePhase", roomCode);
-                    await RetrieveRootStory(roomCode);
-                    await StartGameTimer(roomCode, 30, room.RoomOwnerId); // timer 600
+                    await GoToWritePhase(roomCode, room.RoomOwnerId, false);
                 }
             }
         }
 
-        public async Task RetrieveRootStory(string roomCode)
+        /// <summary>
+        /// Ga naar de schrijffase van het spel.
+        /// </summary>
+        /// <param name="roomCode"></param>
+        /// <param name="ownerId"></param>
+        /// <param name="reset"></param>
+        /// <returns></returns>
+        public async Task GoToWritePhase(string roomCode, string ownerId, bool reset)
         {
             foreach (Classes.Room room in _gameManager.Rooms)
             {
                 if (room.RoomCode == roomCode)
                 {
-                    foreach (Classes.User user in room.Users)
-                    {
-                        l.WriteToLog("[Game]", "Find root story for " + user.Username, 0);
-                        string rootStory = room.RetrievedStories[user.GameGroup-1].Id + ":!|" + room.RetrievedStories[user.GameGroup-1].Title + ":!|" + room.RetrievedStories[user.GameGroup-1].Description;
-                        l.WriteToLog("[Game]", rootStory, 1);
-                        await InvokeClientMethodToAllAsync("retrieveRootStory", roomCode, user.SocketId, rootStory);
-                    }
+                    room.RoomState = Classes.Room.State.Writing;
+
+                    await InvokeClientMethodToAllAsync("goToWritePhase", roomCode);
+                    await StartGameTimer(roomCode, 60, room.RoomOwnerId);
+                    await RetrieveRootStory(roomCode);
                 }
             }
         }
 
+        /// <summary>
+        /// Ga naar de leesfase van het spel.
+        /// </summary>
+        /// <param name="roomCode"></param>
+        /// <param name="ownerId"></param>
+        /// <param name="reset"></param>
+        /// <returns></returns>
+        public async Task GoToReadPhase(string roomCode, bool reset)
+        {
+            foreach (Classes.Room room in _gameManager.Rooms)
+            {
+                if (room.RoomCode == roomCode)
+                {
+                    room.RoomState = Classes.Room.State.Reading;
+
+                    room.CurrentGroup++;
+
+                    await InvokeClientMethodToAllAsync("goToReadPhase", roomCode);
+                    await StartGameTimer(roomCode, 60, room.RoomOwnerId);
+                    await RetrieveWrittenStories(roomCode, room.CurrentGroup);
+                }
+            }
+        }
+
+        /// <summary>
+        /// Start de game timer.
+        /// </summary>
+        /// <param name="roomCode"></param>
+        /// <param name="time"></param>
+        /// <param name="ownerId"></param>
+        /// <returns></returns>
         public async Task StartGameTimer(string roomCode, int time, string ownerId)
         {
             foreach (Classes.Room room in _gameManager.Rooms)
@@ -425,6 +462,12 @@ namespace WerkelijkWaar
             }
         }
 
+        /// <summary>
+        /// Stop de game timer.
+        /// </summary>
+        /// <param name="roomCode"></param>
+        /// <param name="ownerId"></param>
+        /// <returns></returns>
         public async Task StopGameTimer(string roomCode, string ownerId)
         {
             foreach (Classes.Room room in _gameManager.Rooms)
@@ -434,19 +477,24 @@ namespace WerkelijkWaar
                     room.RemainingTime = 0;
                     room.gameTimer.Stop();
                     await InvokeClientMethodToAllAsync("stopCountdownTimer", roomCode);
+                }
+            }
+        }
 
-                    if (room.RoomState == Classes.Room.State.Writing)
+        /// <summary>
+        /// Haal alle root verhalen op om later te verdelen.
+        /// </summary>
+        /// <param name="roomCode"></param>
+        public async Task RetrieveRootStory(string roomCode)
+        {
+            foreach (Classes.Room room in _gameManager.Rooms)
+            {
+                if (room.RoomCode == roomCode)
+                {
+                    foreach (Classes.User user in room.Users)
                     {
-                        room.CurrentGroup++;
-                        await RetrieveWrittenStories(roomCode, room.CurrentGroup);
-                        await InvokeClientMethodToAllAsync("goToReadPhase", roomCode);
-                        room.RoomState = Classes.Room.State.Reading;
-                    }
-                    else if (room.RoomState == Classes.Room.State.Reading)
-                    {
-                        room.CurrentGroup++;
-                        await RetrieveWrittenStories(roomCode, room.CurrentGroup);
-                        await InvokeClientMethodToAllAsync("goToReadPhase", roomCode);
+                        string rootStory = room.RetrievedStories[user.GameGroup - 1].Id + ":!|" + room.RetrievedStories[user.GameGroup - 1].Title + ":!|" + room.RetrievedStories[user.GameGroup - 1].Description;
+                        await InvokeClientMethodToAllAsync("retrieveRootStory", roomCode, user.SocketId, rootStory);
                     }
                 }
             }
@@ -472,9 +520,14 @@ namespace WerkelijkWaar
                             l.WriteToLog("[Game]", "Story from " + tempStory[0] + " - " + tempStory[1] + ": " + tempStory[2], 0);
                             l.WriteToLog("[Game]", "End", 1);
 
-                            Classes.Story newStory = new Classes.Story { GameGroup = user.GameGroup, Date = DateTime.Now, IsRoot = false, Title = tempStory[1], Description = tempStory[2], OwnerId = user.Id, Source = Convert.ToInt32(tempStory[0]) };
-                            room.WrittenStories.Add(newStory);
-                            // dq.CreateStory(newStory);
+                            Classes.Story newStory = new Classes.Story { GameGroup = user.GameGroup, IsRoot = false, Title = tempStory[1], Description = tempStory[2], OwnerId = user.Id, Source = Convert.ToInt32(tempStory[0]) };
+
+                            if (!room.WrittenStories.Contains(newStory))
+                            {
+                                newStory.Date = DateTime.Now;
+                                room.WrittenStories.Add(newStory);
+                                // dq.CreateStory(newStory);
+                            }
                         }
 
                         if (user.WroteStory)
@@ -485,9 +538,7 @@ namespace WerkelijkWaar
 
                     if (usersThatWroteStories == room.Users.Count)
                     {
-                        // continue to read phase
-                        await InvokeClientMethodToAllAsync("goToReadPhase", roomCode);
-                        await StartGameTimer(roomCode, 30, room.RoomOwnerId);
+                        await GoToReadPhase(roomCode, false);
                     }
                 }
             }
@@ -501,28 +552,51 @@ namespace WerkelijkWaar
             {
                 if (room.RoomCode == roomCode)
                 {
-                    foreach (Classes.User user in room.Users)
+                    foreach (Classes.Story story in room.WrittenStories)
                     {
-                        //if (user.GameGroup != gameGroup)
-                        //{
-                            foreach (Classes.Story story in room.WrittenStories)
-                            {
-                                if (story.GameGroup == gameGroup)
-                                {
-                                    // OwnerId, Title, Description
-                                    string toSend = story.OwnerId.ToString() + ":!|" + story.Title + ":!|" + story.Description;
-                                    storiesToSend.Add(toSend);
-                                }
-                            }
-                            await InvokeClientMethodToAllAsync("showStories", user.SocketId, roomCode, Newtonsoft.Json.JsonConvert.SerializeObject(storiesToSend));
-                        //}
-                        //else
-                        //{
-                        //    await InvokeClientMethodToAllAsync("waitTurn", user.SocketId, roomCode);
-                        //}
+                        if (story.GameGroup == gameGroup)
+                        {
+                            string toSend = story.OwnerId.ToString() + ":!|" + story.Title + ":!|" + story.Description;
+                            storiesToSend.Add(toSend);
+                        }
+                    }
+
+                    Classes.Story rootStory = room.RetrievedStories[gameGroup-1];
+                    string root = rootStory.OwnerId.ToString() + ":!|" + rootStory.Title + ":!|" + rootStory.Description;
+                    storiesToSend.Add(root);
+
+                    // Shuffle story list
+                    Random rng = new Random();
+
+                    int stringsLeft = storiesToSend.Count();
+
+                    while (stringsLeft > 1)
+                    {
+                        stringsLeft--;
+                        int index = rng.Next(stringsLeft + 1);
+                        string selectedString = storiesToSend[index];
+                        storiesToSend[index] = storiesToSend[stringsLeft];
+                        storiesToSend[stringsLeft] = selectedString;
+                    }
+
+                    // Plant correct answer
+                    l.WriteToLog("[Game]", "Planting correct answer...", 0);
+
+                    int storyCount = 0;
+                    foreach (string storyString in storiesToSend)
+                    {
+                        if (storyString == root)
+                        {
+                            l.WriteToLog("[Game]", "Correct answer is " + storyCount + " with story string '" + storyString + "'.", 1);
+                            room.CorrectAnswer = storyCount;
+                        }
+
+                        storyCount++;
                     }
                 }
             }
+
+            await InvokeClientMethodToAllAsync("showStories", gameGroup, roomCode, Newtonsoft.Json.JsonConvert.SerializeObject(storiesToSend));
         }
         #endregion
 

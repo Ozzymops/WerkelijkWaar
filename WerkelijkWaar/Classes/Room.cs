@@ -28,6 +28,7 @@ namespace WerkelijkWaar.Classes
         public int RemainingTime { get; set; }
         public int NumberOfReadyPlayers { get; set; }
         public int CurrentGroup = 0;
+        public int CorrectAnswer = 0;
 
         // Configuration
 
