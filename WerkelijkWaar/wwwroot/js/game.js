@@ -347,7 +347,7 @@ $(document).ready(function () {
     });
 
     // Skip tutorial
-    $('#btn-skipTutorial').click(function () {
+    $('.btn-skipTutorial').click(function () {
         connection.invoke("SkipTutorial", $roomContent.val());
     });
 
@@ -421,11 +421,15 @@ $(document).ready(function () {
     }
 
     function hideNavigation() {
+        document.getElementById("html").style.backgroundColor = "#6ac2c4";
+        document.getElementById("body").style.backgroundColor = "#6ac2c4";
         document.getElementById("topBar").style.display = "none";
         document.getElementById("sideBar").style.display = "none";
     }
 
     function showNavigation() {
+        document.getElementById("html").style.backgroundColor = "#f5b91a";
+        document.getElementById("body").style.backgroundColor = "#f5b91a";
         document.getElementById("topBar").style.display = "block";
         document.getElementById("sideBar").style.display = "block";
     }
@@ -497,7 +501,6 @@ $(document).ready(function () {
     }
 
     function swapStory(storyNumber) {
-        console.log(storyNumber);
         selectedAnswer = storyNumber;
 
         var selectedStoryContent = storyList[storyNumber].split(':!|');
@@ -512,12 +515,11 @@ $(document).ready(function () {
     function sendAnswer() {
         $('#btn-shareStory').prop('disabled', true);
 
-        var $selectedStory = selectedStory;
-
         document.getElementById("read-busy").style.display = "none";
         document.getElementById("read-finished").style.display = "block";
 
-        connection.invoke("UploadAnswer", $roomContent.val(), connection.connectionId, $selectedStory);
+        console.log("Answered with " + selectedAnswer);
+        connection.invoke("UploadAnswer", $roomContent.val(), connection.connectionId, selectedAnswer);
     }
     //#endregion
 

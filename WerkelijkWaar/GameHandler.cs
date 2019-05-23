@@ -544,6 +544,78 @@ namespace WerkelijkWaar
             }
         }
 
+        public async Task UploadAnswer(string roomCode, string socketId, string answer)
+        {
+            string tempSocketId = "";
+
+            l.WriteToLog("[Game]", "Checking rooms...", 0);
+
+            foreach (Classes.Room room in _gameManager.Rooms)
+            {
+                if (room.RoomCode == roomCode)
+                {
+                    int usersThatSelectedAnswers = 0;
+
+                    l.WriteToLog("[Game]", "Checking users...", 0);
+
+                    foreach (Classes.User user in room.Users)
+                    {
+                        if (user.SocketId == socketId)
+                        {
+                            user.ChoseStory = true;
+
+                            l.WriteToLog("[Game]", "Checking score for " + user.Username + "/" + user.SocketId + "...", 0);
+
+                            if (room.SelectedAnswers != null && room.SelectedAnswers.Count != 0)
+                            {
+                                foreach (Classes.Score score in room.SelectedAnswers)
+                                {
+                                    bool scoreFound = false;
+
+                                    if (score.OwnerId == user.Id)
+                                    {
+                                        l.WriteToLog("[Game]", "Score already exists (" + score.Answers + "), appending with " + answer + "...", 1);
+
+                                        scoreFound = true;
+
+                                        score.Answers += answer;
+                                    }
+
+                                    if (!scoreFound)
+                                    {
+                                        l.WriteToLog("[Game]", "Score not found. Creating with answer " + answer + "...", 1);
+
+                                        Classes.Score newScore = new Classes.Score { OwnerId = user.Id, Answers = answer, Date = DateTime.Now };
+
+                                        room.SelectedAnswers.Add(newScore);
+                                    }
+                                }
+                            }
+                            else
+                            {
+                                l.WriteToLog("[Game]", "Score not found. Creating with answer " + answer + "...", 1);
+
+                                Classes.Score newScore = new Classes.Score { OwnerId = user.Id, Answers = answer, Date = DateTime.Now };
+
+                                room.SelectedAnswers.Add(newScore);
+                            }
+                        }
+
+                        if (user.ChoseStory)
+                        {
+                            usersThatSelectedAnswers++;
+                        }
+                    }
+
+                    if (usersThatSelectedAnswers == room.Users.Count)
+                    {
+                        // Loop
+                        // Upload to database after end of loop
+                    }
+                }
+            }
+        }
+
         public async Task RetrieveWrittenStories(string roomCode, int gameGroup)
         {
             List<string> storiesToSend = new List<string>();
