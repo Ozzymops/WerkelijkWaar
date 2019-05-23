@@ -83,6 +83,7 @@ $(document).ready(function () {
 
             // Show relevant elements
             document.getElementById("game-prep").style.display = "block";
+            document.getElementById("statusMessage").style.display = "block;";
             showNavigation();
         }
     }
@@ -108,7 +109,7 @@ $(document).ready(function () {
                         }
                         else {
                             var idString = "'" + tempString + "'";
-                            $('#playerList').append('<li>' + tempArray[0] + '<input class="form-check" onClick="$.kickUser(' + idString + ')" type="button" value="Kick" />' + '</li>');
+                            $('#playerList').append('<li><p>' + tempArray[0] + '<input class="form-button-orange" onClick="$.kickUser(' + idString + ')" type="button" value="Kick" style="width: 50px;" /></p></li>');
                         }
                     }
                     else {
@@ -135,7 +136,7 @@ $(document).ready(function () {
             document.getElementById("game-connected").style.display = "none";
 
             // Show relevant elements
-            document.getElementById("statusMessage").innerHTML = "Started game.";
+            document.getElementById("statusMessage").style.display = "none;";
             document.getElementById("game-tutorial-1").style.display = "block";
 
             // Debug
@@ -201,7 +202,7 @@ $(document).ready(function () {
 
                 currentRootId = rootStoryId;
 
-                $('#storyTitle').html(rootStoryTitle);
+                $('#storyTitle').html("Titel: " + rootStoryTitle);
                 $('#storyText').html(rootStoryText);
             }
         }
@@ -244,7 +245,7 @@ $(document).ready(function () {
                         console.log($(storySpot).val());
 
                         if (storyCount == 1) {
-                            $('#readStoryTitle').html(storyTitle);
+                            $('#readStoryTitle').html("Titel: " + storyTitle);
                             $('#readStoryText').html(storyText);
                         }
 
@@ -375,18 +376,28 @@ $(document).ready(function () {
         timer = maxSeconds;
 
         currentTimer = setInterval(function () {
+            clockMinutes = parseInt(timer / 60, 10);
+            clockSeconds = parseInt(timer % 60, 10);
+
+            clockMinutes = clockMinutes < 10 ? "0" + clockMinutes : clockMinutes;
+            clockSeconds = clockSeconds < 10 ? "0" + clockSeconds : clockSeconds;
+
             seconds = timer;
-            $('.clockBar').html(seconds);
+            $('.clockBar').html(clockMinutes + ':' + clockSeconds);
             $('.clockBar').css('width', (seconds / maxSeconds * 100) + "vw")
             // document.getElementById("clockBar").innerHTML = seconds;
             // document.getElementById("clockBar").style.width = (seconds / maxSeconds * 100) + "vw";
 
             if ($roleContent.val() == 1) {
-                if ((seconds / maxSeconds * 100) > 25 && soundState == 0) {
+                if ((seconds / maxSeconds * 100) > 50 && soundState == 0) {
                     document.getElementById("snd-timer-1").play();
                     soundState = 5;
                 }
-                else if ((seconds / maxSeconds * 100) > 10 && soundState == 0) {
+                else if ((seconds / maxSeconds * 100) > (120 / maxSeconds * 100) && soundState == 0) {
+                    document.getElementById("snd-timer-1").play();
+                    soundState = 3;
+                }
+                else if ((seconds / maxSeconds * 100) > (30 / maxSeconds * 100) && soundState == 0) {
                     document.getElementById("snd-timer-2").play();
                     soundState = 3;
                 }
@@ -409,7 +420,7 @@ $(document).ready(function () {
                 }
             }
 
-        }, 1000);
+        }, 500); // 1000
     }
 
     // Stop timer

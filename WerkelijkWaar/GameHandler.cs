@@ -412,7 +412,7 @@ namespace WerkelijkWaar
                     room.RoomState = Classes.Room.State.Writing;
 
                     await InvokeClientMethodToAllAsync("goToWritePhase", roomCode);
-                    await StartGameTimer(roomCode, 60, room.RoomOwnerId);
+                    await StartGameTimer(roomCode, 600, room.RoomOwnerId);
                     await RetrieveRootStory(roomCode);
                 }
             }
@@ -436,7 +436,7 @@ namespace WerkelijkWaar
                     room.CurrentGroup++;
 
                     await InvokeClientMethodToAllAsync("goToReadPhase", roomCode);
-                    await StartGameTimer(roomCode, 60, room.RoomOwnerId);
+                    await StartGameTimer(roomCode, 900, room.RoomOwnerId);
                     await RetrieveWrittenStories(roomCode, room.CurrentGroup);
                 }
             }

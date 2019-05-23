@@ -14,33 +14,30 @@
             <input id="roomInput" type="hidden" value="" />
             <input id="roleId" type="hidden" value="@Model.User.RoleId" />
             <input id="storySource" type="hidden" value="0" />
-            <!-- Student -->
             @if (Model.User.RoleId == 0)
             {
+                <!-- Student -->
                 <div id="game-prep">
                     <h2 class="subtitle">Speel mee! Vul de spelcode op het bord in:</h2>
                     <input id="codeInput" type="text" class="text-input" />
                     <input id="btn-connectLobby" type="button" class="form-button" style="margin-top: 10px;" value="Verbinden met lobby" />
                 </div>
                 <div id="game-connected" style="display: none;">
-                    <div style="display: flex; flex-direction: row;">
+                    <div style="display: flex; flex-direction: column;">
                         <div>
-                            <p id="statusString" class="before-input">...</p>
-                            <input id="btn-leaveLobby" type="button" class="form-button-orange" value="Lobby verlaten" />
-                        </div>
-                        <div>
-                            <ul id="playerList" style="border: 1px solid black;"></ul>
+                            <ul id="playerList" style="border: 1px solid black; list-style-type: none; text-align: center; padding: 0;"></ul>
                             <p id="playerCount" class="before-input">x spelers zijn verbonden.</p>
+                            <input id="btn-leaveLobby" type="button" class="form-button-orange" style="margin-top: 10px;" value="Lobby verlaten" />
                         </div>
                     </div>
                 </div>
-                <div id="game-tutorial-1" style="display: none; width: 100vw;">
+                <div id="game-tutorial-1" style="display: none; width: 100vw; text-align: center;">
                     <p class="before-input">Je wilt graag een nieuwe telefoon, maar je hebt nog niet genoeg geld gespaard om er een te kunnen kopen.</p>
                     <p class="before-input">Je hebt gehoord dat mensen bakken met geld verdienen door het verspreiden van nepnieuws.<br />Hoe moeilijk kan het zijn om zelf nep berichten te verspreiden?</p>
                     <p class="before-input">Schrijf zelf nep berichten en verdien genoeg om een nieuwe telefoon te kopen.</p>
                     <input class="btn-nextTutorial" type="button" value="Volgende" />
                 </div>
-                <div id="game-tutorial-2" style="display: none; width: 100vw;">
+                <div id="game-tutorial-2" style="display: none; width: 100vw; text-align: center;">
                     <p class="before-input">Om geld te verdienen heb je volgers nodig.</p>
                     <p class="before-input">Zorg er dus voor dat lezers het door jou geschreven bericht delen.</p>
                     <p class="before-input">Daarnaast moet je er wel voor zorgen dat je zelf de juiste berichten deelt.</p>
@@ -48,23 +45,27 @@
                     <p class="before-input">[foto's]</p>
                     <input class="btn-nextTutorial" type="button" value="Volgende" />
                 </div>
-                <div id="game-tutorial-3" style="display: none; width: 100vw;">
+                <div id="game-tutorial-3" style="display: none; width: 100vw; text-align: center;">
                     <p class="before-input">Maak van het originele artikel een eigen nep bericht.<br />Bedenk zelf ook een titel die nieuwsgierigheid wekt.</p>
                     <input class="btn-nextTutorial" type="button" value="Aan de slag" />
                 </div>
-                <div id="game-waiting" style="display: none; width: 100vw;">
+                <div id="game-waiting" style="display: none; width: 100vw; text-align: center;">
                     <p class="before-input">Wachten op spelers...</p>
                 </div>
                 <div id="game-write" style="display: none; width: 100vw;">
                     <div id="write-busy">
-                        <div style="display: flex; flex-direction: row;">
-                            <div>
-                                <p id="storyTitle">Titel</p>
-                                <p id="storyText">Verhaal</p>
+                        <div style="display: flex; flex-direction: column;">
+                            <div style="display: flex; flex-direction: row; justify-content: center;">
+                                <div style="border: 1px solid black; width: 25%;">
+                                    <p id="storyTitle" style="text-align: center;">Titel</p>
+                                    <p id="storyText" style="text-align: center;">Verhaal</p>
+                                </div>
+                                <div style="display: flex; flex-direction: column;">
+                                    <input id="writtenStoryTitle" class="text-input" placeholder="Titel" />
+                                    <textarea id="writtenStoryText" class="text-input" style="width: 400px; height: 400px;" placeholder="Verhaal"></textarea>
+                                </div>
                             </div>
                             <div>
-                                <input id="writtenStoryTitle" class="text-input" placeholder="Titel" />
-                                <textarea id="writtenStoryText" class="text-input" style="width: 400px; height: 400px;" placeholder="Verhaal"></textarea>
                                 <input id="btn-sendStory" class="form-button-orange" type="button" value="Verhaal insturen" />
                             </div>
                         </div>
@@ -95,55 +96,58 @@
                     <span class="clockBar" style="display: none; margin-left: auto; margin-right: auto; width: 100vw; height: 50px; background-color: #f7c747; text-align: center;"></span>
                 </div>
             }
-            <!-- Docent -->
             @if (Model.User.RoleId == 1)
             {
+                <!-- Docent -->
+                <!-- !Geluiden! -->
                 <audio id="snd-timer-1" src="~/content/audio/Timer1.wav"></audio>
                 <audio id="snd-timer-2" src="~/content/audio/Timer2.wav"></audio>
                 <audio id="snd-timer-3" src="~/content/audio/Timer3.wav"></audio>
                 <audio id="snd-timesup" src="~/content/audio/TimesUp.wav"></audio>
                 <audio id="snd-correct" src="~/content/audio/Correct.wav" autoplay></audio>
                 <audio id="snd-wrong" src="~/content/audio/Wrong.wav"></audio>
-                <ul id="playerList"></ul>
-                <p id="playerCount" class="before-input">x spelers zijn verbonden.</p>
+                <!-- !Eind geluiden! -->
                 <div id="game-prep">
                     <h2 class="subtitle">Speel het spel! Open een lobby en toon de code op het bord:</h2>
                     <input id="btn-openLobby" type="button" class="form-button" value="Lobby openen" />
                 </div>
                 <div id="game-connected" style="display: none;">
-                    <div style="display: flex; flex-direction: row;">
-                        <div>
-                            <p id="statusString" class="before-input">...</p>
-                            <input id="btn-leaveLobby" type="button" class="form-button-orange" style="margin-top: 10px;" value="Lobby sluiten" />
-                            <input id="btn-startGame" type="button" class="form-button-orange" style="margin-top: 10px;" value="Starten met huidige lobby" />
-                        </div>
-                        <div>
-                            <h2 id="gameCode" class="subtitle">Jouw spelcode is:</h2>
-                        </div>
+                    <div style="display: flex; flex-direction: column;">
+                        <h2 id="gameCode" class="subtitle">Jouw spelcode is:</h2>
+                        <ul id="playerList" style="display: flex; justify-content: space-around; border: 1px solid black; list-style-type: none; padding: 0; text-align: center;"></ul>
+                        <p id="playerCount" class="before-input">x spelers zijn verbonden.</p>
+                        <input id="btn-startGame" type="button" class="form-button-orange" style="margin-top: 10px;" value="Starten met huidige lobby" />
+                        <input id="btn-leaveLobby" type="button" class="form-button-orange" style="margin-top: 10px;" value="Lobby sluiten" />
                     </div>
                 </div>
-                <div id="game-tutorial-1" style="display: none; width: 100vw;">
+                <div id="game-tutorial-1" style="display: none; width: 100vw; text-align: center;">
                     <p>Je wilt graag een nieuwe telefoon, maar je hebt nog niet genoeg geld gespaard om er een te kunnen kopen.</p>
                     <p>Je hebt gehoord dat mensen bakken met geld verdienen door het verspreiden van nepnieuws.<br />Hoe moeilijk kan het zijn om zelf nep berichten te verspreiden?</p>
                     <p>Schrijf zelf nep berichten en verdien genoeg om een nieuwe telefoon te kopen.</p>
-                    <input class="btn-nextTutorial" type="button" value="Volgende" />
-                    <input class="btn-skipTutorial" type="button" value="Overslaan" />
+                    <div style="display: flex; margin-left: 350px; margin-right: 350px;">
+                        <input class="btn-nextTutorial" type="button" value="Volgende" />
+                        <input class="btn-skipTutorial" type="button" value="Overslaan" />
+                    </div>
                 </div>
-                <div id="game-tutorial-2" style="display: none; width: 100vw;">
+                <div id="game-tutorial-2" style="display: none; width: 100vw; text-align: center;">
                     <p>Om geld te verdienen heb je volgers nodig.</p>
                     <p>Zorg er dus voor dat lezers het door jou geschreven bericht delen.</p>
                     <p>Daarnaast moet je er wel voor zorgen dat je zelf de juiste berichten deelt.</p>
                     <p>Deel je een vals bericht, dan kost je dat volgers</p>
                     <p>[foto's]</p>
-                    <input class="btn-nextTutorial" type="button" value="Volgende" />
-                    <input class="btn-skipTutorial" type="button" value="Overslaan" />
+                    <div style="display: flex; margin-left: 350px; margin-right: 350px;">
+                        <input class="btn-nextTutorial" type="button" value="Volgende" />
+                        <input class="btn-skipTutorial" type="button" value="Overslaan" />
+                    </div>
                 </div>
-                <div id="game-tutorial-3" style="display: none; width: 100vw;">
+                <div id="game-tutorial-3" style="display: none; width: 100vw; text-align: center;">
                     <p>Kijk nu naar je eigen scherm en volg de instructies.</p>
-                    <input class="btn-nextTutorial" type="button" value="Volgende" />
-                    <input class="btn-skipTutorial" type="button" value="Overslaan" />
+                    <div style="display: flex; margin-left: 350px; margin-right: 350px;">
+                        <input class="btn-nextTutorial" type="button" value="Volgende" />
+                        <input class="btn-skipTutorial" type="button" value="Overslaan" />
+                    </div>
                 </div>
-                <div id="game-waiting" style="display: none; width: 100vw;">
+                <div id="game-waiting" style="display: none; width: 100vw; text-align: center;">
                     <p>Wachten op spelers...</p>
                     <input class="btn-skipTutorial" type="button" value="Overslaan" />
                 </div>
@@ -158,10 +162,10 @@
                     <span class="clockBar" style="display: none; margin-left: auto; margin-right: auto; width: 100vw; height: 50px; background-color: #f7c747; text-align: center;"></span>
                 </div>
             }
-            <!-- Beheerder -->
             @if (Model.User.RoleId == 2)
             {
-
+                <!-- Beheerder -->
+                <p>Als beheerder kun je het spel niet spelen.</p>
             }
         </div>
     </div>
