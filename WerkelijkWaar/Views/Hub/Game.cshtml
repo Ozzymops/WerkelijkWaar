@@ -75,25 +75,22 @@
                     <span class="clockBar" style="display: none; margin-left: auto; margin-right: auto; width: 100vw; height: 50px; background-color: #f7c747; text-align: center;"></span>
                 </div>
                 <div id="game-read" style="display: none; background-color: #6ac2c4; width: 100vw;">
-                    <div style="display: flex; flex-direction: row;">
-                        <div style="display: flex; flex-direction: column;">
-                            <p>Welk artikel deel je?</p>
+                    <div id="read-busy">
+                        <div style="display: flex; flex-direction: row;">
+                            <div style="display: flex; flex-direction: column;">
+                                <p>Welk artikel deel je?</p>
+                                <div id="storyList"></div>
+                            </div>
                             <div>
-                                <input id="storySpot-1" type="button" class="form-button" value="" />
-                                <input id="storySpot-2" type="button" class="form-button" value="" />
-                                <input id="storySpot-3" type="button" class="form-button" value="" />
-                                <input id="storySpot-4" type="button" class="form-button" value="" />
-                                <input id="storySpot-5" type="button" class="form-button" value="" />
-                                <input id="storySpot-6" type="button" class="form-button" value="" />
-                                <input id="storySpot-7" type="button" class="form-button" value="" />
+                                <p id="readStoryTitle"></p>
+                                <text id="readStoryText"></text>
+                                <input id="btn-shareStory" class="form-button" type="button" value="Delen" />
+                                <input id="btn-activePowerup" class="form-button" type="button" value="Hulplijn" />
                             </div>
                         </div>
-                        <div>
-                            <p id="readStoryTitle"></p>
-                            <text id="readStoryText"></text>
-                            <input id="btn-share" class="form-button" type="button" value="Delen" />
-                            <input id="btn-powerup" class="form-button" type="button" value="Hulplijn" />
-                        </div>
+                    </div>
+                    <div id="read-finished">
+
                     </div>
                     <span class="clockBar" style="display: none; margin-left: auto; margin-right: auto; width: 100vw; height: 50px; background-color: #f7c747; text-align: center;"></span>
                 </div>
@@ -153,31 +150,7 @@
                 </div>
                 <div id="game-read" style="display: none; background-color: #6ac2c4; width: 100vw;">
                     <div style="display: flex; flex-direction: column;">
-                        <div style="display: flex; flex-direction: row;">
-                            <div>
-                                <input id="storySpot-1" type="button" value="" />
-                            </div>
-                            <div>
-                                <input id="storySpot-2" type="button" value="" />
-                            </div>
-                            <div>
-                                <input id="storySpot-3" type="button" value="" />
-                            </div>
-                        </div>
-                        <div style="display: flex; flex-direction: row;">
-                            <div>
-                                <input id="storySpot-4" type="button" value="" />
-                            </div>
-                            <div>
-                                <input id="storySpot-5" type="button" value="" />
-                            </div>
-                            <div>
-                                <input id="storySpot-6" type="button" value="" />
-                            </div>
-                            <div>
-                                <input id="storySpot-7" type="button" value="" />
-                            </div>
-                        </div>
+                        <div id="storyList"></div>
                     </div>
                     <span class="clockBar" style="display: none; margin-left: auto; margin-right: auto; width: 100vw; height: 50px; background-color: #f7c747; text-align: center;"></span>
                 </div>

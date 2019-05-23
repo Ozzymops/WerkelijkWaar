@@ -211,7 +211,10 @@ $(document).ready(function () {
     connection.clientMethods["showStories"] = (gameGroup, roomCode, stories) => {
         if ($roomContent.val() == roomCode) {
             if (gameGroup != myGroup) {
+                $('#storyList').empty();
+
                 var storyCount = 1;
+                var buttonCount = 0;
                 storyList = JSON.parse(stories);
 
                 for (var story in storyList) {
@@ -226,7 +229,17 @@ $(document).ready(function () {
 
                         console.log("WrittenStory: " + storyId + ". " + storyTitle + ": " + storyText + " FOR spot " + storySpot);
 
-                        $(storySpot).prop('value', storyTitle);
+                        // $(storySpot).prop('value', storyTitle);
+                        var newInput = document.createElement("input");
+                        $(newInput).val(storyTitle);
+                        $(newInput).prop('id', buttonCount);
+                        $(newInput).prop('type', 'button');
+                        $(newInput).addClass('btn-swapStory');
+                        $('#storyList').append(newInput);
+                        newInput.addEventListener("click", function () {
+                            swapStory(this.id);
+                        });
+                        // $('#storyList').append('<input id="' + (storyCount-1) + '" class="btn-swapStory" type="button" value="' + storyTitle + '" />');
 
                         console.log($(storySpot).val());
 
@@ -240,6 +253,7 @@ $(document).ready(function () {
                         }
 
                         storyCount++;
+                        buttonCount++;
                     }
                 }
             }
@@ -256,13 +270,12 @@ $(document).ready(function () {
     var $roomContent = $('#roomInput');
     var $roleContent = $('#roleId');
     var tutorialState = 0;
-    var inRoom = false;
     var timer = 0;
     var soundState = 0;
     var currentTimer;
     var currentRootId = 0;
     var myGroup = 0;
-    var tempStories;
+    var selectedAnswer = 0;
 
     // Host a room
     $('#btn-openLobby').click(function () {
@@ -340,6 +353,14 @@ $(document).ready(function () {
 
     $('#btn-sendStory').click(function () {
         sendStory();
+    });
+
+    $('#btn-shareStory').click(function () {
+        sendAnswer(); 
+    });
+
+    $('#btn-activatePowerup').click(function () {
+
     });
 
     // Start timer
@@ -473,6 +494,30 @@ $(document).ready(function () {
 
         var story = $storySource + "_+_" + $storyTitle + "_+_" + $storyText;
         connection.invoke("UploadStory", $roomContent.val(), connection.connectionId, story);
+    }
+
+    function swapStory(storyNumber) {
+        console.log(storyNumber);
+        selectedAnswer = storyNumber;
+
+        var selectedStoryContent = storyList[storyNumber].split(':!|');
+
+        var storyTitle = selectedStoryContent[1];
+        var storyText = selectedStoryContent[2];
+
+        $('#readStoryTitle').html(storyTitle);
+        $('#readStoryText').html(storyText);
+    }
+
+    function sendAnswer() {
+        $('#btn-shareStory').prop('disabled', true);
+
+        var $selectedStory = selectedStory;
+
+        document.getElementById("read-busy").style.display = "none";
+        document.getElementById("read-finished").style.display = "block";
+
+        connection.invoke("UploadAnswer", $roomContent.val(), connection.connectionId, $selectedStory);
     }
     //#endregion
 

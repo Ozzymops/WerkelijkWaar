@@ -2458,3 +2458,1263 @@ Startup - 11:41:19 : donderdag 23 mei 2019
 >Correct answer is 2 with story string '5:!|F:!|hgdjdhjgdh'.
 ---[LOGGER  MSG  END]---
 
+---[LOGGER MSG START]---
+Startup - 13:06:32 : donderdag 23 mei 2019
+>Starting server...
+>Server is up and running!
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[CheckLogin] - 13:06:40 : donderdag 23 mei 2019
+>Checking log in for user JMuris
+---[LOGGER MSG START]---
+[RetrieveUser] - 13:06:40 : donderdag 23 mei 2019
+>Attempting to retrieve user with id 4
+>Found user with id 4
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[CheckLogin] - 13:06:47 : donderdag 23 mei 2019
+>Checking log in for user AAppel
+---[LOGGER MSG START]---
+[RetrieveUser] - 13:06:48 : donderdag 23 mei 2019
+>Attempting to retrieve user with id 5
+>Found user with id 5
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[RetrieveAllStories] - 13:07:12 : donderdag 23 mei 2019
+>Attempting to retrieve all stories.
+>Found 9 stories.
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[Game] - 13:07:18 : donderdag 23 mei 2019
+>84c7dc14-f6d0-4f55-b811-bc8e48fc342a
+---[LOGGER MSG START]---
+[Game] - 13:07:18 : donderdag 23 mei 2019
+>Story from 0 - G1: 123
+>End
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[Game] - 13:07:22 : donderdag 23 mei 2019
+>941c633a-e5df-442b-a875-f130fabdf249
+---[LOGGER MSG START]---
+[Game] - 13:07:22 : donderdag 23 mei 2019
+>Story from 0 - G2: 123
+>End
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[Game] - 13:07:25 : donderdag 23 mei 2019
+>217a73e4-0d49-4a25-9a2e-1240a1b880e6
+---[LOGGER MSG START]---
+[Game] - 13:07:25 : donderdag 23 mei 2019
+>Story from 0 - A1: 123
+>End
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[Game] - 13:07:29 : donderdag 23 mei 2019
+>44b7cdab-42e8-4132-a287-5f694de87518
+---[LOGGER MSG START]---
+[Game] - 13:07:29 : donderdag 23 mei 2019
+>Story from 0 - A2: 123
+>End
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[Game] - 13:07:31 : donderdag 23 mei 2019
+>565f7bd9-0585-43eb-9b93-9e61cec03592
+---[LOGGER MSG START]---
+[Game] - 13:07:31 : donderdag 23 mei 2019
+>Story from 0 - G3: 123
+>End
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[Game] - 13:07:35 : donderdag 23 mei 2019
+>7381c476-1f38-4fc8-aa53-1ce7675fefae
+---[LOGGER MSG START]---
+[Game] - 13:07:35 : donderdag 23 mei 2019
+>Story from 0 - A3: 123
+>End
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[Game] - 13:07:35 : donderdag 23 mei 2019
+>Planting correct answer...
+>Correct answer is 3 with story string '5:!|A:!|aweaewaesa'.
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+Startup - 13:12:12 : donderdag 23 mei 2019
+>Starting server...
+>Server is up and running!
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+Startup - 13:13:07 : donderdag 23 mei 2019
+>Starting server...
+>Server is up and running!
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[CheckLogin] - 13:13:12 : donderdag 23 mei 2019
+>Checking log in for user JMuris
+---[LOGGER MSG START]---
+[RetrieveUser] - 13:13:12 : donderdag 23 mei 2019
+>Attempting to retrieve user with id 4
+>Found user with id 4
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[CheckLogin] - 13:13:13 : donderdag 23 mei 2019
+>Checking log in for user AAppel
+---[LOGGER MSG START]---
+[RetrieveUser] - 13:13:13 : donderdag 23 mei 2019
+>Attempting to retrieve user with id 5
+>Found user with id 5
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[RetrieveAllStories] - 13:13:39 : donderdag 23 mei 2019
+>Attempting to retrieve all stories.
+>Found 9 stories.
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[Game] - 13:13:46 : donderdag 23 mei 2019
+>0fa2623e-ffe9-47ef-876e-6e6a5ec7c21f
+---[LOGGER MSG START]---
+[Game] - 13:13:46 : donderdag 23 mei 2019
+>Story from 0 - C1: 123
+>End
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[Game] - 13:13:51 : donderdag 23 mei 2019
+>5fc9fd1e-db44-42d2-a8c6-a90f944b5cb9
+---[LOGGER MSG START]---
+[Game] - 13:13:51 : donderdag 23 mei 2019
+>Story from 0 - C2: 456
+>End
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[Game] - 13:13:56 : donderdag 23 mei 2019
+>86ae1f59-cf19-4713-8697-7ded11972f2e
+---[LOGGER MSG START]---
+[Game] - 13:13:56 : donderdag 23 mei 2019
+>Story from 0 - V1: abc
+>End
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[Game] - 13:13:59 : donderdag 23 mei 2019
+>963ab953-6ef9-4155-8b4e-91102fc6c9cb
+---[LOGGER MSG START]---
+[Game] - 13:13:59 : donderdag 23 mei 2019
+>Story from 0 - V2: def
+>End
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[Game] - 13:14:04 : donderdag 23 mei 2019
+>8f46dbd2-39bf-434f-be11-bd4b48b1767a
+---[LOGGER MSG START]---
+[Game] - 13:14:04 : donderdag 23 mei 2019
+>Story from 0 - C3: 789
+>End
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[Game] - 13:14:12 : donderdag 23 mei 2019
+>d08f8ce6-714c-4ff9-bf3d-13f1c6ae689e
+---[LOGGER MSG START]---
+[Game] - 13:14:12 : donderdag 23 mei 2019
+>Story from 0 - V3: ghi
+>End
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[Game] - 13:14:12 : donderdag 23 mei 2019
+>Planting correct answer...
+>Correct answer is 3 with story string '5:!|C:!|jhgfjhfjhf'.
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+Startup - 13:21:50 : donderdag 23 mei 2019
+>Starting server...
+>Server is up and running!
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+Startup - 13:21:57 : donderdag 23 mei 2019
+>Starting server...
+>Server is up and running!
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[CheckLogin] - 13:22:09 : donderdag 23 mei 2019
+>Checking log in for user JMuris
+---[LOGGER MSG START]---
+[RetrieveUser] - 13:22:09 : donderdag 23 mei 2019
+>Attempting to retrieve user with id 4
+>Found user with id 4
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[CheckLogin] - 13:22:10 : donderdag 23 mei 2019
+>Checking log in for user AAppel
+---[LOGGER MSG START]---
+[RetrieveUser] - 13:22:10 : donderdag 23 mei 2019
+>Attempting to retrieve user with id 5
+>Found user with id 5
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[RetrieveAllStories] - 13:22:28 : donderdag 23 mei 2019
+>Attempting to retrieve all stories.
+>Found 9 stories.
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[Game] - 13:22:32 : donderdag 23 mei 2019
+>23f5b29d-1357-4dc6-82b2-424acd9b10f4
+---[LOGGER MSG START]---
+[Game] - 13:22:32 : donderdag 23 mei 2019
+>Story from 0 - V1: 123
+>End
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[Game] - 13:22:36 : donderdag 23 mei 2019
+>eba7fd2c-ff26-4af3-bde2-427e1315e9ce
+---[LOGGER MSG START]---
+[Game] - 13:22:36 : donderdag 23 mei 2019
+>Story from 0 - V2: 456
+>End
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[Game] - 13:22:40 : donderdag 23 mei 2019
+>f47dc5be-c399-42d2-8b3c-30c7a07310e8
+---[LOGGER MSG START]---
+[Game] - 13:22:40 : donderdag 23 mei 2019
+>Story from 0 - F1: abc
+>End
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[Game] - 13:22:43 : donderdag 23 mei 2019
+>634f3ad4-34f0-40cd-8fd1-40957aacf24b
+---[LOGGER MSG START]---
+[Game] - 13:22:43 : donderdag 23 mei 2019
+>Story from 0 - F2: def
+>End
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[Game] - 13:22:47 : donderdag 23 mei 2019
+>c986027c-2ae6-4bdb-8cb2-1d4260e39716
+---[LOGGER MSG START]---
+[Game] - 13:22:47 : donderdag 23 mei 2019
+>Story from 0 - F3: ghi
+>End
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[Game] - 13:22:53 : donderdag 23 mei 2019
+>17b4545b-7fb3-42ce-abf2-4aeb56f8bedf
+---[LOGGER MSG START]---
+[Game] - 13:22:53 : donderdag 23 mei 2019
+>Story from 0 - V3: 789
+>End
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[Game] - 13:22:53 : donderdag 23 mei 2019
+>Planting correct answer...
+>Correct answer is 2 with story string '1:!|Een root verhaal:!|Straight outta RSS feed'.
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+Startup - 13:24:51 : donderdag 23 mei 2019
+>Starting server...
+>Server is up and running!
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[CheckLogin] - 13:24:58 : donderdag 23 mei 2019
+>Checking log in for user JMuris
+---[LOGGER MSG START]---
+[RetrieveUser] - 13:24:58 : donderdag 23 mei 2019
+>Attempting to retrieve user with id 4
+>Found user with id 4
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[CheckLogin] - 13:24:58 : donderdag 23 mei 2019
+>Checking log in for user AAppel
+---[LOGGER MSG START]---
+[RetrieveUser] - 13:24:58 : donderdag 23 mei 2019
+>Attempting to retrieve user with id 5
+>Found user with id 5
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[RetrieveAllStories] - 13:25:22 : donderdag 23 mei 2019
+>Attempting to retrieve all stories.
+>Found 9 stories.
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[Game] - 13:25:26 : donderdag 23 mei 2019
+>eeab6aa2-7b75-4b9a-8e65-efcf4c3c7b23
+---[LOGGER MSG START]---
+[Game] - 13:25:26 : donderdag 23 mei 2019
+>Story from 0 - V1: 123
+>End
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[Game] - 13:25:29 : donderdag 23 mei 2019
+>e6f5e390-97cf-49b6-98d9-a2201ea3cdff
+---[LOGGER MSG START]---
+[Game] - 13:25:29 : donderdag 23 mei 2019
+>Story from 0 - V2: 456
+>End
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[Game] - 13:25:33 : donderdag 23 mei 2019
+>0b5faa24-6217-42af-89ab-8208bf29f056
+---[LOGGER MSG START]---
+[Game] - 13:25:33 : donderdag 23 mei 2019
+>Story from 0 - A1: abc
+>End
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[Game] - 13:25:37 : donderdag 23 mei 2019
+>418e95c0-ee8d-427d-8181-f8f3b4ff8ac9
+---[LOGGER MSG START]---
+[Game] - 13:25:37 : donderdag 23 mei 2019
+>Story from 0 - V3: 789
+>End
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[Game] - 13:25:40 : donderdag 23 mei 2019
+>5bd87a9a-ef37-468a-b7bc-3425c537b9d0
+---[LOGGER MSG START]---
+[Game] - 13:25:40 : donderdag 23 mei 2019
+>Story from 0 - A2: def
+>End
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[Game] - 13:25:46 : donderdag 23 mei 2019
+>03bbbf2a-afca-4dc5-a8d8-f0e579c12ad3
+---[LOGGER MSG START]---
+[Game] - 13:25:46 : donderdag 23 mei 2019
+>Story from 0 - A3: ghi
+>End
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[Game] - 13:25:47 : donderdag 23 mei 2019
+>Planting correct answer...
+>Correct answer is 2 with story string '1:!|Een root verhaal:!|Straight outta RSS feed'.
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+Startup - 13:34:29 : donderdag 23 mei 2019
+>Starting server...
+>Server is up and running!
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[CheckLogin] - 13:34:34 : donderdag 23 mei 2019
+>Checking log in for user JMuris
+---[LOGGER MSG START]---
+[RetrieveUser] - 13:34:34 : donderdag 23 mei 2019
+>Attempting to retrieve user with id 4
+>Found user with id 4
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[CheckLogin] - 13:34:37 : donderdag 23 mei 2019
+>Checking log in for user AAppel
+---[LOGGER MSG START]---
+[RetrieveUser] - 13:34:37 : donderdag 23 mei 2019
+>Attempting to retrieve user with id 5
+>Found user with id 5
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[RetrieveAllStories] - 13:34:59 : donderdag 23 mei 2019
+>Attempting to retrieve all stories.
+>Found 9 stories.
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[Game] - 13:35:03 : donderdag 23 mei 2019
+>7152358d-4a79-4b6d-a883-52cf4bb6443d
+---[LOGGER MSG START]---
+[Game] - 13:35:03 : donderdag 23 mei 2019
+>Story from 0 - V1: 123
+>End
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[Game] - 13:35:06 : donderdag 23 mei 2019
+>31063ff1-4535-4b6d-ba78-047a57ce1121
+---[LOGGER MSG START]---
+[Game] - 13:35:06 : donderdag 23 mei 2019
+>Story from 0 - C1: abc
+>End
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[Game] - 13:35:09 : donderdag 23 mei 2019
+>f93aaac2-8909-454c-ab8f-0f27f071320c
+---[LOGGER MSG START]---
+[Game] - 13:35:09 : donderdag 23 mei 2019
+>Story from 0 - C2: def
+>End
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[Game] - 13:35:13 : donderdag 23 mei 2019
+>961f7943-7b74-4a51-b5e8-fe3d86990439
+---[LOGGER MSG START]---
+[Game] - 13:35:13 : donderdag 23 mei 2019
+>Story from 0 - V2: 456
+>End
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[Game] - 13:35:17 : donderdag 23 mei 2019
+>70f802a9-af1d-4f69-a579-38b7173981b4
+---[LOGGER MSG START]---
+[Game] - 13:35:17 : donderdag 23 mei 2019
+>Story from 0 - C3: ghi
+>End
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[Game] - 13:35:21 : donderdag 23 mei 2019
+>45a5abe3-6025-41d8-84b6-f8f7c9f9ce9e
+---[LOGGER MSG START]---
+[Game] - 13:35:21 : donderdag 23 mei 2019
+>Story from 0 - V3: ghi
+>End
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[Game] - 13:35:21 : donderdag 23 mei 2019
+>Planting correct answer...
+>Correct answer is 0 with story string '1:!|Een root verhaal:!|Straight outta RSS feed'.
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[CheckLogin] - 13:35:31 : donderdag 23 mei 2019
+>Checking log in for user 
+>Something went wrong: System.Data.SqlClient.SqlException (0x80131904): Procedure or function 'LogIn' expects parameter '@pUsername', which was not supplied.
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, SqlDataReader ds)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite, String method)
+   at System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, Boolean sendToPipe, Int32 timeout, Boolean asyncWrite, String methodName)
+   at System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   at WerkelijkWaar.Classes.DatabaseQueries.CheckLogin(String username, String password) in C:\Users\Justin Muris\source\repos\WerkelijkWaar\WerkelijkWaar\Classes\DatabaseQueries.cs:line 280
+ClientConnectionId:94891656-2e66-4b31-b293-5920cc050cde
+Error Number:201,State:4,Class:16
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+Startup - 13:38:08 : donderdag 23 mei 2019
+>Starting server...
+>Server is up and running!
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+Startup - 13:38:13 : donderdag 23 mei 2019
+>Starting server...
+>Server is up and running!
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[CheckLogin] - 13:38:18 : donderdag 23 mei 2019
+>Checking log in for user AAppel
+---[LOGGER MSG START]---
+[RetrieveUser] - 13:38:18 : donderdag 23 mei 2019
+>Attempting to retrieve user with id 5
+>Found user with id 5
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[CheckLogin] - 13:38:23 : donderdag 23 mei 2019
+>Checking log in for user JMuris
+---[LOGGER MSG START]---
+[RetrieveUser] - 13:38:23 : donderdag 23 mei 2019
+>Attempting to retrieve user with id 4
+>Found user with id 4
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[RetrieveAllStories] - 13:38:45 : donderdag 23 mei 2019
+>Attempting to retrieve all stories.
+>Found 9 stories.
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[Game] - 13:38:50 : donderdag 23 mei 2019
+>6c9ee3ed-3f62-46a2-a579-e8a816f3e8f9
+---[LOGGER MSG START]---
+[Game] - 13:38:50 : donderdag 23 mei 2019
+>Story from 0 - F1: 123
+>End
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[Game] - 13:38:53 : donderdag 23 mei 2019
+>6d480738-16c1-4c1e-90f3-17d1190eebda
+---[LOGGER MSG START]---
+[Game] - 13:38:53 : donderdag 23 mei 2019
+>Story from 0 - D1: abc
+>End
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[Game] - 13:38:58 : donderdag 23 mei 2019
+>1ba06ef5-4abb-461f-9013-385818d7ad5e
+---[LOGGER MSG START]---
+[Game] - 13:38:58 : donderdag 23 mei 2019
+>Story from 0 - F2: 456
+>End
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[Game] - 13:39:01 : donderdag 23 mei 2019
+>f5b6f267-3e1b-4263-be85-c24754906b45
+---[LOGGER MSG START]---
+[Game] - 13:39:01 : donderdag 23 mei 2019
+>Story from 0 - D2: def
+>End
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[Game] - 13:39:05 : donderdag 23 mei 2019
+>7644e07c-8f2b-4de8-a0bf-0f784bc0ce02
+---[LOGGER MSG START]---
+[Game] - 13:39:05 : donderdag 23 mei 2019
+>Story from 0 - F3: 789
+>End
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[Game] - 13:39:09 : donderdag 23 mei 2019
+>a13afc1c-e7e4-4b17-a70c-2571084fdddf
+---[LOGGER MSG START]---
+[Game] - 13:39:09 : donderdag 23 mei 2019
+>Story from 0 - D3: ghi
+>End
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[Game] - 13:39:09 : donderdag 23 mei 2019
+>Planting correct answer...
+>Correct answer is 0 with story string '5:!|F:!|hgdjdhjgdh'.
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+Startup - 13:42:49 : donderdag 23 mei 2019
+>Starting server...
+>Server is up and running!
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[CheckLogin] - 13:42:54 : donderdag 23 mei 2019
+>Checking log in for user JMuris
+---[LOGGER MSG START]---
+[RetrieveUser] - 13:42:54 : donderdag 23 mei 2019
+>Attempting to retrieve user with id 4
+>Found user with id 4
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[CheckLogin] - 13:42:54 : donderdag 23 mei 2019
+>Checking log in for user AAppel
+---[LOGGER MSG START]---
+[RetrieveUser] - 13:42:54 : donderdag 23 mei 2019
+>Attempting to retrieve user with id 5
+>Found user with id 5
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[RetrieveAllStories] - 13:43:18 : donderdag 23 mei 2019
+>Attempting to retrieve all stories.
+>Found 9 stories.
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[Game] - 13:43:22 : donderdag 23 mei 2019
+>0c1c2b27-902a-43a1-9023-31847a9288ad
+---[LOGGER MSG START]---
+[Game] - 13:43:22 : donderdag 23 mei 2019
+>Story from 0 - G1: 123
+>End
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[Game] - 13:43:26 : donderdag 23 mei 2019
+>5a471e51-ae2c-4c3a-b1ff-e169e6374f5c
+---[LOGGER MSG START]---
+[Game] - 13:43:26 : donderdag 23 mei 2019
+>Story from 0 - A1: abc
+>End
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[Game] - 13:43:30 : donderdag 23 mei 2019
+>5fc369ab-b48b-4727-9961-bd99d7d5a087
+---[LOGGER MSG START]---
+[Game] - 13:43:30 : donderdag 23 mei 2019
+>Story from 0 - G2: 456
+>End
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[Game] - 13:43:34 : donderdag 23 mei 2019
+>edaa8511-4761-4982-aa91-d71ac882f721
+---[LOGGER MSG START]---
+[Game] - 13:43:34 : donderdag 23 mei 2019
+>Story from 0 - G3: 789
+>End
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[Game] - 13:43:38 : donderdag 23 mei 2019
+>aad64319-05a7-4a9a-a404-ef00d4b8c78b
+---[LOGGER MSG START]---
+[Game] - 13:43:38 : donderdag 23 mei 2019
+>Story from 0 - A2: def
+>End
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[Game] - 13:43:41 : donderdag 23 mei 2019
+>67c9c571-3fec-4f1a-8943-bef1535e777c
+---[LOGGER MSG START]---
+[Game] - 13:43:41 : donderdag 23 mei 2019
+>Story from 0 - A3: ghi
+>End
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[Game] - 13:43:41 : donderdag 23 mei 2019
+>Planting correct answer...
+>Correct answer is 2 with story string '5:!|G:!|kjhfgfsdreaw'.
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+Startup - 13:46:03 : donderdag 23 mei 2019
+>Starting server...
+>Server is up and running!
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[CheckLogin] - 13:46:07 : donderdag 23 mei 2019
+>Checking log in for user AAppel
+---[LOGGER MSG START]---
+[RetrieveUser] - 13:46:07 : donderdag 23 mei 2019
+>Attempting to retrieve user with id 5
+>Found user with id 5
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[CheckLogin] - 13:46:08 : donderdag 23 mei 2019
+>Checking log in for user JMuris
+---[LOGGER MSG START]---
+[RetrieveUser] - 13:46:08 : donderdag 23 mei 2019
+>Attempting to retrieve user with id 4
+>Found user with id 4
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[RetrieveAllStories] - 13:46:34 : donderdag 23 mei 2019
+>Attempting to retrieve all stories.
+>Found 9 stories.
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[Game] - 13:46:38 : donderdag 23 mei 2019
+>8beda2c1-f03b-413d-a972-a7bac2c5550c
+---[LOGGER MSG START]---
+[Game] - 13:46:38 : donderdag 23 mei 2019
+>Story from 0 - A1: 123
+>End
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[Game] - 13:46:41 : donderdag 23 mei 2019
+>2183d745-83fe-4ed6-88d4-d21ead607fbb
+---[LOGGER MSG START]---
+[Game] - 13:46:41 : donderdag 23 mei 2019
+>Story from 0 - G1: abc
+>End
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[Game] - 13:46:44 : donderdag 23 mei 2019
+>af170bf7-a0c3-420d-9f56-e02abfedae46
+---[LOGGER MSG START]---
+[Game] - 13:46:44 : donderdag 23 mei 2019
+>Story from 0 - G2: def
+>End
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[Game] - 13:46:48 : donderdag 23 mei 2019
+>87e0b0d3-fecb-4821-9bfa-eb214b1dd589
+---[LOGGER MSG START]---
+[Game] - 13:46:48 : donderdag 23 mei 2019
+>Story from 0 - G3: ghi
+>End
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[Game] - 13:46:52 : donderdag 23 mei 2019
+>64b5f33c-d3d1-45cd-b693-3815d11cde2a
+---[LOGGER MSG START]---
+[Game] - 13:46:52 : donderdag 23 mei 2019
+>Story from 0 - A2: 456
+>End
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[Game] - 13:46:55 : donderdag 23 mei 2019
+>7884f9cd-2a91-49a4-834e-217c7de699c1
+---[LOGGER MSG START]---
+[Game] - 13:46:55 : donderdag 23 mei 2019
+>Story from 0 - A3: 789
+>End
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[Game] - 13:46:55 : donderdag 23 mei 2019
+>Planting correct answer...
+>Correct answer is 1 with story string '5:!|A:!|aweaewaesa'.
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[CheckLogin] - 13:47:01 : donderdag 23 mei 2019
+>Checking log in for user 
+>Something went wrong: System.Data.SqlClient.SqlException (0x80131904): Procedure or function 'LogIn' expects parameter '@pUsername', which was not supplied.
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, SqlDataReader ds)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite, String method)
+   at System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, Boolean sendToPipe, Int32 timeout, Boolean asyncWrite, String methodName)
+   at System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   at WerkelijkWaar.Classes.DatabaseQueries.CheckLogin(String username, String password) in C:\Users\Justin Muris\source\repos\WerkelijkWaar\WerkelijkWaar\Classes\DatabaseQueries.cs:line 280
+ClientConnectionId:49c2a00c-ccf5-4423-95bc-6e7102a49696
+Error Number:201,State:4,Class:16
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+Startup - 13:51:05 : donderdag 23 mei 2019
+>Starting server...
+>Server is up and running!
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[CheckLogin] - 13:51:09 : donderdag 23 mei 2019
+>Checking log in for user JMuris
+---[LOGGER MSG START]---
+[RetrieveUser] - 13:51:09 : donderdag 23 mei 2019
+>Attempting to retrieve user with id 4
+>Found user with id 4
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[CheckLogin] - 13:51:10 : donderdag 23 mei 2019
+>Checking log in for user AAppel
+---[LOGGER MSG START]---
+[RetrieveUser] - 13:51:10 : donderdag 23 mei 2019
+>Attempting to retrieve user with id 5
+>Found user with id 5
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[RetrieveAllStories] - 13:51:37 : donderdag 23 mei 2019
+>Attempting to retrieve all stories.
+>Found 9 stories.
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[Game] - 13:51:42 : donderdag 23 mei 2019
+>921a12c9-481f-4941-8bdc-6e15968f2169
+---[LOGGER MSG START]---
+[Game] - 13:51:42 : donderdag 23 mei 2019
+>Story from 0 - A1: 123
+>End
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[Game] - 13:51:44 : donderdag 23 mei 2019
+>2de33540-f22a-4b0d-ad75-f540d81a2d56
+---[LOGGER MSG START]---
+[Game] - 13:51:44 : donderdag 23 mei 2019
+>Story from 0 - G1: abc
+>End
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[Game] - 13:51:48 : donderdag 23 mei 2019
+>b96bb09b-ac19-457e-acb5-752a323f0bec
+---[LOGGER MSG START]---
+[Game] - 13:51:48 : donderdag 23 mei 2019
+>Story from 0 - A2: 456
+>End
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[Game] - 13:51:53 : donderdag 23 mei 2019
+>4cc15246-83d6-4326-8bca-96e01bc02e43
+---[LOGGER MSG START]---
+[Game] - 13:51:53 : donderdag 23 mei 2019
+>Story from 0 - A3: 789
+>End
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[Game] - 13:51:56 : donderdag 23 mei 2019
+>233f9408-427b-45dc-9e7e-3c51dc032889
+---[LOGGER MSG START]---
+[Game] - 13:51:56 : donderdag 23 mei 2019
+>Story from 0 - G2: def
+>End
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[Game] - 13:51:59 : donderdag 23 mei 2019
+>e40da6e1-6d12-4715-8ddd-68b2d56d69b2
+---[LOGGER MSG START]---
+[Game] - 13:51:59 : donderdag 23 mei 2019
+>Story from 0 - G3: ghi
+>End
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[Game] - 13:51:59 : donderdag 23 mei 2019
+>Planting correct answer...
+>Correct answer is 0 with story string '5:!|G:!|kjhfgfsdreaw'.
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+Startup - 13:53:05 : donderdag 23 mei 2019
+>Starting server...
+>Server is up and running!
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[CheckLogin] - 13:53:16 : donderdag 23 mei 2019
+>Checking log in for user AAppel
+---[LOGGER MSG START]---
+[RetrieveUser] - 13:53:16 : donderdag 23 mei 2019
+>Attempting to retrieve user with id 5
+>Found user with id 5
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[CheckLogin] - 13:53:16 : donderdag 23 mei 2019
+>Checking log in for user JMuris
+---[LOGGER MSG START]---
+[RetrieveUser] - 13:53:16 : donderdag 23 mei 2019
+>Attempting to retrieve user with id 4
+>Found user with id 4
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[RetrieveAllStories] - 13:53:34 : donderdag 23 mei 2019
+>Attempting to retrieve all stories.
+>Found 9 stories.
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[Game] - 13:53:38 : donderdag 23 mei 2019
+>975661f6-d789-48da-8f30-15b8dcd15676
+---[LOGGER MSG START]---
+[Game] - 13:53:38 : donderdag 23 mei 2019
+>Story from 0 - F1: 123
+>End
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[Game] - 13:53:42 : donderdag 23 mei 2019
+>890802f2-71a0-4852-9b6b-8c27deddaea4
+---[LOGGER MSG START]---
+[Game] - 13:53:42 : donderdag 23 mei 2019
+>Story from 0 - F2: 456
+>End
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[Game] - 13:53:44 : donderdag 23 mei 2019
+>3b10a228-6264-4dd6-b472-c618e75e7aaf
+---[LOGGER MSG START]---
+[Game] - 13:53:44 : donderdag 23 mei 2019
+>Story from 0 - B1: abc
+>End
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[Game] - 13:53:47 : donderdag 23 mei 2019
+>6ac8a80c-87a0-4099-990e-49a86e29e193
+---[LOGGER MSG START]---
+[Game] - 13:53:47 : donderdag 23 mei 2019
+>Story from 0 - B2: def
+>End
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[Game] - 13:53:52 : donderdag 23 mei 2019
+>9648acf5-11f8-4278-8c9d-644feb6d9e5c
+---[LOGGER MSG START]---
+[Game] - 13:53:52 : donderdag 23 mei 2019
+>Story from 0 - F3: 789
+>End
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[Game] - 13:53:55 : donderdag 23 mei 2019
+>7302959e-9796-43ab-9afc-88aaaf822ca5
+---[LOGGER MSG START]---
+[Game] - 13:53:55 : donderdag 23 mei 2019
+>Story from 0 - B3: ghi
+>End
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[Game] - 13:53:55 : donderdag 23 mei 2019
+>Planting correct answer...
+>Correct answer is 3 with story string '5:!|F:!|hgdjdhjgdh'.
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[CheckLogin] - 13:54:23 : donderdag 23 mei 2019
+>Checking log in for user 
+>Something went wrong: System.Data.SqlClient.SqlException (0x80131904): Procedure or function 'LogIn' expects parameter '@pUsername', which was not supplied.
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, SqlDataReader ds)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite, String method)
+   at System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, Boolean sendToPipe, Int32 timeout, Boolean asyncWrite, String methodName)
+   at System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   at WerkelijkWaar.Classes.DatabaseQueries.CheckLogin(String username, String password) in C:\Users\Justin Muris\source\repos\WerkelijkWaar\WerkelijkWaar\Classes\DatabaseQueries.cs:line 280
+ClientConnectionId:7ba24cd3-911d-4591-aae3-a41726c400de
+Error Number:201,State:4,Class:16
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+Startup - 13:55:32 : donderdag 23 mei 2019
+>Starting server...
+>Server is up and running!
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[CheckLogin] - 13:55:36 : donderdag 23 mei 2019
+>Checking log in for user AAppel
+---[LOGGER MSG START]---
+[RetrieveUser] - 13:55:36 : donderdag 23 mei 2019
+>Attempting to retrieve user with id 5
+>Found user with id 5
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[CheckLogin] - 13:55:37 : donderdag 23 mei 2019
+>Checking log in for user JMuris
+---[LOGGER MSG START]---
+[RetrieveUser] - 13:55:37 : donderdag 23 mei 2019
+>Attempting to retrieve user with id 4
+>Found user with id 4
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[RetrieveAllStories] - 13:55:59 : donderdag 23 mei 2019
+>Attempting to retrieve all stories.
+>Found 9 stories.
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[Game] - 13:56:02 : donderdag 23 mei 2019
+>e2d18a1a-38d4-46fa-811e-bc3ba2e8cf75
+---[LOGGER MSG START]---
+[Game] - 13:56:02 : donderdag 23 mei 2019
+>Story from 0 - A1: 123
+>End
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[Game] - 13:56:07 : donderdag 23 mei 2019
+>cf36cb13-a8a4-4752-add2-6232d7e1f20f
+---[LOGGER MSG START]---
+[Game] - 13:56:07 : donderdag 23 mei 2019
+>Story from 0 - A2: 456
+>End
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[Game] - 13:56:10 : donderdag 23 mei 2019
+>72b50dd5-3761-4734-8b71-3c6949636de5
+---[LOGGER MSG START]---
+[Game] - 13:56:10 : donderdag 23 mei 2019
+>Story from 0 - C1: abc
+>End
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[Game] - 13:56:14 : donderdag 23 mei 2019
+>eaca1fe8-588d-4c57-9611-628c1f56f29a
+---[LOGGER MSG START]---
+[Game] - 13:56:14 : donderdag 23 mei 2019
+>Story from 0 - A3: 789
+>End
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[Game] - 13:56:16 : donderdag 23 mei 2019
+>ccbcae92-b9f5-43c5-8205-a42f24586f17
+---[LOGGER MSG START]---
+[Game] - 13:56:16 : donderdag 23 mei 2019
+>Story from 0 - C2: def
+>End
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[Game] - 13:56:19 : donderdag 23 mei 2019
+>e82a0a9a-fd33-4d7f-9cc2-89b4974d87db
+---[LOGGER MSG START]---
+[Game] - 13:56:19 : donderdag 23 mei 2019
+>Story from 0 - C3: ghi
+>End
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[Game] - 13:56:19 : donderdag 23 mei 2019
+>Planting correct answer...
+>Correct answer is 3 with story string '5:!|A:!|aweaewaesa'.
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[CheckLogin] - 13:56:25 : donderdag 23 mei 2019
+>Checking log in for user 
+>Something went wrong: System.Data.SqlClient.SqlException (0x80131904): Procedure or function 'LogIn' expects parameter '@pUsername', which was not supplied.
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, SqlDataReader ds)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite, String method)
+   at System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, Boolean sendToPipe, Int32 timeout, Boolean asyncWrite, String methodName)
+   at System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   at WerkelijkWaar.Classes.DatabaseQueries.CheckLogin(String username, String password) in C:\Users\Justin Muris\source\repos\WerkelijkWaar\WerkelijkWaar\Classes\DatabaseQueries.cs:line 280
+ClientConnectionId:ffbad31f-b8bd-48ba-bac9-245fd1281f5b
+Error Number:201,State:4,Class:16
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+Startup - 13:59:20 : donderdag 23 mei 2019
+>Starting server...
+>Server is up and running!
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[CheckLogin] - 13:59:26 : donderdag 23 mei 2019
+>Checking log in for user JMuris
+---[LOGGER MSG START]---
+[RetrieveUser] - 13:59:26 : donderdag 23 mei 2019
+>Attempting to retrieve user with id 4
+>Found user with id 4
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[CheckLogin] - 13:59:26 : donderdag 23 mei 2019
+>Checking log in for user AAppel
+---[LOGGER MSG START]---
+[RetrieveUser] - 13:59:26 : donderdag 23 mei 2019
+>Attempting to retrieve user with id 5
+>Found user with id 5
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[RetrieveAllStories] - 13:59:52 : donderdag 23 mei 2019
+>Attempting to retrieve all stories.
+>Found 9 stories.
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[Game] - 13:59:55 : donderdag 23 mei 2019
+>a9bacf6b-acde-4486-ad07-38996af7dbee
+---[LOGGER MSG START]---
+[Game] - 13:59:55 : donderdag 23 mei 2019
+>Story from 0 - F1: 123
+>End
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[Game] - 13:59:59 : donderdag 23 mei 2019
+>810d904a-a456-459d-a6d6-84ac81b7a924
+---[LOGGER MSG START]---
+[Game] - 13:59:59 : donderdag 23 mei 2019
+>Story from 0 - D1: abc
+>End
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[Game] - 14:00:03 : donderdag 23 mei 2019
+>7e6a4dd1-7163-4b81-bcc5-227c5604f079
+---[LOGGER MSG START]---
+[Game] - 14:00:03 : donderdag 23 mei 2019
+>Story from 0 - D2: def
+>End
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[Game] - 14:00:06 : donderdag 23 mei 2019
+>0aebadee-b37f-4f9a-83da-e1c0fdd6430b
+---[LOGGER MSG START]---
+[Game] - 14:00:06 : donderdag 23 mei 2019
+>Story from 0 - D3: ghi
+>End
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[Game] - 14:00:10 : donderdag 23 mei 2019
+>86e6e84c-dacf-47a9-ad86-a901c4c261ec
+---[LOGGER MSG START]---
+[Game] - 14:00:10 : donderdag 23 mei 2019
+>Story from 0 - F2: 456
+>End
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[Game] - 14:00:13 : donderdag 23 mei 2019
+>a2c89b4a-df35-483e-9150-7f254d6ffef1
+---[LOGGER MSG START]---
+[Game] - 14:00:13 : donderdag 23 mei 2019
+>Story from 0 - F3: 789
+>End
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[Game] - 14:00:13 : donderdag 23 mei 2019
+>Planting correct answer...
+>Correct answer is 0 with story string '5:!|F:!|hgdjdhjgdh'.
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+Startup - 14:01:13 : donderdag 23 mei 2019
+>Starting server...
+>Server is up and running!
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[CheckLogin] - 14:01:19 : donderdag 23 mei 2019
+>Checking log in for user JMuris
+---[LOGGER MSG START]---
+[RetrieveUser] - 14:01:19 : donderdag 23 mei 2019
+>Attempting to retrieve user with id 4
+>Found user with id 4
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[CheckLogin] - 14:01:20 : donderdag 23 mei 2019
+>Checking log in for user AAppel
+---[LOGGER MSG START]---
+[RetrieveUser] - 14:01:20 : donderdag 23 mei 2019
+>Attempting to retrieve user with id 5
+>Found user with id 5
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[RetrieveAllStories] - 14:01:41 : donderdag 23 mei 2019
+>Attempting to retrieve all stories.
+>Found 9 stories.
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[Game] - 14:01:45 : donderdag 23 mei 2019
+>07266fa5-a43b-49a9-b59e-ee641e3846e4
+---[LOGGER MSG START]---
+[Game] - 14:01:45 : donderdag 23 mei 2019
+>Story from 0 - V1: 123
+>End
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[Game] - 14:01:49 : donderdag 23 mei 2019
+>a7846acd-1e29-4789-8e45-191ec6801bc7
+---[LOGGER MSG START]---
+[Game] - 14:01:49 : donderdag 23 mei 2019
+>Story from 0 - D1: abc
+>End
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[Game] - 14:01:52 : donderdag 23 mei 2019
+>64f4768c-2ae4-4830-8af4-d49aebfe9a98
+---[LOGGER MSG START]---
+[Game] - 14:01:52 : donderdag 23 mei 2019
+>Story from 0 - D2: def
+>End
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[Game] - 14:01:56 : donderdag 23 mei 2019
+>c39613e2-b793-4658-9333-f862dc0f1dad
+---[LOGGER MSG START]---
+[Game] - 14:01:56 : donderdag 23 mei 2019
+>Story from 0 - V2: 456
+>End
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[Game] - 14:02:00 : donderdag 23 mei 2019
+>64e6e2af-b622-4a66-bf00-3fcefb907740
+---[LOGGER MSG START]---
+[Game] - 14:02:00 : donderdag 23 mei 2019
+>Story from 0 - V3: 789
+>End
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[Game] - 14:02:03 : donderdag 23 mei 2019
+>8eaf9888-ab0a-4f75-bc61-c4bde4a29836
+---[LOGGER MSG START]---
+[Game] - 14:02:03 : donderdag 23 mei 2019
+>Story from 0 - D3: ghi
+>End
+---[LOGGER  MSG  END]---
+
+---[LOGGER MSG START]---
+[Game] - 14:02:03 : donderdag 23 mei 2019
+>Planting correct answer...
+>Correct answer is 2 with story string '5:!|D:!|45234234324'.
+---[LOGGER  MSG  END]---
+
