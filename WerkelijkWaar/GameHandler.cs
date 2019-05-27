@@ -708,7 +708,22 @@ namespace WerkelijkWaar
 
         public async Task GiveMoney(string roomCode)
         {
-
+            foreach (Classes.Room room in _gameManager.Rooms)
+            {
+                if (room.RoomCode == roomCode)
+                {
+                    foreach (Classes.User user in room.Users)
+                    {
+                        foreach (Classes.Score score in room.SelectedAnswers)
+                        {
+                            if (user.SocketId == score.SocketId)
+                            {
+                                score.CashAmount += (1.00 * score.FollowerAmount);
+                            }
+                        }
+                    }
+                }
+            }
         }
 
         public async Task RetrieveWrittenStories(string roomCode, int gameGroup)

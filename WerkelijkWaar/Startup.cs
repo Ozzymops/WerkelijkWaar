@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Builder;
@@ -18,10 +19,18 @@ namespace WerkelijkWaar
         public Startup(IConfiguration configuration)
         {
             Classes.Logger l = new Classes.Logger();
+            Stopwatch sw = new Stopwatch();
 
-            l.WriteToLog("Startup", "Starting server...", 0);
+            sw.Restart();
+            l.WriteToLog("[Startup]", "Starting server...", 0);
+            l.DebugToLog("[Startup]", sw.ElapsedMilliseconds.ToString() + "ms. Launching server", 0);
+
             Configuration = configuration;
-            l.WriteToLog("Startup", "Server is up and running!", 1);
+
+            l.WriteToLog("[Startup]", "Server is up and running!", 2);
+            l.DebugToLog("[Startup]", sw.ElapsedMilliseconds.ToString() + "ms. Server is up", 2);
+
+            sw.Stop();
         }
 
         public IConfiguration Configuration { get; }
