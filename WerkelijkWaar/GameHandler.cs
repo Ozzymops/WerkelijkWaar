@@ -546,56 +546,147 @@ namespace WerkelijkWaar
 
         public async Task UploadAnswer(string roomCode, string socketId, string answer)
         {
-            string tempSocketId = "";
-
-            l.WriteToLog("[Game]", "Checking rooms...", 0);
-
             foreach (Classes.Room room in _gameManager.Rooms)
             {
                 if (room.RoomCode == roomCode)
                 {
                     int usersThatSelectedAnswers = 0;
 
-                    l.WriteToLog("[Game]", "Checking users...", 0);
-
                     foreach (Classes.User user in room.Users)
                     {
                         if (user.SocketId == socketId)
                         {
+                            l.WriteToLog("[Game]", "Parsing score for user " + user.Username + " : " + socketId, 0);
+
                             user.ChoseStory = true;
 
-                            l.WriteToLog("[Game]", "Checking score for " + user.Username + "/" + user.SocketId + "...", 0);
+                            bool scoreFound = false;
+                            Classes.Score newScore = new Classes.Score();
 
                             if (room.SelectedAnswers != null && room.SelectedAnswers.Count != 0)
                             {
                                 foreach (Classes.Score score in room.SelectedAnswers)
                                 {
-                                    bool scoreFound = false;
-
-                                    if (score.OwnerId == user.Id)
+                                    // Search for score
+                                    if (score.SocketId == user.SocketId)
                                     {
-                                        l.WriteToLog("[Game]", "Score already exists (" + score.Answers + "), appending with " + answer + "...", 1);
-
                                         scoreFound = true;
 
+                                        // 2 answer power-up
+                                        if (user.PowerupOneActive)
+                                        {
+                                            l.WriteToLog("[Game]", socketId + ": has used the 'two answer' power-up. Answers are " + answer, 0);
+
+                                            string[] answers = answer.Split(':');
+
+                                            if (Convert.ToInt32(answers[0]) == room.CorrectAnswer)
+                                            {
+                                                answer = answers[0];
+                                            }
+                                            else
+                                            {
+                                                answer = answers[1];
+                                            }
+                                        }
+
+                                        // Apply answer
                                         score.Answers += answer;
+                                        l.WriteToLog("[Game]", socketId + ": applied answer " + answer + ". Player now has answers " + score.Answers, 0);
+
+                                        // Check correctness
+                                        if (Convert.ToInt32(answer) == room.CorrectAnswer)
+                                        {
+                                            l.WriteToLog("[Game]", socketId + ": answer is correct btw", 0);
+
+                                            score.CorrectAnswers += "1";
+
+                                            if (user.PowerupTwoActive)
+                                            {
+                                                score.FollowerAmount += 10;
+                                            }
+                                            else
+                                            {
+                                                score.FollowerAmount += 5;
+                                            }
+                                        }
+                                        else
+                                        {
+                                            l.WriteToLog("[Game]", socketId + ": answer is incorrect btw", 0);
+
+                                            score.CorrectAnswers += "0";
+
+                                            score.FollowerAmount -= 5;
+
+                                            if (score.FollowerAmount <= 0)
+                                            {
+                                                score.FollowerAmount = 0;
+                                            }
+                                        }
+
+                                        l.WriteToLog("[Game]", socketId + ": followers are now " + score.FollowerAmount, 1);
                                     }
+                                }                              
+                            }
 
-                                    if (!scoreFound)
+                            // Create score if not found
+                            if (!scoreFound)
+                            {
+                                l.WriteToLog("[Game]", "Creating new score for " + socketId, 0);
+
+                                newScore = new Classes.Score { SocketId = user.SocketId, OwnerId = user.Id, Date = DateTime.Now, Answers = "" };
+
+                                // 2 answer power-up
+                                if (user.PowerupOneActive)
+                                {
+                                    l.WriteToLog("[Game]", socketId + ": has used the 'two answer' power-up. Answers are " + answer, 0);
+
+                                    string[] answers = answer.Split(':');
+
+                                    if (Convert.ToInt32(answers[0]) == room.CorrectAnswer)
                                     {
-                                        l.WriteToLog("[Game]", "Score not found. Creating with answer " + answer + "...", 1);
-
-                                        Classes.Score newScore = new Classes.Score { OwnerId = user.Id, Answers = answer, Date = DateTime.Now };
-
-                                        room.SelectedAnswers.Add(newScore);
+                                        answer = answers[0];
+                                    }
+                                    else
+                                    {
+                                        answer = answers[1];
                                     }
                                 }
-                            }
-                            else
-                            {
-                                l.WriteToLog("[Game]", "Score not found. Creating with answer " + answer + "...", 1);
 
-                                Classes.Score newScore = new Classes.Score { OwnerId = user.Id, Answers = answer, Date = DateTime.Now };
+                                // Apply answer
+                                newScore.Answers += answer;
+                                l.WriteToLog("[Game]", socketId + ": applied answer " + answer + ". Player now has answers " + newScore.Answers, 0);
+
+                                // Check correctness
+                                if (Convert.ToInt32(answer) == room.CorrectAnswer)
+                                {
+                                    l.WriteToLog("[Game]", socketId + ": answer is correct btw", 0);
+
+                                    newScore.CorrectAnswers += "1";
+
+                                    if (user.PowerupTwoActive)
+                                    {
+                                        newScore.FollowerAmount += 10;
+                                    }
+                                    else
+                                    {
+                                        newScore.FollowerAmount += 5;
+                                    }
+                                }
+                                else
+                                {
+                                    l.WriteToLog("[Game]", socketId + ": answer is incorrect btw", 0);
+
+                                    newScore.CorrectAnswers += "0";
+
+                                    newScore.FollowerAmount -= 5;
+
+                                    if (newScore.FollowerAmount <= 0)
+                                    {
+                                        newScore.FollowerAmount = 0;
+                                    }
+                                }
+
+                                l.WriteToLog("[Game]", socketId + ": followers are now " + newScore.FollowerAmount, 1);
 
                                 room.SelectedAnswers.Add(newScore);
                             }
@@ -610,10 +701,14 @@ namespace WerkelijkWaar
                     if (usersThatSelectedAnswers == room.Users.Count)
                     {
                         // Loop
-                        // Upload to database after end of loop
                     }
                 }
             }
+        }
+
+        public async Task GiveMoney(string roomCode)
+        {
+
         }
 
         public async Task RetrieveWrittenStories(string roomCode, int gameGroup)
@@ -670,6 +765,51 @@ namespace WerkelijkWaar
 
             await InvokeClientMethodToAllAsync("showStories", gameGroup, roomCode, Newtonsoft.Json.JsonConvert.SerializeObject(storiesToSend));
         }
+
+        public async Task ActivatePowerup(string roomCode, string socketId, int powerup)
+        {
+            foreach (Classes.Room room in _gameManager.Rooms)
+            {
+                if (room.RoomCode == roomCode)
+                {
+                    foreach (Classes.User user in room.Users)
+                    {
+                        if (user.SocketId == socketId)
+                        {
+                            foreach (Classes.Score score in room.SelectedAnswers)
+                            {
+                                if (score.SocketId == socketId)
+                                {
+                                    if (powerup == 1 && score.CashAmount >= (10.00 * room.Config.PowerupsCostMult))
+                                    {
+                                        score.CashAmount -= (10.00 * room.Config.PowerupsCostMult);
+                                        user.PowerupOneActive = true;
+                                        await InvokeClientMethodToAllAsync("updatePowerups", roomCode, socketId, true, false, false);
+                                    }
+                                    else if (powerup == 2 && score.CashAmount >= (15.00 * room.Config.PowerupsCostMult))
+                                    {
+                                        score.CashAmount -= (15.00 * room.Config.PowerupsCostMult);
+                                        user.PowerupTwoActive = true;
+                                        await InvokeClientMethodToAllAsync("updatePowerups", roomCode, socketId, false, true, false);
+                                    }
+                                    else if (powerup == 3 && score.CashAmount >= (20.00 * room.Config.PowerupsCostMult))
+                                    {
+                                        score.CashAmount -= (20.00 * room.Config.PowerupsCostMult);
+                                        user.PowerupThreeActive = true;
+                                        await InvokeClientMethodToAllAsync("updatePowerups", roomCode, socketId, false, false, true);
+                                    }
+                                    else
+                                    {
+                                        await InvokeClientMethodToAllAsync("updatePowerups", roomCode, socketId, false, false, false);
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
         #endregion
 
         #region Visual

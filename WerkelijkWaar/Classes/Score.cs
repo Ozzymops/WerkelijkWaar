@@ -16,6 +16,8 @@ namespace WerkelijkWaar.Classes
         public double CashAmount { get; set; }
         public int AttainedVotes { get; set; }
         public string Answers { get; set; }
+        public string CorrectAnswers { get; set; }
         public DateTime Date { get; set; }
+        public string SocketId { get; set; }
     }
 }

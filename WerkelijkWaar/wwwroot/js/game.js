@@ -263,6 +263,22 @@ $(document).ready(function () {
             }
         }
     }
+
+    connection.clientMethods["updatePowerups"] = (roomCode, socketId, powerup1, powerup2, powerup3) => {
+        if ($roomContent.val() == roomCode) {
+            if (connection.connectionId == socketId) {
+                if (powerup1) {
+
+                }
+                else if (powerup2) {
+
+                }
+                else if (powerup3) {
+
+                }
+            }
+        }
+    }
     //#endregion
 
     //#region Functions
@@ -360,8 +376,16 @@ $(document).ready(function () {
         sendAnswer(); 
     });
 
-    $('#btn-activatePowerup').click(function () {
+    $('#btn-activatePowerup-1').click(function () {
+        activatePowerup(1);
+    });
 
+    $('#btn-activatePowerup-2').click(function () {
+        activatePowerup(2);
+    });
+
+    $('#btn-activatePowerup-3').click(function () {
+        activatePowerup(3);
     });
 
     // Start timer
@@ -532,6 +556,21 @@ $(document).ready(function () {
         console.log("Answered with " + selectedAnswer);
         connection.invoke("UploadAnswer", $roomContent.val(), connection.connectionId, selectedAnswer);
     }
+
+    function activatePowerup(powerup) {
+        if (powerup == 1) {
+            $('#btn-activatePowerup-1').prop('disabled', true);
+        }
+        else if (powerup == 2) {
+            $('#btn-activatePowerup-2').prop('disabled', true);
+        }
+        else {
+            $('#btn-activatePowerup-3').prop('disabled', true);
+        }
+
+        connection.invoke("ActivatePowerup", $roomContent.val(), connection.connectionId, powerup);
+    }
+
     //#endregion
 
     // Start WebSocket connection

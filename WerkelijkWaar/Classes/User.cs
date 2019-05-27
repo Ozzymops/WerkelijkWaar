@@ -26,5 +26,8 @@ namespace WerkelijkWaar.Classes
         public bool ReadyToPlay { get; set; }
         public bool WroteStory { get; set; }
         public bool ChoseStory { get; set; }
+        public bool PowerupOneActive { get; set; }
+        public bool PowerupTwoActive { get; set; }
+        public bool PowerupThreeActive { get; set; }
     }
 }

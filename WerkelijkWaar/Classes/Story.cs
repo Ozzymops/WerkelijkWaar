@@ -11,6 +11,7 @@ namespace WerkelijkWaar.Classes
         
         // OwnerId = User.Id
         public int OwnerId { get; set; }
+        public string SocketId { get; set; }
         public bool IsRoot { get; set; }
         public string Title { get; set; }
         public string Description { get; set; }
