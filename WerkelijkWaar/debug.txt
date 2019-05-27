@@ -1,0 +1,827 @@
+---[DEBUG MSG START]---
+[Startup]
+27-5-2019 | 15:21: 9ms. Launching server
+27-5-2019 | 15:21: 24ms. Server is up
+27-5-2019 | 15:21: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[CheckLogin]
+27-5-2019 | 15:21: 1ms. Checking login for JMuris
+27-5-2019 | 15:21: 116ms. Found JMuris
+27-5-2019 | 15:21: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[RetrieveUser]
+27-5-2019 | 15:21: 1ms. Retrieving user 4
+27-5-2019 | 15:21: 8ms. Found user 4
+27-5-2019 | 15:21: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[CheckLogin]
+27-5-2019 | 15:21: 2ms. Checking login for AAppel
+27-5-2019 | 15:21: 7ms. Found AAppel
+27-5-2019 | 15:21: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[RetrieveUser]
+27-5-2019 | 15:21: 1ms. Retrieving user 5
+27-5-2019 | 15:21: 6ms. Found user 5
+27-5-2019 | 15:21: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[Room]
+27-5-2019 | 15:21: 2ms. Creating room...
+27-5-2019 | 15:21: 6ms. Generating code...
+27-5-2019 | 15:21: 9ms. Setting timers...
+27-5-2019 | 15:21: 14ms. Room created with code 5L77lO
+27-5-2019 | 15:21: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[RetrieveAllStories]
+27-5-2019 | 15:22: 1ms. Attempting to retrieve all stories.
+27-5-2019 | 15:22: 7ms. Got: 1 - Een root verhaal
+27-5-2019 | 15:22: 9ms. Got: 2 - Een verhaal
+27-5-2019 | 15:22: 10ms. Got: 3 - Nog een verhaal
+27-5-2019 | 15:22: 12ms. Got: 4 - A
+27-5-2019 | 15:22: 14ms. Got: 5 - B
+27-5-2019 | 15:22: 15ms. Got: 6 - C
+27-5-2019 | 15:22: 17ms. Got: 7 - D
+27-5-2019 | 15:22: 19ms. Got: 8 - F
+27-5-2019 | 15:22: 21ms. Got: 9 - G
+27-5-2019 | 15:22: 25ms. Found 9 stories.
+27-5-2019 | 15:22: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[Game]
+27-5-2019 | 15:22: Parsing score for user AAppel : e2750654-8b08-472e-9b19-a20041616321
+27-5-2019 | 15:22: Creating new score for e2750654-8b08-472e-9b19-a20041616321
+27-5-2019 | 15:22: e2750654-8b08-472e-9b19-a20041616321: applied answer 3. Player now has answers 3
+27-5-2019 | 15:22: e2750654-8b08-472e-9b19-a20041616321: answer is incorrect btw
+27-5-2019 | 15:22: e2750654-8b08-472e-9b19-a20041616321: followers are now 0
+27-5-2019 | 15:22: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[Game]
+27-5-2019 | 15:22: Parsing score for user AAppel : 586a45df-73bc-4341-a6e7-29a43e29d650
+27-5-2019 | 15:22: Creating new score for 586a45df-73bc-4341-a6e7-29a43e29d650
+27-5-2019 | 15:22: 586a45df-73bc-4341-a6e7-29a43e29d650: applied answer 0. Player now has answers 0
+27-5-2019 | 15:22: 586a45df-73bc-4341-a6e7-29a43e29d650: answer is correct btw
+27-5-2019 | 15:22: 586a45df-73bc-4341-a6e7-29a43e29d650: followers are now 5
+27-5-2019 | 15:22: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[Game]
+27-5-2019 | 15:22: Parsing score for user AAppel : 16a7cf8c-1867-41b1-a3bb-4571e221353d
+27-5-2019 | 15:22: Creating new score for 16a7cf8c-1867-41b1-a3bb-4571e221353d
+27-5-2019 | 15:22: 16a7cf8c-1867-41b1-a3bb-4571e221353d: applied answer 1. Player now has answers 1
+27-5-2019 | 15:22: 16a7cf8c-1867-41b1-a3bb-4571e221353d: answer is incorrect btw
+27-5-2019 | 15:22: 16a7cf8c-1867-41b1-a3bb-4571e221353d: followers are now 0
+27-5-2019 | 15:22: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[Game]
+27-5-2019 | 15:22: Parsing score for user AAppel : ddc42a87-2605-4de3-9ea7-49a3ea85464f
+27-5-2019 | 15:22: Creating new score for ddc42a87-2605-4de3-9ea7-49a3ea85464f
+27-5-2019 | 15:22: ddc42a87-2605-4de3-9ea7-49a3ea85464f: applied answer 2. Player now has answers 2
+27-5-2019 | 15:22: ddc42a87-2605-4de3-9ea7-49a3ea85464f: answer is incorrect btw
+27-5-2019 | 15:22: ddc42a87-2605-4de3-9ea7-49a3ea85464f: followers are now 0
+27-5-2019 | 15:22: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[Game]
+27-5-2019 | 15:22: Parsing score for user AAppel : f21ba5f6-b309-4fff-aa7a-6c7418adb0f3
+27-5-2019 | 15:22: Creating new score for f21ba5f6-b309-4fff-aa7a-6c7418adb0f3
+27-5-2019 | 15:22: f21ba5f6-b309-4fff-aa7a-6c7418adb0f3: applied answer 0. Player now has answers 0
+27-5-2019 | 15:22: f21ba5f6-b309-4fff-aa7a-6c7418adb0f3: answer is correct btw
+27-5-2019 | 15:22: f21ba5f6-b309-4fff-aa7a-6c7418adb0f3: followers are now 5
+27-5-2019 | 15:22: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[Game]
+27-5-2019 | 15:22: Parsing score for user AAppel : a1bbaf1c-824c-404d-ae91-f6228c0aa415
+27-5-2019 | 15:22: Creating new score for a1bbaf1c-824c-404d-ae91-f6228c0aa415
+27-5-2019 | 15:22: a1bbaf1c-824c-404d-ae91-f6228c0aa415: applied answer 3. Player now has answers 3
+27-5-2019 | 15:22: a1bbaf1c-824c-404d-ae91-f6228c0aa415: answer is incorrect btw
+27-5-2019 | 15:22: a1bbaf1c-824c-404d-ae91-f6228c0aa415: followers are now 0
+27-5-2019 | 15:22: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[CheckLogin]
+27-5-2019 | 15:22: 4ms. Checking login for 
+27-5-2019 | 15:22: 290ms. Exception:
+System.Data.SqlClient.SqlException (0x80131904): Procedure or function 'LogIn' expects parameter '@pUsername', which was not supplied.
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, SqlDataReader ds)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite, String method)
+   at System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, Boolean sendToPipe, Int32 timeout, Boolean asyncWrite, String methodName)
+   at System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   at WerkelijkWaar.Classes.DatabaseQueries.CheckLogin(String username, String password) in C:\Users\Justin Muris\source\repos\WerkelijkWaar\WerkelijkWaar\Classes\DatabaseQueries.cs:line 372
+ClientConnectionId:2c20109f-5188-4fd3-9dc8-bb8719c54e88
+Error Number:201,State:4,Class:16
+27-5-2019 | 15:22: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[Startup]
+27-5-2019 | 15:24: 35ms. Launching server
+27-5-2019 | 15:24: 47ms. Server is up
+27-5-2019 | 15:24: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[CheckLogin]
+27-5-2019 | 15:24: 1ms. Checking login for JMuris
+27-5-2019 | 15:24: 59ms. Found JMuris
+27-5-2019 | 15:24: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[RetrieveUser]
+27-5-2019 | 15:24: 1ms. Retrieving user 4
+27-5-2019 | 15:24: 8ms. Found user 4
+27-5-2019 | 15:24: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[CheckLogin]
+27-5-2019 | 15:24: 1ms. Checking login for AAppel
+27-5-2019 | 15:24: 5ms. Found AAppel
+27-5-2019 | 15:24: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[RetrieveUser]
+27-5-2019 | 15:24: 1ms. Retrieving user 5
+27-5-2019 | 15:24: 5ms. Found user 5
+27-5-2019 | 15:24: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[Room]
+27-5-2019 | 15:24: 2ms. Creating room...
+27-5-2019 | 15:24: 6ms. Generating code...
+27-5-2019 | 15:24: 9ms. Setting timers...
+27-5-2019 | 15:24: 14ms. Room created with code 2vCu5s
+27-5-2019 | 15:24: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[RetrieveAllStories]
+27-5-2019 | 15:24: 1ms. Attempting to retrieve all stories.
+27-5-2019 | 15:24: 6ms. Got: 1 - Een root verhaal
+27-5-2019 | 15:24: 8ms. Got: 2 - Een verhaal
+27-5-2019 | 15:24: 10ms. Got: 3 - Nog een verhaal
+27-5-2019 | 15:24: 13ms. Got: 4 - A
+27-5-2019 | 15:24: 15ms. Got: 5 - B
+27-5-2019 | 15:24: 17ms. Got: 6 - C
+27-5-2019 | 15:24: 19ms. Got: 7 - D
+27-5-2019 | 15:24: 21ms. Got: 8 - F
+27-5-2019 | 15:24: 24ms. Got: 9 - G
+27-5-2019 | 15:24: 28ms. Found 9 stories.
+27-5-2019 | 15:24: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[Game]
+27-5-2019 | 15:25: Parsing score for user AAppel : 7bb00099-9764-4540-ae0e-86c568a20da4
+27-5-2019 | 15:25: Creating new score for 7bb00099-9764-4540-ae0e-86c568a20da4
+27-5-2019 | 15:25: 7bb00099-9764-4540-ae0e-86c568a20da4: applied answer 1. Player now has answers 1
+27-5-2019 | 15:25: 7bb00099-9764-4540-ae0e-86c568a20da4: answer is correct btw
+27-5-2019 | 15:25: 7bb00099-9764-4540-ae0e-86c568a20da4: followers are now 5
+27-5-2019 | 15:25: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[Game]
+27-5-2019 | 15:25: Parsing score for user AAppel : b69b74f7-27dd-4a9d-99f4-77ffcc7160c6
+27-5-2019 | 15:25: Creating new score for b69b74f7-27dd-4a9d-99f4-77ffcc7160c6
+27-5-2019 | 15:25: b69b74f7-27dd-4a9d-99f4-77ffcc7160c6: applied answer 0. Player now has answers 0
+27-5-2019 | 15:25: b69b74f7-27dd-4a9d-99f4-77ffcc7160c6: answer is incorrect btw
+27-5-2019 | 15:25: b69b74f7-27dd-4a9d-99f4-77ffcc7160c6: followers are now 0
+27-5-2019 | 15:25: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[Game]
+27-5-2019 | 15:25: Parsing score for user AAppel : 6ec06e0c-a8ed-44fe-ac85-a0a9b6c9e571
+27-5-2019 | 15:25: Creating new score for 6ec06e0c-a8ed-44fe-ac85-a0a9b6c9e571
+27-5-2019 | 15:25: 6ec06e0c-a8ed-44fe-ac85-a0a9b6c9e571: applied answer 1. Player now has answers 1
+27-5-2019 | 15:25: 6ec06e0c-a8ed-44fe-ac85-a0a9b6c9e571: answer is correct btw
+27-5-2019 | 15:25: 6ec06e0c-a8ed-44fe-ac85-a0a9b6c9e571: followers are now 5
+27-5-2019 | 15:25: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[Game]
+27-5-2019 | 15:25: Parsing score for user AAppel : 5ee845ed-8945-4193-9d22-adbdef404c07
+27-5-2019 | 15:25: Creating new score for 5ee845ed-8945-4193-9d22-adbdef404c07
+27-5-2019 | 15:25: 5ee845ed-8945-4193-9d22-adbdef404c07: applied answer 2. Player now has answers 2
+27-5-2019 | 15:25: 5ee845ed-8945-4193-9d22-adbdef404c07: answer is incorrect btw
+27-5-2019 | 15:25: 5ee845ed-8945-4193-9d22-adbdef404c07: followers are now 0
+27-5-2019 | 15:25: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[Game]
+27-5-2019 | 15:25: Parsing score for user AAppel : cca3144d-5dfa-43f3-af19-106cba7c2c37
+27-5-2019 | 15:25: Creating new score for cca3144d-5dfa-43f3-af19-106cba7c2c37
+27-5-2019 | 15:25: cca3144d-5dfa-43f3-af19-106cba7c2c37: applied answer 3. Player now has answers 3
+27-5-2019 | 15:25: cca3144d-5dfa-43f3-af19-106cba7c2c37: answer is incorrect btw
+27-5-2019 | 15:25: cca3144d-5dfa-43f3-af19-106cba7c2c37: followers are now 0
+27-5-2019 | 15:25: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[Game]
+27-5-2019 | 15:25: Parsing score for user AAppel : 95d90802-64fe-43c7-98db-4a8795aa1ca1
+27-5-2019 | 15:25: Creating new score for 95d90802-64fe-43c7-98db-4a8795aa1ca1
+27-5-2019 | 15:25: 95d90802-64fe-43c7-98db-4a8795aa1ca1: applied answer 0. Player now has answers 0
+27-5-2019 | 15:25: 95d90802-64fe-43c7-98db-4a8795aa1ca1: answer is incorrect btw
+27-5-2019 | 15:25: 95d90802-64fe-43c7-98db-4a8795aa1ca1: followers are now 0
+27-5-2019 | 15:25: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[CheckLogin]
+27-5-2019 | 15:25: 48ms. Checking login for 
+27-5-2019 | 15:25: 227ms. Exception:
+System.Data.SqlClient.SqlException (0x80131904): Procedure or function 'LogIn' expects parameter '@pUsername', which was not supplied.
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, SqlDataReader ds)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite, String method)
+   at System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, Boolean sendToPipe, Int32 timeout, Boolean asyncWrite, String methodName)
+   at System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   at WerkelijkWaar.Classes.DatabaseQueries.CheckLogin(String username, String password) in C:\Users\Justin Muris\source\repos\WerkelijkWaar\WerkelijkWaar\Classes\DatabaseQueries.cs:line 372
+ClientConnectionId:f55e458f-2fd8-49fb-9b74-3b57c1c51711
+Error Number:201,State:4,Class:16
+27-5-2019 | 15:25: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[CheckLogin]
+27-5-2019 | 15:25: 44ms. Checking login for 
+27-5-2019 | 15:25: 120ms. Exception:
+System.Data.SqlClient.SqlException (0x80131904): Procedure or function 'LogIn' expects parameter '@pUsername', which was not supplied.
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, SqlDataReader ds)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite, String method)
+   at System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, Boolean sendToPipe, Int32 timeout, Boolean asyncWrite, String methodName)
+   at System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   at WerkelijkWaar.Classes.DatabaseQueries.CheckLogin(String username, String password) in C:\Users\Justin Muris\source\repos\WerkelijkWaar\WerkelijkWaar\Classes\DatabaseQueries.cs:line 372
+ClientConnectionId:f55e458f-2fd8-49fb-9b74-3b57c1c51711
+Error Number:201,State:4,Class:16
+27-5-2019 | 15:25: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[Startup]
+27-5-2019 | 15:27: 71ms. Launching server
+27-5-2019 | 15:27: 90ms. Server is up
+27-5-2019 | 15:27: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[CheckLogin]
+27-5-2019 | 15:27: 2ms. Checking login for JMuris
+27-5-2019 | 15:27: 43ms. Found JMuris
+27-5-2019 | 15:27: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[RetrieveUser]
+27-5-2019 | 15:27: 1ms. Retrieving user 4
+27-5-2019 | 15:27: 9ms. Found user 4
+27-5-2019 | 15:27: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[CheckLogin]
+27-5-2019 | 15:27: 2ms. Checking login for AAppel
+27-5-2019 | 15:27: 10ms. Found AAppel
+27-5-2019 | 15:27: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[RetrieveUser]
+27-5-2019 | 15:27: 2ms. Retrieving user 5
+27-5-2019 | 15:27: 8ms. Found user 5
+27-5-2019 | 15:27: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[Room]
+27-5-2019 | 15:27: 2ms. Creating room...
+27-5-2019 | 15:27: 6ms. Generating code...
+27-5-2019 | 15:27: 11ms. Setting timers...
+27-5-2019 | 15:27: 21ms. Room created with code 92a859
+27-5-2019 | 15:27: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[RetrieveAllStories]
+27-5-2019 | 15:28: 2ms. Attempting to retrieve all stories.
+27-5-2019 | 15:28: 7ms. Got: 1 - Een root verhaal
+27-5-2019 | 15:28: 10ms. Got: 2 - Een verhaal
+27-5-2019 | 15:28: 13ms. Got: 3 - Nog een verhaal
+27-5-2019 | 15:28: 15ms. Got: 4 - A
+27-5-2019 | 15:28: 18ms. Got: 5 - B
+27-5-2019 | 15:28: 20ms. Got: 6 - C
+27-5-2019 | 15:28: 23ms. Got: 7 - D
+27-5-2019 | 15:28: 25ms. Got: 8 - F
+27-5-2019 | 15:28: 28ms. Got: 9 - G
+27-5-2019 | 15:28: 32ms. Found 9 stories.
+27-5-2019 | 15:28: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[Game]
+27-5-2019 | 15:28: Parsing score for user AAppel : c9374752-9988-4ec5-ae2e-1ebc9a99a719
+27-5-2019 | 15:28: Creating new score for c9374752-9988-4ec5-ae2e-1ebc9a99a719
+27-5-2019 | 15:28: c9374752-9988-4ec5-ae2e-1ebc9a99a719: applied answer 0. Player now has answers 0
+27-5-2019 | 15:28: c9374752-9988-4ec5-ae2e-1ebc9a99a719: answer is correct btw
+27-5-2019 | 15:28: c9374752-9988-4ec5-ae2e-1ebc9a99a719: followers are now 5
+27-5-2019 | 15:28: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[Game]
+27-5-2019 | 15:28: Parsing score for user AAppel : 91d87a30-7e8f-4003-9b33-ef89aa4ac4ad
+27-5-2019 | 15:28: Creating new score for 91d87a30-7e8f-4003-9b33-ef89aa4ac4ad
+27-5-2019 | 15:28: 91d87a30-7e8f-4003-9b33-ef89aa4ac4ad: applied answer 1. Player now has answers 1
+27-5-2019 | 15:28: 91d87a30-7e8f-4003-9b33-ef89aa4ac4ad: answer is incorrect btw
+27-5-2019 | 15:28: 91d87a30-7e8f-4003-9b33-ef89aa4ac4ad: followers are now 0
+27-5-2019 | 15:28: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[Game]
+27-5-2019 | 15:28: Parsing score for user AAppel : 6d9079ca-1a9e-4610-a8c2-986840da9165
+27-5-2019 | 15:28: Creating new score for 6d9079ca-1a9e-4610-a8c2-986840da9165
+27-5-2019 | 15:28: 6d9079ca-1a9e-4610-a8c2-986840da9165: applied answer 2. Player now has answers 2
+27-5-2019 | 15:28: 6d9079ca-1a9e-4610-a8c2-986840da9165: answer is incorrect btw
+27-5-2019 | 15:28: 6d9079ca-1a9e-4610-a8c2-986840da9165: followers are now 0
+27-5-2019 | 15:28: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[Game]
+27-5-2019 | 15:28: Parsing score for user AAppel : eafcf0a6-f213-4b45-9034-3ab56ad0b4d7
+27-5-2019 | 15:28: Creating new score for eafcf0a6-f213-4b45-9034-3ab56ad0b4d7
+27-5-2019 | 15:28: eafcf0a6-f213-4b45-9034-3ab56ad0b4d7: applied answer 3. Player now has answers 3
+27-5-2019 | 15:28: eafcf0a6-f213-4b45-9034-3ab56ad0b4d7: answer is incorrect btw
+27-5-2019 | 15:28: eafcf0a6-f213-4b45-9034-3ab56ad0b4d7: followers are now 0
+27-5-2019 | 15:28: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[Game]
+27-5-2019 | 15:28: Parsing score for user AAppel : 967d71aa-3b6f-4e97-9d98-d55a98c6c200
+27-5-2019 | 15:28: Creating new score for 967d71aa-3b6f-4e97-9d98-d55a98c6c200
+27-5-2019 | 15:28: 967d71aa-3b6f-4e97-9d98-d55a98c6c200: applied answer 1. Player now has answers 1
+27-5-2019 | 15:28: 967d71aa-3b6f-4e97-9d98-d55a98c6c200: answer is incorrect btw
+27-5-2019 | 15:28: 967d71aa-3b6f-4e97-9d98-d55a98c6c200: followers are now 0
+27-5-2019 | 15:28: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[Game]
+27-5-2019 | 15:28: Parsing score for user AAppel : fe52eb34-4551-48a3-bdec-79f7f4ce8e08
+27-5-2019 | 15:28: Creating new score for fe52eb34-4551-48a3-bdec-79f7f4ce8e08
+27-5-2019 | 15:28: fe52eb34-4551-48a3-bdec-79f7f4ce8e08: applied answer 2. Player now has answers 2
+27-5-2019 | 15:28: fe52eb34-4551-48a3-bdec-79f7f4ce8e08: answer is incorrect btw
+27-5-2019 | 15:28: fe52eb34-4551-48a3-bdec-79f7f4ce8e08: followers are now 0
+27-5-2019 | 15:28: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[CheckLogin]
+27-5-2019 | 15:28: 8ms. Checking login for 
+27-5-2019 | 15:28: 455ms. Exception:
+System.Data.SqlClient.SqlException (0x80131904): Procedure or function 'LogIn' expects parameter '@pUsername', which was not supplied.
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, SqlDataReader ds)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite, String method)
+   at System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, Boolean sendToPipe, Int32 timeout, Boolean asyncWrite, String methodName)
+   at System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   at WerkelijkWaar.Classes.DatabaseQueries.CheckLogin(String username, String password) in C:\Users\Justin Muris\source\repos\WerkelijkWaar\WerkelijkWaar\Classes\DatabaseQueries.cs:line 372
+ClientConnectionId:c7449a69-5f27-474f-9061-45a76406aa81
+Error Number:201,State:4,Class:16
+27-5-2019 | 15:28: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[Startup]
+27-5-2019 | 15:29: 9ms. Launching server
+27-5-2019 | 15:29: 25ms. Server is up
+27-5-2019 | 15:29: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[CheckLogin]
+27-5-2019 | 15:29: 1ms. Checking login for JMuris
+27-5-2019 | 15:29: 42ms. Found JMuris
+27-5-2019 | 15:29: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[RetrieveUser]
+27-5-2019 | 15:29: 2ms. Retrieving user 4
+27-5-2019 | 15:29: 11ms. Found user 4
+27-5-2019 | 15:29: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[CheckLogin]
+27-5-2019 | 15:29: 3ms. Checking login for AAppel
+27-5-2019 | 15:29: 14ms. Found AAppel
+27-5-2019 | 15:29: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[RetrieveUser]
+27-5-2019 | 15:29: 2ms. Retrieving user 5
+27-5-2019 | 15:29: 11ms. Found user 5
+27-5-2019 | 15:29: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[Room]
+27-5-2019 | 15:29: 2ms. Creating room...
+27-5-2019 | 15:29: 6ms. Generating code...
+27-5-2019 | 15:29: 10ms. Setting timers...
+27-5-2019 | 15:29: 15ms. Room created with code l71RYY
+27-5-2019 | 15:29: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[RetrieveAllStories]
+27-5-2019 | 15:30: 1ms. Attempting to retrieve all stories.
+27-5-2019 | 15:30: 6ms. Got: 1 - Een root verhaal
+27-5-2019 | 15:30: 9ms. Got: 2 - Een verhaal
+27-5-2019 | 15:30: 11ms. Got: 3 - Nog een verhaal
+27-5-2019 | 15:30: 13ms. Got: 4 - A
+27-5-2019 | 15:30: 16ms. Got: 5 - B
+27-5-2019 | 15:30: 18ms. Got: 6 - C
+27-5-2019 | 15:30: 20ms. Got: 7 - D
+27-5-2019 | 15:30: 23ms. Got: 8 - F
+27-5-2019 | 15:30: 25ms. Got: 9 - G
+27-5-2019 | 15:30: 30ms. Found 9 stories.
+27-5-2019 | 15:30: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[Game]
+27-5-2019 | 15:30: Parsing score for user AAppel : 924de4d0-7168-486e-b61f-422e4d153851
+27-5-2019 | 15:30: Creating new score for 924de4d0-7168-486e-b61f-422e4d153851
+27-5-2019 | 15:30: 924de4d0-7168-486e-b61f-422e4d153851: applied answer 3. Player now has answers 3
+27-5-2019 | 15:30: 924de4d0-7168-486e-b61f-422e4d153851: answer is correct btw
+27-5-2019 | 15:30: 924de4d0-7168-486e-b61f-422e4d153851: followers are now 5
+27-5-2019 | 15:30: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[Game]
+27-5-2019 | 15:30: Parsing score for user AAppel : 44a1ae6b-697b-4101-9568-948a52981b71
+27-5-2019 | 15:30: Creating new score for 44a1ae6b-697b-4101-9568-948a52981b71
+27-5-2019 | 15:30: 44a1ae6b-697b-4101-9568-948a52981b71: applied answer 2. Player now has answers 2
+27-5-2019 | 15:30: 44a1ae6b-697b-4101-9568-948a52981b71: answer is incorrect btw
+27-5-2019 | 15:30: 44a1ae6b-697b-4101-9568-948a52981b71: followers are now 0
+27-5-2019 | 15:30: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[Game]
+27-5-2019 | 15:30: Parsing score for user AAppel : e6a7435c-5733-4640-b49b-83839f27a45e
+27-5-2019 | 15:30: Creating new score for e6a7435c-5733-4640-b49b-83839f27a45e
+27-5-2019 | 15:30: e6a7435c-5733-4640-b49b-83839f27a45e: applied answer 1. Player now has answers 1
+27-5-2019 | 15:30: e6a7435c-5733-4640-b49b-83839f27a45e: answer is incorrect btw
+27-5-2019 | 15:30: e6a7435c-5733-4640-b49b-83839f27a45e: followers are now 0
+27-5-2019 | 15:30: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[Game]
+27-5-2019 | 15:30: Parsing score for user AAppel : 55edef4e-608a-4e98-93f9-3b320a83f53c
+27-5-2019 | 15:30: Creating new score for 55edef4e-608a-4e98-93f9-3b320a83f53c
+27-5-2019 | 15:30: 55edef4e-608a-4e98-93f9-3b320a83f53c: applied answer 0. Player now has answers 0
+27-5-2019 | 15:30: 55edef4e-608a-4e98-93f9-3b320a83f53c: answer is incorrect btw
+27-5-2019 | 15:30: 55edef4e-608a-4e98-93f9-3b320a83f53c: followers are now 0
+27-5-2019 | 15:30: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[Game]
+27-5-2019 | 15:30: Parsing score for user AAppel : 6f81cd5f-a0ac-471d-a7c7-bcaeade66eff
+27-5-2019 | 15:30: Creating new score for 6f81cd5f-a0ac-471d-a7c7-bcaeade66eff
+27-5-2019 | 15:30: 6f81cd5f-a0ac-471d-a7c7-bcaeade66eff: applied answer 1. Player now has answers 1
+27-5-2019 | 15:30: 6f81cd5f-a0ac-471d-a7c7-bcaeade66eff: answer is incorrect btw
+27-5-2019 | 15:30: 6f81cd5f-a0ac-471d-a7c7-bcaeade66eff: followers are now 0
+27-5-2019 | 15:30: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[Game]
+27-5-2019 | 15:30: Parsing score for user AAppel : 4dfd0a4d-220b-4dd3-bef9-c590c47f505e
+27-5-2019 | 15:30: Creating new score for 4dfd0a4d-220b-4dd3-bef9-c590c47f505e
+27-5-2019 | 15:30: 4dfd0a4d-220b-4dd3-bef9-c590c47f505e: applied answer 2. Player now has answers 2
+27-5-2019 | 15:30: 4dfd0a4d-220b-4dd3-bef9-c590c47f505e: answer is incorrect btw
+27-5-2019 | 15:30: 4dfd0a4d-220b-4dd3-bef9-c590c47f505e: followers are now 0
+27-5-2019 | 15:30: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[CheckLogin]
+27-5-2019 | 15:30: 46ms. Checking login for 
+27-5-2019 | 15:30: 610ms. Exception:
+System.Data.SqlClient.SqlException (0x80131904): Procedure or function 'LogIn' expects parameter '@pUsername', which was not supplied.
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, SqlDataReader ds)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite, String method)
+   at System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, Boolean sendToPipe, Int32 timeout, Boolean asyncWrite, String methodName)
+   at System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   at WerkelijkWaar.Classes.DatabaseQueries.CheckLogin(String username, String password) in C:\Users\Justin Muris\source\repos\WerkelijkWaar\WerkelijkWaar\Classes\DatabaseQueries.cs:line 372
+ClientConnectionId:ffc257b4-c73c-4aa2-95e9-8c59d5f15fe8
+Error Number:201,State:4,Class:16
+27-5-2019 | 15:30: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[Startup]
+27-5-2019 | 15:31: 8ms. Launching server
+27-5-2019 | 15:31: 19ms. Server is up
+27-5-2019 | 15:31: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[Startup]
+27-5-2019 | 15:32: 9ms. Launching server
+27-5-2019 | 15:32: 35ms. Server is up
+27-5-2019 | 15:32: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[CheckLogin]
+27-5-2019 | 15:32: 2ms. Checking login for JMuris
+27-5-2019 | 15:32: 59ms. Found JMuris
+27-5-2019 | 15:32: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[RetrieveUser]
+27-5-2019 | 15:32: 6ms. Retrieving user 4
+27-5-2019 | 15:32: 16ms. Found user 4
+27-5-2019 | 15:32: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[CheckLogin]
+27-5-2019 | 15:32: 2ms. Checking login for AAppel
+27-5-2019 | 15:32: 8ms. Found AAppel
+27-5-2019 | 15:32: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[RetrieveUser]
+27-5-2019 | 15:32: 2ms. Retrieving user 5
+27-5-2019 | 15:32: 7ms. Found user 5
+27-5-2019 | 15:32: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[Room]
+27-5-2019 | 15:32: 4ms. Creating room...
+27-5-2019 | 15:32: 7ms. Generating code...
+27-5-2019 | 15:32: 11ms. Setting timers...
+27-5-2019 | 15:32: 19ms. Room created with code LdC2iZ
+27-5-2019 | 15:32: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[RetrieveAllStories]
+27-5-2019 | 15:32: 2ms. Attempting to retrieve all stories.
+27-5-2019 | 15:32: 9ms. Got: 1 - Een root verhaal
+27-5-2019 | 15:32: 11ms. Got: 2 - Een verhaal
+27-5-2019 | 15:32: 14ms. Got: 3 - Nog een verhaal
+27-5-2019 | 15:32: 17ms. Got: 4 - A
+27-5-2019 | 15:32: 20ms. Got: 5 - B
+27-5-2019 | 15:32: 23ms. Got: 6 - C
+27-5-2019 | 15:32: 26ms. Got: 7 - D
+27-5-2019 | 15:32: 30ms. Got: 8 - F
+27-5-2019 | 15:32: 33ms. Got: 9 - G
+27-5-2019 | 15:32: 38ms. Found 9 stories.
+27-5-2019 | 15:32: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[Game]
+27-5-2019 | 15:33: Parsing score for user AAppel : 637020f1-4a39-4769-8e8c-7cef0151742f
+27-5-2019 | 15:33: Creating new score for 637020f1-4a39-4769-8e8c-7cef0151742f
+27-5-2019 | 15:33: 637020f1-4a39-4769-8e8c-7cef0151742f: applied answer 2. Player now has answers 2
+27-5-2019 | 15:33: 637020f1-4a39-4769-8e8c-7cef0151742f: answer is correct btw
+27-5-2019 | 15:33: 637020f1-4a39-4769-8e8c-7cef0151742f: followers are now 5
+27-5-2019 | 15:33: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[Game]
+27-5-2019 | 15:33: Parsing score for user AAppel : 18b50e33-8181-47fe-87cc-b3d28290b277
+27-5-2019 | 15:33: Creating new score for 18b50e33-8181-47fe-87cc-b3d28290b277
+27-5-2019 | 15:33: 18b50e33-8181-47fe-87cc-b3d28290b277: applied answer 0. Player now has answers 0
+27-5-2019 | 15:33: 18b50e33-8181-47fe-87cc-b3d28290b277: answer is incorrect btw
+27-5-2019 | 15:33: 18b50e33-8181-47fe-87cc-b3d28290b277: followers are now 0
+27-5-2019 | 15:33: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[Game]
+27-5-2019 | 15:33: Parsing score for user AAppel : f03af185-6e37-4135-945d-168633f2e52f
+27-5-2019 | 15:33: Creating new score for f03af185-6e37-4135-945d-168633f2e52f
+27-5-2019 | 15:33: f03af185-6e37-4135-945d-168633f2e52f: applied answer 1. Player now has answers 1
+27-5-2019 | 15:33: f03af185-6e37-4135-945d-168633f2e52f: answer is incorrect btw
+27-5-2019 | 15:33: f03af185-6e37-4135-945d-168633f2e52f: followers are now 0
+27-5-2019 | 15:33: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[Game]
+27-5-2019 | 15:33: Parsing score for user AAppel : 77fe3c57-0f75-4acd-8d74-7815c4cd8d23
+27-5-2019 | 15:33: Creating new score for 77fe3c57-0f75-4acd-8d74-7815c4cd8d23
+27-5-2019 | 15:33: 77fe3c57-0f75-4acd-8d74-7815c4cd8d23: applied answer 3. Player now has answers 3
+27-5-2019 | 15:33: 77fe3c57-0f75-4acd-8d74-7815c4cd8d23: answer is incorrect btw
+27-5-2019 | 15:33: 77fe3c57-0f75-4acd-8d74-7815c4cd8d23: followers are now 0
+27-5-2019 | 15:33: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[Game]
+27-5-2019 | 15:33: Parsing score for user AAppel : 5f422414-1880-4e97-b8e0-bf1e36cebed2
+27-5-2019 | 15:33: Creating new score for 5f422414-1880-4e97-b8e0-bf1e36cebed2
+27-5-2019 | 15:33: 5f422414-1880-4e97-b8e0-bf1e36cebed2: applied answer 2. Player now has answers 2
+27-5-2019 | 15:33: 5f422414-1880-4e97-b8e0-bf1e36cebed2: answer is correct btw
+27-5-2019 | 15:33: 5f422414-1880-4e97-b8e0-bf1e36cebed2: followers are now 5
+27-5-2019 | 15:33: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[Game]
+27-5-2019 | 15:33: Parsing score for user AAppel : 05bd6723-de19-4e8f-a0db-e562c76a0221
+27-5-2019 | 15:33: Creating new score for 05bd6723-de19-4e8f-a0db-e562c76a0221
+27-5-2019 | 15:33: 05bd6723-de19-4e8f-a0db-e562c76a0221: applied answer 1. Player now has answers 1
+27-5-2019 | 15:33: 05bd6723-de19-4e8f-a0db-e562c76a0221: answer is incorrect btw
+27-5-2019 | 15:33: 05bd6723-de19-4e8f-a0db-e562c76a0221: followers are now 0
+27-5-2019 | 15:33: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[Startup]
+27-5-2019 | 15:34: 91ms. Launching server
+27-5-2019 | 15:34: 106ms. Server is up
+27-5-2019 | 15:34: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[CheckLogin]
+27-5-2019 | 15:34: 2ms. Checking login for JMuris
+27-5-2019 | 15:34: 42ms. Found JMuris
+27-5-2019 | 15:34: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[RetrieveUser]
+27-5-2019 | 15:34: 2ms. Retrieving user 4
+27-5-2019 | 15:34: 10ms. Found user 4
+27-5-2019 | 15:34: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[CheckLogin]
+27-5-2019 | 15:34: 2ms. Checking login for AAppel
+27-5-2019 | 15:34: 8ms. Found AAppel
+27-5-2019 | 15:34: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[RetrieveUser]
+27-5-2019 | 15:34: 2ms. Retrieving user 5
+27-5-2019 | 15:34: 8ms. Found user 5
+27-5-2019 | 15:34: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[Room]
+27-5-2019 | 15:34: 2ms. Creating room...
+27-5-2019 | 15:34: 6ms. Generating code...
+27-5-2019 | 15:34: 10ms. Setting timers...
+27-5-2019 | 15:34: 15ms. Room created with code 3NlY57
+27-5-2019 | 15:34: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[RetrieveAllStories]
+27-5-2019 | 15:35: 2ms. Attempting to retrieve all stories.
+27-5-2019 | 15:35: 7ms. Got: 1 - Een root verhaal
+27-5-2019 | 15:35: 10ms. Got: 2 - Een verhaal
+27-5-2019 | 15:35: 12ms. Got: 3 - Nog een verhaal
+27-5-2019 | 15:35: 15ms. Got: 4 - A
+27-5-2019 | 15:35: 17ms. Got: 5 - B
+27-5-2019 | 15:35: 19ms. Got: 6 - C
+27-5-2019 | 15:35: 22ms. Got: 7 - D
+27-5-2019 | 15:35: 25ms. Got: 8 - F
+27-5-2019 | 15:35: 27ms. Got: 9 - G
+27-5-2019 | 15:35: 31ms. Found 9 stories.
+27-5-2019 | 15:35: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[Game]
+27-5-2019 | 15:35: Parsing score for user AAppel : 97894820-bba3-4a9b-b90d-7e10d62521fc
+27-5-2019 | 15:35: Creating new score for 97894820-bba3-4a9b-b90d-7e10d62521fc
+27-5-2019 | 15:35: 97894820-bba3-4a9b-b90d-7e10d62521fc: applied answer 3. Player now has answers 3
+27-5-2019 | 15:35: 97894820-bba3-4a9b-b90d-7e10d62521fc: answer is correct btw
+27-5-2019 | 15:35: 97894820-bba3-4a9b-b90d-7e10d62521fc: followers are now 5
+27-5-2019 | 15:35: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[Game]
+27-5-2019 | 15:35: Parsing score for user AAppel : 9daa44f7-1086-4cc5-9fe8-4e7d81e6bd55
+27-5-2019 | 15:35: Creating new score for 9daa44f7-1086-4cc5-9fe8-4e7d81e6bd55
+27-5-2019 | 15:35: 9daa44f7-1086-4cc5-9fe8-4e7d81e6bd55: applied answer 0. Player now has answers 0
+27-5-2019 | 15:35: 9daa44f7-1086-4cc5-9fe8-4e7d81e6bd55: answer is incorrect btw
+27-5-2019 | 15:35: 9daa44f7-1086-4cc5-9fe8-4e7d81e6bd55: followers are now 0
+27-5-2019 | 15:35: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[Game]
+27-5-2019 | 15:35: Parsing score for user AAppel : 77cbfb55-5132-4672-9bb1-8e2a7938c41b
+27-5-2019 | 15:35: Creating new score for 77cbfb55-5132-4672-9bb1-8e2a7938c41b
+27-5-2019 | 15:35: 77cbfb55-5132-4672-9bb1-8e2a7938c41b: applied answer 1. Player now has answers 1
+27-5-2019 | 15:35: 77cbfb55-5132-4672-9bb1-8e2a7938c41b: answer is incorrect btw
+27-5-2019 | 15:35: 77cbfb55-5132-4672-9bb1-8e2a7938c41b: followers are now 0
+27-5-2019 | 15:35: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[Game]
+27-5-2019 | 15:35: Parsing score for user AAppel : 96eec3b9-8e1c-4009-8e05-5103a8a70b1c
+27-5-2019 | 15:35: Creating new score for 96eec3b9-8e1c-4009-8e05-5103a8a70b1c
+27-5-2019 | 15:35: 96eec3b9-8e1c-4009-8e05-5103a8a70b1c: applied answer 2. Player now has answers 2
+27-5-2019 | 15:35: 96eec3b9-8e1c-4009-8e05-5103a8a70b1c: answer is incorrect btw
+27-5-2019 | 15:35: 96eec3b9-8e1c-4009-8e05-5103a8a70b1c: followers are now 0
+27-5-2019 | 15:35: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[Game]
+27-5-2019 | 15:35: Parsing score for user AAppel : 921850e5-e093-46b1-9064-a27edb2cbc7c
+27-5-2019 | 15:35: Creating new score for 921850e5-e093-46b1-9064-a27edb2cbc7c
+27-5-2019 | 15:35: 921850e5-e093-46b1-9064-a27edb2cbc7c: applied answer 1. Player now has answers 1
+27-5-2019 | 15:35: 921850e5-e093-46b1-9064-a27edb2cbc7c: answer is incorrect btw
+27-5-2019 | 15:35: 921850e5-e093-46b1-9064-a27edb2cbc7c: followers are now 0
+27-5-2019 | 15:35: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[Game]
+27-5-2019 | 15:35: Parsing score for user AAppel : 967f48fa-1f36-495b-ba8e-e3690d631a97
+27-5-2019 | 15:35: Creating new score for 967f48fa-1f36-495b-ba8e-e3690d631a97
+27-5-2019 | 15:35: 967f48fa-1f36-495b-ba8e-e3690d631a97: applied answer 3. Player now has answers 3
+27-5-2019 | 15:35: 967f48fa-1f36-495b-ba8e-e3690d631a97: answer is correct btw
+27-5-2019 | 15:35: 967f48fa-1f36-495b-ba8e-e3690d631a97: followers are now 5
+27-5-2019 | 15:35: End.
+---[DEBUG MSG END]---
+

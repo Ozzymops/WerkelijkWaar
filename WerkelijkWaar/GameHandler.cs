@@ -516,10 +516,6 @@ namespace WerkelijkWaar
 
                             string[] tempStory = story.Split("_+_");
 
-                            l.WriteToLog("[Game]", user.SocketId, 0);
-                            l.WriteToLog("[Game]", "Story from " + tempStory[0] + " - " + tempStory[1] + ": " + tempStory[2], 0);
-                            l.WriteToLog("[Game]", "End", 1);
-
                             Classes.Story newStory = new Classes.Story { GameGroup = user.GameGroup, IsRoot = false, Title = tempStory[1], Description = tempStory[2], OwnerId = user.Id, Source = Convert.ToInt32(tempStory[0]) };
 
                             if (!room.WrittenStories.Contains(newStory))
@@ -556,7 +552,7 @@ namespace WerkelijkWaar
                     {
                         if (user.SocketId == socketId)
                         {
-                            l.WriteToLog("[Game]", "Parsing score for user " + user.Username + " : " + socketId, 0);
+                            l.DebugToLog("[Game]", "Parsing score for user " + user.Username + " : " + socketId, 0);
 
                             user.ChoseStory = true;
 
@@ -575,7 +571,7 @@ namespace WerkelijkWaar
                                         // 2 answer power-up
                                         if (user.PowerupOneActive)
                                         {
-                                            l.WriteToLog("[Game]", socketId + ": has used the 'two answer' power-up. Answers are " + answer, 0);
+                                            l.DebugToLog("[Game]", socketId + ": has used the 'two answer' power-up. Answers are " + answer, 1);
 
                                             string[] answers = answer.Split(':');
 
@@ -591,12 +587,12 @@ namespace WerkelijkWaar
 
                                         // Apply answer
                                         score.Answers += answer;
-                                        l.WriteToLog("[Game]", socketId + ": applied answer " + answer + ". Player now has answers " + score.Answers, 0);
+                                        l.DebugToLog("[Game]", socketId + ": applied answer " + answer + ". Player now has answers " + score.Answers, 1);
 
                                         // Check correctness
                                         if (Convert.ToInt32(answer) == room.CorrectAnswer)
                                         {
-                                            l.WriteToLog("[Game]", socketId + ": answer is correct btw", 0);
+                                            l.DebugToLog("[Game]", socketId + ": answer is correct btw", 1);
 
                                             score.CorrectAnswers += "1";
 
@@ -611,11 +607,18 @@ namespace WerkelijkWaar
                                         }
                                         else
                                         {
-                                            l.WriteToLog("[Game]", socketId + ": answer is incorrect btw", 0);
+                                            l.DebugToLog("[Game]", socketId + ": answer is incorrect btw", 1);
 
                                             score.CorrectAnswers += "0";
 
-                                            score.FollowerAmount -= 5;
+                                            if (user.PowerupTwoActive)
+                                            {
+                                                newScore.FollowerAmount -= 10;
+                                            }
+                                            else
+                                            {
+                                                newScore.FollowerAmount -= 5;
+                                            }
 
                                             if (score.FollowerAmount <= 0)
                                             {
@@ -623,7 +626,7 @@ namespace WerkelijkWaar
                                             }
                                         }
 
-                                        l.WriteToLog("[Game]", socketId + ": followers are now " + score.FollowerAmount, 1);
+                                        l.DebugToLog("[Game]", socketId + ": followers are now " + score.FollowerAmount, 2);
                                     }
                                 }                              
                             }
@@ -631,14 +634,14 @@ namespace WerkelijkWaar
                             // Create score if not found
                             if (!scoreFound)
                             {
-                                l.WriteToLog("[Game]", "Creating new score for " + socketId, 0);
+                                l.DebugToLog("[Game]", "Creating new score for " + socketId, 1);
 
                                 newScore = new Classes.Score { SocketId = user.SocketId, OwnerId = user.Id, Date = DateTime.Now, Answers = "" };
 
                                 // 2 answer power-up
                                 if (user.PowerupOneActive)
                                 {
-                                    l.WriteToLog("[Game]", socketId + ": has used the 'two answer' power-up. Answers are " + answer, 0);
+                                    l.DebugToLog("[Game]", socketId + ": has used the 'two answer' power-up. Answers are " + answer, 1);
 
                                     string[] answers = answer.Split(':');
 
@@ -654,12 +657,12 @@ namespace WerkelijkWaar
 
                                 // Apply answer
                                 newScore.Answers += answer;
-                                l.WriteToLog("[Game]", socketId + ": applied answer " + answer + ". Player now has answers " + newScore.Answers, 0);
+                                l.DebugToLog("[Game]", socketId + ": applied answer " + answer + ". Player now has answers " + newScore.Answers, 1);
 
                                 // Check correctness
                                 if (Convert.ToInt32(answer) == room.CorrectAnswer)
                                 {
-                                    l.WriteToLog("[Game]", socketId + ": answer is correct btw", 0);
+                                    l.DebugToLog("[Game]", socketId + ": answer is correct btw", 1);
 
                                     newScore.CorrectAnswers += "1";
 
@@ -674,11 +677,18 @@ namespace WerkelijkWaar
                                 }
                                 else
                                 {
-                                    l.WriteToLog("[Game]", socketId + ": answer is incorrect btw", 0);
+                                    l.DebugToLog("[Game]", socketId + ": answer is incorrect btw", 1);
 
                                     newScore.CorrectAnswers += "0";
 
-                                    newScore.FollowerAmount -= 5;
+                                    if (user.PowerupTwoActive)
+                                    {
+                                        newScore.FollowerAmount -= 10;
+                                    }
+                                    else
+                                    {
+                                        newScore.FollowerAmount -= 5;
+                                    }
 
                                     if (newScore.FollowerAmount <= 0)
                                     {
@@ -686,7 +696,7 @@ namespace WerkelijkWaar
                                     }
                                 }
 
-                                l.WriteToLog("[Game]", socketId + ": followers are now " + newScore.FollowerAmount, 1);
+                                l.DebugToLog("[Game]", socketId + ": followers are now " + newScore.FollowerAmount, 2);
 
                                 room.SelectedAnswers.Add(newScore);
                             }
@@ -701,6 +711,7 @@ namespace WerkelijkWaar
                     if (usersThatSelectedAnswers == room.Users.Count)
                     {
                         // Loop
+                        await GiveMoney(roomCode);
                     }
                 }
             }
@@ -722,6 +733,44 @@ namespace WerkelijkWaar
                             }
                         }
                     }
+
+                    await ShowLeaderboard(roomCode);
+                }
+            }
+        }
+
+        public async Task ShowLeaderboard(string roomCode)
+        {
+            foreach (Classes.Room room in _gameManager.Rooms)
+            {
+                if (room.RoomCode == roomCode)
+                {
+                    List<string> rankList = new List<string>();
+                    List<Classes.Score> scoreList = new List<Classes.Score>();
+
+                    foreach (Classes.Score score in room.SelectedAnswers)
+                    {
+                        scoreList.Add(score);
+                    }
+
+                    // Sort scorelist
+                    scoreList = scoreList.OrderByDescending(o => o.CashAmount).ToList();
+
+                    // Sort by rank
+                    foreach (Classes.Score rankedScore in scoreList)
+                    {
+                        foreach (Classes.User user in room.Users)
+                        {
+                            if (user.SocketId == rankedScore.SocketId)
+                            {
+                                int rank = scoreList.IndexOf(rankedScore);
+                                string rankString = (rank + 1) + ":|!" + user.Username + ":|!" + rankedScore.FollowerAmount + ":|!" + rankedScore.CashAmount;
+                                rankList.Add(rankString);
+                            }
+                        }
+                    }
+
+                    await InvokeClientMethodToAllAsync("showLeaderboards", roomCode, Newtonsoft.Json.JsonConvert.SerializeObject(rankList));
                 }
             }
         }
@@ -781,7 +830,7 @@ namespace WerkelijkWaar
             await InvokeClientMethodToAllAsync("showStories", gameGroup, roomCode, Newtonsoft.Json.JsonConvert.SerializeObject(storiesToSend));
         }
 
-        public async Task ActivatePowerup(string roomCode, string socketId, int powerup)
+        public async Task ActivatePowerup(string roomCode, string socketId, string powerup)
         {
             foreach (Classes.Room room in _gameManager.Rooms)
             {
@@ -795,19 +844,19 @@ namespace WerkelijkWaar
                             {
                                 if (score.SocketId == socketId)
                                 {
-                                    if (powerup == 1 && score.CashAmount >= (10.00 * room.Config.PowerupsCostMult))
+                                    if (Convert.ToInt32(powerup) == 1 && score.CashAmount >= (10.00 * room.Config.PowerupsCostMult))
                                     {
                                         score.CashAmount -= (10.00 * room.Config.PowerupsCostMult);
                                         user.PowerupOneActive = true;
                                         await InvokeClientMethodToAllAsync("updatePowerups", roomCode, socketId, true, false, false);
                                     }
-                                    else if (powerup == 2 && score.CashAmount >= (15.00 * room.Config.PowerupsCostMult))
+                                    else if (Convert.ToInt32(powerup) == 2 && score.CashAmount >= (15.00 * room.Config.PowerupsCostMult))
                                     {
                                         score.CashAmount -= (15.00 * room.Config.PowerupsCostMult);
                                         user.PowerupTwoActive = true;
                                         await InvokeClientMethodToAllAsync("updatePowerups", roomCode, socketId, false, true, false);
                                     }
-                                    else if (powerup == 3 && score.CashAmount >= (20.00 * room.Config.PowerupsCostMult))
+                                    else if (Convert.ToInt32(powerup) == 3 && score.CashAmount >= (20.00 * room.Config.PowerupsCostMult))
                                     {
                                         score.CashAmount -= (20.00 * room.Config.PowerupsCostMult);
                                         user.PowerupThreeActive = true;

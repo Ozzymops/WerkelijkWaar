@@ -1,0 +1,486 @@
+---[LOG MSG START]---
+[Startup]
+27-5-2019 | 15:21: Starting server...
+27-5-2019 | 15:21: Server is up and running!
+27-5-2019 | 15:21: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[CheckLogin]
+27-5-2019 | 15:21: Logging in JMuris...
+27-5-2019 | 15:21: Log in found for user JMuris
+27-5-2019 | 15:21: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveUser]
+27-5-2019 | 15:21: Attempting to retrieve user with id 4
+27-5-2019 | 15:21: Found user with id 4
+27-5-2019 | 15:21: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[AccountController]
+27-5-2019 | 15:21: JMuris validated.
+27-5-2019 | 15:21: JMuris navigated to Hub/Game
+27-5-2019 | 15:21: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[AccountController]
+27-5-2019 | 15:21: JMuris validated.
+27-5-2019 | 15:21: JMuris logged out.
+27-5-2019 | 15:21: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[CheckLogin]
+27-5-2019 | 15:21: Logging in AAppel...
+27-5-2019 | 15:21: Log in found for user AAppel
+27-5-2019 | 15:21: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveUser]
+27-5-2019 | 15:21: Attempting to retrieve user with id 5
+27-5-2019 | 15:21: Found user with id 5
+27-5-2019 | 15:21: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[AccountController]
+27-5-2019 | 15:21: AAppel validated.
+27-5-2019 | 15:21: AAppel navigated to Hub/Game
+27-5-2019 | 15:21: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[Room]
+27-5-2019 | 15:21: Creating room...
+27-5-2019 | 15:21: Room created with code 5L77lO
+27-5-2019 | 15:21: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveAllStories]
+27-5-2019 | 15:22: Attempting to retrieve all stories.
+27-5-2019 | 15:22: Found 9 stories.
+27-5-2019 | 15:22: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[Game]
+27-5-2019 | 15:22: Planting correct answer...
+27-5-2019 | 15:22: Correct answer is 0 with story string '6:!|Nog een verhaal:!|bla bla bla Ipsum Lorem'.
+---[LOG MSG START]---
+[CheckLogin]
+27-5-2019 | 15:22: Logging in ...
+27-5-2019 | 15:22: Something went wrong. Check debug.txt
+27-5-2019 | 15:22: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[Startup]
+27-5-2019 | 15:24: Starting server...
+27-5-2019 | 15:24: Server is up and running!
+27-5-2019 | 15:24: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[CheckLogin]
+27-5-2019 | 15:24: Logging in JMuris...
+27-5-2019 | 15:24: Log in found for user JMuris
+27-5-2019 | 15:24: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveUser]
+27-5-2019 | 15:24: Attempting to retrieve user with id 4
+27-5-2019 | 15:24: Found user with id 4
+27-5-2019 | 15:24: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[AccountController]
+27-5-2019 | 15:24: JMuris validated.
+27-5-2019 | 15:24: JMuris navigated to Hub/Game
+27-5-2019 | 15:24: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[AccountController]
+27-5-2019 | 15:24: JMuris validated.
+27-5-2019 | 15:24: JMuris logged out.
+27-5-2019 | 15:24: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[CheckLogin]
+27-5-2019 | 15:24: Logging in AAppel...
+27-5-2019 | 15:24: Log in found for user AAppel
+27-5-2019 | 15:24: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveUser]
+27-5-2019 | 15:24: Attempting to retrieve user with id 5
+27-5-2019 | 15:24: Found user with id 5
+27-5-2019 | 15:24: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[AccountController]
+27-5-2019 | 15:24: AAppel validated.
+27-5-2019 | 15:24: AAppel navigated to Hub/Game
+27-5-2019 | 15:24: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[Room]
+27-5-2019 | 15:24: Creating room...
+27-5-2019 | 15:24: Room created with code 2vCu5s
+27-5-2019 | 15:24: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveAllStories]
+27-5-2019 | 15:24: Attempting to retrieve all stories.
+27-5-2019 | 15:24: Found 9 stories.
+27-5-2019 | 15:24: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[Game]
+27-5-2019 | 15:25: Planting correct answer...
+27-5-2019 | 15:25: Correct answer is 1 with story string '6:!|Nog een verhaal:!|bla bla bla Ipsum Lorem'.
+---[LOG MSG START]---
+[CheckLogin]
+27-5-2019 | 15:25: Logging in ...
+27-5-2019 | 15:25: Something went wrong. Check debug.txt
+27-5-2019 | 15:25: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[CheckLogin]
+27-5-2019 | 15:25: Logging in ...
+27-5-2019 | 15:25: Something went wrong. Check debug.txt
+27-5-2019 | 15:25: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[Startup]
+27-5-2019 | 15:27: Starting server...
+27-5-2019 | 15:27: Server is up and running!
+27-5-2019 | 15:27: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[CheckLogin]
+27-5-2019 | 15:27: Logging in JMuris...
+27-5-2019 | 15:27: Log in found for user JMuris
+27-5-2019 | 15:27: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveUser]
+27-5-2019 | 15:27: Attempting to retrieve user with id 4
+27-5-2019 | 15:27: Found user with id 4
+27-5-2019 | 15:27: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[AccountController]
+27-5-2019 | 15:27: JMuris validated.
+27-5-2019 | 15:27: JMuris navigated to Hub/Game
+27-5-2019 | 15:27: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[AccountController]
+27-5-2019 | 15:27: JMuris validated.
+27-5-2019 | 15:27: JMuris logged out.
+27-5-2019 | 15:27: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[CheckLogin]
+27-5-2019 | 15:27: Logging in AAppel...
+27-5-2019 | 15:27: Log in found for user AAppel
+27-5-2019 | 15:27: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveUser]
+27-5-2019 | 15:27: Attempting to retrieve user with id 5
+27-5-2019 | 15:27: Found user with id 5
+27-5-2019 | 15:27: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[AccountController]
+27-5-2019 | 15:27: AAppel validated.
+27-5-2019 | 15:27: AAppel navigated to Hub/Game
+27-5-2019 | 15:27: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[Room]
+27-5-2019 | 15:27: Creating room...
+27-5-2019 | 15:27: Room created with code 92a859
+27-5-2019 | 15:27: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveAllStories]
+27-5-2019 | 15:28: Attempting to retrieve all stories.
+27-5-2019 | 15:28: Found 9 stories.
+27-5-2019 | 15:28: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[Game]
+27-5-2019 | 15:28: Planting correct answer...
+27-5-2019 | 15:28: Correct answer is 0 with story string '5:!|A:!|aweaewaesa'.
+---[LOG MSG START]---
+[CheckLogin]
+27-5-2019 | 15:28: Logging in ...
+27-5-2019 | 15:28: Something went wrong. Check debug.txt
+27-5-2019 | 15:28: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[Startup]
+27-5-2019 | 15:29: Starting server...
+27-5-2019 | 15:29: Server is up and running!
+27-5-2019 | 15:29: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[CheckLogin]
+27-5-2019 | 15:29: Logging in JMuris...
+27-5-2019 | 15:29: Log in found for user JMuris
+27-5-2019 | 15:29: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveUser]
+27-5-2019 | 15:29: Attempting to retrieve user with id 4
+27-5-2019 | 15:29: Found user with id 4
+27-5-2019 | 15:29: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[AccountController]
+27-5-2019 | 15:29: JMuris validated.
+27-5-2019 | 15:29: JMuris navigated to Hub/Game
+27-5-2019 | 15:29: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[AccountController]
+27-5-2019 | 15:29: JMuris validated.
+27-5-2019 | 15:29: JMuris logged out.
+27-5-2019 | 15:29: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[CheckLogin]
+27-5-2019 | 15:29: Logging in AAppel...
+27-5-2019 | 15:29: Log in found for user AAppel
+27-5-2019 | 15:29: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveUser]
+27-5-2019 | 15:29: Attempting to retrieve user with id 5
+27-5-2019 | 15:29: Found user with id 5
+27-5-2019 | 15:29: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[AccountController]
+27-5-2019 | 15:29: AAppel validated.
+27-5-2019 | 15:29: AAppel navigated to Hub/Game
+27-5-2019 | 15:29: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[Room]
+27-5-2019 | 15:29: Creating room...
+27-5-2019 | 15:29: Room created with code l71RYY
+27-5-2019 | 15:29: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveAllStories]
+27-5-2019 | 15:30: Attempting to retrieve all stories.
+27-5-2019 | 15:30: Found 9 stories.
+27-5-2019 | 15:30: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[Game]
+27-5-2019 | 15:30: Planting correct answer...
+27-5-2019 | 15:30: Correct answer is 3 with story string '5:!|Een verhaal:!|Lorem Ipsum bla bla bla'.
+---[LOG MSG START]---
+[CheckLogin]
+27-5-2019 | 15:30: Logging in ...
+27-5-2019 | 15:30: Something went wrong. Check debug.txt
+27-5-2019 | 15:30: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[Startup]
+27-5-2019 | 15:31: Starting server...
+27-5-2019 | 15:31: Server is up and running!
+27-5-2019 | 15:31: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[Startup]
+27-5-2019 | 15:32: Starting server...
+27-5-2019 | 15:32: Server is up and running!
+27-5-2019 | 15:32: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[CheckLogin]
+27-5-2019 | 15:32: Logging in JMuris...
+27-5-2019 | 15:32: Log in found for user JMuris
+27-5-2019 | 15:32: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveUser]
+27-5-2019 | 15:32: Attempting to retrieve user with id 4
+27-5-2019 | 15:32: Found user with id 4
+27-5-2019 | 15:32: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[AccountController]
+27-5-2019 | 15:32: JMuris validated.
+27-5-2019 | 15:32: JMuris navigated to Hub/Game
+27-5-2019 | 15:32: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[AccountController]
+27-5-2019 | 15:32: JMuris validated.
+27-5-2019 | 15:32: JMuris logged out.
+27-5-2019 | 15:32: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[CheckLogin]
+27-5-2019 | 15:32: Logging in AAppel...
+27-5-2019 | 15:32: Log in found for user AAppel
+27-5-2019 | 15:32: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveUser]
+27-5-2019 | 15:32: Attempting to retrieve user with id 5
+27-5-2019 | 15:32: Found user with id 5
+27-5-2019 | 15:32: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[AccountController]
+27-5-2019 | 15:32: AAppel validated.
+27-5-2019 | 15:32: AAppel navigated to Hub/Game
+27-5-2019 | 15:32: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[Room]
+27-5-2019 | 15:32: Creating room...
+27-5-2019 | 15:32: Room created with code LdC2iZ
+27-5-2019 | 15:32: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveAllStories]
+27-5-2019 | 15:32: Attempting to retrieve all stories.
+27-5-2019 | 15:32: Found 9 stories.
+27-5-2019 | 15:32: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[Game]
+27-5-2019 | 15:33: Planting correct answer...
+27-5-2019 | 15:33: Correct answer is 2 with story string '5:!|F:!|hgdjdhjgdh'.
+---[LOG MSG START]---
+[Startup]
+27-5-2019 | 15:34: Starting server...
+27-5-2019 | 15:34: Server is up and running!
+27-5-2019 | 15:34: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[CheckLogin]
+27-5-2019 | 15:34: Logging in JMuris...
+27-5-2019 | 15:34: Log in found for user JMuris
+27-5-2019 | 15:34: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveUser]
+27-5-2019 | 15:34: Attempting to retrieve user with id 4
+27-5-2019 | 15:34: Found user with id 4
+27-5-2019 | 15:34: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[AccountController]
+27-5-2019 | 15:34: JMuris validated.
+27-5-2019 | 15:34: JMuris navigated to Hub/Game
+27-5-2019 | 15:34: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[AccountController]
+27-5-2019 | 15:34: JMuris validated.
+27-5-2019 | 15:34: JMuris logged out.
+27-5-2019 | 15:34: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[CheckLogin]
+27-5-2019 | 15:34: Logging in AAppel...
+27-5-2019 | 15:34: Log in found for user AAppel
+27-5-2019 | 15:34: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveUser]
+27-5-2019 | 15:34: Attempting to retrieve user with id 5
+27-5-2019 | 15:34: Found user with id 5
+27-5-2019 | 15:34: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[AccountController]
+27-5-2019 | 15:34: AAppel validated.
+27-5-2019 | 15:34: AAppel navigated to Hub/Game
+27-5-2019 | 15:34: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[Room]
+27-5-2019 | 15:34: Creating room...
+27-5-2019 | 15:34: Room created with code 3NlY57
+27-5-2019 | 15:34: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveAllStories]
+27-5-2019 | 15:35: Attempting to retrieve all stories.
+27-5-2019 | 15:35: Found 9 stories.
+27-5-2019 | 15:35: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[Game]
+27-5-2019 | 15:35: Planting correct answer...
+27-5-2019 | 15:35: Correct answer is 3 with story string '6:!|Nog een verhaal:!|bla bla bla Ipsum Lorem'.

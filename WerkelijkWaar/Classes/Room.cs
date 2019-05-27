@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Timers;
@@ -8,6 +9,9 @@ namespace WerkelijkWaar.Classes
 {
     public class Room
     {
+        private Classes.Logger l = new Classes.Logger();
+        private Stopwatch sw = new Stopwatch();
+
         // Static
         public string RoomCode { get; set; }
         public string RoomOwnerId { get; set; }
@@ -43,7 +47,16 @@ namespace WerkelijkWaar.Classes
         /// </summary>
         public Room()
         {
+            sw.Restart();
+
+            l.WriteToLog("[Room]", "Creating room...", 0);
+            l.DebugToLog("[Room]", sw.ElapsedMilliseconds.ToString() + "ms. Creating room...", 0);
+
+            l.DebugToLog("[Room]", sw.ElapsedMilliseconds.ToString() + "ms. Generating code...", 1);
+
             GenerateCode();
+
+            l.DebugToLog("[Room]", sw.ElapsedMilliseconds.ToString() + "ms. Setting timers...", 1);
 
             // Idle timer
             timer.AutoReset = true;
@@ -53,6 +66,11 @@ namespace WerkelijkWaar.Classes
             // Game timer
             gameTimer.AutoReset = true;
             gameTimer.Elapsed += new ElapsedEventHandler(GameTimer);
+
+            l.WriteToLog("[Room]", "Room created with code " + RoomCode, 2);
+            l.DebugToLog("[Room]", sw.ElapsedMilliseconds.ToString() + "ms. Room created with code " + RoomCode, 2);
+
+            sw.Stop();
         }
 
         /// <summary>

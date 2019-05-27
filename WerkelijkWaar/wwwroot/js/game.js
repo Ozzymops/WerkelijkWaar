@@ -174,6 +174,23 @@ $(document).ready(function () {
         }
     }
 
+    connection.clientMethods["showLeaderboards"] = (roomCode, rank) => {
+        if ($roomContent.val() == roomCode) {
+            var ranking = JSON.parse(rank);
+
+            $('#leaderboard').empty();
+
+            for (var r in ranking) {
+                var tempString = ranking[r];
+                var tempArray = tempString.split(':|!');
+
+                $('#leaderboard').append('<li>'+ tempArray[0] + ". " + tempArray[1] + " - " + tempArray[2] + " volgers, " + tempArray[3] + ' euro</li>');
+            }
+
+            showLeaderboards();
+        }
+    }
+
     // Start countdown timer
     connection.clientMethods["startCountdownTimer"] = (roomCode, time) => {
         if ($roomContent.val() == roomCode) {
@@ -376,6 +393,15 @@ $(document).ready(function () {
         sendAnswer(); 
     });
 
+    $('#btn-activatePowerup').click(function () {
+        if (document.getElementById("powerupBar").style.display == "none") {
+            document.getElementById("powerupBar").style.display = "block";
+        }
+        else {
+            document.getElementById("powerupBar").style.display = "none";
+        }
+    });
+
     $('#btn-activatePowerup-1').click(function () {
         activatePowerup(1);
     });
@@ -508,6 +534,7 @@ $(document).ready(function () {
         document.getElementById("game-waiting").style.display = "none";
         document.getElementById("game-write").style.display = "none";
         document.getElementById("game-read").style.display = "block";
+        document.getElementById("game-leaderboard").style.display = "none";
     }
 
     function startWriting() {
@@ -517,6 +544,7 @@ $(document).ready(function () {
         document.getElementById("game-waiting").style.display = "none";
         document.getElementById("game-write").style.display = "block";
         document.getElementById("game-read").style.display = "none";
+        document.getElementById("game-leaderboard").style.display = "none";
 
         $('#btn-sendStory').prop('disabled', false);
     }
@@ -569,6 +597,12 @@ $(document).ready(function () {
         }
 
         connection.invoke("ActivatePowerup", $roomContent.val(), connection.connectionId, powerup);
+    }
+
+    function showLeaderboards() {
+        document.getElementById("game-write").style.display = "none";
+        document.getElementById("game-read").style.display = "none";
+        document.getElementById("game-leaderboard").style.display = "block";
     }
 
     //#endregion

@@ -86,7 +86,12 @@
                                 <p id="readStoryTitle"></p>
                                 <text id="readStoryText"></text>
                                 <input id="btn-shareStory" class="form-button-orange" type="button" value="Delen" />
-                                <input id="btn-activePowerup" class="form-button-orange" type="button" value="Hulplijn" />
+                                <input id="btn-activatePowerup" class="form-button-orange" type="button" value="Hulplijn" />
+                            </div>
+                            <div id="powerupBar" style="display: none;">
+                                <input id="btn-activatePowerup-1" class="form-button-orange" type="button" value="Twee antwoorden kiezen" />
+                                <input id="btn-activatePowerup-2" class="form-button-orange" type="button" value="Dubbele punten" />
+                                <input id="btn-activatePowerup-3" class="form-button-orange" type="button" value="50% wegstrepen" />
                             </div>
                         </div>
                     </div>
@@ -94,6 +99,9 @@
 
                     </div>
                     <span class="clockBar" style="display: none; margin-left: auto; margin-right: auto; width: 100vw; height: 50px; background-color: #f7c747; text-align: center;"></span>
+                </div>
+                <div id="game-leaderboard">
+                    <ul id="leaderboard"></ul>
                 </div>
             }
             @if (Model.User.RoleId == 1)
@@ -104,7 +112,7 @@
                 <audio id="snd-timer-2" src="~/content/audio/Timer2.wav"></audio>
                 <audio id="snd-timer-3" src="~/content/audio/Timer3.wav"></audio>
                 <audio id="snd-timesup" src="~/content/audio/TimesUp.wav"></audio>
-                <audio id="snd-correct" src="~/content/audio/Correct.wav" autoplay></audio>
+                <audio id="snd-correct" src="~/content/audio/Correct.wav"></audio>
                 <audio id="snd-wrong" src="~/content/audio/Wrong.wav"></audio>
                 <!-- !Eind geluiden! -->
                 <div id="game-prep">
@@ -160,6 +168,9 @@
                         <div id="storyList"></div>
                     </div>
                     <span class="clockBar" style="display: none; margin-left: auto; margin-right: auto; width: 100vw; height: 50px; background-color: #f7c747; text-align: center;"></span>
+                </div>
+                <div id="game-leaderboard">
+                    <ul id="leaderboard"></ul>
                 </div>
             }
             @if (Model.User.RoleId == 2)

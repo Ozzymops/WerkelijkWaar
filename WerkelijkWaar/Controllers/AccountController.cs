@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.IO;
 using System.Linq;
 using System.Text.RegularExpressions;
@@ -15,6 +16,8 @@ namespace WerkelijkWaar.Controllers
     {
         // Standaard, overal toepasselijk
         Classes.Logger l = new Classes.Logger();
+        Stopwatch sw = new Stopwatch();
+
         Classes.DatabaseQueries dq = new Classes.DatabaseQueries();
 
         /// <summary>
@@ -42,19 +45,24 @@ namespace WerkelijkWaar.Controllers
             {
                 Classes.User tempUser = Newtonsoft.Json.JsonConvert.DeserializeObject<Classes.User>(HttpContext.Session.GetString("User"));
 
+                l.WriteToLog("[AccountController]", tempUser.Username + " validated.", 0);
+
                 // Student hub
                 if (tempUser.RoleId == 0)
                 {
+                    l.WriteToLog("[AccountController]", tempUser.Username + " navigated to Hub/Game", 2);
                     return RedirectToAction("Game", "Hub");
                 }
                 // Teacher hub
                 else if (tempUser.RoleId == 1)
                 {
+                    l.WriteToLog("[AccountController]", tempUser.Username + " navigated to Hub/Game", 2);
                     return RedirectToAction("Game", "Hub");
                 }
                 // Admin hub
                 else if (tempUser.RoleId == 2)
                 {
+                    l.WriteToLog("[AccountController]", tempUser.Username + " navigated to Hub/Game", 2);
                     return RedirectToAction("Game", "Hub");
                 }
             }
@@ -76,21 +84,7 @@ namespace WerkelijkWaar.Controllers
                 Classes.User tempUser = dq.RetrieveUser(id);
                 HttpContext.Session.SetString("User", Newtonsoft.Json.JsonConvert.SerializeObject(tempUser));
 
-                // Student hub
-                if (tempUser.RoleId == 0)
-                {
-                    return RedirectToAction("Game", "Hub");
-                }
-                // Teacher hub
-                else if (tempUser.RoleId == 1)
-                {
-                    return RedirectToAction("Game", "Hub");
-                }
-                // Admin hub
-                else if (tempUser.RoleId == 2)
-                {
-                    return RedirectToAction("Index", "Home");
-                }
+                return RedirectToAction("Login", "Account");
             }
 
             return RedirectToAction("Index", "Home");
@@ -105,39 +99,29 @@ namespace WerkelijkWaar.Controllers
         [ValidateAntiForgeryToken]
         public IActionResult RegisterUser(RegisterModel rm)
         {
-            l.WriteToLog("[RegisterUser]", "Executing RegisterUser.", 0);
-
             // Check if already exists
             if (dq.CheckLogin(rm.Username, rm.Password) != 0)
             {
-                l.WriteToLog("[RegisterUser]", "Attempted combination is already in use.", 1);
                 return RedirectToAction("Index", "Home");
             }
 
             // Check inhoud
             if (rm != null)
             {
-                l.WriteToLog("[RegisterUser]", "rm != null", 2);
-
                 bool valid = false;
                 var reg = new Regex("[^a-zA-Z0-9_.]");
 
                 // Input validatie
                 if (!reg.IsMatch(rm.Name))
                 {
-                    l.WriteToLog("[RegisterUser]", "Name matched.", 2);
                     if (!reg.IsMatch(rm.Surname))
                     {
-                        l.WriteToLog("[RegisterUser]", "Surname matched.", 2);
                         if (rm.RoleId.GetType() == typeof(int))
                         {
-                            l.WriteToLog("[RegisterUser]", "RoleId matched.", 2);
                             if (rm.AgeCheck)
                             {
-                                l.WriteToLog("[RegisterUser]", "Age matched.", 2);
                                 if (rm.PrivacyCheck)
                                 {
-                                    l.WriteToLog("[RegisterUser]", "Privacy matched.", 2);
                                     // check code
                                     valid = true;
                                 }
@@ -147,8 +131,6 @@ namespace WerkelijkWaar.Controllers
 
                     if (valid)
                     {
-                        l.WriteToLog("[RegisterUser]", "valid = true", 1);
-
                         // register and login
                         bool status = (dq.RegisterUser(new Classes.User
                         {
@@ -167,15 +149,7 @@ namespace WerkelijkWaar.Controllers
                             return RedirectToAction("AccountView", "Account");
                         }                   
                     }
-                    else
-                    {
-                        l.WriteToLog("[RegisterUser]", "Aborting RegisterUser (valid = false).", 1);
-                    }
                 }           
-            }
-            else
-            {
-                l.WriteToLog("[RegisterUser]", "Aborting RegisterUser (rm = null).", 1);
             }
 
             return RedirectToAction("Register", "Account");
@@ -187,7 +161,13 @@ namespace WerkelijkWaar.Controllers
         /// <returns>View</returns>
         public IActionResult Logout()
         {
+            Classes.User tempUser = Newtonsoft.Json.JsonConvert.DeserializeObject<Classes.User>(HttpContext.Session.GetString("User"));
+            l.WriteToLog("[AccountController]", tempUser.Username + " validated.", 0);
+
             HttpContext.Session.Remove("User");
+
+            l.WriteToLog("[AccountController]", tempUser.Username + " logged out.", 2);
+
             return RedirectToAction("Index", "Home");
         }
 
@@ -205,9 +185,13 @@ namespace WerkelijkWaar.Controllers
             // check if logged in
             if (!String.IsNullOrEmpty(HttpContext.Session.GetString("User")))
             {
+                Classes.User tempUser = Newtonsoft.Json.JsonConvert.DeserializeObject<Classes.User>(HttpContext.Session.GetString("User"));
+                l.WriteToLog("[AccountController]", tempUser.Username + " validated.", 0);
+
                 AccountViewModel avm = new AccountViewModel();
                 avm.User = Newtonsoft.Json.JsonConvert.DeserializeObject<Classes.User>(HttpContext.Session.GetString("User"));
 
+                l.WriteToLog("[AccountController]", tempUser.Username + " navigated to Account/AccountView.", 2);
                 return View(avm);
             }
 
@@ -292,8 +276,6 @@ namespace WerkelijkWaar.Controllers
                 var fileType = Path.GetFileName(img.FileName);
 
                 // Haal de filename van de image op.
-                l.WriteToLog("[EditAvatar]", "", 0);
-
                 var fileName = "";
 
                 if (fileType.EndsWith(".jpg"))
@@ -309,8 +291,6 @@ namespace WerkelijkWaar.Controllers
                     return RedirectToAction("EditAccount", "Account", eam);
                 }
 
-                l.WriteToLog("[EditAvatar]", (string)fileName, 0);
-
                 // todo: check of image daadwerkelijk een image is.
 
                 // Haal de User ID op van de nieuwe gebruiker.
@@ -325,8 +305,6 @@ namespace WerkelijkWaar.Controllers
 
                 // Kopiëer de image naar het pad.
                 img.CopyTo(new FileStream(path, FileMode.Create));
-
-                l.WriteToLog("[EditAvatar]", path, 1);
 
                 // Sla het pad op in de database bij de nieuwe gebruiker.
                 bool result = dq.EditUserAvatar(eam.Id, fileName);
