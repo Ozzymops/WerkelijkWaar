@@ -425,8 +425,9 @@ namespace WerkelijkWaar
         /// <param name="ownerId"></param>
         /// <param name="reset"></param>
         /// <returns></returns>
-        public async Task GoToReadPhase(string roomCode, bool reset)
+        public async Task GoToReadPhase(string roomCode, bool start)
         {
+            l.WriteToLog("[Game]", "Putting '" + roomCode + "' into read phase.", 0);
             foreach (Classes.Room room in _gameManager.Rooms)
             {
                 if (room.RoomCode == roomCode)
@@ -434,14 +435,27 @@ namespace WerkelijkWaar
                     room.RoomState = Classes.Room.State.Reading;
 
                     room.CurrentGroup++;
+                    l.WriteToLog("[Game]", "Room '" + roomCode + "' has " + room.GroupCount + " groups.", 1);
+                    l.WriteToLog("[Game]", "Current group is '" + room.CurrentGroup + "' in room '" + roomCode + "'.", 1);
 
-                    if (room.CurrentGroup == (room.Groups.Count + 1))
+                    if (!start)
                     {
-                        await ShowLeaderboard(roomCode);
-                        // End game
+                        if (room.CurrentGroup <= room.GroupCount)
+                        {
+                            l.WriteToLog("[Game]", "Game " + room.CurrentGroup + " of room '" + roomCode + "' started.", 2);
+                            await InvokeClientMethodToAllAsync("goToReadPhase", roomCode);
+                            await StartGameTimer(roomCode, 900, room.RoomOwnerId);
+                            await RetrieveWrittenStories(roomCode, room.CurrentGroup);
+                        }
+                        else
+                        {
+                            await ShowLeaderboard(roomCode);
+                            // End game
+                        }
                     }
                     else
                     {
+                        l.WriteToLog("[Game]", "First game of room '" + roomCode + "' started.", 2);
                         await InvokeClientMethodToAllAsync("goToReadPhase", roomCode);
                         await StartGameTimer(roomCode, 900, room.RoomOwnerId);
                         await RetrieveWrittenStories(roomCode, room.CurrentGroup);
@@ -542,7 +556,12 @@ namespace WerkelijkWaar
 
                     if (usersThatWroteStories == room.Users.Count)
                     {
-                        await GoToReadPhase(roomCode, false);
+                        foreach (Classes.User user in room.Users)
+                        {
+                            user.WroteStory = false;
+                        }
+
+                        await GoToReadPhase(roomCode, true);
                     }
                 }
             }
@@ -662,6 +681,11 @@ namespace WerkelijkWaar
                     if (usersThatSelectedAnswers == room.Users.Count)
                     {
                         // Loop
+                        foreach (Classes.User user in room.Users)
+                        {
+                            user.ChoseStory = false;
+                        }
+
                         await GiveMoney(roomCode);
                     }
                 }

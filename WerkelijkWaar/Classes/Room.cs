@@ -26,7 +26,6 @@ namespace WerkelijkWaar.Classes
         public int CurrentStrikes;
         public enum State { Waiting, Writing, Reading, Finished, Dead };
         public List<Classes.User> Users { get; set; } = new List<Classes.User>();
-        public List<List<Classes.User>> Groups { get; set; } = new List<List<Classes.User>>();
         public List<Classes.Story> RetrievedStories { get; set; } = new List<Classes.Story>();
         public List<Classes.Story> WrittenStories { get; set; } = new List<Classes.Story>();
         public List<string> SentStories { get; set; } = new List<string>();
@@ -34,6 +33,7 @@ namespace WerkelijkWaar.Classes
         public int RemainingTime { get; set; }
         public int NumberOfReadyPlayers { get; set; }
         public int CurrentGroup = 0;
+        public int GroupCount = 0;
         public int CorrectAnswer = 0;
 
         // Configuration
@@ -211,6 +211,8 @@ namespace WerkelijkWaar.Classes
                         currentGroup++;
                         maxPlayersInGroup = MinPlayers;
                     }
+
+                    GroupCount = currentGroup;
                 }
 
                 // Assign stories to groups

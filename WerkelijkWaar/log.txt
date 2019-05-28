@@ -1,2196 +1,665 @@
 ---[LOG MSG START]---
 [Startup]
-27-5-2019 | 15:21: Starting server...
-27-5-2019 | 15:21: Server is up and running!
-27-5-2019 | 15:21: End.
+28-5-2019 | 13:11: Starting server...
+28-5-2019 | 13:11: Server is up and running!
+28-5-2019 | 13:11: End.
 ---[LOG MSG END]---
 
 ---[LOG MSG START]---
 [CheckLogin]
-27-5-2019 | 15:21: Logging in JMuris...
-27-5-2019 | 15:21: Log in found for user JMuris
-27-5-2019 | 15:21: End.
+28-5-2019 | 13:11: Logging in JMuris...
+28-5-2019 | 13:11: Log in found for user JMuris
+28-5-2019 | 13:11: End.
 ---[LOG MSG END]---
 
 ---[LOG MSG START]---
 [RetrieveUser]
-27-5-2019 | 15:21: Attempting to retrieve user with id 4
-27-5-2019 | 15:21: Found user with id 4
-27-5-2019 | 15:21: End.
+28-5-2019 | 13:11: Attempting to retrieve user with id 4
+28-5-2019 | 13:11: Found user with id 4
+28-5-2019 | 13:11: End.
 ---[LOG MSG END]---
 
 ---[LOG MSG START]---
 [AccountController]
-27-5-2019 | 15:21: JMuris validated.
-27-5-2019 | 15:21: JMuris navigated to Hub/Game
-27-5-2019 | 15:21: End.
+28-5-2019 | 13:11: JMuris validated.
+28-5-2019 | 13:11: JMuris navigated to Hub/Game
+28-5-2019 | 13:11: End.
 ---[LOG MSG END]---
 
 ---[LOG MSG START]---
 [AccountController]
-27-5-2019 | 15:21: JMuris validated.
-27-5-2019 | 15:21: JMuris logged out.
-27-5-2019 | 15:21: End.
+28-5-2019 | 13:11: JMuris validated.
+28-5-2019 | 13:11: JMuris logged out.
+28-5-2019 | 13:11: End.
 ---[LOG MSG END]---
 
 ---[LOG MSG START]---
 [CheckLogin]
-27-5-2019 | 15:21: Logging in AAppel...
-27-5-2019 | 15:21: Log in found for user AAppel
-27-5-2019 | 15:21: End.
+28-5-2019 | 13:11: Logging in AAppel...
+28-5-2019 | 13:11: Log in found for user AAppel
+28-5-2019 | 13:11: End.
 ---[LOG MSG END]---
 
 ---[LOG MSG START]---
 [RetrieveUser]
-27-5-2019 | 15:21: Attempting to retrieve user with id 5
-27-5-2019 | 15:21: Found user with id 5
-27-5-2019 | 15:21: End.
+28-5-2019 | 13:11: Attempting to retrieve user with id 5
+28-5-2019 | 13:11: Found user with id 5
+28-5-2019 | 13:11: End.
 ---[LOG MSG END]---
 
 ---[LOG MSG START]---
 [AccountController]
-27-5-2019 | 15:21: AAppel validated.
-27-5-2019 | 15:21: AAppel navigated to Hub/Game
-27-5-2019 | 15:21: End.
+28-5-2019 | 13:11: AAppel validated.
+28-5-2019 | 13:11: AAppel navigated to Hub/Game
+28-5-2019 | 13:11: End.
 ---[LOG MSG END]---
 
 ---[LOG MSG START]---
 [Room]
-27-5-2019 | 15:21: Creating room...
-27-5-2019 | 15:21: Room created with code 5L77lO
-27-5-2019 | 15:21: End.
+28-5-2019 | 13:11: Creating room...
+28-5-2019 | 13:11: Room created with code 739XIN
+28-5-2019 | 13:11: End.
 ---[LOG MSG END]---
 
 ---[LOG MSG START]---
 [RetrieveAllStories]
-27-5-2019 | 15:22: Attempting to retrieve all stories.
-27-5-2019 | 15:22: Found 9 stories.
-27-5-2019 | 15:22: End.
+28-5-2019 | 13:12: Attempting to retrieve all stories.
+28-5-2019 | 13:12: Found 3 stories.
+28-5-2019 | 13:12: End.
 ---[LOG MSG END]---
 
 ---[LOG MSG START]---
 [Game]
-27-5-2019 | 15:22: Planting correct answer...
-27-5-2019 | 15:22: Correct answer is 0 with story string '6:!|Nog een verhaal:!|bla bla bla Ipsum Lorem'.
----[LOG MSG START]---
-[CheckLogin]
-27-5-2019 | 15:22: Logging in ...
-27-5-2019 | 15:22: Something went wrong. Check debug.txt
-27-5-2019 | 15:22: End.
+28-5-2019 | 13:12: Putting '739XIN' into read phase.
+28-5-2019 | 13:12: Current group is '1' in room '739XIN'.
+28-5-2019 | 13:12: First game of room '739XIN' started.
+28-5-2019 | 13:12: End.
 ---[LOG MSG END]---
 
+---[LOG MSG START]---
+[Game]
+28-5-2019 | 13:12: Planting correct answer...
+28-5-2019 | 13:12: Correct answer is 1 with story string '1:!|Een root verhaal:!|Straight outta RSS feed'.
+---[LOG MSG START]---
+[Game]
+28-5-2019 | 13:12: Parsing AAppel | 027f379b-bec4-4fcb-b7dd-0eb9ff246076 score.
+28-5-2019 | 13:12: Player AAppel | 027f379b-bec4-4fcb-b7dd-0eb9ff246076 followers are now 5
+28-5-2019 | 13:12: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[Game]
+28-5-2019 | 13:12: Activate power-up by 3a285b2c-150e-4e00-bfce-b026f28c7938
+28-5-2019 | 13:12: User AAppel bought a power-up.
+28-5-2019 | 13:12: Chosen power-up is 'answers count for 200% value'.
+28-5-2019 | 13:12: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[Game]
+28-5-2019 | 13:12: Parsing AAppel | 3a285b2c-150e-4e00-bfce-b026f28c7938 score.
+28-5-2019 | 13:12: Player AAppel | 3a285b2c-150e-4e00-bfce-b026f28c7938 followers are now 10
+28-5-2019 | 13:12: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[Game]
+28-5-2019 | 13:12: Activate power-up by 47188a88-e437-4459-9d4a-4cf790fd5734
+28-5-2019 | 13:12: User AAppel bought a power-up.
+28-5-2019 | 13:12: Chosen power-up is 'choose two answers for 50% value'.
+28-5-2019 | 13:12: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[Game]
+28-5-2019 | 13:12: Parsing AAppel | 47188a88-e437-4459-9d4a-4cf790fd5734 score.
+---[LOG MSG START]---
+[Game]
+28-5-2019 | 13:12: Activate power-up by 8a62c06b-2eb6-45ac-8b5d-e9802845f590
+28-5-2019 | 13:12: User AAppel bought a power-up.
+28-5-2019 | 13:12: Chosen power-up is 'choose two answers for 50% value'.
+28-5-2019 | 13:12: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[Game]
+28-5-2019 | 13:12: Parsing AAppel | 8a62c06b-2eb6-45ac-8b5d-e9802845f590 score.
+---[LOG MSG START]---
+[Game]
+28-5-2019 | 13:12: Parsing AAppel | 29021fcc-cb24-4ffd-85a7-7bd466b2d14c score.
+28-5-2019 | 13:12: Player AAppel | 29021fcc-cb24-4ffd-85a7-7bd466b2d14c followers are now 0
+28-5-2019 | 13:12: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[Game]
+28-5-2019 | 13:12: Parsing AAppel | d54b8cdd-1f74-483a-91b8-0977d8278f4e score.
+28-5-2019 | 13:12: Player AAppel | d54b8cdd-1f74-483a-91b8-0977d8278f4e followers are now 0
+28-5-2019 | 13:12: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[Game]
+28-5-2019 | 13:12: Putting '739XIN' into read phase.
+28-5-2019 | 13:12: Current group is '2' in room '739XIN'.
 ---[LOG MSG START]---
 [Startup]
-27-5-2019 | 15:24: Starting server...
-27-5-2019 | 15:24: Server is up and running!
-27-5-2019 | 15:24: End.
+28-5-2019 | 13:13: Starting server...
+28-5-2019 | 13:13: Server is up and running!
+28-5-2019 | 13:13: End.
 ---[LOG MSG END]---
 
 ---[LOG MSG START]---
 [CheckLogin]
-27-5-2019 | 15:24: Logging in JMuris...
-27-5-2019 | 15:24: Log in found for user JMuris
-27-5-2019 | 15:24: End.
+28-5-2019 | 13:14: Logging in JMuris...
+28-5-2019 | 13:14: Log in found for user JMuris
+28-5-2019 | 13:14: End.
 ---[LOG MSG END]---
 
 ---[LOG MSG START]---
 [RetrieveUser]
-27-5-2019 | 15:24: Attempting to retrieve user with id 4
-27-5-2019 | 15:24: Found user with id 4
-27-5-2019 | 15:24: End.
+28-5-2019 | 13:14: Attempting to retrieve user with id 4
+28-5-2019 | 13:14: Found user with id 4
+28-5-2019 | 13:14: End.
 ---[LOG MSG END]---
 
 ---[LOG MSG START]---
 [AccountController]
-27-5-2019 | 15:24: JMuris validated.
-27-5-2019 | 15:24: JMuris navigated to Hub/Game
-27-5-2019 | 15:24: End.
+28-5-2019 | 13:14: JMuris validated.
+28-5-2019 | 13:14: JMuris navigated to Hub/Game
+28-5-2019 | 13:14: End.
 ---[LOG MSG END]---
 
 ---[LOG MSG START]---
 [AccountController]
-27-5-2019 | 15:24: JMuris validated.
-27-5-2019 | 15:24: JMuris logged out.
-27-5-2019 | 15:24: End.
+28-5-2019 | 13:14: JMuris validated.
+28-5-2019 | 13:14: JMuris logged out.
+28-5-2019 | 13:14: End.
 ---[LOG MSG END]---
 
 ---[LOG MSG START]---
 [CheckLogin]
-27-5-2019 | 15:24: Logging in AAppel...
-27-5-2019 | 15:24: Log in found for user AAppel
-27-5-2019 | 15:24: End.
+28-5-2019 | 13:14: Logging in AAppel...
+28-5-2019 | 13:14: Log in found for user AAppel
+28-5-2019 | 13:14: End.
 ---[LOG MSG END]---
 
 ---[LOG MSG START]---
 [RetrieveUser]
-27-5-2019 | 15:24: Attempting to retrieve user with id 5
-27-5-2019 | 15:24: Found user with id 5
-27-5-2019 | 15:24: End.
+28-5-2019 | 13:14: Attempting to retrieve user with id 5
+28-5-2019 | 13:14: Found user with id 5
+28-5-2019 | 13:14: End.
 ---[LOG MSG END]---
 
 ---[LOG MSG START]---
 [AccountController]
-27-5-2019 | 15:24: AAppel validated.
-27-5-2019 | 15:24: AAppel navigated to Hub/Game
-27-5-2019 | 15:24: End.
+28-5-2019 | 13:14: AAppel validated.
+28-5-2019 | 13:14: AAppel navigated to Hub/Game
+28-5-2019 | 13:14: End.
 ---[LOG MSG END]---
 
 ---[LOG MSG START]---
 [Room]
-27-5-2019 | 15:24: Creating room...
-27-5-2019 | 15:24: Room created with code 2vCu5s
-27-5-2019 | 15:24: End.
+28-5-2019 | 13:14: Creating room...
+28-5-2019 | 13:14: Room created with code 89yh6m
+28-5-2019 | 13:14: End.
 ---[LOG MSG END]---
 
 ---[LOG MSG START]---
 [RetrieveAllStories]
-27-5-2019 | 15:24: Attempting to retrieve all stories.
-27-5-2019 | 15:24: Found 9 stories.
-27-5-2019 | 15:24: End.
+28-5-2019 | 13:14: Attempting to retrieve all stories.
+28-5-2019 | 13:14: Found 3 stories.
+28-5-2019 | 13:14: End.
 ---[LOG MSG END]---
 
 ---[LOG MSG START]---
 [Game]
-27-5-2019 | 15:25: Planting correct answer...
-27-5-2019 | 15:25: Correct answer is 1 with story string '6:!|Nog een verhaal:!|bla bla bla Ipsum Lorem'.
----[LOG MSG START]---
-[CheckLogin]
-27-5-2019 | 15:25: Logging in ...
-27-5-2019 | 15:25: Something went wrong. Check debug.txt
-27-5-2019 | 15:25: End.
+28-5-2019 | 13:14: Putting '89yh6m' into read phase.
+28-5-2019 | 13:14: Room '89yh6m' has 0 groups.
+28-5-2019 | 13:14: Current group is '1' in room '89yh6m'.
+28-5-2019 | 13:14: First game of room '89yh6m' started.
+28-5-2019 | 13:14: End.
 ---[LOG MSG END]---
 
 ---[LOG MSG START]---
-[CheckLogin]
-27-5-2019 | 15:25: Logging in ...
-27-5-2019 | 15:25: Something went wrong. Check debug.txt
-27-5-2019 | 15:25: End.
+[Game]
+28-5-2019 | 13:14: Planting correct answer...
+28-5-2019 | 13:14: Correct answer is 2 with story string '5:!|Een verhaal:!|Lorem Ipsum bla bla bla'.
+---[LOG MSG START]---
+[Game]
+28-5-2019 | 13:14: Activate power-up by 19a14f4e-d337-45c1-8e75-22303260a930
+28-5-2019 | 13:14: User AAppel bought a power-up.
+28-5-2019 | 13:14: Chosen power-up is 'answers count for 200% value'.
+28-5-2019 | 13:14: End.
 ---[LOG MSG END]---
 
+---[LOG MSG START]---
+[Game]
+28-5-2019 | 13:14: Parsing AAppel | 19a14f4e-d337-45c1-8e75-22303260a930 score.
+28-5-2019 | 13:14: Player AAppel | 19a14f4e-d337-45c1-8e75-22303260a930 followers are now 10
+28-5-2019 | 13:14: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[Game]
+28-5-2019 | 13:14: Parsing AAppel | 46bc200e-28ac-4310-b2f1-9350c10a0c43 score.
+28-5-2019 | 13:14: Player AAppel | 46bc200e-28ac-4310-b2f1-9350c10a0c43 followers are now 0
+28-5-2019 | 13:14: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[Game]
+28-5-2019 | 13:14: Parsing AAppel | eab89fa9-fcd4-48b7-82ed-7747b440fe7c score.
+28-5-2019 | 13:14: Player AAppel | eab89fa9-fcd4-48b7-82ed-7747b440fe7c followers are now 0
+28-5-2019 | 13:14: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[Game]
+28-5-2019 | 13:14: Parsing AAppel | 9c720c6a-bbba-4528-8de5-2e19385bdb7f score.
+28-5-2019 | 13:14: Player AAppel | 9c720c6a-bbba-4528-8de5-2e19385bdb7f followers are now 5
+28-5-2019 | 13:14: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[Game]
+28-5-2019 | 13:14: Parsing AAppel | aa54c3ac-f033-4118-96e5-35401ae485f2 score.
+28-5-2019 | 13:14: Player AAppel | aa54c3ac-f033-4118-96e5-35401ae485f2 followers are now 0
+28-5-2019 | 13:14: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[Game]
+28-5-2019 | 13:14: Parsing AAppel | a5c52309-ac3d-4214-84cf-af1f933d47e2 score.
+28-5-2019 | 13:14: Player AAppel | a5c52309-ac3d-4214-84cf-af1f933d47e2 followers are now 5
+28-5-2019 | 13:14: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[Game]
+28-5-2019 | 13:15: Putting '89yh6m' into read phase.
+28-5-2019 | 13:15: Room '89yh6m' has 0 groups.
+28-5-2019 | 13:15: Current group is '2' in room '89yh6m'.
 ---[LOG MSG START]---
 [Startup]
-27-5-2019 | 15:27: Starting server...
-27-5-2019 | 15:27: Server is up and running!
-27-5-2019 | 15:27: End.
+28-5-2019 | 13:18: Starting server...
+28-5-2019 | 13:18: Server is up and running!
+28-5-2019 | 13:18: End.
 ---[LOG MSG END]---
 
 ---[LOG MSG START]---
 [CheckLogin]
-27-5-2019 | 15:27: Logging in JMuris...
-27-5-2019 | 15:27: Log in found for user JMuris
-27-5-2019 | 15:27: End.
+28-5-2019 | 13:18: Logging in JMuris...
+28-5-2019 | 13:18: Log in found for user JMuris
+28-5-2019 | 13:18: End.
 ---[LOG MSG END]---
 
 ---[LOG MSG START]---
 [RetrieveUser]
-27-5-2019 | 15:27: Attempting to retrieve user with id 4
-27-5-2019 | 15:27: Found user with id 4
-27-5-2019 | 15:27: End.
+28-5-2019 | 13:18: Attempting to retrieve user with id 4
+28-5-2019 | 13:18: Found user with id 4
+28-5-2019 | 13:18: End.
 ---[LOG MSG END]---
 
 ---[LOG MSG START]---
 [AccountController]
-27-5-2019 | 15:27: JMuris validated.
-27-5-2019 | 15:27: JMuris navigated to Hub/Game
-27-5-2019 | 15:27: End.
+28-5-2019 | 13:18: JMuris validated.
+28-5-2019 | 13:18: JMuris navigated to Hub/Game
+28-5-2019 | 13:18: End.
 ---[LOG MSG END]---
 
 ---[LOG MSG START]---
 [AccountController]
-27-5-2019 | 15:27: JMuris validated.
-27-5-2019 | 15:27: JMuris logged out.
-27-5-2019 | 15:27: End.
+28-5-2019 | 13:18: JMuris validated.
+28-5-2019 | 13:18: JMuris logged out.
+28-5-2019 | 13:18: End.
 ---[LOG MSG END]---
 
 ---[LOG MSG START]---
 [CheckLogin]
-27-5-2019 | 15:27: Logging in AAppel...
-27-5-2019 | 15:27: Log in found for user AAppel
-27-5-2019 | 15:27: End.
+28-5-2019 | 13:19: Logging in AAppel...
+28-5-2019 | 13:19: Log in found for user AAppel
+28-5-2019 | 13:19: End.
 ---[LOG MSG END]---
 
 ---[LOG MSG START]---
 [RetrieveUser]
-27-5-2019 | 15:27: Attempting to retrieve user with id 5
-27-5-2019 | 15:27: Found user with id 5
-27-5-2019 | 15:27: End.
+28-5-2019 | 13:19: Attempting to retrieve user with id 5
+28-5-2019 | 13:19: Found user with id 5
+28-5-2019 | 13:19: End.
 ---[LOG MSG END]---
 
 ---[LOG MSG START]---
 [AccountController]
-27-5-2019 | 15:27: AAppel validated.
-27-5-2019 | 15:27: AAppel navigated to Hub/Game
-27-5-2019 | 15:27: End.
+28-5-2019 | 13:19: AAppel validated.
+28-5-2019 | 13:19: AAppel navigated to Hub/Game
+28-5-2019 | 13:19: End.
 ---[LOG MSG END]---
 
 ---[LOG MSG START]---
 [Room]
-27-5-2019 | 15:27: Creating room...
-27-5-2019 | 15:27: Room created with code 92a859
-27-5-2019 | 15:27: End.
+28-5-2019 | 13:19: Creating room...
+28-5-2019 | 13:19: Room created with code w11w24
+28-5-2019 | 13:19: End.
 ---[LOG MSG END]---
 
 ---[LOG MSG START]---
 [RetrieveAllStories]
-27-5-2019 | 15:28: Attempting to retrieve all stories.
-27-5-2019 | 15:28: Found 9 stories.
-27-5-2019 | 15:28: End.
+28-5-2019 | 13:19: Attempting to retrieve all stories.
+28-5-2019 | 13:19: Found 3 stories.
+28-5-2019 | 13:19: End.
 ---[LOG MSG END]---
 
 ---[LOG MSG START]---
 [Game]
-27-5-2019 | 15:28: Planting correct answer...
-27-5-2019 | 15:28: Correct answer is 0 with story string '5:!|A:!|aweaewaesa'.
+28-5-2019 | 13:19: Putting 'w11w24' into read phase.
+28-5-2019 | 13:19: Room 'w11w24' has 3 groups.
+28-5-2019 | 13:19: Current group is '1' in room 'w11w24'.
+28-5-2019 | 13:19: First game of room 'w11w24' started.
+28-5-2019 | 13:19: End.
+---[LOG MSG END]---
+
 ---[LOG MSG START]---
-[CheckLogin]
-27-5-2019 | 15:28: Logging in ...
-27-5-2019 | 15:28: Something went wrong. Check debug.txt
-27-5-2019 | 15:28: End.
+[Game]
+28-5-2019 | 13:19: Planting correct answer...
+28-5-2019 | 13:19: Correct answer is 1 with story string '1:!|Een root verhaal:!|Straight outta RSS feed'.
+---[LOG MSG START]---
+[Game]
+28-5-2019 | 13:19: Parsing AAppel | 1b8c22c7-b0d5-43ec-99d0-4d5ce6f22ee0 score.
+28-5-2019 | 13:19: Player AAppel | 1b8c22c7-b0d5-43ec-99d0-4d5ce6f22ee0 followers are now 5
+28-5-2019 | 13:19: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[Game]
+28-5-2019 | 13:19: Activate power-up by 14d85699-8960-47c6-be1e-3165de503370
+28-5-2019 | 13:19: User AAppel bought a power-up.
+28-5-2019 | 13:19: Chosen power-up is 'answers count for 200% value'.
+28-5-2019 | 13:19: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[Game]
+28-5-2019 | 13:19: Parsing AAppel | 14d85699-8960-47c6-be1e-3165de503370 score.
+28-5-2019 | 13:19: Player AAppel | 14d85699-8960-47c6-be1e-3165de503370 followers are now 10
+28-5-2019 | 13:19: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[Game]
+28-5-2019 | 13:19: Parsing AAppel | 04fbc545-86c4-4b7b-8c9b-f293949fc330 score.
+28-5-2019 | 13:19: Player AAppel | 04fbc545-86c4-4b7b-8c9b-f293949fc330 followers are now 0
+28-5-2019 | 13:19: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[Game]
+28-5-2019 | 13:19: Parsing AAppel | ced9116e-a01a-4d25-a848-17269abd690b score.
+28-5-2019 | 13:19: Player AAppel | ced9116e-a01a-4d25-a848-17269abd690b followers are now 0
+28-5-2019 | 13:19: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[Game]
+28-5-2019 | 13:19: Parsing AAppel | eb94fd6e-0eb0-4297-b503-3d215d37f1e1 score.
+28-5-2019 | 13:19: Player AAppel | eb94fd6e-0eb0-4297-b503-3d215d37f1e1 followers are now 5
+28-5-2019 | 13:19: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[Game]
+28-5-2019 | 13:19: Parsing AAppel | 3de6179a-90f0-49ee-af3d-247cbc122f39 score.
+28-5-2019 | 13:19: Player AAppel | 3de6179a-90f0-49ee-af3d-247cbc122f39 followers are now 5
+28-5-2019 | 13:19: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[Game]
+28-5-2019 | 13:19: Putting 'w11w24' into read phase.
+28-5-2019 | 13:19: Room 'w11w24' has 3 groups.
+28-5-2019 | 13:19: Current group is '2' in room 'w11w24'.
+28-5-2019 | 13:19: Game 2 of room 'w11w24' started.
+28-5-2019 | 13:19: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[Game]
+28-5-2019 | 13:19: Planting correct answer...
+28-5-2019 | 13:19: Correct answer is 2 with story string '6:!|Nog een verhaal:!|bla bla bla Ipsum Lorem'.
+---[LOG MSG START]---
+[Game]
+28-5-2019 | 13:19: Activate power-up by 1b8c22c7-b0d5-43ec-99d0-4d5ce6f22ee0
+28-5-2019 | 13:19: User AAppel bought a power-up.
+28-5-2019 | 13:19: Chosen power-up is 'answers count for 200% value'.
+28-5-2019 | 13:19: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[Game]
+28-5-2019 | 13:19: Parsing AAppel | 1b8c22c7-b0d5-43ec-99d0-4d5ce6f22ee0 score.
+---[LOG MSG START]---
+[Game]
+28-5-2019 | 13:19: Parsing AAppel | 14d85699-8960-47c6-be1e-3165de503370 score.
+---[LOG MSG START]---
+[Game]
+28-5-2019 | 13:19: Parsing AAppel | 04fbc545-86c4-4b7b-8c9b-f293949fc330 score.
+28-5-2019 | 13:19: Player AAppel | 04fbc545-86c4-4b7b-8c9b-f293949fc330 followers are now 0
+28-5-2019 | 13:19: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[Game]
+28-5-2019 | 13:20: Putting 'w11w24' into read phase.
+28-5-2019 | 13:20: Room 'w11w24' has 3 groups.
+28-5-2019 | 13:20: Current group is '3' in room 'w11w24'.
+28-5-2019 | 13:20: Game 3 of room 'w11w24' started.
+28-5-2019 | 13:20: End.
 ---[LOG MSG END]---
 
 ---[LOG MSG START]---
 [Startup]
-27-5-2019 | 15:29: Starting server...
-27-5-2019 | 15:29: Server is up and running!
-27-5-2019 | 15:29: End.
+28-5-2019 | 13:22: Starting server...
+28-5-2019 | 13:22: Server is up and running!
+28-5-2019 | 13:22: End.
 ---[LOG MSG END]---
 
 ---[LOG MSG START]---
 [CheckLogin]
-27-5-2019 | 15:29: Logging in JMuris...
-27-5-2019 | 15:29: Log in found for user JMuris
-27-5-2019 | 15:29: End.
+28-5-2019 | 13:22: Logging in JMuris...
+28-5-2019 | 13:22: Log in found for user JMuris
+28-5-2019 | 13:22: End.
 ---[LOG MSG END]---
 
 ---[LOG MSG START]---
 [RetrieveUser]
-27-5-2019 | 15:29: Attempting to retrieve user with id 4
-27-5-2019 | 15:29: Found user with id 4
-27-5-2019 | 15:29: End.
+28-5-2019 | 13:22: Attempting to retrieve user with id 4
+28-5-2019 | 13:22: Found user with id 4
+28-5-2019 | 13:22: End.
 ---[LOG MSG END]---
 
 ---[LOG MSG START]---
 [AccountController]
-27-5-2019 | 15:29: JMuris validated.
-27-5-2019 | 15:29: JMuris navigated to Hub/Game
-27-5-2019 | 15:29: End.
+28-5-2019 | 13:22: JMuris validated.
+28-5-2019 | 13:22: JMuris navigated to Hub/Game
+28-5-2019 | 13:22: End.
 ---[LOG MSG END]---
 
 ---[LOG MSG START]---
 [AccountController]
-27-5-2019 | 15:29: JMuris validated.
-27-5-2019 | 15:29: JMuris logged out.
-27-5-2019 | 15:29: End.
+28-5-2019 | 13:22: JMuris validated.
+28-5-2019 | 13:22: JMuris logged out.
+28-5-2019 | 13:22: End.
 ---[LOG MSG END]---
 
 ---[LOG MSG START]---
 [CheckLogin]
-27-5-2019 | 15:29: Logging in AAppel...
-27-5-2019 | 15:29: Log in found for user AAppel
-27-5-2019 | 15:29: End.
+28-5-2019 | 13:22: Logging in AAppel...
+28-5-2019 | 13:22: Log in found for user AAppel
+28-5-2019 | 13:22: End.
 ---[LOG MSG END]---
 
 ---[LOG MSG START]---
 [RetrieveUser]
-27-5-2019 | 15:29: Attempting to retrieve user with id 5
-27-5-2019 | 15:29: Found user with id 5
-27-5-2019 | 15:29: End.
+28-5-2019 | 13:22: Attempting to retrieve user with id 5
+28-5-2019 | 13:22: Found user with id 5
+28-5-2019 | 13:22: End.
 ---[LOG MSG END]---
 
 ---[LOG MSG START]---
 [AccountController]
-27-5-2019 | 15:29: AAppel validated.
-27-5-2019 | 15:29: AAppel navigated to Hub/Game
-27-5-2019 | 15:29: End.
+28-5-2019 | 13:22: AAppel validated.
+28-5-2019 | 13:22: AAppel navigated to Hub/Game
+28-5-2019 | 13:22: End.
 ---[LOG MSG END]---
 
 ---[LOG MSG START]---
 [Room]
-27-5-2019 | 15:29: Creating room...
-27-5-2019 | 15:29: Room created with code l71RYY
-27-5-2019 | 15:29: End.
+28-5-2019 | 13:22: Creating room...
+28-5-2019 | 13:22: Room created with code 892V0L
+28-5-2019 | 13:22: End.
 ---[LOG MSG END]---
 
 ---[LOG MSG START]---
 [RetrieveAllStories]
-27-5-2019 | 15:30: Attempting to retrieve all stories.
-27-5-2019 | 15:30: Found 9 stories.
-27-5-2019 | 15:30: End.
+28-5-2019 | 13:22: Attempting to retrieve all stories.
+28-5-2019 | 13:22: Found 3 stories.
+28-5-2019 | 13:22: End.
 ---[LOG MSG END]---
 
 ---[LOG MSG START]---
 [Game]
-27-5-2019 | 15:30: Planting correct answer...
-27-5-2019 | 15:30: Correct answer is 3 with story string '5:!|Een verhaal:!|Lorem Ipsum bla bla bla'.
----[LOG MSG START]---
-[CheckLogin]
-27-5-2019 | 15:30: Logging in ...
-27-5-2019 | 15:30: Something went wrong. Check debug.txt
-27-5-2019 | 15:30: End.
----[LOG MSG END]---
-
----[LOG MSG START]---
-[Startup]
-27-5-2019 | 15:31: Starting server...
-27-5-2019 | 15:31: Server is up and running!
-27-5-2019 | 15:31: End.
----[LOG MSG END]---
-
----[LOG MSG START]---
-[Startup]
-27-5-2019 | 15:32: Starting server...
-27-5-2019 | 15:32: Server is up and running!
-27-5-2019 | 15:32: End.
----[LOG MSG END]---
-
----[LOG MSG START]---
-[CheckLogin]
-27-5-2019 | 15:32: Logging in JMuris...
-27-5-2019 | 15:32: Log in found for user JMuris
-27-5-2019 | 15:32: End.
----[LOG MSG END]---
-
----[LOG MSG START]---
-[RetrieveUser]
-27-5-2019 | 15:32: Attempting to retrieve user with id 4
-27-5-2019 | 15:32: Found user with id 4
-27-5-2019 | 15:32: End.
----[LOG MSG END]---
-
----[LOG MSG START]---
-[AccountController]
-27-5-2019 | 15:32: JMuris validated.
-27-5-2019 | 15:32: JMuris navigated to Hub/Game
-27-5-2019 | 15:32: End.
----[LOG MSG END]---
-
----[LOG MSG START]---
-[AccountController]
-27-5-2019 | 15:32: JMuris validated.
-27-5-2019 | 15:32: JMuris logged out.
-27-5-2019 | 15:32: End.
----[LOG MSG END]---
-
----[LOG MSG START]---
-[CheckLogin]
-27-5-2019 | 15:32: Logging in AAppel...
-27-5-2019 | 15:32: Log in found for user AAppel
-27-5-2019 | 15:32: End.
----[LOG MSG END]---
-
----[LOG MSG START]---
-[RetrieveUser]
-27-5-2019 | 15:32: Attempting to retrieve user with id 5
-27-5-2019 | 15:32: Found user with id 5
-27-5-2019 | 15:32: End.
----[LOG MSG END]---
-
----[LOG MSG START]---
-[AccountController]
-27-5-2019 | 15:32: AAppel validated.
-27-5-2019 | 15:32: AAppel navigated to Hub/Game
-27-5-2019 | 15:32: End.
----[LOG MSG END]---
-
----[LOG MSG START]---
-[Room]
-27-5-2019 | 15:32: Creating room...
-27-5-2019 | 15:32: Room created with code LdC2iZ
-27-5-2019 | 15:32: End.
----[LOG MSG END]---
-
----[LOG MSG START]---
-[RetrieveAllStories]
-27-5-2019 | 15:32: Attempting to retrieve all stories.
-27-5-2019 | 15:32: Found 9 stories.
-27-5-2019 | 15:32: End.
----[LOG MSG END]---
-
----[LOG MSG START]---
-[Game]
-27-5-2019 | 15:33: Planting correct answer...
-27-5-2019 | 15:33: Correct answer is 2 with story string '5:!|F:!|hgdjdhjgdh'.
----[LOG MSG START]---
-[Startup]
-27-5-2019 | 15:34: Starting server...
-27-5-2019 | 15:34: Server is up and running!
-27-5-2019 | 15:34: End.
----[LOG MSG END]---
-
----[LOG MSG START]---
-[CheckLogin]
-27-5-2019 | 15:34: Logging in JMuris...
-27-5-2019 | 15:34: Log in found for user JMuris
-27-5-2019 | 15:34: End.
----[LOG MSG END]---
-
----[LOG MSG START]---
-[RetrieveUser]
-27-5-2019 | 15:34: Attempting to retrieve user with id 4
-27-5-2019 | 15:34: Found user with id 4
-27-5-2019 | 15:34: End.
----[LOG MSG END]---
-
----[LOG MSG START]---
-[AccountController]
-27-5-2019 | 15:34: JMuris validated.
-27-5-2019 | 15:34: JMuris navigated to Hub/Game
-27-5-2019 | 15:34: End.
----[LOG MSG END]---
-
----[LOG MSG START]---
-[AccountController]
-27-5-2019 | 15:34: JMuris validated.
-27-5-2019 | 15:34: JMuris logged out.
-27-5-2019 | 15:34: End.
----[LOG MSG END]---
-
----[LOG MSG START]---
-[CheckLogin]
-27-5-2019 | 15:34: Logging in AAppel...
-27-5-2019 | 15:34: Log in found for user AAppel
-27-5-2019 | 15:34: End.
----[LOG MSG END]---
-
----[LOG MSG START]---
-[RetrieveUser]
-27-5-2019 | 15:34: Attempting to retrieve user with id 5
-27-5-2019 | 15:34: Found user with id 5
-27-5-2019 | 15:34: End.
----[LOG MSG END]---
-
----[LOG MSG START]---
-[AccountController]
-27-5-2019 | 15:34: AAppel validated.
-27-5-2019 | 15:34: AAppel navigated to Hub/Game
-27-5-2019 | 15:34: End.
----[LOG MSG END]---
-
----[LOG MSG START]---
-[Room]
-27-5-2019 | 15:34: Creating room...
-27-5-2019 | 15:34: Room created with code 3NlY57
-27-5-2019 | 15:34: End.
----[LOG MSG END]---
-
----[LOG MSG START]---
-[RetrieveAllStories]
-27-5-2019 | 15:35: Attempting to retrieve all stories.
-27-5-2019 | 15:35: Found 9 stories.
-27-5-2019 | 15:35: End.
----[LOG MSG END]---
-
----[LOG MSG START]---
-[Game]
-27-5-2019 | 15:35: Planting correct answer...
-27-5-2019 | 15:35: Correct answer is 3 with story string '6:!|Nog een verhaal:!|bla bla bla Ipsum Lorem'.
----[LOG MSG START]---
-[Startup]
-28-5-2019 | 09:09: Starting server...
-28-5-2019 | 09:09: Server is up and running!
-28-5-2019 | 09:09: End.
----[LOG MSG END]---
-
----[LOG MSG START]---
-[CheckLogin]
-28-5-2019 | 09:09: Logging in JMuris...
-28-5-2019 | 09:09: Something went wrong. Check debug.txt
-28-5-2019 | 09:09: End.
----[LOG MSG END]---
-
----[LOG MSG START]---
-[CheckLogin]
-28-5-2019 | 09:11: Logging in JMuris...
-28-5-2019 | 09:11: Log in found for user JMuris
-28-5-2019 | 09:11: End.
----[LOG MSG END]---
-
----[LOG MSG START]---
-[RetrieveUser]
-28-5-2019 | 09:11: Attempting to retrieve user with id 4
-28-5-2019 | 09:11: Found user with id 4
-28-5-2019 | 09:11: End.
----[LOG MSG END]---
-
----[LOG MSG START]---
-[AccountController]
-28-5-2019 | 09:11: JMuris validated.
-28-5-2019 | 09:11: JMuris navigated to Hub/Game
-28-5-2019 | 09:11: End.
----[LOG MSG END]---
-
----[LOG MSG START]---
-[Startup]
-28-5-2019 | 09:16: Starting server...
-28-5-2019 | 09:16: Server is up and running!
-28-5-2019 | 09:16: End.
----[LOG MSG END]---
-
----[LOG MSG START]---
-[CheckLogin]
-28-5-2019 | 09:16: Logging in JMuris...
-28-5-2019 | 09:16: Log in found for user JMuris
-28-5-2019 | 09:16: End.
----[LOG MSG END]---
-
----[LOG MSG START]---
-[RetrieveUser]
-28-5-2019 | 09:16: Attempting to retrieve user with id 4
-28-5-2019 | 09:16: Found user with id 4
-28-5-2019 | 09:16: End.
----[LOG MSG END]---
-
----[LOG MSG START]---
-[AccountController]
-28-5-2019 | 09:16: JMuris validated.
-28-5-2019 | 09:16: JMuris navigated to Hub/Game
-28-5-2019 | 09:16: End.
----[LOG MSG END]---
-
----[LOG MSG START]---
-[AccountController]
-28-5-2019 | 09:16: JMuris validated.
-28-5-2019 | 09:16: JMuris logged out.
-28-5-2019 | 09:16: End.
----[LOG MSG END]---
-
----[LOG MSG START]---
-[CheckLogin]
-28-5-2019 | 09:16: Logging in AAppel...
-28-5-2019 | 09:16: Log in found for user AAppel
-28-5-2019 | 09:16: End.
----[LOG MSG END]---
-
----[LOG MSG START]---
-[RetrieveUser]
-28-5-2019 | 09:16: Attempting to retrieve user with id 5
-28-5-2019 | 09:16: Found user with id 5
-28-5-2019 | 09:16: End.
----[LOG MSG END]---
-
----[LOG MSG START]---
-[AccountController]
-28-5-2019 | 09:16: AAppel validated.
-28-5-2019 | 09:16: AAppel navigated to Hub/Game
-28-5-2019 | 09:16: End.
----[LOG MSG END]---
-
----[LOG MSG START]---
-[Room]
-28-5-2019 | 09:16: Creating room...
-28-5-2019 | 09:16: Room created with code NUP836
-28-5-2019 | 09:16: End.
----[LOG MSG END]---
-
----[LOG MSG START]---
-[RetrieveAllStories]
-28-5-2019 | 09:17: Attempting to retrieve all stories.
-28-5-2019 | 09:17: Found 3 stories.
-28-5-2019 | 09:17: End.
----[LOG MSG END]---
-
----[LOG MSG START]---
-[Game]
-28-5-2019 | 09:17: Planting correct answer...
-28-5-2019 | 09:17: Correct answer is 3 with story string '6:!|Nog een verhaal:!|bla bla bla Ipsum Lorem'.
----[LOG MSG START]---
-[Startup]
-28-5-2019 | 10:04: Starting server...
-28-5-2019 | 10:04: Server is up and running!
-28-5-2019 | 10:04: End.
----[LOG MSG END]---
-
----[LOG MSG START]---
-[CheckLogin]
-28-5-2019 | 10:04: Logging in JMuris...
-28-5-2019 | 10:04: Log in found for user JMuris
-28-5-2019 | 10:04: End.
----[LOG MSG END]---
-
----[LOG MSG START]---
-[RetrieveUser]
-28-5-2019 | 10:04: Attempting to retrieve user with id 4
-28-5-2019 | 10:04: Found user with id 4
-28-5-2019 | 10:04: End.
----[LOG MSG END]---
-
----[LOG MSG START]---
-[AccountController]
-28-5-2019 | 10:04: JMuris validated.
-28-5-2019 | 10:04: JMuris navigated to Hub/Game
-28-5-2019 | 10:04: End.
----[LOG MSG END]---
-
----[LOG MSG START]---
-[AccountController]
-28-5-2019 | 10:04: JMuris validated.
-28-5-2019 | 10:04: JMuris logged out.
-28-5-2019 | 10:04: End.
----[LOG MSG END]---
-
----[LOG MSG START]---
-[CheckLogin]
-28-5-2019 | 10:04: Logging in AAppel...
-28-5-2019 | 10:04: Log in found for user AAppel
-28-5-2019 | 10:04: End.
----[LOG MSG END]---
-
----[LOG MSG START]---
-[RetrieveUser]
-28-5-2019 | 10:04: Attempting to retrieve user with id 5
-28-5-2019 | 10:04: Found user with id 5
-28-5-2019 | 10:04: End.
----[LOG MSG END]---
-
----[LOG MSG START]---
-[AccountController]
-28-5-2019 | 10:04: AAppel validated.
-28-5-2019 | 10:04: AAppel navigated to Hub/Game
-28-5-2019 | 10:04: End.
----[LOG MSG END]---
-
----[LOG MSG START]---
-[Room]
-28-5-2019 | 10:04: Creating room...
-28-5-2019 | 10:04: Room created with code gi8a80
-28-5-2019 | 10:04: End.
----[LOG MSG END]---
-
----[LOG MSG START]---
-[RetrieveAllStories]
-28-5-2019 | 10:04: Attempting to retrieve all stories.
-28-5-2019 | 10:04: Found 3 stories.
-28-5-2019 | 10:04: End.
----[LOG MSG END]---
-
----[LOG MSG START]---
-[Game]
-28-5-2019 | 10:05: Planting correct answer...
-28-5-2019 | 10:05: Correct answer is 1 with story string '1:!|Een root verhaal:!|Straight outta RSS feed'.
----[LOG MSG START]---
-[Game]
-28-5-2019 | 10:05: Parsing AAppel | d470a709-39e9-4724-9a94-4dd386cf5bfe score.
-28-5-2019 | 10:05: Player AAppel | d470a709-39e9-4724-9a94-4dd386cf5bfe followers are now 0
-28-5-2019 | 10:05: End.
----[LOG MSG END]---
-
----[LOG MSG START]---
-[Startup]
-28-5-2019 | 10:07: Starting server...
-28-5-2019 | 10:07: Server is up and running!
-28-5-2019 | 10:07: End.
----[LOG MSG END]---
-
----[LOG MSG START]---
-[CheckLogin]
-28-5-2019 | 10:07: Logging in JMuris...
-28-5-2019 | 10:07: Log in found for user JMuris
-28-5-2019 | 10:07: End.
----[LOG MSG END]---
-
----[LOG MSG START]---
-[RetrieveUser]
-28-5-2019 | 10:07: Attempting to retrieve user with id 4
-28-5-2019 | 10:07: Found user with id 4
-28-5-2019 | 10:07: End.
----[LOG MSG END]---
-
----[LOG MSG START]---
-[AccountController]
-28-5-2019 | 10:07: JMuris validated.
-28-5-2019 | 10:07: JMuris navigated to Hub/Game
-28-5-2019 | 10:07: End.
----[LOG MSG END]---
-
----[LOG MSG START]---
-[AccountController]
-28-5-2019 | 10:07: JMuris validated.
-28-5-2019 | 10:07: JMuris logged out.
-28-5-2019 | 10:07: End.
----[LOG MSG END]---
-
----[LOG MSG START]---
-[CheckLogin]
-28-5-2019 | 10:07: Logging in AAppel...
-28-5-2019 | 10:07: Log in found for user AAppel
-28-5-2019 | 10:07: End.
----[LOG MSG END]---
-
----[LOG MSG START]---
-[RetrieveUser]
-28-5-2019 | 10:07: Attempting to retrieve user with id 5
-28-5-2019 | 10:07: Found user with id 5
-28-5-2019 | 10:07: End.
----[LOG MSG END]---
-
----[LOG MSG START]---
-[AccountController]
-28-5-2019 | 10:07: AAppel validated.
-28-5-2019 | 10:07: AAppel navigated to Hub/Game
-28-5-2019 | 10:07: End.
----[LOG MSG END]---
-
----[LOG MSG START]---
-[Room]
-28-5-2019 | 10:08: Creating room...
-28-5-2019 | 10:08: Room created with code 2Y2p6h
-28-5-2019 | 10:08: End.
----[LOG MSG END]---
-
----[LOG MSG START]---
-[RetrieveAllStories]
-28-5-2019 | 10:08: Attempting to retrieve all stories.
-28-5-2019 | 10:08: Found 3 stories.
-28-5-2019 | 10:08: End.
----[LOG MSG END]---
-
----[LOG MSG START]---
-[Game]
-28-5-2019 | 10:08: Planting correct answer...
-28-5-2019 | 10:08: Correct answer is 1 with story string '6:!|Nog een verhaal:!|bla bla bla Ipsum Lorem'.
----[LOG MSG START]---
-[Game]
-28-5-2019 | 10:08: Parsing AAppel | 0efc0d07-3f6e-4817-a1f1-6f6f4f9e770a score.
-28-5-2019 | 10:08: Player AAppel | 0efc0d07-3f6e-4817-a1f1-6f6f4f9e770a followers are now 0
-28-5-2019 | 10:08: End.
----[LOG MSG END]---
-
----[LOG MSG START]---
-[Game]
-28-5-2019 | 10:09: Parsing AAppel | a5eb2483-cbaa-4d93-af62-8d47517ca312 score.
-28-5-2019 | 10:09: Player AAppel | a5eb2483-cbaa-4d93-af62-8d47517ca312 followers are now 5
-28-5-2019 | 10:09: End.
----[LOG MSG END]---
-
----[LOG MSG START]---
-[Game]
-28-5-2019 | 10:09: Parsing AAppel | d003783f-9510-4ddf-aef5-90d1e5477e63 score.
-28-5-2019 | 10:09: Player AAppel | d003783f-9510-4ddf-aef5-90d1e5477e63 followers are now 5
-28-5-2019 | 10:09: End.
----[LOG MSG END]---
-
----[LOG MSG START]---
-[Game]
-28-5-2019 | 10:09: Parsing AAppel | 2cc71b3e-9d3c-491e-8ee0-3508f9ce7632 score.
-28-5-2019 | 10:09: Player AAppel | 2cc71b3e-9d3c-491e-8ee0-3508f9ce7632 followers are now 0
-28-5-2019 | 10:09: End.
----[LOG MSG END]---
-
----[LOG MSG START]---
-[Game]
-28-5-2019 | 10:09: Parsing AAppel | 447aebe3-5150-41c4-8c61-7506d1fc7ffb score.
-28-5-2019 | 10:09: Player AAppel | 447aebe3-5150-41c4-8c61-7506d1fc7ffb followers are now 0
-28-5-2019 | 10:09: End.
----[LOG MSG END]---
-
----[LOG MSG START]---
-[Game]
-28-5-2019 | 10:09: Parsing AAppel | 727935ed-3657-4b09-b699-84c495b669ac score.
-28-5-2019 | 10:09: Player AAppel | 727935ed-3657-4b09-b699-84c495b669ac followers are now 0
-28-5-2019 | 10:09: End.
----[LOG MSG END]---
-
----[LOG MSG START]---
-[Startup]
-28-5-2019 | 10:12: Starting server...
-28-5-2019 | 10:12: Server is up and running!
-28-5-2019 | 10:12: End.
----[LOG MSG END]---
-
----[LOG MSG START]---
-[CheckLogin]
-28-5-2019 | 10:12: Logging in JMuris...
-28-5-2019 | 10:12: Log in found for user JMuris
-28-5-2019 | 10:12: End.
----[LOG MSG END]---
-
----[LOG MSG START]---
-[RetrieveUser]
-28-5-2019 | 10:12: Attempting to retrieve user with id 4
-28-5-2019 | 10:12: Found user with id 4
-28-5-2019 | 10:12: End.
----[LOG MSG END]---
-
----[LOG MSG START]---
-[AccountController]
-28-5-2019 | 10:12: JMuris validated.
-28-5-2019 | 10:12: JMuris navigated to Hub/Game
-28-5-2019 | 10:12: End.
----[LOG MSG END]---
-
----[LOG MSG START]---
-[AccountController]
-28-5-2019 | 10:12: JMuris validated.
-28-5-2019 | 10:12: JMuris logged out.
-28-5-2019 | 10:12: End.
----[LOG MSG END]---
-
----[LOG MSG START]---
-[CheckLogin]
-28-5-2019 | 10:12: Logging in AAppel...
-28-5-2019 | 10:12: Log in found for user AAppel
-28-5-2019 | 10:12: End.
----[LOG MSG END]---
-
----[LOG MSG START]---
-[RetrieveUser]
-28-5-2019 | 10:12: Attempting to retrieve user with id 5
-28-5-2019 | 10:12: Found user with id 5
-28-5-2019 | 10:12: End.
----[LOG MSG END]---
-
----[LOG MSG START]---
-[AccountController]
-28-5-2019 | 10:12: AAppel validated.
-28-5-2019 | 10:12: AAppel navigated to Hub/Game
-28-5-2019 | 10:12: End.
----[LOG MSG END]---
-
----[LOG MSG START]---
-[Room]
-28-5-2019 | 10:12: Creating room...
-28-5-2019 | 10:12: Room created with code 4RSQy1
-28-5-2019 | 10:12: End.
----[LOG MSG END]---
-
----[LOG MSG START]---
-[RetrieveAllStories]
-28-5-2019 | 10:13: Attempting to retrieve all stories.
-28-5-2019 | 10:13: Found 3 stories.
-28-5-2019 | 10:13: End.
----[LOG MSG END]---
-
----[LOG MSG START]---
-[Game]
-28-5-2019 | 10:13: Planting correct answer...
-28-5-2019 | 10:13: Correct answer is 3 with story string '5:!|Een verhaal:!|Lorem Ipsum bla bla bla'.
----[LOG MSG START]---
-[Startup]
-28-5-2019 | 10:17: Starting server...
-28-5-2019 | 10:17: Server is up and running!
-28-5-2019 | 10:17: End.
----[LOG MSG END]---
-
----[LOG MSG START]---
-[CheckLogin]
-28-5-2019 | 10:18: Logging in JMuris...
-28-5-2019 | 10:18: Log in found for user JMuris
-28-5-2019 | 10:18: End.
----[LOG MSG END]---
-
----[LOG MSG START]---
-[RetrieveUser]
-28-5-2019 | 10:18: Attempting to retrieve user with id 4
-28-5-2019 | 10:18: Found user with id 4
-28-5-2019 | 10:18: End.
----[LOG MSG END]---
-
----[LOG MSG START]---
-[AccountController]
-28-5-2019 | 10:18: JMuris validated.
-28-5-2019 | 10:18: JMuris navigated to Hub/Game
-28-5-2019 | 10:18: End.
----[LOG MSG END]---
-
----[LOG MSG START]---
-[AccountController]
-28-5-2019 | 10:18: JMuris validated.
-28-5-2019 | 10:18: JMuris logged out.
-28-5-2019 | 10:18: End.
----[LOG MSG END]---
-
----[LOG MSG START]---
-[CheckLogin]
-28-5-2019 | 10:18: Logging in AAppel...
-28-5-2019 | 10:18: Log in found for user AAppel
-28-5-2019 | 10:18: End.
----[LOG MSG END]---
-
----[LOG MSG START]---
-[RetrieveUser]
-28-5-2019 | 10:18: Attempting to retrieve user with id 5
-28-5-2019 | 10:18: Found user with id 5
-28-5-2019 | 10:18: End.
----[LOG MSG END]---
-
----[LOG MSG START]---
-[AccountController]
-28-5-2019 | 10:18: AAppel validated.
-28-5-2019 | 10:18: AAppel navigated to Hub/Game
-28-5-2019 | 10:18: End.
----[LOG MSG END]---
-
----[LOG MSG START]---
-[Room]
-28-5-2019 | 10:18: Creating room...
-28-5-2019 | 10:18: Room created with code yRKe83
-28-5-2019 | 10:18: End.
----[LOG MSG END]---
-
----[LOG MSG START]---
-[RetrieveAllStories]
-28-5-2019 | 10:18: Attempting to retrieve all stories.
-28-5-2019 | 10:18: Found 3 stories.
-28-5-2019 | 10:18: End.
----[LOG MSG END]---
-
----[LOG MSG START]---
-[Game]
-28-5-2019 | 10:18: Planting correct answer...
-28-5-2019 | 10:18: Correct answer is 0 with story string '5:!|Een verhaal:!|Lorem Ipsum bla bla bla'.
----[LOG MSG START]---
-[Game]
-28-5-2019 | 10:19: Parsing AAppel | 9e6671ab-3b5e-47c0-afb8-1d66dd6b8eca score.
-28-5-2019 | 10:19: Player AAppel | 9e6671ab-3b5e-47c0-afb8-1d66dd6b8eca followers are now 5
-28-5-2019 | 10:19: End.
----[LOG MSG END]---
-
----[LOG MSG START]---
-[Game]
-28-5-2019 | 10:19: Parsing AAppel | 309772c6-d37c-4c52-addc-704d60646ebd score.
-28-5-2019 | 10:19: Player AAppel | 309772c6-d37c-4c52-addc-704d60646ebd followers are now 0
-28-5-2019 | 10:19: End.
----[LOG MSG END]---
-
----[LOG MSG START]---
-[Game]
-28-5-2019 | 10:19: Parsing AAppel | 9676f224-717e-4bf5-aa36-e1b1ea043930 score.
-28-5-2019 | 10:19: Player AAppel | 9676f224-717e-4bf5-aa36-e1b1ea043930 followers are now 0
-28-5-2019 | 10:19: End.
----[LOG MSG END]---
-
----[LOG MSG START]---
-[Game]
-28-5-2019 | 10:19: Parsing AAppel | d248566f-2654-4cc3-94ce-473b127fe197 score.
-28-5-2019 | 10:19: Player AAppel | d248566f-2654-4cc3-94ce-473b127fe197 followers are now 0
-28-5-2019 | 10:19: End.
----[LOG MSG END]---
-
----[LOG MSG START]---
-[Game]
-28-5-2019 | 10:19: Parsing AAppel | c1d2b5e5-78cc-4f34-a735-ad2de0f8819f score.
-28-5-2019 | 10:19: Player AAppel | c1d2b5e5-78cc-4f34-a735-ad2de0f8819f followers are now 5
-28-5-2019 | 10:19: End.
----[LOG MSG END]---
-
----[LOG MSG START]---
-[Game]
-28-5-2019 | 10:19: Parsing AAppel | ecc2c1b5-688a-44d8-b6f5-3b587607a9ee score.
-28-5-2019 | 10:19: Player AAppel | ecc2c1b5-688a-44d8-b6f5-3b587607a9ee followers are now 0
-28-5-2019 | 10:19: End.
----[LOG MSG END]---
-
----[LOG MSG START]---
-[Startup]
-28-5-2019 | 10:21: Starting server...
-28-5-2019 | 10:21: Server is up and running!
-28-5-2019 | 10:21: End.
----[LOG MSG END]---
-
----[LOG MSG START]---
-[CheckLogin]
-28-5-2019 | 10:22: Logging in JMuris...
-28-5-2019 | 10:22: Log in found for user JMuris
-28-5-2019 | 10:22: End.
----[LOG MSG END]---
-
----[LOG MSG START]---
-[RetrieveUser]
-28-5-2019 | 10:22: Attempting to retrieve user with id 4
-28-5-2019 | 10:22: Found user with id 4
-28-5-2019 | 10:22: End.
----[LOG MSG END]---
-
----[LOG MSG START]---
-[AccountController]
-28-5-2019 | 10:22: JMuris validated.
-28-5-2019 | 10:22: JMuris navigated to Hub/Game
-28-5-2019 | 10:22: End.
----[LOG MSG END]---
-
----[LOG MSG START]---
-[AccountController]
-28-5-2019 | 10:22: JMuris validated.
-28-5-2019 | 10:22: JMuris logged out.
-28-5-2019 | 10:22: End.
----[LOG MSG END]---
-
----[LOG MSG START]---
-[CheckLogin]
-28-5-2019 | 10:22: Logging in AAppel...
-28-5-2019 | 10:22: Log in found for user AAppel
-28-5-2019 | 10:22: End.
----[LOG MSG END]---
-
----[LOG MSG START]---
-[RetrieveUser]
-28-5-2019 | 10:22: Attempting to retrieve user with id 5
-28-5-2019 | 10:22: Found user with id 5
-28-5-2019 | 10:22: End.
----[LOG MSG END]---
-
----[LOG MSG START]---
-[AccountController]
-28-5-2019 | 10:22: AAppel validated.
-28-5-2019 | 10:22: AAppel navigated to Hub/Game
-28-5-2019 | 10:22: End.
----[LOG MSG END]---
-
----[LOG MSG START]---
-[Room]
-28-5-2019 | 10:22: Creating room...
-28-5-2019 | 10:22: Room created with code 02e3K1
-28-5-2019 | 10:22: End.
----[LOG MSG END]---
-
----[LOG MSG START]---
-[RetrieveAllStories]
-28-5-2019 | 10:22: Attempting to retrieve all stories.
-28-5-2019 | 10:22: Found 3 stories.
-28-5-2019 | 10:22: End.
----[LOG MSG END]---
-
----[LOG MSG START]---
-[Game]
-28-5-2019 | 10:22: Planting correct answer...
-28-5-2019 | 10:22: Correct answer is 3 with story string '6:!|Nog een verhaal:!|bla bla bla Ipsum Lorem'.
----[LOG MSG START]---
-[Game]
-28-5-2019 | 10:22: Activate power-up by 5c5c46dd-a8c2-4cf1-85df-9451f00d84f1
-28-5-2019 | 10:22: User AAppel bought a power-up.
----[LOG MSG START]---
-[Game]
-28-5-2019 | 10:22: Parsing AAppel | 5c5c46dd-a8c2-4cf1-85df-9451f00d84f1 score.
-28-5-2019 | 10:22: Player AAppel | 5c5c46dd-a8c2-4cf1-85df-9451f00d84f1 followers are now 0
-28-5-2019 | 10:22: End.
----[LOG MSG END]---
-
----[LOG MSG START]---
-[Game]
-28-5-2019 | 10:23: Activate power-up by c5358e5d-5280-43ca-8838-4a4dc13ef793
-28-5-2019 | 10:23: User AAppel bought a power-up.
----[LOG MSG START]---
-[Game]
-28-5-2019 | 10:23: Parsing AAppel | c5358e5d-5280-43ca-8838-4a4dc13ef793 score.
-28-5-2019 | 10:23: Player AAppel | c5358e5d-5280-43ca-8838-4a4dc13ef793 followers are now 5
-28-5-2019 | 10:23: End.
----[LOG MSG END]---
-
----[LOG MSG START]---
-[Game]
-28-5-2019 | 10:23: Activate power-up by a6ef0b48-3346-4c75-970f-b618bbef5454
-28-5-2019 | 10:23: User AAppel bought a power-up.
----[LOG MSG START]---
-[Game]
-28-5-2019 | 10:23: Activate power-up by a6ef0b48-3346-4c75-970f-b618bbef5454
-28-5-2019 | 10:23: User AAppel bought a power-up.
----[LOG MSG START]---
-[Game]
-28-5-2019 | 10:23: Parsing AAppel | a6ef0b48-3346-4c75-970f-b618bbef5454 score.
-28-5-2019 | 10:23: Player AAppel | a6ef0b48-3346-4c75-970f-b618bbef5454 followers are now 0
-28-5-2019 | 10:23: End.
----[LOG MSG END]---
-
----[LOG MSG START]---
-[Startup]
-28-5-2019 | 10:24: Starting server...
-28-5-2019 | 10:24: Server is up and running!
-28-5-2019 | 10:24: End.
----[LOG MSG END]---
-
----[LOG MSG START]---
-[CheckLogin]
-28-5-2019 | 10:24: Logging in JMuris...
-28-5-2019 | 10:24: Log in found for user JMuris
-28-5-2019 | 10:24: End.
----[LOG MSG END]---
-
----[LOG MSG START]---
-[RetrieveUser]
-28-5-2019 | 10:24: Attempting to retrieve user with id 4
-28-5-2019 | 10:24: Found user with id 4
-28-5-2019 | 10:24: End.
----[LOG MSG END]---
-
----[LOG MSG START]---
-[AccountController]
-28-5-2019 | 10:24: JMuris validated.
-28-5-2019 | 10:24: JMuris navigated to Hub/Game
-28-5-2019 | 10:24: End.
----[LOG MSG END]---
-
----[LOG MSG START]---
-[AccountController]
-28-5-2019 | 10:24: JMuris validated.
-28-5-2019 | 10:24: JMuris logged out.
-28-5-2019 | 10:24: End.
----[LOG MSG END]---
-
----[LOG MSG START]---
-[CheckLogin]
-28-5-2019 | 10:24: Logging in AAppel...
-28-5-2019 | 10:24: Log in found for user AAppel
-28-5-2019 | 10:24: End.
----[LOG MSG END]---
-
----[LOG MSG START]---
-[RetrieveUser]
-28-5-2019 | 10:24: Attempting to retrieve user with id 5
-28-5-2019 | 10:24: Found user with id 5
-28-5-2019 | 10:24: End.
----[LOG MSG END]---
-
----[LOG MSG START]---
-[AccountController]
-28-5-2019 | 10:24: AAppel validated.
-28-5-2019 | 10:24: AAppel navigated to Hub/Game
-28-5-2019 | 10:24: End.
----[LOG MSG END]---
-
----[LOG MSG START]---
-[Room]
-28-5-2019 | 10:24: Creating room...
-28-5-2019 | 10:24: Room created with code 5x1RcK
-28-5-2019 | 10:24: End.
----[LOG MSG END]---
-
----[LOG MSG START]---
-[RetrieveAllStories]
-28-5-2019 | 10:24: Attempting to retrieve all stories.
-28-5-2019 | 10:24: Found 3 stories.
-28-5-2019 | 10:24: End.
----[LOG MSG END]---
-
----[LOG MSG START]---
-[Game]
-28-5-2019 | 10:25: Planting correct answer...
-28-5-2019 | 10:25: Correct answer is 3 with story string '1:!|Een root verhaal:!|Straight outta RSS feed'.
----[LOG MSG START]---
-[Game]
-28-5-2019 | 10:25: Activate power-up by 03998b4d-77f2-4f85-9a1b-614d6602ee32
-28-5-2019 | 10:25: User AAppel bought a power-up.
----[LOG MSG START]---
-[Game]
-28-5-2019 | 10:25: Parsing AAppel | 03998b4d-77f2-4f85-9a1b-614d6602ee32 score.
-28-5-2019 | 10:25: Player AAppel | 03998b4d-77f2-4f85-9a1b-614d6602ee32 followers are now 0
-28-5-2019 | 10:25: End.
----[LOG MSG END]---
-
----[LOG MSG START]---
-[Game]
-28-5-2019 | 10:25: Activate power-up by 8680eb03-e114-42be-85ff-41ff528954ec
-28-5-2019 | 10:25: User AAppel bought a power-up.
----[LOG MSG START]---
-[Game]
-28-5-2019 | 10:25: Parsing AAppel | 8680eb03-e114-42be-85ff-41ff528954ec score.
-28-5-2019 | 10:25: Player AAppel | 8680eb03-e114-42be-85ff-41ff528954ec followers are now 5
-28-5-2019 | 10:25: End.
----[LOG MSG END]---
-
----[LOG MSG START]---
-[Game]
-28-5-2019 | 10:25: Parsing AAppel | 973efbe9-e12b-4d88-9db3-de9700a9b35c score.
-28-5-2019 | 10:25: Player AAppel | 973efbe9-e12b-4d88-9db3-de9700a9b35c followers are now 0
-28-5-2019 | 10:25: End.
----[LOG MSG END]---
-
----[LOG MSG START]---
-[Game]
-28-5-2019 | 10:25: Activate power-up by e63ab3db-9ca6-4855-9842-9774e4e8ecec
-28-5-2019 | 10:25: User AAppel bought a power-up.
----[LOG MSG START]---
-[Game]
-28-5-2019 | 10:25: Parsing AAppel | e63ab3db-9ca6-4855-9842-9774e4e8ecec score.
-28-5-2019 | 10:25: Player AAppel | e63ab3db-9ca6-4855-9842-9774e4e8ecec followers are now 0
-28-5-2019 | 10:25: End.
----[LOG MSG END]---
-
----[LOG MSG START]---
-[Game]
-28-5-2019 | 10:25: Activate power-up by 791194f6-bdd7-4a76-9682-f80b48f6055e
-28-5-2019 | 10:25: User AAppel bought a power-up.
----[LOG MSG START]---
-[Game]
-28-5-2019 | 10:25: Parsing AAppel | 791194f6-bdd7-4a76-9682-f80b48f6055e score.
-28-5-2019 | 10:25: Player AAppel | 791194f6-bdd7-4a76-9682-f80b48f6055e followers are now 0
-28-5-2019 | 10:25: End.
----[LOG MSG END]---
-
----[LOG MSG START]---
-[Game]
-28-5-2019 | 10:25: Parsing AAppel | 56bfd92e-0f8c-486d-85e3-85ca26621a32 score.
-28-5-2019 | 10:25: Player AAppel | 56bfd92e-0f8c-486d-85e3-85ca26621a32 followers are now 0
-28-5-2019 | 10:25: End.
----[LOG MSG END]---
-
----[LOG MSG START]---
-[Startup]
-28-5-2019 | 10:26: Starting server...
-28-5-2019 | 10:26: Server is up and running!
-28-5-2019 | 10:26: End.
----[LOG MSG END]---
-
----[LOG MSG START]---
-[CheckLogin]
-28-5-2019 | 10:27: Logging in JMuris...
-28-5-2019 | 10:27: Log in found for user JMuris
-28-5-2019 | 10:27: End.
----[LOG MSG END]---
-
----[LOG MSG START]---
-[RetrieveUser]
-28-5-2019 | 10:27: Attempting to retrieve user with id 4
-28-5-2019 | 10:27: Found user with id 4
-28-5-2019 | 10:27: End.
----[LOG MSG END]---
-
----[LOG MSG START]---
-[AccountController]
-28-5-2019 | 10:27: JMuris validated.
-28-5-2019 | 10:27: JMuris navigated to Hub/Game
-28-5-2019 | 10:27: End.
----[LOG MSG END]---
-
----[LOG MSG START]---
-[AccountController]
-28-5-2019 | 10:27: JMuris validated.
-28-5-2019 | 10:27: JMuris logged out.
-28-5-2019 | 10:27: End.
----[LOG MSG END]---
-
----[LOG MSG START]---
-[CheckLogin]
-28-5-2019 | 10:27: Logging in AAppel...
-28-5-2019 | 10:27: Log in found for user AAppel
-28-5-2019 | 10:27: End.
----[LOG MSG END]---
-
----[LOG MSG START]---
-[RetrieveUser]
-28-5-2019 | 10:27: Attempting to retrieve user with id 5
-28-5-2019 | 10:27: Found user with id 5
-28-5-2019 | 10:27: End.
----[LOG MSG END]---
-
----[LOG MSG START]---
-[AccountController]
-28-5-2019 | 10:27: AAppel validated.
-28-5-2019 | 10:27: AAppel navigated to Hub/Game
-28-5-2019 | 10:27: End.
----[LOG MSG END]---
-
----[LOG MSG START]---
-[Room]
-28-5-2019 | 10:27: Creating room...
-28-5-2019 | 10:27: Room created with code Qlh39J
-28-5-2019 | 10:27: End.
----[LOG MSG END]---
-
----[LOG MSG START]---
-[RetrieveAllStories]
-28-5-2019 | 10:27: Attempting to retrieve all stories.
-28-5-2019 | 10:27: Found 3 stories.
-28-5-2019 | 10:27: End.
----[LOG MSG END]---
-
----[LOG MSG START]---
-[Game]
-28-5-2019 | 10:27: Planting correct answer...
-28-5-2019 | 10:27: Correct answer is 3 with story string '5:!|Een verhaal:!|Lorem Ipsum bla bla bla'.
----[LOG MSG START]---
-[Game]
-28-5-2019 | 10:27: Activate power-up by 63cafaf9-2f44-4077-86f4-411b7e56592c
-28-5-2019 | 10:27: User AAppel bought a power-up.
----[LOG MSG START]---
-[Game]
-28-5-2019 | 10:27: Parsing AAppel | 63cafaf9-2f44-4077-86f4-411b7e56592c score.
-28-5-2019 | 10:27: Player AAppel | 63cafaf9-2f44-4077-86f4-411b7e56592c followers are now 5
-28-5-2019 | 10:27: End.
----[LOG MSG END]---
-
----[LOG MSG START]---
-[Startup]
-28-5-2019 | 10:28: Starting server...
-28-5-2019 | 10:28: Server is up and running!
-28-5-2019 | 10:28: End.
----[LOG MSG END]---
-
----[LOG MSG START]---
-[CheckLogin]
-28-5-2019 | 10:28: Logging in JMuris...
-28-5-2019 | 10:28: Log in found for user JMuris
-28-5-2019 | 10:28: End.
----[LOG MSG END]---
-
----[LOG MSG START]---
-[RetrieveUser]
-28-5-2019 | 10:28: Attempting to retrieve user with id 4
-28-5-2019 | 10:28: Found user with id 4
-28-5-2019 | 10:28: End.
----[LOG MSG END]---
-
----[LOG MSG START]---
-[AccountController]
-28-5-2019 | 10:28: JMuris validated.
-28-5-2019 | 10:28: JMuris navigated to Hub/Game
-28-5-2019 | 10:28: End.
----[LOG MSG END]---
-
----[LOG MSG START]---
-[AccountController]
-28-5-2019 | 10:28: JMuris validated.
-28-5-2019 | 10:28: JMuris logged out.
-28-5-2019 | 10:28: End.
----[LOG MSG END]---
-
----[LOG MSG START]---
-[CheckLogin]
-28-5-2019 | 10:28: Logging in AAppel...
-28-5-2019 | 10:28: Log in found for user AAppel
-28-5-2019 | 10:28: End.
----[LOG MSG END]---
-
----[LOG MSG START]---
-[RetrieveUser]
-28-5-2019 | 10:28: Attempting to retrieve user with id 5
-28-5-2019 | 10:28: Found user with id 5
-28-5-2019 | 10:28: End.
----[LOG MSG END]---
-
----[LOG MSG START]---
-[AccountController]
-28-5-2019 | 10:28: AAppel validated.
-28-5-2019 | 10:28: AAppel navigated to Hub/Game
-28-5-2019 | 10:28: End.
----[LOG MSG END]---
-
----[LOG MSG START]---
-[Room]
-28-5-2019 | 10:28: Creating room...
-28-5-2019 | 10:28: Room created with code Qlf8CZ
-28-5-2019 | 10:28: End.
----[LOG MSG END]---
-
----[LOG MSG START]---
-[RetrieveAllStories]
-28-5-2019 | 10:29: Attempting to retrieve all stories.
-28-5-2019 | 10:29: Found 3 stories.
-28-5-2019 | 10:29: End.
----[LOG MSG END]---
-
----[LOG MSG START]---
-[Game]
-28-5-2019 | 10:29: Planting correct answer...
-28-5-2019 | 10:29: Correct answer is 1 with story string '6:!|Nog een verhaal:!|bla bla bla Ipsum Lorem'.
----[LOG MSG START]---
-[Game]
-28-5-2019 | 10:29: Activate power-up by 29cf8989-4f0c-4597-acc2-93cdbcf6c960
-28-5-2019 | 10:29: User AAppel bought a power-up.
-28-5-2019 | 10:29: Chosen power-up is 'choose two answers for 50% value'.
-28-5-2019 | 10:29: End.
----[LOG MSG END]---
-
----[LOG MSG START]---
-[Game]
-28-5-2019 | 10:29: Activate power-up by 85a47a20-036f-47f4-bee7-2a028f969937
-28-5-2019 | 10:29: User AAppel bought a power-up.
-28-5-2019 | 10:29: Chosen power-up is 'answers count for 200% value'.
-28-5-2019 | 10:29: End.
----[LOG MSG END]---
-
----[LOG MSG START]---
-[Game]
-28-5-2019 | 10:29: Parsing AAppel | 85a47a20-036f-47f4-bee7-2a028f969937 score.
-28-5-2019 | 10:29: Player AAppel | 85a47a20-036f-47f4-bee7-2a028f969937 followers are now 10
-28-5-2019 | 10:29: End.
----[LOG MSG END]---
-
----[LOG MSG START]---
-[Game]
-28-5-2019 | 10:29: Activate power-up by 789bddda-d2ef-4dc9-8d1e-4a9d4c82a55b
-28-5-2019 | 10:29: User AAppel bought a power-up.
-28-5-2019 | 10:29: Chosen power-up is 'cross out 50% of the wrong answers'.
-28-5-2019 | 10:29: End.
----[LOG MSG END]---
-
----[LOG MSG START]---
-[Game]
-28-5-2019 | 10:29: Parsing AAppel | 789bddda-d2ef-4dc9-8d1e-4a9d4c82a55b score.
-28-5-2019 | 10:29: Player AAppel | 789bddda-d2ef-4dc9-8d1e-4a9d4c82a55b followers are now 0
-28-5-2019 | 10:29: End.
----[LOG MSG END]---
-
----[LOG MSG START]---
-[Game]
-28-5-2019 | 10:29: Activate power-up by bae67c6a-1044-47c7-95b5-2b9b1e0671f2
-28-5-2019 | 10:29: User AAppel bought a power-up.
-28-5-2019 | 10:29: Chosen power-up is 'show the amount of answers on each story'.
-28-5-2019 | 10:29: End.
----[LOG MSG END]---
-
----[LOG MSG START]---
-[Game]
-28-5-2019 | 10:29: Parsing AAppel | bae67c6a-1044-47c7-95b5-2b9b1e0671f2 score.
-28-5-2019 | 10:29: Player AAppel | bae67c6a-1044-47c7-95b5-2b9b1e0671f2 followers are now 0
-28-5-2019 | 10:29: End.
----[LOG MSG END]---
-
----[LOG MSG START]---
-[Game]
-28-5-2019 | 10:29: Parsing AAppel | 1536b3cc-0f6b-4e87-83b1-2745cee61a63 score.
-28-5-2019 | 10:29: Player AAppel | 1536b3cc-0f6b-4e87-83b1-2745cee61a63 followers are now 0
-28-5-2019 | 10:29: End.
----[LOG MSG END]---
-
----[LOG MSG START]---
-[Game]
-28-5-2019 | 10:29: Parsing AAppel | 74445613-3af8-4e0d-9744-293f6be07851 score.
-28-5-2019 | 10:29: Player AAppel | 74445613-3af8-4e0d-9744-293f6be07851 followers are now 0
-28-5-2019 | 10:29: End.
----[LOG MSG END]---
-
----[LOG MSG START]---
-[CheckLogin]
-28-5-2019 | 10:30: Logging in JMuris...
-28-5-2019 | 10:30: Log in found for user JMuris
-28-5-2019 | 10:30: End.
----[LOG MSG END]---
-
----[LOG MSG START]---
-[RetrieveUser]
-28-5-2019 | 10:30: Attempting to retrieve user with id 4
-28-5-2019 | 10:30: Found user with id 4
-28-5-2019 | 10:30: End.
----[LOG MSG END]---
-
----[LOG MSG START]---
-[AccountController]
-28-5-2019 | 10:30: JMuris validated.
-28-5-2019 | 10:30: JMuris navigated to Hub/Game
-28-5-2019 | 10:30: End.
----[LOG MSG END]---
-
----[LOG MSG START]---
-[AccountController]
-28-5-2019 | 10:30: JMuris validated.
-28-5-2019 | 10:30: JMuris logged out.
-28-5-2019 | 10:30: End.
----[LOG MSG END]---
-
----[LOG MSG START]---
-[CheckLogin]
-28-5-2019 | 10:30: Logging in AAppel...
-28-5-2019 | 10:30: Log in found for user AAppel
-28-5-2019 | 10:30: End.
----[LOG MSG END]---
-
----[LOG MSG START]---
-[RetrieveUser]
-28-5-2019 | 10:30: Attempting to retrieve user with id 5
-28-5-2019 | 10:30: Found user with id 5
-28-5-2019 | 10:30: End.
+28-5-2019 | 13:23: Putting '892V0L' into read phase.
+28-5-2019 | 13:23: Room '892V0L' has 3 groups.
+28-5-2019 | 13:23: Current group is '1' in room '892V0L'.
+28-5-2019 | 13:23: First game of room '892V0L' started.
+28-5-2019 | 13:23: End.
 ---[LOG MSG END]---
 
 ---[LOG MSG START]---
-[AccountController]
-28-5-2019 | 10:30: AAppel validated.
-28-5-2019 | 10:30: AAppel navigated to Hub/Game
-28-5-2019 | 10:30: End.
----[LOG MSG END]---
-
----[LOG MSG START]---
-[Room]
-28-5-2019 | 10:30: Creating room...
-28-5-2019 | 10:30: Room created with code 1217C5
-28-5-2019 | 10:30: End.
----[LOG MSG END]---
-
----[LOG MSG START]---
-[RetrieveAllStories]
-28-5-2019 | 10:30: Attempting to retrieve all stories.
-28-5-2019 | 10:30: Found 3 stories.
-28-5-2019 | 10:30: End.
----[LOG MSG END]---
-
----[LOG MSG START]---
-[Startup]
-28-5-2019 | 10:31: Starting server...
-28-5-2019 | 10:31: Server is up and running!
-28-5-2019 | 10:31: End.
----[LOG MSG END]---
-
----[LOG MSG START]---
-[CheckLogin]
-28-5-2019 | 10:31: Logging in JMuris...
-28-5-2019 | 10:31: Log in found for user JMuris
-28-5-2019 | 10:31: End.
----[LOG MSG END]---
-
----[LOG MSG START]---
-[RetrieveUser]
-28-5-2019 | 10:31: Attempting to retrieve user with id 4
-28-5-2019 | 10:31: Found user with id 4
-28-5-2019 | 10:31: End.
----[LOG MSG END]---
-
----[LOG MSG START]---
-[AccountController]
-28-5-2019 | 10:31: JMuris validated.
-28-5-2019 | 10:31: JMuris navigated to Hub/Game
-28-5-2019 | 10:31: End.
----[LOG MSG END]---
-
----[LOG MSG START]---
-[AccountController]
-28-5-2019 | 10:31: JMuris validated.
-28-5-2019 | 10:31: JMuris logged out.
-28-5-2019 | 10:31: End.
----[LOG MSG END]---
-
----[LOG MSG START]---
-[CheckLogin]
-28-5-2019 | 10:31: Logging in AAppel...
-28-5-2019 | 10:31: Log in found for user AAppel
-28-5-2019 | 10:31: End.
----[LOG MSG END]---
-
----[LOG MSG START]---
-[RetrieveUser]
-28-5-2019 | 10:31: Attempting to retrieve user with id 5
-28-5-2019 | 10:31: Found user with id 5
-28-5-2019 | 10:31: End.
----[LOG MSG END]---
-
----[LOG MSG START]---
-[AccountController]
-28-5-2019 | 10:31: AAppel validated.
-28-5-2019 | 10:31: AAppel navigated to Hub/Game
-28-5-2019 | 10:31: End.
----[LOG MSG END]---
-
----[LOG MSG START]---
-[Room]
-28-5-2019 | 10:31: Creating room...
-28-5-2019 | 10:31: Room created with code J5862d
-28-5-2019 | 10:31: End.
----[LOG MSG END]---
-
----[LOG MSG START]---
-[RetrieveAllStories]
-28-5-2019 | 10:31: Attempting to retrieve all stories.
-28-5-2019 | 10:31: Found 3 stories.
-28-5-2019 | 10:31: End.
----[LOG MSG END]---
-
----[LOG MSG START]---
-[Game]
-28-5-2019 | 10:31: Planting correct answer...
-28-5-2019 | 10:31: Correct answer is 1 with story string '6:!|Nog een verhaal:!|bla bla bla Ipsum Lorem'.
----[LOG MSG START]---
-[Game]
-28-5-2019 | 10:31: Activate power-up by 572285ee-1232-466d-8bb5-417a86188b8a
-28-5-2019 | 10:31: User AAppel bought a power-up.
-28-5-2019 | 10:31: Chosen power-up is 'choose two answers for 50% value'.
-28-5-2019 | 10:31: End.
----[LOG MSG END]---
-
----[LOG MSG START]---
-[Game]
-28-5-2019 | 10:31: Parsing AAppel | 572285ee-1232-466d-8bb5-417a86188b8a score.
-28-5-2019 | 10:31: Player AAppel | 572285ee-1232-466d-8bb5-417a86188b8a followers are now 2
-28-5-2019 | 10:31: End.
----[LOG MSG END]---
-
----[LOG MSG START]---
-[Game]
-28-5-2019 | 10:31: Activate power-up by f2897c6e-86d9-442a-a611-7086c3745a6b
-28-5-2019 | 10:31: User AAppel bought a power-up.
-28-5-2019 | 10:31: Chosen power-up is 'answers count for 200% value'.
-28-5-2019 | 10:31: End.
----[LOG MSG END]---
-
----[LOG MSG START]---
-[Game]
-28-5-2019 | 10:31: Parsing AAppel | f2897c6e-86d9-442a-a611-7086c3745a6b score.
-28-5-2019 | 10:31: Player AAppel | f2897c6e-86d9-442a-a611-7086c3745a6b followers are now 10
-28-5-2019 | 10:31: End.
----[LOG MSG END]---
-
----[LOG MSG START]---
-[Game]
-28-5-2019 | 10:31: Parsing AAppel | afcafc9d-6755-4c3e-a8f8-54df9afa11b0 score.
-28-5-2019 | 10:31: Player AAppel | afcafc9d-6755-4c3e-a8f8-54df9afa11b0 followers are now 5
-28-5-2019 | 10:31: End.
----[LOG MSG END]---
-
----[LOG MSG START]---
-[Game]
-28-5-2019 | 10:31: Activate power-up by b1c4f064-1fc0-434d-aa75-433ece1ee72a
-28-5-2019 | 10:31: User AAppel bought a power-up.
-28-5-2019 | 10:31: Chosen power-up is 'show the amount of answers on each story'.
-28-5-2019 | 10:31: End.
----[LOG MSG END]---
-
----[LOG MSG START]---
-[Game]
-28-5-2019 | 10:31: Parsing AAppel | b1c4f064-1fc0-434d-aa75-433ece1ee72a score.
-28-5-2019 | 10:31: Player AAppel | b1c4f064-1fc0-434d-aa75-433ece1ee72a followers are now 0
-28-5-2019 | 10:31: End.
----[LOG MSG END]---
-
----[LOG MSG START]---
-[Game]
-28-5-2019 | 10:31: Activate power-up by 04b0bd93-24de-4321-a151-db108374134a
-28-5-2019 | 10:31: User AAppel bought a power-up.
-28-5-2019 | 10:31: Chosen power-up is 'answers count for 200% value'.
-28-5-2019 | 10:31: End.
----[LOG MSG END]---
-
----[LOG MSG START]---
-[Game]
-28-5-2019 | 10:31: Parsing AAppel | 04b0bd93-24de-4321-a151-db108374134a score.
-28-5-2019 | 10:31: Player AAppel | 04b0bd93-24de-4321-a151-db108374134a followers are now 0
-28-5-2019 | 10:31: End.
----[LOG MSG END]---
-
----[LOG MSG START]---
-[Game]
-28-5-2019 | 10:31: Parsing AAppel | 0a55b84a-455b-4ba6-b4ea-704195622b69 score.
-28-5-2019 | 10:31: Player AAppel | 0a55b84a-455b-4ba6-b4ea-704195622b69 followers are now 0
-28-5-2019 | 10:31: End.
----[LOG MSG END]---
-
----[LOG MSG START]---
-[Startup]
-28-5-2019 | 10:49: Starting server...
-28-5-2019 | 10:49: Server is up and running!
-28-5-2019 | 10:49: End.
----[LOG MSG END]---
-
----[LOG MSG START]---
-[CheckLogin]
-28-5-2019 | 10:49: Logging in JMuris...
-28-5-2019 | 10:49: Log in found for user JMuris
-28-5-2019 | 10:49: End.
----[LOG MSG END]---
-
----[LOG MSG START]---
-[RetrieveUser]
-28-5-2019 | 10:49: Attempting to retrieve user with id 4
-28-5-2019 | 10:49: Found user with id 4
-28-5-2019 | 10:49: End.
----[LOG MSG END]---
-
----[LOG MSG START]---
-[AccountController]
-28-5-2019 | 10:49: JMuris validated.
-28-5-2019 | 10:49: JMuris navigated to Hub/Game
-28-5-2019 | 10:49: End.
----[LOG MSG END]---
-
----[LOG MSG START]---
-[Startup]
-28-5-2019 | 10:49: Starting server...
-28-5-2019 | 10:49: Server is up and running!
-28-5-2019 | 10:49: End.
----[LOG MSG END]---
-
----[LOG MSG START]---
-[CheckLogin]
-28-5-2019 | 10:50: Logging in JMuris...
-28-5-2019 | 10:50: Log in found for user JMuris
-28-5-2019 | 10:50: End.
----[LOG MSG END]---
-
----[LOG MSG START]---
-[RetrieveUser]
-28-5-2019 | 10:50: Attempting to retrieve user with id 4
-28-5-2019 | 10:50: Found user with id 4
-28-5-2019 | 10:50: End.
----[LOG MSG END]---
-
----[LOG MSG START]---
-[AccountController]
-28-5-2019 | 10:50: JMuris validated.
-28-5-2019 | 10:50: JMuris navigated to Hub/Game
-28-5-2019 | 10:50: End.
----[LOG MSG END]---
-
----[LOG MSG START]---
-[AccountController]
-28-5-2019 | 10:50: JMuris validated.
-28-5-2019 | 10:50: JMuris logged out.
-28-5-2019 | 10:50: End.
----[LOG MSG END]---
-
----[LOG MSG START]---
-[CheckLogin]
-28-5-2019 | 10:50: Logging in AAppel...
-28-5-2019 | 10:50: Log in found for user AAppel
-28-5-2019 | 10:50: End.
----[LOG MSG END]---
-
----[LOG MSG START]---
-[RetrieveUser]
-28-5-2019 | 10:50: Attempting to retrieve user with id 5
-28-5-2019 | 10:50: Found user with id 5
-28-5-2019 | 10:50: End.
----[LOG MSG END]---
-
----[LOG MSG START]---
-[AccountController]
-28-5-2019 | 10:50: AAppel validated.
-28-5-2019 | 10:50: AAppel navigated to Hub/Game
-28-5-2019 | 10:50: End.
----[LOG MSG END]---
-
----[LOG MSG START]---
-[Room]
-28-5-2019 | 10:50: Creating room...
-28-5-2019 | 10:50: Room created with code V9adkh
-28-5-2019 | 10:50: End.
----[LOG MSG END]---
-
----[LOG MSG START]---
-[RetrieveAllStories]
-28-5-2019 | 10:50: Attempting to retrieve all stories.
-28-5-2019 | 10:50: Found 3 stories.
-28-5-2019 | 10:50: End.
----[LOG MSG END]---
-
----[LOG MSG START]---
-[Startup]
-28-5-2019 | 10:52: Starting server...
-28-5-2019 | 10:52: Server is up and running!
-28-5-2019 | 10:52: End.
----[LOG MSG END]---
-
----[LOG MSG START]---
-[CheckLogin]
-28-5-2019 | 10:52: Logging in JMuris...
-28-5-2019 | 10:52: Log in found for user JMuris
-28-5-2019 | 10:52: End.
----[LOG MSG END]---
-
----[LOG MSG START]---
-[RetrieveUser]
-28-5-2019 | 10:52: Attempting to retrieve user with id 4
-28-5-2019 | 10:52: Found user with id 4
-28-5-2019 | 10:52: End.
----[LOG MSG END]---
-
----[LOG MSG START]---
-[AccountController]
-28-5-2019 | 10:52: JMuris validated.
-28-5-2019 | 10:52: JMuris navigated to Hub/Game
-28-5-2019 | 10:52: End.
----[LOG MSG END]---
-
----[LOG MSG START]---
-[AccountController]
-28-5-2019 | 10:52: JMuris validated.
-28-5-2019 | 10:52: JMuris logged out.
-28-5-2019 | 10:52: End.
----[LOG MSG END]---
-
----[LOG MSG START]---
-[CheckLogin]
-28-5-2019 | 10:52: Logging in AAppel...
-28-5-2019 | 10:52: Log in found for user AAppel
-28-5-2019 | 10:52: End.
----[LOG MSG END]---
-
----[LOG MSG START]---
-[RetrieveUser]
-28-5-2019 | 10:52: Attempting to retrieve user with id 5
-28-5-2019 | 10:52: Found user with id 5
-28-5-2019 | 10:52: End.
----[LOG MSG END]---
-
----[LOG MSG START]---
-[AccountController]
-28-5-2019 | 10:52: AAppel validated.
-28-5-2019 | 10:52: AAppel navigated to Hub/Game
-28-5-2019 | 10:52: End.
----[LOG MSG END]---
-
----[LOG MSG START]---
-[Room]
-28-5-2019 | 10:52: Creating room...
-28-5-2019 | 10:52: Room created with code TaN52Z
-28-5-2019 | 10:52: End.
----[LOG MSG END]---
-
----[LOG MSG START]---
-[RetrieveAllStories]
-28-5-2019 | 10:52: Attempting to retrieve all stories.
-28-5-2019 | 10:52: Found 3 stories.
-28-5-2019 | 10:52: End.
----[LOG MSG END]---
-
----[LOG MSG START]---
-[Startup]
-28-5-2019 | 10:53: Starting server...
-28-5-2019 | 10:53: Server is up and running!
-28-5-2019 | 10:53: End.
----[LOG MSG END]---
-
----[LOG MSG START]---
-[CheckLogin]
-28-5-2019 | 10:53: Logging in JMuris...
-28-5-2019 | 10:53: Log in found for user JMuris
-28-5-2019 | 10:53: End.
----[LOG MSG END]---
-
----[LOG MSG START]---
-[RetrieveUser]
-28-5-2019 | 10:53: Attempting to retrieve user with id 4
-28-5-2019 | 10:53: Found user with id 4
-28-5-2019 | 10:53: End.
----[LOG MSG END]---
-
----[LOG MSG START]---
-[AccountController]
-28-5-2019 | 10:53: JMuris validated.
-28-5-2019 | 10:53: JMuris navigated to Hub/Game
-28-5-2019 | 10:53: End.
----[LOG MSG END]---
-
----[LOG MSG START]---
-[AccountController]
-28-5-2019 | 10:53: JMuris validated.
-28-5-2019 | 10:53: JMuris logged out.
-28-5-2019 | 10:53: End.
----[LOG MSG END]---
-
----[LOG MSG START]---
-[CheckLogin]
-28-5-2019 | 10:53: Logging in AAppel...
-28-5-2019 | 10:53: Log in found for user AAppel
-28-5-2019 | 10:53: End.
----[LOG MSG END]---
-
----[LOG MSG START]---
-[RetrieveUser]
-28-5-2019 | 10:53: Attempting to retrieve user with id 5
-28-5-2019 | 10:53: Found user with id 5
-28-5-2019 | 10:53: End.
----[LOG MSG END]---
-
----[LOG MSG START]---
-[AccountController]
-28-5-2019 | 10:53: AAppel validated.
-28-5-2019 | 10:53: AAppel navigated to Hub/Game
-28-5-2019 | 10:53: End.
----[LOG MSG END]---
-
----[LOG MSG START]---
-[Room]
-28-5-2019 | 10:53: Creating room...
-28-5-2019 | 10:53: Room created with code AT5P4S
-28-5-2019 | 10:53: End.
----[LOG MSG END]---
-
----[LOG MSG START]---
-[RetrieveAllStories]
-28-5-2019 | 10:53: Attempting to retrieve all stories.
-28-5-2019 | 10:53: Found 3 stories.
-28-5-2019 | 10:53: End.
----[LOG MSG END]---
-
----[LOG MSG START]---
-[Game]
-28-5-2019 | 10:54: Planting correct answer...
-28-5-2019 | 10:54: Correct answer is 3 with story string '5:!|Een verhaal:!|Lorem Ipsum bla bla bla'.
----[LOG MSG START]---
 [Game]
-28-5-2019 | 10:54: Activate power-up by 6990af90-cbda-4c01-aa48-372435592a51
-28-5-2019 | 10:54: User AAppel bought a power-up.
-28-5-2019 | 10:54: Chosen power-up is 'answers count for 200% value'.
-28-5-2019 | 10:54: End.
----[LOG MSG END]---
-
+28-5-2019 | 13:23: Planting correct answer...
+28-5-2019 | 13:23: Correct answer is 1 with story string '1:!|Een root verhaal:!|Straight outta RSS feed'.
 ---[LOG MSG START]---
 [Game]
-28-5-2019 | 10:54: Parsing AAppel | 6990af90-cbda-4c01-aa48-372435592a51 score.
-28-5-2019 | 10:54: Player AAppel | 6990af90-cbda-4c01-aa48-372435592a51 followers are now 10
-28-5-2019 | 10:54: End.
+28-5-2019 | 13:23: Activate power-up by 2a6ccaa9-dc1f-4b70-a4b3-bca5a3c9bb57
+28-5-2019 | 13:23: User AAppel bought a power-up.
+28-5-2019 | 13:23: Chosen power-up is 'answers count for 200% value'.
+28-5-2019 | 13:23: End.
 ---[LOG MSG END]---
 
 ---[LOG MSG START]---
 [Game]
-28-5-2019 | 10:54: Parsing AAppel | eb98dc42-5889-42b6-860b-e852a3a91bb4 score.
-28-5-2019 | 10:54: Player AAppel | eb98dc42-5889-42b6-860b-e852a3a91bb4 followers are now 0
-28-5-2019 | 10:54: End.
+28-5-2019 | 13:23: Parsing AAppel | 2a6ccaa9-dc1f-4b70-a4b3-bca5a3c9bb57 score.
+28-5-2019 | 13:23: Player AAppel | 2a6ccaa9-dc1f-4b70-a4b3-bca5a3c9bb57 followers are now 10
+28-5-2019 | 13:23: End.
 ---[LOG MSG END]---
 
 ---[LOG MSG START]---
 [Game]
-28-5-2019 | 10:54: Activate power-up by c67afd1b-5cf2-4f55-b8a5-ab81788d5686
-28-5-2019 | 10:54: User AAppel bought a power-up.
-28-5-2019 | 10:54: Chosen power-up is 'choose two answers for 50% value'.
-28-5-2019 | 10:54: End.
+28-5-2019 | 13:23: Parsing AAppel | af0b254c-1ef0-4910-8f52-df5baf0c32cf score.
+28-5-2019 | 13:23: Player AAppel | af0b254c-1ef0-4910-8f52-df5baf0c32cf followers are now 0
+28-5-2019 | 13:23: End.
 ---[LOG MSG END]---
 
----[LOG MSG START]---
-[Game]
-28-5-2019 | 10:54: Parsing AAppel | c67afd1b-5cf2-4f55-b8a5-ab81788d5686 score.
 ---[LOG MSG START]---
 [Game]
-28-5-2019 | 10:54: Activate power-up by 752dc6a1-7f82-4478-a170-e1f8a999a745
-28-5-2019 | 10:54: User AAppel bought a power-up.
-28-5-2019 | 10:54: Chosen power-up is 'choose two answers for 50% value'.
-28-5-2019 | 10:54: End.
+28-5-2019 | 13:23: Parsing AAppel | 3731447a-8b31-41a9-9986-e62ccd1b9fd2 score.
+28-5-2019 | 13:23: Player AAppel | 3731447a-8b31-41a9-9986-e62ccd1b9fd2 followers are now 5
+28-5-2019 | 13:23: End.
 ---[LOG MSG END]---
 
----[LOG MSG START]---
-[Game]
-28-5-2019 | 10:54: Parsing AAppel | 752dc6a1-7f82-4478-a170-e1f8a999a745 score.
 ---[LOG MSG START]---
 [Game]
-28-5-2019 | 10:54: Parsing AAppel | 27f5bd0f-c099-430f-96b3-798b68ba5a11 score.
-28-5-2019 | 10:54: Player AAppel | 27f5bd0f-c099-430f-96b3-798b68ba5a11 followers are now 0
-28-5-2019 | 10:54: End.
+28-5-2019 | 13:23: Parsing AAppel | 59565d17-8386-47fb-bc73-781200e6bb82 score.
+28-5-2019 | 13:23: Player AAppel | 59565d17-8386-47fb-bc73-781200e6bb82 followers are now 0
+28-5-2019 | 13:23: End.
 ---[LOG MSG END]---
 
 ---[LOG MSG START]---
 [Game]
-28-5-2019 | 10:54: Parsing AAppel | f27d5caa-4408-493c-8ade-5b237bae4b4a score.
-28-5-2019 | 10:54: Player AAppel | f27d5caa-4408-493c-8ade-5b237bae4b4a followers are now 0
-28-5-2019 | 10:54: End.
+28-5-2019 | 13:23: Parsing AAppel | 3052aedb-b114-4ac6-8ad9-2156963388aa score.
+28-5-2019 | 13:23: Player AAppel | 3052aedb-b114-4ac6-8ad9-2156963388aa followers are now 0
+28-5-2019 | 13:23: End.
 ---[LOG MSG END]---
 
 ---[LOG MSG START]---
 [Game]
-28-5-2019 | 10:54: Planting correct answer...
-28-5-2019 | 10:54: Correct answer is 1 with story string '6:!|Nog een verhaal:!|bla bla bla Ipsum Lorem'.
----[LOG MSG START]---
-[Startup]
-28-5-2019 | 10:57: Starting server...
-28-5-2019 | 10:57: Server is up and running!
-28-5-2019 | 10:57: End.
+28-5-2019 | 13:23: Parsing AAppel | 64809bda-f1d1-42a8-808e-c8593a721c37 score.
+28-5-2019 | 13:23: Player AAppel | 64809bda-f1d1-42a8-808e-c8593a721c37 followers are now 0
+28-5-2019 | 13:23: End.
 ---[LOG MSG END]---
 
 ---[LOG MSG START]---
-[CheckLogin]
-28-5-2019 | 10:57: Logging in JMuris...
-28-5-2019 | 10:57: Log in found for user JMuris
-28-5-2019 | 10:57: End.
----[LOG MSG END]---
-
----[LOG MSG START]---
-[RetrieveUser]
-28-5-2019 | 10:57: Attempting to retrieve user with id 4
-28-5-2019 | 10:57: Found user with id 4
-28-5-2019 | 10:57: End.
----[LOG MSG END]---
-
----[LOG MSG START]---
-[AccountController]
-28-5-2019 | 10:57: JMuris validated.
-28-5-2019 | 10:57: JMuris navigated to Hub/Game
-28-5-2019 | 10:57: End.
----[LOG MSG END]---
-
----[LOG MSG START]---
-[AccountController]
-28-5-2019 | 10:57: JMuris validated.
-28-5-2019 | 10:57: JMuris logged out.
-28-5-2019 | 10:57: End.
----[LOG MSG END]---
-
----[LOG MSG START]---
-[CheckLogin]
-28-5-2019 | 10:57: Logging in AAppel...
-28-5-2019 | 10:57: Log in found for user AAppel
-28-5-2019 | 10:57: End.
----[LOG MSG END]---
-
----[LOG MSG START]---
-[RetrieveUser]
-28-5-2019 | 10:57: Attempting to retrieve user with id 5
-28-5-2019 | 10:57: Found user with id 5
-28-5-2019 | 10:57: End.
----[LOG MSG END]---
-
----[LOG MSG START]---
-[AccountController]
-28-5-2019 | 10:57: AAppel validated.
-28-5-2019 | 10:57: AAppel navigated to Hub/Game
-28-5-2019 | 10:57: End.
----[LOG MSG END]---
-
----[LOG MSG START]---
-[Room]
-28-5-2019 | 10:57: Creating room...
-28-5-2019 | 10:57: Room created with code 2T00Nb
-28-5-2019 | 10:57: End.
----[LOG MSG END]---
-
----[LOG MSG START]---
-[RetrieveAllStories]
-28-5-2019 | 10:57: Attempting to retrieve all stories.
-28-5-2019 | 10:57: Found 3 stories.
-28-5-2019 | 10:57: End.
----[LOG MSG END]---
-
----[LOG MSG START]---
 [Game]
-28-5-2019 | 10:57: Planting correct answer...
-28-5-2019 | 10:57: Correct answer is 2 with story string '5:!|Een verhaal:!|Lorem Ipsum bla bla bla'.
----[LOG MSG START]---
-[Startup]
-28-5-2019 | 10:59: Starting server...
-28-5-2019 | 10:59: Server is up and running!
-28-5-2019 | 10:59: End.
----[LOG MSG END]---
-
----[LOG MSG START]---
-[CheckLogin]
-28-5-2019 | 10:59: Logging in JMuris...
-28-5-2019 | 10:59: Log in found for user JMuris
-28-5-2019 | 10:59: End.
----[LOG MSG END]---
-
----[LOG MSG START]---
-[RetrieveUser]
-28-5-2019 | 10:59: Attempting to retrieve user with id 4
-28-5-2019 | 10:59: Found user with id 4
-28-5-2019 | 10:59: End.
----[LOG MSG END]---
-
----[LOG MSG START]---
-[AccountController]
-28-5-2019 | 10:59: JMuris validated.
-28-5-2019 | 10:59: JMuris navigated to Hub/Game
-28-5-2019 | 10:59: End.
----[LOG MSG END]---
-
----[LOG MSG START]---
-[AccountController]
-28-5-2019 | 10:59: JMuris validated.
-28-5-2019 | 10:59: JMuris logged out.
-28-5-2019 | 10:59: End.
----[LOG MSG END]---
-
----[LOG MSG START]---
-[CheckLogin]
-28-5-2019 | 10:59: Logging in AAppel...
-28-5-2019 | 10:59: Log in found for user AAppel
-28-5-2019 | 10:59: End.
----[LOG MSG END]---
-
----[LOG MSG START]---
-[RetrieveUser]
-28-5-2019 | 10:59: Attempting to retrieve user with id 5
-28-5-2019 | 10:59: Found user with id 5
-28-5-2019 | 10:59: End.
----[LOG MSG END]---
-
----[LOG MSG START]---
-[AccountController]
-28-5-2019 | 10:59: AAppel validated.
-28-5-2019 | 10:59: AAppel navigated to Hub/Game
-28-5-2019 | 10:59: End.
----[LOG MSG END]---
-
----[LOG MSG START]---
-[Room]
-28-5-2019 | 10:59: Creating room...
-28-5-2019 | 10:59: Room created with code 73e7Rb
-28-5-2019 | 10:59: End.
+28-5-2019 | 13:23: Putting '892V0L' into read phase.
+28-5-2019 | 13:23: Room '892V0L' has 3 groups.
+28-5-2019 | 13:23: Current group is '2' in room '892V0L'.
+28-5-2019 | 13:23: Game 2 of room '892V0L' started.
+28-5-2019 | 13:23: End.
 ---[LOG MSG END]---
 
 ---[LOG MSG START]---
-[RetrieveAllStories]
-28-5-2019 | 11:00: Attempting to retrieve all stories.
-28-5-2019 | 11:00: Found 3 stories.
-28-5-2019 | 11:00: End.
----[LOG MSG END]---
-
----[LOG MSG START]---
 [Game]
-28-5-2019 | 11:00: Planting correct answer...
-28-5-2019 | 11:00: Correct answer is 3 with story string '5:!|Een verhaal:!|Lorem Ipsum bla bla bla'.
+28-5-2019 | 13:23: Planting correct answer...
+28-5-2019 | 13:23: Correct answer is 0 with story string '5:!|Een verhaal:!|Lorem Ipsum bla bla bla'.
 ---[LOG MSG START]---
 [Game]
-28-5-2019 | 11:00: Activate power-up by 274d21e2-7f65-4a60-9522-1876571fd8e8
-28-5-2019 | 11:00: User AAppel bought a power-up.
-28-5-2019 | 11:00: Chosen power-up is 'answers count for 200% value'.
-28-5-2019 | 11:00: End.
+28-5-2019 | 13:23: Activate power-up by 2a6ccaa9-dc1f-4b70-a4b3-bca5a3c9bb57
+28-5-2019 | 13:23: User AAppel bought a power-up.
+28-5-2019 | 13:23: Chosen power-up is 'answers count for 200% value'.
+28-5-2019 | 13:23: End.
 ---[LOG MSG END]---
 
 ---[LOG MSG START]---
 [Game]
-28-5-2019 | 11:00: Parsing AAppel | 274d21e2-7f65-4a60-9522-1876571fd8e8 score.
-28-5-2019 | 11:00: Player AAppel | 274d21e2-7f65-4a60-9522-1876571fd8e8 followers are now 10
-28-5-2019 | 11:00: End.
----[LOG MSG END]---
-
+28-5-2019 | 13:23: Parsing AAppel | 2a6ccaa9-dc1f-4b70-a4b3-bca5a3c9bb57 score.
 ---[LOG MSG START]---
 [Game]
-28-5-2019 | 11:00: Activate power-up by 271b5839-0fa6-408c-b266-aabffab35ca1
-28-5-2019 | 11:00: User AAppel bought a power-up.
-28-5-2019 | 11:00: Chosen power-up is 'choose two answers for 50% value'.
-28-5-2019 | 11:00: End.
+28-5-2019 | 13:23: Parsing AAppel | af0b254c-1ef0-4910-8f52-df5baf0c32cf score.
+28-5-2019 | 13:23: Player AAppel | af0b254c-1ef0-4910-8f52-df5baf0c32cf followers are now 0
+28-5-2019 | 13:23: End.
 ---[LOG MSG END]---
 
 ---[LOG MSG START]---
 [Game]
-28-5-2019 | 11:00: Parsing AAppel | 271b5839-0fa6-408c-b266-aabffab35ca1 score.
+28-5-2019 | 13:23: Parsing AAppel | 3731447a-8b31-41a9-9986-e62ccd1b9fd2 score.
 ---[LOG MSG START]---
 [Game]
-28-5-2019 | 11:00: Activate power-up by bb98f2f1-a781-4212-918f-9932c1f03a63
-28-5-2019 | 11:00: User AAppel bought a power-up.
-28-5-2019 | 11:00: Chosen power-up is 'choose two answers for 50% value'.
-28-5-2019 | 11:00: End.
----[LOG MSG END]---
-
+28-5-2019 | 13:23: Parsing AAppel | 59565d17-8386-47fb-bc73-781200e6bb82 score.
 ---[LOG MSG START]---
 [Game]
-28-5-2019 | 11:00: Parsing AAppel | bb98f2f1-a781-4212-918f-9932c1f03a63 score.
+28-5-2019 | 13:23: Parsing AAppel | 3052aedb-b114-4ac6-8ad9-2156963388aa score.
 ---[LOG MSG START]---
 [Game]
-28-5-2019 | 11:00: Parsing AAppel | fec13fb0-7bbc-4556-8806-cf07c98f2a37 score.
-28-5-2019 | 11:00: Player AAppel | fec13fb0-7bbc-4556-8806-cf07c98f2a37 followers are now 0
-28-5-2019 | 11:00: End.
+28-5-2019 | 13:23: Parsing AAppel | 64809bda-f1d1-42a8-808e-c8593a721c37 score.
+28-5-2019 | 13:23: Player AAppel | 64809bda-f1d1-42a8-808e-c8593a721c37 followers are now 0
+28-5-2019 | 13:23: End.
 ---[LOG MSG END]---
 
 ---[LOG MSG START]---
 [Game]
-28-5-2019 | 11:00: Parsing AAppel | c8bb1788-0ed2-4943-875d-354783445ab8 score.
-28-5-2019 | 11:00: Player AAppel | c8bb1788-0ed2-4943-875d-354783445ab8 followers are now 0
-28-5-2019 | 11:00: End.
+28-5-2019 | 13:23: Putting '892V0L' into read phase.
+28-5-2019 | 13:23: Room '892V0L' has 3 groups.
+28-5-2019 | 13:23: Current group is '3' in room '892V0L'.
+28-5-2019 | 13:23: Game 3 of room '892V0L' started.
+28-5-2019 | 13:23: End.
 ---[LOG MSG END]---
 
 ---[LOG MSG START]---
 [Game]
-28-5-2019 | 11:00: Parsing AAppel | 0d65e12e-4632-4510-9bce-eaf77d068e3c score.
-28-5-2019 | 11:00: Player AAppel | 0d65e12e-4632-4510-9bce-eaf77d068e3c followers are now 5
-28-5-2019 | 11:00: End.
----[LOG MSG END]---
-
+28-5-2019 | 13:23: Parsing AAppel | 2a6ccaa9-dc1f-4b70-a4b3-bca5a3c9bb57 score.
 ---[LOG MSG START]---
 [Game]
-28-5-2019 | 11:01: Activate power-up by 274d21e2-7f65-4a60-9522-1876571fd8e8
-28-5-2019 | 11:01: User AAppel bought a power-up.
-28-5-2019 | 11:01: Chosen power-up is 'answers count for 200% value'.
-28-5-2019 | 11:01: End.
----[LOG MSG END]---
-
+28-5-2019 | 13:23: Parsing AAppel | af0b254c-1ef0-4910-8f52-df5baf0c32cf score.
 ---[LOG MSG START]---
 [Game]
-28-5-2019 | 11:01: Parsing AAppel | 274d21e2-7f65-4a60-9522-1876571fd8e8 score.
+28-5-2019 | 13:23: Parsing AAppel | 3731447a-8b31-41a9-9986-e62ccd1b9fd2 score.
 ---[LOG MSG START]---
 [Game]
-28-5-2019 | 11:01: Parsing AAppel | 271b5839-0fa6-408c-b266-aabffab35ca1 score.
+28-5-2019 | 13:23: Parsing AAppel | 59565d17-8386-47fb-bc73-781200e6bb82 score.
 ---[LOG MSG START]---
 [Game]
-28-5-2019 | 11:01: Parsing AAppel | bb98f2f1-a781-4212-918f-9932c1f03a63 score.
+28-5-2019 | 13:23: Parsing AAppel | 3052aedb-b114-4ac6-8ad9-2156963388aa score.
 ---[LOG MSG START]---
 [Game]
-28-5-2019 | 11:01: Parsing AAppel | fec13fb0-7bbc-4556-8806-cf07c98f2a37 score.
-28-5-2019 | 11:01: Player AAppel | fec13fb0-7bbc-4556-8806-cf07c98f2a37 followers are now 0
-28-5-2019 | 11:01: End.
----[LOG MSG END]---
-
+28-5-2019 | 13:23: Parsing AAppel | 64809bda-f1d1-42a8-808e-c8593a721c37 score.
