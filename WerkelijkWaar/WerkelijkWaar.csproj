@@ -21,7 +21,6 @@
 
   <ItemGroup>
     <Folder Include="wwwroot\content\image\" />
-    <Folder Include="wwwroot\content\audio\" />
   </ItemGroup>
 
 </Project>

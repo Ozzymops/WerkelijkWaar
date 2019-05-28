@@ -281,17 +281,24 @@ $(document).ready(function () {
         }
     }
 
-    connection.clientMethods["updatePowerups"] = (roomCode, socketId, powerup1, powerup2, powerup3) => {
+    connection.clientMethods["updatePowerups"] = (roomCode, socketId, powerup) => {
         if ($roomContent.val() == roomCode) {
             if (connection.connectionId == socketId) {
-                if (powerup1) {
 
+                console.log("update powerup " + powerup);
+
+                if (powerup == 1) {
+                    answerCount = 2;
+                    document.getElementById("powerupFeedback").innerHTML = "Je kan nu twee antwoorden selecteren.";
                 }
-                else if (powerup2) {
-
+                else if (powerup == 2) {
+                    document.getElementById("powerupFeedback").innerHTML = "Jouw antwoorden tellen nu 2x mee.";      
                 }
-                else if (powerup3) {
-
+                else if (powerup == 3) {
+                    document.getElementById("powerupFeedback").innerHTML = "50% van de foute antwoorden zijn nu weggestreept.";               
+                }
+                else if (powerup == 4) {
+                    document.getElementById("powerupFeedback").innerHTML = "Je kan nu het aantal stemmen zien.";
                 }
             }
         }
@@ -309,7 +316,9 @@ $(document).ready(function () {
     var currentTimer;
     var currentRootId = 0;
     var myGroup = 0;
-    var selectedAnswer = 0;
+    var selectedAnswer = "";
+    var toSelect = 0;
+    var answerCount = 1;
 
     // Host a room
     $('#btn-openLobby').click(function () {
@@ -403,15 +412,27 @@ $(document).ready(function () {
     });
 
     $('#btn-activatePowerup-1').click(function () {
+        console.log("powerup 1");
         activatePowerup(1);
     });
 
     $('#btn-activatePowerup-2').click(function () {
+        console.log("powerup 2");
         activatePowerup(2);
     });
 
     $('#btn-activatePowerup-3').click(function () {
+        console.log("powerup 3");
         activatePowerup(3);
+    });
+
+    $('#btn-activatePowerup-4').click(function () {
+        console.log("powerup 4");
+        activatePowerup(4);
+    });
+
+    $('#btn-nextRound').click(function () {
+        connection.invoke("GoToReadPhase", $roomContent.val(), false);
     });
 
     // Start timer
@@ -454,7 +475,11 @@ $(document).ready(function () {
                 else if (soundState == 0) {
                     document.getElementById("snd-timer-3").play();
                     soundState = 1;
-                }     
+                }
+
+                if (seconds == 120) {
+                    document.getElementById("snd-120seconds").play();
+                }
             }
 
             soundState--;
@@ -470,7 +495,7 @@ $(document).ready(function () {
                 }
             }
 
-        }, 500); // 1000
+        }, 1000); // 1000
     }
 
     // Stop timer
@@ -564,7 +589,7 @@ $(document).ready(function () {
     }
 
     function swapStory(storyNumber) {
-        selectedAnswer = storyNumber;
+        toSelect = storyNumber;
 
         var selectedStoryContent = storyList[storyNumber].split(':!|');
 
@@ -576,33 +601,40 @@ $(document).ready(function () {
     }
 
     function sendAnswer() {
-        $('#btn-shareStory').prop('disabled', true);
+        answerCount--;
 
-        document.getElementById("read-busy").style.display = "none";
-        document.getElementById("read-finished").style.display = "block";
+        selectedAnswer += toSelect;
 
-        console.log("Answered with " + selectedAnswer);
-        connection.invoke("UploadAnswer", $roomContent.val(), connection.connectionId, selectedAnswer);
+        if (answerCount <= 0) {
+            $('#btn-shareStory').prop('disabled', true);
+
+            document.getElementById("read-busy").style.display = "none";
+            document.getElementById("read-finished").style.display = "block";
+
+            console.log("Answered with " + selectedAnswer);
+            connection.invoke("UploadAnswer", $roomContent.val(), connection.connectionId, selectedAnswer);
+        }
     }
 
     function activatePowerup(powerup) {
-        if (powerup == 1) {
-            $('#btn-activatePowerup-1').prop('disabled', true);
-        }
-        else if (powerup == 2) {
-            $('#btn-activatePowerup-2').prop('disabled', true);
-        }
-        else {
-            $('#btn-activatePowerup-3').prop('disabled', true);
-        }
+        console.log("powerup yeet " + powerup);
 
-        connection.invoke("ActivatePowerup", $roomContent.val(), connection.connectionId, powerup);
+        document.getElementById("btn-activatePowerup").style.display = "block";
+        document.getElementById("powerupBar").style.display = "none";
+
+        connection.invoke("ActivatePowerup", $roomContent.val(), connection.connectionId, '' + powerup);
     }
 
     function showLeaderboards() {
         document.getElementById("game-write").style.display = "none";
         document.getElementById("game-read").style.display = "none";
         document.getElementById("game-leaderboard").style.display = "block";
+
+        $('#btn-shareStory').prop('disabled', false);
+        document.getElementById("read-busy").style.display = "block";
+        document.getElementById("read-finished").style.display = "none";
+        document.getElementById("btn-activatePowerup").style.display = "block";
+        document.getElementById("powerupBar").style.display = "none";
     }
 
     //#endregion

@@ -89,14 +89,16 @@
                                 <input id="btn-activatePowerup" class="form-button-orange" type="button" value="Hulplijn" />
                             </div>
                             <div id="powerupBar" style="display: none;">
+                                <p id="powerupFeedback"></p>
                                 <input id="btn-activatePowerup-1" class="form-button-orange" type="button" value="Twee antwoorden kiezen" />
                                 <input id="btn-activatePowerup-2" class="form-button-orange" type="button" value="Dubbele punten" />
                                 <input id="btn-activatePowerup-3" class="form-button-orange" type="button" value="50% wegstrepen" />
+                                <input id="btn-activatePowerup-4" class="form-button-orange" type="button" value="Spieken" />
                             </div>
                         </div>
                     </div>
                     <div id="read-finished">
-
+                        <p>Was dat het juiste antwoord? We zullen zien!</p>
                     </div>
                     <span class="clockBar" style="display: none; margin-left: auto; margin-right: auto; width: 100vw; height: 50px; background-color: #f7c747; text-align: center;"></span>
                 </div>
@@ -114,6 +116,7 @@
                 <audio id="snd-timesup" src="~/content/audio/TimesUp.wav"></audio>
                 <audio id="snd-correct" src="~/content/audio/Correct.wav"></audio>
                 <audio id="snd-wrong" src="~/content/audio/Wrong.wav"></audio>
+                <audio id="snd-120seconds" src="~/content/audio/120seconds.mp3"></audio>
                 <!-- !Eind geluiden! -->
                 <div id="game-prep">
                     <h2 class="subtitle">Speel het spel! Open een lobby en toon de code op het bord:</h2>
@@ -169,8 +172,9 @@
                     </div>
                     <span class="clockBar" style="display: none; margin-left: auto; margin-right: auto; width: 100vw; height: 50px; background-color: #f7c747; text-align: center;"></span>
                 </div>
-                <div id="game-leaderboard">
+                <div id="game-leaderboard" style="display: none;">
                     <ul id="leaderboard"></ul>
+                    <input id="btn-nextRound" type="button" value="Volgende ronde" />
                 </div>
             }
             @if (Model.User.RoleId == 2)
