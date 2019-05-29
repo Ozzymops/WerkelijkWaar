@@ -498,3 +498,10 @@
 29-5-2019 | 10:19: End.
 ---[LOG MSG END]---
 
+---[LOG MSG START]---
+[Startup]
+29-5-2019 | 10:24: Starting server...
+29-5-2019 | 10:24: Server is up and running!
+29-5-2019 | 10:24: End.
+---[LOG MSG END]---
+

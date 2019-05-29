@@ -18,7 +18,7 @@
             </div>
             <div style="margin-top: 10px;">
                 <p class="before-input">Wachtwoord:</p>
-                <input asp-for="Password" type="password" class="text-input"/>
+                <input asp-for="Password" type="password" class="text-input" />
             </div>
             <input type="submit" value="Aanmelden" class="form-button" style="width: 300px; margin-top: 20px;" />
         </form>
@@ -30,6 +30,7 @@
             <form>
                 <input asp-controller="Home" asp-action="GameInfo" type="submit" class="landing button-balloon" value="Hoe speel ik het spel?" />
             </form>
-        </div>     
+        </div>
     </div>
+    <a asp-controller="Home" asp-action="Privacy" style="position: absolute; bottom: 10px; right: 200px;">Privacy / AVG</a>
 </body>

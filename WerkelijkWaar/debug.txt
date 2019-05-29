@@ -839,3 +839,10 @@ Error Number:201,State:4,Class:16
 29-5-2019 | 10:19: End.
 ---[DEBUG MSG END]---
 
+---[DEBUG MSG START]---
+[Startup]
+29-5-2019 | 10:24: 5ms. Launching server
+29-5-2019 | 10:24: 14ms. Server is up
+29-5-2019 | 10:24: End.
+---[DEBUG MSG END]---
+
