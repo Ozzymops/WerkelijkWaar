@@ -1618,3 +1618,1806 @@
 29-5-2019 | 12:06: End.
 ---[LOG MSG END]---
 
+---[LOG MSG START]---
+[Startup]
+29-5-2019 | 13:29: Starting server...
+29-5-2019 | 13:29: Server is up and running!
+29-5-2019 | 13:29: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[CheckLogin]
+29-5-2019 | 13:29: Logging in JMuris...
+29-5-2019 | 13:29: Log in found for user JMuris
+29-5-2019 | 13:29: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveUser]
+29-5-2019 | 13:29: Attempting to retrieve user with id 4
+29-5-2019 | 13:29: Found user with id 4
+29-5-2019 | 13:29: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[AccountController]
+29-5-2019 | 13:29: JMuris validated.
+29-5-2019 | 13:29: JMuris navigated to Hub/Game
+29-5-2019 | 13:29: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[CheckLogin]
+29-5-2019 | 13:32: Logging in ...
+29-5-2019 | 13:32: Something went wrong. Check debug.txt
+29-5-2019 | 13:32: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveUserListByGroup]
+29-5-2019 | 13:32: Attempting to retrieve users from group 2
+29-5-2019 | 13:32: Found 2 users from group 2
+29-5-2019 | 13:32: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[Startup]
+29-5-2019 | 13:35: Starting server...
+29-5-2019 | 13:35: Server is up and running!
+29-5-2019 | 13:35: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[CheckLogin]
+29-5-2019 | 13:35: Logging in JMuris...
+29-5-2019 | 13:35: Log in found for user JMuris
+29-5-2019 | 13:35: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveUser]
+29-5-2019 | 13:35: Attempting to retrieve user with id 4
+29-5-2019 | 13:35: Found user with id 4
+29-5-2019 | 13:35: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[AccountController]
+29-5-2019 | 13:35: JMuris validated.
+29-5-2019 | 13:35: JMuris navigated to Hub/Game
+29-5-2019 | 13:35: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[CheckLogin]
+29-5-2019 | 13:35: Logging in ...
+29-5-2019 | 13:35: Something went wrong. Check debug.txt
+29-5-2019 | 13:35: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[Startup]
+29-5-2019 | 13:44: Starting server...
+29-5-2019 | 13:44: Server is up and running!
+29-5-2019 | 13:44: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[CheckLogin]
+29-5-2019 | 13:44: Logging in AAppel...
+29-5-2019 | 13:44: Log in found for user AAppel
+29-5-2019 | 13:44: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveUser]
+29-5-2019 | 13:44: Attempting to retrieve user with id 5
+29-5-2019 | 13:44: Found user with id 5
+29-5-2019 | 13:44: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[AccountController]
+29-5-2019 | 13:44: AAppel validated.
+29-5-2019 | 13:44: AAppel navigated to Hub/Game
+29-5-2019 | 13:44: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveUser]
+29-5-2019 | 13:44: Attempting to retrieve user with id 5
+29-5-2019 | 13:44: Found user with id 5
+29-5-2019 | 13:44: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveScoresOfUser]
+29-5-2019 | 13:44: Attempting to retrieve scores of user 5
+29-5-2019 | 13:44: Could not find any scores of user 5
+29-5-2019 | 13:44: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[AccountController]
+29-5-2019 | 13:44: AAppel validated.
+29-5-2019 | 13:44: AAppel navigated to Hub/Game
+29-5-2019 | 13:44: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[CheckLogin]
+29-5-2019 | 13:44: Logging in ...
+29-5-2019 | 13:44: Something went wrong. Check debug.txt
+29-5-2019 | 13:44: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[Startup]
+29-5-2019 | 13:45: Starting server...
+29-5-2019 | 13:45: Server is up and running!
+29-5-2019 | 13:45: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[CheckLogin]
+29-5-2019 | 13:45: Logging in AAppel...
+29-5-2019 | 13:45: Log in found for user AAppel
+29-5-2019 | 13:45: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveUser]
+29-5-2019 | 13:45: Attempting to retrieve user with id 5
+29-5-2019 | 13:45: Found user with id 5
+29-5-2019 | 13:45: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[AccountController]
+29-5-2019 | 13:45: AAppel validated.
+29-5-2019 | 13:45: AAppel navigated to Hub/Game
+29-5-2019 | 13:45: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[CheckLogin]
+29-5-2019 | 13:45: Logging in ...
+29-5-2019 | 13:45: Something went wrong. Check debug.txt
+29-5-2019 | 13:45: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[Startup]
+29-5-2019 | 13:47: Starting server...
+29-5-2019 | 13:47: Server is up and running!
+29-5-2019 | 13:47: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[CheckLogin]
+29-5-2019 | 13:47: Logging in AAppel...
+29-5-2019 | 13:47: Log in found for user AAppel
+29-5-2019 | 13:47: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveUser]
+29-5-2019 | 13:47: Attempting to retrieve user with id 5
+29-5-2019 | 13:47: Found user with id 5
+29-5-2019 | 13:47: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[AccountController]
+29-5-2019 | 13:47: AAppel validated.
+29-5-2019 | 13:47: AAppel navigated to Hub/Game
+29-5-2019 | 13:47: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[CheckLogin]
+29-5-2019 | 13:47: Logging in ...
+29-5-2019 | 13:47: Something went wrong. Check debug.txt
+29-5-2019 | 13:47: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[AccountController]
+29-5-2019 | 13:48: AAppel validated.
+29-5-2019 | 13:48: AAppel logged out.
+29-5-2019 | 13:48: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[CheckLogin]
+29-5-2019 | 13:49: Logging in JMuris...
+29-5-2019 | 13:49: Log in found for user JMuris
+29-5-2019 | 13:49: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveUser]
+29-5-2019 | 13:49: Attempting to retrieve user with id 4
+29-5-2019 | 13:49: Found user with id 4
+29-5-2019 | 13:49: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[AccountController]
+29-5-2019 | 13:49: JMuris validated.
+29-5-2019 | 13:49: JMuris navigated to Hub/Game
+29-5-2019 | 13:49: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[AccountController]
+29-5-2019 | 13:49: JMuris validated.
+29-5-2019 | 13:49: JMuris logged out.
+29-5-2019 | 13:49: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[CheckLogin]
+29-5-2019 | 13:49: Logging in AAppel...
+29-5-2019 | 13:49: Log in found for user AAppel
+29-5-2019 | 13:49: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveUser]
+29-5-2019 | 13:49: Attempting to retrieve user with id 5
+29-5-2019 | 13:49: Found user with id 5
+29-5-2019 | 13:49: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[AccountController]
+29-5-2019 | 13:49: AAppel validated.
+29-5-2019 | 13:49: AAppel navigated to Hub/Game
+29-5-2019 | 13:49: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[Room]
+29-5-2019 | 13:49: Creating room...
+29-5-2019 | 13:49: Room created with code 3F7b5k
+29-5-2019 | 13:49: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveAllStories]
+29-5-2019 | 13:49: Attempting to retrieve all stories.
+29-5-2019 | 13:49: Found 9 stories.
+29-5-2019 | 13:49: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[Game]
+29-5-2019 | 13:51: Planting correct answer...
+29-5-2019 | 13:51: Correct answer is 1 with story string '6:!|Nog een verhaal:!|bla bla bla Ipsum Lorem'.
+---[LOG MSG START]---
+[Startup]
+29-5-2019 | 13:54: Starting server...
+29-5-2019 | 13:54: Server is up and running!
+29-5-2019 | 13:54: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[CheckLogin]
+29-5-2019 | 13:54: Logging in JMuris...
+29-5-2019 | 13:54: Log in found for user JMuris
+29-5-2019 | 13:54: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveUser]
+29-5-2019 | 13:54: Attempting to retrieve user with id 4
+29-5-2019 | 13:54: Found user with id 4
+29-5-2019 | 13:54: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[AccountController]
+29-5-2019 | 13:54: JMuris validated.
+29-5-2019 | 13:54: JMuris navigated to Hub/Game
+29-5-2019 | 13:54: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[AccountController]
+29-5-2019 | 13:54: JMuris validated.
+29-5-2019 | 13:54: JMuris logged out.
+29-5-2019 | 13:54: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[CheckLogin]
+29-5-2019 | 13:54: Logging in AAppel...
+29-5-2019 | 13:54: Log in found for user AAppel
+29-5-2019 | 13:54: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveUser]
+29-5-2019 | 13:54: Attempting to retrieve user with id 5
+29-5-2019 | 13:54: Found user with id 5
+29-5-2019 | 13:54: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[AccountController]
+29-5-2019 | 13:54: AAppel validated.
+29-5-2019 | 13:54: AAppel navigated to Hub/Game
+29-5-2019 | 13:54: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[CheckLogin]
+29-5-2019 | 13:54: Logging in ...
+29-5-2019 | 13:54: Something went wrong. Check debug.txt
+29-5-2019 | 13:54: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveUser]
+29-5-2019 | 13:56: Attempting to retrieve user with id 5
+29-5-2019 | 13:56: Found user with id 5
+29-5-2019 | 13:56: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveScoresOfUser]
+29-5-2019 | 13:56: Attempting to retrieve scores of user 5
+29-5-2019 | 13:56: Could not find any scores of user 5
+29-5-2019 | 13:56: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[AccountController]
+29-5-2019 | 13:56: AAppel validated.
+29-5-2019 | 13:56: AAppel navigated to Hub/Game
+29-5-2019 | 13:56: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[AccountController]
+29-5-2019 | 13:57: AAppel validated.
+29-5-2019 | 13:57: AAppel logged out.
+29-5-2019 | 13:57: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[CheckLogin]
+29-5-2019 | 13:57: Logging in JMuris...
+29-5-2019 | 13:57: Log in found for user JMuris
+29-5-2019 | 13:57: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveUser]
+29-5-2019 | 13:57: Attempting to retrieve user with id 4
+29-5-2019 | 13:57: Found user with id 4
+29-5-2019 | 13:57: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[AccountController]
+29-5-2019 | 13:57: JMuris validated.
+29-5-2019 | 13:57: JMuris navigated to Hub/Game
+29-5-2019 | 13:57: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveUserListByGroup]
+29-5-2019 | 13:58: Attempting to retrieve users from group 2
+29-5-2019 | 13:58: Found 2 users from group 2
+29-5-2019 | 13:58: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveUserListByGroup]
+29-5-2019 | 13:58: Attempting to retrieve users from group 2
+29-5-2019 | 13:58: Found 2 users from group 2
+29-5-2019 | 13:58: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveUserListByGroup]
+29-5-2019 | 13:58: Attempting to retrieve users from group 2
+29-5-2019 | 13:58: Found 2 users from group 2
+29-5-2019 | 13:58: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveUserListByGroup]
+29-5-2019 | 13:58: Attempting to retrieve users from group 2
+29-5-2019 | 13:58: Found 2 users from group 2
+29-5-2019 | 13:58: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveUserListByGroup]
+29-5-2019 | 13:58: Attempting to retrieve users from group 2
+29-5-2019 | 13:58: Found 2 users from group 2
+29-5-2019 | 13:58: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[Startup]
+29-5-2019 | 13:59: Starting server...
+29-5-2019 | 13:59: Server is up and running!
+29-5-2019 | 13:59: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[CheckLogin]
+29-5-2019 | 13:59: Logging in JMuris...
+29-5-2019 | 13:59: Log in found for user JMuris
+29-5-2019 | 13:59: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveUser]
+29-5-2019 | 13:59: Attempting to retrieve user with id 4
+29-5-2019 | 13:59: Found user with id 4
+29-5-2019 | 13:59: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[AccountController]
+29-5-2019 | 13:59: JMuris validated.
+29-5-2019 | 13:59: JMuris navigated to Hub/Game
+29-5-2019 | 13:59: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveUserListByGroup]
+29-5-2019 | 13:59: Attempting to retrieve users from group 2
+29-5-2019 | 13:59: Found 2 users from group 2
+29-5-2019 | 13:59: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveUserListByGroup]
+29-5-2019 | 14:00: Attempting to retrieve users from group 2
+29-5-2019 | 14:00: Found 2 users from group 2
+29-5-2019 | 14:00: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[CheckLogin]
+29-5-2019 | 14:00: Logging in ...
+29-5-2019 | 14:00: Something went wrong. Check debug.txt
+29-5-2019 | 14:00: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveUserListByGroup]
+29-5-2019 | 14:02: Attempting to retrieve users from group 2
+29-5-2019 | 14:02: Found 2 users from group 2
+29-5-2019 | 14:02: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveUserListByGroup]
+29-5-2019 | 14:02: Attempting to retrieve users from group 2
+29-5-2019 | 14:02: Found 2 users from group 2
+29-5-2019 | 14:02: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveUserListByGroup]
+29-5-2019 | 14:02: Attempting to retrieve users from group 2
+29-5-2019 | 14:02: Found 2 users from group 2
+29-5-2019 | 14:02: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveUserListByGroup]
+29-5-2019 | 14:02: Attempting to retrieve users from group 2
+29-5-2019 | 14:02: Found 2 users from group 2
+29-5-2019 | 14:02: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveUserListByGroup]
+29-5-2019 | 14:02: Attempting to retrieve users from group 2
+29-5-2019 | 14:02: Found 2 users from group 2
+29-5-2019 | 14:02: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveUserListByGroup]
+29-5-2019 | 14:03: Attempting to retrieve users from group 2
+29-5-2019 | 14:03: Found 2 users from group 2
+29-5-2019 | 14:03: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveUserListByGroup]
+29-5-2019 | 14:05: Attempting to retrieve users from group 2
+29-5-2019 | 14:05: Found 2 users from group 2
+29-5-2019 | 14:05: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveUserListByGroup]
+29-5-2019 | 14:06: Attempting to retrieve users from group 2
+29-5-2019 | 14:06: Found 2 users from group 2
+29-5-2019 | 14:06: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveUserListByGroup]
+29-5-2019 | 14:06: Attempting to retrieve users from group 2
+29-5-2019 | 14:06: Found 2 users from group 2
+29-5-2019 | 14:06: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveUserListByGroup]
+29-5-2019 | 14:14: Attempting to retrieve users from group 2
+29-5-2019 | 14:14: Found 2 users from group 2
+29-5-2019 | 14:14: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[Startup]
+29-5-2019 | 14:14: Starting server...
+29-5-2019 | 14:14: Server is up and running!
+29-5-2019 | 14:14: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[CheckLogin]
+29-5-2019 | 14:14: Logging in JMuris...
+29-5-2019 | 14:14: Log in found for user JMuris
+29-5-2019 | 14:14: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveUser]
+29-5-2019 | 14:14: Attempting to retrieve user with id 4
+29-5-2019 | 14:14: Found user with id 4
+29-5-2019 | 14:14: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[AccountController]
+29-5-2019 | 14:14: JMuris validated.
+29-5-2019 | 14:14: JMuris navigated to Hub/Game
+29-5-2019 | 14:14: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveUserListByGroup]
+29-5-2019 | 14:14: Attempting to retrieve users from group 2
+29-5-2019 | 14:14: Found 2 users from group 2
+29-5-2019 | 14:14: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveScoresOfUser]
+29-5-2019 | 14:14: Attempting to retrieve scores of user 5
+29-5-2019 | 14:14: Could not find any scores of user 5
+29-5-2019 | 14:14: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[Startup]
+29-5-2019 | 14:15: Starting server...
+29-5-2019 | 14:15: Server is up and running!
+29-5-2019 | 14:15: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[CheckLogin]
+29-5-2019 | 14:15: Logging in JMuris...
+29-5-2019 | 14:15: Log in found for user JMuris
+29-5-2019 | 14:15: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveUser]
+29-5-2019 | 14:15: Attempting to retrieve user with id 4
+29-5-2019 | 14:15: Found user with id 4
+29-5-2019 | 14:15: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[AccountController]
+29-5-2019 | 14:15: JMuris validated.
+29-5-2019 | 14:15: JMuris navigated to Hub/Game
+29-5-2019 | 14:15: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveUserListByGroup]
+29-5-2019 | 14:15: Attempting to retrieve users from group 2
+29-5-2019 | 14:15: Found 2 users from group 2
+29-5-2019 | 14:15: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveScoresOfUser]
+29-5-2019 | 14:15: Attempting to retrieve scores of user 5
+29-5-2019 | 14:15: Could not find any scores of user 5
+29-5-2019 | 14:15: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveScoresOfUser]
+29-5-2019 | 14:15: Attempting to retrieve scores of user 6
+29-5-2019 | 14:15: Could not find any scores of user 6
+29-5-2019 | 14:15: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveScoresOfUser]
+29-5-2019 | 14:15: Attempting to retrieve scores of user 5
+29-5-2019 | 14:15: Could not find any scores of user 5
+29-5-2019 | 14:15: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveScoresOfUser]
+29-5-2019 | 14:15: Attempting to retrieve scores of user 6
+29-5-2019 | 14:15: Could not find any scores of user 6
+29-5-2019 | 14:15: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveScoresOfUser]
+29-5-2019 | 14:15: Attempting to retrieve scores of user 5
+29-5-2019 | 14:15: Could not find any scores of user 5
+29-5-2019 | 14:15: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveScoresOfUser]
+29-5-2019 | 14:15: Attempting to retrieve scores of user 6
+29-5-2019 | 14:15: Could not find any scores of user 6
+29-5-2019 | 14:15: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveUserListByGroup]
+29-5-2019 | 14:17: Attempting to retrieve users from group 2
+29-5-2019 | 14:17: Found 2 users from group 2
+29-5-2019 | 14:17: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveScoresOfUser]
+29-5-2019 | 14:17: Attempting to retrieve scores of user 5
+29-5-2019 | 14:17: Found 3 scores from user 5
+29-5-2019 | 14:17: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveScoresOfUser]
+29-5-2019 | 14:17: Attempting to retrieve scores of user 6
+29-5-2019 | 14:17: Found 3 scores from user 6
+29-5-2019 | 14:17: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveScoresOfUser]
+29-5-2019 | 14:17: Attempting to retrieve scores of user 5
+29-5-2019 | 14:17: Found 3 scores from user 5
+29-5-2019 | 14:17: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveScoresOfUser]
+29-5-2019 | 14:17: Attempting to retrieve scores of user 6
+29-5-2019 | 14:17: Found 3 scores from user 6
+29-5-2019 | 14:17: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveScoresOfUser]
+29-5-2019 | 14:17: Attempting to retrieve scores of user 5
+29-5-2019 | 14:17: Found 3 scores from user 5
+29-5-2019 | 14:17: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveScoresOfUser]
+29-5-2019 | 14:17: Attempting to retrieve scores of user 6
+29-5-2019 | 14:17: Found 3 scores from user 6
+29-5-2019 | 14:17: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[AccountController]
+29-5-2019 | 14:17: JMuris validated.
+29-5-2019 | 14:17: JMuris logged out.
+29-5-2019 | 14:17: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[CheckLogin]
+29-5-2019 | 14:17: Logging in JMuris...
+29-5-2019 | 14:17: Log in found for user JMuris
+29-5-2019 | 14:17: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveUser]
+29-5-2019 | 14:17: Attempting to retrieve user with id 4
+29-5-2019 | 14:17: Found user with id 4
+29-5-2019 | 14:17: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[AccountController]
+29-5-2019 | 14:17: JMuris validated.
+29-5-2019 | 14:17: JMuris navigated to Hub/Game
+29-5-2019 | 14:17: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveUserListByGroup]
+29-5-2019 | 14:17: Attempting to retrieve users from group 2
+29-5-2019 | 14:17: Found 2 users from group 2
+29-5-2019 | 14:17: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveScoresOfUser]
+29-5-2019 | 14:17: Attempting to retrieve scores of user 5
+29-5-2019 | 14:17: Found 3 scores from user 5
+29-5-2019 | 14:17: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveScoresOfUser]
+29-5-2019 | 14:17: Attempting to retrieve scores of user 6
+29-5-2019 | 14:17: Found 3 scores from user 6
+29-5-2019 | 14:17: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveScoresOfUser]
+29-5-2019 | 14:17: Attempting to retrieve scores of user 5
+29-5-2019 | 14:17: Found 3 scores from user 5
+29-5-2019 | 14:17: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveScoresOfUser]
+29-5-2019 | 14:17: Attempting to retrieve scores of user 6
+29-5-2019 | 14:17: Found 3 scores from user 6
+29-5-2019 | 14:17: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveScoresOfUser]
+29-5-2019 | 14:17: Attempting to retrieve scores of user 5
+29-5-2019 | 14:17: Found 3 scores from user 5
+29-5-2019 | 14:17: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveScoresOfUser]
+29-5-2019 | 14:17: Attempting to retrieve scores of user 6
+29-5-2019 | 14:17: Found 3 scores from user 6
+29-5-2019 | 14:17: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[Startup]
+29-5-2019 | 14:18: Starting server...
+29-5-2019 | 14:18: Server is up and running!
+29-5-2019 | 14:18: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[CheckLogin]
+29-5-2019 | 14:18: Logging in JMuris...
+29-5-2019 | 14:18: Log in found for user JMuris
+29-5-2019 | 14:18: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveUser]
+29-5-2019 | 14:18: Attempting to retrieve user with id 4
+29-5-2019 | 14:18: Found user with id 4
+29-5-2019 | 14:18: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[AccountController]
+29-5-2019 | 14:18: JMuris validated.
+29-5-2019 | 14:18: JMuris navigated to Hub/Game
+29-5-2019 | 14:18: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveUserListByGroup]
+29-5-2019 | 14:18: Attempting to retrieve users from group 2
+29-5-2019 | 14:18: Found 2 users from group 2
+29-5-2019 | 14:18: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[Startup]
+29-5-2019 | 14:21: Starting server...
+29-5-2019 | 14:21: Server is up and running!
+29-5-2019 | 14:21: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[CheckLogin]
+29-5-2019 | 14:21: Logging in JMuris...
+29-5-2019 | 14:21: Log in found for user JMuris
+29-5-2019 | 14:21: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveUser]
+29-5-2019 | 14:21: Attempting to retrieve user with id 4
+29-5-2019 | 14:21: Found user with id 4
+29-5-2019 | 14:21: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[AccountController]
+29-5-2019 | 14:21: JMuris validated.
+29-5-2019 | 14:21: JMuris navigated to Hub/Game
+29-5-2019 | 14:21: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveUserListByGroup]
+29-5-2019 | 14:21: Attempting to retrieve users from group 2
+29-5-2019 | 14:21: Found 2 users from group 2
+29-5-2019 | 14:21: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[Startup]
+29-5-2019 | 14:22: Starting server...
+29-5-2019 | 14:22: Server is up and running!
+29-5-2019 | 14:22: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[CheckLogin]
+29-5-2019 | 14:22: Logging in JMuris...
+29-5-2019 | 14:22: Log in found for user JMuris
+29-5-2019 | 14:22: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveUser]
+29-5-2019 | 14:22: Attempting to retrieve user with id 4
+29-5-2019 | 14:22: Found user with id 4
+29-5-2019 | 14:22: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[AccountController]
+29-5-2019 | 14:22: JMuris validated.
+29-5-2019 | 14:22: JMuris navigated to Hub/Game
+29-5-2019 | 14:22: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveUserListByGroup]
+29-5-2019 | 14:22: Attempting to retrieve users from group 2
+29-5-2019 | 14:22: Found 2 users from group 2
+29-5-2019 | 14:22: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[Startup]
+29-5-2019 | 14:26: Starting server...
+29-5-2019 | 14:26: Server is up and running!
+29-5-2019 | 14:26: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[CheckLogin]
+29-5-2019 | 14:26: Logging in JMuris...
+29-5-2019 | 14:26: Log in found for user JMuris
+29-5-2019 | 14:26: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveUser]
+29-5-2019 | 14:26: Attempting to retrieve user with id 4
+29-5-2019 | 14:26: Found user with id 4
+29-5-2019 | 14:26: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[AccountController]
+29-5-2019 | 14:26: JMuris validated.
+29-5-2019 | 14:26: JMuris navigated to Hub/Game
+29-5-2019 | 14:26: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveUserListByGroup]
+29-5-2019 | 14:26: Attempting to retrieve users from group 2
+29-5-2019 | 14:26: Found 2 users from group 2
+29-5-2019 | 14:26: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveUserListByGroup]
+29-5-2019 | 14:28: Attempting to retrieve users from group 2
+29-5-2019 | 14:28: Found 2 users from group 2
+29-5-2019 | 14:28: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveUserListByGroup]
+29-5-2019 | 14:28: Attempting to retrieve users from group 2
+29-5-2019 | 14:28: Found 2 users from group 2
+29-5-2019 | 14:28: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[CheckLogin]
+29-5-2019 | 14:28: Logging in ...
+29-5-2019 | 14:28: Something went wrong. Check debug.txt
+29-5-2019 | 14:28: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveUserListByGroup]
+29-5-2019 | 14:29: Attempting to retrieve users from group 2
+29-5-2019 | 14:29: Found 2 users from group 2
+29-5-2019 | 14:29: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveUserListByGroup]
+29-5-2019 | 14:29: Attempting to retrieve users from group 2
+29-5-2019 | 14:29: Found 2 users from group 2
+29-5-2019 | 14:29: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveUserListByGroup]
+29-5-2019 | 14:29: Attempting to retrieve users from group 2
+29-5-2019 | 14:29: Found 2 users from group 2
+29-5-2019 | 14:29: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveUserListByGroup]
+29-5-2019 | 14:30: Attempting to retrieve users from group 2
+29-5-2019 | 14:30: Found 2 users from group 2
+29-5-2019 | 14:30: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveUserListByGroup]
+29-5-2019 | 14:31: Attempting to retrieve users from group 2
+29-5-2019 | 14:31: Found 2 users from group 2
+29-5-2019 | 14:31: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[Startup]
+29-5-2019 | 14:33: Starting server...
+29-5-2019 | 14:33: Server is up and running!
+29-5-2019 | 14:33: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[CheckLogin]
+29-5-2019 | 14:33: Logging in JMuris...
+29-5-2019 | 14:33: Log in found for user JMuris
+29-5-2019 | 14:33: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveUser]
+29-5-2019 | 14:33: Attempting to retrieve user with id 4
+29-5-2019 | 14:33: Found user with id 4
+29-5-2019 | 14:33: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[AccountController]
+29-5-2019 | 14:33: JMuris validated.
+29-5-2019 | 14:33: JMuris navigated to Hub/Game
+29-5-2019 | 14:33: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveUserListByGroup]
+29-5-2019 | 14:33: Attempting to retrieve users from group 2
+29-5-2019 | 14:33: Found 2 users from group 2
+29-5-2019 | 14:33: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[Startup]
+29-5-2019 | 14:34: Starting server...
+29-5-2019 | 14:34: Server is up and running!
+29-5-2019 | 14:34: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[CheckLogin]
+29-5-2019 | 14:34: Logging in JMuris...
+29-5-2019 | 14:34: Log in found for user JMuris
+29-5-2019 | 14:34: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveUser]
+29-5-2019 | 14:34: Attempting to retrieve user with id 4
+29-5-2019 | 14:34: Found user with id 4
+29-5-2019 | 14:34: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[AccountController]
+29-5-2019 | 14:34: JMuris validated.
+29-5-2019 | 14:34: JMuris navigated to Hub/Game
+29-5-2019 | 14:34: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveUserListByGroup]
+29-5-2019 | 14:34: Attempting to retrieve users from group 2
+29-5-2019 | 14:34: Found 2 users from group 2
+29-5-2019 | 14:34: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[Startup]
+29-5-2019 | 14:35: Starting server...
+29-5-2019 | 14:35: Server is up and running!
+29-5-2019 | 14:35: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[CheckLogin]
+29-5-2019 | 14:35: Logging in JMuris...
+29-5-2019 | 14:35: Log in found for user JMuris
+29-5-2019 | 14:35: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveUser]
+29-5-2019 | 14:35: Attempting to retrieve user with id 4
+29-5-2019 | 14:35: Found user with id 4
+29-5-2019 | 14:35: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[AccountController]
+29-5-2019 | 14:35: JMuris validated.
+29-5-2019 | 14:35: JMuris navigated to Hub/Game
+29-5-2019 | 14:35: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveUserListByGroup]
+29-5-2019 | 14:35: Attempting to retrieve users from group 2
+29-5-2019 | 14:35: Found 2 users from group 2
+29-5-2019 | 14:35: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveScoresOfUser]
+29-5-2019 | 14:35: Attempting to retrieve scores of user 5
+29-5-2019 | 14:35: Found 3 scores from user 5
+29-5-2019 | 14:35: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveScoresOfUser]
+29-5-2019 | 14:35: Attempting to retrieve scores of user 6
+29-5-2019 | 14:35: Found 3 scores from user 6
+29-5-2019 | 14:35: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[Startup]
+29-5-2019 | 14:39: Starting server...
+29-5-2019 | 14:39: Server is up and running!
+29-5-2019 | 14:39: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[CheckLogin]
+29-5-2019 | 14:39: Logging in JMuris...
+29-5-2019 | 14:39: Log in found for user JMuris
+29-5-2019 | 14:39: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveUser]
+29-5-2019 | 14:39: Attempting to retrieve user with id 4
+29-5-2019 | 14:39: Found user with id 4
+29-5-2019 | 14:39: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[AccountController]
+29-5-2019 | 14:39: JMuris validated.
+29-5-2019 | 14:39: JMuris navigated to Hub/Game
+29-5-2019 | 14:39: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveUserListByGroup]
+29-5-2019 | 14:39: Attempting to retrieve users from group 2
+29-5-2019 | 14:39: Found 2 users from group 2
+29-5-2019 | 14:39: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveScoresOfUser]
+29-5-2019 | 14:39: Attempting to retrieve scores of user 5
+29-5-2019 | 14:39: Found 3 scores from user 5
+29-5-2019 | 14:39: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveScoresOfUser]
+29-5-2019 | 14:39: Attempting to retrieve scores of user 6
+29-5-2019 | 14:39: Found 3 scores from user 6
+29-5-2019 | 14:39: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[Startup]
+29-5-2019 | 14:40: Starting server...
+29-5-2019 | 14:40: Server is up and running!
+29-5-2019 | 14:40: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[CheckLogin]
+29-5-2019 | 14:40: Logging in JMuris...
+29-5-2019 | 14:40: Log in found for user JMuris
+29-5-2019 | 14:40: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveUser]
+29-5-2019 | 14:40: Attempting to retrieve user with id 4
+29-5-2019 | 14:40: Found user with id 4
+29-5-2019 | 14:40: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[AccountController]
+29-5-2019 | 14:40: JMuris validated.
+29-5-2019 | 14:40: JMuris navigated to Hub/Game
+29-5-2019 | 14:40: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveUserListByGroup]
+29-5-2019 | 14:40: Attempting to retrieve users from group 2
+29-5-2019 | 14:40: Found 2 users from group 2
+29-5-2019 | 14:40: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveScoresOfUser]
+29-5-2019 | 14:40: Attempting to retrieve scores of user 5
+29-5-2019 | 14:40: Found 3 scores from user 5
+29-5-2019 | 14:40: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveScoresOfUser]
+29-5-2019 | 14:40: Attempting to retrieve scores of user 6
+29-5-2019 | 14:40: Found 3 scores from user 6
+29-5-2019 | 14:40: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[Startup]
+29-5-2019 | 14:41: Starting server...
+29-5-2019 | 14:41: Server is up and running!
+29-5-2019 | 14:41: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[CheckLogin]
+29-5-2019 | 14:41: Logging in JMuris...
+29-5-2019 | 14:41: Log in found for user JMuris
+29-5-2019 | 14:41: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveUser]
+29-5-2019 | 14:41: Attempting to retrieve user with id 4
+29-5-2019 | 14:41: Found user with id 4
+29-5-2019 | 14:41: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[AccountController]
+29-5-2019 | 14:41: JMuris validated.
+29-5-2019 | 14:41: JMuris navigated to Hub/Game
+29-5-2019 | 14:41: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveUserListByGroup]
+29-5-2019 | 14:41: Attempting to retrieve users from group 2
+29-5-2019 | 14:41: Found 2 users from group 2
+29-5-2019 | 14:41: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveScoresOfUser]
+29-5-2019 | 14:41: Attempting to retrieve scores of user 5
+29-5-2019 | 14:41: Found 3 scores from user 5
+29-5-2019 | 14:41: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveScoresOfUser]
+29-5-2019 | 14:41: Attempting to retrieve scores of user 6
+29-5-2019 | 14:41: Found 3 scores from user 6
+29-5-2019 | 14:41: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[Startup]
+29-5-2019 | 14:42: Starting server...
+29-5-2019 | 14:42: Server is up and running!
+29-5-2019 | 14:42: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[CheckLogin]
+29-5-2019 | 14:42: Logging in JMuris...
+29-5-2019 | 14:42: Log in found for user JMuris
+29-5-2019 | 14:42: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveUser]
+29-5-2019 | 14:42: Attempting to retrieve user with id 4
+29-5-2019 | 14:42: Found user with id 4
+29-5-2019 | 14:42: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[AccountController]
+29-5-2019 | 14:42: JMuris validated.
+29-5-2019 | 14:42: JMuris navigated to Hub/Game
+29-5-2019 | 14:42: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveUserListByGroup]
+29-5-2019 | 14:42: Attempting to retrieve users from group 2
+29-5-2019 | 14:42: Found 2 users from group 2
+29-5-2019 | 14:42: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveScoresOfUser]
+29-5-2019 | 14:42: Attempting to retrieve scores of user 5
+29-5-2019 | 14:42: Found 3 scores from user 5
+29-5-2019 | 14:42: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveScoresOfUser]
+29-5-2019 | 14:42: Attempting to retrieve scores of user 6
+29-5-2019 | 14:42: Found 3 scores from user 6
+29-5-2019 | 14:42: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[Startup]
+29-5-2019 | 14:44: Starting server...
+29-5-2019 | 14:44: Server is up and running!
+29-5-2019 | 14:44: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[CheckLogin]
+29-5-2019 | 14:44: Logging in JMuris...
+29-5-2019 | 14:44: Log in found for user JMuris
+29-5-2019 | 14:44: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveUser]
+29-5-2019 | 14:44: Attempting to retrieve user with id 4
+29-5-2019 | 14:44: Found user with id 4
+29-5-2019 | 14:44: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[AccountController]
+29-5-2019 | 14:44: JMuris validated.
+29-5-2019 | 14:44: JMuris navigated to Hub/Game
+29-5-2019 | 14:44: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveUserListByGroup]
+29-5-2019 | 14:44: Attempting to retrieve users from group 2
+29-5-2019 | 14:44: Found 2 users from group 2
+29-5-2019 | 14:44: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveScoresOfUser]
+29-5-2019 | 14:44: Attempting to retrieve scores of user 5
+29-5-2019 | 14:44: Found 3 scores from user 5
+29-5-2019 | 14:44: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveScoresOfUser]
+29-5-2019 | 14:44: Attempting to retrieve scores of user 6
+29-5-2019 | 14:44: Found 3 scores from user 6
+29-5-2019 | 14:44: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[Startup]
+29-5-2019 | 14:46: Starting server...
+29-5-2019 | 14:46: Server is up and running!
+29-5-2019 | 14:46: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[CheckLogin]
+29-5-2019 | 14:46: Logging in JMuris...
+29-5-2019 | 14:46: Log in found for user JMuris
+29-5-2019 | 14:46: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveUser]
+29-5-2019 | 14:46: Attempting to retrieve user with id 4
+29-5-2019 | 14:46: Found user with id 4
+29-5-2019 | 14:46: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[AccountController]
+29-5-2019 | 14:46: JMuris validated.
+29-5-2019 | 14:46: JMuris navigated to Hub/Game
+29-5-2019 | 14:46: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveUserListByGroup]
+29-5-2019 | 14:46: Attempting to retrieve users from group 2
+29-5-2019 | 14:46: Found 2 users from group 2
+29-5-2019 | 14:46: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveScoresOfUser]
+29-5-2019 | 14:46: Attempting to retrieve scores of user 5
+29-5-2019 | 14:46: Found 3 scores from user 5
+29-5-2019 | 14:46: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveScoresOfUser]
+29-5-2019 | 14:46: Attempting to retrieve scores of user 6
+29-5-2019 | 14:46: Found 3 scores from user 6
+29-5-2019 | 14:46: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[Startup]
+29-5-2019 | 14:49: Starting server...
+29-5-2019 | 14:49: Server is up and running!
+29-5-2019 | 14:49: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[CheckLogin]
+29-5-2019 | 14:49: Logging in JMuris...
+29-5-2019 | 14:49: Log in found for user JMuris
+29-5-2019 | 14:49: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveUser]
+29-5-2019 | 14:49: Attempting to retrieve user with id 4
+29-5-2019 | 14:49: Found user with id 4
+29-5-2019 | 14:49: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[AccountController]
+29-5-2019 | 14:49: JMuris validated.
+29-5-2019 | 14:49: JMuris navigated to Hub/Game
+29-5-2019 | 14:49: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveUserListByGroup]
+29-5-2019 | 14:49: Attempting to retrieve users from group 2
+29-5-2019 | 14:49: Found 2 users from group 2
+29-5-2019 | 14:49: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveScoresOfUser]
+29-5-2019 | 14:49: Attempting to retrieve scores of user 5
+29-5-2019 | 14:49: Found 3 scores from user 5
+29-5-2019 | 14:49: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveScoresOfUser]
+29-5-2019 | 14:49: Attempting to retrieve scores of user 6
+29-5-2019 | 14:49: Found 3 scores from user 6
+29-5-2019 | 14:49: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[Startup]
+29-5-2019 | 14:50: Starting server...
+29-5-2019 | 14:50: Server is up and running!
+29-5-2019 | 14:50: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[CheckLogin]
+29-5-2019 | 14:50: Logging in JMuris...
+29-5-2019 | 14:50: Log in found for user JMuris
+29-5-2019 | 14:50: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveUser]
+29-5-2019 | 14:50: Attempting to retrieve user with id 4
+29-5-2019 | 14:50: Found user with id 4
+29-5-2019 | 14:50: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[AccountController]
+29-5-2019 | 14:50: JMuris validated.
+29-5-2019 | 14:50: JMuris navigated to Hub/Game
+29-5-2019 | 14:50: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveUserListByGroup]
+29-5-2019 | 14:50: Attempting to retrieve users from group 2
+29-5-2019 | 14:50: Found 2 users from group 2
+29-5-2019 | 14:50: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveScoresOfUser]
+29-5-2019 | 14:50: Attempting to retrieve scores of user 5
+29-5-2019 | 14:50: Found 3 scores from user 5
+29-5-2019 | 14:50: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveScoresOfUser]
+29-5-2019 | 14:50: Attempting to retrieve scores of user 6
+29-5-2019 | 14:50: Found 3 scores from user 6
+29-5-2019 | 14:50: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[Startup]
+29-5-2019 | 14:52: Starting server...
+29-5-2019 | 14:52: Server is up and running!
+29-5-2019 | 14:52: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[Startup]
+29-5-2019 | 14:52: Starting server...
+29-5-2019 | 14:52: Server is up and running!
+29-5-2019 | 14:52: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[CheckLogin]
+29-5-2019 | 14:52: Logging in JMuris...
+29-5-2019 | 14:52: Log in found for user JMuris
+29-5-2019 | 14:52: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveUser]
+29-5-2019 | 14:52: Attempting to retrieve user with id 4
+29-5-2019 | 14:52: Found user with id 4
+29-5-2019 | 14:52: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[AccountController]
+29-5-2019 | 14:52: JMuris validated.
+29-5-2019 | 14:52: JMuris navigated to Hub/Game
+29-5-2019 | 14:52: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveUserListByGroup]
+29-5-2019 | 14:52: Attempting to retrieve users from group 2
+29-5-2019 | 14:52: Found 2 users from group 2
+29-5-2019 | 14:52: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveScoresOfUser]
+29-5-2019 | 14:52: Attempting to retrieve scores of user 5
+29-5-2019 | 14:52: Found 3 scores from user 5
+29-5-2019 | 14:52: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveScoresOfUser]
+29-5-2019 | 14:52: Attempting to retrieve scores of user 6
+29-5-2019 | 14:52: Found 3 scores from user 6
+29-5-2019 | 14:52: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveUser]
+29-5-2019 | 14:52: Attempting to retrieve user with id 5
+29-5-2019 | 14:52: Found user with id 5
+29-5-2019 | 14:52: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveScoresOfUser]
+29-5-2019 | 14:52: Attempting to retrieve scores of user 5
+29-5-2019 | 14:52: Found 3 scores from user 5
+29-5-2019 | 14:52: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveUserListByGroup]
+29-5-2019 | 14:52: Attempting to retrieve users from group 1
+29-5-2019 | 14:52: Could not find any users from group 1
+29-5-2019 | 14:52: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[Startup]
+29-5-2019 | 14:54: Starting server...
+29-5-2019 | 14:54: Server is up and running!
+29-5-2019 | 14:54: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[CheckLogin]
+29-5-2019 | 14:54: Logging in JMuris...
+29-5-2019 | 14:54: Log in found for user JMuris
+29-5-2019 | 14:54: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveUser]
+29-5-2019 | 14:54: Attempting to retrieve user with id 4
+29-5-2019 | 14:54: Found user with id 4
+29-5-2019 | 14:54: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[AccountController]
+29-5-2019 | 14:54: JMuris validated.
+29-5-2019 | 14:54: JMuris navigated to Hub/Game
+29-5-2019 | 14:54: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveUserListByGroup]
+29-5-2019 | 14:54: Attempting to retrieve users from group 2
+29-5-2019 | 14:54: Found 2 users from group 2
+29-5-2019 | 14:54: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveScoresOfUser]
+29-5-2019 | 14:54: Attempting to retrieve scores of user 5
+29-5-2019 | 14:54: Found 3 scores from user 5
+29-5-2019 | 14:54: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveScoresOfUser]
+29-5-2019 | 14:54: Attempting to retrieve scores of user 6
+29-5-2019 | 14:54: Found 3 scores from user 6
+29-5-2019 | 14:54: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[Startup]
+29-5-2019 | 14:56: Starting server...
+29-5-2019 | 14:56: Server is up and running!
+29-5-2019 | 14:56: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[CheckLogin]
+29-5-2019 | 14:56: Logging in AAppel...
+29-5-2019 | 14:56: Log in found for user AAppel
+29-5-2019 | 14:56: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveUser]
+29-5-2019 | 14:56: Attempting to retrieve user with id 5
+29-5-2019 | 14:56: Found user with id 5
+29-5-2019 | 14:56: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[AccountController]
+29-5-2019 | 14:56: AAppel validated.
+29-5-2019 | 14:56: AAppel navigated to Hub/Game
+29-5-2019 | 14:56: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[AccountController]
+29-5-2019 | 14:56: AAppel validated.
+29-5-2019 | 14:56: AAppel logged out.
+29-5-2019 | 14:56: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[CheckLogin]
+29-5-2019 | 14:56: Logging in BBatsbak...
+29-5-2019 | 14:56: Log in found for user BBatsbak
+29-5-2019 | 14:56: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveUser]
+29-5-2019 | 14:56: Attempting to retrieve user with id 6
+29-5-2019 | 14:56: Found user with id 6
+29-5-2019 | 14:56: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[AccountController]
+29-5-2019 | 14:56: BBatsbak validated.
+29-5-2019 | 14:56: BBatsbak navigated to Hub/Game
+29-5-2019 | 14:56: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[AccountController]
+29-5-2019 | 14:56: BBatsbak validated.
+29-5-2019 | 14:56: BBatsbak logged out.
+29-5-2019 | 14:56: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[CheckLogin]
+29-5-2019 | 14:56: Logging in JMuris...
+29-5-2019 | 14:56: Log in found for user JMuris
+29-5-2019 | 14:56: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveUser]
+29-5-2019 | 14:56: Attempting to retrieve user with id 4
+29-5-2019 | 14:56: Found user with id 4
+29-5-2019 | 14:56: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[AccountController]
+29-5-2019 | 14:56: JMuris validated.
+29-5-2019 | 14:56: JMuris navigated to Hub/Game
+29-5-2019 | 14:56: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveUserListByGroup]
+29-5-2019 | 14:56: Attempting to retrieve users from group 2
+29-5-2019 | 14:56: Found 2 users from group 2
+29-5-2019 | 14:56: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveScoresOfUser]
+29-5-2019 | 14:56: Attempting to retrieve scores of user 5
+29-5-2019 | 14:56: Found 3 scores from user 5
+29-5-2019 | 14:56: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveScoresOfUser]
+29-5-2019 | 14:56: Attempting to retrieve scores of user 6
+29-5-2019 | 14:56: Found 3 scores from user 6
+29-5-2019 | 14:56: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveUser]
+29-5-2019 | 14:57: Attempting to retrieve user with id 6
+29-5-2019 | 14:57: Found user with id 6
+29-5-2019 | 14:57: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveScoresOfUser]
+29-5-2019 | 14:57: Attempting to retrieve scores of user 6
+29-5-2019 | 14:57: Found 3 scores from user 6
+29-5-2019 | 14:57: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveUser]
+29-5-2019 | 14:57: Attempting to retrieve user with id 6
+29-5-2019 | 14:57: Found user with id 6
+29-5-2019 | 14:57: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveScoresOfUser]
+29-5-2019 | 14:57: Attempting to retrieve scores of user 6
+29-5-2019 | 14:57: Found 3 scores from user 6
+29-5-2019 | 14:57: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveUser]
+29-5-2019 | 14:57: Attempting to retrieve user with id 6
+29-5-2019 | 14:57: Found user with id 6
+29-5-2019 | 14:57: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveScoresOfUser]
+29-5-2019 | 14:57: Attempting to retrieve scores of user 6
+29-5-2019 | 14:57: Found 3 scores from user 6
+29-5-2019 | 14:57: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveUser]
+29-5-2019 | 14:57: Attempting to retrieve user with id 6
+29-5-2019 | 14:57: Found user with id 6
+29-5-2019 | 14:57: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveScoresOfUser]
+29-5-2019 | 14:57: Attempting to retrieve scores of user 6
+29-5-2019 | 14:57: Found 3 scores from user 6
+29-5-2019 | 14:57: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveUser]
+29-5-2019 | 14:57: Attempting to retrieve user with id 6
+29-5-2019 | 14:57: Found user with id 6
+29-5-2019 | 14:57: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveScoresOfUser]
+29-5-2019 | 14:57: Attempting to retrieve scores of user 6
+29-5-2019 | 14:57: Found 3 scores from user 6
+29-5-2019 | 14:57: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[AccountController]
+29-5-2019 | 14:57: JMuris validated.
+29-5-2019 | 14:57: JMuris logged out.
+29-5-2019 | 14:57: End.
+---[LOG MSG END]---
+

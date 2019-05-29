@@ -41,30 +41,31 @@
         <div id="topBar" class="layout top-bar">
             @if (sessionExists)
             {
-            <div class="layout top-bar-container">
-                <div class="layout top-bar-profile">
-                    @if (!String.IsNullOrEmpty(user.ImageSource))
-                    {
-                        <img class="layout top-bar-profile" src="~/content/image/avatars/@user.Id/@user.ImageSource" alt="Profielfoto" title="Profielfoto" />
-                    }
-                    else
-                    {
-                        <img class="layout top-bar-profile" src="~/content/image/Follower.png" alt="Profielfoto niet gevonden" title="Profielfoto niet gevonden" />
-                    }
-                    <div>
-                        <p class="layout top-bar-profile" style="margin-top: 25px;">Welkom, @user.Name!</p>
-                        <form style="margin-top: -10px;">
-                            <input asp-controller="Account" asp-action="AccountView" class="layout top-bar-profile" type="submit" value="Account" />
-                        </form>
+                <input id="hiddenRoleId" type="hidden" value="@user.RoleId" />
+                <div class="layout top-bar-container">
+                    <div class="layout top-bar-profile">
+                        @if (!String.IsNullOrEmpty(user.ImageSource))
+                        {
+                            <img class="layout top-bar-profile" src="~/content/image/avatars/@user.Id/@user.ImageSource" alt="Profielfoto" title="Profielfoto" />
+                        }
+                        else
+                        {
+                            <img class="layout top-bar-profile" src="~/content/image/Person_disabled.png" alt="Profielfoto niet gevonden" title="Profielfoto niet gevonden" />
+                        }
+                        <div>
+                            <p class="layout top-bar-profile" style="margin-top: 25px;">Welkom, @user.Name!</p>
+                            <form style="margin-top: -10px;">
+                                <input asp-controller="Account" asp-action="AccountView" class="layout top-bar-profile" type="submit" value="Account" />
+                            </form>
+                        </div>
+                    </div>
+                    <div class="layout top-bar-logout">
+                        <p class="layout top-bar-logout">Uitloggen</p>
+                        <a asp-controller="Account" asp-action="Logout">
+                            <img class="layout top-bar-logout" src="~/content/image/Logout.png" alt="Logout" title="Logout" />
+                        </a>
                     </div>
                 </div>
-                <div class="layout top-bar-logout">
-                    <p class="layout top-bar-logout">Uitloggen</p>
-                    <a asp-controller="Account" asp-action="Logout">
-                        <img class="layout top-bar-logout" src="~/content/image/Logout.png" alt="Logout" title="Logout" />
-                    </a>
-                </div>
-            </div>
             }
         </div>
         <!-- Side -->
@@ -76,56 +77,50 @@
                 @if (roleId != 2)
                 {
                     <a asp-controller="Hub" asp-action="Game">
-                        <img class="layout side-bar-item" src="~/content/image/Play.png" alt="Game" title="Game" />
+                        <img id="side-all-game" class="layout side-bar-item" src="~/content/image/Play.png" alt="Game" title="Game" />
                     </a>
                 }
 
                 @if (roleId == 0)
                 {
                     <a asp-controller="Overview" asp-action="ScoreOverview">
-                        <img class="layout side-bar-item" src="~/content/image/Trophy.png" alt="Score" title="Score" />
+                        <img id="side-0-scoreOverview" class="layout side-bar-item" src="~/content/image/Trophy.png" alt="Score" title="Score" />
                     </a>
                 }
 
                 @if (roleId == 1)
                 {
                     <a asp-controller="Hub" asp-action="GameConfig">
-                        <img class="layout side-bar-item" src="~/content/image/Gear.png" alt="Configuration" title="Configuration" />
+                        <img id="side-1-gameConfig" class="layout side-bar-item" src="~/content/image/Gear.png" alt="Configuration" title="Configuration" />
                     </a>
 
                     <a asp-controller="Hub" asp-action="ClassOverview">
-                        <img class="layout side-bar-item" src="~/content/image/People.png" alt="Overview" title="Overview" />
+                        <img id="side-1-classOverview" class="layout side-bar-item" src="~/content/image/People.png" alt="Overview" title="Overview" />
                     </a>
                 }
 
-                @if (roleId == 2)
+                @if (roleId == 2 || roleId == 3)
                 {
                     <a asp-controller="Home" asp-action="Index">
-                        <img class="layout side-bar-item" src="~/content/image/File.png" alt="Log" title="Log" />
+                        <img id="side-23-log" class="layout side-bar-item" src="~/content/image/File.png" alt="Log" title="Log" />
                     </a>
 
                     <a asp-controller="Home" asp-action="Index">
-                        <img class="layout side-bar-item" src="~/content/image/People.png" alt="Users" title="Users" />
+                        <img id="side-23-users" class="layout side-bar-item" src="~/content/image/People.png" alt="Users" title="Users" />
                     </a>
 
-                    <a asp-controller="Home" asp-action="Index">
-                        <img class="layout side-bar-item" src="~/content/image/Book.png" alt="Stories" title="Stories" />
-                    </a>
-                }
-
-                @if (roleId == 3)
-                {
-                    <a asp-controller="Home" asp-action="Index">
-                        <img class="layout side-bar-item" src="~/content/image/File.png" alt="Log" title="Log" />
-                    </a>
-
-                    <a asp-controller="Home" asp-action="Index">
-                        <img class="layout side-bar-item" src="~/content/image/People.png" alt="Users" title="Users" />
-                    </a>
-
-                    <a asp-controller="Home" asp-action="Index">
-                        <img class="layout side-bar-item" src="~/content/image/Gear.png" alt="Configuration" title="Configuration" />
-                    </a>
+                    @if (roleId == 2)
+                    {
+                        <a asp-controller="Home" asp-action="Index">
+                            <img id="side-2-stories" class="layout side-bar-item" src="~/content/image/Book.png" alt="Stories" title="Stories" />
+                        </a>
+                    }
+                    else
+                    {
+                        <a asp-controller="Home" asp-action="Index">
+                            <img id="side-2-config" class="layout side-bar-item" src="~/content/image/Gear.png" alt="Configuration" title="Configuration" />
+                        </a>
+                    }
                 }
             }
         </div>
@@ -157,6 +152,7 @@
         </script>
     </environment>
     <script src="~/js/site.js" asp-append-version="true"></script>
+    <script src="~/js/sideBar.js" language="javascript" type="text/javascript"></script>
 
     @RenderSection("Scripts", required: false)
 </body>

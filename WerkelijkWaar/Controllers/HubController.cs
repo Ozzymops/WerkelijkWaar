@@ -82,6 +82,7 @@ namespace WerkelijkWaar.Controllers
 
                 // Haal data op
                 hm.UserList = dq.RetrieveUserListByGroup(hm.User.Group);
+                hm.GenerateAverage();
 
                 return View(hm);
             }

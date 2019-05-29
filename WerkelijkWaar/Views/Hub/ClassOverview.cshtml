@@ -6,32 +6,61 @@
 
 <body>
     <div style="margin-top: 10px;">
+        <h2 class="subtitle">Klasgemiddelde: @Model.AverageScore.ToString("N1")</h2>
         <div style="display: flex; flex-direction: row; justify-content: space-around;">
             <div style="display: flex; flex-direction: column;">
                 <div>
-                    <h2 class="subtitle">Top vijf van vandaag (x-x)</h2>
+                    <h2 class="subtitle">Top vijf van vandaag (@DateTime.Now.Day-@DateTime.Now.Month)</h2>
                     <ul style="border: 1px solid black; list-style-type: none;">
                         @if (Model.UserList != null && Model.UserList.Count != 0)
                         {
+                            int i = 0;
                             foreach (WerkelijkWaar.Classes.User u in Model.UserList)
                             {
-                                <li>
-                                    @u.Name @u.Surname - @u.AverageScore
-                                </li>
+                                if (i < 5)
+                                {
+                                    i++;
+                                    if (!String.IsNullOrEmpty(u.ImageSource))
+                                    {
+                                        <li>
+                                            @i: <img src="~/content/image/avatars/@u.Id/@u.ImageSource" style="height: 33px; width: 33px;" /> @u.Name @u.Surname - @u.AverageScore.ToString("N1")
+                                        </li>
+                                    }
+                                    else
+                                    {
+                                        <li>
+                                            @i: <img src="~/content/image/Person.png" style="height: 33px; width: 33px;" /> @u.Name @u.Surname - @u.AverageScore.ToString("N1")
+                                        </li>
+                                    }
+                                }
                             }
                         }
                     </ul>
                 </div>
                 <div>
-                    <h2 class="subtitle">Top vijf van deze maand (x)</h2>
+                    <h2 class="subtitle">Top vijf van deze maand (@DateTime.Now.ToString("MMMM"))</h2>
                     <ul style="border: 1px solid black; list-style-type: none;">
                         @if (Model.UserList != null && Model.UserList.Count != 0)
                         {
+                            int i = 0;
                             foreach (WerkelijkWaar.Classes.User u in Model.UserList)
                             {
-                                <li>
-                                    @u.Name @u.Surname - @u.AverageScore
-                                </li>
+                                if (i < 5)
+                                {
+                                    i++;
+                                    if (!String.IsNullOrEmpty(u.ImageSource))
+                                    {
+                                        <li>
+                                            @i: <img src="~/content/image/avatars/@u.Id/@u.ImageSource" style="height: 33px; width: 33px;" /> @u.Name @u.Surname - @u.AverageScore.ToString("N1")
+                                        </li>
+                                    }
+                                    else
+                                    {
+                                        <li>
+                                            @i: <img src="~/content/image/Person.png" style="height: 33px; width: 33px;" /> @u.Name @u.Surname - @u.AverageScore.ToString("N1")
+                                        </li>
+                                    }
+                                }
                             }
                         }
                     </ul>
@@ -42,11 +71,25 @@
                 <ul style="border: 1px solid black; list-style-type: none;">
                     @if (Model.UserList != null && Model.UserList.Count != 0)
                     {
+                        int i = 0;
                         foreach (WerkelijkWaar.Classes.User u in Model.UserList)
                         {
-                            <li>
-                                <a asp-controller="Overview" asp-action="IndividualScores" asp-route-id="@u.Id" asp-route-rank="0" asp-route-scoreId="0">@u.Name @u.Surname - @u.AverageScore</a>
-                            </li>
+                            if (i < 5)
+                            {
+                                i++;
+                                if (!String.IsNullOrEmpty(u.ImageSource))
+                                {
+                                    <li>
+                                        @i: <img src="~/content/image/avatars/@u.Id/@u.ImageSource" style="height: 33px; width: 33px;" /> <a asp-controller="Overview" asp-action="IndividualScores" asp-route-id="@u.Id" asp-route-rank="@i" asp-route-scoreId="0">@u.Name @u.Surname</a> - @u.AverageScore.ToString("N1")
+                                    </li>
+                                }
+                                else
+                                {
+                                    <li>
+                                        @i: <img src="~/content/image/Person.png" style="height: 33px; width: 33px;" /> <a asp-controller="Overview" asp-action="IndividualScores" asp-route-id="@u.Id" asp-route-rank="@i" asp-route-scoreId="0">@u.Name @u.Surname</a> - @u.AverageScore.ToString("N1")
+                                    </li>
+                                }
+                            }
                         }
                     }
                 </ul>
