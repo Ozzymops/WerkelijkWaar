@@ -965,3 +965,231 @@ Error Number:201,State:4,Class:16
 29-5-2019 | 11:11: End.
 ---[DEBUG MSG END]---
 
+---[DEBUG MSG START]---
+[Startup]
+29-5-2019 | 11:12: 5ms. Launching server
+29-5-2019 | 11:12: 17ms. Server is up
+29-5-2019 | 11:12: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[CheckLogin]
+29-5-2019 | 11:12: 2ms. Checking login for JMuris
+29-5-2019 | 11:12: 43ms. Found JMuris
+29-5-2019 | 11:12: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[RetrieveUser]
+29-5-2019 | 11:12: 2ms. Retrieving user 4
+29-5-2019 | 11:12: 10ms. Found user 4
+29-5-2019 | 11:12: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[Startup]
+29-5-2019 | 11:17: 28ms. Launching server
+29-5-2019 | 11:17: 47ms. Server is up
+29-5-2019 | 11:17: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[CheckLogin]
+29-5-2019 | 11:18: 2ms. Checking login for JMuris
+29-5-2019 | 11:18: 65ms. Found JMuris
+29-5-2019 | 11:18: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[RetrieveUser]
+29-5-2019 | 11:18: 3ms. Retrieving user 4
+29-5-2019 | 11:18: 13ms. Found user 4
+29-5-2019 | 11:18: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[CheckLogin]
+29-5-2019 | 11:20: 59ms. Checking login for 
+29-5-2019 | 11:20: 200ms. Exception:
+System.Data.SqlClient.SqlException (0x80131904): Procedure or function 'LogIn' expects parameter '@pUsername', which was not supplied.
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, SqlDataReader ds)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite, String method)
+   at System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, Boolean sendToPipe, Int32 timeout, Boolean asyncWrite, String methodName)
+   at System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   at WerkelijkWaar.Classes.DatabaseQueries.CheckLogin(String username, String password) in C:\Users\Justin Muris\source\repos\WerkelijkWaar\WerkelijkWaar\Classes\DatabaseQueries.cs:line 372
+ClientConnectionId:56cdc501-cd9e-402f-a893-5acd13ef3f60
+Error Number:201,State:4,Class:16
+29-5-2019 | 11:20: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[Startup]
+29-5-2019 | 11:26: 14ms. Launching server
+29-5-2019 | 11:26: 120ms. Server is up
+29-5-2019 | 11:26: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[CheckLogin]
+29-5-2019 | 11:26: 2ms. Checking login for JMuris
+29-5-2019 | 11:26: 42ms. Found JMuris
+29-5-2019 | 11:26: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[RetrieveUser]
+29-5-2019 | 11:26: 2ms. Retrieving user 4
+29-5-2019 | 11:26: 10ms. Found user 4
+29-5-2019 | 11:26: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[Startup]
+29-5-2019 | 11:30: 19ms. Launching server
+29-5-2019 | 11:30: 59ms. Server is up
+29-5-2019 | 11:30: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[CheckLogin]
+29-5-2019 | 11:30: 2ms. Checking login for JMuris
+29-5-2019 | 11:30: 45ms. Found JMuris
+29-5-2019 | 11:30: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[RetrieveUser]
+29-5-2019 | 11:30: 2ms. Retrieving user 4
+29-5-2019 | 11:30: 10ms. Found user 4
+29-5-2019 | 11:30: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[CheckLogin]
+29-5-2019 | 11:36: 52ms. Checking login for 
+29-5-2019 | 11:36: 850ms. Exception:
+System.Data.SqlClient.SqlException (0x80131904): Procedure or function 'LogIn' expects parameter '@pUsername', which was not supplied.
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, SqlDataReader ds)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite, String method)
+   at System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, Boolean sendToPipe, Int32 timeout, Boolean asyncWrite, String methodName)
+   at System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   at WerkelijkWaar.Classes.DatabaseQueries.CheckLogin(String username, String password) in C:\Users\Justin Muris\source\repos\WerkelijkWaar\WerkelijkWaar\Classes\DatabaseQueries.cs:line 372
+ClientConnectionId:7540df67-4ca5-4ad8-9032-8d37d2967df6
+Error Number:201,State:4,Class:16
+29-5-2019 | 11:36: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[Startup]
+29-5-2019 | 11:42: 7ms. Launching server
+29-5-2019 | 11:42: 18ms. Server is up
+29-5-2019 | 11:42: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[CheckLogin]
+29-5-2019 | 11:42: 2ms. Checking login for JMuris
+29-5-2019 | 11:42: 50ms. Found JMuris
+29-5-2019 | 11:42: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[RetrieveUser]
+29-5-2019 | 11:42: 2ms. Retrieving user 4
+29-5-2019 | 11:42: 13ms. Found user 4
+29-5-2019 | 11:42: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[Startup]
+29-5-2019 | 11:44: 8ms. Launching server
+29-5-2019 | 11:44: 18ms. Server is up
+29-5-2019 | 11:44: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[CheckLogin]
+29-5-2019 | 11:44: 2ms. Checking login for JMuris
+29-5-2019 | 11:44: 63ms. Found JMuris
+29-5-2019 | 11:44: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[RetrieveUser]
+29-5-2019 | 11:44: 1ms. Retrieving user 4
+29-5-2019 | 11:44: 9ms. Found user 4
+29-5-2019 | 11:44: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[Startup]
+29-5-2019 | 11:47: 5ms. Launching server
+29-5-2019 | 11:47: 18ms. Server is up
+29-5-2019 | 11:47: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[CheckLogin]
+29-5-2019 | 11:47: 2ms. Checking login for JMuris
+29-5-2019 | 11:47: 50ms. Found JMuris
+29-5-2019 | 11:47: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[RetrieveUser]
+29-5-2019 | 11:47: 2ms. Retrieving user 4
+29-5-2019 | 11:47: 8ms. Found user 4
+29-5-2019 | 11:47: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[Startup]
+29-5-2019 | 12:01: 8ms. Launching server
+29-5-2019 | 12:01: 17ms. Server is up
+29-5-2019 | 12:01: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[CheckLogin]
+29-5-2019 | 12:01: 2ms. Checking login for JMuris
+29-5-2019 | 12:01: 46ms. Found JMuris
+29-5-2019 | 12:01: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[RetrieveUser]
+29-5-2019 | 12:01: 2ms. Retrieving user 4
+29-5-2019 | 12:01: 12ms. Found user 4
+29-5-2019 | 12:01: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[CheckLogin]
+29-5-2019 | 12:01: 26ms. Checking login for 
+29-5-2019 | 12:01: 260ms. Exception:
+System.Data.SqlClient.SqlException (0x80131904): Procedure or function 'LogIn' expects parameter '@pUsername', which was not supplied.
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, SqlDataReader ds)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite, String method)
+   at System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, Boolean sendToPipe, Int32 timeout, Boolean asyncWrite, String methodName)
+   at System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   at WerkelijkWaar.Classes.DatabaseQueries.CheckLogin(String username, String password) in C:\Users\Justin Muris\source\repos\WerkelijkWaar\WerkelijkWaar\Classes\DatabaseQueries.cs:line 372
+ClientConnectionId:108d49fd-1ee1-41bf-ad92-33d2f097e665
+Error Number:201,State:4,Class:16
+29-5-2019 | 12:01: End.
+---[DEBUG MSG END]---
+

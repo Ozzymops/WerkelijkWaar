@@ -1,7 +1,7 @@
 ﻿@{
     ViewData["Title"] = "Accountoverzicht";
 }
-@model WerkelijkWaar.Models.AccountViewModel
+@model AccountViewModel
 
 <header>
     <div class="flex-column-top">
@@ -14,36 +14,85 @@
 <body>
     <div>
         <div class="flex-center">
-            <div>
-                <h1>Welkom @Model.User.Name @Model.User.Surname!</h1>
-                <hr />
-                <div>
-                    @if (!String.IsNullOrEmpty(Model.User.ImageSource))
-                    {
-                        <img src="~/content/image/avatars/@Model.User.Id/@Model.User.ImageSource" class="small-icon.center" alt="Foto van @Model.User.Name" title="Foto van @Model.User.Name" />
-                    }
-                    else
-                    {
-                        <img src="~/content/image/MissingAvatar.png" class="small-icon.center" alt="Geen foto" title="Geen foto" />
-                    }
+            <div style="display: flex; flex-direction: row;">
+                <div style="display: flex; flex-direction: column; margin-right: 25px; width: 700px;">
+                    <div>
+                        <h2 class="subtitle" style="text-align: left;">Identiteit</h2>
+                        <div style="background-color: #f7c747; padding: 15px;">
+                            <form asp-action="EditName" asp-controller="AccountController">
+                                <div style="display: flex; flex-direction: row;">
+                                    <div style="display: flex; flex-direction: column; margin-right: 233px;">
+                                        <p style="text-align: left; margin-left: 10px;">Voornaam:</p>
+                                        <p style="text-align: left; margin-left: 10px; margin-top: 10px;">Achternaam:</p>
+                                    </div>
+                                    <div style="display: flex; flex-direction: column;">
+                                        <input asp-for="User.Name" type="text" class="text-input" />
+                                        <input asp-for="User.Surname" type="text" class="text-input" style="margin-top: 10px;" />
+                                    </div>
+                                </div>
+                                <input type="submit" value="Opslaan" class="form-button" style="width: 300px;" />
+                            </form>
+                        </div>
+                    </div>
+                    <div style="margin-top: 20px;">
+                        <h2 class="subtitle" style="text-align: left;">Veiligheid</h2>
+                        <div style="background-color: #f7c747; padding: 15px;">
+                            <form asp-action="EditPassword" asp-controller="AccountController">
+                                <div style="display: flex; flex-direction: row;">
+                                    <div style="display: flex; flex-direction: column; margin-right: 100px;">
+                                        <p style="text-align: left; margin-left: 10px;">Oud wachtwoord:</p>
+                                        <p style="text-align: left; margin-left: 10px; margin-top: 10px;">Nieuw wachtwoord:</p>
+                                        <p style="text-align: left; margin-left: 10px; margin-top: 5px;">Nieuw wachtwoord bevestigen:</p>
+                                    </div>
+                                    <div style="display: flex; flex-direction: column;">
+                                        <input asp-for="OldPassword" type="password" class="text-input" />
+                                        <input asp-for="NewPassword" type="password" class="text-input" style="margin-top: 10px;" />
+                                        <input asp-for="NewPasswordConfirmation" type="password" class="text-input" style="margin-top: 10px; float: right;" />
+                                    </div>
+                                </div>
+                                <input type="submit" value="Opslaan" class="form-button" style="width: 300px;" />
+                            </form>
+                        </div>
+                    </div>
                 </div>
-                <div>
-                    <p class="center">Voornaam: @Model.User.Name</p>
-                    <p class="center">Achternaam: @Model.User.Surname</p>
-                    <p class="center">Gebruikersnaam: @Model.User.Username</p>
-                    <p class="center">Groep: @Model.User.Group</p>
-                </div>
-                <hr />
-                <div>
-                    <form asp-action="EditAccount" asp-controller="Account">
-                        <input type="submit" value="Accountinformatie bewerken" style="width: 300px;" class="center" />
-                    </form>
-                </div>
-                <hr />
-                <div>
-                    <form asp-action="DeleteAccount" asp-controller="Account" asp-route-id="@Model.User.Id">
-                        <input type="submit" value="Verwijder account" style="width: 300px;" class="center" />
-                    </form>
+                <div style="width: 700px;">
+                    <h2 class="subtitle" style="text-align: left;">Avatar</h2>
+                    <div style="background-color: #f7c747; padding: 15px;">
+                        <form asp-action="EditAvatar" asp-controller="AccountController">
+                            <input type="submit" value="Opslaan" class="form-button" style="width: 150px; margin-right: -10px;" />
+                            <div style="display: flex; flex-direction: row;">
+                                <div style="display: flex; flex-direction: row;">
+                                    <img src="~/content/image/People.png" style="width: 100px; height: 100px; border: 2px solid #f5b91a" />
+                                    <input class="text-input" style="height: 30px; margin-left: 10px; margin-top: 70px;" type="file" />
+                                </div>
+                            </div>
+                            <h2 class="subtitle" style="text-align: left; margin-top: 20px;">Standaard avatars</h2>
+                            <div style="display: flex; flex-direction: row; background-color: #2db6bc; height: 80px; width: 675px;">
+                                <ul style="list-style-type: none; padding: 0; width: 675px;">
+                                    <li style="display: block; height: 50px; width: 50px; padding-left: 10px; padding-right: 50px; float: left; margin-top: 5px;">
+                                        <a asp-action="EditAvatar" asp-controller="AccountController">
+                                            <img src="~/content/image/Person.png" style="border: 2px solid black; height: 50px; width: 50px;" />
+                                        </a>
+                                    </li>
+                                    <li style="display: block; height: 50px; width: 50px; padding-left: 10px; padding-right: 50px; float: left; margin-top: 5px;">
+                                        <a asp-action="EditAvatar" asp-controller="AccountController">
+                                            <img src="~/content/image/Person.png" style="border: 2px solid white; height: 50px; width: 50px;" />
+                                        </a>
+                                    </li>
+                                    <li style="display: block; height: 50px; width: 50px; padding-left: 10px; padding-right: 50px; float: left; margin-top: 5px;">
+                                        <a asp-action="EditAvatar" asp-controller="AccountController">
+                                            <img src="~/content/image/Person.png" style="border: 2px solid red; height: 50px; width: 50px;" />
+                                        </a>
+                                    </li>
+                                    <li style="display: block; height: 50px; width: 50px; padding-left: 10px; padding-right: 50px; float: left; margin-top: 5px;">
+                                        <a asp-action="EditAvatar" asp-controller="AccountController">
+                                            <img src="~/content/image/Person.png" style="border: 2px solid blue; height: 50px; width: 50px;" />
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </form>
+                    </div>
                 </div>
             </div>
         </div>

@@ -666,3 +666,934 @@
 29-5-2019 | 11:11: End.
 ---[LOG MSG END]---
 
+---[LOG MSG START]---
+[Startup]
+29-5-2019 | 11:12: Starting server...
+29-5-2019 | 11:12: Server is up and running!
+29-5-2019 | 11:12: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[CheckLogin]
+29-5-2019 | 11:12: Logging in JMuris...
+29-5-2019 | 11:12: Log in found for user JMuris
+29-5-2019 | 11:12: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveUser]
+29-5-2019 | 11:12: Attempting to retrieve user with id 4
+29-5-2019 | 11:12: Found user with id 4
+29-5-2019 | 11:12: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[AccountController]
+29-5-2019 | 11:12: JMuris validated.
+29-5-2019 | 11:12: JMuris navigated to Hub/Game
+29-5-2019 | 11:12: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[AccountController]
+29-5-2019 | 11:12: JMuris validated.
+29-5-2019 | 11:12: JMuris navigated to Account/AccountView.
+29-5-2019 | 11:12: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[AccountController]
+29-5-2019 | 11:13: JMuris validated.
+29-5-2019 | 11:13: JMuris navigated to Account/AccountView.
+29-5-2019 | 11:13: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[AccountController]
+29-5-2019 | 11:15: JMuris validated.
+29-5-2019 | 11:15: JMuris navigated to Account/AccountView.
+29-5-2019 | 11:15: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[Startup]
+29-5-2019 | 11:17: Starting server...
+29-5-2019 | 11:17: Server is up and running!
+29-5-2019 | 11:17: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[CheckLogin]
+29-5-2019 | 11:18: Logging in JMuris...
+29-5-2019 | 11:18: Log in found for user JMuris
+29-5-2019 | 11:18: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveUser]
+29-5-2019 | 11:18: Attempting to retrieve user with id 4
+29-5-2019 | 11:18: Found user with id 4
+29-5-2019 | 11:18: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[AccountController]
+29-5-2019 | 11:18: JMuris validated.
+29-5-2019 | 11:18: JMuris navigated to Hub/Game
+29-5-2019 | 11:18: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[AccountController]
+29-5-2019 | 11:18: JMuris validated.
+29-5-2019 | 11:18: JMuris navigated to Account/AccountView.
+29-5-2019 | 11:18: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[AccountController]
+29-5-2019 | 11:19: JMuris validated.
+29-5-2019 | 11:19: JMuris navigated to Account/AccountView.
+29-5-2019 | 11:19: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[AccountController]
+29-5-2019 | 11:19: JMuris validated.
+29-5-2019 | 11:19: JMuris navigated to Account/AccountView.
+29-5-2019 | 11:19: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[AccountController]
+29-5-2019 | 11:20: JMuris validated.
+29-5-2019 | 11:20: JMuris navigated to Account/AccountView.
+29-5-2019 | 11:20: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[AccountController]
+29-5-2019 | 11:20: JMuris validated.
+29-5-2019 | 11:20: JMuris navigated to Account/AccountView.
+29-5-2019 | 11:20: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[CheckLogin]
+29-5-2019 | 11:20: Logging in ...
+29-5-2019 | 11:20: Something went wrong. Check debug.txt
+29-5-2019 | 11:20: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[AccountController]
+29-5-2019 | 11:22: JMuris validated.
+29-5-2019 | 11:22: JMuris navigated to Account/AccountView.
+29-5-2019 | 11:22: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[AccountController]
+29-5-2019 | 11:23: JMuris validated.
+29-5-2019 | 11:23: JMuris navigated to Account/AccountView.
+29-5-2019 | 11:23: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[AccountController]
+29-5-2019 | 11:23: JMuris validated.
+29-5-2019 | 11:23: JMuris navigated to Account/AccountView.
+29-5-2019 | 11:23: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[AccountController]
+29-5-2019 | 11:23: JMuris validated.
+29-5-2019 | 11:23: JMuris navigated to Account/AccountView.
+29-5-2019 | 11:23: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[AccountController]
+29-5-2019 | 11:24: JMuris validated.
+29-5-2019 | 11:24: JMuris navigated to Account/AccountView.
+29-5-2019 | 11:24: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[AccountController]
+29-5-2019 | 11:24: JMuris validated.
+29-5-2019 | 11:24: JMuris navigated to Account/AccountView.
+29-5-2019 | 11:24: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[AccountController]
+29-5-2019 | 11:24: JMuris validated.
+29-5-2019 | 11:24: JMuris navigated to Account/AccountView.
+29-5-2019 | 11:24: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[AccountController]
+29-5-2019 | 11:24: JMuris validated.
+29-5-2019 | 11:24: JMuris navigated to Account/AccountView.
+29-5-2019 | 11:24: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[AccountController]
+29-5-2019 | 11:25: JMuris validated.
+29-5-2019 | 11:25: JMuris navigated to Account/AccountView.
+29-5-2019 | 11:25: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[AccountController]
+29-5-2019 | 11:25: JMuris validated.
+29-5-2019 | 11:25: JMuris navigated to Account/AccountView.
+29-5-2019 | 11:25: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[AccountController]
+29-5-2019 | 11:25: JMuris validated.
+29-5-2019 | 11:25: JMuris navigated to Account/AccountView.
+29-5-2019 | 11:25: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[AccountController]
+29-5-2019 | 11:25: JMuris validated.
+29-5-2019 | 11:25: JMuris navigated to Account/AccountView.
+29-5-2019 | 11:25: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[Startup]
+29-5-2019 | 11:26: Starting server...
+29-5-2019 | 11:26: Server is up and running!
+29-5-2019 | 11:26: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[CheckLogin]
+29-5-2019 | 11:26: Logging in JMuris...
+29-5-2019 | 11:26: Log in found for user JMuris
+29-5-2019 | 11:26: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveUser]
+29-5-2019 | 11:26: Attempting to retrieve user with id 4
+29-5-2019 | 11:26: Found user with id 4
+29-5-2019 | 11:26: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[AccountController]
+29-5-2019 | 11:26: JMuris validated.
+29-5-2019 | 11:26: JMuris navigated to Hub/Game
+29-5-2019 | 11:26: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[AccountController]
+29-5-2019 | 11:26: JMuris validated.
+29-5-2019 | 11:26: JMuris navigated to Account/AccountView.
+29-5-2019 | 11:26: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[AccountController]
+29-5-2019 | 11:26: JMuris validated.
+29-5-2019 | 11:26: JMuris navigated to Account/AccountView.
+29-5-2019 | 11:26: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[AccountController]
+29-5-2019 | 11:26: JMuris validated.
+29-5-2019 | 11:26: JMuris navigated to Account/AccountView.
+29-5-2019 | 11:26: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[AccountController]
+29-5-2019 | 11:27: JMuris validated.
+29-5-2019 | 11:27: JMuris navigated to Account/AccountView.
+29-5-2019 | 11:27: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[Startup]
+29-5-2019 | 11:30: Starting server...
+29-5-2019 | 11:30: Server is up and running!
+29-5-2019 | 11:30: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[CheckLogin]
+29-5-2019 | 11:30: Logging in JMuris...
+29-5-2019 | 11:30: Log in found for user JMuris
+29-5-2019 | 11:30: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveUser]
+29-5-2019 | 11:30: Attempting to retrieve user with id 4
+29-5-2019 | 11:30: Found user with id 4
+29-5-2019 | 11:30: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[AccountController]
+29-5-2019 | 11:30: JMuris validated.
+29-5-2019 | 11:30: JMuris navigated to Hub/Game
+29-5-2019 | 11:30: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[AccountController]
+29-5-2019 | 11:30: JMuris validated.
+29-5-2019 | 11:30: JMuris navigated to Account/AccountView.
+29-5-2019 | 11:30: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[AccountController]
+29-5-2019 | 11:30: JMuris validated.
+29-5-2019 | 11:30: JMuris navigated to Account/AccountView.
+29-5-2019 | 11:30: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[AccountController]
+29-5-2019 | 11:30: JMuris validated.
+29-5-2019 | 11:30: JMuris navigated to Account/AccountView.
+29-5-2019 | 11:30: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[AccountController]
+29-5-2019 | 11:31: JMuris validated.
+29-5-2019 | 11:31: JMuris navigated to Account/AccountView.
+29-5-2019 | 11:31: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[AccountController]
+29-5-2019 | 11:33: JMuris validated.
+29-5-2019 | 11:33: JMuris navigated to Account/AccountView.
+29-5-2019 | 11:33: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[AccountController]
+29-5-2019 | 11:34: JMuris validated.
+29-5-2019 | 11:34: JMuris navigated to Account/AccountView.
+29-5-2019 | 11:34: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[CheckLogin]
+29-5-2019 | 11:36: Logging in ...
+29-5-2019 | 11:36: Something went wrong. Check debug.txt
+29-5-2019 | 11:36: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[AccountController]
+29-5-2019 | 11:38: JMuris validated.
+29-5-2019 | 11:38: JMuris navigated to Account/AccountView.
+29-5-2019 | 11:38: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[AccountController]
+29-5-2019 | 11:39: JMuris validated.
+29-5-2019 | 11:39: JMuris navigated to Account/AccountView.
+29-5-2019 | 11:39: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[AccountController]
+29-5-2019 | 11:39: JMuris validated.
+29-5-2019 | 11:39: JMuris navigated to Account/AccountView.
+29-5-2019 | 11:39: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[Startup]
+29-5-2019 | 11:42: Starting server...
+29-5-2019 | 11:42: Server is up and running!
+29-5-2019 | 11:42: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[CheckLogin]
+29-5-2019 | 11:42: Logging in JMuris...
+29-5-2019 | 11:42: Log in found for user JMuris
+29-5-2019 | 11:42: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveUser]
+29-5-2019 | 11:42: Attempting to retrieve user with id 4
+29-5-2019 | 11:42: Found user with id 4
+29-5-2019 | 11:42: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[AccountController]
+29-5-2019 | 11:42: JMuris validated.
+29-5-2019 | 11:42: JMuris navigated to Hub/Game
+29-5-2019 | 11:42: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[AccountController]
+29-5-2019 | 11:42: JMuris validated.
+29-5-2019 | 11:42: JMuris navigated to Account/AccountView.
+29-5-2019 | 11:42: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[AccountController]
+29-5-2019 | 11:42: JMuris validated.
+29-5-2019 | 11:42: JMuris navigated to Account/AccountView.
+29-5-2019 | 11:42: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[AccountController]
+29-5-2019 | 11:43: JMuris validated.
+29-5-2019 | 11:43: JMuris navigated to Account/AccountView.
+29-5-2019 | 11:43: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[AccountController]
+29-5-2019 | 11:44: JMuris validated.
+29-5-2019 | 11:44: JMuris navigated to Account/AccountView.
+29-5-2019 | 11:44: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[Startup]
+29-5-2019 | 11:44: Starting server...
+29-5-2019 | 11:44: Server is up and running!
+29-5-2019 | 11:44: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[CheckLogin]
+29-5-2019 | 11:44: Logging in JMuris...
+29-5-2019 | 11:44: Log in found for user JMuris
+29-5-2019 | 11:44: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveUser]
+29-5-2019 | 11:44: Attempting to retrieve user with id 4
+29-5-2019 | 11:44: Found user with id 4
+29-5-2019 | 11:44: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[AccountController]
+29-5-2019 | 11:44: JMuris validated.
+29-5-2019 | 11:44: JMuris navigated to Hub/Game
+29-5-2019 | 11:44: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[AccountController]
+29-5-2019 | 11:44: JMuris validated.
+29-5-2019 | 11:44: JMuris navigated to Account/AccountView.
+29-5-2019 | 11:44: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[AccountController]
+29-5-2019 | 11:45: JMuris validated.
+29-5-2019 | 11:45: JMuris navigated to Account/AccountView.
+29-5-2019 | 11:45: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[AccountController]
+29-5-2019 | 11:45: JMuris validated.
+29-5-2019 | 11:45: JMuris navigated to Account/AccountView.
+29-5-2019 | 11:45: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[AccountController]
+29-5-2019 | 11:46: JMuris validated.
+29-5-2019 | 11:46: JMuris navigated to Account/AccountView.
+29-5-2019 | 11:46: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[AccountController]
+29-5-2019 | 11:46: JMuris validated.
+29-5-2019 | 11:46: JMuris navigated to Account/AccountView.
+29-5-2019 | 11:46: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[AccountController]
+29-5-2019 | 11:46: JMuris validated.
+29-5-2019 | 11:46: JMuris navigated to Account/AccountView.
+29-5-2019 | 11:46: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[AccountController]
+29-5-2019 | 11:46: JMuris validated.
+29-5-2019 | 11:46: JMuris navigated to Account/AccountView.
+29-5-2019 | 11:46: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[AccountController]
+29-5-2019 | 11:46: JMuris validated.
+29-5-2019 | 11:46: JMuris navigated to Account/AccountView.
+29-5-2019 | 11:46: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[AccountController]
+29-5-2019 | 11:46: JMuris validated.
+29-5-2019 | 11:46: JMuris navigated to Account/AccountView.
+29-5-2019 | 11:46: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[AccountController]
+29-5-2019 | 11:46: JMuris validated.
+29-5-2019 | 11:46: JMuris navigated to Account/AccountView.
+29-5-2019 | 11:46: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[Startup]
+29-5-2019 | 11:47: Starting server...
+29-5-2019 | 11:47: Server is up and running!
+29-5-2019 | 11:47: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[CheckLogin]
+29-5-2019 | 11:47: Logging in JMuris...
+29-5-2019 | 11:47: Log in found for user JMuris
+29-5-2019 | 11:47: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveUser]
+29-5-2019 | 11:47: Attempting to retrieve user with id 4
+29-5-2019 | 11:47: Found user with id 4
+29-5-2019 | 11:47: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[AccountController]
+29-5-2019 | 11:47: JMuris validated.
+29-5-2019 | 11:47: JMuris navigated to Hub/Game
+29-5-2019 | 11:47: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[AccountController]
+29-5-2019 | 11:47: JMuris validated.
+29-5-2019 | 11:47: JMuris navigated to Account/AccountView.
+29-5-2019 | 11:47: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[AccountController]
+29-5-2019 | 11:47: JMuris validated.
+29-5-2019 | 11:47: JMuris navigated to Account/AccountView.
+29-5-2019 | 11:47: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[AccountController]
+29-5-2019 | 11:47: JMuris validated.
+29-5-2019 | 11:47: JMuris navigated to Account/AccountView.
+29-5-2019 | 11:47: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[AccountController]
+29-5-2019 | 11:47: JMuris validated.
+29-5-2019 | 11:47: JMuris navigated to Account/AccountView.
+29-5-2019 | 11:47: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[AccountController]
+29-5-2019 | 11:48: JMuris validated.
+29-5-2019 | 11:48: JMuris navigated to Account/AccountView.
+29-5-2019 | 11:48: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[AccountController]
+29-5-2019 | 11:48: JMuris validated.
+29-5-2019 | 11:48: JMuris navigated to Account/AccountView.
+29-5-2019 | 11:48: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[AccountController]
+29-5-2019 | 11:48: JMuris validated.
+29-5-2019 | 11:48: JMuris navigated to Account/AccountView.
+29-5-2019 | 11:48: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[AccountController]
+29-5-2019 | 11:48: JMuris validated.
+29-5-2019 | 11:48: JMuris navigated to Account/AccountView.
+29-5-2019 | 11:48: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[AccountController]
+29-5-2019 | 11:48: JMuris validated.
+29-5-2019 | 11:48: JMuris navigated to Account/AccountView.
+29-5-2019 | 11:48: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[AccountController]
+29-5-2019 | 11:48: JMuris validated.
+29-5-2019 | 11:48: JMuris navigated to Account/AccountView.
+29-5-2019 | 11:48: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[AccountController]
+29-5-2019 | 11:48: JMuris validated.
+29-5-2019 | 11:48: JMuris navigated to Account/AccountView.
+29-5-2019 | 11:48: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[AccountController]
+29-5-2019 | 11:49: JMuris validated.
+29-5-2019 | 11:49: JMuris navigated to Account/AccountView.
+29-5-2019 | 11:49: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[AccountController]
+29-5-2019 | 11:50: JMuris validated.
+29-5-2019 | 11:50: JMuris navigated to Account/AccountView.
+29-5-2019 | 11:50: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[AccountController]
+29-5-2019 | 11:50: JMuris validated.
+29-5-2019 | 11:50: JMuris navigated to Account/AccountView.
+29-5-2019 | 11:50: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[AccountController]
+29-5-2019 | 11:50: JMuris validated.
+29-5-2019 | 11:50: JMuris navigated to Account/AccountView.
+29-5-2019 | 11:50: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[AccountController]
+29-5-2019 | 11:51: JMuris validated.
+29-5-2019 | 11:51: JMuris navigated to Account/AccountView.
+29-5-2019 | 11:51: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[AccountController]
+29-5-2019 | 11:51: JMuris validated.
+29-5-2019 | 11:51: JMuris navigated to Account/AccountView.
+29-5-2019 | 11:51: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[AccountController]
+29-5-2019 | 11:52: JMuris validated.
+29-5-2019 | 11:52: JMuris navigated to Account/AccountView.
+29-5-2019 | 11:52: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[AccountController]
+29-5-2019 | 11:52: JMuris validated.
+29-5-2019 | 11:52: JMuris navigated to Account/AccountView.
+29-5-2019 | 11:52: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[AccountController]
+29-5-2019 | 11:52: JMuris validated.
+29-5-2019 | 11:52: JMuris navigated to Account/AccountView.
+29-5-2019 | 11:52: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[AccountController]
+29-5-2019 | 11:52: JMuris validated.
+29-5-2019 | 11:52: JMuris navigated to Account/AccountView.
+29-5-2019 | 11:52: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[AccountController]
+29-5-2019 | 11:52: JMuris validated.
+29-5-2019 | 11:52: JMuris navigated to Account/AccountView.
+29-5-2019 | 11:52: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[AccountController]
+29-5-2019 | 11:52: JMuris validated.
+29-5-2019 | 11:52: JMuris navigated to Account/AccountView.
+29-5-2019 | 11:52: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[AccountController]
+29-5-2019 | 11:54: JMuris validated.
+29-5-2019 | 11:54: JMuris navigated to Account/AccountView.
+29-5-2019 | 11:54: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[AccountController]
+29-5-2019 | 11:54: JMuris validated.
+29-5-2019 | 11:54: JMuris navigated to Account/AccountView.
+29-5-2019 | 11:54: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[AccountController]
+29-5-2019 | 11:54: JMuris validated.
+29-5-2019 | 11:54: JMuris navigated to Account/AccountView.
+29-5-2019 | 11:54: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[AccountController]
+29-5-2019 | 11:54: JMuris validated.
+29-5-2019 | 11:54: JMuris navigated to Account/AccountView.
+29-5-2019 | 11:54: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[AccountController]
+29-5-2019 | 11:55: JMuris validated.
+29-5-2019 | 11:55: JMuris navigated to Account/AccountView.
+29-5-2019 | 11:55: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[AccountController]
+29-5-2019 | 11:55: JMuris validated.
+29-5-2019 | 11:55: JMuris navigated to Account/AccountView.
+29-5-2019 | 11:55: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[AccountController]
+29-5-2019 | 11:56: JMuris validated.
+29-5-2019 | 11:56: JMuris navigated to Account/AccountView.
+29-5-2019 | 11:56: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[AccountController]
+29-5-2019 | 11:57: JMuris validated.
+29-5-2019 | 11:57: JMuris navigated to Account/AccountView.
+29-5-2019 | 11:57: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[AccountController]
+29-5-2019 | 11:57: JMuris validated.
+29-5-2019 | 11:57: JMuris navigated to Account/AccountView.
+29-5-2019 | 11:57: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[AccountController]
+29-5-2019 | 11:57: JMuris validated.
+29-5-2019 | 11:57: JMuris navigated to Account/AccountView.
+29-5-2019 | 11:57: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[AccountController]
+29-5-2019 | 11:59: JMuris validated.
+29-5-2019 | 11:59: JMuris navigated to Account/AccountView.
+29-5-2019 | 11:59: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[AccountController]
+29-5-2019 | 11:59: JMuris validated.
+29-5-2019 | 11:59: JMuris navigated to Account/AccountView.
+29-5-2019 | 11:59: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[Startup]
+29-5-2019 | 12:01: Starting server...
+29-5-2019 | 12:01: Server is up and running!
+29-5-2019 | 12:01: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[CheckLogin]
+29-5-2019 | 12:01: Logging in JMuris...
+29-5-2019 | 12:01: Log in found for user JMuris
+29-5-2019 | 12:01: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveUser]
+29-5-2019 | 12:01: Attempting to retrieve user with id 4
+29-5-2019 | 12:01: Found user with id 4
+29-5-2019 | 12:01: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[AccountController]
+29-5-2019 | 12:01: JMuris validated.
+29-5-2019 | 12:01: JMuris navigated to Hub/Game
+29-5-2019 | 12:01: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[AccountController]
+29-5-2019 | 12:01: JMuris validated.
+29-5-2019 | 12:01: JMuris navigated to Account/AccountView.
+29-5-2019 | 12:01: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[AccountController]
+29-5-2019 | 12:01: JMuris validated.
+29-5-2019 | 12:01: JMuris navigated to Account/AccountView.
+29-5-2019 | 12:01: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[AccountController]
+29-5-2019 | 12:01: JMuris validated.
+29-5-2019 | 12:01: JMuris navigated to Account/AccountView.
+29-5-2019 | 12:01: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[AccountController]
+29-5-2019 | 12:01: JMuris validated.
+29-5-2019 | 12:01: JMuris navigated to Account/AccountView.
+29-5-2019 | 12:01: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[CheckLogin]
+29-5-2019 | 12:01: Logging in ...
+29-5-2019 | 12:01: Something went wrong. Check debug.txt
+29-5-2019 | 12:01: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[AccountController]
+29-5-2019 | 12:02: JMuris validated.
+29-5-2019 | 12:02: JMuris navigated to Account/AccountView.
+29-5-2019 | 12:02: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[AccountController]
+29-5-2019 | 12:02: JMuris validated.
+29-5-2019 | 12:02: JMuris navigated to Account/AccountView.
+29-5-2019 | 12:02: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[AccountController]
+29-5-2019 | 12:03: JMuris validated.
+29-5-2019 | 12:03: JMuris navigated to Account/AccountView.
+29-5-2019 | 12:03: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[AccountController]
+29-5-2019 | 12:03: JMuris validated.
+29-5-2019 | 12:03: JMuris navigated to Account/AccountView.
+29-5-2019 | 12:03: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[AccountController]
+29-5-2019 | 12:03: JMuris validated.
+29-5-2019 | 12:03: JMuris navigated to Account/AccountView.
+29-5-2019 | 12:03: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[AccountController]
+29-5-2019 | 12:03: JMuris validated.
+29-5-2019 | 12:03: JMuris navigated to Account/AccountView.
+29-5-2019 | 12:03: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[AccountController]
+29-5-2019 | 12:03: JMuris validated.
+29-5-2019 | 12:03: JMuris navigated to Account/AccountView.
+29-5-2019 | 12:03: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[AccountController]
+29-5-2019 | 12:04: JMuris validated.
+29-5-2019 | 12:04: JMuris navigated to Account/AccountView.
+29-5-2019 | 12:04: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[AccountController]
+29-5-2019 | 12:04: JMuris validated.
+29-5-2019 | 12:04: JMuris navigated to Account/AccountView.
+29-5-2019 | 12:04: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[AccountController]
+29-5-2019 | 12:04: JMuris validated.
+29-5-2019 | 12:04: JMuris navigated to Account/AccountView.
+29-5-2019 | 12:04: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[AccountController]
+29-5-2019 | 12:05: JMuris validated.
+29-5-2019 | 12:05: JMuris navigated to Account/AccountView.
+29-5-2019 | 12:05: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[AccountController]
+29-5-2019 | 12:05: JMuris validated.
+29-5-2019 | 12:05: JMuris navigated to Account/AccountView.
+29-5-2019 | 12:05: End.
+---[LOG MSG END]---
+
