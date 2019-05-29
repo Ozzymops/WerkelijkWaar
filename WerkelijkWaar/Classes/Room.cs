@@ -26,13 +26,14 @@ namespace WerkelijkWaar.Classes
         public int CurrentStrikes;
         public enum State { Waiting, Writing, Reading, Finished, Dead };
         public List<Classes.User> Users { get; set; } = new List<Classes.User>();
-        public List<List<Classes.User>> Groups { get; set; } = new List<List<Classes.User>>();
         public List<Classes.Story> RetrievedStories { get; set; } = new List<Classes.Story>();
         public List<Classes.Story> WrittenStories { get; set; } = new List<Classes.Story>();
+        public List<string> SentStories { get; set; } = new List<string>();
         public List<Classes.Score> SelectedAnswers { get; set; } = new List<Classes.Score>();
         public int RemainingTime { get; set; }
         public int NumberOfReadyPlayers { get; set; }
         public int CurrentGroup = 0;
+        public int GroupCount = 0;
         public int CorrectAnswer = 0;
 
         // Configuration
@@ -210,6 +211,8 @@ namespace WerkelijkWaar.Classes
                         currentGroup++;
                         maxPlayersInGroup = MinPlayers;
                     }
+
+                    GroupCount = currentGroup;
                 }
 
                 // Assign stories to groups
@@ -229,6 +232,13 @@ namespace WerkelijkWaar.Classes
                 for (int group = 1; group < currentGroup; group++)
                 {
                     RetrievedStories.Add(shuffledStories[group - 1]);
+                }
+
+                // Create empty Score list
+                foreach (User user in Users)
+                {
+                    Score tempScore = new Score { OwnerId = user.Id, SocketId = user.SocketId, Answers = "", AttainedVotes = 0, CashAmount = 0.00, CorrectAnswers = "", GameType = 0, FollowerAmount = 0, Date = DateTime.Now };
+                    SelectedAnswers.Add(tempScore);
                 }
 
                 return true;

@@ -660,3 +660,1195 @@
 29-5-2019 | 15:46: End.
 ---[DEBUG MSG END]---
 
+---[DEBUG MSG START]---
+[Startup]
+28-5-2019 | 09:09: 4ms. Launching server
+28-5-2019 | 09:09: 19ms. Server is up
+28-5-2019 | 09:09: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[CheckLogin]
+28-5-2019 | 09:09: 1ms. Checking login for JMuris
+28-5-2019 | 09:09: 50ms. Exception:
+System.Data.SqlClient.SqlException (0x80131904): Login failed for user 'DBMASTER'.
+   at System.Data.SqlClient.SqlInternalConnectionTds..ctor(DbConnectionPoolIdentity identity, SqlConnectionString connectionOptions, SqlCredential credential, Object providerInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString userConnectionOptions, SessionData reconnectSessionData, Boolean applyTransientFaultHandling, String accessToken)
+   at System.Data.SqlClient.SqlConnectionFactory.CreateConnection(DbConnectionOptions options, DbConnectionPoolKey poolKey, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningConnection, DbConnectionOptions userOptions)
+   at System.Data.ProviderBase.DbConnectionFactory.CreatePooledConnection(DbConnectionPool pool, DbConnection owningObject, DbConnectionOptions options, DbConnectionPoolKey poolKey, DbConnectionOptions userOptions)
+   at System.Data.ProviderBase.DbConnectionPool.CreateObject(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at System.Data.ProviderBase.DbConnectionPool.UserCreateRequest(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at System.Data.ProviderBase.DbConnectionClosed.TryOpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at System.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry)
+   at System.Data.SqlClient.SqlConnection.Open()
+   at WerkelijkWaar.Classes.DatabaseQueries.CheckLogin(String username, String password) in C:\Users\Justin\Source\Repos\WerkelijkWaar\WerkelijkWaar\Classes\DatabaseQueries.cs:line 371
+ClientConnectionId:1c843317-a958-423b-9e9b-acc189f6c165
+Error Number:18456,State:1,Class:14
+28-5-2019 | 09:09: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[CheckLogin]
+28-5-2019 | 09:11: 1ms. Checking login for JMuris
+28-5-2019 | 09:11: 16ms. Found JMuris
+28-5-2019 | 09:11: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[RetrieveUser]
+28-5-2019 | 09:11: 1ms. Retrieving user 4
+28-5-2019 | 09:11: 6ms. Found user 4
+28-5-2019 | 09:11: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[Startup]
+28-5-2019 | 09:16: 3ms. Launching server
+28-5-2019 | 09:16: 11ms. Server is up
+28-5-2019 | 09:16: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[CheckLogin]
+28-5-2019 | 09:16: 1ms. Checking login for JMuris
+28-5-2019 | 09:16: 29ms. Found JMuris
+28-5-2019 | 09:16: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[RetrieveUser]
+28-5-2019 | 09:16: 1ms. Retrieving user 4
+28-5-2019 | 09:16: 6ms. Found user 4
+28-5-2019 | 09:16: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[CheckLogin]
+28-5-2019 | 09:16: 1ms. Checking login for AAppel
+28-5-2019 | 09:16: 5ms. Found AAppel
+28-5-2019 | 09:16: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[RetrieveUser]
+28-5-2019 | 09:16: 1ms. Retrieving user 5
+28-5-2019 | 09:16: 4ms. Found user 5
+28-5-2019 | 09:16: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[Room]
+28-5-2019 | 09:16: 1ms. Creating room...
+28-5-2019 | 09:16: 3ms. Generating code...
+28-5-2019 | 09:16: 5ms. Setting timers...
+28-5-2019 | 09:16: 7ms. Room created with code NUP836
+28-5-2019 | 09:16: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[RetrieveAllStories]
+28-5-2019 | 09:17: 1ms. Attempting to retrieve all stories.
+28-5-2019 | 09:17: 4ms. Got: 1 - Een root verhaal
+28-5-2019 | 09:17: 6ms. Got: 2 - Een verhaal
+28-5-2019 | 09:17: 7ms. Got: 3 - Nog een verhaal
+28-5-2019 | 09:17: 10ms. Found 3 stories.
+28-5-2019 | 09:17: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[Startup]
+28-5-2019 | 10:04: 4ms. Launching server
+28-5-2019 | 10:04: 10ms. Server is up
+28-5-2019 | 10:04: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[CheckLogin]
+28-5-2019 | 10:04: 1ms. Checking login for JMuris
+28-5-2019 | 10:04: 30ms. Found JMuris
+28-5-2019 | 10:04: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[RetrieveUser]
+28-5-2019 | 10:04: 1ms. Retrieving user 4
+28-5-2019 | 10:04: 7ms. Found user 4
+28-5-2019 | 10:04: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[CheckLogin]
+28-5-2019 | 10:04: 1ms. Checking login for AAppel
+28-5-2019 | 10:04: 7ms. Found AAppel
+28-5-2019 | 10:04: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[RetrieveUser]
+28-5-2019 | 10:04: 1ms. Retrieving user 5
+28-5-2019 | 10:04: 4ms. Found user 5
+28-5-2019 | 10:04: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[Room]
+28-5-2019 | 10:04: 1ms. Creating room...
+28-5-2019 | 10:04: 3ms. Generating code...
+28-5-2019 | 10:04: 5ms. Setting timers...
+28-5-2019 | 10:04: 8ms. Room created with code gi8a80
+28-5-2019 | 10:04: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[RetrieveAllStories]
+28-5-2019 | 10:04: 1ms. Attempting to retrieve all stories.
+28-5-2019 | 10:04: 5ms. Got: 1 - Een root verhaal
+28-5-2019 | 10:04: 7ms. Got: 2 - Een verhaal
+28-5-2019 | 10:04: 13ms. Got: 3 - Nog een verhaal
+28-5-2019 | 10:04: 16ms. Found 3 stories.
+28-5-2019 | 10:04: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[Startup]
+28-5-2019 | 10:07: 3ms. Launching server
+28-5-2019 | 10:07: 9ms. Server is up
+28-5-2019 | 10:07: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[CheckLogin]
+28-5-2019 | 10:07: 1ms. Checking login for JMuris
+28-5-2019 | 10:07: 30ms. Found JMuris
+28-5-2019 | 10:07: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[RetrieveUser]
+28-5-2019 | 10:07: 1ms. Retrieving user 4
+28-5-2019 | 10:07: 7ms. Found user 4
+28-5-2019 | 10:07: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[CheckLogin]
+28-5-2019 | 10:07: 1ms. Checking login for AAppel
+28-5-2019 | 10:07: 5ms. Found AAppel
+28-5-2019 | 10:07: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[RetrieveUser]
+28-5-2019 | 10:07: 1ms. Retrieving user 5
+28-5-2019 | 10:07: 4ms. Found user 5
+28-5-2019 | 10:07: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[Room]
+28-5-2019 | 10:08: 1ms. Creating room...
+28-5-2019 | 10:08: 3ms. Generating code...
+28-5-2019 | 10:08: 5ms. Setting timers...
+28-5-2019 | 10:08: 8ms. Room created with code 2Y2p6h
+28-5-2019 | 10:08: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[RetrieveAllStories]
+28-5-2019 | 10:08: 1ms. Attempting to retrieve all stories.
+28-5-2019 | 10:08: 4ms. Got: 1 - Een root verhaal
+28-5-2019 | 10:08: 6ms. Got: 2 - Een verhaal
+28-5-2019 | 10:08: 8ms. Got: 3 - Nog een verhaal
+28-5-2019 | 10:08: 11ms. Found 3 stories.
+28-5-2019 | 10:08: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[Startup]
+28-5-2019 | 10:12: 3ms. Launching server
+28-5-2019 | 10:12: 9ms. Server is up
+28-5-2019 | 10:12: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[CheckLogin]
+28-5-2019 | 10:12: 2ms. Checking login for JMuris
+28-5-2019 | 10:12: 31ms. Found JMuris
+28-5-2019 | 10:12: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[RetrieveUser]
+28-5-2019 | 10:12: 1ms. Retrieving user 4
+28-5-2019 | 10:12: 7ms. Found user 4
+28-5-2019 | 10:12: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[CheckLogin]
+28-5-2019 | 10:12: 1ms. Checking login for AAppel
+28-5-2019 | 10:12: 5ms. Found AAppel
+28-5-2019 | 10:12: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[RetrieveUser]
+28-5-2019 | 10:12: 1ms. Retrieving user 5
+28-5-2019 | 10:12: 4ms. Found user 5
+28-5-2019 | 10:12: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[Room]
+28-5-2019 | 10:12: 2ms. Creating room...
+28-5-2019 | 10:12: 5ms. Generating code...
+28-5-2019 | 10:12: 7ms. Setting timers...
+28-5-2019 | 10:12: 18ms. Room created with code 4RSQy1
+28-5-2019 | 10:12: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[RetrieveAllStories]
+28-5-2019 | 10:13: 1ms. Attempting to retrieve all stories.
+28-5-2019 | 10:13: 4ms. Got: 1 - Een root verhaal
+28-5-2019 | 10:13: 6ms. Got: 2 - Een verhaal
+28-5-2019 | 10:13: 8ms. Got: 3 - Nog een verhaal
+28-5-2019 | 10:13: 11ms. Found 3 stories.
+28-5-2019 | 10:13: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[Startup]
+28-5-2019 | 10:17: 3ms. Launching server
+28-5-2019 | 10:17: 9ms. Server is up
+28-5-2019 | 10:17: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[CheckLogin]
+28-5-2019 | 10:18: 1ms. Checking login for JMuris
+28-5-2019 | 10:18: 29ms. Found JMuris
+28-5-2019 | 10:18: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[RetrieveUser]
+28-5-2019 | 10:18: 1ms. Retrieving user 4
+28-5-2019 | 10:18: 6ms. Found user 4
+28-5-2019 | 10:18: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[CheckLogin]
+28-5-2019 | 10:18: 1ms. Checking login for AAppel
+28-5-2019 | 10:18: 5ms. Found AAppel
+28-5-2019 | 10:18: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[RetrieveUser]
+28-5-2019 | 10:18: 1ms. Retrieving user 5
+28-5-2019 | 10:18: 5ms. Found user 5
+28-5-2019 | 10:18: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[Room]
+28-5-2019 | 10:18: 1ms. Creating room...
+28-5-2019 | 10:18: 3ms. Generating code...
+28-5-2019 | 10:18: 5ms. Setting timers...
+28-5-2019 | 10:18: 8ms. Room created with code yRKe83
+28-5-2019 | 10:18: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[RetrieveAllStories]
+28-5-2019 | 10:18: 1ms. Attempting to retrieve all stories.
+28-5-2019 | 10:18: 4ms. Got: 1 - Een root verhaal
+28-5-2019 | 10:18: 5ms. Got: 2 - Een verhaal
+28-5-2019 | 10:18: 7ms. Got: 3 - Nog een verhaal
+28-5-2019 | 10:18: 10ms. Found 3 stories.
+28-5-2019 | 10:18: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[Startup]
+28-5-2019 | 10:21: 3ms. Launching server
+28-5-2019 | 10:21: 8ms. Server is up
+28-5-2019 | 10:21: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[CheckLogin]
+28-5-2019 | 10:22: 1ms. Checking login for JMuris
+28-5-2019 | 10:22: 31ms. Found JMuris
+28-5-2019 | 10:22: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[RetrieveUser]
+28-5-2019 | 10:22: 1ms. Retrieving user 4
+28-5-2019 | 10:22: 6ms. Found user 4
+28-5-2019 | 10:22: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[CheckLogin]
+28-5-2019 | 10:22: 1ms. Checking login for AAppel
+28-5-2019 | 10:22: 6ms. Found AAppel
+28-5-2019 | 10:22: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[RetrieveUser]
+28-5-2019 | 10:22: 1ms. Retrieving user 5
+28-5-2019 | 10:22: 5ms. Found user 5
+28-5-2019 | 10:22: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[Room]
+28-5-2019 | 10:22: 1ms. Creating room...
+28-5-2019 | 10:22: 3ms. Generating code...
+28-5-2019 | 10:22: 5ms. Setting timers...
+28-5-2019 | 10:22: 9ms. Room created with code 02e3K1
+28-5-2019 | 10:22: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[RetrieveAllStories]
+28-5-2019 | 10:22: 1ms. Attempting to retrieve all stories.
+28-5-2019 | 10:22: 4ms. Got: 1 - Een root verhaal
+28-5-2019 | 10:22: 6ms. Got: 2 - Een verhaal
+28-5-2019 | 10:22: 8ms. Got: 3 - Nog een verhaal
+28-5-2019 | 10:22: 11ms. Found 3 stories.
+28-5-2019 | 10:22: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[Startup]
+28-5-2019 | 10:24: 3ms. Launching server
+28-5-2019 | 10:24: 8ms. Server is up
+28-5-2019 | 10:24: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[CheckLogin]
+28-5-2019 | 10:24: 1ms. Checking login for JMuris
+28-5-2019 | 10:24: 32ms. Found JMuris
+28-5-2019 | 10:24: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[RetrieveUser]
+28-5-2019 | 10:24: 1ms. Retrieving user 4
+28-5-2019 | 10:24: 7ms. Found user 4
+28-5-2019 | 10:24: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[CheckLogin]
+28-5-2019 | 10:24: 1ms. Checking login for AAppel
+28-5-2019 | 10:24: 5ms. Found AAppel
+28-5-2019 | 10:24: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[RetrieveUser]
+28-5-2019 | 10:24: 1ms. Retrieving user 5
+28-5-2019 | 10:24: 6ms. Found user 5
+28-5-2019 | 10:24: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[Room]
+28-5-2019 | 10:24: 1ms. Creating room...
+28-5-2019 | 10:24: 3ms. Generating code...
+28-5-2019 | 10:24: 5ms. Setting timers...
+28-5-2019 | 10:24: 8ms. Room created with code 5x1RcK
+28-5-2019 | 10:24: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[RetrieveAllStories]
+28-5-2019 | 10:24: 1ms. Attempting to retrieve all stories.
+28-5-2019 | 10:24: 4ms. Got: 1 - Een root verhaal
+28-5-2019 | 10:24: 6ms. Got: 2 - Een verhaal
+28-5-2019 | 10:24: 7ms. Got: 3 - Nog een verhaal
+28-5-2019 | 10:24: 11ms. Found 3 stories.
+28-5-2019 | 10:24: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[Startup]
+28-5-2019 | 10:26: 3ms. Launching server
+28-5-2019 | 10:26: 8ms. Server is up
+28-5-2019 | 10:26: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[CheckLogin]
+28-5-2019 | 10:27: 1ms. Checking login for JMuris
+28-5-2019 | 10:27: 29ms. Found JMuris
+28-5-2019 | 10:27: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[RetrieveUser]
+28-5-2019 | 10:27: 1ms. Retrieving user 4
+28-5-2019 | 10:27: 6ms. Found user 4
+28-5-2019 | 10:27: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[CheckLogin]
+28-5-2019 | 10:27: 1ms. Checking login for AAppel
+28-5-2019 | 10:27: 5ms. Found AAppel
+28-5-2019 | 10:27: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[RetrieveUser]
+28-5-2019 | 10:27: 1ms. Retrieving user 5
+28-5-2019 | 10:27: 4ms. Found user 5
+28-5-2019 | 10:27: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[Room]
+28-5-2019 | 10:27: 1ms. Creating room...
+28-5-2019 | 10:27: 4ms. Generating code...
+28-5-2019 | 10:27: 6ms. Setting timers...
+28-5-2019 | 10:27: 8ms. Room created with code Qlh39J
+28-5-2019 | 10:27: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[RetrieveAllStories]
+28-5-2019 | 10:27: 1ms. Attempting to retrieve all stories.
+28-5-2019 | 10:27: 4ms. Got: 1 - Een root verhaal
+28-5-2019 | 10:27: 6ms. Got: 2 - Een verhaal
+28-5-2019 | 10:27: 8ms. Got: 3 - Nog een verhaal
+28-5-2019 | 10:27: 10ms. Found 3 stories.
+28-5-2019 | 10:27: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[Startup]
+28-5-2019 | 10:28: 4ms. Launching server
+28-5-2019 | 10:28: 10ms. Server is up
+28-5-2019 | 10:28: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[CheckLogin]
+28-5-2019 | 10:28: 1ms. Checking login for JMuris
+28-5-2019 | 10:28: 30ms. Found JMuris
+28-5-2019 | 10:28: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[RetrieveUser]
+28-5-2019 | 10:28: 1ms. Retrieving user 4
+28-5-2019 | 10:28: 6ms. Found user 4
+28-5-2019 | 10:28: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[CheckLogin]
+28-5-2019 | 10:28: 1ms. Checking login for AAppel
+28-5-2019 | 10:28: 5ms. Found AAppel
+28-5-2019 | 10:28: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[RetrieveUser]
+28-5-2019 | 10:28: 1ms. Retrieving user 5
+28-5-2019 | 10:28: 4ms. Found user 5
+28-5-2019 | 10:28: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[Room]
+28-5-2019 | 10:28: 2ms. Creating room...
+28-5-2019 | 10:28: 3ms. Generating code...
+28-5-2019 | 10:28: 5ms. Setting timers...
+28-5-2019 | 10:28: 8ms. Room created with code Qlf8CZ
+28-5-2019 | 10:28: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[RetrieveAllStories]
+28-5-2019 | 10:29: 1ms. Attempting to retrieve all stories.
+28-5-2019 | 10:29: 4ms. Got: 1 - Een root verhaal
+28-5-2019 | 10:29: 6ms. Got: 2 - Een verhaal
+28-5-2019 | 10:29: 8ms. Got: 3 - Nog een verhaal
+28-5-2019 | 10:29: 12ms. Found 3 stories.
+28-5-2019 | 10:29: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[CheckLogin]
+28-5-2019 | 10:30: 1ms. Checking login for JMuris
+28-5-2019 | 10:30: 10ms. Found JMuris
+28-5-2019 | 10:30: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[RetrieveUser]
+28-5-2019 | 10:30: 1ms. Retrieving user 4
+28-5-2019 | 10:30: 5ms. Found user 4
+28-5-2019 | 10:30: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[CheckLogin]
+28-5-2019 | 10:30: 2ms. Checking login for AAppel
+28-5-2019 | 10:30: 5ms. Found AAppel
+28-5-2019 | 10:30: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[RetrieveUser]
+28-5-2019 | 10:30: 1ms. Retrieving user 5
+28-5-2019 | 10:30: 4ms. Found user 5
+28-5-2019 | 10:30: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[Room]
+28-5-2019 | 10:30: 1ms. Creating room...
+28-5-2019 | 10:30: 4ms. Generating code...
+28-5-2019 | 10:30: 6ms. Setting timers...
+28-5-2019 | 10:30: 8ms. Room created with code 1217C5
+28-5-2019 | 10:30: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[RetrieveAllStories]
+28-5-2019 | 10:30: 1ms. Attempting to retrieve all stories.
+28-5-2019 | 10:30: 4ms. Got: 1 - Een root verhaal
+28-5-2019 | 10:30: 6ms. Got: 2 - Een verhaal
+28-5-2019 | 10:30: 7ms. Got: 3 - Nog een verhaal
+28-5-2019 | 10:30: 10ms. Found 3 stories.
+28-5-2019 | 10:30: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[Startup]
+28-5-2019 | 10:31: 3ms. Launching server
+28-5-2019 | 10:31: 8ms. Server is up
+28-5-2019 | 10:31: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[CheckLogin]
+28-5-2019 | 10:31: 1ms. Checking login for JMuris
+28-5-2019 | 10:31: 29ms. Found JMuris
+28-5-2019 | 10:31: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[RetrieveUser]
+28-5-2019 | 10:31: 1ms. Retrieving user 4
+28-5-2019 | 10:31: 6ms. Found user 4
+28-5-2019 | 10:31: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[CheckLogin]
+28-5-2019 | 10:31: 1ms. Checking login for AAppel
+28-5-2019 | 10:31: 5ms. Found AAppel
+28-5-2019 | 10:31: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[RetrieveUser]
+28-5-2019 | 10:31: 1ms. Retrieving user 5
+28-5-2019 | 10:31: 4ms. Found user 5
+28-5-2019 | 10:31: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[Room]
+28-5-2019 | 10:31: 2ms. Creating room...
+28-5-2019 | 10:31: 4ms. Generating code...
+28-5-2019 | 10:31: 6ms. Setting timers...
+28-5-2019 | 10:31: 10ms. Room created with code J5862d
+28-5-2019 | 10:31: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[RetrieveAllStories]
+28-5-2019 | 10:31: 1ms. Attempting to retrieve all stories.
+28-5-2019 | 10:31: 4ms. Got: 1 - Een root verhaal
+28-5-2019 | 10:31: 6ms. Got: 2 - Een verhaal
+28-5-2019 | 10:31: 8ms. Got: 3 - Nog een verhaal
+28-5-2019 | 10:31: 10ms. Found 3 stories.
+28-5-2019 | 10:31: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[Startup]
+28-5-2019 | 10:49: 3ms. Launching server
+28-5-2019 | 10:49: 8ms. Server is up
+28-5-2019 | 10:49: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[CheckLogin]
+28-5-2019 | 10:49: 1ms. Checking login for JMuris
+28-5-2019 | 10:49: 29ms. Found JMuris
+28-5-2019 | 10:49: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[RetrieveUser]
+28-5-2019 | 10:49: 1ms. Retrieving user 4
+28-5-2019 | 10:49: 6ms. Found user 4
+28-5-2019 | 10:49: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[Startup]
+28-5-2019 | 10:49: 3ms. Launching server
+28-5-2019 | 10:49: 8ms. Server is up
+28-5-2019 | 10:49: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[CheckLogin]
+28-5-2019 | 10:50: 1ms. Checking login for JMuris
+28-5-2019 | 10:50: 29ms. Found JMuris
+28-5-2019 | 10:50: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[RetrieveUser]
+28-5-2019 | 10:50: 2ms. Retrieving user 4
+28-5-2019 | 10:50: 8ms. Found user 4
+28-5-2019 | 10:50: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[CheckLogin]
+28-5-2019 | 10:50: 1ms. Checking login for AAppel
+28-5-2019 | 10:50: 5ms. Found AAppel
+28-5-2019 | 10:50: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[RetrieveUser]
+28-5-2019 | 10:50: 2ms. Retrieving user 5
+28-5-2019 | 10:50: 6ms. Found user 5
+28-5-2019 | 10:50: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[Room]
+28-5-2019 | 10:50: 1ms. Creating room...
+28-5-2019 | 10:50: 4ms. Generating code...
+28-5-2019 | 10:50: 6ms. Setting timers...
+28-5-2019 | 10:50: 9ms. Room created with code V9adkh
+28-5-2019 | 10:50: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[RetrieveAllStories]
+28-5-2019 | 10:50: 1ms. Attempting to retrieve all stories.
+28-5-2019 | 10:50: 4ms. Got: 1 - Een root verhaal
+28-5-2019 | 10:50: 6ms. Got: 2 - Een verhaal
+28-5-2019 | 10:50: 7ms. Got: 3 - Nog een verhaal
+28-5-2019 | 10:50: 10ms. Found 3 stories.
+28-5-2019 | 10:50: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[Startup]
+28-5-2019 | 10:52: 4ms. Launching server
+28-5-2019 | 10:52: 9ms. Server is up
+28-5-2019 | 10:52: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[CheckLogin]
+28-5-2019 | 10:52: 1ms. Checking login for JMuris
+28-5-2019 | 10:52: 32ms. Found JMuris
+28-5-2019 | 10:52: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[RetrieveUser]
+28-5-2019 | 10:52: 1ms. Retrieving user 4
+28-5-2019 | 10:52: 6ms. Found user 4
+28-5-2019 | 10:52: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[CheckLogin]
+28-5-2019 | 10:52: 1ms. Checking login for AAppel
+28-5-2019 | 10:52: 5ms. Found AAppel
+28-5-2019 | 10:52: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[RetrieveUser]
+28-5-2019 | 10:52: 1ms. Retrieving user 5
+28-5-2019 | 10:52: 4ms. Found user 5
+28-5-2019 | 10:52: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[Room]
+28-5-2019 | 10:52: 2ms. Creating room...
+28-5-2019 | 10:52: 4ms. Generating code...
+28-5-2019 | 10:52: 6ms. Setting timers...
+28-5-2019 | 10:52: 11ms. Room created with code TaN52Z
+28-5-2019 | 10:52: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[RetrieveAllStories]
+28-5-2019 | 10:52: 1ms. Attempting to retrieve all stories.
+28-5-2019 | 10:52: 4ms. Got: 1 - Een root verhaal
+28-5-2019 | 10:52: 6ms. Got: 2 - Een verhaal
+28-5-2019 | 10:52: 7ms. Got: 3 - Nog een verhaal
+28-5-2019 | 10:52: 10ms. Found 3 stories.
+28-5-2019 | 10:52: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[Startup]
+28-5-2019 | 10:53: 3ms. Launching server
+28-5-2019 | 10:53: 8ms. Server is up
+28-5-2019 | 10:53: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[CheckLogin]
+28-5-2019 | 10:53: 1ms. Checking login for JMuris
+28-5-2019 | 10:53: 28ms. Found JMuris
+28-5-2019 | 10:53: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[RetrieveUser]
+28-5-2019 | 10:53: 1ms. Retrieving user 4
+28-5-2019 | 10:53: 6ms. Found user 4
+28-5-2019 | 10:53: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[CheckLogin]
+28-5-2019 | 10:53: 1ms. Checking login for AAppel
+28-5-2019 | 10:53: 4ms. Found AAppel
+28-5-2019 | 10:53: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[RetrieveUser]
+28-5-2019 | 10:53: 1ms. Retrieving user 5
+28-5-2019 | 10:53: 4ms. Found user 5
+28-5-2019 | 10:53: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[Room]
+28-5-2019 | 10:53: 1ms. Creating room...
+28-5-2019 | 10:53: 3ms. Generating code...
+28-5-2019 | 10:53: 5ms. Setting timers...
+28-5-2019 | 10:53: 8ms. Room created with code AT5P4S
+28-5-2019 | 10:53: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[RetrieveAllStories]
+28-5-2019 | 10:53: 1ms. Attempting to retrieve all stories.
+28-5-2019 | 10:53: 4ms. Got: 1 - Een root verhaal
+28-5-2019 | 10:53: 6ms. Got: 2 - Een verhaal
+28-5-2019 | 10:53: 7ms. Got: 3 - Nog een verhaal
+28-5-2019 | 10:53: 10ms. Found 3 stories.
+28-5-2019 | 10:53: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[Startup]
+28-5-2019 | 10:57: 3ms. Launching server
+28-5-2019 | 10:57: 8ms. Server is up
+28-5-2019 | 10:57: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[CheckLogin]
+28-5-2019 | 10:57: 1ms. Checking login for JMuris
+28-5-2019 | 10:57: 33ms. Found JMuris
+28-5-2019 | 10:57: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[RetrieveUser]
+28-5-2019 | 10:57: 1ms. Retrieving user 4
+28-5-2019 | 10:57: 6ms. Found user 4
+28-5-2019 | 10:57: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[CheckLogin]
+28-5-2019 | 10:57: 1ms. Checking login for AAppel
+28-5-2019 | 10:57: 5ms. Found AAppel
+28-5-2019 | 10:57: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[RetrieveUser]
+28-5-2019 | 10:57: 1ms. Retrieving user 5
+28-5-2019 | 10:57: 4ms. Found user 5
+28-5-2019 | 10:57: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[Room]
+28-5-2019 | 10:57: 1ms. Creating room...
+28-5-2019 | 10:57: 3ms. Generating code...
+28-5-2019 | 10:57: 5ms. Setting timers...
+28-5-2019 | 10:57: 8ms. Room created with code 2T00Nb
+28-5-2019 | 10:57: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[RetrieveAllStories]
+28-5-2019 | 10:57: 1ms. Attempting to retrieve all stories.
+28-5-2019 | 10:57: 4ms. Got: 1 - Een root verhaal
+28-5-2019 | 10:57: 6ms. Got: 2 - Een verhaal
+28-5-2019 | 10:57: 12ms. Got: 3 - Nog een verhaal
+28-5-2019 | 10:57: 15ms. Found 3 stories.
+28-5-2019 | 10:57: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[Startup]
+28-5-2019 | 10:59: 3ms. Launching server
+28-5-2019 | 10:59: 10ms. Server is up
+28-5-2019 | 10:59: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[CheckLogin]
+28-5-2019 | 10:59: 1ms. Checking login for JMuris
+28-5-2019 | 10:59: 29ms. Found JMuris
+28-5-2019 | 10:59: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[RetrieveUser]
+28-5-2019 | 10:59: 1ms. Retrieving user 4
+28-5-2019 | 10:59: 6ms. Found user 4
+28-5-2019 | 10:59: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[CheckLogin]
+28-5-2019 | 10:59: 1ms. Checking login for AAppel
+28-5-2019 | 10:59: 5ms. Found AAppel
+28-5-2019 | 10:59: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[RetrieveUser]
+28-5-2019 | 10:59: 1ms. Retrieving user 5
+28-5-2019 | 10:59: 4ms. Found user 5
+28-5-2019 | 10:59: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[Room]
+28-5-2019 | 10:59: 1ms. Creating room...
+28-5-2019 | 10:59: 4ms. Generating code...
+28-5-2019 | 10:59: 6ms. Setting timers...
+28-5-2019 | 10:59: 10ms. Room created with code 73e7Rb
+28-5-2019 | 10:59: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[RetrieveAllStories]
+28-5-2019 | 11:00: 1ms. Attempting to retrieve all stories.
+28-5-2019 | 11:00: 5ms. Got: 1 - Een root verhaal
+28-5-2019 | 11:00: 7ms. Got: 2 - Een verhaal
+28-5-2019 | 11:00: 9ms. Got: 3 - Nog een verhaal
+28-5-2019 | 11:00: 12ms. Found 3 stories.
+28-5-2019 | 11:00: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[Startup]
+28-5-2019 | 13:07: 8ms. Launching server
+28-5-2019 | 13:07: 25ms. Server is up
+28-5-2019 | 13:07: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[CheckLogin]
+28-5-2019 | 13:07: 1ms. Checking login for JMuris
+28-5-2019 | 13:07: 53ms. Found JMuris
+28-5-2019 | 13:07: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[RetrieveUser]
+28-5-2019 | 13:07: 1ms. Retrieving user 4
+28-5-2019 | 13:07: 9ms. Found user 4
+28-5-2019 | 13:07: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[CheckLogin]
+28-5-2019 | 13:07: 1ms. Checking login for AAppel
+28-5-2019 | 13:07: 5ms. Found AAppel
+28-5-2019 | 13:07: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[RetrieveUser]
+28-5-2019 | 13:07: 1ms. Retrieving user 5
+28-5-2019 | 13:07: 4ms. Found user 5
+28-5-2019 | 13:07: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[Room]
+28-5-2019 | 13:07: 2ms. Creating room...
+28-5-2019 | 13:07: 3ms. Generating code...
+28-5-2019 | 13:07: 5ms. Setting timers...
+28-5-2019 | 13:07: 8ms. Room created with code 84201Q
+28-5-2019 | 13:07: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[RetrieveAllStories]
+28-5-2019 | 13:07: 1ms. Attempting to retrieve all stories.
+28-5-2019 | 13:07: 6ms. Got: 1 - Een root verhaal
+28-5-2019 | 13:07: 8ms. Got: 2 - Een verhaal
+28-5-2019 | 13:07: 10ms. Got: 3 - Nog een verhaal
+28-5-2019 | 13:07: 12ms. Found 3 stories.
+28-5-2019 | 13:07: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[Startup]
+28-5-2019 | 13:11: 3ms. Launching server
+28-5-2019 | 13:11: 8ms. Server is up
+28-5-2019 | 13:11: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[CheckLogin]
+28-5-2019 | 13:11: 1ms. Checking login for JMuris
+28-5-2019 | 13:11: 28ms. Found JMuris
+28-5-2019 | 13:11: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[RetrieveUser]
+28-5-2019 | 13:11: 0ms. Retrieving user 4
+28-5-2019 | 13:11: 5ms. Found user 4
+28-5-2019 | 13:11: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[CheckLogin]
+28-5-2019 | 13:11: 1ms. Checking login for AAppel
+28-5-2019 | 13:11: 5ms. Found AAppel
+28-5-2019 | 13:11: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[RetrieveUser]
+28-5-2019 | 13:11: 1ms. Retrieving user 5
+28-5-2019 | 13:11: 4ms. Found user 5
+28-5-2019 | 13:11: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[Room]
+28-5-2019 | 13:11: 1ms. Creating room...
+28-5-2019 | 13:11: 3ms. Generating code...
+28-5-2019 | 13:11: 5ms. Setting timers...
+28-5-2019 | 13:11: 7ms. Room created with code 739XIN
+28-5-2019 | 13:11: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[RetrieveAllStories]
+28-5-2019 | 13:12: 1ms. Attempting to retrieve all stories.
+28-5-2019 | 13:12: 4ms. Got: 1 - Een root verhaal
+28-5-2019 | 13:12: 5ms. Got: 2 - Een verhaal
+28-5-2019 | 13:12: 7ms. Got: 3 - Nog een verhaal
+28-5-2019 | 13:12: 11ms. Found 3 stories.
+28-5-2019 | 13:12: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[Startup]
+28-5-2019 | 13:13: 3ms. Launching server
+28-5-2019 | 13:13: 8ms. Server is up
+28-5-2019 | 13:13: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[CheckLogin]
+28-5-2019 | 13:14: 1ms. Checking login for JMuris
+28-5-2019 | 13:14: 32ms. Found JMuris
+28-5-2019 | 13:14: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[RetrieveUser]
+28-5-2019 | 13:14: 1ms. Retrieving user 4
+28-5-2019 | 13:14: 6ms. Found user 4
+28-5-2019 | 13:14: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[CheckLogin]
+28-5-2019 | 13:14: 1ms. Checking login for AAppel
+28-5-2019 | 13:14: 4ms. Found AAppel
+28-5-2019 | 13:14: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[RetrieveUser]
+28-5-2019 | 13:14: 1ms. Retrieving user 5
+28-5-2019 | 13:14: 3ms. Found user 5
+28-5-2019 | 13:14: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[Room]
+28-5-2019 | 13:14: 1ms. Creating room...
+28-5-2019 | 13:14: 3ms. Generating code...
+28-5-2019 | 13:14: 4ms. Setting timers...
+28-5-2019 | 13:14: 7ms. Room created with code 89yh6m
+28-5-2019 | 13:14: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[RetrieveAllStories]
+28-5-2019 | 13:14: 1ms. Attempting to retrieve all stories.
+28-5-2019 | 13:14: 4ms. Got: 1 - Een root verhaal
+28-5-2019 | 13:14: 6ms. Got: 2 - Een verhaal
+28-5-2019 | 13:14: 8ms. Got: 3 - Nog een verhaal
+28-5-2019 | 13:14: 10ms. Found 3 stories.
+28-5-2019 | 13:14: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[Startup]
+28-5-2019 | 13:18: 3ms. Launching server
+28-5-2019 | 13:18: 9ms. Server is up
+28-5-2019 | 13:18: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[CheckLogin]
+28-5-2019 | 13:18: 1ms. Checking login for JMuris
+28-5-2019 | 13:18: 32ms. Found JMuris
+28-5-2019 | 13:18: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[RetrieveUser]
+28-5-2019 | 13:18: 1ms. Retrieving user 4
+28-5-2019 | 13:18: 6ms. Found user 4
+28-5-2019 | 13:18: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[CheckLogin]
+28-5-2019 | 13:19: 1ms. Checking login for AAppel
+28-5-2019 | 13:19: 5ms. Found AAppel
+28-5-2019 | 13:19: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[RetrieveUser]
+28-5-2019 | 13:19: 1ms. Retrieving user 5
+28-5-2019 | 13:19: 4ms. Found user 5
+28-5-2019 | 13:19: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[Room]
+28-5-2019 | 13:19: 1ms. Creating room...
+28-5-2019 | 13:19: 4ms. Generating code...
+28-5-2019 | 13:19: 6ms. Setting timers...
+28-5-2019 | 13:19: 9ms. Room created with code w11w24
+28-5-2019 | 13:19: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[RetrieveAllStories]
+28-5-2019 | 13:19: 1ms. Attempting to retrieve all stories.
+28-5-2019 | 13:19: 5ms. Got: 1 - Een root verhaal
+28-5-2019 | 13:19: 7ms. Got: 2 - Een verhaal
+28-5-2019 | 13:19: 8ms. Got: 3 - Nog een verhaal
+28-5-2019 | 13:19: 11ms. Found 3 stories.
+28-5-2019 | 13:19: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[Startup]
+28-5-2019 | 13:22: 3ms. Launching server
+28-5-2019 | 13:22: 9ms. Server is up
+28-5-2019 | 13:22: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[CheckLogin]
+28-5-2019 | 13:22: 1ms. Checking login for JMuris
+28-5-2019 | 13:22: 33ms. Found JMuris
+28-5-2019 | 13:22: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[RetrieveUser]
+28-5-2019 | 13:22: 1ms. Retrieving user 4
+28-5-2019 | 13:22: 6ms. Found user 4
+28-5-2019 | 13:22: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[CheckLogin]
+28-5-2019 | 13:22: 12ms. Checking login for AAppel
+28-5-2019 | 13:22: 21ms. Found AAppel
+28-5-2019 | 13:22: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[RetrieveUser]
+28-5-2019 | 13:22: 1ms. Retrieving user 5
+28-5-2019 | 13:22: 5ms. Found user 5
+28-5-2019 | 13:22: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[Room]
+28-5-2019 | 13:22: 1ms. Creating room...
+28-5-2019 | 13:22: 3ms. Generating code...
+28-5-2019 | 13:22: 5ms. Setting timers...
+28-5-2019 | 13:22: 16ms. Room created with code 892V0L
+28-5-2019 | 13:22: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[RetrieveAllStories]
+28-5-2019 | 13:22: 1ms. Attempting to retrieve all stories.
+28-5-2019 | 13:22: 4ms. Got: 1 - Een root verhaal
+28-5-2019 | 13:22: 6ms. Got: 2 - Een verhaal
+28-5-2019 | 13:22: 7ms. Got: 3 - Nog een verhaal
+28-5-2019 | 13:22: 10ms. Found 3 stories.
+28-5-2019 | 13:22: End.
+---[DEBUG MSG END]---
+

@@ -29,5 +29,6 @@ namespace WerkelijkWaar.Classes
         public bool PowerupOneActive { get; set; }
         public bool PowerupTwoActive { get; set; }
         public bool PowerupThreeActive { get; set; }
+        public bool PowerupFourActive { get; set; }
     }
 }

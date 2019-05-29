@@ -21,5 +21,6 @@ namespace WerkelijkWaar.Classes
 
         // Game
         public int GameGroup { get; set; }
+        public bool PowerupActive { get; set; }
     }
 }
