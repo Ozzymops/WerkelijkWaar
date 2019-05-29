@@ -617,3 +617,52 @@
 29-5-2019 | 11:01: End.
 ---[LOG MSG END]---
 
+---[LOG MSG START]---
+[Startup]
+29-5-2019 | 11:09: Starting server...
+29-5-2019 | 11:09: Server is up and running!
+29-5-2019 | 11:09: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[Startup]
+29-5-2019 | 11:11: Starting server...
+29-5-2019 | 11:11: Server is up and running!
+29-5-2019 | 11:11: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[CheckLogin]
+29-5-2019 | 11:11: Logging in JMuris...
+29-5-2019 | 11:11: Log in found for user JMuris
+29-5-2019 | 11:11: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[CheckLogin]
+29-5-2019 | 11:11: Logging in JMuris...
+29-5-2019 | 11:11: Log in found for user JMuris
+29-5-2019 | 11:11: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveUser]
+29-5-2019 | 11:11: Attempting to retrieve user with id 4
+29-5-2019 | 11:11: Found user with id 4
+29-5-2019 | 11:11: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[AccountController]
+29-5-2019 | 11:11: JMuris validated.
+29-5-2019 | 11:11: JMuris navigated to Hub/Game
+29-5-2019 | 11:11: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[AccountController]
+29-5-2019 | 11:11: JMuris validated.
+29-5-2019 | 11:11: JMuris logged out.
+29-5-2019 | 11:11: End.
+---[LOG MSG END]---
+

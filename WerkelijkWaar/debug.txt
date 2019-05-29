@@ -930,3 +930,38 @@ Error Number:201,State:4,Class:16
 29-5-2019 | 11:01: End.
 ---[DEBUG MSG END]---
 
+---[DEBUG MSG START]---
+[Startup]
+29-5-2019 | 11:09: 8ms. Launching server
+29-5-2019 | 11:09: 53ms. Server is up
+29-5-2019 | 11:09: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[Startup]
+29-5-2019 | 11:11: 5ms. Launching server
+29-5-2019 | 11:11: 15ms. Server is up
+29-5-2019 | 11:11: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[CheckLogin]
+29-5-2019 | 11:11: 2ms. Checking login for JMuris
+29-5-2019 | 11:11: 49ms. Found JMuris
+29-5-2019 | 11:11: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[CheckLogin]
+29-5-2019 | 11:11: 2ms. Checking login for JMuris
+29-5-2019 | 11:11: 11ms. Found JMuris
+29-5-2019 | 11:11: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[RetrieveUser]
+29-5-2019 | 11:11: 2ms. Retrieving user 4
+29-5-2019 | 11:11: 13ms. Found user 4
+29-5-2019 | 11:11: End.
+---[DEBUG MSG END]---
+

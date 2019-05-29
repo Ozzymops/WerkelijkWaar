@@ -11,35 +11,25 @@ namespace WerkelijkWaar.Controllers
 {
     public class HomeController : Controller
     {
-        public IActionResult Index()
+        public IActionResult Index(LoginModel lm)
         {
+            if (lm == null)
+            {
+                lm = new LoginModel();
+            }
+
             // login check
             if (!String.IsNullOrEmpty(HttpContext.Session.GetString("User")))
             {
                 return RedirectToAction("Login", "Account");
             }
 
-            return View();
-        }
-
-        public IActionResult GoToLogin(int scr, int des)
-        {
-            return RedirectToAction("Login", "Account", new { screen = scr, destination = des });
+            return View(lm);
         }
 
         public IActionResult GoToRegister()
         {
             return RedirectToAction("Register", "Account");
-        }
-
-        public IActionResult GoToConfig()
-        {
-            return GoToLogin(0, 0);
-        }
-
-        public IActionResult GoToOverviews()
-        {
-            return GoToLogin(0, 1);
         }
 
         public IActionResult GameInfo()

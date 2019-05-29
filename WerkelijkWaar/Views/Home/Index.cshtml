@@ -11,16 +11,34 @@
         <br />
         <h3 class="small-text">Heb je nog geen account? Maak deze <a asp-controller="Account" asp-action="Register">hier</a> aan!</h3>
         <br />
+        @if (!String.IsNullOrEmpty(Model.Status))
+        {
+            <p class="before-input" style="color: red;">@Model.Status</p>
+        }
         <form asp-action="LoginUser" asp-controller="Account">
             <div>
                 <p class="before-input">Gebruikersnaam:</p>
-                <input asp-for="Username" type="text" class="text-input" />
+                @if (!String.IsNullOrEmpty(Model.Username))
+                {
+                    <input asp-for="Username" type="text" class="text-input" value="@Model.Username" />
+                }
+                else
+                {
+                    <input asp-for="Username" type="text" class="text-input" />
+                }
             </div>
             <div style="margin-top: 10px;">
                 <p class="before-input">Wachtwoord:</p>
-                <input asp-for="Password" type="password" class="text-input" />
+                @if (!String.IsNullOrEmpty(Model.Password))
+                {
+                    <input asp-for="Password" type="password" class="text-input" value="@Model.Password" />
+                }
+                else
+                {
+                    <input asp-for="Password" type="password" class="text-input" />
+                }
             </div>
-            <input type="submit" value="Aanmelden" class="form-button" style="width: 300px; margin-top: 20px;" />
+        <input type="submit" value="Aanmelden" class="form-button" style="width: 300px; margin-top: 20px;" />
         </form>
     </div>
     <div>

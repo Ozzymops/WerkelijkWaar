@@ -102,7 +102,11 @@ namespace WerkelijkWaar.Controllers
             // Check if already exists
             if (dq.CheckLogin(rm.Username, rm.Password) != 0)
             {
-                return RedirectToAction("Index", "Home");
+                LoginModel lm = new LoginModel();
+                lm.Username = rm.Username;
+                lm.Password = rm.Password;
+                lm.Status = "De gegeven combinatie bestaat al. Log a.u.b. in.";
+                return RedirectToAction("Index", "Home", lm);
             }
 
             // Check inhoud
