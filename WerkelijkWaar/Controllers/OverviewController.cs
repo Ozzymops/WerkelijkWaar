@@ -119,20 +119,28 @@ namespace WerkelijkWaar.Controllers
             {
                 IndividualModel ism = new IndividualModel();
                 ism.GetUser(id);
+                ism.GenerateAverage();
                 ism.Scores = dq.RetrieveScoresOfUser(ism.User.Id);
+                ism.Stories = dq.RetrieveStoriesOfUser(ism.User.Id);
                 ism.Rank = rank;
                 ism.Role = Newtonsoft.Json.JsonConvert.DeserializeObject<Classes.User>(HttpContext.Session.GetString("User")).RoleId;
 
-                if (scoreId != 0)
+                if (ism.Scores != null && ism.Scores.Count != 0)
                 {
-                    foreach (Classes.Score s in ism.Scores)
+                    if (scoreId != 0)
                     {
-                        if (s.Id == scoreId)
+                        foreach (Classes.Score s in ism.Scores)
                         {
-                            ism.Score = s;
+                            if (s.Id == scoreId)
+                            {
+                                ism.Score = s;
+                            }
                         }
                     }
-
+                    else
+                    {
+                        ism.Score = ism.Scores[0];
+                    }
                 }
 
                 return View(ism);

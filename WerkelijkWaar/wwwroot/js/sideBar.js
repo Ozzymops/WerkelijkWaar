@@ -10,7 +10,7 @@ if (roleId == 0) {
         $("#side-0-scoreOverview").attr("src", "/content/image/Trophy_disabled.png");
     }
 
-    if (document.title.includes("Score -")) {
+    if (document.title.includes("Scores van")) {
         $("#side-all-game").attr("src", "/content/image/Play_disabled.png");
         $("#side-0-scoreOverview").attr("src", "/content/image/Trophy.png");
     }

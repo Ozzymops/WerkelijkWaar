@@ -59,6 +59,12 @@
                             </form>
                         </div>
                     </div>
+                    <div style="margin-left: -200px; margin-top: 20px;">
+                        @if (!ViewData["Title"].ToString().Contains("Scores van"))
+                        {
+                            <h2 class="subtitle" style="color: white;">@ViewData["Title"]</h2>
+                        }
+                    </div>
                     <div class="layout top-bar-logout">
                         <p class="layout top-bar-logout">Uitloggen</p>
                         <a asp-controller="Account" asp-action="Logout">

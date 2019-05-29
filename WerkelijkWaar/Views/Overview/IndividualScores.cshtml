@@ -1,16 +1,16 @@
 ﻿@{
     ViewData["Title"] = "Scores van " + Model.User.Name;
+    Layout = "_LayoutSide";
+
+    int storyInt = 0;
+    int scoreInt = 0;
 }
-@model WerkelijkWaar.Models.IndividualModel
+@model IndividualModel
 
 <header>
     <div class="flex-column-top">
         <div>
-            @if (Model.Role == 0)
-            {
-                <a asp-controller="Home" asp-action="Index"><img class="small_icon" src="~/content/image/BackArrow.png" title="Ga terug" alt="Ga terug" /></a>
-            }
-            else if (Model.Role == 1)
+            @if (Model.Role == 1)
             {
                 <a asp-controller="Overview" asp-action="ScoreOverview"><img class="small_icon" src="~/content/image/BackArrow.png" title="Ga terug" alt="Ga terug" /></a>
             }
@@ -19,67 +19,45 @@
 </header>
 
 <body>
-    <div>
-        <div class="flex-center">
+    <div style="margin-top: 10px;">
+        <h2 class="subtitle">Gemiddelde: @Model.User.AverageScore.ToString("N1")</h2>
+        <div style="display: flex; flex-direction: row; justify-content: space-around;">
+            <!-- Stories -->
             <div>
-                <h1>Score @Model.User.Name  @Model.User.Surname</h1>
-                <h2>Gemiddelde: @Model.User.AverageScore</h2>
-                <hr />
-                <div style="display: flex; flex-direction: row; width: 1000px;">
-                    @if (Model.Scores != null && Model.Scores.Count != 0)
+                <h2 class="subtitle" style="text-align: left;">Verhalen</h2>
+                <ul style="border: 1px solid black; list-style-type: none; padding: 0">
+                    @foreach (WerkelijkWaar.Classes.Story story in Model.Stories)
                     {
-                        <!-- left -->
-                        <div style="width: 25%; height: 1000px;">
-                            <ul style="list-style: none; margin: 0px; padding: 0px;">
-                                @foreach (WerkelijkWaar.Classes.Score s in Model.Scores)
-                                {
-                                <li>
-                                    <div>
-                                        <form asp-action="IndividualScores" asp-controller="Overview" asp-route-scoreId="@s.Id">
-                                            <input type="submit" value="Sessie op @s.Date.ToShortDateString()" style="width: 250px;" />
-                                        </form>
-                                    </div>
-                                </li>
-                                }
-                                <li>
-                                    <form asp-action="CreateScore" asp-controller="Overview" asp-route-id="@Model.User.Id">
-                                        <input type="submit" value="Score aanmaken" style="width: 250px;" />
-                                    </form>
-                                </li>
-                            </ul>
-                        </div>
-                        <!-- right -->
-                        <div style="margin-left: 10px; width: 75%; height: 100%; background-color: burlywood;">
-                            <div style="display: flex; flex-direction: column;">
-                                <div style="display: flex; flex-direction: row;">
-                                    <div style="width: 50%; height: 100px; border: 2px solid black">
-                                        @if (Model.Score != null)
-                                        {
-                                            <p style="text-align: center;">@Model.Score.Date.ToShortDateString()</p>
-                                        }
-                                    </div>
-                                    <div style="width: 50%; height: 100px; border: 2px solid black;">
-                                        @if (Model.Score != null)
-                                        {
-                                            <p><img src="~/content/image/Follower.png" class="small-icon" /> @Model.Score.FollowerAmount volgers | €@Model.Score.CashAmount-</p>
-                                        }
-                                    </div>
-                                </div>
-                                <div style="height: 900px; border: 2px solid black;">
-                                    @if (Model.Score != null)
-                                    {
-                                        @Model.Score.Answers
-                                    }
-                                </div>
-                            </div>
-                        </div>
+                        storyInt++;
+                        <li style="padding: 2px;">
+                            @storyInt. <a asp-controller="" asp-action="" id="storyButton" value="@story.Id">@story.Title</a> - x%
+                        </li>
                     }
-                    else
+                    <li style="padding: 2px;">
+                        <input asp-controller="" asp-action="" class="form-button" type="button" value="Meer tonen..." />
+                    </li>
+                </ul>
+            </div>
+            <!-- Scores -->
+            <div>
+                <h2 class="subtitle" style="text-align: left;">Scores</h2>
+                <ul style="border: 1px solid black; list-style-type: none; padding: 0;">
+                    @foreach (WerkelijkWaar.Classes.Score score in Model.Scores)
                     {
-                        <h2>Geen resultaten gevonden.</h2>
+                        scoreInt++;
+                        <li style="padding: 2px;">
+                            @scoreInt. <a asp-controller="" asp-action="" id="scoreButton" value="@score.Id">Sessie op @score.Date.ToShortDateString()</a> - x%
+                        </li>
                     }
-                </div>
+                    <li style="padding: 2px;">
+                        <input asp-controller="" asp-action="" class="form-button" type="button" value="Meer tonen..." />
+                    </li>
+                    <li style="padding: 2px;">
+                        <input asp-controller="" asp-action="" class="form-button" type="button" value="Score aanmaken" />
+                    </li>
+                </ul>
             </div>
         </div>
     </div>
+    <h2 class="subtitle" style="color: white; position: absolute; top: 50px; left: 45vw;">@Model.User.Name @Model.User.Surname</h2>
 </body>

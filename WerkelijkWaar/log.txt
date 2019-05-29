@@ -3421,3 +3421,1095 @@
 29-5-2019 | 14:57: End.
 ---[LOG MSG END]---
 
+---[LOG MSG START]---
+[Startup]
+29-5-2019 | 14:58: Starting server...
+29-5-2019 | 14:58: Server is up and running!
+29-5-2019 | 14:58: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[CheckLogin]
+29-5-2019 | 14:58: Logging in JMuris...
+29-5-2019 | 14:58: Log in found for user JMuris
+29-5-2019 | 14:58: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveUser]
+29-5-2019 | 14:58: Attempting to retrieve user with id 4
+29-5-2019 | 14:58: Found user with id 4
+29-5-2019 | 14:58: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[AccountController]
+29-5-2019 | 14:58: JMuris validated.
+29-5-2019 | 14:58: JMuris navigated to Hub/Game
+29-5-2019 | 14:58: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveUserListByGroup]
+29-5-2019 | 14:58: Attempting to retrieve users from group 2
+29-5-2019 | 14:58: Found 2 users from group 2
+29-5-2019 | 14:58: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveScoresOfUser]
+29-5-2019 | 14:58: Attempting to retrieve scores of user 5
+29-5-2019 | 14:58: Found 3 scores from user 5
+29-5-2019 | 14:58: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveScoresOfUser]
+29-5-2019 | 14:58: Attempting to retrieve scores of user 6
+29-5-2019 | 14:58: Found 3 scores from user 6
+29-5-2019 | 14:58: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[CheckLogin]
+29-5-2019 | 14:58: Logging in ...
+29-5-2019 | 14:58: Something went wrong. Check debug.txt
+29-5-2019 | 14:58: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[Startup]
+29-5-2019 | 15:00: Starting server...
+29-5-2019 | 15:00: Server is up and running!
+29-5-2019 | 15:00: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[CheckLogin]
+29-5-2019 | 15:00: Logging in JMuris...
+29-5-2019 | 15:00: Log in found for user JMuris
+29-5-2019 | 15:00: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveUser]
+29-5-2019 | 15:00: Attempting to retrieve user with id 4
+29-5-2019 | 15:00: Found user with id 4
+29-5-2019 | 15:00: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[AccountController]
+29-5-2019 | 15:00: JMuris validated.
+29-5-2019 | 15:00: JMuris navigated to Hub/Game
+29-5-2019 | 15:00: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveUserListByGroup]
+29-5-2019 | 15:00: Attempting to retrieve users from group 2
+29-5-2019 | 15:00: Found 2 users from group 2
+29-5-2019 | 15:00: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveScoresOfUser]
+29-5-2019 | 15:00: Attempting to retrieve scores of user 5
+29-5-2019 | 15:00: Found 3 scores from user 5
+29-5-2019 | 15:00: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveScoresOfUser]
+29-5-2019 | 15:00: Attempting to retrieve scores of user 6
+29-5-2019 | 15:00: Found 3 scores from user 6
+29-5-2019 | 15:00: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveUserListByGroup]
+29-5-2019 | 15:00: Attempting to retrieve users from group 2
+29-5-2019 | 15:00: Found 2 users from group 2
+29-5-2019 | 15:00: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveScoresOfUser]
+29-5-2019 | 15:00: Attempting to retrieve scores of user 5
+29-5-2019 | 15:00: Found 3 scores from user 5
+29-5-2019 | 15:00: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveScoresOfUser]
+29-5-2019 | 15:00: Attempting to retrieve scores of user 6
+29-5-2019 | 15:00: Found 3 scores from user 6
+29-5-2019 | 15:00: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[Startup]
+29-5-2019 | 15:13: Starting server...
+29-5-2019 | 15:13: Server is up and running!
+29-5-2019 | 15:13: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[CheckLogin]
+29-5-2019 | 15:13: Logging in AAppel...
+29-5-2019 | 15:13: Log in found for user AAppel
+29-5-2019 | 15:13: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveUser]
+29-5-2019 | 15:13: Attempting to retrieve user with id 5
+29-5-2019 | 15:13: Found user with id 5
+29-5-2019 | 15:13: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[AccountController]
+29-5-2019 | 15:13: AAppel validated.
+29-5-2019 | 15:13: AAppel navigated to Hub/Game
+29-5-2019 | 15:13: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveUser]
+29-5-2019 | 15:17: Attempting to retrieve user with id 5
+29-5-2019 | 15:17: Found user with id 5
+29-5-2019 | 15:17: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveScoresOfUser]
+29-5-2019 | 15:17: Attempting to retrieve scores of user 5
+29-5-2019 | 15:17: Found 3 scores from user 5
+29-5-2019 | 15:17: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveUser]
+29-5-2019 | 15:18: Attempting to retrieve user with id 5
+29-5-2019 | 15:18: Found user with id 5
+29-5-2019 | 15:18: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveScoresOfUser]
+29-5-2019 | 15:18: Attempting to retrieve scores of user 5
+29-5-2019 | 15:18: Found 3 scores from user 5
+29-5-2019 | 15:18: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveUser]
+29-5-2019 | 15:20: Attempting to retrieve user with id 5
+29-5-2019 | 15:20: Found user with id 5
+29-5-2019 | 15:20: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveScoresOfUser]
+29-5-2019 | 15:20: Attempting to retrieve scores of user 5
+29-5-2019 | 15:20: Found 3 scores from user 5
+29-5-2019 | 15:20: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveUser]
+29-5-2019 | 15:20: Attempting to retrieve user with id 5
+29-5-2019 | 15:20: Found user with id 5
+29-5-2019 | 15:20: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveScoresOfUser]
+29-5-2019 | 15:20: Attempting to retrieve scores of user 5
+29-5-2019 | 15:20: Found 3 scores from user 5
+29-5-2019 | 15:20: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveUser]
+29-5-2019 | 15:20: Attempting to retrieve user with id 5
+29-5-2019 | 15:20: Found user with id 5
+29-5-2019 | 15:20: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveScoresOfUser]
+29-5-2019 | 15:20: Attempting to retrieve scores of user 5
+29-5-2019 | 15:20: Found 3 scores from user 5
+29-5-2019 | 15:20: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveUser]
+29-5-2019 | 15:20: Attempting to retrieve user with id 5
+29-5-2019 | 15:20: Found user with id 5
+29-5-2019 | 15:20: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveScoresOfUser]
+29-5-2019 | 15:20: Attempting to retrieve scores of user 5
+29-5-2019 | 15:20: Found 3 scores from user 5
+29-5-2019 | 15:20: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveUser]
+29-5-2019 | 15:21: Attempting to retrieve user with id 5
+29-5-2019 | 15:21: Found user with id 5
+29-5-2019 | 15:21: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveScoresOfUser]
+29-5-2019 | 15:21: Attempting to retrieve scores of user 5
+29-5-2019 | 15:21: Found 3 scores from user 5
+29-5-2019 | 15:21: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveUser]
+29-5-2019 | 15:21: Attempting to retrieve user with id 5
+29-5-2019 | 15:21: Found user with id 5
+29-5-2019 | 15:21: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveScoresOfUser]
+29-5-2019 | 15:21: Attempting to retrieve scores of user 5
+29-5-2019 | 15:21: Found 3 scores from user 5
+29-5-2019 | 15:21: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveUser]
+29-5-2019 | 15:21: Attempting to retrieve user with id 5
+29-5-2019 | 15:21: Found user with id 5
+29-5-2019 | 15:21: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveScoresOfUser]
+29-5-2019 | 15:21: Attempting to retrieve scores of user 5
+29-5-2019 | 15:21: Found 3 scores from user 5
+29-5-2019 | 15:21: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveUser]
+29-5-2019 | 15:22: Attempting to retrieve user with id 5
+29-5-2019 | 15:22: Found user with id 5
+29-5-2019 | 15:22: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveScoresOfUser]
+29-5-2019 | 15:22: Attempting to retrieve scores of user 5
+29-5-2019 | 15:22: Found 3 scores from user 5
+29-5-2019 | 15:22: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveUser]
+29-5-2019 | 15:22: Attempting to retrieve user with id 5
+29-5-2019 | 15:22: Found user with id 5
+29-5-2019 | 15:22: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveScoresOfUser]
+29-5-2019 | 15:22: Attempting to retrieve scores of user 5
+29-5-2019 | 15:22: Found 3 scores from user 5
+29-5-2019 | 15:22: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveUser]
+29-5-2019 | 15:23: Attempting to retrieve user with id 5
+29-5-2019 | 15:23: Found user with id 5
+29-5-2019 | 15:23: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveScoresOfUser]
+29-5-2019 | 15:23: Attempting to retrieve scores of user 5
+29-5-2019 | 15:23: Found 3 scores from user 5
+29-5-2019 | 15:23: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[Startup]
+29-5-2019 | 15:25: Starting server...
+29-5-2019 | 15:25: Server is up and running!
+29-5-2019 | 15:25: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[Startup]
+29-5-2019 | 15:25: Starting server...
+29-5-2019 | 15:25: Server is up and running!
+29-5-2019 | 15:25: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[CheckLogin]
+29-5-2019 | 15:25: Logging in JMuris...
+29-5-2019 | 15:25: Log in found for user JMuris
+29-5-2019 | 15:25: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveUser]
+29-5-2019 | 15:25: Attempting to retrieve user with id 4
+29-5-2019 | 15:25: Found user with id 4
+29-5-2019 | 15:25: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[AccountController]
+29-5-2019 | 15:25: JMuris validated.
+29-5-2019 | 15:25: JMuris navigated to Hub/Game
+29-5-2019 | 15:25: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveUserListByGroup]
+29-5-2019 | 15:25: Attempting to retrieve users from group 2
+29-5-2019 | 15:25: Found 2 users from group 2
+29-5-2019 | 15:25: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveScoresOfUser]
+29-5-2019 | 15:25: Attempting to retrieve scores of user 5
+29-5-2019 | 15:25: Found 3 scores from user 5
+29-5-2019 | 15:25: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveScoresOfUser]
+29-5-2019 | 15:25: Attempting to retrieve scores of user 6
+29-5-2019 | 15:25: Found 3 scores from user 6
+29-5-2019 | 15:25: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveUser]
+29-5-2019 | 15:25: Attempting to retrieve user with id 5
+29-5-2019 | 15:25: Found user with id 5
+29-5-2019 | 15:25: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveScoresOfUser]
+29-5-2019 | 15:25: Attempting to retrieve scores of user 5
+29-5-2019 | 15:25: Found 3 scores from user 5
+29-5-2019 | 15:25: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveScoresOfUser]
+29-5-2019 | 15:25: Attempting to retrieve scores of user 5
+29-5-2019 | 15:25: Found 3 scores from user 5
+29-5-2019 | 15:25: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveUser]
+29-5-2019 | 15:26: Attempting to retrieve user with id 5
+29-5-2019 | 15:26: Found user with id 5
+29-5-2019 | 15:26: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveScoresOfUser]
+29-5-2019 | 15:26: Attempting to retrieve scores of user 5
+29-5-2019 | 15:26: Found 3 scores from user 5
+29-5-2019 | 15:26: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveScoresOfUser]
+29-5-2019 | 15:26: Attempting to retrieve scores of user 5
+29-5-2019 | 15:26: Found 3 scores from user 5
+29-5-2019 | 15:26: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[Startup]
+29-5-2019 | 15:28: Starting server...
+29-5-2019 | 15:28: Server is up and running!
+29-5-2019 | 15:28: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[CheckLogin]
+29-5-2019 | 15:28: Logging in JMuris...
+29-5-2019 | 15:28: Log in found for user JMuris
+29-5-2019 | 15:28: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveUser]
+29-5-2019 | 15:28: Attempting to retrieve user with id 4
+29-5-2019 | 15:28: Found user with id 4
+29-5-2019 | 15:28: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[AccountController]
+29-5-2019 | 15:28: JMuris validated.
+29-5-2019 | 15:28: JMuris navigated to Hub/Game
+29-5-2019 | 15:28: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[AccountController]
+29-5-2019 | 15:28: JMuris validated.
+29-5-2019 | 15:28: JMuris logged out.
+29-5-2019 | 15:28: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[CheckLogin]
+29-5-2019 | 15:28: Logging in AAppel...
+29-5-2019 | 15:28: Log in found for user AAppel
+29-5-2019 | 15:28: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveUser]
+29-5-2019 | 15:28: Attempting to retrieve user with id 5
+29-5-2019 | 15:28: Found user with id 5
+29-5-2019 | 15:28: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[AccountController]
+29-5-2019 | 15:28: AAppel validated.
+29-5-2019 | 15:28: AAppel navigated to Hub/Game
+29-5-2019 | 15:28: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveUser]
+29-5-2019 | 15:28: Attempting to retrieve user with id 5
+29-5-2019 | 15:28: Found user with id 5
+29-5-2019 | 15:28: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveScoresOfUser]
+29-5-2019 | 15:28: Attempting to retrieve scores of user 5
+29-5-2019 | 15:28: Found 3 scores from user 5
+29-5-2019 | 15:28: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveScoresOfUser]
+29-5-2019 | 15:28: Attempting to retrieve scores of user 5
+29-5-2019 | 15:28: Found 3 scores from user 5
+29-5-2019 | 15:28: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[Startup]
+29-5-2019 | 15:30: Starting server...
+29-5-2019 | 15:30: Server is up and running!
+29-5-2019 | 15:30: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[CheckLogin]
+29-5-2019 | 15:30: Logging in AAppel...
+29-5-2019 | 15:30: Log in found for user AAppel
+29-5-2019 | 15:30: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveUser]
+29-5-2019 | 15:30: Attempting to retrieve user with id 5
+29-5-2019 | 15:30: Found user with id 5
+29-5-2019 | 15:30: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[AccountController]
+29-5-2019 | 15:30: AAppel validated.
+29-5-2019 | 15:30: AAppel navigated to Hub/Game
+29-5-2019 | 15:30: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveUser]
+29-5-2019 | 15:30: Attempting to retrieve user with id 5
+29-5-2019 | 15:30: Found user with id 5
+29-5-2019 | 15:30: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveScoresOfUser]
+29-5-2019 | 15:30: Attempting to retrieve scores of user 5
+29-5-2019 | 15:30: Found 3 scores from user 5
+29-5-2019 | 15:30: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveScoresOfUser]
+29-5-2019 | 15:30: Attempting to retrieve scores of user 5
+29-5-2019 | 15:30: Found 3 scores from user 5
+29-5-2019 | 15:30: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[Startup]
+29-5-2019 | 15:31: Starting server...
+29-5-2019 | 15:31: Server is up and running!
+29-5-2019 | 15:31: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[CheckLogin]
+29-5-2019 | 15:31: Logging in AAppel...
+29-5-2019 | 15:31: Log in found for user AAppel
+29-5-2019 | 15:31: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveUser]
+29-5-2019 | 15:31: Attempting to retrieve user with id 5
+29-5-2019 | 15:31: Found user with id 5
+29-5-2019 | 15:31: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[AccountController]
+29-5-2019 | 15:31: AAppel validated.
+29-5-2019 | 15:31: AAppel navigated to Hub/Game
+29-5-2019 | 15:31: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveUser]
+29-5-2019 | 15:31: Attempting to retrieve user with id 5
+29-5-2019 | 15:31: Found user with id 5
+29-5-2019 | 15:31: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveScoresOfUser]
+29-5-2019 | 15:31: Attempting to retrieve scores of user 5
+29-5-2019 | 15:31: Found 3 scores from user 5
+29-5-2019 | 15:31: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveScoresOfUser]
+29-5-2019 | 15:31: Attempting to retrieve scores of user 5
+29-5-2019 | 15:31: Found 3 scores from user 5
+29-5-2019 | 15:31: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[Startup]
+29-5-2019 | 15:35: Starting server...
+29-5-2019 | 15:35: Server is up and running!
+29-5-2019 | 15:35: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[CheckLogin]
+29-5-2019 | 15:35: Logging in AAppel...
+29-5-2019 | 15:35: Log in found for user AAppel
+29-5-2019 | 15:35: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveUser]
+29-5-2019 | 15:35: Attempting to retrieve user with id 5
+29-5-2019 | 15:35: Found user with id 5
+29-5-2019 | 15:35: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[AccountController]
+29-5-2019 | 15:35: AAppel validated.
+29-5-2019 | 15:35: AAppel navigated to Hub/Game
+29-5-2019 | 15:35: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveUser]
+29-5-2019 | 15:35: Attempting to retrieve user with id 5
+29-5-2019 | 15:35: Found user with id 5
+29-5-2019 | 15:35: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveScoresOfUser]
+29-5-2019 | 15:35: Attempting to retrieve scores of user 5
+29-5-2019 | 15:35: Found 3 scores from user 5
+29-5-2019 | 15:35: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveScoresOfUser]
+29-5-2019 | 15:35: Attempting to retrieve scores of user 5
+29-5-2019 | 15:35: Found 3 scores from user 5
+29-5-2019 | 15:35: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[Startup]
+29-5-2019 | 15:37: Starting server...
+29-5-2019 | 15:37: Server is up and running!
+29-5-2019 | 15:37: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[CheckLogin]
+29-5-2019 | 15:37: Logging in AAppel...
+29-5-2019 | 15:37: Log in found for user AAppel
+29-5-2019 | 15:37: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveUser]
+29-5-2019 | 15:37: Attempting to retrieve user with id 5
+29-5-2019 | 15:37: Found user with id 5
+29-5-2019 | 15:37: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[AccountController]
+29-5-2019 | 15:37: AAppel validated.
+29-5-2019 | 15:37: AAppel navigated to Hub/Game
+29-5-2019 | 15:37: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveUser]
+29-5-2019 | 15:37: Attempting to retrieve user with id 5
+29-5-2019 | 15:37: Found user with id 5
+29-5-2019 | 15:37: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveScoresOfUser]
+29-5-2019 | 15:37: Attempting to retrieve scores of user 5
+29-5-2019 | 15:37: Found 3 scores from user 5
+29-5-2019 | 15:37: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveScoresOfUser]
+29-5-2019 | 15:37: Attempting to retrieve scores of user 5
+29-5-2019 | 15:37: Found 3 scores from user 5
+29-5-2019 | 15:37: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveStoriesOfUser]
+29-5-2019 | 15:37: Attempting to retrieve stories of user 5
+29-5-2019 | 15:37: Found 7 stories from user 5
+29-5-2019 | 15:37: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[Startup]
+29-5-2019 | 15:38: Starting server...
+29-5-2019 | 15:38: Server is up and running!
+29-5-2019 | 15:38: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[CheckLogin]
+29-5-2019 | 15:38: Logging in AAppel...
+29-5-2019 | 15:38: Log in found for user AAppel
+29-5-2019 | 15:38: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveUser]
+29-5-2019 | 15:38: Attempting to retrieve user with id 5
+29-5-2019 | 15:38: Found user with id 5
+29-5-2019 | 15:38: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[AccountController]
+29-5-2019 | 15:38: AAppel validated.
+29-5-2019 | 15:38: AAppel navigated to Hub/Game
+29-5-2019 | 15:38: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveUser]
+29-5-2019 | 15:38: Attempting to retrieve user with id 5
+29-5-2019 | 15:38: Found user with id 5
+29-5-2019 | 15:38: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveScoresOfUser]
+29-5-2019 | 15:38: Attempting to retrieve scores of user 5
+29-5-2019 | 15:38: Found 3 scores from user 5
+29-5-2019 | 15:38: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveScoresOfUser]
+29-5-2019 | 15:38: Attempting to retrieve scores of user 5
+29-5-2019 | 15:38: Found 3 scores from user 5
+29-5-2019 | 15:38: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveStoriesOfUser]
+29-5-2019 | 15:38: Attempting to retrieve stories of user 5
+29-5-2019 | 15:38: Found 7 stories from user 5
+29-5-2019 | 15:38: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[Startup]
+29-5-2019 | 15:39: Starting server...
+29-5-2019 | 15:39: Server is up and running!
+29-5-2019 | 15:39: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[CheckLogin]
+29-5-2019 | 15:39: Logging in AAppel...
+29-5-2019 | 15:39: Log in found for user AAppel
+29-5-2019 | 15:39: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveUser]
+29-5-2019 | 15:39: Attempting to retrieve user with id 5
+29-5-2019 | 15:39: Found user with id 5
+29-5-2019 | 15:39: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[AccountController]
+29-5-2019 | 15:39: AAppel validated.
+29-5-2019 | 15:39: AAppel navigated to Hub/Game
+29-5-2019 | 15:39: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveUser]
+29-5-2019 | 15:39: Attempting to retrieve user with id 5
+29-5-2019 | 15:39: Found user with id 5
+29-5-2019 | 15:39: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveScoresOfUser]
+29-5-2019 | 15:39: Attempting to retrieve scores of user 5
+29-5-2019 | 15:39: Found 3 scores from user 5
+29-5-2019 | 15:39: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveScoresOfUser]
+29-5-2019 | 15:39: Attempting to retrieve scores of user 5
+29-5-2019 | 15:39: Found 3 scores from user 5
+29-5-2019 | 15:39: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveStoriesOfUser]
+29-5-2019 | 15:39: Attempting to retrieve stories of user 5
+29-5-2019 | 15:39: Found 7 stories from user 5
+29-5-2019 | 15:39: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[Startup]
+29-5-2019 | 15:40: Starting server...
+29-5-2019 | 15:40: Server is up and running!
+29-5-2019 | 15:40: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[CheckLogin]
+29-5-2019 | 15:40: Logging in AAppel...
+29-5-2019 | 15:40: Log in found for user AAppel
+29-5-2019 | 15:40: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveUser]
+29-5-2019 | 15:40: Attempting to retrieve user with id 5
+29-5-2019 | 15:40: Found user with id 5
+29-5-2019 | 15:40: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[AccountController]
+29-5-2019 | 15:40: AAppel validated.
+29-5-2019 | 15:40: AAppel navigated to Hub/Game
+29-5-2019 | 15:40: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveUser]
+29-5-2019 | 15:40: Attempting to retrieve user with id 5
+29-5-2019 | 15:40: Found user with id 5
+29-5-2019 | 15:40: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveScoresOfUser]
+29-5-2019 | 15:40: Attempting to retrieve scores of user 5
+29-5-2019 | 15:40: Found 3 scores from user 5
+29-5-2019 | 15:40: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveScoresOfUser]
+29-5-2019 | 15:40: Attempting to retrieve scores of user 5
+29-5-2019 | 15:40: Found 3 scores from user 5
+29-5-2019 | 15:40: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveStoriesOfUser]
+29-5-2019 | 15:40: Attempting to retrieve stories of user 5
+29-5-2019 | 15:40: Found 7 stories from user 5
+29-5-2019 | 15:40: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[Startup]
+29-5-2019 | 15:43: Starting server...
+29-5-2019 | 15:43: Server is up and running!
+29-5-2019 | 15:43: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[CheckLogin]
+29-5-2019 | 15:43: Logging in AAppel...
+29-5-2019 | 15:43: Log in found for user AAppel
+29-5-2019 | 15:43: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveUser]
+29-5-2019 | 15:43: Attempting to retrieve user with id 5
+29-5-2019 | 15:43: Found user with id 5
+29-5-2019 | 15:43: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[AccountController]
+29-5-2019 | 15:43: AAppel validated.
+29-5-2019 | 15:43: AAppel navigated to Hub/Game
+29-5-2019 | 15:43: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveUser]
+29-5-2019 | 15:43: Attempting to retrieve user with id 5
+29-5-2019 | 15:43: Found user with id 5
+29-5-2019 | 15:43: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveScoresOfUser]
+29-5-2019 | 15:43: Attempting to retrieve scores of user 5
+29-5-2019 | 15:43: Found 3 scores from user 5
+29-5-2019 | 15:43: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveScoresOfUser]
+29-5-2019 | 15:43: Attempting to retrieve scores of user 5
+29-5-2019 | 15:43: Found 3 scores from user 5
+29-5-2019 | 15:43: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveStoriesOfUser]
+29-5-2019 | 15:43: Attempting to retrieve stories of user 5
+29-5-2019 | 15:43: Found 7 stories from user 5
+29-5-2019 | 15:43: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[Startup]
+29-5-2019 | 15:44: Starting server...
+29-5-2019 | 15:44: Server is up and running!
+29-5-2019 | 15:44: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[CheckLogin]
+29-5-2019 | 15:44: Logging in AAppel...
+29-5-2019 | 15:44: Log in found for user AAppel
+29-5-2019 | 15:44: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveUser]
+29-5-2019 | 15:44: Attempting to retrieve user with id 5
+29-5-2019 | 15:44: Found user with id 5
+29-5-2019 | 15:44: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[AccountController]
+29-5-2019 | 15:44: AAppel validated.
+29-5-2019 | 15:44: AAppel navigated to Hub/Game
+29-5-2019 | 15:44: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveUser]
+29-5-2019 | 15:44: Attempting to retrieve user with id 5
+29-5-2019 | 15:44: Found user with id 5
+29-5-2019 | 15:44: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveScoresOfUser]
+29-5-2019 | 15:44: Attempting to retrieve scores of user 5
+29-5-2019 | 15:44: Found 3 scores from user 5
+29-5-2019 | 15:44: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveScoresOfUser]
+29-5-2019 | 15:44: Attempting to retrieve scores of user 5
+29-5-2019 | 15:44: Found 3 scores from user 5
+29-5-2019 | 15:44: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveStoriesOfUser]
+29-5-2019 | 15:44: Attempting to retrieve stories of user 5
+29-5-2019 | 15:44: Found 7 stories from user 5
+29-5-2019 | 15:44: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[Startup]
+29-5-2019 | 15:45: Starting server...
+29-5-2019 | 15:45: Server is up and running!
+29-5-2019 | 15:45: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[CheckLogin]
+29-5-2019 | 15:45: Logging in AAppel...
+29-5-2019 | 15:45: Log in found for user AAppel
+29-5-2019 | 15:45: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveUser]
+29-5-2019 | 15:45: Attempting to retrieve user with id 5
+29-5-2019 | 15:45: Found user with id 5
+29-5-2019 | 15:45: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[AccountController]
+29-5-2019 | 15:45: AAppel validated.
+29-5-2019 | 15:45: AAppel navigated to Hub/Game
+29-5-2019 | 15:45: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveUser]
+29-5-2019 | 15:45: Attempting to retrieve user with id 5
+29-5-2019 | 15:45: Found user with id 5
+29-5-2019 | 15:45: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveScoresOfUser]
+29-5-2019 | 15:45: Attempting to retrieve scores of user 5
+29-5-2019 | 15:45: Found 3 scores from user 5
+29-5-2019 | 15:45: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveScoresOfUser]
+29-5-2019 | 15:45: Attempting to retrieve scores of user 5
+29-5-2019 | 15:45: Found 3 scores from user 5
+29-5-2019 | 15:45: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveStoriesOfUser]
+29-5-2019 | 15:45: Attempting to retrieve stories of user 5
+29-5-2019 | 15:45: Found 7 stories from user 5
+29-5-2019 | 15:45: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[Startup]
+29-5-2019 | 15:46: Starting server...
+29-5-2019 | 15:46: Server is up and running!
+29-5-2019 | 15:46: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[CheckLogin]
+29-5-2019 | 15:46: Logging in AAppel...
+29-5-2019 | 15:46: Log in found for user AAppel
+29-5-2019 | 15:46: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveUser]
+29-5-2019 | 15:46: Attempting to retrieve user with id 5
+29-5-2019 | 15:46: Found user with id 5
+29-5-2019 | 15:46: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[AccountController]
+29-5-2019 | 15:46: AAppel validated.
+29-5-2019 | 15:46: AAppel navigated to Hub/Game
+29-5-2019 | 15:46: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveUser]
+29-5-2019 | 15:46: Attempting to retrieve user with id 5
+29-5-2019 | 15:46: Found user with id 5
+29-5-2019 | 15:46: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveScoresOfUser]
+29-5-2019 | 15:46: Attempting to retrieve scores of user 5
+29-5-2019 | 15:46: Found 3 scores from user 5
+29-5-2019 | 15:46: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveScoresOfUser]
+29-5-2019 | 15:46: Attempting to retrieve scores of user 5
+29-5-2019 | 15:46: Found 3 scores from user 5
+29-5-2019 | 15:46: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveStoriesOfUser]
+29-5-2019 | 15:46: Attempting to retrieve stories of user 5
+29-5-2019 | 15:46: Found 7 stories from user 5
+29-5-2019 | 15:46: End.
+---[LOG MSG END]---
+
