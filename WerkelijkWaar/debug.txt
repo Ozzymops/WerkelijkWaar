@@ -846,3 +846,87 @@ Error Number:201,State:4,Class:16
 29-5-2019 | 10:24: End.
 ---[DEBUG MSG END]---
 
+---[DEBUG MSG START]---
+[CheckLogin]
+29-5-2019 | 10:35: 1ms. Checking login for JMuris
+29-5-2019 | 10:35: 141ms. Found JMuris
+29-5-2019 | 10:35: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[RetrieveUser]
+29-5-2019 | 10:35: 2ms. Retrieving user 4
+29-5-2019 | 10:35: 14ms. Found user 4
+29-5-2019 | 10:35: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[Startup]
+29-5-2019 | 10:53: 9ms. Launching server
+29-5-2019 | 10:53: 20ms. Server is up
+29-5-2019 | 10:53: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[Startup]
+29-5-2019 | 10:55: 6ms. Launching server
+29-5-2019 | 10:55: 15ms. Server is up
+29-5-2019 | 10:55: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[Startup]
+29-5-2019 | 10:59: 5ms. Launching server
+29-5-2019 | 10:59: 13ms. Server is up
+29-5-2019 | 10:59: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[CheckLogin]
+29-5-2019 | 10:59: 2ms. Checking login for JMuris
+29-5-2019 | 10:59: 46ms. Found JMuris
+29-5-2019 | 10:59: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[RetrieveUser]
+29-5-2019 | 10:59: 3ms. Retrieving user 4
+29-5-2019 | 10:59: 11ms. Found user 4
+29-5-2019 | 10:59: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[CheckLogin]
+29-5-2019 | 11:00: 1ms. Checking login for Test
+29-5-2019 | 11:00: 15ms. Did not find Test
+29-5-2019 | 11:00: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[Startup]
+29-5-2019 | 11:00: 7ms. Launching server
+29-5-2019 | 11:00: 17ms. Server is up
+29-5-2019 | 11:00: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[CheckLogin]
+29-5-2019 | 11:01: 2ms. Checking login for Test
+29-5-2019 | 11:01: 48ms. Did not find Test
+29-5-2019 | 11:01: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[CheckLogin]
+29-5-2019 | 11:01: 2ms. Checking login for JMuris
+29-5-2019 | 11:01: 10ms. Found JMuris
+29-5-2019 | 11:01: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[CheckLogin]
+29-5-2019 | 11:01: 2ms. Checking login for JMuris
+29-5-2019 | 11:01: 8ms. Found JMuris
+29-5-2019 | 11:01: End.
+---[DEBUG MSG END]---
+

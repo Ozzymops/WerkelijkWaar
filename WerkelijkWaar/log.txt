@@ -505,3 +505,115 @@
 29-5-2019 | 10:24: End.
 ---[LOG MSG END]---
 
+---[LOG MSG START]---
+[CheckLogin]
+29-5-2019 | 10:35: Logging in JMuris...
+29-5-2019 | 10:35: Log in found for user JMuris
+29-5-2019 | 10:35: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveUser]
+29-5-2019 | 10:35: Attempting to retrieve user with id 4
+29-5-2019 | 10:35: Found user with id 4
+29-5-2019 | 10:35: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[AccountController]
+29-5-2019 | 10:35: JMuris validated.
+29-5-2019 | 10:35: JMuris navigated to Hub/Game
+29-5-2019 | 10:35: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[AccountController]
+29-5-2019 | 10:35: JMuris validated.
+29-5-2019 | 10:35: JMuris logged out.
+29-5-2019 | 10:35: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[Startup]
+29-5-2019 | 10:53: Starting server...
+29-5-2019 | 10:53: Server is up and running!
+29-5-2019 | 10:53: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[Startup]
+29-5-2019 | 10:55: Starting server...
+29-5-2019 | 10:55: Server is up and running!
+29-5-2019 | 10:55: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[Startup]
+29-5-2019 | 10:59: Starting server...
+29-5-2019 | 10:59: Server is up and running!
+29-5-2019 | 10:59: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[CheckLogin]
+29-5-2019 | 10:59: Logging in JMuris...
+29-5-2019 | 10:59: Log in found for user JMuris
+29-5-2019 | 10:59: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveUser]
+29-5-2019 | 10:59: Attempting to retrieve user with id 4
+29-5-2019 | 10:59: Found user with id 4
+29-5-2019 | 10:59: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[AccountController]
+29-5-2019 | 11:00: JMuris validated.
+29-5-2019 | 11:00: JMuris navigated to Hub/Game
+29-5-2019 | 11:00: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[AccountController]
+29-5-2019 | 11:00: JMuris validated.
+29-5-2019 | 11:00: JMuris logged out.
+29-5-2019 | 11:00: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[CheckLogin]
+29-5-2019 | 11:00: Logging in Test...
+29-5-2019 | 11:00: Log in not found for user Test
+29-5-2019 | 11:00: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[Startup]
+29-5-2019 | 11:00: Starting server...
+29-5-2019 | 11:00: Server is up and running!
+29-5-2019 | 11:00: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[CheckLogin]
+29-5-2019 | 11:01: Logging in Test...
+29-5-2019 | 11:01: Log in not found for user Test
+29-5-2019 | 11:01: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[CheckLogin]
+29-5-2019 | 11:01: Logging in JMuris...
+29-5-2019 | 11:01: Log in found for user JMuris
+29-5-2019 | 11:01: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[CheckLogin]
+29-5-2019 | 11:01: Logging in JMuris...
+29-5-2019 | 11:01: Log in found for user JMuris
+29-5-2019 | 11:01: End.
+---[LOG MSG END]---
+

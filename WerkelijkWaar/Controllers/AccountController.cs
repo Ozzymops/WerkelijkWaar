@@ -138,7 +138,7 @@ namespace WerkelijkWaar.Controllers
                             Surname = rm.Surname,
                             Username = rm.Username,
                             Password = rm.Password,
-                            RoleId = rm.RoleId
+                            RoleId = 0 // rm.RoleId
                         }));
 
                         if (status)

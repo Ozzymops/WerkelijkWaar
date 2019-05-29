@@ -12,7 +12,10 @@ namespace WerkelijkWaar.Models
         public int RoleId { get; set; }
 
         [Required]
-        public int Code { get; set; }
+        public string School { get; set; }
+
+        [Required]
+        public string Group { get; set; }
 
         [Required]
         public string Username { get; set; }
@@ -22,10 +25,12 @@ namespace WerkelijkWaar.Models
 
         [RegularExpression(@"[^a-zA-Z0-9_.]")]
         [Required]
+        [Range(typeof(bool), "true", "true", ErrorMessage = "Jouw achternaam kan geen vreemde tekens bevatten.")]
         public string Name { get; set; }
 
         [RegularExpression(@"[^a-zA-Z0-9_.]")]
         [Required]
+        [Range(typeof(bool), "true", "true", ErrorMessage = "Jouw achternaam kan geen vreemde tekens bevatten.")]
         public string Surname { get; set; }
         public string ImageSource { get; set; }
 

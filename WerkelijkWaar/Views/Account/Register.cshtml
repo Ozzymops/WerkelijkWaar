@@ -1,7 +1,8 @@
 ﻿@{
     ViewData["Title"] = "Registreren";
+    Layout = "_Layout";
 }
-@model WerkelijkWaar.Models.RegisterModel
+@model RegisterModel
 
 <header>
     <div class="flex-column-top">
@@ -12,56 +13,56 @@
 </header>
 
 <body>
-    <div>
-        <div class="flex-center">
+    <div class="flex-center" style="flex-direction: column; margin-top: 10px;">
+        <h2 class="subtitle">Registreren</h2>
+        <form asp-action="RegisterUser" asp-controller="Account">
+            <input asp-for="RoleId" value="0" type="hidden" />
             <div>
-                <h1>Registreren</h1>
-                <form id="registerForm" asp-controller="Account" asp-action="RegisterUser">
-                    <input asp-for="RoleId" value="0" type="hidden" />
-                    <div>
-                        <h2>Voornaam:</h2>
-                        <input id="name" asp-for="Name" type="text" />
-                    </div>
-                    <div>
-                        <h2>Achternaam:</h2>
-                        <input id="surname" asp-for="Surname" type="text" />
-                    </div>
-                    <div style="margin-top: 20px;">
-                        <h2>Gebruikersnaam:</h2>
-                        <input id="username" asp-for="Username" type="text" />
-                    </div>
-                    <div>
-                        <h2>Wachtwoord:</h2>
-                        <input id="password" asp-for="Password" type="password" />
-                    </div>
-                    <div>
-                        <h2>Klascode:</h2>
-                        <input id="code" asp-for="Code" type="text" />
-                    </div>
-                    <div>
-                        <h2>Ik ben 16 jaar of ouder of ik heb toestemming gekregen van mijn ouders / voogd.</h2>
-                        <input id="age" asp-for="AgeCheck" type="checkbox" class="center" />
-                        <h2>Ik heb @Html.ActionLink("de algemene voorwaarden", "Privacy", "Home") gelezen en ik ga akkoord met de privacy policy.</h2>
-                        <input id="privacy" asp-for="PrivacyCheck" type="checkbox" class="center" />
-                    </div>
-                    <input id="submitButton" disabled type="submit" value="Registreren" />
-                </form>
+                <p class="before-input">Voornaam:</p>
+                <input id="nameInput" asp-for="Name" type="text" class="text-input" />
             </div>
-        </div>
+            <div style="margin-top: 10px;">
+                <p class="before-input">Achternaam:</p>
+                <input id="surnameInput" asp-for="Surname" type="text" class="text-input" />
+            </div>
+            <div>
+                <p class="before-input">Gebruikersnaam:</p>
+                <input id="usernameInput" asp-for="Username" type="text" class="text-input" />
+            </div>
+            <div style="margin-top: 10px;">
+                <p class="before-input">Wachtwoord:</p>
+                <input id="passwordInput" asp-for="Password" type="password" class="text-input" />
+            </div>
+            <div style="margin-top: 10px;">
+                <p class="before-input">School:</p>
+                <input id="schoolInput" asp-for="School" type="text" class="text-input" />
+            </div>
+            <div style="margin-top: 10px;">
+                <p class="before-input">Klas:</p>
+                <input id="groupInput" asp-for="Group" type="text" class="text-input" />
+            </div>
+            <div style="margin-top: 10px;">
+                <p>Ik heb @Html.ActionLink("de algemene voorwaarden", "Privacy", "Home") gelezen en ik ga akkoord met de privacy policy.</p>
+                <input id="privacyCheck" asp-for="PrivacyCheck" type="checkbox" class="form-checkbox" />
+            </div>
+            <input id="submitButton" type="submit" value="Registreren" class="form-button" style="width: 300px; margin-top: 20px;" />
+        </form>
     </div>
 </body>
 
-@section Scripts{ 
+@section Scripts{
     <script>
         $(document).ready(function () {
             checkFields();
             function checkFields() {
-                if ($('#name').val() && $('#surname').val() && $('#username').val() && $('#password').val() && $('#code').val() && document.getElementById('age').checked && document.getElementById('privacy').checked) {
-                    $('#submitButton').removeClass('disabled');
-                    $('#submitButton').removeAttr('disabled');
+                if ($('#nameInput').val() && $('#surnameInput').val() && $('#usernameInput').val() && $('#passwordInput').val() && $('#schoolInput').val() && $('#groupInput').val() && document.getElementById('privacyCheck').checked) {
+                    $('#submitButton').addClass('form-button');
+                    $('#submitButton').removeClass('form-button-disabled');
+                    $('#submitButton').prop("disabled", false);
                 }
                 else {
-                    $('#submitButton').addClass('disabled');
+                    $('#submitButton').removeClass('form-button');
+                    $('#submitButton').addClass('form-button-disabled');
                     $('#submitButton').prop("disabled", true);
                 }
                 setTimeout(checkFields, 500);
