@@ -825,3 +825,17 @@ Error Number:201,State:4,Class:16
 27-5-2019 | 15:35: End.
 ---[DEBUG MSG END]---
 
+---[DEBUG MSG START]---
+[Startup]
+29-5-2019 | 10:09: 10ms. Launching server
+29-5-2019 | 10:09: 46ms. Server is up
+29-5-2019 | 10:09: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[Startup]
+29-5-2019 | 10:19: 7ms. Launching server
+29-5-2019 | 10:19: 20ms. Server is up
+29-5-2019 | 10:19: End.
+---[DEBUG MSG END]---
+

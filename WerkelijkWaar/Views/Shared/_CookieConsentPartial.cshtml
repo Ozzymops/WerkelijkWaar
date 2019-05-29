@@ -8,10 +8,11 @@
 
 @if (showBanner)
 {
-    <div id="cookieConsent" class="alert alert-info alert-dismissible fade show" role="alert">
-        AVG cookie spul. <a asp-area="" asp-controller="Home" asp-action="Privacy">Meer</a>.
-        <button type="button" class="accept-policy close" data-dismiss="alert" aria-label="Close" data-cookie-string="@cookieString">
-            <span aria-hidden="true">Accept</span>
+    <div id="cookieConsent" class="alert alert-info alert-dismissible fade show" style="height: 120px;" role="alert">
+        <p><b>Deze website maakt gebruik van cookies.</b> Cookies met betrekking tot tracking of marketing worden niet gebruikt. De cookies op deze website zijn noodzakelijk voor de werking van de website. Zonder deze cookies werkt de website niet.</p>
+        <a class="accept-policy close" style="left: 0; margin-top: 60px;" asp-area="" asp-controller="Home" asp-action="Privacy">Lees meer hier</a>
+        <button type="button" class="accept-policy close" style="margin-top: 60px;" data-dismiss="alert" aria-label="Close" data-cookie-string="@cookieString">
+            <span aria-hidden="true">Ik accepteer de cookies</span>
         </button>
     </div>
     <script>

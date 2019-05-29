@@ -484,3 +484,17 @@
 [Game]
 27-5-2019 | 15:35: Planting correct answer...
 27-5-2019 | 15:35: Correct answer is 3 with story string '6:!|Nog een verhaal:!|bla bla bla Ipsum Lorem'.
+---[LOG MSG START]---
+[Startup]
+29-5-2019 | 10:09: Starting server...
+29-5-2019 | 10:09: Server is up and running!
+29-5-2019 | 10:09: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[Startup]
+29-5-2019 | 10:19: Starting server...
+29-5-2019 | 10:19: Server is up and running!
+29-5-2019 | 10:19: End.
+---[LOG MSG END]---
+
