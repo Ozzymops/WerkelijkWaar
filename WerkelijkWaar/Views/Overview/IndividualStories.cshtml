@@ -13,60 +13,6 @@
 
 <body>
     <div>
-        <div class="flex-center">
-            <div>
-                <h1>Score @Model.User.Name  @Model.User.Surname</h1>
-                <hr />
-                <div style="display: flex; flex-direction: row; width: 1000px;">
-                    @if (Model.Stories != null && Model.Stories.Count != 0)
-                    {
-                        <!-- left -->
-                        <div style="width: 25%; height: 1000px;">
-                            <ul style="list-style: none; margin: 0px; padding: 0px;">
-                                @foreach (WerkelijkWaar.Classes.Story s in Model.Stories)
-                                {
-                                    <li>
-                                        <div>
-                                            <form asp-action="IndividualStories" asp-controller="Overview" asp-route-storyId="@s.Id">
-                                                <input type="submit" value="@s.Title" style="width: 250px;" />
-                                            </form>
-                                        </div>
-                                    </li>
-                                }
-                            </ul>
-                        </div>
-                        <!-- right -->
-                        <div style="margin-left: 10px; width: 75%; height: 100%; background-color: burlywood;">
-                            <div style="display: flex; flex-direction: column;">
-                                <div style="display: flex; flex-direction: row;">
-                                    <div style="width: 50%; height: 100px; border: 2px solid black">
-                                        @if (Model.Story != null)
-                                        {
-                                            <p style="text-align: center;">@Model.Story.Title</p>
-                                        }
-                                    </div>
-                                    <div style="width: 50%; height: 100px; border: 2px solid black;">
-                                        @if (Model.Story != null)
-                                        {
-                                            <p style="text-align: center;">Root-verhaal: @Model.Story.IsRoot</p>
-                                        }
-                                    </div>
-                                </div>
-                                <div style="height: 900px; border: 2px solid black;">
-                                    @if (Model.Story != null)
-                                    {
-                                        @Model.Story.Description
-                                    }
-                                </div>
-                            </div>
-                        </div>
-                    }
-                    else
-                    {
-                        <h2>Geen resultaten gevonden.</h2>
-                    }
-                </div>
-            </div>
-        </div>
+
     </div>
 </body>

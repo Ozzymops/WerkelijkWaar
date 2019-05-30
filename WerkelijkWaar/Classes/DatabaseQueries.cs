@@ -909,6 +909,75 @@ namespace WerkelijkWaar.Classes
             }
         }
 
+        public Score RetrieveScore(int scoreId)
+        {
+            sw.Restart();
+            l.WriteToLog("[RetrieveScore]", "Attempting to retrieve score with id " + scoreId, 0);
+            l.DebugToLog("[RetrieveScore]", sw.ElapsedMilliseconds.ToString() + "ms. Attempting to retrieve score with id " + scoreId, 0);
+
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                SqlCommand command = new SqlCommand("SELECT * FROM [Score] WHERE [Id] = @id", connection);
+                command.Parameters.Add(new SqlParameter("@id", scoreId));
+
+                try
+                {
+                    connection.Open();
+
+                    using (SqlDataReader reader = command.ExecuteReader())
+                    {
+                        if (reader.HasRows)
+                        {
+                            while (reader.Read())
+                            {
+                                l.WriteToLog("[RetrieveScore]", "Found score with id " + scoreId, 1);
+                                l.DebugToLog("[RetrieveScore]", sw.ElapsedMilliseconds.ToString() + "ms. Found score with id " + scoreId, 1);
+
+                                Score newScore = new Score
+                                {
+                                    Id = (int)reader["Id"],
+                                    OwnerId = (int)reader["OwnerId"],
+                                    GameType = (int)reader["GameType"],
+                                    Date = (DateTime)reader["Date"]
+                                };
+
+                                if (reader["AttainedVotes"] != System.DBNull.Value)
+                                {
+                                    newScore.AttainedVotes = (int)reader["AttainedVotes"];
+                                }
+
+                                if (reader["CashAmount"] != System.DBNull.Value)
+                                {
+                                    newScore.CashAmount = Convert.ToDouble(reader["CashAmount"]);
+                                }
+
+                                if (reader["FollowerAmount"] != System.DBNull.Value)
+                                {
+                                    newScore.FollowerAmount = (int)reader["FollowerAmount"];
+                                }
+
+                                return newScore;
+                            }
+                        }
+                    }
+
+                    l.WriteToLog("[RetrieveScore]", "Could not find story with id " + scoreId, 2);
+                    l.DebugToLog("[RetrieveScore]", sw.ElapsedMilliseconds.ToString() + "ms. Could not find story with id " + scoreId, 2);
+
+                    sw.Stop();
+                    return null;
+                }
+                catch (Exception ex)
+                {
+                    l.WriteToLog("[RetrieveScore]", "Something went wrong. Check debug.txt", 2);
+                    l.DebugToLog("[RetrieveScore]", sw.ElapsedMilliseconds.ToString() + "ms. Exception:\n" + ex.ToString(), 2);
+
+                    sw.Stop();
+                    return null;
+                }
+            }
+        }
+
         /// <summary>
         /// Haal alle verhalen op met status 0 (ongelezen) of 1 (gelezen, maar nog niet goedgekeurd).
         /// </summary>

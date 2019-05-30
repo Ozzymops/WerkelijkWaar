@@ -80,11 +80,18 @@ namespace WerkelijkWaar.Controllers
                 HubModel hm = new HubModel();
                 hm.User = Newtonsoft.Json.JsonConvert.DeserializeObject<Classes.User>(HttpContext.Session.GetString("User"));
 
-                // Haal data op
-                hm.UserList = dq.RetrieveUserListByGroup(hm.User.Group);
-                hm.GenerateAverage();
+                if (hm.User.RoleId == 0)
+                {
+                    return RedirectToAction("ScoreOverview", "Overview", new { id = hm.User.Id, rank = -1 });
+                }
+                else if (hm.User.RoleId == 1)
+                {
+                    // Haal data op
+                    hm.UserList = dq.RetrieveUserListByGroup(hm.User.Group);
+                    hm.GenerateAverage();
 
-                return View(hm);
+                    return View(hm);
+                }
             }
 
             return RedirectToAction("Index", "Home");

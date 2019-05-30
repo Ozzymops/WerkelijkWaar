@@ -1,19 +1,12 @@
 ﻿@{
     ViewData["Title"] = "Accountoverzicht";
+    Layout = "_LayoutSide";
 }
 @model AccountViewModel
 
-<header>
-    <div class="flex-column-top">
-        <div>
-            <a asp-controller="Home" asp-action="Index"><img class="small_icon" src="~/content/image/BackArrow.png" title="Ga terug" alt="Ga terug" /></a>
-        </div>
-    </div>
-</header>
-
 <body>
     <div>
-        <div class="flex-center">
+        <div class="flex-center" style="margin-top: 10px;">
             <div style="display: flex; flex-direction: row;">
                 <div style="display: flex; flex-direction: column; margin-right: 25px; width: 700px;">
                     <div>
@@ -62,7 +55,14 @@
                             <input type="submit" value="Opslaan" class="form-button" style="width: 150px; margin-right: -10px;" />
                             <div style="display: flex; flex-direction: row;">
                                 <div style="display: flex; flex-direction: row; margin-top: -45px;">
-                                    <img src="~/content/image/People.png" style="width: 100px; height: 100px; border: 2px solid #f5b91a" />
+                                    @if (!String.IsNullOrEmpty(Model.User.ImageSource))
+                                    {
+                                        <img class="layout top-bar-profile" src="~/content/image/avatars/@Model.User.Id/@Model.User.ImageSource"/>
+                                    }
+                                    else
+                                    {
+                                        <img src="~/content/image/Person_disabled.png" style="width: 100px; height: 100px; border: 2px solid #f5b91a" />
+                                    }
                                     <input class="text-input" style="height: 30px; margin-left: 10px; margin-top: 70px;" type="file" />
                                 </div>
                             </div>

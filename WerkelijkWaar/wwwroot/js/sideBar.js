@@ -9,10 +9,13 @@ if (roleId == 0) {
         $("#side-all-game").attr("src", "/content/image/Play.png");
         $("#side-0-scoreOverview").attr("src", "/content/image/Trophy_disabled.png");
     }
-
-    if (document.title.includes("Scores van")) {
+    else if (document.title.includes("Scores van")) {
         $("#side-all-game").attr("src", "/content/image/Play_disabled.png");
         $("#side-0-scoreOverview").attr("src", "/content/image/Trophy.png");
+    }
+    else {
+        $("#side-all-game").attr("src", "/content/image/Play_disabled.png");
+        $("#side-0-scoreOverview").attr("src", "/content/image/Trophy_disabled.png");
     }
 }
 
@@ -23,17 +26,20 @@ if (roleId == 1) {
         $("#side-1-gameConfig").attr("src", "/content/image/Gear_disabled.png");
         $("#side-1-classOverview").attr("src", "/content/image/People_disabled.png");
     }
-
-    if (document.title.includes("configuratie -")) {
+    else if (document.title.includes("configuratie -")) {
         $("#side-all-game").attr("src", "/content/image/Play_disabled.png");
         $("#side-1-gameConfig").attr("src", "/content/image/Gear.png");
         $("#side-1-classOverview").attr("src", "/content/image/People_disabled.png");
     }
-
-    if (document.title.includes("Inzage")) {
+    else if (document.title.includes("Inzage")) {
         $("#side-all-game").attr("src", "/content/image/Play_disabled.png");
         $("#side-1-gameConfig").attr("src", "/content/image/Gear_disabled.png");
         $("#side-1-classOverview").attr("src", "/content/image/People.png");
+    }
+    else {
+        $("#side-all-game").attr("src", "/content/image/Play_disabled.png");
+        $("#side-1-gameConfig").attr("src", "/content/image/Gear_disabled.png");
+        $("#side-1-classOverview").attr("src", "/content/image/People_disabled.png");
     }
 }
 

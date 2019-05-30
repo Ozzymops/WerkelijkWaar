@@ -27,33 +27,33 @@ namespace WerkelijkWaar.Controllers
         /// Navigeer naar de scoreoverzicht.
         /// </summary>
         /// <returns>View</returns>
-        public IActionResult ScoreOverview()
+        public IActionResult ScoreOverview(int id, int rank)
         {
             // Check if logged in
             if (!String.IsNullOrEmpty(HttpContext.Session.GetString("User")))
             {
                 ScoreOverviewModel som = new ScoreOverviewModel();
-                som.CurrentUser = Newtonsoft.Json.JsonConvert.DeserializeObject<Classes.User>(HttpContext.Session.GetString("User"));
 
-                // Student
-                if (som.CurrentUser.RoleId == 0)
-                {
-                    // redirect to personal scores
-                    return RedirectToAction("IndividualScores", "Overview", new { id = som.CurrentUser.Id, rank = -1, scoreId = 0 });
-                }
-                // Teacher
-                else if (som.CurrentUser.RoleId == 1)
-                {
-                    // show full overview / table
-                    som.UserList = dq.RetrieveUserListByGroup(1);
-                    som.GenerateAverage();
+                som.Viewer = Newtonsoft.Json.JsonConvert.DeserializeObject<Classes.User>(HttpContext.Session.GetString("User"));
 
-                    return View(som);
+                if (som.Viewer.RoleId == 1)
+                {
+                    som.User = dq.RetrieveUser(id);
+                    som.Stories = dq.RetrieveStoriesOfUser(id);
+                    som.Scores = dq.RetrieveScoresOfUser(id);
+                    som.Rank = rank;
                 }
                 else
                 {
-                    return RedirectToAction("Index", "Home");
+                    som.User = dq.RetrieveUser(som.Viewer.Id);
+                    som.Stories = dq.RetrieveStoriesOfUser(som.Viewer.Id);
+                    som.Scores = dq.RetrieveScoresOfUser(som.Viewer.Id);
+                    som.Rank = rank;
                 }
+
+                som.GenerateAverage();
+
+                return View(som);
             }
 
             return RedirectToAction("Index", "Home");
@@ -117,31 +117,19 @@ namespace WerkelijkWaar.Controllers
             // Check if logged in
             if (!String.IsNullOrEmpty(HttpContext.Session.GetString("User")))
             {
+                Classes.User tempUser = Newtonsoft.Json.JsonConvert.DeserializeObject<Classes.User>(HttpContext.Session.GetString("User"));
                 IndividualModel ism = new IndividualModel();
-                ism.GetUser(id);
-                ism.GenerateAverage();
-                ism.Scores = dq.RetrieveScoresOfUser(ism.User.Id);
-                ism.Stories = dq.RetrieveStoriesOfUser(ism.User.Id);
-                ism.Rank = rank;
-                ism.Role = Newtonsoft.Json.JsonConvert.DeserializeObject<Classes.User>(HttpContext.Session.GetString("User")).RoleId;
 
-                if (ism.Scores != null && ism.Scores.Count != 0)
+                if (tempUser.RoleId == 1)
                 {
-                    if (scoreId != 0)
-                    {
-                        foreach (Classes.Score s in ism.Scores)
-                        {
-                            if (s.Id == scoreId)
-                            {
-                                ism.Score = s;
-                            }
-                        }
-                    }
-                    else
-                    {
-                        ism.Score = ism.Scores[0];
-                    }
+                    ism.User = dq.RetrieveUser(id);
                 }
+                else
+                {
+                    ism.User = tempUser;
+                }
+
+                ism.Score = dq.RetrieveScore(scoreId);
 
                 return View(ism);
             }
@@ -162,22 +150,6 @@ namespace WerkelijkWaar.Controllers
             if (!String.IsNullOrEmpty(HttpContext.Session.GetString("User")))
             {
                 IndividualModel ism = new IndividualModel();
-                ism.GetUser(id);
-                ism.Stories = dq.RetrieveStoriesOfUser(ism.User.Id);
-                ism.Rank = rank;
-                ism.Role = Newtonsoft.Json.JsonConvert.DeserializeObject<Classes.User>(HttpContext.Session.GetString("User")).RoleId;
-
-                if (storyId != 0)
-                {
-                    foreach (Classes.Story s in ism.Stories)
-                    {
-                        if (s.Id == storyId)
-                        {
-                            ism.Story = s;
-                        }
-                    }
-
-                }
 
                 return View(ism);
             }
@@ -201,8 +173,8 @@ namespace WerkelijkWaar.Controllers
                 if (tempUser.RoleId == 1)
                 {
                     IndividualModel ism = new IndividualModel();
-                    ism.GetUser(id);
-                    ism.Rank = rank;
+                    // ism.GetUser(id);
+                    // ism.Rank = rank;
                     ism.Score = new Classes.Score();
 
                     List<Classes.GameType> gameTypeList = new List<Classes.GameType>();
@@ -240,7 +212,7 @@ namespace WerkelijkWaar.Controllers
                     bool results = dq.CreateScore(im.Score);
                 }
 
-                return RedirectToAction("IndividualScores", "Overview", new { id = im.User.Id, rank = im.Rank, scoreId = 0 });
+                return RedirectToAction("IndividualScores", "Overview", new { id = im.User.Id, scoreId = 0 });
             }
 
             return RedirectToAction("Index", "Home");

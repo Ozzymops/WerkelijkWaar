@@ -80,13 +80,13 @@
                                 if (!String.IsNullOrEmpty(u.ImageSource))
                                 {
                                     <li>
-                                        @i: <img src="~/content/image/avatars/@u.Id/@u.ImageSource" style="height: 33px; width: 33px;" /> <a asp-controller="Overview" asp-action="IndividualScores" asp-route-id="@u.Id" asp-route-rank="@i" asp-route-scoreId="0">@u.Name @u.Surname</a> - @u.AverageScore.ToString("N1")
+                                        @i: <img src="~/content/image/avatars/@u.Id/@u.ImageSource" style="height: 33px; width: 33px;" /> <a asp-controller="Overview" asp-action="ScoreOverview" asp-route-id="@u.Id" asp-route-rank="@i">@u.Name @u.Surname</a> - @u.AverageScore.ToString("N1")
                                     </li>
                                 }
                                 else
                                 {
                                     <li>
-                                        @i: <img src="~/content/image/Person.png" style="height: 33px; width: 33px;" /> <a asp-controller="Overview" asp-action="IndividualScores" asp-route-id="@u.Id" asp-route-rank="@i" asp-route-scoreId="0">@u.Name @u.Surname</a> - @u.AverageScore.ToString("N1")
+                                        @i: <img src="~/content/image/Person.png" style="height: 33px; width: 33px;" /> <a asp-controller="Overview" asp-action="ScoreOverview" asp-route-id="@u.Id" asp-route-rank="@i">@u.Name @u.Surname</a> - @u.AverageScore.ToString("N1")
                                     </li>
                                 }
                             }
