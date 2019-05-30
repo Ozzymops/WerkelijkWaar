@@ -6691,3 +6691,787 @@
 30-5-2019 | 10:34: End.
 ---[LOG MSG END]---
 
+---[LOG MSG START]---
+[Startup]
+30-5-2019 | 11:29: Starting server...
+30-5-2019 | 11:29: Server is up and running!
+30-5-2019 | 11:29: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[CheckLogin]
+30-5-2019 | 11:29: Logging in Admin...
+30-5-2019 | 11:29: Log in found for user Admin
+30-5-2019 | 11:29: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveUser]
+30-5-2019 | 11:29: Attempting to retrieve user with id 3
+30-5-2019 | 11:29: Found user with id 3
+30-5-2019 | 11:29: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[AccountController]
+30-5-2019 | 11:29: Admin validated.
+30-5-2019 | 11:29: Admin navigated to Hub/Game
+30-5-2019 | 11:29: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[Startup]
+30-5-2019 | 11:30: Starting server...
+30-5-2019 | 11:30: Server is up and running!
+30-5-2019 | 11:30: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[CheckLogin]
+30-5-2019 | 11:30: Logging in Admin...
+30-5-2019 | 11:30: Log in found for user Admin
+30-5-2019 | 11:30: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveUser]
+30-5-2019 | 11:30: Attempting to retrieve user with id 3
+30-5-2019 | 11:30: Found user with id 3
+30-5-2019 | 11:30: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[AccountController]
+30-5-2019 | 11:30: Admin validated.
+30-5-2019 | 11:30: Admin navigated to Hub/Game
+30-5-2019 | 11:30: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[Startup]
+30-5-2019 | 11:38: Starting server...
+30-5-2019 | 11:38: Server is up and running!
+30-5-2019 | 11:38: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[Startup]
+30-5-2019 | 11:39: Starting server...
+30-5-2019 | 11:39: Server is up and running!
+30-5-2019 | 11:39: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[CheckLogin]
+30-5-2019 | 11:39: Logging in JMuris...
+30-5-2019 | 11:39: Log in found for user JMuris
+30-5-2019 | 11:39: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveUser]
+30-5-2019 | 11:39: Attempting to retrieve user with id 4
+30-5-2019 | 11:39: Found user with id 4
+30-5-2019 | 11:39: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[AccountController]
+30-5-2019 | 11:39: JMuris validated.
+30-5-2019 | 11:39: JMuris navigated to Hub/Game
+30-5-2019 | 11:39: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[AccountController]
+30-5-2019 | 11:39: JMuris validated.
+30-5-2019 | 11:39: JMuris logged out.
+30-5-2019 | 11:39: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[CheckLogin]
+30-5-2019 | 11:39: Logging in Admin...
+30-5-2019 | 11:39: Log in found for user Admin
+30-5-2019 | 11:39: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveUser]
+30-5-2019 | 11:39: Attempting to retrieve user with id 3
+30-5-2019 | 11:39: Found user with id 3
+30-5-2019 | 11:39: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[AccountController]
+30-5-2019 | 11:39: Admin validated.
+30-5-2019 | 11:39: Admin navigated to Hub/Game
+30-5-2019 | 11:39: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveSchools]
+30-5-2019 | 11:39: Attempting to retrieve schools...
+30-5-2019 | 11:39: Found 3 schools.
+30-5-2019 | 11:39: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[Startup]
+30-5-2019 | 11:39: Starting server...
+30-5-2019 | 11:39: Server is up and running!
+30-5-2019 | 11:39: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[CheckLogin]
+30-5-2019 | 11:39: Logging in Admin...
+30-5-2019 | 11:39: Log in found for user Admin
+30-5-2019 | 11:39: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveUser]
+30-5-2019 | 11:39: Attempting to retrieve user with id 3
+30-5-2019 | 11:39: Found user with id 3
+30-5-2019 | 11:39: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[AccountController]
+30-5-2019 | 11:39: Admin validated.
+30-5-2019 | 11:39: Admin navigated to Hub/Game
+30-5-2019 | 11:39: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveSchools]
+30-5-2019 | 11:39: Attempting to retrieve schools...
+30-5-2019 | 11:39: Found 3 schools.
+30-5-2019 | 11:39: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveSchools]
+30-5-2019 | 11:40: Attempting to retrieve schools...
+30-5-2019 | 11:40: Found 3 schools.
+30-5-2019 | 11:40: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[AccountController]
+30-5-2019 | 11:40: Admin validated.
+30-5-2019 | 11:40: Admin navigated to Hub/Game
+30-5-2019 | 11:40: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveSchools]
+30-5-2019 | 11:40: Attempting to retrieve schools...
+30-5-2019 | 11:40: Found 3 schools.
+30-5-2019 | 11:40: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[AccountController]
+30-5-2019 | 11:40: Admin validated.
+30-5-2019 | 11:40: Admin navigated to Hub/Game
+30-5-2019 | 11:40: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveSchools]
+30-5-2019 | 11:40: Attempting to retrieve schools...
+30-5-2019 | 11:40: Found 3 schools.
+30-5-2019 | 11:40: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveSchools]
+30-5-2019 | 11:43: Attempting to retrieve schools...
+30-5-2019 | 11:43: Found 3 schools.
+30-5-2019 | 11:43: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[AccountController]
+30-5-2019 | 11:43: Admin validated.
+30-5-2019 | 11:43: Admin navigated to Hub/Game
+30-5-2019 | 11:43: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveSchools]
+30-5-2019 | 11:43: Attempting to retrieve schools...
+30-5-2019 | 11:43: Found 3 schools.
+30-5-2019 | 11:43: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[Startup]
+30-5-2019 | 11:45: Starting server...
+30-5-2019 | 11:45: Server is up and running!
+30-5-2019 | 11:45: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[CheckLogin]
+30-5-2019 | 11:45: Logging in JMuris...
+30-5-2019 | 11:45: Log in found for user JMuris
+30-5-2019 | 11:45: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveUser]
+30-5-2019 | 11:45: Attempting to retrieve user with id 4
+30-5-2019 | 11:45: Found user with id 4
+30-5-2019 | 11:45: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[AccountController]
+30-5-2019 | 11:45: JMuris validated.
+30-5-2019 | 11:45: JMuris navigated to Hub/Game
+30-5-2019 | 11:45: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveUserListByGroup]
+30-5-2019 | 11:45: Attempting to retrieve users from group 2
+30-5-2019 | 11:45: Found 2 users from group 2
+30-5-2019 | 11:45: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveScoresOfUser]
+30-5-2019 | 11:45: Attempting to retrieve scores of user 5
+30-5-2019 | 11:45: Found 3 scores from user 5
+30-5-2019 | 11:45: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveScoresOfUser]
+30-5-2019 | 11:45: Attempting to retrieve scores of user 6
+30-5-2019 | 11:45: Found 3 scores from user 6
+30-5-2019 | 11:45: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[Startup]
+30-5-2019 | 11:45: Starting server...
+30-5-2019 | 11:45: Server is up and running!
+30-5-2019 | 11:45: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[CheckLogin]
+30-5-2019 | 11:45: Logging in JMuris...
+30-5-2019 | 11:45: Log in found for user JMuris
+30-5-2019 | 11:45: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveUser]
+30-5-2019 | 11:45: Attempting to retrieve user with id 4
+30-5-2019 | 11:45: Found user with id 4
+30-5-2019 | 11:45: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[AccountController]
+30-5-2019 | 11:45: JMuris validated.
+30-5-2019 | 11:45: JMuris navigated to Hub/Game
+30-5-2019 | 11:45: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveUserListByGroup]
+30-5-2019 | 11:45: Attempting to retrieve users from group 2
+30-5-2019 | 11:45: Found 2 users from group 2
+30-5-2019 | 11:45: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveScoresOfUser]
+30-5-2019 | 11:45: Attempting to retrieve scores of user 5
+30-5-2019 | 11:45: Found 3 scores from user 5
+30-5-2019 | 11:45: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveScoresOfUser]
+30-5-2019 | 11:45: Attempting to retrieve scores of user 6
+30-5-2019 | 11:45: Found 3 scores from user 6
+30-5-2019 | 11:45: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveUser]
+30-5-2019 | 11:45: Attempting to retrieve user with id 5
+30-5-2019 | 11:45: Found user with id 5
+30-5-2019 | 11:45: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveStoriesOfUser]
+30-5-2019 | 11:45: Attempting to retrieve stories of user 5
+30-5-2019 | 11:45: Found 1 stories from user 5
+30-5-2019 | 11:45: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveScoresOfUser]
+30-5-2019 | 11:45: Attempting to retrieve scores of user 5
+30-5-2019 | 11:45: Found 3 scores from user 5
+30-5-2019 | 11:45: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveUserListByGroup]
+30-5-2019 | 11:45: Attempting to retrieve users from group 2
+30-5-2019 | 11:45: Found 2 users from group 2
+30-5-2019 | 11:45: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveScoresOfUser]
+30-5-2019 | 11:45: Attempting to retrieve scores of user 5
+30-5-2019 | 11:45: Found 3 scores from user 5
+30-5-2019 | 11:45: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveScoresOfUser]
+30-5-2019 | 11:45: Attempting to retrieve scores of user 6
+30-5-2019 | 11:45: Found 3 scores from user 6
+30-5-2019 | 11:45: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[Startup]
+30-5-2019 | 11:48: Starting server...
+30-5-2019 | 11:48: Server is up and running!
+30-5-2019 | 11:48: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[CheckLogin]
+30-5-2019 | 11:48: Logging in Admin...
+30-5-2019 | 11:48: Log in found for user Admin
+30-5-2019 | 11:48: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveUser]
+30-5-2019 | 11:48: Attempting to retrieve user with id 3
+30-5-2019 | 11:48: Found user with id 3
+30-5-2019 | 11:48: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[AccountController]
+30-5-2019 | 11:48: Admin validated.
+30-5-2019 | 11:48: Admin navigated to Hub/Game
+30-5-2019 | 11:48: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveSchools]
+30-5-2019 | 11:48: Attempting to retrieve schools...
+30-5-2019 | 11:48: Found 3 schools.
+30-5-2019 | 11:48: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveSchools]
+30-5-2019 | 11:48: Attempting to retrieve schools...
+30-5-2019 | 11:48: Found 3 schools.
+30-5-2019 | 11:48: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveAllUsers]
+30-5-2019 | 11:48: Attempting to retrieve all users
+30-5-2019 | 11:48: Found 8 users.
+30-5-2019 | 11:48: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveUser]
+30-5-2019 | 11:48: Attempting to retrieve user with id 1
+30-5-2019 | 11:48: Found user with id 1
+30-5-2019 | 11:48: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveAllUsers]
+30-5-2019 | 11:48: Attempting to retrieve all users
+30-5-2019 | 11:48: Found 8 users.
+30-5-2019 | 11:48: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[AccountController]
+30-5-2019 | 11:48: Admin validated.
+30-5-2019 | 11:48: Admin navigated to Hub/Game
+30-5-2019 | 11:48: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveSchools]
+30-5-2019 | 11:48: Attempting to retrieve schools...
+30-5-2019 | 11:48: Found 3 schools.
+30-5-2019 | 11:48: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[AccountController]
+30-5-2019 | 11:48: Admin validated.
+30-5-2019 | 11:48: Admin navigated to Hub/Game
+30-5-2019 | 11:48: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveSchools]
+30-5-2019 | 11:48: Attempting to retrieve schools...
+30-5-2019 | 11:48: Found 3 schools.
+30-5-2019 | 11:48: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveAllUsers]
+30-5-2019 | 11:48: Attempting to retrieve all users
+30-5-2019 | 11:48: Found 8 users.
+30-5-2019 | 11:48: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveSchools]
+30-5-2019 | 11:48: Attempting to retrieve schools...
+30-5-2019 | 11:48: Found 3 schools.
+30-5-2019 | 11:48: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveAllUsers]
+30-5-2019 | 11:48: Attempting to retrieve all users
+30-5-2019 | 11:48: Found 8 users.
+30-5-2019 | 11:48: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveAllUsers]
+30-5-2019 | 11:50: Attempting to retrieve all users
+30-5-2019 | 11:50: Found 8 users.
+30-5-2019 | 11:50: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveAllUsers]
+30-5-2019 | 11:50: Attempting to retrieve all users
+30-5-2019 | 11:50: Found 8 users.
+30-5-2019 | 11:50: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[AccountController]
+30-5-2019 | 11:51: Admin validated.
+30-5-2019 | 11:51: Admin logged out.
+30-5-2019 | 11:51: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[Startup]
+30-5-2019 | 11:51: Starting server...
+30-5-2019 | 11:51: Server is up and running!
+30-5-2019 | 11:51: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[CheckLogin]
+30-5-2019 | 11:51: Logging in Admin...
+30-5-2019 | 11:51: Log in found for user Admin
+30-5-2019 | 11:51: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveUser]
+30-5-2019 | 11:51: Attempting to retrieve user with id 3
+30-5-2019 | 11:51: Found user with id 3
+30-5-2019 | 11:51: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[AccountController]
+30-5-2019 | 11:51: Admin validated.
+30-5-2019 | 11:51: Admin navigated to Hub/Game
+30-5-2019 | 11:51: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveSchools]
+30-5-2019 | 11:51: Attempting to retrieve schools...
+30-5-2019 | 11:51: Found 3 schools.
+30-5-2019 | 11:51: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveStoryQueue]
+30-5-2019 | 11:51: Attempting to retrieve stories with status 0 and 1.
+30-5-2019 | 11:51: Could not find any stories with status 0 or 1
+30-5-2019 | 11:51: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[AccountController]
+30-5-2019 | 11:51: Admin validated.
+30-5-2019 | 11:51: Admin logged out.
+30-5-2019 | 11:51: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[CheckLogin]
+30-5-2019 | 11:51: Logging in Admin...
+30-5-2019 | 11:51: Log in found for user Admin
+30-5-2019 | 11:51: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveUser]
+30-5-2019 | 11:51: Attempting to retrieve user with id 3
+30-5-2019 | 11:51: Found user with id 3
+30-5-2019 | 11:51: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[AccountController]
+30-5-2019 | 11:51: Admin validated.
+30-5-2019 | 11:51: Admin navigated to Hub/Game
+30-5-2019 | 11:51: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveSchools]
+30-5-2019 | 11:51: Attempting to retrieve schools...
+30-5-2019 | 11:51: Found 3 schools.
+30-5-2019 | 11:51: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveStoryQueue]
+30-5-2019 | 11:51: Attempting to retrieve stories with status 0 and 1.
+30-5-2019 | 11:51: Could not find any stories with status 0 or 1
+30-5-2019 | 11:51: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[Startup]
+30-5-2019 | 11:54: Starting server...
+30-5-2019 | 11:54: Server is up and running!
+30-5-2019 | 11:54: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[CheckLogin]
+30-5-2019 | 11:54: Logging in Admin...
+30-5-2019 | 11:54: Log in found for user Admin
+30-5-2019 | 11:54: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveUser]
+30-5-2019 | 11:54: Attempting to retrieve user with id 3
+30-5-2019 | 11:54: Found user with id 3
+30-5-2019 | 11:54: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[AccountController]
+30-5-2019 | 11:54: Admin validated.
+30-5-2019 | 11:54: Admin navigated to Hub/Game
+30-5-2019 | 11:54: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveSchools]
+30-5-2019 | 11:54: Attempting to retrieve schools...
+30-5-2019 | 11:54: Found 3 schools.
+30-5-2019 | 11:54: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveStoryQueue]
+30-5-2019 | 11:54: Attempting to retrieve stories with status 0 and 1.
+30-5-2019 | 11:54: Could not find any stories with status 0 or 1
+30-5-2019 | 11:54: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[Startup]
+30-5-2019 | 11:55: Starting server...
+30-5-2019 | 11:55: Server is up and running!
+30-5-2019 | 11:55: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[CheckLogin]
+30-5-2019 | 11:55: Logging in Admin...
+30-5-2019 | 11:55: Log in found for user Admin
+30-5-2019 | 11:55: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveUser]
+30-5-2019 | 11:55: Attempting to retrieve user with id 3
+30-5-2019 | 11:55: Found user with id 3
+30-5-2019 | 11:55: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[AccountController]
+30-5-2019 | 11:55: Admin validated.
+30-5-2019 | 11:55: Admin navigated to Hub/Game
+30-5-2019 | 11:55: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveSchools]
+30-5-2019 | 11:55: Attempting to retrieve schools...
+30-5-2019 | 11:55: Found 3 schools.
+30-5-2019 | 11:55: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveStoryQueue]
+30-5-2019 | 11:55: Attempting to retrieve stories with status 0 and 1.
+30-5-2019 | 11:55: Found 1 stories.
+30-5-2019 | 11:55: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[Startup]
+30-5-2019 | 11:57: Starting server...
+30-5-2019 | 11:57: Server is up and running!
+30-5-2019 | 11:57: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[CheckLogin]
+30-5-2019 | 11:57: Logging in Admin...
+30-5-2019 | 11:57: Log in found for user Admin
+30-5-2019 | 11:57: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveUser]
+30-5-2019 | 11:57: Attempting to retrieve user with id 3
+30-5-2019 | 11:57: Found user with id 3
+30-5-2019 | 11:57: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[AccountController]
+30-5-2019 | 11:57: Admin validated.
+30-5-2019 | 11:57: Admin navigated to Hub/Game
+30-5-2019 | 11:57: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveSchools]
+30-5-2019 | 11:57: Attempting to retrieve schools...
+30-5-2019 | 11:57: Found 3 schools.
+30-5-2019 | 11:57: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveStoryQueue]
+30-5-2019 | 11:57: Attempting to retrieve stories with status 0 and 1.
+30-5-2019 | 11:58: Found 1 stories.
+30-5-2019 | 11:58: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[Startup]
+30-5-2019 | 11:59: Starting server...
+30-5-2019 | 11:59: Server is up and running!
+30-5-2019 | 11:59: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[CheckLogin]
+30-5-2019 | 11:59: Logging in Admin...
+30-5-2019 | 11:59: Log in found for user Admin
+30-5-2019 | 11:59: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveUser]
+30-5-2019 | 11:59: Attempting to retrieve user with id 3
+30-5-2019 | 11:59: Found user with id 3
+30-5-2019 | 11:59: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[AccountController]
+30-5-2019 | 11:59: Admin validated.
+30-5-2019 | 11:59: Admin navigated to Hub/Game
+30-5-2019 | 11:59: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveSchools]
+30-5-2019 | 11:59: Attempting to retrieve schools...
+30-5-2019 | 11:59: Found 3 schools.
+30-5-2019 | 11:59: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveStoryQueue]
+30-5-2019 | 11:59: Attempting to retrieve stories with status 0 and 1.
+30-5-2019 | 11:59: Found 1 stories.
+30-5-2019 | 11:59: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[Startup]
+30-5-2019 | 11:59: Starting server...
+30-5-2019 | 11:59: Server is up and running!
+30-5-2019 | 11:59: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[CheckLogin]
+30-5-2019 | 11:59: Logging in Admin...
+30-5-2019 | 11:59: Log in found for user Admin
+30-5-2019 | 11:59: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveUser]
+30-5-2019 | 11:59: Attempting to retrieve user with id 3
+30-5-2019 | 11:59: Found user with id 3
+30-5-2019 | 11:59: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[AccountController]
+30-5-2019 | 11:59: Admin validated.
+30-5-2019 | 11:59: Admin navigated to Hub/Game
+30-5-2019 | 11:59: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveSchools]
+30-5-2019 | 11:59: Attempting to retrieve schools...
+30-5-2019 | 11:59: Found 3 schools.
+30-5-2019 | 11:59: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveStoryQueue]
+30-5-2019 | 11:59: Attempting to retrieve stories with status 0 and 1.
+30-5-2019 | 11:59: Found 1 stories.
+30-5-2019 | 11:59: End.
+---[LOG MSG END]---
+

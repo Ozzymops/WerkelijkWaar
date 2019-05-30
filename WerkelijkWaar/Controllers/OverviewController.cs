@@ -60,6 +60,35 @@ namespace WerkelijkWaar.Controllers
         }
 
         /// <summary>
+        /// Navigeer naar het klasoverzicht
+        /// </summary>
+        /// <returns>View</returns>
+        public IActionResult ClassOverview()
+        {
+            // login check
+            if (!String.IsNullOrEmpty(HttpContext.Session.GetString("User")))
+            {
+                HubModel hm = new HubModel();
+                hm.User = Newtonsoft.Json.JsonConvert.DeserializeObject<Classes.User>(HttpContext.Session.GetString("User"));
+
+                if (hm.User.RoleId == 0)
+                {
+                    return RedirectToAction("ScoreOverview", "Overview", new { id = hm.User.Id, rank = -1 });
+                }
+                else if (hm.User.RoleId == 1)
+                {
+                    // Haal data op
+                    hm.UserList = dq.RetrieveUserListByGroup(hm.User.Group);
+                    hm.GenerateAverage();
+
+                    return View(hm);
+                }
+            }
+
+            return RedirectToAction("Index", "Home");
+        }
+
+        /// <summary>
         /// Navigeer naar de gebruikersoverzicht.
         /// </summary>
         /// <returns>View</returns>
@@ -94,6 +123,7 @@ namespace WerkelijkWaar.Controllers
                 // Check if administrator
                 AdminModel am = new AdminModel();
                 Classes.User tempUser = Newtonsoft.Json.JsonConvert.DeserializeObject<Classes.User>(HttpContext.Session.GetString("User"));
+                am.User = tempUser;
 
                 if (tempUser.RoleId == 2)
                 {

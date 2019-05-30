@@ -1,77 +1,46 @@
 ﻿@{
     ViewData["Title"] = "Gebruikersoverzicht";
+    Layout = "_LayoutSide";
 }
-@model WerkelijkWaar.Models.AdminModel
-
-<header>
-    <div class="flex-column-top">
-        <div>
-            <a asp-controller="Account" asp-action="Logout"><img class="small_icon" src="~/content/image/BackArrow.png" title="Ga terug" alt="Ga terug" /></a>
-        </div>
-    </div>
-</header>
+@model AdminModel
 
 <body>
     <div>
         <div class="flex-center">
             <div>
-                <h1>Gebruikers</h1>
-                <div style="display: flex; flex-direction: row; justify-content: space-around;">
-                    <div>
-                        <a asp-controller="Overview" asp-action="UserOverview">Gebruikeroverzicht</a>
-                    </div>
-                    <div>
-                        <a asp-controller="Overview" asp-action="StoryOverview">Verhalenoverzicht</a>
-                    </div>
-                    <div>
-                        <a asp-controller="Overview" asp-action="ServerConfiguration">Serverconfiguratie</a>
-                    </div>
-                </div>
                 <hr />
                 <div style="display: flex; flex-direction: row; width: 1000px;">
                     @if (Model.UserList != null && Model.UserList.Count != 0)
                     {
                         <div>
-                            <table class="overview">
-                                <tr>
-                                    <th style="width: 50px;">
+                            <table>
+                                <tr style="background-color: lightgray;">
+                                    <th style="border: 1px solid black; width: 10vw;">
                                         Id
                                     </th>
-                                    <th style="width: 200px;">
-                                        Voornaam
+                                    <th style="border: 1px solid black; width: 20vw;">
+                                        Naam
                                     </th>
-                                    <th style="width: 200px;">
-                                        Achternaam
-                                    </th>
-                                    <th style="width: 200px;">
-                                        Gebruikersnaam
-                                    </th>
-                                    <th style="width: 200px;">
+                                    <th style="border: 1px solid black; width: 10vw;">
                                         Rol
                                     </th>
-                                    <th style="width: 50px;">
+                                    <th style="border: 1px solid black; width: 10vw;">
                                         Groep
                                     </th>
-                                    <th style="width: 200px;">
+                                    <th style="border: 1px solid black; width: 20vw;">
                                         Inzien
                                     </th>
                                 </tr>
                                 @foreach (WerkelijkWaar.Classes.User u in Model.UserList)
                                 {
                                     <tr>
-                                        <td>
+                                        <td style="border: 1px solid black;">
                                             @u.Id
                                         </td>
-                                        <td>
-                                            @u.Name
+                                        <td style="border: 1px solid black;">
+                                            @u.Name @u.Surname - @u.Username
                                         </td>
-                                        <td>
-                                            @u.Surname
-                                        </td>
-                                        <td>
-                                            @u.Username
-                                        </td>
-                                        <td>
+                                        <td style="border: 1px solid black;">
                                             @if (u.RoleId == 0)
                                             {
                                                 @:Student
@@ -84,17 +53,21 @@
                                             {
                                                 @:Admin
                                             }
+                                            else if (u.RoleId == 3)
+                                            {
+                                                @:Überadmin
+                                            }
                                             else
                                             {
                                                 @:Onbekend (@u.RoleId)
                                             }
                                         </td>
-                                        <td>
+                                        <td style="border: 1px solid black;">
                                             @u.Group
                                         </td>
-                                        <td>
+                                        <td style="border: 1px solid black;">
                                             <form asp-action="IndividualUsers" asp-controller="Overview" asp-route-id="@u.Id">
-                                                <input class="table" type="submit" value="Inzien" style="width: 100%; height: 100%;" />
+                                                <input class="form-button" type="submit" value="Inzien" style="width: 100%; height: 100%;" />
                                             </form>
                                         </td>
                                     </tr>

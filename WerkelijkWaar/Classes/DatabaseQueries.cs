@@ -1048,6 +1048,67 @@ namespace WerkelijkWaar.Classes
                 }
             }
         }
+
+        public List<School> RetrieveSchools()
+        {
+            sw.Restart();
+            l.WriteToLog("[RetrieveSchools]", "Attempting to retrieve schools...", 0);
+            l.DebugToLog("[RetrieveSchools]", sw.ElapsedMilliseconds.ToString() + "ms. Attempting to retrieve schools", 0);
+
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                SqlCommand command = new SqlCommand("SELECT * FROM [School]", connection);
+
+                List<School> SchoolList = new List<School>();
+
+                try
+                {
+                    connection.Open();
+
+                    using (SqlDataReader reader = command.ExecuteReader())
+                    {
+                        if (reader.HasRows)
+                        {
+                            int rowCount = 0;
+
+                            while (reader.Read())
+                            {
+                                School newSchool = new School
+                                {
+                                    Id = (int)reader["Id"],
+                                    SchoolName = (string)reader["Name"]
+                                };
+
+                                l.DebugToLog("[RetrieveSchools]", sw.ElapsedMilliseconds.ToString() + "ms. Got: " + newSchool.Id + " - " + newSchool.SchoolName, 1);
+
+                                SchoolList.Add(newSchool);
+                                rowCount++;
+                            }
+
+                            l.WriteToLog("[RetrieveSchools]", "Found " + rowCount + " schools.", 2);
+                            l.DebugToLog("[RetrieveSchools]", sw.ElapsedMilliseconds.ToString() + "ms. Found " + rowCount + " schools.", 2);
+
+                            sw.Stop();
+                            return SchoolList;
+                        }
+                    }
+
+                    l.WriteToLog("[RetrieveSchools]", "Could not find any schools.", 2);
+                    l.DebugToLog("[RetrieveSchools]", sw.ElapsedMilliseconds.ToString() + "ms. Could not find any schools.", 2);
+
+                    sw.Stop();
+                    return null;
+                }
+                catch (Exception ex)
+                {
+                    l.WriteToLog("[RetrieveSchools]", "Something went wrong. Check debug.txt", 2);
+                    l.DebugToLog("[RetrieveSchools]", sw.ElapsedMilliseconds.ToString() + "ms. Exception:\n" + ex.ToString(), 2);
+
+                    sw.Stop();
+                    return null;
+                }
+            }
+        }
         #endregion
 
         #region UPDATE

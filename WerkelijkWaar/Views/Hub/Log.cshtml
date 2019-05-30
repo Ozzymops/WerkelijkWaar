@@ -1,0 +1,27 @@
+﻿@{
+    ViewData["Title"] = "Log";
+    Layout = "_LayoutSide";
+}
+@model AdminModel
+
+<body>
+    <div style="margin-top: 10px;">
+        <div style="margin-top: -50px; margin-left: 44%; width: 200px; display: flex; flex-direction: row;">
+            @Html.DropDownListFor(model => model.School, Model.schoolListItems, "Kies een school")
+        </div>
+        <div style="margin-top: 40px;">
+            <table style="width: 70vw;">
+                <tr style="background-color: lightgray;">
+                    <th style="border: 1px solid black; width: 10vw;">Datum/tijd</th>
+                    <th style="border: 1px solid black; width: 15vw;">Oorsprong</th>
+                    <th style="border: 1px solid black; width: 60vw;">Gebeurtenis</th>
+                </tr>
+                <tr>
+                    <td style="border: 1px solid black;">dd-mm-yyyy hh:mm</td>
+                    <td style="border: 1px solid black;">abc</td>
+                    <td style="border: 1px solid black;">xyz</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</body>

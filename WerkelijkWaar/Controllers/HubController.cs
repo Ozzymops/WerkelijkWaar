@@ -15,7 +15,7 @@ namespace WerkelijkWaar.Controllers
         Classes.DatabaseQueries dq = new Classes.DatabaseQueries();
 
         /// <summary>
-        /// Navigeer naar Both_Game.cshtml
+        /// Navigeer naar het spel
         /// </summary>
         /// <returns>View</returns>
         public IActionResult Game()
@@ -33,25 +33,7 @@ namespace WerkelijkWaar.Controllers
         }
 
         /// <summary>
-        /// Navigeer naar StudentHub_JoinGame.cshtml
-        /// </summary>
-        /// <returns>View</returns>
-        public IActionResult StudentHub_JoinGame()
-        {
-            // login check
-            if (!String.IsNullOrEmpty(HttpContext.Session.GetString("User")))
-            {
-                HubModel hm = new HubModel();
-                hm.User = Newtonsoft.Json.JsonConvert.DeserializeObject<Classes.User>(HttpContext.Session.GetString("User"));
-
-                return View(hm);
-            }
-
-            return RedirectToAction("Index", "Home");
-        }
-
-        /// <summary>
-        /// Navigeer naar TeacherHub_Configuration.cshtml
+        /// Navigeer naar de spel configuratiescherm
         /// </summary>
         /// <returns>View</returns>
         public IActionResult GameConfig()
@@ -68,30 +50,26 @@ namespace WerkelijkWaar.Controllers
             return RedirectToAction("Index", "Home");
         }
 
-        /// <summary>
-        /// Navigeer naar TeacherHub_StudentOverview.cshtml
-        /// </summary>
-        /// <returns>View</returns>
-        public IActionResult ClassOverview()
+        public IActionResult Log()
         {
             // login check
             if (!String.IsNullOrEmpty(HttpContext.Session.GetString("User")))
             {
-                HubModel hm = new HubModel();
-                hm.User = Newtonsoft.Json.JsonConvert.DeserializeObject<Classes.User>(HttpContext.Session.GetString("User"));
+                AdminModel am = new AdminModel();
+                am.User = Newtonsoft.Json.JsonConvert.DeserializeObject<Classes.User>(HttpContext.Session.GetString("User"));
 
-                if (hm.User.RoleId == 0)
+                if (am.User.RoleId == 2)
                 {
-                    return RedirectToAction("ScoreOverview", "Overview", new { id = hm.User.Id, rank = -1 });
+                    am.SchoolList = dq.RetrieveSchools();
+                    am.GenerateSchoolListItems();
                 }
-                else if (hm.User.RoleId == 1)
+                else if (am.User.RoleId == 3)
                 {
-                    // Haal data op
-                    hm.UserList = dq.RetrieveUserListByGroup(hm.User.Group);
-                    hm.GenerateAverage();
+                    am.SchoolList = dq.RetrieveSchools();
+                    am.GenerateSchoolListItems();
+                }
 
-                    return View(hm);
-                }
+                return View(am);
             }
 
             return RedirectToAction("Index", "Home");

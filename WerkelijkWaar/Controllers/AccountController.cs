@@ -60,10 +60,10 @@ namespace WerkelijkWaar.Controllers
                     return RedirectToAction("Game", "Hub");
                 }
                 // Admin hub
-                else if (tempUser.RoleId == 2)
+                else if (tempUser.RoleId == 2 || tempUser.RoleId == 3)
                 {
                     l.WriteToLog("[AccountController]", tempUser.Username + " navigated to Hub/Game", 2);
-                    return RedirectToAction("Game", "Hub");
+                    return RedirectToAction("Log", "Hub");
                 }
             }
 

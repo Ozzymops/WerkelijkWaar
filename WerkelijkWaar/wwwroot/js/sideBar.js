@@ -44,5 +44,49 @@ if (roleId == 1) {
 }
 
 // Admin
+if (roleId == 2) {
+    if (document.title.includes("Log")) {
+        $("#side-23-log").attr("src", "/content/image/File.png");
+        $("#side-23-users").attr("src", "/content/image/People_disabled.png");
+        $("#side-2-stories").attr("src", "/content/image/Book_disabled.png");
+    }
+    else if (document.title.includes("Gebruikersoverzicht")) {
+        $("#side-23-log").attr("src", "/content/image/File_disabled.png");
+        $("#side-23-users").attr("src", "/content/image/People.png");
+        $("#side-2-stories").attr("src", "/content/image/Book_disabled.png");
+    }
+    else if (document.title.includes("Verhalenoverzicht")) {
+        $("#side-23-log").attr("src", "/content/image/File_disabled.png");
+        $("#side-23-users").attr("src", "/content/image/People_disabled.png");
+        $("#side-2-stories").attr("src", "/content/image/Book.png");
+    }
+    else {
+        $("#side-23-log").attr("src", "/content/image/File_disabled.png");
+        $("#side-23-users").attr("src", "/content/image/People_disabled.png");
+        $("#side-2-stories").attr("src", "/content/image/Book_disabled.png");
+    }
+}
 
 // SuperAdmin
+if (roleId == 3) {
+    if (document.title.includes("Log")) {
+        $("#side-23-log").attr("src", "/content/image/File.png");
+        $("#side-23-users").attr("src", "/content/image/People_disabled.png");
+        $("#side-3-config").attr("src", "/content/image/Gear_disabled.png");
+    }
+    else if (document.title.includes("Gebruikersoverzicht")) {
+        $("#side-23-log").attr("src", "/content/image/File_disabled.png");
+        $("#side-23-users").attr("src", "/content/image/People.png");
+        $("#side-3-config").attr("src", "/content/image/Gear_disabled.png");
+    }
+    else if (document.title.includes("Serverconfiguratie")) {
+        $("#side-23-log").attr("src", "/content/image/File_disabled.png");
+        $("#side-23-users").attr("src", "/content/image/People_disabled.png");
+        $("#side-3-config").attr("src", "/content/image/Gear.png");
+    }
+    else {
+        $("#side-23-log").attr("src", "/content/image/File_disabled.png");
+        $("#side-23-users").attr("src", "/content/image/People_disabled.png");
+        $("#side-3-config").attr("src", "/content/image/Gear_disabled.png");
+    }
+}

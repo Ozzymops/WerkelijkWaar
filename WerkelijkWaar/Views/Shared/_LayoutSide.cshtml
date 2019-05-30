@@ -100,31 +100,31 @@
                         <img id="side-1-gameConfig" class="layout side-bar-item" src="~/content/image/Gear.png" alt="Configuration" title="Configuration" />
                     </a>
 
-                    <a asp-controller="Hub" asp-action="ClassOverview">
+                    <a asp-controller="Overview" asp-action="ClassOverview">
                         <img id="side-1-classOverview" class="layout side-bar-item" src="~/content/image/People.png" alt="Overview" title="Overview" />
                     </a>
                 }
 
                 @if (roleId == 2 || roleId == 3)
                 {
-                    <a asp-controller="Home" asp-action="Index">
+                    <a asp-controller="Hub" asp-action="Log">
                         <img id="side-23-log" class="layout side-bar-item" src="~/content/image/File.png" alt="Log" title="Log" />
                     </a>
 
-                    <a asp-controller="Home" asp-action="Index">
+                    <a asp-controller="Overview" asp-action="UserOverview">
                         <img id="side-23-users" class="layout side-bar-item" src="~/content/image/People.png" alt="Users" title="Users" />
                     </a>
 
                     @if (roleId == 2)
                     {
-                        <a asp-controller="Home" asp-action="Index">
+                        <a asp-controller="Overview" asp-action="StoryOverview">
                             <img id="side-2-stories" class="layout side-bar-item" src="~/content/image/Book.png" alt="Stories" title="Stories" />
                         </a>
                     }
                     else
                     {
                         <a asp-controller="Home" asp-action="Index">
-                            <img id="side-2-config" class="layout side-bar-item" src="~/content/image/Gear.png" alt="Configuration" title="Configuration" />
+                            <img id="side-3-config" class="layout side-bar-item" src="~/content/image/Gear.png" alt="Configuration" title="Configuration" />
                         </a>
                     }
                 }
