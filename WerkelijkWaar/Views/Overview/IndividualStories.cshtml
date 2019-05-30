@@ -1,18 +1,34 @@
 ﻿@{
-    ViewData["Title"] = "Verhalen van " + Model.User.Name;
+    ViewData["Title"] = "'" + Model.Story.Title + "' door " + Model.User.Name;
+    Layout = "_LayoutSide";
 }
-@model WerkelijkWaar.Models.IndividualModel
+@model IndividualModel
 
 <header>
     <div class="flex-column-top">
         <div>
-            <a asp-controller="Overview" asp-action="ScoreOverview"><img class="small_icon" src="~/content/image/BackArrow.png" title="Ga terug" alt="Ga terug" /></a>
+            <a asp-controller="Overview" asp-action="ScoreOverview" asp-route-id="@Model.User.Id"><img class="small_icon" src="~/content/image/BackArrow.png" title="Ga terug" alt="Ga terug" /></a>
         </div>
     </div>
 </header>
 
 <body>
-    <div>
-
+    <div style="margin-top: 10px;">
+        <div style="background-color: #f7c747; display: flex; flex-direction: column;">
+            <div style="padding: 10px;">
+                <p>@Model.Story.Title</p>
+            </div>
+            <div style="display: flex; flex-direction: row; padding: 10px;">
+                <div style="display: flex; flex-direction: column; padding-right: 100px;">
+                    <p>Volgers van dit verhaal:</p>
+                    <p>Euro's verdiend aan dit verhaal:</p>
+                </div>
+                <div>
+                    <p>x</p>
+                    <p>x</p>
+                </div>
+            </div>
+            <text style="padding: 10px;">@Model.Story.Description</text>
+        </div>
     </div>
 </body>

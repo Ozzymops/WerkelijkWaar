@@ -4132,3 +4132,470 @@ System.InvalidCastException: Unable to cast object of type 'System.Decimal' to t
 30-5-2019 | 10:28: End.
 ---[DEBUG MSG END]---
 
+---[DEBUG MSG START]---
+[Startup]
+30-5-2019 | 10:31: 3ms. Launching server
+30-5-2019 | 10:31: 9ms. Server is up
+30-5-2019 | 10:31: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[CheckLogin]
+30-5-2019 | 10:31: 1ms. Checking login for JMuris
+30-5-2019 | 10:31: 36ms. Found JMuris
+30-5-2019 | 10:31: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[RetrieveUser]
+30-5-2019 | 10:31: 1ms. Retrieving user 4
+30-5-2019 | 10:31: 12ms. Found user 4
+30-5-2019 | 10:31: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[RetrieveUserListByGroup]
+30-5-2019 | 10:31: 1ms. Retrieving users from group 2
+30-5-2019 | 10:31: 6ms. Got: 5 - AAppel
+30-5-2019 | 10:31: 7ms. Got: 6 - BBatsbak
+30-5-2019 | 10:31: 10ms. Found 2users
+30-5-2019 | 10:31: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[GenerateAverage]
+30-5-2019 | 10:31: 2 users.
+30-5-2019 | 10:31: Generating average for 2 users.
+---[DEBUG MSG START]---
+[RetrieveScoresOfUser]
+30-5-2019 | 10:31: 1ms. Retrieving scores of user 5
+30-5-2019 | 10:31: Got: 1
+30-5-2019 | 10:31: Got: 2
+30-5-2019 | 10:31: Got: 3
+30-5-2019 | 10:31: 10ms. Found 3 scores from user 5
+30-5-2019 | 10:31: End.
+---[DEBUG MSG END]---
+
+30-5-2019 | 10:31: User AAppel has 3 scores to his/her name.
+30-5-2019 | 10:31: Score 1: 9 correct answers from here on out.
+30-5-2019 | 10:31: Score 2: 30 correct answers from here on out.
+30-5-2019 | 10:31: Score 3: 30 correct answers from here on out.
+30-5-2019 | 10:31: 30/50 = 6,0
+30-5-2019 | 10:31: Average score: 6.
+---[DEBUG MSG START]---
+[RetrieveScoresOfUser]
+30-5-2019 | 10:31: 1ms. Retrieving scores of user 6
+30-5-2019 | 10:31: Got: 4
+30-5-2019 | 10:31: Got: 5
+30-5-2019 | 10:31: Got: 6
+30-5-2019 | 10:31: 9ms. Found 3 scores from user 6
+30-5-2019 | 10:31: End.
+---[DEBUG MSG END]---
+
+30-5-2019 | 10:31: User BBatsbak has 3 scores to his/her name.
+30-5-2019 | 10:31: Score 4: 1 correct answers from here on out.
+30-5-2019 | 10:31: Score 5: 18 correct answers from here on out.
+30-5-2019 | 10:31: Score 6: 33 correct answers from here on out.
+30-5-2019 | 10:31: 33/49 = 6,7346938775510204081632653060
+30-5-2019 | 10:31: Average score: 6,73469387755102.
+30-5-2019 | 10:31: Class average is 6,36734693877551
+30-5-2019 | 10:31: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[RetrieveUser]
+30-5-2019 | 10:31: 1ms. Retrieving user 5
+30-5-2019 | 10:31: 6ms. Found user 5
+30-5-2019 | 10:31: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[RetrieveStoriesOfUser]
+30-5-2019 | 10:31: 1ms. Attempting to retrieve stories of user 5
+30-5-2019 | 10:31: 4ms. Got: 2 - Een verhaal
+30-5-2019 | 10:31: 6ms. Found 1 stories from user 5
+30-5-2019 | 10:31: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[RetrieveScoresOfUser]
+30-5-2019 | 10:31: 1ms. Retrieving scores of user 5
+30-5-2019 | 10:31: Got: 1
+30-5-2019 | 10:31: Got: 2
+30-5-2019 | 10:31: Got: 3
+30-5-2019 | 10:31: 9ms. Found 3 scores from user 5
+30-5-2019 | 10:31: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[RetrieveUser]
+30-5-2019 | 10:31: 1ms. Retrieving user 5
+30-5-2019 | 10:31: 6ms. Found user 5
+30-5-2019 | 10:31: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[RetrieveStory]
+30-5-2019 | 10:31: 1ms. Attempting to retrieve story with id 2
+30-5-2019 | 10:31: 5ms. Found story with id 2 - Een verhaal
+---[DEBUG MSG START]---
+[Startup]
+30-5-2019 | 10:32: 3ms. Launching server
+30-5-2019 | 10:32: 34ms. Server is up
+30-5-2019 | 10:32: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[CheckLogin]
+30-5-2019 | 10:32: 1ms. Checking login for JMuris
+30-5-2019 | 10:32: 77ms. Found JMuris
+30-5-2019 | 10:32: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[RetrieveUser]
+30-5-2019 | 10:32: 1ms. Retrieving user 4
+30-5-2019 | 10:32: 29ms. Found user 4
+30-5-2019 | 10:32: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[RetrieveUserListByGroup]
+30-5-2019 | 10:32: 1ms. Retrieving users from group 2
+30-5-2019 | 10:32: 28ms. Got: 5 - AAppel
+30-5-2019 | 10:32: 31ms. Got: 6 - BBatsbak
+30-5-2019 | 10:32: 36ms. Found 2users
+30-5-2019 | 10:32: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[GenerateAverage]
+30-5-2019 | 10:32: 2 users.
+30-5-2019 | 10:32: Generating average for 2 users.
+---[DEBUG MSG START]---
+[RetrieveScoresOfUser]
+30-5-2019 | 10:32: 1ms. Retrieving scores of user 5
+30-5-2019 | 10:32: Got: 1
+30-5-2019 | 10:32: Got: 2
+30-5-2019 | 10:32: Got: 3
+30-5-2019 | 10:32: 39ms. Found 3 scores from user 5
+30-5-2019 | 10:32: End.
+---[DEBUG MSG END]---
+
+30-5-2019 | 10:32: User AAppel has 3 scores to his/her name.
+30-5-2019 | 10:32: Score 1: 9 correct answers from here on out.
+30-5-2019 | 10:32: Score 2: 30 correct answers from here on out.
+30-5-2019 | 10:32: Score 3: 30 correct answers from here on out.
+30-5-2019 | 10:32: 30/50 = 6,0
+30-5-2019 | 10:32: Average score: 6.
+---[DEBUG MSG START]---
+[RetrieveScoresOfUser]
+30-5-2019 | 10:32: 1ms. Retrieving scores of user 6
+30-5-2019 | 10:32: Got: 4
+30-5-2019 | 10:32: Got: 5
+30-5-2019 | 10:32: Got: 6
+30-5-2019 | 10:32: 38ms. Found 3 scores from user 6
+30-5-2019 | 10:32: End.
+---[DEBUG MSG END]---
+
+30-5-2019 | 10:32: User BBatsbak has 3 scores to his/her name.
+30-5-2019 | 10:32: Score 4: 1 correct answers from here on out.
+30-5-2019 | 10:32: Score 5: 18 correct answers from here on out.
+30-5-2019 | 10:32: Score 6: 33 correct answers from here on out.
+30-5-2019 | 10:32: 33/49 = 6,7346938775510204081632653060
+30-5-2019 | 10:32: Average score: 6,73469387755102.
+30-5-2019 | 10:32: Class average is 6,36734693877551
+30-5-2019 | 10:32: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[RetrieveUser]
+30-5-2019 | 10:32: 1ms. Retrieving user 5
+30-5-2019 | 10:32: 24ms. Found user 5
+30-5-2019 | 10:32: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[RetrieveStoriesOfUser]
+30-5-2019 | 10:32: 1ms. Attempting to retrieve stories of user 5
+30-5-2019 | 10:32: 24ms. Got: 2 - Een verhaal
+30-5-2019 | 10:32: 30ms. Found 1 stories from user 5
+30-5-2019 | 10:32: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[RetrieveScoresOfUser]
+30-5-2019 | 10:32: 1ms. Retrieving scores of user 5
+30-5-2019 | 10:32: Got: 1
+30-5-2019 | 10:32: Got: 2
+30-5-2019 | 10:32: Got: 3
+30-5-2019 | 10:32: 46ms. Found 3 scores from user 5
+30-5-2019 | 10:32: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[RetrieveUser]
+30-5-2019 | 10:32: 1ms. Retrieving user 5
+30-5-2019 | 10:32: 25ms. Found user 5
+30-5-2019 | 10:32: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[Startup]
+30-5-2019 | 10:32: 4ms. Launching server
+30-5-2019 | 10:32: 33ms. Server is up
+30-5-2019 | 10:32: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[CheckLogin]
+30-5-2019 | 10:33: 1ms. Checking login for JMuris
+30-5-2019 | 10:33: 73ms. Found JMuris
+30-5-2019 | 10:33: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[RetrieveUser]
+30-5-2019 | 10:33: 1ms. Retrieving user 4
+30-5-2019 | 10:33: 27ms. Found user 4
+30-5-2019 | 10:33: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[RetrieveUserListByGroup]
+30-5-2019 | 10:33: 1ms. Retrieving users from group 2
+30-5-2019 | 10:33: 28ms. Got: 5 - AAppel
+30-5-2019 | 10:33: 31ms. Got: 6 - BBatsbak
+30-5-2019 | 10:33: 36ms. Found 2users
+30-5-2019 | 10:33: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[GenerateAverage]
+30-5-2019 | 10:33: 2 users.
+30-5-2019 | 10:33: Generating average for 2 users.
+---[DEBUG MSG START]---
+[RetrieveScoresOfUser]
+30-5-2019 | 10:33: 1ms. Retrieving scores of user 5
+30-5-2019 | 10:33: Got: 1
+30-5-2019 | 10:33: Got: 2
+30-5-2019 | 10:33: Got: 3
+30-5-2019 | 10:33: 39ms. Found 3 scores from user 5
+30-5-2019 | 10:33: End.
+---[DEBUG MSG END]---
+
+30-5-2019 | 10:33: User AAppel has 3 scores to his/her name.
+30-5-2019 | 10:33: Score 1: 9 correct answers from here on out.
+30-5-2019 | 10:33: Score 2: 30 correct answers from here on out.
+30-5-2019 | 10:33: Score 3: 30 correct answers from here on out.
+30-5-2019 | 10:33: 30/50 = 6,0
+30-5-2019 | 10:33: Average score: 6.
+---[DEBUG MSG START]---
+[RetrieveScoresOfUser]
+30-5-2019 | 10:33: 1ms. Retrieving scores of user 6
+30-5-2019 | 10:33: Got: 4
+30-5-2019 | 10:33: Got: 5
+30-5-2019 | 10:33: Got: 6
+30-5-2019 | 10:33: 32ms. Found 3 scores from user 6
+30-5-2019 | 10:33: End.
+---[DEBUG MSG END]---
+
+30-5-2019 | 10:33: User BBatsbak has 3 scores to his/her name.
+30-5-2019 | 10:33: Score 4: 1 correct answers from here on out.
+30-5-2019 | 10:33: Score 5: 18 correct answers from here on out.
+30-5-2019 | 10:33: Score 6: 33 correct answers from here on out.
+30-5-2019 | 10:33: 33/49 = 6,7346938775510204081632653060
+30-5-2019 | 10:33: Average score: 6,73469387755102.
+30-5-2019 | 10:33: Class average is 6,36734693877551
+30-5-2019 | 10:33: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[RetrieveUser]
+30-5-2019 | 10:33: 1ms. Retrieving user 5
+30-5-2019 | 10:33: 24ms. Found user 5
+30-5-2019 | 10:33: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[RetrieveStoriesOfUser]
+30-5-2019 | 10:33: 1ms. Attempting to retrieve stories of user 5
+30-5-2019 | 10:33: 26ms. Got: 2 - Een verhaal
+30-5-2019 | 10:33: 32ms. Found 1 stories from user 5
+30-5-2019 | 10:33: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[RetrieveScoresOfUser]
+30-5-2019 | 10:33: 1ms. Retrieving scores of user 5
+30-5-2019 | 10:33: Got: 1
+30-5-2019 | 10:33: Got: 2
+30-5-2019 | 10:33: Got: 3
+30-5-2019 | 10:33: 37ms. Found 3 scores from user 5
+30-5-2019 | 10:33: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[RetrieveUser]
+30-5-2019 | 10:33: 1ms. Retrieving user 5
+30-5-2019 | 10:33: 26ms. Found user 5
+30-5-2019 | 10:33: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[RetrieveStory]
+30-5-2019 | 10:33: 1ms. Attempting to retrieve story with id 2
+30-5-2019 | 10:33: 26ms. Found story with id 2 - Een verhaal
+---[DEBUG MSG START]---
+[Startup]
+30-5-2019 | 10:33: 3ms. Launching server
+30-5-2019 | 10:33: 8ms. Server is up
+30-5-2019 | 10:33: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[CheckLogin]
+30-5-2019 | 10:33: 1ms. Checking login for JMuris
+30-5-2019 | 10:33: 24ms. Found JMuris
+30-5-2019 | 10:33: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[RetrieveUser]
+30-5-2019 | 10:33: 1ms. Retrieving user 4
+30-5-2019 | 10:33: 5ms. Found user 4
+30-5-2019 | 10:33: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[RetrieveUserListByGroup]
+30-5-2019 | 10:33: 1ms. Retrieving users from group 2
+30-5-2019 | 10:33: 3ms. Got: 5 - AAppel
+30-5-2019 | 10:33: 5ms. Got: 6 - BBatsbak
+30-5-2019 | 10:33: 8ms. Found 2users
+30-5-2019 | 10:33: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[GenerateAverage]
+30-5-2019 | 10:33: 2 users.
+30-5-2019 | 10:33: Generating average for 2 users.
+---[DEBUG MSG START]---
+[RetrieveScoresOfUser]
+30-5-2019 | 10:33: 1ms. Retrieving scores of user 5
+30-5-2019 | 10:33: Got: 1
+30-5-2019 | 10:33: Got: 2
+30-5-2019 | 10:33: Got: 3
+30-5-2019 | 10:33: 9ms. Found 3 scores from user 5
+30-5-2019 | 10:33: End.
+---[DEBUG MSG END]---
+
+30-5-2019 | 10:33: User AAppel has 3 scores to his/her name.
+30-5-2019 | 10:33: Score 1: 9 correct answers from here on out.
+30-5-2019 | 10:33: Score 2: 30 correct answers from here on out.
+30-5-2019 | 10:33: Score 3: 30 correct answers from here on out.
+30-5-2019 | 10:33: 30/50 = 6,0
+30-5-2019 | 10:33: Average score: 6.
+---[DEBUG MSG START]---
+[RetrieveScoresOfUser]
+30-5-2019 | 10:33: 1ms. Retrieving scores of user 6
+30-5-2019 | 10:33: Got: 4
+30-5-2019 | 10:33: Got: 5
+30-5-2019 | 10:33: Got: 6
+30-5-2019 | 10:33: 8ms. Found 3 scores from user 6
+30-5-2019 | 10:33: End.
+---[DEBUG MSG END]---
+
+30-5-2019 | 10:33: User BBatsbak has 3 scores to his/her name.
+30-5-2019 | 10:33: Score 4: 1 correct answers from here on out.
+30-5-2019 | 10:33: Score 5: 18 correct answers from here on out.
+30-5-2019 | 10:33: Score 6: 33 correct answers from here on out.
+30-5-2019 | 10:33: 33/49 = 6,7346938775510204081632653060
+30-5-2019 | 10:33: Average score: 6,73469387755102.
+30-5-2019 | 10:33: Class average is 6,36734693877551
+30-5-2019 | 10:33: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[RetrieveUser]
+30-5-2019 | 10:33: 1ms. Retrieving user 5
+30-5-2019 | 10:33: 4ms. Found user 5
+30-5-2019 | 10:33: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[RetrieveStoriesOfUser]
+30-5-2019 | 10:33: 1ms. Attempting to retrieve stories of user 5
+30-5-2019 | 10:33: 3ms. Got: 2 - Een verhaal
+30-5-2019 | 10:33: 6ms. Found 1 stories from user 5
+30-5-2019 | 10:33: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[RetrieveScoresOfUser]
+30-5-2019 | 10:33: 1ms. Retrieving scores of user 5
+30-5-2019 | 10:33: Got: 1
+30-5-2019 | 10:33: Got: 2
+30-5-2019 | 10:33: Got: 3
+30-5-2019 | 10:33: 7ms. Found 3 scores from user 5
+30-5-2019 | 10:33: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[RetrieveUser]
+30-5-2019 | 10:33: 1ms. Retrieving user 5
+30-5-2019 | 10:33: 5ms. Found user 5
+30-5-2019 | 10:33: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[RetrieveStory]
+30-5-2019 | 10:33: 1ms. Attempting to retrieve story with id 2
+30-5-2019 | 10:33: 4ms. Found story with id 2 - Een verhaal
+---[DEBUG MSG START]---
+[RetrieveUser]
+30-5-2019 | 10:34: 3ms. Retrieving user 5
+30-5-2019 | 10:34: 10ms. Found user 5
+30-5-2019 | 10:34: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[RetrieveStory]
+30-5-2019 | 10:34: 2ms. Attempting to retrieve story with id 2
+30-5-2019 | 10:34: 8ms. Found story with id 2 - Een verhaal
+---[DEBUG MSG START]---
+[RetrieveUser]
+30-5-2019 | 10:34: 2ms. Retrieving user 5
+30-5-2019 | 10:34: 7ms. Found user 5
+30-5-2019 | 10:34: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[RetrieveStory]
+30-5-2019 | 10:34: 1ms. Attempting to retrieve story with id 2
+30-5-2019 | 10:34: 7ms. Found story with id 2 - Een verhaal
+---[DEBUG MSG START]---
+[RetrieveUser]
+30-5-2019 | 10:34: 2ms. Retrieving user 5
+30-5-2019 | 10:34: 6ms. Found user 5
+30-5-2019 | 10:34: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[RetrieveStoriesOfUser]
+30-5-2019 | 10:34: 1ms. Attempting to retrieve stories of user 5
+30-5-2019 | 10:34: 4ms. Got: 2 - Een verhaal
+30-5-2019 | 10:34: 7ms. Found 1 stories from user 5
+30-5-2019 | 10:34: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[RetrieveScoresOfUser]
+30-5-2019 | 10:34: 1ms. Retrieving scores of user 5
+30-5-2019 | 10:34: Got: 1
+30-5-2019 | 10:34: Got: 2
+30-5-2019 | 10:34: Got: 3
+30-5-2019 | 10:34: 11ms. Found 3 scores from user 5
+30-5-2019 | 10:34: End.
+---[DEBUG MSG END]---
+

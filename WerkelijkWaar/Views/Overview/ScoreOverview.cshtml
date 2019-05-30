@@ -30,7 +30,7 @@
                     {
                         storyInt++;
                         <li style="padding: 2px;">
-                            @storyInt. <a asp-controller="" asp-action="" id="storyButton" value="@story.Id">@story.Title</a> - x%
+                            @storyInt. <a asp-controller="Overview" asp-action="IndividualStories" asp-route-id="@Model.User.Id" asp-route-rank="0" asp-route-storyId="@story.Id" id="storyButton" value="@story.Id">@story.Title</a> - x%
                         </li>
                     }
                     <li style="padding: 2px;">

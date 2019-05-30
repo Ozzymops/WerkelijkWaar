@@ -149,7 +149,19 @@ namespace WerkelijkWaar.Controllers
             // Check if logged in
             if (!String.IsNullOrEmpty(HttpContext.Session.GetString("User")))
             {
+                Classes.User tempUser = Newtonsoft.Json.JsonConvert.DeserializeObject<Classes.User>(HttpContext.Session.GetString("User"));
                 IndividualModel ism = new IndividualModel();
+
+                if (tempUser.RoleId == 1)
+                {
+                    ism.User = dq.RetrieveUser(id);
+                }
+                else
+                {
+                    ism.User = tempUser;
+                }
+
+                ism.Story = dq.RetrieveStory(storyId);
 
                 return View(ism);
             }
