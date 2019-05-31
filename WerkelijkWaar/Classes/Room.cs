@@ -212,7 +212,7 @@ namespace WerkelijkWaar.Classes
                         maxPlayersInGroup = MinPlayers;
                     }
 
-                    GroupCount = currentGroup;
+                    GroupCount = (currentGroup - 1);
                 }
 
                 // Assign stories to groups

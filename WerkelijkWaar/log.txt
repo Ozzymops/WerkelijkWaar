@@ -7895,3 +7895,648 @@
 31-5-2019 | 11:14: End.
 ---[LOG MSG END]---
 
+---[LOG MSG START]---
+[Startup]
+31-5-2019 | 12:36: Starting server...
+31-5-2019 | 12:36: Server is up and running!
+31-5-2019 | 12:36: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[CheckLogin]
+31-5-2019 | 12:36: Logging in JMuris...
+31-5-2019 | 12:36: Log in found for user JMuris
+31-5-2019 | 12:36: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveUser]
+31-5-2019 | 12:36: Attempting to retrieve user with id 4
+31-5-2019 | 12:36: Found user with id 4
+31-5-2019 | 12:36: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[AccountController]
+31-5-2019 | 12:36: JMuris validated.
+31-5-2019 | 12:36: JMuris navigated to Hub/Game
+31-5-2019 | 12:36: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[AccountController]
+31-5-2019 | 12:36: JMuris validated.
+31-5-2019 | 12:36: JMuris logged out.
+31-5-2019 | 12:36: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[CheckLogin]
+31-5-2019 | 12:37: Logging in AAppel...
+31-5-2019 | 12:37: Log in found for user AAppel
+31-5-2019 | 12:37: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveUser]
+31-5-2019 | 12:37: Attempting to retrieve user with id 5
+31-5-2019 | 12:37: Found user with id 5
+31-5-2019 | 12:37: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[AccountController]
+31-5-2019 | 12:37: AAppel validated.
+31-5-2019 | 12:37: AAppel navigated to Hub/Game
+31-5-2019 | 12:37: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[AccountController]
+31-5-2019 | 12:37: AAppel validated.
+31-5-2019 | 12:37: AAppel logged out.
+31-5-2019 | 12:37: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[CheckLogin]
+31-5-2019 | 12:37: Logging in CCakkie...
+31-5-2019 | 12:37: Log in found for user CCakkie
+31-5-2019 | 12:37: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveUser]
+31-5-2019 | 12:37: Attempting to retrieve user with id 7
+31-5-2019 | 12:37: Found user with id 7
+31-5-2019 | 12:37: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[AccountController]
+31-5-2019 | 12:37: CCakkie validated.
+31-5-2019 | 12:37: CCakkie navigated to Hub/Game
+31-5-2019 | 12:37: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[Room]
+31-5-2019 | 12:37: Creating room...
+31-5-2019 | 12:37: Room created with code la5W06
+31-5-2019 | 12:37: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveAllStories]
+31-5-2019 | 12:37: Attempting to retrieve all stories.
+31-5-2019 | 12:37: Found 4 stories.
+31-5-2019 | 12:37: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[Game]
+31-5-2019 | 12:38: Putting 'la5W06' into read phase.
+31-5-2019 | 12:38: Room 'la5W06' has 3 groups.
+31-5-2019 | 12:38: Current group is '1' in room 'la5W06'.
+31-5-2019 | 12:38: First game of room 'la5W06' started.
+31-5-2019 | 12:38: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[Game]
+31-5-2019 | 12:38: Planting correct answer...
+31-5-2019 | 12:38: Correct answer is 2 with story string '1:!|Rootie tootie:!|Pointy shooty'.
+---[LOG MSG START]---
+[Game]
+31-5-2019 | 12:38: Activate power-up by 26fd732b-cc3f-4c1f-bb3b-14c224182039
+31-5-2019 | 12:38: User AAppel bought a power-up.
+31-5-2019 | 12:38: Chosen power-up is 'answers count for 200% value'.
+31-5-2019 | 12:38: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[Game]
+31-5-2019 | 12:38: Parsing AAppel | 26fd732b-cc3f-4c1f-bb3b-14c224182039 score.
+31-5-2019 | 12:38: Player AAppel | 26fd732b-cc3f-4c1f-bb3b-14c224182039 followers are now 10
+31-5-2019 | 12:38: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[Game]
+31-5-2019 | 12:38: Parsing CCakkie | 26331cfd-649c-45e1-88e2-27583587ee1a score.
+31-5-2019 | 12:38: Player CCakkie | 26331cfd-649c-45e1-88e2-27583587ee1a followers are now 0
+31-5-2019 | 12:38: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[Game]
+31-5-2019 | 12:38: Parsing CCakkie | 55ade2c5-95ce-40f3-aa0d-7554db0c15ec score.
+31-5-2019 | 12:38: Player CCakkie | 55ade2c5-95ce-40f3-aa0d-7554db0c15ec followers are now 5
+31-5-2019 | 12:38: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[Game]
+31-5-2019 | 12:38: Parsing CCakkie | ba844661-0825-461d-b73b-f5d266839b66 score.
+31-5-2019 | 12:38: Player CCakkie | ba844661-0825-461d-b73b-f5d266839b66 followers are now 0
+31-5-2019 | 12:38: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[Game]
+31-5-2019 | 12:38: Parsing CCakkie | d3136e33-e85c-4f94-832f-b48cd263b96e score.
+31-5-2019 | 12:38: Player CCakkie | d3136e33-e85c-4f94-832f-b48cd263b96e followers are now 0
+31-5-2019 | 12:38: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[Game]
+31-5-2019 | 12:38: Parsing CCakkie | 4718a375-6e8b-4965-9f3f-2ec33fc04ec3 score.
+31-5-2019 | 12:38: Player CCakkie | 4718a375-6e8b-4965-9f3f-2ec33fc04ec3 followers are now 0
+31-5-2019 | 12:38: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[Game]
+31-5-2019 | 12:38: Putting 'la5W06' into read phase.
+31-5-2019 | 12:38: Room 'la5W06' has 3 groups.
+31-5-2019 | 12:38: Current group is '2' in room 'la5W06'.
+31-5-2019 | 12:38: Game 2 of room 'la5W06' started.
+31-5-2019 | 12:38: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[Game]
+31-5-2019 | 12:38: Planting correct answer...
+31-5-2019 | 12:38: Correct answer is 1 with story string '1:!|Een root verhaal:!|Straight outta RSS feed'.
+---[LOG MSG START]---
+[Game]
+31-5-2019 | 12:38: Activate power-up by 26fd732b-cc3f-4c1f-bb3b-14c224182039
+31-5-2019 | 12:38: User AAppel bought a power-up.
+31-5-2019 | 12:38: Chosen power-up is 'answers count for 200% value'.
+31-5-2019 | 12:38: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[Game]
+31-5-2019 | 12:38: Parsing AAppel | 26fd732b-cc3f-4c1f-bb3b-14c224182039 score.
+---[LOG MSG START]---
+[Game]
+31-5-2019 | 12:38: Parsing CCakkie | 26331cfd-649c-45e1-88e2-27583587ee1a score.
+---[LOG MSG START]---
+[Game]
+31-5-2019 | 12:38: Parsing CCakkie | 55ade2c5-95ce-40f3-aa0d-7554db0c15ec score.
+---[LOG MSG START]---
+[Game]
+31-5-2019 | 12:38: Parsing CCakkie | ba844661-0825-461d-b73b-f5d266839b66 score.
+---[LOG MSG START]---
+[Game]
+31-5-2019 | 12:38: Parsing CCakkie | d3136e33-e85c-4f94-832f-b48cd263b96e score.
+31-5-2019 | 12:38: Player CCakkie | d3136e33-e85c-4f94-832f-b48cd263b96e followers are now 5
+31-5-2019 | 12:38: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[Game]
+31-5-2019 | 12:38: Parsing CCakkie | 4718a375-6e8b-4965-9f3f-2ec33fc04ec3 score.
+---[LOG MSG START]---
+[Startup]
+31-5-2019 | 12:41: Starting server...
+31-5-2019 | 12:41: Server is up and running!
+31-5-2019 | 12:41: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[CheckLogin]
+31-5-2019 | 12:41: Logging in JMuris...
+31-5-2019 | 12:41: Log in found for user JMuris
+31-5-2019 | 12:41: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveUser]
+31-5-2019 | 12:41: Attempting to retrieve user with id 4
+31-5-2019 | 12:41: Found user with id 4
+31-5-2019 | 12:41: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[AccountController]
+31-5-2019 | 12:41: JMuris validated.
+31-5-2019 | 12:41: JMuris navigated to Hub/Game
+31-5-2019 | 12:41: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[Room]
+31-5-2019 | 12:41: Creating room...
+31-5-2019 | 12:41: Room created with code ad0488
+31-5-2019 | 12:41: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[AccountController]
+31-5-2019 | 12:41: JMuris validated.
+31-5-2019 | 12:41: JMuris logged out.
+31-5-2019 | 12:41: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[CheckLogin]
+31-5-2019 | 12:41: Logging in AAppel...
+31-5-2019 | 12:41: Log in found for user AAppel
+31-5-2019 | 12:41: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveUser]
+31-5-2019 | 12:41: Attempting to retrieve user with id 5
+31-5-2019 | 12:41: Found user with id 5
+31-5-2019 | 12:41: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[AccountController]
+31-5-2019 | 12:41: AAppel validated.
+31-5-2019 | 12:41: AAppel navigated to Hub/Game
+31-5-2019 | 12:41: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveAllStories]
+31-5-2019 | 12:41: Attempting to retrieve all stories.
+31-5-2019 | 12:41: Found 4 stories.
+31-5-2019 | 12:41: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[Game]
+31-5-2019 | 12:41: Putting 'ad0488' into read phase.
+31-5-2019 | 12:41: Room 'ad0488' has 3 groups.
+31-5-2019 | 12:41: Current group is '1' in room 'ad0488'.
+31-5-2019 | 12:41: First game of room 'ad0488' started.
+31-5-2019 | 12:41: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[Game]
+31-5-2019 | 12:41: Planting correct answer...
+31-5-2019 | 12:41: Correct answer is 2 with story string '1:!|Rootie tootie:!|Pointy shooty'.
+---[LOG MSG START]---
+[Game]
+31-5-2019 | 12:41: Activate power-up by 511d0119-5bcd-41c8-aaf1-3ee6923f8caf
+31-5-2019 | 12:41: User AAppel bought a power-up.
+31-5-2019 | 12:41: Chosen power-up is 'answers count for 200% value'.
+31-5-2019 | 12:41: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[Game]
+31-5-2019 | 12:41: Parsing AAppel | 511d0119-5bcd-41c8-aaf1-3ee6923f8caf score.
+31-5-2019 | 12:41: Player AAppel | 511d0119-5bcd-41c8-aaf1-3ee6923f8caf followers are now 10
+31-5-2019 | 12:41: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[Game]
+31-5-2019 | 12:41: Parsing AAppel | 9cb2dbb6-3043-436b-a7f0-024fea8dabb3 score.
+31-5-2019 | 12:41: Player AAppel | 9cb2dbb6-3043-436b-a7f0-024fea8dabb3 followers are now 5
+31-5-2019 | 12:41: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[Game]
+31-5-2019 | 12:41: Parsing AAppel | 1a1eac56-c59f-4176-96f3-0cb64f872fae score.
+31-5-2019 | 12:41: Player AAppel | 1a1eac56-c59f-4176-96f3-0cb64f872fae followers are now 0
+31-5-2019 | 12:41: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[Game]
+31-5-2019 | 12:41: Parsing AAppel | aba290ac-2829-481a-b213-b00caa9c631d score.
+31-5-2019 | 12:41: Player AAppel | aba290ac-2829-481a-b213-b00caa9c631d followers are now 0
+31-5-2019 | 12:41: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[Game]
+31-5-2019 | 12:41: Parsing AAppel | f20f4cfb-1ae7-4335-b675-0aeea08104ac score.
+31-5-2019 | 12:41: Player AAppel | f20f4cfb-1ae7-4335-b675-0aeea08104ac followers are now 0
+31-5-2019 | 12:41: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[Game]
+31-5-2019 | 12:42: Parsing AAppel | d29ff90c-8fb3-4dcd-bab9-8b5cb3671ba8 score.
+31-5-2019 | 12:42: Player AAppel | d29ff90c-8fb3-4dcd-bab9-8b5cb3671ba8 followers are now 0
+31-5-2019 | 12:42: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[Game]
+31-5-2019 | 12:42: Putting 'ad0488' into read phase.
+31-5-2019 | 12:42: Room 'ad0488' has 3 groups.
+31-5-2019 | 12:42: Current group is '2' in room 'ad0488'.
+31-5-2019 | 12:42: Game 2 of room 'ad0488' started.
+31-5-2019 | 12:42: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[Game]
+31-5-2019 | 12:42: Planting correct answer...
+31-5-2019 | 12:42: Correct answer is 0 with story string '1:!|Een root verhaal:!|Straight outta RSS feed'.
+---[LOG MSG START]---
+[Game]
+31-5-2019 | 12:42: Activate power-up by 511d0119-5bcd-41c8-aaf1-3ee6923f8caf
+31-5-2019 | 12:42: User AAppel bought a power-up.
+31-5-2019 | 12:42: Chosen power-up is 'answers count for 200% value'.
+31-5-2019 | 12:42: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[Game]
+31-5-2019 | 12:42: Parsing AAppel | 511d0119-5bcd-41c8-aaf1-3ee6923f8caf score.
+31-5-2019 | 12:42: Player AAppel | 511d0119-5bcd-41c8-aaf1-3ee6923f8caf followers are now 20
+31-5-2019 | 12:42: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[Game]
+31-5-2019 | 12:42: Parsing AAppel | 9cb2dbb6-3043-436b-a7f0-024fea8dabb3 score.
+31-5-2019 | 12:42: Player AAppel | 9cb2dbb6-3043-436b-a7f0-024fea8dabb3 followers are now 10
+31-5-2019 | 12:42: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[Game]
+31-5-2019 | 12:42: Parsing AAppel | 1a1eac56-c59f-4176-96f3-0cb64f872fae score.
+31-5-2019 | 12:42: Player AAppel | 1a1eac56-c59f-4176-96f3-0cb64f872fae followers are now 0
+31-5-2019 | 12:42: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[Game]
+31-5-2019 | 12:42: Parsing AAppel | aba290ac-2829-481a-b213-b00caa9c631d score.
+31-5-2019 | 12:42: Player AAppel | aba290ac-2829-481a-b213-b00caa9c631d followers are now 0
+31-5-2019 | 12:42: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[Game]
+31-5-2019 | 12:42: Parsing AAppel | f20f4cfb-1ae7-4335-b675-0aeea08104ac score.
+31-5-2019 | 12:42: Player AAppel | f20f4cfb-1ae7-4335-b675-0aeea08104ac followers are now 0
+31-5-2019 | 12:42: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[Game]
+31-5-2019 | 12:42: Parsing AAppel | d29ff90c-8fb3-4dcd-bab9-8b5cb3671ba8 score.
+31-5-2019 | 12:42: Player AAppel | d29ff90c-8fb3-4dcd-bab9-8b5cb3671ba8 followers are now 0
+31-5-2019 | 12:42: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[Game]
+31-5-2019 | 12:42: Putting 'ad0488' into read phase.
+31-5-2019 | 12:42: Room 'ad0488' has 3 groups.
+31-5-2019 | 12:42: Current group is '3' in room 'ad0488'.
+31-5-2019 | 12:42: Game 3 of room 'ad0488' started.
+31-5-2019 | 12:42: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[Startup]
+31-5-2019 | 12:44: Starting server...
+31-5-2019 | 12:44: Server is up and running!
+31-5-2019 | 12:44: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[CheckLogin]
+31-5-2019 | 12:44: Logging in JMuris...
+31-5-2019 | 12:44: Log in found for user JMuris
+31-5-2019 | 12:44: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveUser]
+31-5-2019 | 12:44: Attempting to retrieve user with id 4
+31-5-2019 | 12:44: Found user with id 4
+31-5-2019 | 12:44: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[AccountController]
+31-5-2019 | 12:44: JMuris validated.
+31-5-2019 | 12:44: JMuris navigated to Hub/Game
+31-5-2019 | 12:44: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[AccountController]
+31-5-2019 | 12:44: JMuris validated.
+31-5-2019 | 12:44: JMuris logged out.
+31-5-2019 | 12:44: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[CheckLogin]
+31-5-2019 | 12:44: Logging in AAppel...
+31-5-2019 | 12:44: Log in found for user AAppel
+31-5-2019 | 12:44: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveUser]
+31-5-2019 | 12:44: Attempting to retrieve user with id 5
+31-5-2019 | 12:44: Found user with id 5
+31-5-2019 | 12:44: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[AccountController]
+31-5-2019 | 12:44: AAppel validated.
+31-5-2019 | 12:44: AAppel navigated to Hub/Game
+31-5-2019 | 12:44: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[Room]
+31-5-2019 | 12:44: Creating room...
+31-5-2019 | 12:44: Room created with code s0hrHV
+31-5-2019 | 12:44: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveAllStories]
+31-5-2019 | 12:44: Attempting to retrieve all stories.
+31-5-2019 | 12:44: Found 4 stories.
+31-5-2019 | 12:44: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[Game]
+31-5-2019 | 12:44: Putting 's0hrHV' into read phase.
+31-5-2019 | 12:44: Room 's0hrHV' has 2 groups.
+31-5-2019 | 12:44: Current group is '1' in room 's0hrHV'.
+31-5-2019 | 12:44: First game of room 's0hrHV' started.
+31-5-2019 | 12:44: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[Game]
+31-5-2019 | 12:44: Planting correct answer...
+31-5-2019 | 12:44: Correct answer is 3 with story string '5:!|Een verhaal:!|Lorem Ipsum bla bla bla'.
+---[LOG MSG START]---
+[Game]
+31-5-2019 | 12:44: Activate power-up by 5e57c22c-4c80-4b58-ad13-d88a52fd1859
+31-5-2019 | 12:44: User AAppel bought a power-up.
+31-5-2019 | 12:44: Chosen power-up is 'answers count for 200% value'.
+31-5-2019 | 12:44: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[Game]
+31-5-2019 | 12:45: Parsing AAppel | 5e57c22c-4c80-4b58-ad13-d88a52fd1859 score.
+31-5-2019 | 12:45: Player AAppel | 5e57c22c-4c80-4b58-ad13-d88a52fd1859 followers are now 10
+31-5-2019 | 12:45: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[Game]
+31-5-2019 | 12:45: Parsing AAppel | a6c0cd27-a39b-4406-8f3c-c7f84e529563 score.
+31-5-2019 | 12:45: Player AAppel | a6c0cd27-a39b-4406-8f3c-c7f84e529563 followers are now 0
+31-5-2019 | 12:45: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[Game]
+31-5-2019 | 12:45: Parsing AAppel | 8ec85469-be01-4f68-b7c4-d277e7409b70 score.
+31-5-2019 | 12:45: Player AAppel | 8ec85469-be01-4f68-b7c4-d277e7409b70 followers are now 0
+31-5-2019 | 12:45: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[Game]
+31-5-2019 | 12:45: Parsing AAppel | a2eaef15-23ba-49db-a20c-a64f18d6cbc6 score.
+31-5-2019 | 12:45: Player AAppel | a2eaef15-23ba-49db-a20c-a64f18d6cbc6 followers are now 0
+31-5-2019 | 12:45: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[Game]
+31-5-2019 | 12:45: Parsing AAppel | 3221b42a-b886-4b75-880d-2f801e409ce5 score.
+31-5-2019 | 12:45: Player AAppel | 3221b42a-b886-4b75-880d-2f801e409ce5 followers are now 5
+31-5-2019 | 12:45: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[Game]
+31-5-2019 | 12:45: Parsing AAppel | 27f60dd7-9e68-4e97-bb14-3ddcf6c382be score.
+31-5-2019 | 12:45: Player AAppel | 27f60dd7-9e68-4e97-bb14-3ddcf6c382be followers are now 0
+31-5-2019 | 12:45: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[Game]
+31-5-2019 | 12:45: Putting 's0hrHV' into read phase.
+31-5-2019 | 12:45: Room 's0hrHV' has 2 groups.
+31-5-2019 | 12:45: Current group is '2' in room 's0hrHV'.
+31-5-2019 | 12:45: Game 2 of room 's0hrHV' started.
+31-5-2019 | 12:45: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[Game]
+31-5-2019 | 12:45: Planting correct answer...
+31-5-2019 | 12:45: Correct answer is 2 with story string '1:!|Rootie tootie:!|Pointy shooty'.
+---[LOG MSG START]---
+[Game]
+31-5-2019 | 12:45: Activate power-up by 5e57c22c-4c80-4b58-ad13-d88a52fd1859
+31-5-2019 | 12:45: User AAppel bought a power-up.
+31-5-2019 | 12:45: Chosen power-up is 'answers count for 200% value'.
+31-5-2019 | 12:45: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[Game]
+31-5-2019 | 12:45: Parsing AAppel | 5e57c22c-4c80-4b58-ad13-d88a52fd1859 score.
+31-5-2019 | 12:45: Player AAppel | 5e57c22c-4c80-4b58-ad13-d88a52fd1859 followers are now 20
+31-5-2019 | 12:45: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[Game]
+31-5-2019 | 12:45: Parsing AAppel | a6c0cd27-a39b-4406-8f3c-c7f84e529563 score.
+31-5-2019 | 12:45: Player AAppel | a6c0cd27-a39b-4406-8f3c-c7f84e529563 followers are now 0
+31-5-2019 | 12:45: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[Game]
+31-5-2019 | 12:45: Parsing AAppel | 8ec85469-be01-4f68-b7c4-d277e7409b70 score.
+31-5-2019 | 12:45: Player AAppel | 8ec85469-be01-4f68-b7c4-d277e7409b70 followers are now 5
+31-5-2019 | 12:45: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[Game]
+31-5-2019 | 12:45: Parsing AAppel | a2eaef15-23ba-49db-a20c-a64f18d6cbc6 score.
+31-5-2019 | 12:45: Player AAppel | a2eaef15-23ba-49db-a20c-a64f18d6cbc6 followers are now 0
+31-5-2019 | 12:45: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[Game]
+31-5-2019 | 12:45: Parsing AAppel | 3221b42a-b886-4b75-880d-2f801e409ce5 score.
+31-5-2019 | 12:45: Player AAppel | 3221b42a-b886-4b75-880d-2f801e409ce5 followers are now 0
+31-5-2019 | 12:45: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[Game]
+31-5-2019 | 12:45: Parsing AAppel | 27f60dd7-9e68-4e97-bb14-3ddcf6c382be score.
+31-5-2019 | 12:45: Player AAppel | 27f60dd7-9e68-4e97-bb14-3ddcf6c382be followers are now 5
+31-5-2019 | 12:45: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[Game]
+31-5-2019 | 12:45: Putting 's0hrHV' into read phase.
+31-5-2019 | 12:45: Room 's0hrHV' has 2 groups.
+31-5-2019 | 12:45: Current group is '3' in room 's0hrHV'.
+---[LOG MSG START]---
+[Game]
+31-5-2019 | 12:45: Putting 's0hrHV' into read phase.
+31-5-2019 | 12:45: Room 's0hrHV' has 2 groups.
+31-5-2019 | 12:45: Current group is '4' in room 's0hrHV'.
+---[LOG MSG START]---
+[Game]
+31-5-2019 | 12:45: Putting 's0hrHV' into read phase.
+31-5-2019 | 12:45: Room 's0hrHV' has 2 groups.
+31-5-2019 | 12:45: Current group is '5' in room 's0hrHV'.
+---[LOG MSG START]---
+[Game]
+31-5-2019 | 12:45: Putting 's0hrHV' into read phase.
+31-5-2019 | 12:45: Room 's0hrHV' has 2 groups.
+31-5-2019 | 12:45: Current group is '6' in room 's0hrHV'.
+---[LOG MSG START]---
+[Game]
+31-5-2019 | 12:45: Putting 's0hrHV' into read phase.
+31-5-2019 | 12:45: Room 's0hrHV' has 2 groups.
+31-5-2019 | 12:45: Current group is '7' in room 's0hrHV'.
+---[LOG MSG START]---
+[Game]
+31-5-2019 | 12:45: Putting 's0hrHV' into read phase.
+31-5-2019 | 12:45: Room 's0hrHV' has 2 groups.
+31-5-2019 | 12:45: Current group is '8' in room 's0hrHV'.
+---[LOG MSG START]---
+[Game]
+31-5-2019 | 12:45: Putting 's0hrHV' into read phase.
+31-5-2019 | 12:45: Room 's0hrHV' has 2 groups.
+31-5-2019 | 12:45: Current group is '9' in room 's0hrHV'.
+---[LOG MSG START]---
+[Game]
+31-5-2019 | 12:45: Putting 's0hrHV' into read phase.
+31-5-2019 | 12:45: Room 's0hrHV' has 2 groups.
+31-5-2019 | 12:45: Current group is '10' in room 's0hrHV'.

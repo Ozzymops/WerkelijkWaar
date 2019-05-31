@@ -79,6 +79,7 @@ $(document).ready(function () {
 
             // Hide irrelevant elements
             document.getElementById("game-connected").style.display = "none";
+            document.getElementById("btn-leaveGameOnEnd").style.display = "block";
             $roomContent.val('');
 
             // Show relevant elements
@@ -174,7 +175,7 @@ $(document).ready(function () {
         }
     }
 
-    connection.clientMethods["showLeaderboards"] = (roomCode, rank) => {
+    connection.clientMethods["showLeaderboards"] = (roomCode, rank, endGame) => {
         if ($roomContent.val() == roomCode) {
             var ranking = JSON.parse(rank);
 
@@ -188,6 +189,10 @@ $(document).ready(function () {
             }
 
             showLeaderboards();
+
+            if (endGame) {
+                document.getElementById("btn-leaveGameOnEnd").style.display = "block";
+            }
         }
     }
 
@@ -303,6 +308,21 @@ $(document).ready(function () {
             }
         }
     }
+
+    connection.clientMethods["endGame"] = (roomCode, rank) => {
+        if ($roomContent.val() == roomCode) {
+            console.log("Game ended.");
+
+            document.getElementById("game-tutorial-1").style.display = "none";
+            document.getElementById("game-tutorial-2").style.display = "none";
+            document.getElementById("game-tutorial-3").style.display = "none";
+            document.getElementById("game-waiting").style.display = "none";
+            document.getElementById("game-write").style.display = "none";
+            document.getElementById("game-read").style.display = "none";
+            document.getElementById("game-leaderboard").style.display = "block";
+            document.getElementById("game-end").style.display = "block";
+        }
+    }
     //#endregion
 
     //#region Functions
@@ -352,6 +372,19 @@ $(document).ready(function () {
 
     // Leave a room
     $('#btn-leaveLobby').click(function () {
+        // Clean and validate
+        var room = $roomContent.val().trim();
+
+        if (room.length != 0) {
+            connection.invoke("LeaveRoom", connection.connectionId, room, false);
+
+            // Clear values
+            $roomContent.val('');
+        }
+    });
+
+    // Leave a room on game end
+    $('#btn-leaveGameOnEnd').click(function () {
         // Clean and validate
         var room = $roomContent.val().trim();
 
@@ -613,6 +646,7 @@ $(document).ready(function () {
 
             console.log("Answered with " + selectedAnswer);
             connection.invoke("UploadAnswer", $roomContent.val(), connection.connectionId, selectedAnswer);
+            selectedAnswer = '';
         }
     }
 

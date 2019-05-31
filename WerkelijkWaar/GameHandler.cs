@@ -449,8 +449,7 @@ namespace WerkelijkWaar
                         }
                         else
                         {
-                            await ShowLeaderboard(roomCode);
-                            // End game
+                            await ShowLeaderboard(roomCode, true);
                         }
                     }
                     else
@@ -709,24 +708,32 @@ namespace WerkelijkWaar
                         }
                     }
 
-                    await ShowLeaderboard(roomCode);
+                    await ShowLeaderboard(roomCode, false);
                 }
             }
         }
 
-        public async Task ShowLeaderboard(string roomCode)
+        public async Task ShowLeaderboard(string roomCode, bool endGame)
+        {
+            foreach (Classes.Room room in _gameManager.Rooms)
+            {
+                if (room.RoomCode == roomCode)
+                {
+                    List<string> rankList = GenerateLeaderboard(roomCode);
+
+                    await InvokeClientMethodToAllAsync("showLeaderboards", roomCode, Newtonsoft.Json.JsonConvert.SerializeObject(rankList), endGame);
+                }
+            }
+        }
+
+        public List<string> GenerateLeaderboard(string roomCode)
         {
             foreach (Classes.Room room in _gameManager.Rooms)
             {
                 if (room.RoomCode == roomCode)
                 {
                     List<string> rankList = new List<string>();
-                    List<Classes.Score> scoreList = new List<Classes.Score>();
-
-                    foreach (Classes.Score score in room.SelectedAnswers)
-                    {
-                        scoreList.Add(score);
-                    }
+                    List<Classes.Score> scoreList = room.SelectedAnswers;
 
                     // Sort scorelist
                     scoreList = scoreList.OrderByDescending(o => o.CashAmount).ToList();
@@ -745,9 +752,11 @@ namespace WerkelijkWaar
                         }
                     }
 
-                    await InvokeClientMethodToAllAsync("showLeaderboards", roomCode, Newtonsoft.Json.JsonConvert.SerializeObject(rankList));
+                    return rankList;
                 }
             }
+
+            return null;
         }
 
         public async Task RetrieveWrittenStories(string roomCode, int gameGroup)
