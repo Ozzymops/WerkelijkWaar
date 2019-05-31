@@ -220,43 +220,35 @@ namespace WerkelijkWaar.Controllers
             return RedirectToAction("Index", "Home");
         }
 
-        /// <summary>
-        /// Wijzig de gegevens van een gebruiker
-        /// </summary>
-        /// <param name="eam">EditAccountModel</param>
-        /// <returns>View</returns>
-        public IActionResult EditGenericData(EditAccountModel eam)
+        public IActionResult EditName(AccountViewModel avm)
         {
             // check if logged in
             if (!String.IsNullOrEmpty(HttpContext.Session.GetString("User")))
             {
-                Classes.User newUser = new Classes.User { Id = eam.Id };
+                avm.User.Id = Newtonsoft.Json.JsonConvert.DeserializeObject<Classes.User>(HttpContext.Session.GetString("User")).Id;
 
-                // Check data
-                if (String.IsNullOrEmpty(eam.NewName) || String.IsNullOrEmpty(eam.NewSurname) || String.IsNullOrEmpty(eam.NewUsername))
+                if (String.IsNullOrEmpty(avm.User.Name) || String.IsNullOrEmpty(avm.User.Surname) || String.IsNullOrEmpty(avm.User.Username))
                 {
-                    eam.StatusString = "Vul a.u.b. de velden correct in.";
-                    return RedirectToAction("EditAccount", "Account", eam);
-                }
-
-                newUser.Name = eam.NewName;
-                newUser.Surname = eam.NewSurname;
-                newUser.Username = eam.NewUsername;
-
-                bool edited = dq.EditUser(newUser);
-
-                if (edited)
-                {
-                    eam.StatusString = "Succes!";
-                    HttpContext.Session.Remove("User");
-                    HttpContext.Session.SetString("User", Newtonsoft.Json.JsonConvert.SerializeObject(dq.RetrieveUser(eam.Id)));
+                    avm.StatusString = "Vul a.u.b. de velden correct in.";
+                    avm.StatusLocation = 0;
                 }
                 else
                 {
-                    eam.StatusString = "Er is iets fout gegaan of je hebt niks ingevuld. Check je gegevens.";
+                    bool edited = dq.EditUserNames(avm.User);
+
+                    if (edited)
+                    {
+                        avm.StatusString = "Succes.";
+                        avm.StatusLocation = 0;
+                    }
+                    else
+                    {
+                        avm.StatusString = "Er is iets mis gegaan. Probeer het opnieuw.";
+                        avm.StatusLocation = 0;
+                    }
                 }
 
-                return RedirectToAction("EditAccount", "Account", eam);
+                return View("AccountView", avm);
             }
 
             return RedirectToAction("Index", "Home");

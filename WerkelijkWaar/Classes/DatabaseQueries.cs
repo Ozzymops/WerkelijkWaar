@@ -1117,11 +1117,11 @@ namespace WerkelijkWaar.Classes
         /// </summary>
         /// <param name="user">User</param>
         /// <returns>true or false</returns>
-        public bool EditUser(User user)
+        public bool EditUserNames(User user)
         {
             sw.Restart();
-            l.WriteToLog("[EditUser]", "Trying to edit user " + user.Name, 0);
-            l.DebugToLog("[EditUser]", sw.ElapsedMilliseconds.ToString() + "ms. Trying to edit user " + user.Name, 0);
+            l.WriteToLog("[EditUserNames]", "Trying to edit user " + user.Name, 0);
+            l.DebugToLog("[EditUserNames]", sw.ElapsedMilliseconds.ToString() + "ms. Trying to edit user " + user.Name, 0);
 
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
@@ -1133,7 +1133,7 @@ namespace WerkelijkWaar.Classes
                 command.Parameters.Add(new SqlParameter("@username", user.Username));
                 command.Parameters.Add(new SqlParameter("@id", user.Id));
 
-                l.DebugToLog("[RegisterUser]", sw.ElapsedMilliseconds.ToString() + "ms. Values are: " +
+                l.DebugToLog("[EditUserNames]", sw.ElapsedMilliseconds.ToString() + "ms. Values are: " +
                                 "- Name: " + user.Name + ";\n" +
                                 "- Surname: " + user.Surname + ";\n" +
                                 "- Username: " + user.Username, 1);
@@ -1146,23 +1146,23 @@ namespace WerkelijkWaar.Classes
 
                     if (rows > 0)
                     {
-                        l.WriteToLog("[EditUser]", "Edited user with id " + user.Id, 2);
-                        l.DebugToLog("[EditUser]", sw.ElapsedMilliseconds.ToString() + "ms. Edited user with id " + user.Id, 2);
+                        l.WriteToLog("[EditUserNames]", "Edited user with id " + user.Id, 2);
+                        l.DebugToLog("[EditUserNames]", sw.ElapsedMilliseconds.ToString() + "ms. Edited user with id " + user.Id, 2);
 
                         sw.Stop();
                         return true;
                     }
 
-                    l.WriteToLog("[EditUser]", "Could not find user with id " + user.Id, 2);
-                    l.DebugToLog("[EditUser]", sw.ElapsedMilliseconds.ToString() + "ms. Could not find user with id " + user.Id, 2);
+                    l.WriteToLog("[EditUserNames]", "Could not find user with id " + user.Id, 2);
+                    l.DebugToLog("[EditUserNames]", sw.ElapsedMilliseconds.ToString() + "ms. Could not find user with id " + user.Id, 2);
 
                     sw.Stop();
                     return false;
                 }
                 catch (Exception ex)
                 {
-                    l.WriteToLog("[EditUser]", "Something went wrong. Check debug.txt", 2);
-                    l.DebugToLog("[EditUser]", sw.ElapsedMilliseconds.ToString() + "ms. Exception:\n" + ex.ToString(), 2);
+                    l.WriteToLog("[EditUserNames]", "Something went wrong. Check debug.txt", 2);
+                    l.DebugToLog("[EditUserNames]", sw.ElapsedMilliseconds.ToString() + "ms. Exception:\n" + ex.ToString(), 2);
 
                     sw.Stop();
                     return false;

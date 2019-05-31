@@ -5419,3 +5419,182 @@ System.InvalidCastException: Unable to cast object of type 'System.Decimal' to t
 30-5-2019 | 11:59: End.
 ---[DEBUG MSG END]---
 
+---[DEBUG MSG START]---
+[Startup]
+31-5-2019 | 10:52: 4ms. Launching server
+31-5-2019 | 10:52: 11ms. Server is up
+31-5-2019 | 10:52: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[CheckLogin]
+31-5-2019 | 10:53: 1ms. Checking login for CCacao
+31-5-2019 | 10:53: 48ms. Did not find CCacao
+31-5-2019 | 10:53: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[CheckLogin]
+31-5-2019 | 10:53: 1ms. Checking login for CCacao
+31-5-2019 | 10:53: 6ms. Found CCacao
+31-5-2019 | 10:53: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[RetrieveUser]
+31-5-2019 | 10:53: 1ms. Retrieving user 7
+31-5-2019 | 10:53: 7ms. Found user 7
+31-5-2019 | 10:53: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[EditUserNames]
+31-5-2019 | 10:54: 1ms. Trying to edit user Carrie
+31-5-2019 | 10:54: 3ms. Values are: - Name: Carrie;
+- Surname: Cacao;
+- Username: CCacao
+31-5-2019 | 10:54: 34ms. Edited user with id 7
+31-5-2019 | 10:54: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[Startup]
+31-5-2019 | 10:54: 3ms. Launching server
+31-5-2019 | 10:54: 9ms. Server is up
+31-5-2019 | 10:54: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[Startup]
+31-5-2019 | 10:55: 3ms. Launching server
+31-5-2019 | 10:55: 9ms. Server is up
+31-5-2019 | 10:55: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[CheckLogin]
+31-5-2019 | 10:55: 1ms. Checking login for CCacao
+31-5-2019 | 10:55: 29ms. Found CCacao
+31-5-2019 | 10:55: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[RetrieveUser]
+31-5-2019 | 10:55: 1ms. Retrieving user 7
+31-5-2019 | 10:55: 6ms. Found user 7
+31-5-2019 | 10:55: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[EditUserNames]
+31-5-2019 | 10:55: 1ms. Trying to edit user Carrie
+31-5-2019 | 10:55: 3ms. Values are: - Name: Carrie;
+- Surname: Cacao;
+- Username: CCacao
+31-5-2019 | 10:55: 8ms. Edited user with id 7
+31-5-2019 | 10:55: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[Startup]
+31-5-2019 | 10:55: 3ms. Launching server
+31-5-2019 | 10:55: 9ms. Server is up
+31-5-2019 | 10:55: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[CheckLogin]
+31-5-2019 | 10:55: 1ms. Checking login for CCacao
+31-5-2019 | 10:55: 29ms. Found CCacao
+31-5-2019 | 10:55: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[RetrieveUser]
+31-5-2019 | 10:55: 1ms. Retrieving user 7
+31-5-2019 | 10:55: 6ms. Found user 7
+31-5-2019 | 10:55: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[EditUserNames]
+31-5-2019 | 10:55: 1ms. Trying to edit user Carrie
+31-5-2019 | 10:55: 3ms. Values are: - Name: Carrie;
+- Surname: Cacao;
+- Username: CCacao
+31-5-2019 | 10:55: 7ms. Edited user with id 7
+31-5-2019 | 10:55: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[Startup]
+31-5-2019 | 10:56: 3ms. Launching server
+31-5-2019 | 10:56: 10ms. Server is up
+31-5-2019 | 10:56: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[CheckLogin]
+31-5-2019 | 10:56: 1ms. Checking login for CCacao
+31-5-2019 | 10:56: 29ms. Found CCacao
+31-5-2019 | 10:56: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[RetrieveUser]
+31-5-2019 | 10:56: 1ms. Retrieving user 7
+31-5-2019 | 10:56: 7ms. Found user 7
+31-5-2019 | 10:56: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[EditUserNames]
+31-5-2019 | 10:56: 1ms. Trying to edit user Cak
+31-5-2019 | 10:56: 3ms. Values are: - Name: Cak;
+- Surname: Cacao;
+- Username: CCacao
+31-5-2019 | 10:56: 8ms. Could not find user with id 0
+31-5-2019 | 10:56: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[Startup]
+31-5-2019 | 10:56: 3ms. Launching server
+31-5-2019 | 10:56: 9ms. Server is up
+31-5-2019 | 10:56: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[CheckLogin]
+31-5-2019 | 10:56: 1ms. Checking login for CCacao
+31-5-2019 | 10:56: 32ms. Found CCacao
+31-5-2019 | 10:56: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[RetrieveUser]
+31-5-2019 | 10:56: 1ms. Retrieving user 7
+31-5-2019 | 10:56: 7ms. Found user 7
+31-5-2019 | 10:56: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[EditUserNames]
+31-5-2019 | 10:57: 1ms. Trying to edit user Cak
+31-5-2019 | 10:57: 3ms. Values are: - Name: Cak;
+- Surname: Cacao;
+- Username: CCacao
+31-5-2019 | 10:57: 6ms. Edited user with id 7
+31-5-2019 | 10:57: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[EditUserNames]
+31-5-2019 | 10:57: 1ms. Trying to edit user Cak
+31-5-2019 | 10:57: 3ms. Values are: - Name: Cak;
+- Surname: Cakkie;
+- Username: CCakkie
+31-5-2019 | 10:57: 8ms. Edited user with id 7
+31-5-2019 | 10:57: End.
+---[DEBUG MSG END]---
+

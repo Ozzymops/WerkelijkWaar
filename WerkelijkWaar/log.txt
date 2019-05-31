@@ -7475,3 +7475,234 @@
 30-5-2019 | 11:59: End.
 ---[LOG MSG END]---
 
+---[LOG MSG START]---
+[Startup]
+31-5-2019 | 10:52: Starting server...
+31-5-2019 | 10:52: Server is up and running!
+31-5-2019 | 10:52: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[CheckLogin]
+31-5-2019 | 10:53: Logging in CCacao...
+31-5-2019 | 10:53: Log in not found for user CCacao
+31-5-2019 | 10:53: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[CheckLogin]
+31-5-2019 | 10:53: Logging in CCacao...
+31-5-2019 | 10:53: Log in found for user CCacao
+31-5-2019 | 10:53: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveUser]
+31-5-2019 | 10:53: Attempting to retrieve user with id 7
+31-5-2019 | 10:53: Found user with id 7
+31-5-2019 | 10:53: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[AccountController]
+31-5-2019 | 10:54: CCacao validated.
+31-5-2019 | 10:54: CCacao navigated to Hub/Game
+31-5-2019 | 10:54: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[AccountController]
+31-5-2019 | 10:54: CCacao validated.
+31-5-2019 | 10:54: CCacao navigated to Account/AccountView.
+31-5-2019 | 10:54: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[EditUserNames]
+31-5-2019 | 10:54: Trying to edit user Carrie
+31-5-2019 | 10:54: Edited user with id 7
+31-5-2019 | 10:54: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[Startup]
+31-5-2019 | 10:54: Starting server...
+31-5-2019 | 10:54: Server is up and running!
+31-5-2019 | 10:54: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[Startup]
+31-5-2019 | 10:55: Starting server...
+31-5-2019 | 10:55: Server is up and running!
+31-5-2019 | 10:55: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[CheckLogin]
+31-5-2019 | 10:55: Logging in CCacao...
+31-5-2019 | 10:55: Log in found for user CCacao
+31-5-2019 | 10:55: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveUser]
+31-5-2019 | 10:55: Attempting to retrieve user with id 7
+31-5-2019 | 10:55: Found user with id 7
+31-5-2019 | 10:55: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[AccountController]
+31-5-2019 | 10:55: CCacao validated.
+31-5-2019 | 10:55: CCacao navigated to Hub/Game
+31-5-2019 | 10:55: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[AccountController]
+31-5-2019 | 10:55: CCacao validated.
+31-5-2019 | 10:55: CCacao navigated to Account/AccountView.
+31-5-2019 | 10:55: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[EditUserNames]
+31-5-2019 | 10:55: Trying to edit user Carrie
+31-5-2019 | 10:55: Edited user with id 7
+31-5-2019 | 10:55: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[Startup]
+31-5-2019 | 10:55: Starting server...
+31-5-2019 | 10:55: Server is up and running!
+31-5-2019 | 10:55: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[CheckLogin]
+31-5-2019 | 10:55: Logging in CCacao...
+31-5-2019 | 10:55: Log in found for user CCacao
+31-5-2019 | 10:55: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveUser]
+31-5-2019 | 10:55: Attempting to retrieve user with id 7
+31-5-2019 | 10:55: Found user with id 7
+31-5-2019 | 10:55: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[AccountController]
+31-5-2019 | 10:55: CCacao validated.
+31-5-2019 | 10:55: CCacao navigated to Hub/Game
+31-5-2019 | 10:55: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[AccountController]
+31-5-2019 | 10:55: CCacao validated.
+31-5-2019 | 10:55: CCacao navigated to Account/AccountView.
+31-5-2019 | 10:55: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[EditUserNames]
+31-5-2019 | 10:55: Trying to edit user Carrie
+31-5-2019 | 10:55: Edited user with id 7
+31-5-2019 | 10:55: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[Startup]
+31-5-2019 | 10:56: Starting server...
+31-5-2019 | 10:56: Server is up and running!
+31-5-2019 | 10:56: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[CheckLogin]
+31-5-2019 | 10:56: Logging in CCacao...
+31-5-2019 | 10:56: Log in found for user CCacao
+31-5-2019 | 10:56: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveUser]
+31-5-2019 | 10:56: Attempting to retrieve user with id 7
+31-5-2019 | 10:56: Found user with id 7
+31-5-2019 | 10:56: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[AccountController]
+31-5-2019 | 10:56: CCacao validated.
+31-5-2019 | 10:56: CCacao navigated to Hub/Game
+31-5-2019 | 10:56: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[AccountController]
+31-5-2019 | 10:56: CCacao validated.
+31-5-2019 | 10:56: CCacao navigated to Account/AccountView.
+31-5-2019 | 10:56: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[EditUserNames]
+31-5-2019 | 10:56: Trying to edit user Cak
+31-5-2019 | 10:56: Could not find user with id 0
+31-5-2019 | 10:56: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[Startup]
+31-5-2019 | 10:56: Starting server...
+31-5-2019 | 10:56: Server is up and running!
+31-5-2019 | 10:56: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[CheckLogin]
+31-5-2019 | 10:56: Logging in CCacao...
+31-5-2019 | 10:56: Log in found for user CCacao
+31-5-2019 | 10:56: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveUser]
+31-5-2019 | 10:56: Attempting to retrieve user with id 7
+31-5-2019 | 10:56: Found user with id 7
+31-5-2019 | 10:56: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[AccountController]
+31-5-2019 | 10:56: CCacao validated.
+31-5-2019 | 10:56: CCacao navigated to Hub/Game
+31-5-2019 | 10:56: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[AccountController]
+31-5-2019 | 10:56: CCacao validated.
+31-5-2019 | 10:56: CCacao navigated to Account/AccountView.
+31-5-2019 | 10:56: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[EditUserNames]
+31-5-2019 | 10:57: Trying to edit user Cak
+31-5-2019 | 10:57: Edited user with id 7
+31-5-2019 | 10:57: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[EditUserNames]
+31-5-2019 | 10:57: Trying to edit user Cak
+31-5-2019 | 10:57: Edited user with id 7
+31-5-2019 | 10:57: End.
+---[LOG MSG END]---
+
