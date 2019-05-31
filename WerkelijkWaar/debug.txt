@@ -5598,3 +5598,122 @@ System.InvalidCastException: Unable to cast object of type 'System.Decimal' to t
 31-5-2019 | 10:57: End.
 ---[DEBUG MSG END]---
 
+---[DEBUG MSG START]---
+[Startup]
+31-5-2019 | 11:10: 3ms. Launching server
+31-5-2019 | 11:10: 8ms. Server is up
+31-5-2019 | 11:10: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[CheckLogin]
+31-5-2019 | 11:10: 1ms. Checking login for CCakkie
+31-5-2019 | 11:10: 30ms. Found CCakkie
+31-5-2019 | 11:10: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[RetrieveUser]
+31-5-2019 | 11:10: 1ms. Retrieving user 7
+31-5-2019 | 11:10: 6ms. Found user 7
+31-5-2019 | 11:10: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[Startup]
+31-5-2019 | 11:12: 3ms. Launching server
+31-5-2019 | 11:12: 8ms. Server is up
+31-5-2019 | 11:12: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[CheckLogin]
+31-5-2019 | 11:12: 1ms. Checking login for CCakkie
+31-5-2019 | 11:12: 30ms. Found CCakkie
+31-5-2019 | 11:12: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[RetrieveUser]
+31-5-2019 | 11:12: 1ms. Retrieving user 7
+31-5-2019 | 11:12: 6ms. Found user 7
+31-5-2019 | 11:12: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[Startup]
+31-5-2019 | 11:13: 3ms. Launching server
+31-5-2019 | 11:13: 29ms. Server is up
+31-5-2019 | 11:13: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[CheckLogin]
+31-5-2019 | 11:13: 1ms. Checking login for CCakkie
+31-5-2019 | 11:13: 79ms. Found CCakkie
+31-5-2019 | 11:13: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[RetrieveUser]
+31-5-2019 | 11:13: 1ms. Retrieving user 7
+31-5-2019 | 11:13: 31ms. Found user 7
+31-5-2019 | 11:13: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[Startup]
+31-5-2019 | 11:14: 3ms. Launching server
+31-5-2019 | 11:14: 8ms. Server is up
+31-5-2019 | 11:14: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[CheckLogin]
+31-5-2019 | 11:14: 1ms. Checking login for CCakkie
+31-5-2019 | 11:14: 28ms. Found CCakkie
+31-5-2019 | 11:14: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[RetrieveUser]
+31-5-2019 | 11:14: 1ms. Retrieving user 7
+31-5-2019 | 11:14: 6ms. Found user 7
+31-5-2019 | 11:14: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[CheckLogin]
+31-5-2019 | 11:14: 1ms. Checking login for CCakkie
+31-5-2019 | 11:14: 5ms. Found CCakkie
+31-5-2019 | 11:14: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[EditPassword]
+31-5-2019 | 11:14: 8ms. Changing password of CCakkie
+31-5-2019 | 11:14: 13Password changed.
+31-5-2019 | 11:14: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[CheckLogin]
+31-5-2019 | 11:14: 1ms. Checking login for CCakkie
+31-5-2019 | 11:14: 4ms. Did not find CCakkie
+31-5-2019 | 11:14: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[CheckLogin]
+31-5-2019 | 11:14: 1ms. Checking login for CCakkie
+31-5-2019 | 11:14: 5ms. Found CCakkie
+31-5-2019 | 11:14: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[RetrieveUser]
+31-5-2019 | 11:14: 1ms. Retrieving user 7
+31-5-2019 | 11:14: 6ms. Found user 7
+31-5-2019 | 11:14: End.
+---[DEBUG MSG END]---
+

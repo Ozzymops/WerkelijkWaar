@@ -254,10 +254,59 @@ namespace WerkelijkWaar.Controllers
             return RedirectToAction("Index", "Home");
         }
 
-        public IActionResult EditPassword()
+        public IActionResult EditPassword(AccountViewModel avm)
         {
-            // match password with checklogin!
-            return RedirectToAction("EditAccount", "Account");
+            // check if logged in
+            if (!String.IsNullOrEmpty(HttpContext.Session.GetString("User")))
+            {
+                avm.User = Newtonsoft.Json.JsonConvert.DeserializeObject<Classes.User>(HttpContext.Session.GetString("User"));
+
+                if (String.IsNullOrEmpty(avm.NewPassword) || String.IsNullOrEmpty(avm.NewPasswordConfirmation) || String.IsNullOrEmpty(avm.OldPassword))
+                {
+                    avm.StatusString = "Vul a.u.b. de velden correct in.";
+                    avm.StatusLocation = 1;
+                }
+                else
+                {
+                    // check if passwords match
+                    if (avm.NewPassword == avm.NewPasswordConfirmation)
+                    {
+                        int id = dq.CheckLogin(avm.User.Username, avm.OldPassword);
+                        if (id != 0)
+                        {
+                            avm.User.Id = id;
+                            avm.User.Password = avm.NewPassword;
+
+                            bool edited = dq.EditPassword(avm.User);
+
+                            if (edited)
+                            {
+                                avm.StatusString = "Succes.";
+                                avm.StatusLocation = 1;
+                            }
+                            else
+                            {
+                                avm.StatusString = "Er is iets mis gegaan. Probeer het opnieuw.";
+                                avm.StatusLocation = 1;
+                            }
+                        }
+                        else
+                        {
+                            avm.StatusString = "Vul a.u.b. uw oude wachtwoord correct in.";
+                            avm.StatusLocation = 1;
+                        }
+                    }
+                    else
+                    {
+                        avm.StatusString = "Het nieuwe wachtwoord komt niet overeen met de bevestigingswachtwoord.";
+                        avm.StatusLocation = 1;
+                    }
+                }
+
+                return View("AccountView", avm);
+            }
+
+            return RedirectToAction("Index", "Home");
         }
 
         public IActionResult EditAvatar(EditAccountModel eam)

@@ -7706,3 +7706,192 @@
 31-5-2019 | 10:57: End.
 ---[LOG MSG END]---
 
+---[LOG MSG START]---
+[Startup]
+31-5-2019 | 11:10: Starting server...
+31-5-2019 | 11:10: Server is up and running!
+31-5-2019 | 11:10: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[CheckLogin]
+31-5-2019 | 11:10: Logging in CCakkie...
+31-5-2019 | 11:10: Log in found for user CCakkie
+31-5-2019 | 11:10: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveUser]
+31-5-2019 | 11:10: Attempting to retrieve user with id 7
+31-5-2019 | 11:10: Found user with id 7
+31-5-2019 | 11:10: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[AccountController]
+31-5-2019 | 11:10: CCakkie validated.
+31-5-2019 | 11:10: CCakkie navigated to Hub/Game
+31-5-2019 | 11:10: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[AccountController]
+31-5-2019 | 11:10: CCakkie validated.
+31-5-2019 | 11:10: CCakkie navigated to Account/AccountView.
+31-5-2019 | 11:10: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[Startup]
+31-5-2019 | 11:12: Starting server...
+31-5-2019 | 11:12: Server is up and running!
+31-5-2019 | 11:12: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[CheckLogin]
+31-5-2019 | 11:12: Logging in CCakkie...
+31-5-2019 | 11:12: Log in found for user CCakkie
+31-5-2019 | 11:12: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveUser]
+31-5-2019 | 11:12: Attempting to retrieve user with id 7
+31-5-2019 | 11:12: Found user with id 7
+31-5-2019 | 11:12: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[AccountController]
+31-5-2019 | 11:12: CCakkie validated.
+31-5-2019 | 11:12: CCakkie navigated to Hub/Game
+31-5-2019 | 11:12: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[AccountController]
+31-5-2019 | 11:12: CCakkie validated.
+31-5-2019 | 11:12: CCakkie navigated to Account/AccountView.
+31-5-2019 | 11:12: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[Startup]
+31-5-2019 | 11:13: Starting server...
+31-5-2019 | 11:13: Server is up and running!
+31-5-2019 | 11:13: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[CheckLogin]
+31-5-2019 | 11:13: Logging in CCakkie...
+31-5-2019 | 11:13: Log in found for user CCakkie
+31-5-2019 | 11:13: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveUser]
+31-5-2019 | 11:13: Attempting to retrieve user with id 7
+31-5-2019 | 11:13: Found user with id 7
+31-5-2019 | 11:13: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[AccountController]
+31-5-2019 | 11:13: CCakkie validated.
+31-5-2019 | 11:13: CCakkie navigated to Hub/Game
+31-5-2019 | 11:13: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[AccountController]
+31-5-2019 | 11:13: CCakkie validated.
+31-5-2019 | 11:13: CCakkie navigated to Account/AccountView.
+31-5-2019 | 11:13: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[Startup]
+31-5-2019 | 11:14: Starting server...
+31-5-2019 | 11:14: Server is up and running!
+31-5-2019 | 11:14: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[CheckLogin]
+31-5-2019 | 11:14: Logging in CCakkie...
+31-5-2019 | 11:14: Log in found for user CCakkie
+31-5-2019 | 11:14: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveUser]
+31-5-2019 | 11:14: Attempting to retrieve user with id 7
+31-5-2019 | 11:14: Found user with id 7
+31-5-2019 | 11:14: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[AccountController]
+31-5-2019 | 11:14: CCakkie validated.
+31-5-2019 | 11:14: CCakkie navigated to Hub/Game
+31-5-2019 | 11:14: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[AccountController]
+31-5-2019 | 11:14: CCakkie validated.
+31-5-2019 | 11:14: CCakkie navigated to Account/AccountView.
+31-5-2019 | 11:14: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[CheckLogin]
+31-5-2019 | 11:14: Logging in CCakkie...
+31-5-2019 | 11:14: Log in found for user CCakkie
+31-5-2019 | 11:14: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[EditPassword]
+31-5-2019 | 11:14: Changing password of CCakkie...
+31-5-2019 | 11:14: Password changed.
+31-5-2019 | 11:14: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[AccountController]
+31-5-2019 | 11:14: CCakkie validated.
+31-5-2019 | 11:14: CCakkie logged out.
+31-5-2019 | 11:14: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[CheckLogin]
+31-5-2019 | 11:14: Logging in CCakkie...
+31-5-2019 | 11:14: Log in not found for user CCakkie
+31-5-2019 | 11:14: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[CheckLogin]
+31-5-2019 | 11:14: Logging in CCakkie...
+31-5-2019 | 11:14: Log in found for user CCakkie
+31-5-2019 | 11:14: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveUser]
+31-5-2019 | 11:14: Attempting to retrieve user with id 7
+31-5-2019 | 11:14: Found user with id 7
+31-5-2019 | 11:14: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[AccountController]
+31-5-2019 | 11:14: CCakkie validated.
+31-5-2019 | 11:14: CCakkie navigated to Hub/Game
+31-5-2019 | 11:14: End.
+---[LOG MSG END]---
+

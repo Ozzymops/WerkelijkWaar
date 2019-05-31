@@ -1170,6 +1170,58 @@ namespace WerkelijkWaar.Classes
             }
         }
 
+        public bool EditPassword(User user)
+        {
+            sw.Start();
+            l.WriteToLog("[EditPassword]", "Changing password of " + user.Username + "...", 0);
+            l.DebugToLog("[EditPassword]", sw.ElapsedMilliseconds.ToString() + "ms. Changing password of " + user.Username, 0);
+
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                SqlCommand command = new SqlCommand("EditPassword", connection);
+                command.CommandType = System.Data.CommandType.StoredProcedure;
+
+                command.Parameters.Add(new SqlParameter("@pId", user.Id));
+                command.Parameters.Add(new SqlParameter("@pPassword", user.Password));
+
+                var output = new SqlParameter("@responseMessage", System.Data.SqlDbType.NVarChar);
+                output.Direction = System.Data.ParameterDirection.Output;
+                output.Size = 255;
+                command.Parameters.Add(output);;
+
+                try
+                {
+                    connection.Open();
+                    command.ExecuteNonQuery();
+
+                    if (command.Parameters["@responseMessage"].Value.ToString().Contains("Success"))
+                    {
+                        l.WriteToLog("[EditPassword]", "Password changed.", 2);
+                        l.DebugToLog("[EditPassword]", sw.ElapsedMilliseconds.ToString() + "Password changed.", 2);
+
+                        sw.Stop();
+                        return true;
+                    }
+                    else
+                    {
+                        l.WriteToLog("[EditPassword]", "Password not changed. Check debug.txt", 2);
+                        l.DebugToLog("[EditPassword]", sw.ElapsedMilliseconds.ToString() + "Password not changed:\n" + command.Parameters["@responseMessage"].Value.ToString(), 2);
+
+                        sw.Stop();
+                        return false;
+                    }
+                }
+                catch (Exception ex)
+                {
+                    l.WriteToLog("[EditPassword]", "Something went wrong. Check debug.txt", 2);
+                    l.DebugToLog("[EditPassword]", sw.ElapsedMilliseconds.ToString() + "ms. Exception:\n" + ex.ToString(), 2);
+
+                    sw.Stop();
+                    return false;
+                }
+            }
+        }
+
         /// <summary>
         /// Wijzig de avatar van een gebruiker.
         /// </summary>
