@@ -106,6 +106,11 @@ namespace WerkelijkWaar.Controllers
                     am.UserList = dq.RetrieveAllUsers();
                     return View(am);
                 }
+                else if (tempUser.RoleId == 3)
+                {
+                    am.UserList = dq.RetrieveAllUsers();
+                    return View(am);
+                }
             }
 
             return RedirectToAction("Index", "Home");

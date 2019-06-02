@@ -80,7 +80,7 @@
             {
                 <p class="layout side-bar-actions">Acties</p>
 
-                @if (roleId != 2)
+                @if (roleId != 2 && roleId != 3)
                 {
                     <a asp-controller="Hub" asp-action="Game">
                         <img id="side-all-game" class="layout side-bar-item" src="~/content/image/Play.png" alt="Game" title="Game" />
@@ -123,7 +123,7 @@
                     }
                     else
                     {
-                        <a asp-controller="Home" asp-action="Index">
+                        <a asp-controller="Hub" asp-action="ServerConfig">
                             <img id="side-3-config" class="layout side-bar-item" src="~/content/image/Gear.png" alt="Configuration" title="Configuration" />
                         </a>
                     }

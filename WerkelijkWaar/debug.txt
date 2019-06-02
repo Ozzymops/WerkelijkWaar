@@ -5896,3 +5896,1597 @@ System.InvalidCastException: Unable to cast object of type 'System.Decimal' to t
 31-5-2019 | 12:44: End.
 ---[DEBUG MSG END]---
 
+---[DEBUG MSG START]---
+[Startup]
+1-6-2019 | 11:17: 4ms. Launching server
+1-6-2019 | 11:17: 11ms. Server is up
+1-6-2019 | 11:17: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[CheckLogin]
+1-6-2019 | 11:17: 1ms. Checking login for AAppel
+1-6-2019 | 11:17: 51ms. Found AAppel
+1-6-2019 | 11:17: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[RetrieveUser]
+1-6-2019 | 11:17: 1ms. Retrieving user 5
+1-6-2019 | 11:17: 8ms. Found user 5
+1-6-2019 | 11:17: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[CheckLogin]
+1-6-2019 | 11:17: 1ms. Checking login for JMuris
+1-6-2019 | 11:17: 4ms. Found JMuris
+1-6-2019 | 11:17: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[RetrieveUser]
+1-6-2019 | 11:17: 1ms. Retrieving user 4
+1-6-2019 | 11:17: 6ms. Found user 4
+1-6-2019 | 11:17: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[CheckLogin]
+1-6-2019 | 11:18: 1ms. Checking login for Admin
+1-6-2019 | 11:18: 8ms. Found Admin
+1-6-2019 | 11:18: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[RetrieveUser]
+1-6-2019 | 11:18: 1ms. Retrieving user 3
+1-6-2019 | 11:18: 5ms. Found user 3
+1-6-2019 | 11:18: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[RetrieveSchools]
+1-6-2019 | 11:18: 1ms. Attempting to retrieve schools
+1-6-2019 | 11:18: 4ms. Got: 1 - geen
+1-6-2019 | 11:18: 6ms. Got: 2 - Basissus Schoolus
+1-6-2019 | 11:18: 7ms. Got: 3 - Nog een skool
+1-6-2019 | 11:18: 10ms. Found 3 schools.
+1-6-2019 | 11:18: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[CheckLogin]
+1-6-2019 | 11:18: 1ms. Checking login for UberAdmin
+1-6-2019 | 11:18: 4ms. Found UberAdmin
+1-6-2019 | 11:18: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[RetrieveUser]
+1-6-2019 | 11:18: 1ms. Retrieving user 2
+1-6-2019 | 11:18: 4ms. Found user 2
+1-6-2019 | 11:18: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[RetrieveSchools]
+1-6-2019 | 11:18: 1ms. Attempting to retrieve schools
+1-6-2019 | 11:18: 3ms. Got: 1 - geen
+1-6-2019 | 11:18: 4ms. Got: 2 - Basissus Schoolus
+1-6-2019 | 11:18: 6ms. Got: 3 - Nog een skool
+1-6-2019 | 11:18: 9ms. Found 3 schools.
+1-6-2019 | 11:18: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[CheckLogin]
+1-6-2019 | 11:23: 1ms. Checking login for AAppel
+1-6-2019 | 11:23: 8ms. Found AAppel
+1-6-2019 | 11:23: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[RetrieveUser]
+1-6-2019 | 11:23: 1ms. Retrieving user 5
+1-6-2019 | 11:23: 5ms. Found user 5
+1-6-2019 | 11:23: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[RetrieveUser]
+1-6-2019 | 11:24: 1ms. Retrieving user 5
+1-6-2019 | 11:24: 6ms. Found user 5
+1-6-2019 | 11:24: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[RetrieveStoriesOfUser]
+1-6-2019 | 11:24: 1ms. Attempting to retrieve stories of user 5
+1-6-2019 | 11:24: 5ms. Got: 2 - Een verhaal
+1-6-2019 | 11:24: 8ms. Found 1 stories from user 5
+1-6-2019 | 11:24: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[RetrieveScoresOfUser]
+1-6-2019 | 11:24: 1ms. Retrieving scores of user 5
+1-6-2019 | 11:24: Got: 1
+1-6-2019 | 11:24: Got: 2
+1-6-2019 | 11:24: Got: 3
+1-6-2019 | 11:24: 10ms. Found 3 scores from user 5
+1-6-2019 | 11:24: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[CheckLogin]
+1-6-2019 | 11:26: 1ms. Checking login for JMuris
+1-6-2019 | 11:26: 7ms. Found JMuris
+1-6-2019 | 11:26: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[RetrieveUser]
+1-6-2019 | 11:26: 1ms. Retrieving user 4
+1-6-2019 | 11:26: 5ms. Found user 4
+1-6-2019 | 11:26: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[CheckLogin]
+1-6-2019 | 11:27: 1ms. Checking login for Admin
+1-6-2019 | 11:27: 7ms. Found Admin
+1-6-2019 | 11:27: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[RetrieveUser]
+1-6-2019 | 11:27: 1ms. Retrieving user 3
+1-6-2019 | 11:27: 5ms. Found user 3
+1-6-2019 | 11:27: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[RetrieveSchools]
+1-6-2019 | 11:27: 1ms. Attempting to retrieve schools
+1-6-2019 | 11:27: 4ms. Got: 1 - geen
+1-6-2019 | 11:27: 5ms. Got: 2 - Basissus Schoolus
+1-6-2019 | 11:27: 7ms. Got: 3 - Nog een skool
+1-6-2019 | 11:27: 9ms. Found 3 schools.
+1-6-2019 | 11:27: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[CheckLogin]
+1-6-2019 | 11:27: 2ms. Checking login for UberAdmin
+1-6-2019 | 11:27: 5ms. Found UberAdmin
+1-6-2019 | 11:27: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[RetrieveUser]
+1-6-2019 | 11:27: 1ms. Retrieving user 2
+1-6-2019 | 11:27: 4ms. Found user 2
+1-6-2019 | 11:27: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[RetrieveSchools]
+1-6-2019 | 11:27: 1ms. Attempting to retrieve schools
+1-6-2019 | 11:27: 3ms. Got: 1 - geen
+1-6-2019 | 11:27: 4ms. Got: 2 - Basissus Schoolus
+1-6-2019 | 11:27: 5ms. Got: 3 - Nog een skool
+1-6-2019 | 11:27: 8ms. Found 3 schools.
+1-6-2019 | 11:27: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[RetrieveSchools]
+1-6-2019 | 11:29: 1ms. Attempting to retrieve schools
+1-6-2019 | 11:29: 4ms. Got: 1 - geen
+1-6-2019 | 11:29: 5ms. Got: 2 - Basissus Schoolus
+1-6-2019 | 11:29: 7ms. Got: 3 - Nog een skool
+1-6-2019 | 11:29: 9ms. Found 3 schools.
+1-6-2019 | 11:29: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[CheckLogin]
+1-6-2019 | 11:29: 1ms. Checking login for UberAdmin
+1-6-2019 | 11:29: 7ms. Found UberAdmin
+1-6-2019 | 11:29: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[RetrieveUser]
+1-6-2019 | 11:29: 1ms. Retrieving user 2
+1-6-2019 | 11:29: 7ms. Found user 2
+1-6-2019 | 11:29: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[RetrieveSchools]
+1-6-2019 | 11:29: 1ms. Attempting to retrieve schools
+1-6-2019 | 11:29: 3ms. Got: 1 - geen
+1-6-2019 | 11:29: 4ms. Got: 2 - Basissus Schoolus
+1-6-2019 | 11:29: 6ms. Got: 3 - Nog een skool
+1-6-2019 | 11:29: 9ms. Found 3 schools.
+1-6-2019 | 11:29: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[Startup]
+1-6-2019 | 11:29: 3ms. Launching server
+1-6-2019 | 11:29: 8ms. Server is up
+1-6-2019 | 11:29: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[CheckLogin]
+1-6-2019 | 11:29: 1ms. Checking login for UberAdmin
+1-6-2019 | 11:29: 25ms. Found UberAdmin
+1-6-2019 | 11:29: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[RetrieveUser]
+1-6-2019 | 11:29: 1ms. Retrieving user 2
+1-6-2019 | 11:29: 5ms. Found user 2
+1-6-2019 | 11:29: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[RetrieveSchools]
+1-6-2019 | 11:29: 1ms. Attempting to retrieve schools
+1-6-2019 | 11:29: 3ms. Got: 1 - geen
+1-6-2019 | 11:29: 5ms. Got: 2 - Basissus Schoolus
+1-6-2019 | 11:29: 6ms. Got: 3 - Nog een skool
+1-6-2019 | 11:29: 9ms. Found 3 schools.
+1-6-2019 | 11:29: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[RetrieveSchools]
+1-6-2019 | 11:29: 1ms. Attempting to retrieve schools
+1-6-2019 | 11:29: 3ms. Got: 1 - geen
+1-6-2019 | 11:29: 5ms. Got: 2 - Basissus Schoolus
+1-6-2019 | 11:29: 6ms. Got: 3 - Nog een skool
+1-6-2019 | 11:29: 9ms. Found 3 schools.
+1-6-2019 | 11:29: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[RetrieveSchools]
+1-6-2019 | 11:29: 1ms. Attempting to retrieve schools
+1-6-2019 | 11:29: 3ms. Got: 1 - geen
+1-6-2019 | 11:29: 4ms. Got: 2 - Basissus Schoolus
+1-6-2019 | 11:29: 5ms. Got: 3 - Nog een skool
+1-6-2019 | 11:29: 8ms. Found 3 schools.
+1-6-2019 | 11:29: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[RetrieveSchools]
+1-6-2019 | 11:29: 1ms. Attempting to retrieve schools
+1-6-2019 | 11:29: 3ms. Got: 1 - geen
+1-6-2019 | 11:29: 4ms. Got: 2 - Basissus Schoolus
+1-6-2019 | 11:29: 5ms. Got: 3 - Nog een skool
+1-6-2019 | 11:29: 8ms. Found 3 schools.
+1-6-2019 | 11:29: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[RetrieveSchools]
+1-6-2019 | 11:29: 1ms. Attempting to retrieve schools
+1-6-2019 | 11:29: 3ms. Got: 1 - geen
+1-6-2019 | 11:29: 4ms. Got: 2 - Basissus Schoolus
+1-6-2019 | 11:29: 5ms. Got: 3 - Nog een skool
+1-6-2019 | 11:29: 7ms. Found 3 schools.
+1-6-2019 | 11:29: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[RetrieveSchools]
+1-6-2019 | 11:29: 1ms. Attempting to retrieve schools
+1-6-2019 | 11:29: 3ms. Got: 1 - geen
+1-6-2019 | 11:29: 4ms. Got: 2 - Basissus Schoolus
+1-6-2019 | 11:29: 5ms. Got: 3 - Nog een skool
+1-6-2019 | 11:29: 8ms. Found 3 schools.
+1-6-2019 | 11:29: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[RetrieveSchools]
+1-6-2019 | 11:29: 1ms. Attempting to retrieve schools
+1-6-2019 | 11:29: 4ms. Got: 1 - geen
+1-6-2019 | 11:29: 6ms. Got: 2 - Basissus Schoolus
+1-6-2019 | 11:29: 7ms. Got: 3 - Nog een skool
+1-6-2019 | 11:29: 10ms. Found 3 schools.
+1-6-2019 | 11:29: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[RetrieveSchools]
+1-6-2019 | 11:29: 2ms. Attempting to retrieve schools
+1-6-2019 | 11:29: 4ms. Got: 1 - geen
+1-6-2019 | 11:29: 5ms. Got: 2 - Basissus Schoolus
+1-6-2019 | 11:29: 6ms. Got: 3 - Nog een skool
+1-6-2019 | 11:29: 9ms. Found 3 schools.
+1-6-2019 | 11:29: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[Startup]
+1-6-2019 | 11:30: 3ms. Launching server
+1-6-2019 | 11:30: 8ms. Server is up
+1-6-2019 | 11:30: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[CheckLogin]
+1-6-2019 | 11:30: 1ms. Checking login for Admin
+1-6-2019 | 11:30: 28ms. Found Admin
+1-6-2019 | 11:30: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[RetrieveUser]
+1-6-2019 | 11:30: 1ms. Retrieving user 3
+1-6-2019 | 11:30: 6ms. Found user 3
+1-6-2019 | 11:30: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[RetrieveSchools]
+1-6-2019 | 11:30: 1ms. Attempting to retrieve schools
+1-6-2019 | 11:30: 5ms. Got: 1 - geen
+1-6-2019 | 11:30: 6ms. Got: 2 - Basissus Schoolus
+1-6-2019 | 11:30: 8ms. Got: 3 - Nog een skool
+1-6-2019 | 11:30: 11ms. Found 3 schools.
+1-6-2019 | 11:30: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[CheckLogin]
+1-6-2019 | 11:30: 1ms. Checking login for UberAdmin
+1-6-2019 | 11:30: 7ms. Found UberAdmin
+1-6-2019 | 11:30: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[RetrieveUser]
+1-6-2019 | 11:30: 1ms. Retrieving user 2
+1-6-2019 | 11:30: 4ms. Found user 2
+1-6-2019 | 11:30: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[RetrieveSchools]
+1-6-2019 | 11:30: 1ms. Attempting to retrieve schools
+1-6-2019 | 11:30: 3ms. Got: 1 - geen
+1-6-2019 | 11:30: 5ms. Got: 2 - Basissus Schoolus
+1-6-2019 | 11:30: 6ms. Got: 3 - Nog een skool
+1-6-2019 | 11:30: 9ms. Found 3 schools.
+1-6-2019 | 11:30: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[RetrieveSchools]
+1-6-2019 | 11:30: 1ms. Attempting to retrieve schools
+1-6-2019 | 11:30: 4ms. Got: 1 - geen
+1-6-2019 | 11:30: 5ms. Got: 2 - Basissus Schoolus
+1-6-2019 | 11:30: 7ms. Got: 3 - Nog een skool
+1-6-2019 | 11:30: 11ms. Found 3 schools.
+1-6-2019 | 11:30: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[RetrieveSchools]
+1-6-2019 | 11:30: 1ms. Attempting to retrieve schools
+1-6-2019 | 11:30: 3ms. Got: 1 - geen
+1-6-2019 | 11:30: 5ms. Got: 2 - Basissus Schoolus
+1-6-2019 | 11:30: 6ms. Got: 3 - Nog een skool
+1-6-2019 | 11:30: 9ms. Found 3 schools.
+1-6-2019 | 11:30: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[Startup]
+1-6-2019 | 11:30: 3ms. Launching server
+1-6-2019 | 11:30: 7ms. Server is up
+1-6-2019 | 11:30: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[CheckLogin]
+1-6-2019 | 11:31: 1ms. Checking login for UberAdmin
+1-6-2019 | 11:31: 29ms. Found UberAdmin
+1-6-2019 | 11:31: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[RetrieveUser]
+1-6-2019 | 11:31: 1ms. Retrieving user 2
+1-6-2019 | 11:31: 7ms. Found user 2
+1-6-2019 | 11:31: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[RetrieveSchools]
+1-6-2019 | 11:31: 1ms. Attempting to retrieve schools
+1-6-2019 | 11:31: 3ms. Got: 1 - geen
+1-6-2019 | 11:31: 5ms. Got: 2 - Basissus Schoolus
+1-6-2019 | 11:31: 6ms. Got: 3 - Nog een skool
+1-6-2019 | 11:31: 9ms. Found 3 schools.
+1-6-2019 | 11:31: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[RetrieveAllUsers]
+1-6-2019 | 11:31: 4ms. Retrieving all users
+1-6-2019 | 11:31: 7ms. Got: 1 - System
+1-6-2019 | 11:31: 10ms. Got: 2 - UberAdmin
+1-6-2019 | 11:31: 12ms. Got: 3 - Admin
+1-6-2019 | 11:31: 13ms. Got: 4 - JMuris
+1-6-2019 | 11:31: 15ms. Got: 5 - AAppel
+1-6-2019 | 11:31: 16ms. Got: 6 - BBatsbak
+1-6-2019 | 11:31: 18ms. Got: 7 - CCakkie
+1-6-2019 | 11:31: 20ms. Got: 8 - DDik
+1-6-2019 | 11:31: 22ms. Found 8users
+1-6-2019 | 11:31: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[RetrieveSchools]
+1-6-2019 | 11:31: 1ms. Attempting to retrieve schools
+1-6-2019 | 11:31: 3ms. Got: 1 - geen
+1-6-2019 | 11:31: 5ms. Got: 2 - Basissus Schoolus
+1-6-2019 | 11:31: 6ms. Got: 3 - Nog een skool
+1-6-2019 | 11:31: 9ms. Found 3 schools.
+1-6-2019 | 11:31: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[Startup]
+1-6-2019 | 11:32: 3ms. Launching server
+1-6-2019 | 11:32: 10ms. Server is up
+1-6-2019 | 11:32: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[CheckLogin]
+1-6-2019 | 11:32: 1ms. Checking login for UberAdmin
+1-6-2019 | 11:32: 29ms. Found UberAdmin
+1-6-2019 | 11:32: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[RetrieveUser]
+1-6-2019 | 11:32: 1ms. Retrieving user 2
+1-6-2019 | 11:32: 6ms. Found user 2
+1-6-2019 | 11:32: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[RetrieveSchools]
+1-6-2019 | 11:32: 1ms. Attempting to retrieve schools
+1-6-2019 | 11:32: 4ms. Got: 1 - geen
+1-6-2019 | 11:32: 5ms. Got: 2 - Basissus Schoolus
+1-6-2019 | 11:32: 6ms. Got: 3 - Nog een skool
+1-6-2019 | 11:32: 9ms. Found 3 schools.
+1-6-2019 | 11:32: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[RetrieveSchools]
+1-6-2019 | 11:32: 1ms. Attempting to retrieve schools
+1-6-2019 | 11:32: 3ms. Got: 1 - geen
+1-6-2019 | 11:32: 5ms. Got: 2 - Basissus Schoolus
+1-6-2019 | 11:32: 6ms. Got: 3 - Nog een skool
+1-6-2019 | 11:32: 9ms. Found 3 schools.
+1-6-2019 | 11:32: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[RetrieveSchools]
+1-6-2019 | 11:32: 1ms. Attempting to retrieve schools
+1-6-2019 | 11:32: 3ms. Got: 1 - geen
+1-6-2019 | 11:32: 5ms. Got: 2 - Basissus Schoolus
+1-6-2019 | 11:32: 7ms. Got: 3 - Nog een skool
+1-6-2019 | 11:32: 10ms. Found 3 schools.
+1-6-2019 | 11:32: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[RetrieveSchools]
+1-6-2019 | 11:32: 1ms. Attempting to retrieve schools
+1-6-2019 | 11:32: 3ms. Got: 1 - geen
+1-6-2019 | 11:32: 4ms. Got: 2 - Basissus Schoolus
+1-6-2019 | 11:32: 5ms. Got: 3 - Nog een skool
+1-6-2019 | 11:32: 8ms. Found 3 schools.
+1-6-2019 | 11:32: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[RetrieveSchools]
+1-6-2019 | 11:32: 1ms. Attempting to retrieve schools
+1-6-2019 | 11:32: 4ms. Got: 1 - geen
+1-6-2019 | 11:32: 5ms. Got: 2 - Basissus Schoolus
+1-6-2019 | 11:32: 7ms. Got: 3 - Nog een skool
+1-6-2019 | 11:32: 10ms. Found 3 schools.
+1-6-2019 | 11:32: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[RetrieveAllUsers]
+1-6-2019 | 11:32: 1ms. Retrieving all users
+1-6-2019 | 11:32: 3ms. Got: 1 - System
+1-6-2019 | 11:32: 5ms. Got: 2 - UberAdmin
+1-6-2019 | 11:32: 6ms. Got: 3 - Admin
+1-6-2019 | 11:32: 8ms. Got: 4 - JMuris
+1-6-2019 | 11:32: 9ms. Got: 5 - AAppel
+1-6-2019 | 11:32: 10ms. Got: 6 - BBatsbak
+1-6-2019 | 11:32: 12ms. Got: 7 - CCakkie
+1-6-2019 | 11:32: 14ms. Got: 8 - DDik
+1-6-2019 | 11:32: 17ms. Found 8users
+1-6-2019 | 11:32: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[RetrieveSchools]
+1-6-2019 | 11:32: 1ms. Attempting to retrieve schools
+1-6-2019 | 11:32: 3ms. Got: 1 - geen
+1-6-2019 | 11:32: 5ms. Got: 2 - Basissus Schoolus
+1-6-2019 | 11:32: 7ms. Got: 3 - Nog een skool
+1-6-2019 | 11:32: 9ms. Found 3 schools.
+1-6-2019 | 11:32: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[CheckLogin]
+1-6-2019 | 11:32: 1ms. Checking login for Admin
+1-6-2019 | 11:32: 7ms. Found Admin
+1-6-2019 | 11:32: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[RetrieveUser]
+1-6-2019 | 11:32: 1ms. Retrieving user 3
+1-6-2019 | 11:32: 5ms. Found user 3
+1-6-2019 | 11:32: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[RetrieveSchools]
+1-6-2019 | 11:32: 2ms. Attempting to retrieve schools
+1-6-2019 | 11:32: 4ms. Got: 1 - geen
+1-6-2019 | 11:32: 6ms. Got: 2 - Basissus Schoolus
+1-6-2019 | 11:32: 7ms. Got: 3 - Nog een skool
+1-6-2019 | 11:32: 10ms. Found 3 schools.
+1-6-2019 | 11:32: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[RetrieveAllUsers]
+1-6-2019 | 11:32: 1ms. Retrieving all users
+1-6-2019 | 11:32: 3ms. Got: 1 - System
+1-6-2019 | 11:32: 4ms. Got: 2 - UberAdmin
+1-6-2019 | 11:32: 6ms. Got: 3 - Admin
+1-6-2019 | 11:32: 7ms. Got: 4 - JMuris
+1-6-2019 | 11:32: 8ms. Got: 5 - AAppel
+1-6-2019 | 11:32: 10ms. Got: 6 - BBatsbak
+1-6-2019 | 11:32: 11ms. Got: 7 - CCakkie
+1-6-2019 | 11:32: 12ms. Got: 8 - DDik
+1-6-2019 | 11:32: 15ms. Found 8users
+1-6-2019 | 11:32: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[RetrieveStoryQueue]
+1-6-2019 | 11:32: 1ms. Attempting to retrieve story queue
+1-6-2019 | 11:32: 4ms. Got: 4 - Rootie tootie, status: 0
+1-6-2019 | 11:32: 7ms. Found 1 stories.
+1-6-2019 | 11:32: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[Startup]
+1-6-2019 | 11:33: 3ms. Launching server
+1-6-2019 | 11:33: 8ms. Server is up
+1-6-2019 | 11:33: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[CheckLogin]
+1-6-2019 | 11:39: 1ms. Checking login for AAppel
+1-6-2019 | 11:39: 34ms. Found AAppel
+1-6-2019 | 11:39: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[RetrieveUser]
+1-6-2019 | 11:39: 1ms. Retrieving user 5
+1-6-2019 | 11:39: 6ms. Found user 5
+1-6-2019 | 11:39: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[EditUserNames]
+1-6-2019 | 11:39: 1ms. Trying to edit user Aarietje
+1-6-2019 | 11:39: 3ms. Values are: - Name: Aarietje;
+- Surname: Appeltje;
+- Username: AAppeltje
+1-6-2019 | 11:39: 10ms. Edited user with id 5
+1-6-2019 | 11:39: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[CheckLogin]
+1-6-2019 | 11:39: 1ms. Checking login for AAppel
+1-6-2019 | 11:39: 5ms. Did not find AAppel
+1-6-2019 | 11:39: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[CheckLogin]
+1-6-2019 | 11:39: 1ms. Checking login for AAppeltje
+1-6-2019 | 11:39: 5ms. Found AAppeltje
+1-6-2019 | 11:39: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[RetrieveUser]
+1-6-2019 | 11:39: 1ms. Retrieving user 5
+1-6-2019 | 11:39: 4ms. Found user 5
+1-6-2019 | 11:39: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[CheckLogin]
+1-6-2019 | 11:40: 1ms. Checking login for AAppeltje
+1-6-2019 | 11:40: 8ms. Did not find AAppeltje
+1-6-2019 | 11:40: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[CheckLogin]
+1-6-2019 | 11:40: 1ms. Checking login for AAppeltje
+1-6-2019 | 11:40: 5ms. Found AAppeltje
+1-6-2019 | 11:40: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[EditPassword]
+1-6-2019 | 11:40: 8ms. Changing password of AAppeltje
+1-6-2019 | 11:40: 14Password changed.
+1-6-2019 | 11:40: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[CheckLogin]
+1-6-2019 | 11:40: 1ms. Checking login for AAppeltje
+1-6-2019 | 11:40: 5ms. Did not find AAppeltje
+1-6-2019 | 11:40: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[CheckLogin]
+1-6-2019 | 11:40: 1ms. Checking login for AAppeltje
+1-6-2019 | 11:40: 5ms. Found AAppeltje
+1-6-2019 | 11:40: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[RetrieveUser]
+1-6-2019 | 11:40: 1ms. Retrieving user 5
+1-6-2019 | 11:40: 5ms. Found user 5
+1-6-2019 | 11:40: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[CheckLogin]
+1-6-2019 | 11:42: 1ms. Checking login for JMuris
+1-6-2019 | 11:42: 9ms. Found JMuris
+1-6-2019 | 11:42: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[RetrieveUser]
+1-6-2019 | 11:42: 1ms. Retrieving user 4
+1-6-2019 | 11:42: 5ms. Found user 4
+1-6-2019 | 11:42: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[RetrieveUserListByGroup]
+1-6-2019 | 11:42: 1ms. Retrieving users from group 2
+1-6-2019 | 11:42: 4ms. Got: 5 - AAppeltje
+1-6-2019 | 11:42: 5ms. Got: 6 - BBatsbak
+1-6-2019 | 11:42: 8ms. Found 2users
+1-6-2019 | 11:42: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[GenerateAverage]
+1-6-2019 | 11:42: 2 users.
+1-6-2019 | 11:42: Generating average for 2 users.
+---[DEBUG MSG START]---
+[RetrieveScoresOfUser]
+1-6-2019 | 11:42: 1ms. Retrieving scores of user 5
+1-6-2019 | 11:42: Got: 1
+1-6-2019 | 11:42: Got: 2
+1-6-2019 | 11:42: Got: 3
+1-6-2019 | 11:42: 10ms. Found 3 scores from user 5
+1-6-2019 | 11:42: End.
+---[DEBUG MSG END]---
+
+1-6-2019 | 11:42: User AAppeltje has 3 scores to his/her name.
+1-6-2019 | 11:42: Score 1: 9 correct answers from here on out.
+1-6-2019 | 11:42: Score 2: 30 correct answers from here on out.
+1-6-2019 | 11:42: Score 3: 30 correct answers from here on out.
+1-6-2019 | 11:42: 30/50 = 6,0
+1-6-2019 | 11:42: Average score: 6.
+---[DEBUG MSG START]---
+[RetrieveScoresOfUser]
+1-6-2019 | 11:42: 1ms. Retrieving scores of user 6
+1-6-2019 | 11:42: Got: 4
+1-6-2019 | 11:42: Got: 5
+1-6-2019 | 11:42: Got: 6
+1-6-2019 | 11:42: 11ms. Found 3 scores from user 6
+1-6-2019 | 11:42: End.
+---[DEBUG MSG END]---
+
+1-6-2019 | 11:42: User BBatsbak has 3 scores to his/her name.
+1-6-2019 | 11:42: Score 4: 1 correct answers from here on out.
+1-6-2019 | 11:42: Score 5: 18 correct answers from here on out.
+1-6-2019 | 11:42: Score 6: 33 correct answers from here on out.
+1-6-2019 | 11:42: 33/49 = 6,7346938775510204081632653060
+1-6-2019 | 11:42: Average score: 6,73469387755102.
+1-6-2019 | 11:42: Class average is 6,36734693877551
+1-6-2019 | 11:42: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[CheckLogin]
+1-6-2019 | 11:43: 1ms. Checking login for Admin
+1-6-2019 | 11:43: 7ms. Found Admin
+1-6-2019 | 11:43: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[RetrieveUser]
+1-6-2019 | 11:43: 1ms. Retrieving user 3
+1-6-2019 | 11:43: 4ms. Found user 3
+1-6-2019 | 11:43: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[RetrieveSchools]
+1-6-2019 | 11:43: 1ms. Attempting to retrieve schools
+1-6-2019 | 11:43: 3ms. Got: 1 - geen
+1-6-2019 | 11:43: 5ms. Got: 2 - Basissus Schoolus
+1-6-2019 | 11:43: 7ms. Got: 3 - Nog een skool
+1-6-2019 | 11:43: 9ms. Found 3 schools.
+1-6-2019 | 11:43: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[RetrieveAllUsers]
+1-6-2019 | 11:43: 1ms. Retrieving all users
+1-6-2019 | 11:43: 3ms. Got: 1 - System
+1-6-2019 | 11:43: 5ms. Got: 2 - UberAdmin
+1-6-2019 | 11:43: 6ms. Got: 3 - Admin
+1-6-2019 | 11:43: 8ms. Got: 4 - JMuris
+1-6-2019 | 11:43: 9ms. Got: 5 - AAppeltje
+1-6-2019 | 11:43: 11ms. Got: 6 - BBatsbak
+1-6-2019 | 11:43: 12ms. Got: 7 - CCakkie
+1-6-2019 | 11:43: 14ms. Got: 8 - DDik
+1-6-2019 | 11:43: 16ms. Found 8users
+1-6-2019 | 11:43: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[RetrieveStoryQueue]
+1-6-2019 | 11:43: 1ms. Attempting to retrieve story queue
+1-6-2019 | 11:43: 4ms. Got: 4 - Rootie tootie, status: 0
+1-6-2019 | 11:43: 7ms. Found 1 stories.
+1-6-2019 | 11:43: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[RetrieveSchools]
+1-6-2019 | 11:43: 1ms. Attempting to retrieve schools
+1-6-2019 | 11:43: 3ms. Got: 1 - geen
+1-6-2019 | 11:43: 5ms. Got: 2 - Basissus Schoolus
+1-6-2019 | 11:43: 6ms. Got: 3 - Nog een skool
+1-6-2019 | 11:43: 9ms. Found 3 schools.
+1-6-2019 | 11:43: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[CheckLogin]
+1-6-2019 | 11:43: 1ms. Checking login for UberAdmin
+1-6-2019 | 11:43: 4ms. Found UberAdmin
+1-6-2019 | 11:43: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[RetrieveUser]
+1-6-2019 | 11:43: 1ms. Retrieving user 2
+1-6-2019 | 11:43: 4ms. Found user 2
+1-6-2019 | 11:43: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[RetrieveSchools]
+1-6-2019 | 11:43: 1ms. Attempting to retrieve schools
+1-6-2019 | 11:43: 3ms. Got: 1 - geen
+1-6-2019 | 11:43: 5ms. Got: 2 - Basissus Schoolus
+1-6-2019 | 11:43: 6ms. Got: 3 - Nog een skool
+1-6-2019 | 11:43: 10ms. Found 3 schools.
+1-6-2019 | 11:43: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[RetrieveAllUsers]
+1-6-2019 | 11:43: 1ms. Retrieving all users
+1-6-2019 | 11:43: 3ms. Got: 1 - System
+1-6-2019 | 11:43: 5ms. Got: 2 - UberAdmin
+1-6-2019 | 11:43: 6ms. Got: 3 - Admin
+1-6-2019 | 11:43: 8ms. Got: 4 - JMuris
+1-6-2019 | 11:43: 9ms. Got: 5 - AAppeltje
+1-6-2019 | 11:43: 10ms. Got: 6 - BBatsbak
+1-6-2019 | 11:43: 12ms. Got: 7 - CCakkie
+1-6-2019 | 11:43: 13ms. Got: 8 - DDik
+1-6-2019 | 11:43: 16ms. Found 8users
+1-6-2019 | 11:43: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[RetrieveSchools]
+1-6-2019 | 11:43: 1ms. Attempting to retrieve schools
+1-6-2019 | 11:43: 3ms. Got: 1 - geen
+1-6-2019 | 11:43: 5ms. Got: 2 - Basissus Schoolus
+1-6-2019 | 11:43: 6ms. Got: 3 - Nog een skool
+1-6-2019 | 11:43: 9ms. Found 3 schools.
+1-6-2019 | 11:43: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[CheckLogin]
+1-6-2019 | 11:44: 1ms. Checking login for AAppeltje
+1-6-2019 | 11:44: 7ms. Found AAppeltje
+1-6-2019 | 11:44: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[RetrieveUser]
+1-6-2019 | 11:44: 1ms. Retrieving user 5
+1-6-2019 | 11:44: 4ms. Found user 5
+1-6-2019 | 11:44: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[RetrieveUser]
+1-6-2019 | 11:44: 1ms. Retrieving user 5
+1-6-2019 | 11:44: 5ms. Found user 5
+1-6-2019 | 11:44: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[RetrieveStoriesOfUser]
+1-6-2019 | 11:44: 1ms. Attempting to retrieve stories of user 5
+1-6-2019 | 11:44: 4ms. Got: 2 - Een verhaal
+1-6-2019 | 11:44: 7ms. Found 1 stories from user 5
+1-6-2019 | 11:44: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[RetrieveScoresOfUser]
+1-6-2019 | 11:44: 1ms. Retrieving scores of user 5
+1-6-2019 | 11:44: Got: 1
+1-6-2019 | 11:44: Got: 2
+1-6-2019 | 11:44: Got: 3
+1-6-2019 | 11:44: 10ms. Found 3 scores from user 5
+1-6-2019 | 11:44: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[RetrieveStory]
+1-6-2019 | 11:44: 1ms. Attempting to retrieve story with id 2
+1-6-2019 | 11:44: 5ms. Found story with id 2 - Een verhaal
+---[DEBUG MSG START]---
+[RetrieveUser]
+1-6-2019 | 11:44: 2ms. Retrieving user 5
+1-6-2019 | 11:44: 5ms. Found user 5
+1-6-2019 | 11:44: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[RetrieveStoriesOfUser]
+1-6-2019 | 11:44: 1ms. Attempting to retrieve stories of user 5
+1-6-2019 | 11:44: 3ms. Got: 2 - Een verhaal
+1-6-2019 | 11:44: 6ms. Found 1 stories from user 5
+1-6-2019 | 11:44: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[RetrieveScoresOfUser]
+1-6-2019 | 11:44: 1ms. Retrieving scores of user 5
+1-6-2019 | 11:44: Got: 1
+1-6-2019 | 11:44: Got: 2
+1-6-2019 | 11:44: Got: 3
+1-6-2019 | 11:44: 8ms. Found 3 scores from user 5
+1-6-2019 | 11:44: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[RetrieveScore]
+1-6-2019 | 11:44: 1ms. Attempting to retrieve score with id 1
+1-6-2019 | 11:44: 5ms. Found score with id 1
+---[DEBUG MSG START]---
+[RetrieveUser]
+1-6-2019 | 11:44: 1ms. Retrieving user 5
+1-6-2019 | 11:44: 5ms. Found user 5
+1-6-2019 | 11:44: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[RetrieveStoriesOfUser]
+1-6-2019 | 11:44: 1ms. Attempting to retrieve stories of user 5
+1-6-2019 | 11:44: 3ms. Got: 2 - Een verhaal
+1-6-2019 | 11:44: 7ms. Found 1 stories from user 5
+1-6-2019 | 11:44: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[RetrieveScoresOfUser]
+1-6-2019 | 11:44: 2ms. Retrieving scores of user 5
+1-6-2019 | 11:44: Got: 1
+1-6-2019 | 11:44: Got: 2
+1-6-2019 | 11:44: Got: 3
+1-6-2019 | 11:44: 11ms. Found 3 scores from user 5
+1-6-2019 | 11:44: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[CheckLogin]
+1-6-2019 | 11:45: 1ms. Checking login for JMuris
+1-6-2019 | 11:45: 8ms. Found JMuris
+1-6-2019 | 11:45: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[RetrieveUser]
+1-6-2019 | 11:45: 1ms. Retrieving user 4
+1-6-2019 | 11:45: 5ms. Found user 4
+1-6-2019 | 11:45: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[RetrieveUserListByGroup]
+1-6-2019 | 11:45: 1ms. Retrieving users from group 2
+1-6-2019 | 11:45: 3ms. Got: 5 - AAppeltje
+1-6-2019 | 11:45: 5ms. Got: 6 - BBatsbak
+1-6-2019 | 11:45: 8ms. Found 2users
+1-6-2019 | 11:45: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[GenerateAverage]
+1-6-2019 | 11:45: 2 users.
+1-6-2019 | 11:45: Generating average for 2 users.
+---[DEBUG MSG START]---
+[RetrieveScoresOfUser]
+1-6-2019 | 11:45: 1ms. Retrieving scores of user 5
+1-6-2019 | 11:45: Got: 1
+1-6-2019 | 11:45: Got: 2
+1-6-2019 | 11:45: Got: 3
+1-6-2019 | 11:45: 8ms. Found 3 scores from user 5
+1-6-2019 | 11:45: End.
+---[DEBUG MSG END]---
+
+1-6-2019 | 11:45: User AAppeltje has 3 scores to his/her name.
+1-6-2019 | 11:45: Score 1: 9 correct answers from here on out.
+1-6-2019 | 11:45: Score 2: 30 correct answers from here on out.
+1-6-2019 | 11:45: Score 3: 30 correct answers from here on out.
+1-6-2019 | 11:45: 30/50 = 6,0
+1-6-2019 | 11:45: Average score: 6.
+---[DEBUG MSG START]---
+[RetrieveScoresOfUser]
+1-6-2019 | 11:45: 1ms. Retrieving scores of user 6
+1-6-2019 | 11:45: Got: 4
+1-6-2019 | 11:45: Got: 5
+1-6-2019 | 11:45: Got: 6
+1-6-2019 | 11:45: 8ms. Found 3 scores from user 6
+1-6-2019 | 11:45: End.
+---[DEBUG MSG END]---
+
+1-6-2019 | 11:45: User BBatsbak has 3 scores to his/her name.
+1-6-2019 | 11:45: Score 4: 1 correct answers from here on out.
+1-6-2019 | 11:45: Score 5: 18 correct answers from here on out.
+1-6-2019 | 11:45: Score 6: 33 correct answers from here on out.
+1-6-2019 | 11:45: 33/49 = 6,7346938775510204081632653060
+1-6-2019 | 11:45: Average score: 6,73469387755102.
+1-6-2019 | 11:45: Class average is 6,36734693877551
+1-6-2019 | 11:45: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[RetrieveUser]
+1-6-2019 | 11:45: 1ms. Retrieving user 5
+1-6-2019 | 11:45: 4ms. Found user 5
+1-6-2019 | 11:45: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[RetrieveStoriesOfUser]
+1-6-2019 | 11:45: 1ms. Attempting to retrieve stories of user 5
+1-6-2019 | 11:45: 3ms. Got: 2 - Een verhaal
+1-6-2019 | 11:45: 7ms. Found 1 stories from user 5
+1-6-2019 | 11:45: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[RetrieveScoresOfUser]
+1-6-2019 | 11:45: 1ms. Retrieving scores of user 5
+1-6-2019 | 11:45: Got: 1
+1-6-2019 | 11:45: Got: 2
+1-6-2019 | 11:45: Got: 3
+1-6-2019 | 11:45: 8ms. Found 3 scores from user 5
+1-6-2019 | 11:45: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[RetrieveUser]
+1-6-2019 | 11:45: 1ms. Retrieving user 5
+1-6-2019 | 11:45: 5ms. Found user 5
+1-6-2019 | 11:45: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[RetrieveStory]
+1-6-2019 | 11:45: 1ms. Attempting to retrieve story with id 2
+1-6-2019 | 11:45: 8ms. Found story with id 2 - Een verhaal
+---[DEBUG MSG START]---
+[RetrieveUser]
+1-6-2019 | 11:45: 1ms. Retrieving user 5
+1-6-2019 | 11:45: 4ms. Found user 5
+1-6-2019 | 11:45: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[RetrieveStoriesOfUser]
+1-6-2019 | 11:45: 1ms. Attempting to retrieve stories of user 5
+1-6-2019 | 11:45: 2ms. Got: 2 - Een verhaal
+1-6-2019 | 11:45: 5ms. Found 1 stories from user 5
+1-6-2019 | 11:45: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[RetrieveScoresOfUser]
+1-6-2019 | 11:45: 1ms. Retrieving scores of user 5
+1-6-2019 | 11:45: Got: 1
+1-6-2019 | 11:45: Got: 2
+1-6-2019 | 11:45: Got: 3
+1-6-2019 | 11:45: 8ms. Found 3 scores from user 5
+1-6-2019 | 11:45: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[RetrieveUser]
+1-6-2019 | 11:45: 1ms. Retrieving user 5
+1-6-2019 | 11:45: 5ms. Found user 5
+1-6-2019 | 11:45: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[RetrieveScore]
+1-6-2019 | 11:45: 1ms. Attempting to retrieve score with id 1
+1-6-2019 | 11:45: 4ms. Found score with id 1
+---[DEBUG MSG START]---
+[RetrieveUser]
+1-6-2019 | 11:45: 1ms. Retrieving user 5
+1-6-2019 | 11:45: 4ms. Found user 5
+1-6-2019 | 11:45: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[RetrieveStoriesOfUser]
+1-6-2019 | 11:45: 1ms. Attempting to retrieve stories of user 5
+1-6-2019 | 11:45: 4ms. Got: 2 - Een verhaal
+1-6-2019 | 11:45: 7ms. Found 1 stories from user 5
+1-6-2019 | 11:45: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[RetrieveScoresOfUser]
+1-6-2019 | 11:45: 1ms. Retrieving scores of user 5
+1-6-2019 | 11:45: Got: 1
+1-6-2019 | 11:45: Got: 2
+1-6-2019 | 11:45: Got: 3
+1-6-2019 | 11:45: 8ms. Found 3 scores from user 5
+1-6-2019 | 11:45: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[RetrieveUserListByGroup]
+1-6-2019 | 11:46: 1ms. Retrieving users from group 2
+1-6-2019 | 11:46: 3ms. Got: 5 - AAppeltje
+1-6-2019 | 11:46: 5ms. Got: 6 - BBatsbak
+1-6-2019 | 11:46: 8ms. Found 2users
+1-6-2019 | 11:46: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[GenerateAverage]
+1-6-2019 | 11:46: 2 users.
+1-6-2019 | 11:46: Generating average for 2 users.
+---[DEBUG MSG START]---
+[RetrieveScoresOfUser]
+1-6-2019 | 11:46: 1ms. Retrieving scores of user 5
+1-6-2019 | 11:46: Got: 1
+1-6-2019 | 11:46: Got: 2
+1-6-2019 | 11:46: Got: 3
+1-6-2019 | 11:46: 10ms. Found 3 scores from user 5
+1-6-2019 | 11:46: End.
+---[DEBUG MSG END]---
+
+1-6-2019 | 11:46: User AAppeltje has 3 scores to his/her name.
+1-6-2019 | 11:46: Score 1: 9 correct answers from here on out.
+1-6-2019 | 11:46: Score 2: 30 correct answers from here on out.
+1-6-2019 | 11:46: Score 3: 30 correct answers from here on out.
+1-6-2019 | 11:46: 30/50 = 6,0
+1-6-2019 | 11:46: Average score: 6.
+---[DEBUG MSG START]---
+[RetrieveScoresOfUser]
+1-6-2019 | 11:46: 1ms. Retrieving scores of user 6
+1-6-2019 | 11:46: Got: 4
+1-6-2019 | 11:46: Got: 5
+1-6-2019 | 11:46: Got: 6
+1-6-2019 | 11:46: 8ms. Found 3 scores from user 6
+1-6-2019 | 11:46: End.
+---[DEBUG MSG END]---
+
+1-6-2019 | 11:46: User BBatsbak has 3 scores to his/her name.
+1-6-2019 | 11:46: Score 4: 1 correct answers from here on out.
+1-6-2019 | 11:46: Score 5: 18 correct answers from here on out.
+1-6-2019 | 11:46: Score 6: 33 correct answers from here on out.
+1-6-2019 | 11:46: 33/49 = 6,7346938775510204081632653060
+1-6-2019 | 11:46: Average score: 6,73469387755102.
+1-6-2019 | 11:46: Class average is 6,36734693877551
+1-6-2019 | 11:46: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[CheckLogin]
+1-6-2019 | 11:46: 1ms. Checking login for JMuris
+1-6-2019 | 11:46: 6ms. Found JMuris
+1-6-2019 | 11:46: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[RetrieveUser]
+1-6-2019 | 11:46: 7ms. Retrieving user 4
+1-6-2019 | 11:46: 10ms. Found user 4
+1-6-2019 | 11:46: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[CheckLogin]
+1-6-2019 | 11:46: 1ms. Checking login for AAppeltje
+1-6-2019 | 11:46: 5ms. Found AAppeltje
+1-6-2019 | 11:46: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[RetrieveUser]
+1-6-2019 | 11:46: 1ms. Retrieving user 5
+1-6-2019 | 11:46: 4ms. Found user 5
+1-6-2019 | 11:46: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[RetrieveUser]
+1-6-2019 | 11:46: 1ms. Retrieving user 5
+1-6-2019 | 11:46: 5ms. Found user 5
+1-6-2019 | 11:46: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[RetrieveStoriesOfUser]
+1-6-2019 | 11:46: 1ms. Attempting to retrieve stories of user 5
+1-6-2019 | 11:46: 3ms. Got: 2 - Een verhaal
+1-6-2019 | 11:46: 5ms. Found 1 stories from user 5
+1-6-2019 | 11:46: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[RetrieveScoresOfUser]
+1-6-2019 | 11:46: 1ms. Retrieving scores of user 5
+1-6-2019 | 11:46: Got: 1
+1-6-2019 | 11:46: Got: 2
+1-6-2019 | 11:46: Got: 3
+1-6-2019 | 11:46: 8ms. Found 3 scores from user 5
+1-6-2019 | 11:46: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[CheckLogin]
+1-6-2019 | 11:47: 1ms. Checking login for JMuris
+1-6-2019 | 11:47: 8ms. Found JMuris
+1-6-2019 | 11:47: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[RetrieveUser]
+1-6-2019 | 11:47: 1ms. Retrieving user 4
+1-6-2019 | 11:47: 4ms. Found user 4
+1-6-2019 | 11:47: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[RetrieveUserListByGroup]
+1-6-2019 | 11:47: 1ms. Retrieving users from group 2
+1-6-2019 | 11:47: 4ms. Got: 5 - AAppeltje
+1-6-2019 | 11:47: 6ms. Got: 6 - BBatsbak
+1-6-2019 | 11:47: 10ms. Found 2users
+1-6-2019 | 11:47: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[GenerateAverage]
+1-6-2019 | 11:47: 2 users.
+1-6-2019 | 11:47: Generating average for 2 users.
+---[DEBUG MSG START]---
+[RetrieveScoresOfUser]
+1-6-2019 | 11:47: 1ms. Retrieving scores of user 5
+1-6-2019 | 11:47: Got: 1
+1-6-2019 | 11:47: Got: 2
+1-6-2019 | 11:47: Got: 3
+1-6-2019 | 11:47: 11ms. Found 3 scores from user 5
+1-6-2019 | 11:47: End.
+---[DEBUG MSG END]---
+
+1-6-2019 | 11:47: User AAppeltje has 3 scores to his/her name.
+1-6-2019 | 11:47: Score 1: 9 correct answers from here on out.
+1-6-2019 | 11:47: Score 2: 30 correct answers from here on out.
+1-6-2019 | 11:47: Score 3: 30 correct answers from here on out.
+1-6-2019 | 11:47: 30/50 = 6,0
+1-6-2019 | 11:47: Average score: 6.
+---[DEBUG MSG START]---
+[RetrieveScoresOfUser]
+1-6-2019 | 11:47: 1ms. Retrieving scores of user 6
+1-6-2019 | 11:47: Got: 4
+1-6-2019 | 11:47: Got: 5
+1-6-2019 | 11:47: Got: 6
+1-6-2019 | 11:47: 9ms. Found 3 scores from user 6
+1-6-2019 | 11:47: End.
+---[DEBUG MSG END]---
+
+1-6-2019 | 11:47: User BBatsbak has 3 scores to his/her name.
+1-6-2019 | 11:47: Score 4: 1 correct answers from here on out.
+1-6-2019 | 11:47: Score 5: 18 correct answers from here on out.
+1-6-2019 | 11:47: Score 6: 33 correct answers from here on out.
+1-6-2019 | 11:47: 33/49 = 6,7346938775510204081632653060
+1-6-2019 | 11:47: Average score: 6,73469387755102.
+1-6-2019 | 11:47: Class average is 6,36734693877551
+1-6-2019 | 11:47: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[RetrieveUserListByGroup]
+1-6-2019 | 11:47: 1ms. Retrieving users from group 2
+1-6-2019 | 11:47: 3ms. Got: 5 - AAppeltje
+1-6-2019 | 11:47: 4ms. Got: 6 - BBatsbak
+1-6-2019 | 11:47: 7ms. Found 2users
+1-6-2019 | 11:47: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[GenerateAverage]
+1-6-2019 | 11:47: 2 users.
+1-6-2019 | 11:47: Generating average for 2 users.
+---[DEBUG MSG START]---
+[RetrieveScoresOfUser]
+1-6-2019 | 11:47: 1ms. Retrieving scores of user 5
+1-6-2019 | 11:47: Got: 1
+1-6-2019 | 11:47: Got: 2
+1-6-2019 | 11:47: Got: 3
+1-6-2019 | 11:47: 8ms. Found 3 scores from user 5
+1-6-2019 | 11:47: End.
+---[DEBUG MSG END]---
+
+1-6-2019 | 11:47: User AAppeltje has 3 scores to his/her name.
+1-6-2019 | 11:47: Score 1: 9 correct answers from here on out.
+1-6-2019 | 11:47: Score 2: 30 correct answers from here on out.
+1-6-2019 | 11:47: Score 3: 30 correct answers from here on out.
+1-6-2019 | 11:47: 30/50 = 6,0
+1-6-2019 | 11:47: Average score: 6.
+---[DEBUG MSG START]---
+[RetrieveScoresOfUser]
+1-6-2019 | 11:47: 1ms. Retrieving scores of user 6
+1-6-2019 | 11:47: Got: 4
+1-6-2019 | 11:47: Got: 5
+1-6-2019 | 11:47: Got: 6
+1-6-2019 | 11:47: 7ms. Found 3 scores from user 6
+1-6-2019 | 11:47: End.
+---[DEBUG MSG END]---
+
+1-6-2019 | 11:47: User BBatsbak has 3 scores to his/her name.
+1-6-2019 | 11:47: Score 4: 1 correct answers from here on out.
+1-6-2019 | 11:47: Score 5: 18 correct answers from here on out.
+1-6-2019 | 11:47: Score 6: 33 correct answers from here on out.
+1-6-2019 | 11:47: 33/49 = 6,7346938775510204081632653060
+1-6-2019 | 11:47: Average score: 6,73469387755102.
+1-6-2019 | 11:47: Class average is 6,36734693877551
+1-6-2019 | 11:47: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[RetrieveUser]
+1-6-2019 | 11:48: 1ms. Retrieving user 6
+1-6-2019 | 11:48: 7ms. Found user 6
+1-6-2019 | 11:48: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[RetrieveStoriesOfUser]
+1-6-2019 | 11:48: 1ms. Attempting to retrieve stories of user 6
+1-6-2019 | 11:48: 3ms. Got: 3 - Nog een verhaal
+1-6-2019 | 11:48: 7ms. Found 1 stories from user 6
+1-6-2019 | 11:48: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[RetrieveScoresOfUser]
+1-6-2019 | 11:48: 1ms. Retrieving scores of user 6
+1-6-2019 | 11:48: Got: 4
+1-6-2019 | 11:48: Got: 5
+1-6-2019 | 11:48: Got: 6
+1-6-2019 | 11:48: 11ms. Found 3 scores from user 6
+1-6-2019 | 11:48: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[CheckLogin]
+1-6-2019 | 11:49: 1ms. Checking login for Admin
+1-6-2019 | 11:49: 8ms. Found Admin
+1-6-2019 | 11:49: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[RetrieveUser]
+1-6-2019 | 11:49: 1ms. Retrieving user 3
+1-6-2019 | 11:49: 5ms. Found user 3
+1-6-2019 | 11:49: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[RetrieveSchools]
+1-6-2019 | 11:49: 1ms. Attempting to retrieve schools
+1-6-2019 | 11:49: 3ms. Got: 1 - geen
+1-6-2019 | 11:49: 5ms. Got: 2 - Basissus Schoolus
+1-6-2019 | 11:49: 6ms. Got: 3 - Nog een skool
+1-6-2019 | 11:49: 9ms. Found 3 schools.
+1-6-2019 | 11:49: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[RetrieveAllUsers]
+1-6-2019 | 11:49: 1ms. Retrieving all users
+1-6-2019 | 11:49: 4ms. Got: 1 - System
+1-6-2019 | 11:49: 5ms. Got: 2 - UberAdmin
+1-6-2019 | 11:49: 7ms. Got: 3 - Admin
+1-6-2019 | 11:49: 8ms. Got: 4 - JMuris
+1-6-2019 | 11:49: 9ms. Got: 5 - AAppeltje
+1-6-2019 | 11:49: 11ms. Got: 6 - BBatsbak
+1-6-2019 | 11:49: 12ms. Got: 7 - CCakkie
+1-6-2019 | 11:49: 14ms. Got: 8 - DDik
+1-6-2019 | 11:49: 17ms. Found 8users
+1-6-2019 | 11:49: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[RetrieveStoryQueue]
+1-6-2019 | 11:49: 1ms. Attempting to retrieve story queue
+1-6-2019 | 11:49: 4ms. Got: 4 - Rootie tootie, status: 0
+1-6-2019 | 11:49: 7ms. Found 1 stories.
+1-6-2019 | 11:49: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[RetrieveAllUsers]
+1-6-2019 | 11:49: 1ms. Retrieving all users
+1-6-2019 | 11:49: 3ms. Got: 1 - System
+1-6-2019 | 11:49: 5ms. Got: 2 - UberAdmin
+1-6-2019 | 11:49: 6ms. Got: 3 - Admin
+1-6-2019 | 11:49: 8ms. Got: 4 - JMuris
+1-6-2019 | 11:49: 9ms. Got: 5 - AAppeltje
+1-6-2019 | 11:49: 11ms. Got: 6 - BBatsbak
+1-6-2019 | 11:49: 12ms. Got: 7 - CCakkie
+1-6-2019 | 11:49: 13ms. Got: 8 - DDik
+1-6-2019 | 11:49: 16ms. Found 8users
+1-6-2019 | 11:49: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[RetrieveUser]
+1-6-2019 | 11:49: 1ms. Retrieving user 4
+1-6-2019 | 11:49: 4ms. Found user 4
+1-6-2019 | 11:49: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[RetrieveAllUsers]
+1-6-2019 | 11:49: 1ms. Retrieving all users
+1-6-2019 | 11:49: 4ms. Got: 1 - System
+1-6-2019 | 11:49: 6ms. Got: 2 - UberAdmin
+1-6-2019 | 11:49: 7ms. Got: 3 - Admin
+1-6-2019 | 11:49: 9ms. Got: 4 - JMuris
+1-6-2019 | 11:49: 10ms. Got: 5 - AAppeltje
+1-6-2019 | 11:49: 12ms. Got: 6 - BBatsbak
+1-6-2019 | 11:49: 13ms. Got: 7 - CCakkie
+1-6-2019 | 11:49: 15ms. Got: 8 - DDik
+1-6-2019 | 11:49: 18ms. Found 8users
+1-6-2019 | 11:49: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[RetrieveStoryQueue]
+1-6-2019 | 11:52: 1ms. Attempting to retrieve story queue
+1-6-2019 | 11:52: 5ms. Got: 4 - Rootie tootie, status: 0
+1-6-2019 | 11:52: 8ms. Found 1 stories.
+1-6-2019 | 11:52: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[CheckLogin]
+1-6-2019 | 11:53: 1ms. Checking login for UberAdmin
+1-6-2019 | 11:53: 8ms. Found UberAdmin
+1-6-2019 | 11:53: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[RetrieveUser]
+1-6-2019 | 11:53: 1ms. Retrieving user 2
+1-6-2019 | 11:53: 5ms. Found user 2
+1-6-2019 | 11:53: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[RetrieveSchools]
+1-6-2019 | 11:53: 1ms. Attempting to retrieve schools
+1-6-2019 | 11:53: 3ms. Got: 1 - geen
+1-6-2019 | 11:53: 4ms. Got: 2 - Basissus Schoolus
+1-6-2019 | 11:53: 6ms. Got: 3 - Nog een skool
+1-6-2019 | 11:53: 9ms. Found 3 schools.
+1-6-2019 | 11:53: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[RetrieveAllUsers]
+1-6-2019 | 11:53: 1ms. Retrieving all users
+1-6-2019 | 11:53: 4ms. Got: 1 - System
+1-6-2019 | 11:53: 6ms. Got: 2 - UberAdmin
+1-6-2019 | 11:53: 7ms. Got: 3 - Admin
+1-6-2019 | 11:53: 8ms. Got: 4 - JMuris
+1-6-2019 | 11:53: 10ms. Got: 5 - AAppeltje
+1-6-2019 | 11:53: 11ms. Got: 6 - BBatsbak
+1-6-2019 | 11:53: 13ms. Got: 7 - CCakkie
+1-6-2019 | 11:53: 15ms. Got: 8 - DDik
+1-6-2019 | 11:53: 18ms. Found 8users
+1-6-2019 | 11:53: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[RetrieveSchools]
+1-6-2019 | 11:53: 1ms. Attempting to retrieve schools
+1-6-2019 | 11:53: 3ms. Got: 1 - geen
+1-6-2019 | 11:53: 5ms. Got: 2 - Basissus Schoolus
+1-6-2019 | 11:53: 6ms. Got: 3 - Nog een skool
+1-6-2019 | 11:53: 9ms. Found 3 schools.
+1-6-2019 | 11:53: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[Startup]
+2-6-2019 | 11:45: 6ms. Launching server
+2-6-2019 | 11:45: 16ms. Server is up
+2-6-2019 | 11:45: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[CheckLogin]
+2-6-2019 | 11:45: 1ms. Checking login for TEST
+2-6-2019 | 11:45: 59ms. Did not find TEST
+2-6-2019 | 11:45: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[Startup]
+2-6-2019 | 11:49: 4ms. Launching server
+2-6-2019 | 11:49: 10ms. Server is up
+2-6-2019 | 11:49: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[CheckLogin]
+2-6-2019 | 11:49: 4ms. Checking login for TEST
+2-6-2019 | 11:49: 38ms. Did not find TEST
+2-6-2019 | 11:49: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[RegisterUser]
+2-6-2019 | 11:49: 2ms. Registering TEST
+2-6-2019 | 11:49: 4ms. Values are: - Role Id: 0;
+- Group Id: 0;
+- Name: TEST;
+- Surname: TEST;
+- Username: TEST
+2-6-2019 | 11:49: 21ms. Failed to register user TEST: The INSERT statement conflicted with the FOREIGN KEY constraint "FK__User__GroupId__5165187F". The conflict occurred in database "WWDB", table "dbo.Group", column 'Id'.
+2-6-2019 | 11:49: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[Startup]
+2-6-2019 | 11:50: 3ms. Launching server
+2-6-2019 | 11:50: 10ms. Server is up
+2-6-2019 | 11:50: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[Startup]
+2-6-2019 | 11:51: 4ms. Launching server
+2-6-2019 | 11:51: 10ms. Server is up
+2-6-2019 | 11:51: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[CheckLogin]
+2-6-2019 | 11:51: 1ms. Checking login for TEST
+2-6-2019 | 11:51: 30ms. Did not find TEST
+2-6-2019 | 11:51: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[RegisterUser]
+2-6-2019 | 11:51: 2ms. Registering TEST
+2-6-2019 | 11:51: 4ms. Values are: - Role Id: 0;
+- Group Id: 1;
+- Name: TEST;
+- Surname: TEST;
+- Username: TEST
+2-6-2019 | 11:51: 12ms. User TEST succesfully registered.
+2-6-2019 | 11:51: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[CheckLogin]
+2-6-2019 | 11:51: 16ms. Checking login for TEST
+2-6-2019 | 11:51: 19ms. Found TEST
+2-6-2019 | 11:51: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[RetrieveUser]
+2-6-2019 | 11:51: 1ms. Retrieving user 10
+2-6-2019 | 11:51: 8ms. Found user 10
+2-6-2019 | 11:51: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[CheckLogin]
+2-6-2019 | 11:51: 1ms. Checking login for TEST
+2-6-2019 | 11:51: 9ms. Found TEST
+2-6-2019 | 11:51: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[RetrieveUser]
+2-6-2019 | 11:51: 1ms. Retrieving user 10
+2-6-2019 | 11:51: 5ms. Found user 10
+2-6-2019 | 11:51: End.
+---[DEBUG MSG END]---
+

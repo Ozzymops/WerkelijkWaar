@@ -122,11 +122,10 @@ namespace WerkelijkWaar.Controllers
                     {
                         if (rm.RoleId.GetType() == typeof(int))
                         {
-                            if (rm.AgeCheck)
+                            if (rm.Group.GetType() == typeof(int))
                             {
                                 if (rm.PrivacyCheck)
                                 {
-                                    // check code
                                     valid = true;
                                 }
                             }
@@ -142,7 +141,8 @@ namespace WerkelijkWaar.Controllers
                             Surname = rm.Surname,
                             Username = rm.Username,
                             Password = rm.Password,
-                            RoleId = 0 // rm.RoleId
+                            RoleId = 0,
+                            Group = Convert.ToInt32(rm.Group)
                         }));
 
                         if (status)

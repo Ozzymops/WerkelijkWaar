@@ -74,5 +74,22 @@ namespace WerkelijkWaar.Controllers
 
             return RedirectToAction("Index", "Home");
         }
+
+        public IActionResult ServerConfig()
+        {
+            // login check
+            if (!String.IsNullOrEmpty(HttpContext.Session.GetString("User")))
+            {
+                HubModel hm = new HubModel();
+                hm.User = Newtonsoft.Json.JsonConvert.DeserializeObject<Classes.User>(HttpContext.Session.GetString("User"));
+
+                if (hm.User.RoleId == 3)
+                {
+                    return View(hm);
+                }
+            }
+
+            return RedirectToAction("Index", "Home");
+        }
     }
 }

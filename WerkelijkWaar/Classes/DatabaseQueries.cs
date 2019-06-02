@@ -789,7 +789,7 @@ namespace WerkelijkWaar.Classes
 
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
-                SqlCommand command = new SqlCommand("SELECT * FROM [Story]", connection);
+                SqlCommand command = new SqlCommand("SELECT * FROM [Story] WHERE [Status] = 2", connection);
 
                 List<Story> StoryList = new List<Story>();
 

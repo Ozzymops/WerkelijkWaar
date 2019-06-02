@@ -8540,3 +8540,1748 @@
 31-5-2019 | 12:45: Putting 's0hrHV' into read phase.
 31-5-2019 | 12:45: Room 's0hrHV' has 2 groups.
 31-5-2019 | 12:45: Current group is '10' in room 's0hrHV'.
+---[LOG MSG START]---
+[Startup]
+1-6-2019 | 11:17: Starting server...
+1-6-2019 | 11:17: Server is up and running!
+1-6-2019 | 11:17: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[CheckLogin]
+1-6-2019 | 11:17: Logging in AAppel...
+1-6-2019 | 11:17: Log in found for user AAppel
+1-6-2019 | 11:17: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveUser]
+1-6-2019 | 11:17: Attempting to retrieve user with id 5
+1-6-2019 | 11:17: Found user with id 5
+1-6-2019 | 11:17: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[AccountController]
+1-6-2019 | 11:17: AAppel validated.
+1-6-2019 | 11:17: AAppel navigated to Hub/Game
+1-6-2019 | 11:17: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[AccountController]
+1-6-2019 | 11:17: AAppel validated.
+1-6-2019 | 11:17: AAppel logged out.
+1-6-2019 | 11:17: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[CheckLogin]
+1-6-2019 | 11:17: Logging in JMuris...
+1-6-2019 | 11:17: Log in found for user JMuris
+1-6-2019 | 11:17: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveUser]
+1-6-2019 | 11:17: Attempting to retrieve user with id 4
+1-6-2019 | 11:17: Found user with id 4
+1-6-2019 | 11:17: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[AccountController]
+1-6-2019 | 11:17: JMuris validated.
+1-6-2019 | 11:17: JMuris navigated to Hub/Game
+1-6-2019 | 11:17: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[AccountController]
+1-6-2019 | 11:18: JMuris validated.
+1-6-2019 | 11:18: JMuris logged out.
+1-6-2019 | 11:18: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[CheckLogin]
+1-6-2019 | 11:18: Logging in Admin...
+1-6-2019 | 11:18: Log in found for user Admin
+1-6-2019 | 11:18: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveUser]
+1-6-2019 | 11:18: Attempting to retrieve user with id 3
+1-6-2019 | 11:18: Found user with id 3
+1-6-2019 | 11:18: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[AccountController]
+1-6-2019 | 11:18: Admin validated.
+1-6-2019 | 11:18: Admin navigated to Hub/Game
+1-6-2019 | 11:18: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveSchools]
+1-6-2019 | 11:18: Attempting to retrieve schools...
+1-6-2019 | 11:18: Found 3 schools.
+1-6-2019 | 11:18: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[AccountController]
+1-6-2019 | 11:18: Admin validated.
+1-6-2019 | 11:18: Admin logged out.
+1-6-2019 | 11:18: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[CheckLogin]
+1-6-2019 | 11:18: Logging in UberAdmin...
+1-6-2019 | 11:18: Log in found for user UberAdmin
+1-6-2019 | 11:18: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveUser]
+1-6-2019 | 11:18: Attempting to retrieve user with id 2
+1-6-2019 | 11:18: Found user with id 2
+1-6-2019 | 11:18: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[AccountController]
+1-6-2019 | 11:18: UberAdmin validated.
+1-6-2019 | 11:18: UberAdmin navigated to Hub/Game
+1-6-2019 | 11:18: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveSchools]
+1-6-2019 | 11:18: Attempting to retrieve schools...
+1-6-2019 | 11:18: Found 3 schools.
+1-6-2019 | 11:18: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[AccountController]
+1-6-2019 | 11:21: UberAdmin validated.
+1-6-2019 | 11:21: UberAdmin logged out.
+1-6-2019 | 11:21: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[CheckLogin]
+1-6-2019 | 11:23: Logging in AAppel...
+1-6-2019 | 11:23: Log in found for user AAppel
+1-6-2019 | 11:23: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveUser]
+1-6-2019 | 11:23: Attempting to retrieve user with id 5
+1-6-2019 | 11:23: Found user with id 5
+1-6-2019 | 11:23: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[AccountController]
+1-6-2019 | 11:23: AAppel validated.
+1-6-2019 | 11:23: AAppel navigated to Hub/Game
+1-6-2019 | 11:23: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[AccountController]
+1-6-2019 | 11:23: AAppel validated.
+1-6-2019 | 11:23: AAppel navigated to Account/AccountView.
+1-6-2019 | 11:23: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[AccountController]
+1-6-2019 | 11:24: AAppel validated.
+1-6-2019 | 11:24: AAppel navigated to Account/AccountView.
+1-6-2019 | 11:24: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveUser]
+1-6-2019 | 11:24: Attempting to retrieve user with id 5
+1-6-2019 | 11:24: Found user with id 5
+1-6-2019 | 11:24: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveStoriesOfUser]
+1-6-2019 | 11:24: Attempting to retrieve stories of user 5
+1-6-2019 | 11:24: Found 1 stories from user 5
+1-6-2019 | 11:24: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveScoresOfUser]
+1-6-2019 | 11:24: Attempting to retrieve scores of user 5
+1-6-2019 | 11:24: Found 3 scores from user 5
+1-6-2019 | 11:24: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[AccountController]
+1-6-2019 | 11:26: AAppel validated.
+1-6-2019 | 11:26: AAppel logged out.
+1-6-2019 | 11:26: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[CheckLogin]
+1-6-2019 | 11:26: Logging in JMuris...
+1-6-2019 | 11:26: Log in found for user JMuris
+1-6-2019 | 11:26: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveUser]
+1-6-2019 | 11:26: Attempting to retrieve user with id 4
+1-6-2019 | 11:26: Found user with id 4
+1-6-2019 | 11:26: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[AccountController]
+1-6-2019 | 11:26: JMuris validated.
+1-6-2019 | 11:26: JMuris navigated to Hub/Game
+1-6-2019 | 11:26: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[AccountController]
+1-6-2019 | 11:26: JMuris validated.
+1-6-2019 | 11:26: JMuris logged out.
+1-6-2019 | 11:26: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[CheckLogin]
+1-6-2019 | 11:27: Logging in Admin...
+1-6-2019 | 11:27: Log in found for user Admin
+1-6-2019 | 11:27: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveUser]
+1-6-2019 | 11:27: Attempting to retrieve user with id 3
+1-6-2019 | 11:27: Found user with id 3
+1-6-2019 | 11:27: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[AccountController]
+1-6-2019 | 11:27: Admin validated.
+1-6-2019 | 11:27: Admin navigated to Hub/Game
+1-6-2019 | 11:27: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveSchools]
+1-6-2019 | 11:27: Attempting to retrieve schools...
+1-6-2019 | 11:27: Found 3 schools.
+1-6-2019 | 11:27: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[AccountController]
+1-6-2019 | 11:27: Admin validated.
+1-6-2019 | 11:27: Admin logged out.
+1-6-2019 | 11:27: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[CheckLogin]
+1-6-2019 | 11:27: Logging in UberAdmin...
+1-6-2019 | 11:27: Log in found for user UberAdmin
+1-6-2019 | 11:27: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveUser]
+1-6-2019 | 11:27: Attempting to retrieve user with id 2
+1-6-2019 | 11:27: Found user with id 2
+1-6-2019 | 11:27: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[AccountController]
+1-6-2019 | 11:27: UberAdmin validated.
+1-6-2019 | 11:27: UberAdmin navigated to Hub/Game
+1-6-2019 | 11:27: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveSchools]
+1-6-2019 | 11:27: Attempting to retrieve schools...
+1-6-2019 | 11:27: Found 3 schools.
+1-6-2019 | 11:27: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveSchools]
+1-6-2019 | 11:29: Attempting to retrieve schools...
+1-6-2019 | 11:29: Found 3 schools.
+1-6-2019 | 11:29: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[AccountController]
+1-6-2019 | 11:29: UberAdmin validated.
+1-6-2019 | 11:29: UberAdmin logged out.
+1-6-2019 | 11:29: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[CheckLogin]
+1-6-2019 | 11:29: Logging in UberAdmin...
+1-6-2019 | 11:29: Log in found for user UberAdmin
+1-6-2019 | 11:29: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveUser]
+1-6-2019 | 11:29: Attempting to retrieve user with id 2
+1-6-2019 | 11:29: Found user with id 2
+1-6-2019 | 11:29: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[AccountController]
+1-6-2019 | 11:29: UberAdmin validated.
+1-6-2019 | 11:29: UberAdmin navigated to Hub/Game
+1-6-2019 | 11:29: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveSchools]
+1-6-2019 | 11:29: Attempting to retrieve schools...
+1-6-2019 | 11:29: Found 3 schools.
+1-6-2019 | 11:29: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[Startup]
+1-6-2019 | 11:29: Starting server...
+1-6-2019 | 11:29: Server is up and running!
+1-6-2019 | 11:29: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[CheckLogin]
+1-6-2019 | 11:29: Logging in UberAdmin...
+1-6-2019 | 11:29: Log in found for user UberAdmin
+1-6-2019 | 11:29: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveUser]
+1-6-2019 | 11:29: Attempting to retrieve user with id 2
+1-6-2019 | 11:29: Found user with id 2
+1-6-2019 | 11:29: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[AccountController]
+1-6-2019 | 11:29: UberAdmin validated.
+1-6-2019 | 11:29: UberAdmin navigated to Hub/Game
+1-6-2019 | 11:29: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveSchools]
+1-6-2019 | 11:29: Attempting to retrieve schools...
+1-6-2019 | 11:29: Found 3 schools.
+1-6-2019 | 11:29: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveSchools]
+1-6-2019 | 11:29: Attempting to retrieve schools...
+1-6-2019 | 11:29: Found 3 schools.
+1-6-2019 | 11:29: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[AccountController]
+1-6-2019 | 11:29: UberAdmin validated.
+1-6-2019 | 11:29: UberAdmin navigated to Hub/Game
+1-6-2019 | 11:29: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveSchools]
+1-6-2019 | 11:29: Attempting to retrieve schools...
+1-6-2019 | 11:29: Found 3 schools.
+1-6-2019 | 11:29: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[AccountController]
+1-6-2019 | 11:29: UberAdmin validated.
+1-6-2019 | 11:29: UberAdmin navigated to Hub/Game
+1-6-2019 | 11:29: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveSchools]
+1-6-2019 | 11:29: Attempting to retrieve schools...
+1-6-2019 | 11:29: Found 3 schools.
+1-6-2019 | 11:29: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[AccountController]
+1-6-2019 | 11:29: UberAdmin validated.
+1-6-2019 | 11:29: UberAdmin navigated to Hub/Game
+1-6-2019 | 11:29: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveSchools]
+1-6-2019 | 11:29: Attempting to retrieve schools...
+1-6-2019 | 11:29: Found 3 schools.
+1-6-2019 | 11:29: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[AccountController]
+1-6-2019 | 11:29: UberAdmin validated.
+1-6-2019 | 11:29: UberAdmin navigated to Hub/Game
+1-6-2019 | 11:29: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveSchools]
+1-6-2019 | 11:29: Attempting to retrieve schools...
+1-6-2019 | 11:29: Found 3 schools.
+1-6-2019 | 11:29: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[AccountController]
+1-6-2019 | 11:29: UberAdmin validated.
+1-6-2019 | 11:29: UberAdmin navigated to Hub/Game
+1-6-2019 | 11:29: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveSchools]
+1-6-2019 | 11:29: Attempting to retrieve schools...
+1-6-2019 | 11:29: Found 3 schools.
+1-6-2019 | 11:29: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[AccountController]
+1-6-2019 | 11:29: UberAdmin validated.
+1-6-2019 | 11:29: UberAdmin navigated to Hub/Game
+1-6-2019 | 11:29: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveSchools]
+1-6-2019 | 11:29: Attempting to retrieve schools...
+1-6-2019 | 11:29: Found 3 schools.
+1-6-2019 | 11:29: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[AccountController]
+1-6-2019 | 11:29: UberAdmin validated.
+1-6-2019 | 11:29: UberAdmin logged out.
+1-6-2019 | 11:29: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[Startup]
+1-6-2019 | 11:30: Starting server...
+1-6-2019 | 11:30: Server is up and running!
+1-6-2019 | 11:30: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[CheckLogin]
+1-6-2019 | 11:30: Logging in Admin...
+1-6-2019 | 11:30: Log in found for user Admin
+1-6-2019 | 11:30: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveUser]
+1-6-2019 | 11:30: Attempting to retrieve user with id 3
+1-6-2019 | 11:30: Found user with id 3
+1-6-2019 | 11:30: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[AccountController]
+1-6-2019 | 11:30: Admin validated.
+1-6-2019 | 11:30: Admin navigated to Hub/Game
+1-6-2019 | 11:30: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveSchools]
+1-6-2019 | 11:30: Attempting to retrieve schools...
+1-6-2019 | 11:30: Found 3 schools.
+1-6-2019 | 11:30: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[AccountController]
+1-6-2019 | 11:30: Admin validated.
+1-6-2019 | 11:30: Admin logged out.
+1-6-2019 | 11:30: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[CheckLogin]
+1-6-2019 | 11:30: Logging in UberAdmin...
+1-6-2019 | 11:30: Log in found for user UberAdmin
+1-6-2019 | 11:30: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveUser]
+1-6-2019 | 11:30: Attempting to retrieve user with id 2
+1-6-2019 | 11:30: Found user with id 2
+1-6-2019 | 11:30: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[AccountController]
+1-6-2019 | 11:30: UberAdmin validated.
+1-6-2019 | 11:30: UberAdmin navigated to Hub/Game
+1-6-2019 | 11:30: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveSchools]
+1-6-2019 | 11:30: Attempting to retrieve schools...
+1-6-2019 | 11:30: Found 3 schools.
+1-6-2019 | 11:30: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[AccountController]
+1-6-2019 | 11:30: UberAdmin validated.
+1-6-2019 | 11:30: UberAdmin navigated to Hub/Game
+1-6-2019 | 11:30: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveSchools]
+1-6-2019 | 11:30: Attempting to retrieve schools...
+1-6-2019 | 11:30: Found 3 schools.
+1-6-2019 | 11:30: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveSchools]
+1-6-2019 | 11:30: Attempting to retrieve schools...
+1-6-2019 | 11:30: Found 3 schools.
+1-6-2019 | 11:30: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[Startup]
+1-6-2019 | 11:30: Starting server...
+1-6-2019 | 11:30: Server is up and running!
+1-6-2019 | 11:30: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[CheckLogin]
+1-6-2019 | 11:31: Logging in UberAdmin...
+1-6-2019 | 11:31: Log in found for user UberAdmin
+1-6-2019 | 11:31: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveUser]
+1-6-2019 | 11:31: Attempting to retrieve user with id 2
+1-6-2019 | 11:31: Found user with id 2
+1-6-2019 | 11:31: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[AccountController]
+1-6-2019 | 11:31: UberAdmin validated.
+1-6-2019 | 11:31: UberAdmin navigated to Hub/Game
+1-6-2019 | 11:31: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveSchools]
+1-6-2019 | 11:31: Attempting to retrieve schools...
+1-6-2019 | 11:31: Found 3 schools.
+1-6-2019 | 11:31: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveAllUsers]
+1-6-2019 | 11:31: Attempting to retrieve all users
+1-6-2019 | 11:31: Found 8 users.
+1-6-2019 | 11:31: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[AccountController]
+1-6-2019 | 11:31: UberAdmin validated.
+1-6-2019 | 11:31: UberAdmin navigated to Hub/Game
+1-6-2019 | 11:31: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveSchools]
+1-6-2019 | 11:31: Attempting to retrieve schools...
+1-6-2019 | 11:31: Found 3 schools.
+1-6-2019 | 11:31: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[Startup]
+1-6-2019 | 11:32: Starting server...
+1-6-2019 | 11:32: Server is up and running!
+1-6-2019 | 11:32: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[CheckLogin]
+1-6-2019 | 11:32: Logging in UberAdmin...
+1-6-2019 | 11:32: Log in found for user UberAdmin
+1-6-2019 | 11:32: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveUser]
+1-6-2019 | 11:32: Attempting to retrieve user with id 2
+1-6-2019 | 11:32: Found user with id 2
+1-6-2019 | 11:32: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[AccountController]
+1-6-2019 | 11:32: UberAdmin validated.
+1-6-2019 | 11:32: UberAdmin navigated to Hub/Game
+1-6-2019 | 11:32: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveSchools]
+1-6-2019 | 11:32: Attempting to retrieve schools...
+1-6-2019 | 11:32: Found 3 schools.
+1-6-2019 | 11:32: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[AccountController]
+1-6-2019 | 11:32: UberAdmin validated.
+1-6-2019 | 11:32: UberAdmin navigated to Hub/Game
+1-6-2019 | 11:32: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveSchools]
+1-6-2019 | 11:32: Attempting to retrieve schools...
+1-6-2019 | 11:32: Found 3 schools.
+1-6-2019 | 11:32: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[AccountController]
+1-6-2019 | 11:32: UberAdmin validated.
+1-6-2019 | 11:32: UberAdmin navigated to Hub/Game
+1-6-2019 | 11:32: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveSchools]
+1-6-2019 | 11:32: Attempting to retrieve schools...
+1-6-2019 | 11:32: Found 3 schools.
+1-6-2019 | 11:32: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[AccountController]
+1-6-2019 | 11:32: UberAdmin validated.
+1-6-2019 | 11:32: UberAdmin navigated to Hub/Game
+1-6-2019 | 11:32: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveSchools]
+1-6-2019 | 11:32: Attempting to retrieve schools...
+1-6-2019 | 11:32: Found 3 schools.
+1-6-2019 | 11:32: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveSchools]
+1-6-2019 | 11:32: Attempting to retrieve schools...
+1-6-2019 | 11:32: Found 3 schools.
+1-6-2019 | 11:32: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveAllUsers]
+1-6-2019 | 11:32: Attempting to retrieve all users
+1-6-2019 | 11:32: Found 8 users.
+1-6-2019 | 11:32: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveSchools]
+1-6-2019 | 11:32: Attempting to retrieve schools...
+1-6-2019 | 11:32: Found 3 schools.
+1-6-2019 | 11:32: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[AccountController]
+1-6-2019 | 11:32: UberAdmin validated.
+1-6-2019 | 11:32: UberAdmin logged out.
+1-6-2019 | 11:32: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[CheckLogin]
+1-6-2019 | 11:32: Logging in Admin...
+1-6-2019 | 11:32: Log in found for user Admin
+1-6-2019 | 11:32: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveUser]
+1-6-2019 | 11:32: Attempting to retrieve user with id 3
+1-6-2019 | 11:32: Found user with id 3
+1-6-2019 | 11:32: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[AccountController]
+1-6-2019 | 11:32: Admin validated.
+1-6-2019 | 11:32: Admin navigated to Hub/Game
+1-6-2019 | 11:32: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveSchools]
+1-6-2019 | 11:32: Attempting to retrieve schools...
+1-6-2019 | 11:32: Found 3 schools.
+1-6-2019 | 11:32: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveAllUsers]
+1-6-2019 | 11:32: Attempting to retrieve all users
+1-6-2019 | 11:32: Found 8 users.
+1-6-2019 | 11:32: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveStoryQueue]
+1-6-2019 | 11:32: Attempting to retrieve stories with status 0 and 1.
+1-6-2019 | 11:32: Found 1 stories.
+1-6-2019 | 11:32: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[AccountController]
+1-6-2019 | 11:32: Admin validated.
+1-6-2019 | 11:32: Admin logged out.
+1-6-2019 | 11:32: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[Startup]
+1-6-2019 | 11:33: Starting server...
+1-6-2019 | 11:33: Server is up and running!
+1-6-2019 | 11:33: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[CheckLogin]
+1-6-2019 | 11:39: Logging in AAppel...
+1-6-2019 | 11:39: Log in found for user AAppel
+1-6-2019 | 11:39: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveUser]
+1-6-2019 | 11:39: Attempting to retrieve user with id 5
+1-6-2019 | 11:39: Found user with id 5
+1-6-2019 | 11:39: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[AccountController]
+1-6-2019 | 11:39: AAppel validated.
+1-6-2019 | 11:39: AAppel navigated to Hub/Game
+1-6-2019 | 11:39: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[AccountController]
+1-6-2019 | 11:39: AAppel validated.
+1-6-2019 | 11:39: AAppel navigated to Account/AccountView.
+1-6-2019 | 11:39: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[EditUserNames]
+1-6-2019 | 11:39: Trying to edit user Aarietje
+1-6-2019 | 11:39: Edited user with id 5
+1-6-2019 | 11:39: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[AccountController]
+1-6-2019 | 11:39: AAppel validated.
+1-6-2019 | 11:39: AAppel navigated to Account/AccountView.
+1-6-2019 | 11:39: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[AccountController]
+1-6-2019 | 11:39: AAppel validated.
+1-6-2019 | 11:39: AAppel navigated to Account/AccountView.
+1-6-2019 | 11:39: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[AccountController]
+1-6-2019 | 11:39: AAppel validated.
+1-6-2019 | 11:39: AAppel logged out.
+1-6-2019 | 11:39: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[CheckLogin]
+1-6-2019 | 11:39: Logging in AAppel...
+1-6-2019 | 11:39: Log in not found for user AAppel
+1-6-2019 | 11:39: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[CheckLogin]
+1-6-2019 | 11:39: Logging in AAppeltje...
+1-6-2019 | 11:39: Log in found for user AAppeltje
+1-6-2019 | 11:39: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveUser]
+1-6-2019 | 11:39: Attempting to retrieve user with id 5
+1-6-2019 | 11:39: Found user with id 5
+1-6-2019 | 11:39: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[AccountController]
+1-6-2019 | 11:39: AAppeltje validated.
+1-6-2019 | 11:39: AAppeltje navigated to Hub/Game
+1-6-2019 | 11:39: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[AccountController]
+1-6-2019 | 11:39: AAppeltje validated.
+1-6-2019 | 11:39: AAppeltje navigated to Account/AccountView.
+1-6-2019 | 11:39: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[CheckLogin]
+1-6-2019 | 11:40: Logging in AAppeltje...
+1-6-2019 | 11:40: Log in not found for user AAppeltje
+1-6-2019 | 11:40: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[CheckLogin]
+1-6-2019 | 11:40: Logging in AAppeltje...
+1-6-2019 | 11:40: Log in found for user AAppeltje
+1-6-2019 | 11:40: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[EditPassword]
+1-6-2019 | 11:40: Changing password of AAppeltje...
+1-6-2019 | 11:40: Password changed.
+1-6-2019 | 11:40: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[AccountController]
+1-6-2019 | 11:40: AAppeltje validated.
+1-6-2019 | 11:40: AAppeltje logged out.
+1-6-2019 | 11:40: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[CheckLogin]
+1-6-2019 | 11:40: Logging in AAppeltje...
+1-6-2019 | 11:40: Log in not found for user AAppeltje
+1-6-2019 | 11:40: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[CheckLogin]
+1-6-2019 | 11:40: Logging in AAppeltje...
+1-6-2019 | 11:40: Log in found for user AAppeltje
+1-6-2019 | 11:40: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveUser]
+1-6-2019 | 11:40: Attempting to retrieve user with id 5
+1-6-2019 | 11:40: Found user with id 5
+1-6-2019 | 11:40: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[AccountController]
+1-6-2019 | 11:40: AAppeltje validated.
+1-6-2019 | 11:40: AAppeltje navigated to Hub/Game
+1-6-2019 | 11:40: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[AccountController]
+1-6-2019 | 11:40: AAppeltje validated.
+1-6-2019 | 11:40: AAppeltje navigated to Account/AccountView.
+1-6-2019 | 11:40: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[CheckLogin]
+1-6-2019 | 11:42: Logging in JMuris...
+1-6-2019 | 11:42: Log in found for user JMuris
+1-6-2019 | 11:42: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveUser]
+1-6-2019 | 11:42: Attempting to retrieve user with id 4
+1-6-2019 | 11:42: Found user with id 4
+1-6-2019 | 11:42: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[AccountController]
+1-6-2019 | 11:42: JMuris validated.
+1-6-2019 | 11:42: JMuris navigated to Hub/Game
+1-6-2019 | 11:42: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveUserListByGroup]
+1-6-2019 | 11:42: Attempting to retrieve users from group 2
+1-6-2019 | 11:42: Found 2 users from group 2
+1-6-2019 | 11:42: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveScoresOfUser]
+1-6-2019 | 11:42: Attempting to retrieve scores of user 5
+1-6-2019 | 11:42: Found 3 scores from user 5
+1-6-2019 | 11:42: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveScoresOfUser]
+1-6-2019 | 11:42: Attempting to retrieve scores of user 6
+1-6-2019 | 11:42: Found 3 scores from user 6
+1-6-2019 | 11:42: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[AccountController]
+1-6-2019 | 11:43: JMuris validated.
+1-6-2019 | 11:43: JMuris logged out.
+1-6-2019 | 11:43: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[CheckLogin]
+1-6-2019 | 11:43: Logging in Admin...
+1-6-2019 | 11:43: Log in found for user Admin
+1-6-2019 | 11:43: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveUser]
+1-6-2019 | 11:43: Attempting to retrieve user with id 3
+1-6-2019 | 11:43: Found user with id 3
+1-6-2019 | 11:43: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[AccountController]
+1-6-2019 | 11:43: Admin validated.
+1-6-2019 | 11:43: Admin navigated to Hub/Game
+1-6-2019 | 11:43: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveSchools]
+1-6-2019 | 11:43: Attempting to retrieve schools...
+1-6-2019 | 11:43: Found 3 schools.
+1-6-2019 | 11:43: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveAllUsers]
+1-6-2019 | 11:43: Attempting to retrieve all users
+1-6-2019 | 11:43: Found 8 users.
+1-6-2019 | 11:43: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveStoryQueue]
+1-6-2019 | 11:43: Attempting to retrieve stories with status 0 and 1.
+1-6-2019 | 11:43: Found 1 stories.
+1-6-2019 | 11:43: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveSchools]
+1-6-2019 | 11:43: Attempting to retrieve schools...
+1-6-2019 | 11:43: Found 3 schools.
+1-6-2019 | 11:43: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[AccountController]
+1-6-2019 | 11:43: Admin validated.
+1-6-2019 | 11:43: Admin logged out.
+1-6-2019 | 11:43: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[CheckLogin]
+1-6-2019 | 11:43: Logging in UberAdmin...
+1-6-2019 | 11:43: Log in found for user UberAdmin
+1-6-2019 | 11:43: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveUser]
+1-6-2019 | 11:43: Attempting to retrieve user with id 2
+1-6-2019 | 11:43: Found user with id 2
+1-6-2019 | 11:43: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[AccountController]
+1-6-2019 | 11:43: UberAdmin validated.
+1-6-2019 | 11:43: UberAdmin navigated to Hub/Game
+1-6-2019 | 11:43: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveSchools]
+1-6-2019 | 11:43: Attempting to retrieve schools...
+1-6-2019 | 11:43: Found 3 schools.
+1-6-2019 | 11:43: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveAllUsers]
+1-6-2019 | 11:43: Attempting to retrieve all users
+1-6-2019 | 11:43: Found 8 users.
+1-6-2019 | 11:43: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveSchools]
+1-6-2019 | 11:43: Attempting to retrieve schools...
+1-6-2019 | 11:43: Found 3 schools.
+1-6-2019 | 11:43: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[AccountController]
+1-6-2019 | 11:44: UberAdmin validated.
+1-6-2019 | 11:44: UberAdmin logged out.
+1-6-2019 | 11:44: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[CheckLogin]
+1-6-2019 | 11:44: Logging in AAppeltje...
+1-6-2019 | 11:44: Log in found for user AAppeltje
+1-6-2019 | 11:44: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveUser]
+1-6-2019 | 11:44: Attempting to retrieve user with id 5
+1-6-2019 | 11:44: Found user with id 5
+1-6-2019 | 11:44: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[AccountController]
+1-6-2019 | 11:44: AAppeltje validated.
+1-6-2019 | 11:44: AAppeltje navigated to Hub/Game
+1-6-2019 | 11:44: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveUser]
+1-6-2019 | 11:44: Attempting to retrieve user with id 5
+1-6-2019 | 11:44: Found user with id 5
+1-6-2019 | 11:44: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveStoriesOfUser]
+1-6-2019 | 11:44: Attempting to retrieve stories of user 5
+1-6-2019 | 11:44: Found 1 stories from user 5
+1-6-2019 | 11:44: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveScoresOfUser]
+1-6-2019 | 11:44: Attempting to retrieve scores of user 5
+1-6-2019 | 11:44: Found 3 scores from user 5
+1-6-2019 | 11:44: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveStory]
+1-6-2019 | 11:44: Attempting to retrieve story with id 2
+1-6-2019 | 11:44: Found story with id 2
+---[LOG MSG START]---
+[RetrieveUser]
+1-6-2019 | 11:44: Attempting to retrieve user with id 5
+1-6-2019 | 11:44: Found user with id 5
+1-6-2019 | 11:44: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveStoriesOfUser]
+1-6-2019 | 11:44: Attempting to retrieve stories of user 5
+1-6-2019 | 11:44: Found 1 stories from user 5
+1-6-2019 | 11:44: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveScoresOfUser]
+1-6-2019 | 11:44: Attempting to retrieve scores of user 5
+1-6-2019 | 11:44: Found 3 scores from user 5
+1-6-2019 | 11:44: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveScore]
+1-6-2019 | 11:44: Attempting to retrieve score with id 1
+1-6-2019 | 11:44: Found score with id 1
+---[LOG MSG START]---
+[RetrieveUser]
+1-6-2019 | 11:44: Attempting to retrieve user with id 5
+1-6-2019 | 11:44: Found user with id 5
+1-6-2019 | 11:44: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveStoriesOfUser]
+1-6-2019 | 11:44: Attempting to retrieve stories of user 5
+1-6-2019 | 11:44: Found 1 stories from user 5
+1-6-2019 | 11:44: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveScoresOfUser]
+1-6-2019 | 11:44: Attempting to retrieve scores of user 5
+1-6-2019 | 11:44: Found 3 scores from user 5
+1-6-2019 | 11:44: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[AccountController]
+1-6-2019 | 11:45: AAppeltje validated.
+1-6-2019 | 11:45: AAppeltje logged out.
+1-6-2019 | 11:45: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[CheckLogin]
+1-6-2019 | 11:45: Logging in JMuris...
+1-6-2019 | 11:45: Log in found for user JMuris
+1-6-2019 | 11:45: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveUser]
+1-6-2019 | 11:45: Attempting to retrieve user with id 4
+1-6-2019 | 11:45: Found user with id 4
+1-6-2019 | 11:45: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[AccountController]
+1-6-2019 | 11:45: JMuris validated.
+1-6-2019 | 11:45: JMuris navigated to Hub/Game
+1-6-2019 | 11:45: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveUserListByGroup]
+1-6-2019 | 11:45: Attempting to retrieve users from group 2
+1-6-2019 | 11:45: Found 2 users from group 2
+1-6-2019 | 11:45: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveScoresOfUser]
+1-6-2019 | 11:45: Attempting to retrieve scores of user 5
+1-6-2019 | 11:45: Found 3 scores from user 5
+1-6-2019 | 11:45: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveScoresOfUser]
+1-6-2019 | 11:45: Attempting to retrieve scores of user 6
+1-6-2019 | 11:45: Found 3 scores from user 6
+1-6-2019 | 11:45: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveUser]
+1-6-2019 | 11:45: Attempting to retrieve user with id 5
+1-6-2019 | 11:45: Found user with id 5
+1-6-2019 | 11:45: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveStoriesOfUser]
+1-6-2019 | 11:45: Attempting to retrieve stories of user 5
+1-6-2019 | 11:45: Found 1 stories from user 5
+1-6-2019 | 11:45: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveScoresOfUser]
+1-6-2019 | 11:45: Attempting to retrieve scores of user 5
+1-6-2019 | 11:45: Found 3 scores from user 5
+1-6-2019 | 11:45: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveUser]
+1-6-2019 | 11:45: Attempting to retrieve user with id 5
+1-6-2019 | 11:45: Found user with id 5
+1-6-2019 | 11:45: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveStory]
+1-6-2019 | 11:45: Attempting to retrieve story with id 2
+1-6-2019 | 11:45: Found story with id 2
+---[LOG MSG START]---
+[RetrieveUser]
+1-6-2019 | 11:45: Attempting to retrieve user with id 5
+1-6-2019 | 11:45: Found user with id 5
+1-6-2019 | 11:45: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveStoriesOfUser]
+1-6-2019 | 11:45: Attempting to retrieve stories of user 5
+1-6-2019 | 11:45: Found 1 stories from user 5
+1-6-2019 | 11:45: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveScoresOfUser]
+1-6-2019 | 11:45: Attempting to retrieve scores of user 5
+1-6-2019 | 11:45: Found 3 scores from user 5
+1-6-2019 | 11:45: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveUser]
+1-6-2019 | 11:45: Attempting to retrieve user with id 5
+1-6-2019 | 11:45: Found user with id 5
+1-6-2019 | 11:45: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveScore]
+1-6-2019 | 11:45: Attempting to retrieve score with id 1
+1-6-2019 | 11:45: Found score with id 1
+---[LOG MSG START]---
+[RetrieveUser]
+1-6-2019 | 11:45: Attempting to retrieve user with id 5
+1-6-2019 | 11:45: Found user with id 5
+1-6-2019 | 11:45: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveStoriesOfUser]
+1-6-2019 | 11:45: Attempting to retrieve stories of user 5
+1-6-2019 | 11:45: Found 1 stories from user 5
+1-6-2019 | 11:45: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveScoresOfUser]
+1-6-2019 | 11:45: Attempting to retrieve scores of user 5
+1-6-2019 | 11:45: Found 3 scores from user 5
+1-6-2019 | 11:45: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveUserListByGroup]
+1-6-2019 | 11:46: Attempting to retrieve users from group 2
+1-6-2019 | 11:46: Found 2 users from group 2
+1-6-2019 | 11:46: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveScoresOfUser]
+1-6-2019 | 11:46: Attempting to retrieve scores of user 5
+1-6-2019 | 11:46: Found 3 scores from user 5
+1-6-2019 | 11:46: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveScoresOfUser]
+1-6-2019 | 11:46: Attempting to retrieve scores of user 6
+1-6-2019 | 11:46: Found 3 scores from user 6
+1-6-2019 | 11:46: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[AccountController]
+1-6-2019 | 11:46: JMuris validated.
+1-6-2019 | 11:46: JMuris logged out.
+1-6-2019 | 11:46: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[CheckLogin]
+1-6-2019 | 11:46: Logging in JMuris...
+1-6-2019 | 11:46: Log in found for user JMuris
+1-6-2019 | 11:46: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveUser]
+1-6-2019 | 11:46: Attempting to retrieve user with id 4
+1-6-2019 | 11:46: Found user with id 4
+1-6-2019 | 11:46: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[AccountController]
+1-6-2019 | 11:46: JMuris validated.
+1-6-2019 | 11:46: JMuris navigated to Hub/Game
+1-6-2019 | 11:46: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[AccountController]
+1-6-2019 | 11:46: JMuris validated.
+1-6-2019 | 11:46: JMuris logged out.
+1-6-2019 | 11:46: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[CheckLogin]
+1-6-2019 | 11:46: Logging in AAppeltje...
+1-6-2019 | 11:46: Log in found for user AAppeltje
+1-6-2019 | 11:46: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveUser]
+1-6-2019 | 11:46: Attempting to retrieve user with id 5
+1-6-2019 | 11:46: Found user with id 5
+1-6-2019 | 11:46: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[AccountController]
+1-6-2019 | 11:46: AAppeltje validated.
+1-6-2019 | 11:46: AAppeltje navigated to Hub/Game
+1-6-2019 | 11:46: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveUser]
+1-6-2019 | 11:46: Attempting to retrieve user with id 5
+1-6-2019 | 11:46: Found user with id 5
+1-6-2019 | 11:46: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveStoriesOfUser]
+1-6-2019 | 11:46: Attempting to retrieve stories of user 5
+1-6-2019 | 11:46: Found 1 stories from user 5
+1-6-2019 | 11:46: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveScoresOfUser]
+1-6-2019 | 11:46: Attempting to retrieve scores of user 5
+1-6-2019 | 11:46: Found 3 scores from user 5
+1-6-2019 | 11:46: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[AccountController]
+1-6-2019 | 11:47: AAppeltje validated.
+1-6-2019 | 11:47: AAppeltje logged out.
+1-6-2019 | 11:47: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[CheckLogin]
+1-6-2019 | 11:47: Logging in JMuris...
+1-6-2019 | 11:47: Log in found for user JMuris
+1-6-2019 | 11:47: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveUser]
+1-6-2019 | 11:47: Attempting to retrieve user with id 4
+1-6-2019 | 11:47: Found user with id 4
+1-6-2019 | 11:47: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[AccountController]
+1-6-2019 | 11:47: JMuris validated.
+1-6-2019 | 11:47: JMuris navigated to Hub/Game
+1-6-2019 | 11:47: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveUserListByGroup]
+1-6-2019 | 11:47: Attempting to retrieve users from group 2
+1-6-2019 | 11:47: Found 2 users from group 2
+1-6-2019 | 11:47: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveScoresOfUser]
+1-6-2019 | 11:47: Attempting to retrieve scores of user 5
+1-6-2019 | 11:47: Found 3 scores from user 5
+1-6-2019 | 11:47: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveScoresOfUser]
+1-6-2019 | 11:47: Attempting to retrieve scores of user 6
+1-6-2019 | 11:47: Found 3 scores from user 6
+1-6-2019 | 11:47: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveUserListByGroup]
+1-6-2019 | 11:47: Attempting to retrieve users from group 2
+1-6-2019 | 11:47: Found 2 users from group 2
+1-6-2019 | 11:47: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveScoresOfUser]
+1-6-2019 | 11:47: Attempting to retrieve scores of user 5
+1-6-2019 | 11:47: Found 3 scores from user 5
+1-6-2019 | 11:47: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveScoresOfUser]
+1-6-2019 | 11:47: Attempting to retrieve scores of user 6
+1-6-2019 | 11:47: Found 3 scores from user 6
+1-6-2019 | 11:47: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveUser]
+1-6-2019 | 11:48: Attempting to retrieve user with id 6
+1-6-2019 | 11:48: Found user with id 6
+1-6-2019 | 11:48: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveStoriesOfUser]
+1-6-2019 | 11:48: Attempting to retrieve stories of user 6
+1-6-2019 | 11:48: Found 1 stories from user 6
+1-6-2019 | 11:48: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveScoresOfUser]
+1-6-2019 | 11:48: Attempting to retrieve scores of user 6
+1-6-2019 | 11:48: Found 3 scores from user 6
+1-6-2019 | 11:48: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[AccountController]
+1-6-2019 | 11:49: JMuris validated.
+1-6-2019 | 11:49: JMuris logged out.
+1-6-2019 | 11:49: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[CheckLogin]
+1-6-2019 | 11:49: Logging in Admin...
+1-6-2019 | 11:49: Log in found for user Admin
+1-6-2019 | 11:49: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveUser]
+1-6-2019 | 11:49: Attempting to retrieve user with id 3
+1-6-2019 | 11:49: Found user with id 3
+1-6-2019 | 11:49: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[AccountController]
+1-6-2019 | 11:49: Admin validated.
+1-6-2019 | 11:49: Admin navigated to Hub/Game
+1-6-2019 | 11:49: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveSchools]
+1-6-2019 | 11:49: Attempting to retrieve schools...
+1-6-2019 | 11:49: Found 3 schools.
+1-6-2019 | 11:49: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveAllUsers]
+1-6-2019 | 11:49: Attempting to retrieve all users
+1-6-2019 | 11:49: Found 8 users.
+1-6-2019 | 11:49: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveStoryQueue]
+1-6-2019 | 11:49: Attempting to retrieve stories with status 0 and 1.
+1-6-2019 | 11:49: Found 1 stories.
+1-6-2019 | 11:49: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveAllUsers]
+1-6-2019 | 11:49: Attempting to retrieve all users
+1-6-2019 | 11:49: Found 8 users.
+1-6-2019 | 11:49: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveUser]
+1-6-2019 | 11:49: Attempting to retrieve user with id 4
+1-6-2019 | 11:49: Found user with id 4
+1-6-2019 | 11:49: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveAllUsers]
+1-6-2019 | 11:49: Attempting to retrieve all users
+1-6-2019 | 11:49: Found 8 users.
+1-6-2019 | 11:49: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveStoryQueue]
+1-6-2019 | 11:52: Attempting to retrieve stories with status 0 and 1.
+1-6-2019 | 11:52: Found 1 stories.
+1-6-2019 | 11:52: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[AccountController]
+1-6-2019 | 11:53: Admin validated.
+1-6-2019 | 11:53: Admin logged out.
+1-6-2019 | 11:53: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[CheckLogin]
+1-6-2019 | 11:53: Logging in UberAdmin...
+1-6-2019 | 11:53: Log in found for user UberAdmin
+1-6-2019 | 11:53: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveUser]
+1-6-2019 | 11:53: Attempting to retrieve user with id 2
+1-6-2019 | 11:53: Found user with id 2
+1-6-2019 | 11:53: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[AccountController]
+1-6-2019 | 11:53: UberAdmin validated.
+1-6-2019 | 11:53: UberAdmin navigated to Hub/Game
+1-6-2019 | 11:53: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveSchools]
+1-6-2019 | 11:53: Attempting to retrieve schools...
+1-6-2019 | 11:53: Found 3 schools.
+1-6-2019 | 11:53: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveAllUsers]
+1-6-2019 | 11:53: Attempting to retrieve all users
+1-6-2019 | 11:53: Found 8 users.
+1-6-2019 | 11:53: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveSchools]
+1-6-2019 | 11:53: Attempting to retrieve schools...
+1-6-2019 | 11:53: Found 3 schools.
+1-6-2019 | 11:53: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[AccountController]
+1-6-2019 | 11:53: UberAdmin validated.
+1-6-2019 | 11:53: UberAdmin logged out.
+1-6-2019 | 11:53: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[Startup]
+2-6-2019 | 11:45: Starting server...
+2-6-2019 | 11:45: Server is up and running!
+2-6-2019 | 11:45: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[CheckLogin]
+2-6-2019 | 11:45: Logging in TEST...
+2-6-2019 | 11:45: Log in not found for user TEST
+2-6-2019 | 11:45: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[Startup]
+2-6-2019 | 11:49: Starting server...
+2-6-2019 | 11:49: Server is up and running!
+2-6-2019 | 11:49: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[CheckLogin]
+2-6-2019 | 11:49: Logging in TEST...
+2-6-2019 | 11:49: Log in not found for user TEST
+2-6-2019 | 11:49: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RegisterUser]
+2-6-2019 | 11:49: Trying to register user TEST
+2-6-2019 | 11:49: Failed to register user TEST.
+2-6-2019 | 11:49: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[Startup]
+2-6-2019 | 11:50: Starting server...
+2-6-2019 | 11:50: Server is up and running!
+2-6-2019 | 11:50: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[Startup]
+2-6-2019 | 11:51: Starting server...
+2-6-2019 | 11:51: Server is up and running!
+2-6-2019 | 11:51: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[CheckLogin]
+2-6-2019 | 11:51: Logging in TEST...
+2-6-2019 | 11:51: Log in not found for user TEST
+2-6-2019 | 11:51: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RegisterUser]
+2-6-2019 | 11:51: Trying to register user TEST
+2-6-2019 | 11:51: User TEST successfully registered.
+2-6-2019 | 11:51: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[CheckLogin]
+2-6-2019 | 11:51: Logging in TEST...
+2-6-2019 | 11:51: Log in found for user TEST
+2-6-2019 | 11:51: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveUser]
+2-6-2019 | 11:51: Attempting to retrieve user with id 10
+2-6-2019 | 11:51: Found user with id 10
+2-6-2019 | 11:51: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[AccountController]
+2-6-2019 | 11:51: TEST validated.
+2-6-2019 | 11:51: TEST navigated to Account/AccountView.
+2-6-2019 | 11:51: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[AccountController]
+2-6-2019 | 11:51: TEST validated.
+2-6-2019 | 11:51: TEST logged out.
+2-6-2019 | 11:51: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[CheckLogin]
+2-6-2019 | 11:51: Logging in TEST...
+2-6-2019 | 11:51: Log in found for user TEST
+2-6-2019 | 11:51: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveUser]
+2-6-2019 | 11:51: Attempting to retrieve user with id 10
+2-6-2019 | 11:51: Found user with id 10
+2-6-2019 | 11:51: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[AccountController]
+2-6-2019 | 11:51: TEST validated.
+2-6-2019 | 11:51: TEST navigated to Hub/Game
+2-6-2019 | 11:51: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[AccountController]
+2-6-2019 | 11:51: TEST validated.
+2-6-2019 | 11:51: TEST logged out.
+2-6-2019 | 11:51: End.
+---[LOG MSG END]---
+
