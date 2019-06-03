@@ -288,6 +288,66 @@ $(document).ready(function () {
         }
     }
 
+    connection.clientMethods["returnWrongAnswers"] = (roomCode, socketId, stories) => {
+        if ($roomContent.val() == roomCode) {
+            if (connection.connectionId == socketId) {
+                $('#storyList').empty();
+
+                var storyCount = 1;
+                var buttonCount = 0;
+                storyList = JSON.parse(stories);
+
+                for (var story in storyList) {
+                    if (storyCount <= 7) {
+                        var selectedStory = storyList[story];
+                        var selectedStoryContent = selectedStory.split(':!|');
+
+                        var storyId = selectedStoryContent[0];
+                        var storyTitle = selectedStoryContent[1];
+                        var storyText = selectedStoryContent[2];
+                        var storyWrong = selectedStoryContent[3];
+                        var storySpot = '#storySpot-' + storyCount;
+
+                        console.log("WrittenStory: " + storyId + ". " + storyTitle + ": " + storyText + " FOR spot " + storySpot);
+
+                        // $(storySpot).prop('value', storyTitle);
+                        var newInput = document.createElement("input");
+                        $(newInput).val(storyTitle);
+                        $(newInput).prop('id', buttonCount);
+                        $(newInput).prop('type', 'button');
+                        $(newInput).addClass('btn-swapStory');
+                        $('#storyList').append(newInput);
+
+                        if (storyWrong == '1') {
+                            $(newInput).css('text-decoration', 'line-through');
+                        }
+
+                        newInput.addEventListener("click", function () {
+                            swapStory(this.id);
+                        });
+
+                        console.log($(storySpot).val());
+
+                        if (storyCount == 1) {
+                            $('#readStoryTitle').html("Titel: " + storyTitle);
+                            $('#readStoryText').html(storyText);
+                        }
+
+                        if ($(storySpot).val() == undefined) {
+                            $(storySpot).prop('display', 'none');
+                        }
+
+                        storyCount++;
+                        buttonCount++;
+                    }
+                }
+            }
+            else {
+                // show wait screen
+            }
+        }
+    }
+
     connection.clientMethods["updatePowerups"] = (roomCode, socketId, powerup, newCash) => {
         if ($roomContent.val() == roomCode) {
             if (connection.connectionId == socketId) {

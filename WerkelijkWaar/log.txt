@@ -1,180 +1,354 @@
 ---[LOG MSG START]---
 [Startup]
-3-6-2019 | 13:58: Starting server...
-3-6-2019 | 13:58: Server is up and running!
-3-6-2019 | 13:58: End.
+3-6-2019 | 16:13: Starting server...
+3-6-2019 | 16:13: Server is up and running!
+3-6-2019 | 16:13: End.
 ---[LOG MSG END]---
 
 ---[LOG MSG START]---
 [CheckLogin]
-3-6-2019 | 13:58: Logging in JMuris...
-3-6-2019 | 13:58: Log in found for user JMuris
-3-6-2019 | 13:58: End.
+3-6-2019 | 16:14: Logging in JMuris...
+3-6-2019 | 16:14: Log in found for user JMuris
+3-6-2019 | 16:14: End.
 ---[LOG MSG END]---
 
 ---[LOG MSG START]---
 [RetrieveUser]
-3-6-2019 | 13:58: Attempting to retrieve user with id 4
-3-6-2019 | 13:58: Found user with id 4
-3-6-2019 | 13:58: End.
+3-6-2019 | 16:14: Attempting to retrieve user with id 4
+3-6-2019 | 16:14: Found user with id 4
+3-6-2019 | 16:14: End.
 ---[LOG MSG END]---
 
 ---[LOG MSG START]---
 [AccountController]
-3-6-2019 | 13:58: JMuris validated.
-3-6-2019 | 13:58: JMuris navigated to Hub/Game
-3-6-2019 | 13:58: End.
+3-6-2019 | 16:14: JMuris validated.
+3-6-2019 | 16:14: JMuris navigated to Hub/Game
+3-6-2019 | 16:14: End.
 ---[LOG MSG END]---
 
 ---[LOG MSG START]---
 [AccountController]
-3-6-2019 | 13:58: JMuris validated.
-3-6-2019 | 13:58: JMuris logged out.
-3-6-2019 | 13:58: End.
+3-6-2019 | 16:14: JMuris validated.
+3-6-2019 | 16:14: JMuris logged out.
+3-6-2019 | 16:14: End.
 ---[LOG MSG END]---
 
 ---[LOG MSG START]---
 [CheckLogin]
-3-6-2019 | 13:58: Logging in AAppel...
-3-6-2019 | 13:58: Log in found for user AAppel
-3-6-2019 | 13:58: End.
+3-6-2019 | 16:14: Logging in AAppel...
+3-6-2019 | 16:14: Log in found for user AAppel
+3-6-2019 | 16:14: End.
 ---[LOG MSG END]---
 
 ---[LOG MSG START]---
 [RetrieveUser]
-3-6-2019 | 13:58: Attempting to retrieve user with id 5
-3-6-2019 | 13:58: Found user with id 5
-3-6-2019 | 13:58: End.
+3-6-2019 | 16:14: Attempting to retrieve user with id 5
+3-6-2019 | 16:14: Found user with id 5
+3-6-2019 | 16:14: End.
 ---[LOG MSG END]---
 
 ---[LOG MSG START]---
 [AccountController]
-3-6-2019 | 13:58: AAppel validated.
-3-6-2019 | 13:58: AAppel navigated to Hub/Game
-3-6-2019 | 13:58: End.
+3-6-2019 | 16:14: AAppel validated.
+3-6-2019 | 16:14: AAppel navigated to Hub/Game
+3-6-2019 | 16:14: End.
 ---[LOG MSG END]---
 
 ---[LOG MSG START]---
 [Room]
-3-6-2019 | 13:58: Creating room...
-3-6-2019 | 13:58: Room created with code g00V14
-3-6-2019 | 13:58: End.
+3-6-2019 | 16:14: Creating room...
+3-6-2019 | 16:14: Room created with code 4Q2N9L
+3-6-2019 | 16:14: End.
 ---[LOG MSG END]---
 
 ---[LOG MSG START]---
 [RetrieveUser]
-3-6-2019 | 13:58: Attempting to retrieve user with id 4
-3-6-2019 | 13:58: Found user with id 4
-3-6-2019 | 13:58: End.
+3-6-2019 | 16:14: Attempting to retrieve user with id 4
+3-6-2019 | 16:14: Found user with id 4
+3-6-2019 | 16:14: End.
 ---[LOG MSG END]---
 
 ---[LOG MSG START]---
 [RetrieveConfig]
-3-6-2019 | 13:58: Attempting to retrieve config...
-3-6-2019 | 13:58: Found config.
-3-6-2019 | 13:58: End.
+3-6-2019 | 16:14: Attempting to retrieve config...
+3-6-2019 | 16:14: Found config.
+3-6-2019 | 16:14: End.
 ---[LOG MSG END]---
 
 ---[LOG MSG START]---
 [RetrieveAllStories]
-3-6-2019 | 13:58: Attempting to retrieve all stories.
-3-6-2019 | 13:58: Found 3 stories.
-3-6-2019 | 13:58: End.
+3-6-2019 | 16:14: Attempting to retrieve all stories.
+3-6-2019 | 16:14: Found 3 stories.
+3-6-2019 | 16:14: End.
 ---[LOG MSG END]---
 
 ---[LOG MSG START]---
 [Game]
-3-6-2019 | 13:58: Putting 'g00V14' into read phase.
-3-6-2019 | 13:58: Room 'g00V14' has 2 groups.
-3-6-2019 | 13:58: Current group is '1' in room 'g00V14'.
-3-6-2019 | 13:58: goToReadPhase: g00V14 - 48e24fc6-78ae-478b-9a1d-5529561284bb: 1|1.
-3-6-2019 | 13:58: goToReadPhase: g00V14 - 26ff35af-6f12-445b-b9d1-081d5d958495: 1|1.
-3-6-2019 | 13:58: goToReadPhase: g00V14 - 5d0c4016-4496-4ce2-ba6d-bc8e21f4349b: 1|1.
-3-6-2019 | 13:58: goToReadPhase: g00V14 - f1c58ea3-c503-4b9b-ad10-1f7ebb762fa2: 2|1.
-3-6-2019 | 13:58: goToReadPhase: g00V14 - 0fca3bd0-8ce2-45a7-b516-fd5f05ae7466: 2|1.
-3-6-2019 | 13:58: goToReadPhase: g00V14 - e3dfac73-a60a-4982-9232-fc9f4411874e: 2|1.
-3-6-2019 | 13:58: goToReadPhase (host): g00V14 - bbf6b437-cadb-4ed0-93fb-753456e0040e
+3-6-2019 | 16:14: Putting '4Q2N9L' into read phase.
+3-6-2019 | 16:14: Room '4Q2N9L' has 2 groups.
+3-6-2019 | 16:14: Current group is '1' in room '4Q2N9L'.
+3-6-2019 | 16:14: goToReadPhase: 4Q2N9L - ceeecc5d-74d8-4c7b-a972-7e8b47fca98b: 1|1.
+3-6-2019 | 16:14: goToReadPhase: 4Q2N9L - e4ff380c-1d58-4695-b71a-b82320a9e5b0: 1|1.
+3-6-2019 | 16:14: goToReadPhase: 4Q2N9L - 5555ce3a-c32a-4927-9256-d314b06ae243: 1|1.
+3-6-2019 | 16:14: goToReadPhase: 4Q2N9L - f660ecce-88f1-4dae-bdcb-c748b2b20fe0: 2|1.
+3-6-2019 | 16:14: goToReadPhase: 4Q2N9L - 8d9c4aa9-9da9-4114-b92a-1613d3f959e4: 2|1.
+3-6-2019 | 16:14: goToReadPhase: 4Q2N9L - 8abbecb4-3fd5-475c-9377-86f2f0e1870b: 2|1.
+3-6-2019 | 16:14: goToReadPhase (host): 4Q2N9L - f66f95eb-c728-4a7e-a663-ac5b2d61ad39
 ---[LOG MSG START]---
 [Game]
-3-6-2019 | 13:58: Retrieving written stories
-3-6-2019 | 13:58: Story 1 socketId: 5d0c4016-4496-4ce2-ba6d-bc8e21f4349b
-3-6-2019 | 13:58: Story 3 socketId: 48e24fc6-78ae-478b-9a1d-5529561284bb
-3-6-2019 | 13:58: Story 5 socketId: 26ff35af-6f12-445b-b9d1-081d5d958495
-3-6-2019 | 13:58: Planting correct answer...
-3-6-2019 | 13:58: Correct answer is 3 with story string '5:!|Een verhaal:!|Lorem Ipsum bla bla bla'.
-3-6-2019 | 13:58: First game of room 'g00V14' started.
-3-6-2019 | 13:58: End.
----[LOG MSG END]---
-
----[LOG MSG START]---
-[Game]
-3-6-2019 | 13:59: Parsing AAppel | f1c58ea3-c503-4b9b-ad10-1f7ebb762fa2 score.
-3-6-2019 | 13:59: Voted story owner id 5d0c4016-4496-4ce2-ba6d-bc8e21f4349b
-3-6-2019 | 13:59: Voted story owner id 5d0c4016-4496-4ce2-ba6d-bc8e21f4349b now has 1 votes.
-3-6-2019 | 13:59: Player AAppel | f1c58ea3-c503-4b9b-ad10-1f7ebb762fa2 followers are now 0
-3-6-2019 | 13:59: End.
+3-6-2019 | 16:14: Retrieving written stories
+3-6-2019 | 16:14: Story 2 socketId: 5555ce3a-c32a-4927-9256-d314b06ae243
+3-6-2019 | 16:14: Story 5 socketId: ceeecc5d-74d8-4c7b-a972-7e8b47fca98b
+3-6-2019 | 16:14: Story 6 socketId: e4ff380c-1d58-4695-b71a-b82320a9e5b0
+3-6-2019 | 16:14: Planting correct answer...
+3-6-2019 | 16:14: Correct answer is 0 with story string '1:!|Een root verhaal:!|Straight outta RSS feed:!|0'.
+3-6-2019 | 16:14: First game of room '4Q2N9L' started.
+3-6-2019 | 16:14: End.
 ---[LOG MSG END]---
 
 ---[LOG MSG START]---
 [Game]
-3-6-2019 | 13:59: Parsing AAppel | 0fca3bd0-8ce2-45a7-b516-fd5f05ae7466 score.
-3-6-2019 | 13:59: Voted story owner id 5d0c4016-4496-4ce2-ba6d-bc8e21f4349b
-3-6-2019 | 13:59: Voted story owner id 5d0c4016-4496-4ce2-ba6d-bc8e21f4349b now has 2 votes.
-3-6-2019 | 13:59: Player AAppel | 0fca3bd0-8ce2-45a7-b516-fd5f05ae7466 followers are now 0
-3-6-2019 | 13:59: End.
+3-6-2019 | 16:14: Parsing score for user 8d9c4aa9-9da9-4114-b92a-1613d3f959e4
+3-6-2019 | 16:14: Selected story is 1:!|Een root verhaal:!|Straight outta RSS feed:!|0
+3-6-2019 | 16:14: Selected story is root: 0
+3-6-2019 | 16:14: Added vote to story.
+3-6-2019 | 16:14: Selected story is root: 0
+3-6-2019 | 16:14: Added vote to story.
+3-6-2019 | 16:14: Selected story is root: 0
+3-6-2019 | 16:14: Added vote to story.
+3-6-2019 | 16:14: Selected story is root: 0
+3-6-2019 | 16:14: Added vote to story.
+3-6-2019 | 16:14: Selected story is root: 0
+3-6-2019 | 16:14: Added vote to story.
+3-6-2019 | 16:14: Selected story is root: 0
+3-6-2019 | 16:14: Added vote to story.
+3-6-2019 | 16:14: Added answer to score.
+3-6-2019 | 16:14: Answer was correct btw.
+3-6-2019 | 16:14: Player gained 5 followers.
+3-6-2019 | 16:14: End.
 ---[LOG MSG END]---
 
 ---[LOG MSG START]---
 [Game]
-3-6-2019 | 13:59: Parsing AAppel | e3dfac73-a60a-4982-9232-fc9f4411874e score.
-3-6-2019 | 13:59: Voted story owner id 5d0c4016-4496-4ce2-ba6d-bc8e21f4349b
-3-6-2019 | 13:59: Voted story owner id 5d0c4016-4496-4ce2-ba6d-bc8e21f4349b now has 3 votes.
-3-6-2019 | 13:59: Player AAppel | e3dfac73-a60a-4982-9232-fc9f4411874e followers are now 0
-3-6-2019 | 13:59: End.
+3-6-2019 | 16:14: Parsing score for user f660ecce-88f1-4dae-bdcb-c748b2b20fe0
+3-6-2019 | 16:14: Selected story is 1:!|Een root verhaal:!|Straight outta RSS feed:!|0
+3-6-2019 | 16:14: Selected story is root: 0
+3-6-2019 | 16:14: Added vote to story.
+3-6-2019 | 16:14: Selected story is root: 0
+3-6-2019 | 16:14: Added vote to story.
+3-6-2019 | 16:14: Selected story is root: 0
+3-6-2019 | 16:14: Added vote to story.
+3-6-2019 | 16:14: Selected story is root: 0
+3-6-2019 | 16:14: Added vote to story.
+3-6-2019 | 16:14: Selected story is root: 0
+3-6-2019 | 16:14: Added vote to story.
+3-6-2019 | 16:14: Selected story is root: 0
+3-6-2019 | 16:14: Added vote to story.
+3-6-2019 | 16:14: Added answer to score.
+3-6-2019 | 16:14: Answer was correct btw.
+3-6-2019 | 16:14: Player gained 5 followers.
+3-6-2019 | 16:14: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[Game]
+3-6-2019 | 16:15: Parsing score for user 8abbecb4-3fd5-475c-9377-86f2f0e1870b
+3-6-2019 | 16:15: Selected story is 1:!|Een root verhaal:!|Straight outta RSS feed:!|0
+3-6-2019 | 16:15: Selected story is root: 0
+3-6-2019 | 16:15: Added vote to story.
+3-6-2019 | 16:15: Selected story is root: 0
+3-6-2019 | 16:15: Added vote to story.
+3-6-2019 | 16:15: Selected story is root: 0
+3-6-2019 | 16:15: Added vote to story.
+3-6-2019 | 16:15: Selected story is root: 0
+3-6-2019 | 16:15: Added vote to story.
+3-6-2019 | 16:15: Selected story is root: 0
+3-6-2019 | 16:15: Added vote to story.
+3-6-2019 | 16:15: Selected story is root: 0
+3-6-2019 | 16:15: Added vote to story.
+3-6-2019 | 16:15: Added answer to score.
+3-6-2019 | 16:15: Answer was correct btw.
+3-6-2019 | 16:15: Player gained 5 followers.
+3-6-2019 | 16:15: End.
 ---[LOG MSG END]---
 
 ---[LOG MSG START]---
 [GiveMoney]
-3-6-2019 | 13:59: Player AAppel | 48e24fc6-78ae-478b-9a1d-5529561284bb is getting sum money
-3-6-2019 | 13:59: Player AAppel | 48e24fc6-78ae-478b-9a1d-5529561284bb has < 0 votes
-3-6-2019 | 13:59: Player AAppel | 48e24fc6-78ae-478b-9a1d-5529561284bb now has 0 followers and €1- to his name.
-3-6-2019 | 13:59: End.
+3-6-2019 | 16:15: Player AAppel | ceeecc5d-74d8-4c7b-a972-7e8b47fca98b is getting sum money
+3-6-2019 | 16:15: Player AAppel | ceeecc5d-74d8-4c7b-a972-7e8b47fca98b has < 0 votes
+3-6-2019 | 16:15: Player AAppel | ceeecc5d-74d8-4c7b-a972-7e8b47fca98b now has 0 followers and €1- to his name.
+3-6-2019 | 16:15: End.
 ---[LOG MSG END]---
 
 ---[LOG MSG START]---
 [GiveMoney]
-3-6-2019 | 13:59: Player AAppel | 26ff35af-6f12-445b-b9d1-081d5d958495 is getting sum money
-3-6-2019 | 13:59: Player AAppel | 26ff35af-6f12-445b-b9d1-081d5d958495 has < 0 votes
-3-6-2019 | 13:59: Player AAppel | 26ff35af-6f12-445b-b9d1-081d5d958495 now has 0 followers and €1- to his name.
-3-6-2019 | 13:59: End.
+3-6-2019 | 16:15: Player AAppel | e4ff380c-1d58-4695-b71a-b82320a9e5b0 is getting sum money
+3-6-2019 | 16:15: Player AAppel | e4ff380c-1d58-4695-b71a-b82320a9e5b0 has < 0 votes
+3-6-2019 | 16:15: Player AAppel | e4ff380c-1d58-4695-b71a-b82320a9e5b0 now has 0 followers and €1- to his name.
+3-6-2019 | 16:15: End.
 ---[LOG MSG END]---
 
 ---[LOG MSG START]---
 [GiveMoney]
-3-6-2019 | 13:59: Player AAppel | 5d0c4016-4496-4ce2-ba6d-bc8e21f4349b is getting sum money
-3-6-2019 | 13:59: Player AAppel | 5d0c4016-4496-4ce2-ba6d-bc8e21f4349b has > 0 votes
-3-6-2019 | 13:59: Player AAppel | 5d0c4016-4496-4ce2-ba6d-bc8e21f4349b now has 8 followers and €9- to his name.
-3-6-2019 | 13:59: End.
+3-6-2019 | 16:15: Player AAppel | 5555ce3a-c32a-4927-9256-d314b06ae243 is getting sum money
+3-6-2019 | 16:15: Player AAppel | 5555ce3a-c32a-4927-9256-d314b06ae243 has < 0 votes
+3-6-2019 | 16:15: Player AAppel | 5555ce3a-c32a-4927-9256-d314b06ae243 now has 0 followers and €1- to his name.
+3-6-2019 | 16:15: End.
 ---[LOG MSG END]---
 
 ---[LOG MSG START]---
 [GiveMoney]
-3-6-2019 | 13:59: Player AAppel | f1c58ea3-c503-4b9b-ad10-1f7ebb762fa2 is getting sum money
-3-6-2019 | 13:59: Player AAppel | f1c58ea3-c503-4b9b-ad10-1f7ebb762fa2 now has 0 followers and €1- to his name.
-3-6-2019 | 13:59: End.
+3-6-2019 | 16:15: Player AAppel | f660ecce-88f1-4dae-bdcb-c748b2b20fe0 is getting sum money
+3-6-2019 | 16:15: Player AAppel | f660ecce-88f1-4dae-bdcb-c748b2b20fe0 now has 5 followers and €6- to his name.
+3-6-2019 | 16:15: End.
 ---[LOG MSG END]---
 
 ---[LOG MSG START]---
 [GiveMoney]
-3-6-2019 | 13:59: Player AAppel | 0fca3bd0-8ce2-45a7-b516-fd5f05ae7466 is getting sum money
-3-6-2019 | 13:59: Player AAppel | 0fca3bd0-8ce2-45a7-b516-fd5f05ae7466 now has 0 followers and €1- to his name.
-3-6-2019 | 13:59: End.
+3-6-2019 | 16:15: Player AAppel | 8d9c4aa9-9da9-4114-b92a-1613d3f959e4 is getting sum money
+3-6-2019 | 16:15: Player AAppel | 8d9c4aa9-9da9-4114-b92a-1613d3f959e4 now has 5 followers and €6- to his name.
+3-6-2019 | 16:15: End.
 ---[LOG MSG END]---
 
 ---[LOG MSG START]---
 [GiveMoney]
-3-6-2019 | 13:59: Player AAppel | e3dfac73-a60a-4982-9232-fc9f4411874e is getting sum money
-3-6-2019 | 13:59: Player AAppel | e3dfac73-a60a-4982-9232-fc9f4411874e now has 0 followers and €1- to his name.
-3-6-2019 | 13:59: End.
+3-6-2019 | 16:15: Player AAppel | 8abbecb4-3fd5-475c-9377-86f2f0e1870b is getting sum money
+3-6-2019 | 16:15: Player AAppel | 8abbecb4-3fd5-475c-9377-86f2f0e1870b now has 5 followers and €6- to his name.
+3-6-2019 | 16:15: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[Game]
+3-6-2019 | 16:15: Putting '4Q2N9L' into read phase.
+3-6-2019 | 16:15: Room '4Q2N9L' has 2 groups.
+3-6-2019 | 16:15: Current group is '2' in room '4Q2N9L'.
+3-6-2019 | 16:15: goToReadPhase: 4Q2N9L - ceeecc5d-74d8-4c7b-a972-7e8b47fca98b: 1|2.
+3-6-2019 | 16:15: goToReadPhase: 4Q2N9L - e4ff380c-1d58-4695-b71a-b82320a9e5b0: 1|2.
+3-6-2019 | 16:15: goToReadPhase: 4Q2N9L - 5555ce3a-c32a-4927-9256-d314b06ae243: 1|2.
+3-6-2019 | 16:15: goToReadPhase: 4Q2N9L - f660ecce-88f1-4dae-bdcb-c748b2b20fe0: 2|2.
+3-6-2019 | 16:15: goToReadPhase: 4Q2N9L - 8d9c4aa9-9da9-4114-b92a-1613d3f959e4: 2|2.
+3-6-2019 | 16:15: goToReadPhase: 4Q2N9L - 8abbecb4-3fd5-475c-9377-86f2f0e1870b: 2|2.
+3-6-2019 | 16:15: goToReadPhase (host): 4Q2N9L - f66f95eb-c728-4a7e-a663-ac5b2d61ad39
+---[LOG MSG START]---
+[Game]
+3-6-2019 | 16:15: Retrieving written stories
+3-6-2019 | 16:15: Story 1 socketId: 8d9c4aa9-9da9-4114-b92a-1613d3f959e4
+3-6-2019 | 16:15: Story 3 socketId: f660ecce-88f1-4dae-bdcb-c748b2b20fe0
+3-6-2019 | 16:15: Story 4 socketId: 8abbecb4-3fd5-475c-9377-86f2f0e1870b
+3-6-2019 | 16:15: Planting correct answer...
+3-6-2019 | 16:15: Correct answer is 1 with story string '5:!|Een verhaal:!|Lorem Ipsum bla bla bla:!|0'.
+3-6-2019 | 16:15: Game 2 of room '4Q2N9L' started.
+3-6-2019 | 16:15: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[Game]
+3-6-2019 | 16:15: Parsing score for user 5555ce3a-c32a-4927-9256-d314b06ae243
+3-6-2019 | 16:15: Selected story is 5:!|Een verhaal:!|Lorem Ipsum bla bla bla:!|0
+3-6-2019 | 16:15: Selected story is root: 0
+3-6-2019 | 16:15: Added vote to story.
+3-6-2019 | 16:15: Selected story is root: 0
+3-6-2019 | 16:15: Added vote to story.
+3-6-2019 | 16:15: Selected story is root: 0
+3-6-2019 | 16:15: Added vote to story.
+3-6-2019 | 16:15: Selected story is root: 0
+3-6-2019 | 16:15: Added vote to story.
+3-6-2019 | 16:15: Selected story is root: 0
+3-6-2019 | 16:15: Added vote to story.
+3-6-2019 | 16:15: Selected story is root: 0
+3-6-2019 | 16:15: Added vote to story.
+3-6-2019 | 16:15: Added answer to score.
+3-6-2019 | 16:15: Answer was correct btw.
+3-6-2019 | 16:15: Player gained 5 followers.
+3-6-2019 | 16:15: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[Game]
+3-6-2019 | 16:15: Parsing score for user ceeecc5d-74d8-4c7b-a972-7e8b47fca98b
+3-6-2019 | 16:15: Selected story is 5:!|Een verhaal:!|Lorem Ipsum bla bla bla:!|0
+3-6-2019 | 16:15: Selected story is root: 0
+3-6-2019 | 16:15: Added vote to story.
+3-6-2019 | 16:15: Selected story is root: 0
+3-6-2019 | 16:15: Added vote to story.
+3-6-2019 | 16:15: Selected story is root: 0
+3-6-2019 | 16:15: Added vote to story.
+3-6-2019 | 16:15: Selected story is root: 0
+3-6-2019 | 16:15: Added vote to story.
+3-6-2019 | 16:15: Selected story is root: 0
+3-6-2019 | 16:15: Added vote to story.
+3-6-2019 | 16:15: Selected story is root: 0
+3-6-2019 | 16:15: Added vote to story.
+3-6-2019 | 16:15: Added answer to score.
+3-6-2019 | 16:15: Answer was correct btw.
+3-6-2019 | 16:15: Player gained 5 followers.
+3-6-2019 | 16:15: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[Game]
+3-6-2019 | 16:15: Parsing score for user e4ff380c-1d58-4695-b71a-b82320a9e5b0
+3-6-2019 | 16:15: Selected story is 5:!|Een verhaal:!|Lorem Ipsum bla bla bla:!|0
+3-6-2019 | 16:15: Selected story is root: 0
+3-6-2019 | 16:15: Added vote to story.
+3-6-2019 | 16:15: Selected story is root: 0
+3-6-2019 | 16:15: Added vote to story.
+3-6-2019 | 16:15: Selected story is root: 0
+3-6-2019 | 16:15: Added vote to story.
+3-6-2019 | 16:15: Selected story is root: 0
+3-6-2019 | 16:15: Added vote to story.
+3-6-2019 | 16:15: Selected story is root: 0
+3-6-2019 | 16:15: Added vote to story.
+3-6-2019 | 16:15: Selected story is root: 0
+3-6-2019 | 16:15: Added vote to story.
+3-6-2019 | 16:15: Added answer to score.
+3-6-2019 | 16:15: Answer was correct btw.
+3-6-2019 | 16:15: Player gained 5 followers.
+3-6-2019 | 16:15: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[GiveMoney]
+3-6-2019 | 16:15: Player AAppel | ceeecc5d-74d8-4c7b-a972-7e8b47fca98b is getting sum money
+3-6-2019 | 16:15: Player AAppel | ceeecc5d-74d8-4c7b-a972-7e8b47fca98b now has 5 followers and €7- to his name.
+3-6-2019 | 16:15: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[GiveMoney]
+3-6-2019 | 16:15: Player AAppel | e4ff380c-1d58-4695-b71a-b82320a9e5b0 is getting sum money
+3-6-2019 | 16:15: Player AAppel | e4ff380c-1d58-4695-b71a-b82320a9e5b0 now has 5 followers and €7- to his name.
+3-6-2019 | 16:15: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[GiveMoney]
+3-6-2019 | 16:15: Player AAppel | 5555ce3a-c32a-4927-9256-d314b06ae243 is getting sum money
+3-6-2019 | 16:15: Player AAppel | 5555ce3a-c32a-4927-9256-d314b06ae243 now has 5 followers and €7- to his name.
+3-6-2019 | 16:15: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[GiveMoney]
+3-6-2019 | 16:15: Player AAppel | f660ecce-88f1-4dae-bdcb-c748b2b20fe0 is getting sum money
+3-6-2019 | 16:15: Player AAppel | f660ecce-88f1-4dae-bdcb-c748b2b20fe0 has < 0 votes
+3-6-2019 | 16:15: Player AAppel | f660ecce-88f1-4dae-bdcb-c748b2b20fe0 now has 0 followers and €12- to his name.
+3-6-2019 | 16:15: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[GiveMoney]
+3-6-2019 | 16:15: Player AAppel | 8d9c4aa9-9da9-4114-b92a-1613d3f959e4 is getting sum money
+3-6-2019 | 16:15: Player AAppel | 8d9c4aa9-9da9-4114-b92a-1613d3f959e4 has < 0 votes
+3-6-2019 | 16:15: Player AAppel | 8d9c4aa9-9da9-4114-b92a-1613d3f959e4 now has 0 followers and €12- to his name.
+3-6-2019 | 16:15: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[GiveMoney]
+3-6-2019 | 16:15: Player AAppel | 8abbecb4-3fd5-475c-9377-86f2f0e1870b is getting sum money
+3-6-2019 | 16:15: Player AAppel | 8abbecb4-3fd5-475c-9377-86f2f0e1870b has < 0 votes
+3-6-2019 | 16:15: Player AAppel | 8abbecb4-3fd5-475c-9377-86f2f0e1870b now has 0 followers and €12- to his name.
+3-6-2019 | 16:15: End.
 ---[LOG MSG END]---
 

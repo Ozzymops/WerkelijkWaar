@@ -20,6 +20,7 @@ namespace WerkelijkWaar.Classes
         public int Source { get; set; }
 
         // Game
+        public int Votes { get; set; }
         public int GameGroup { get; set; }
         public bool PowerupActive { get; set; }
     }

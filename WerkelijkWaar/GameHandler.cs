@@ -622,82 +622,136 @@ namespace WerkelijkWaar
                     {
                         if (user.SocketId == socketId)
                         {
-                            user.ChoseStory = true;
-
-                            foreach (Classes.Score score in room.SelectedAnswers)
+                            if (user.GameGroup == room.CurrentGroup)
                             {
-                                if (score.SocketId == user.SocketId)
+                                l.WriteToLog("[Game]", "Parsing score for user " + socketId, 0);
+
+                                // Power-up 1 check
+                                if (user.PowerupOneActive)
                                 {
-                                    l.WriteToLog("[Game]", "Parsing " + user.Username + " | " + user.SocketId + " score.", 0);
+                                    // Split answers
+                                    int answerA = Convert.ToInt32(answer) / 10;  // first digit
+                                    int answerB = Convert.ToInt32(answer) % 10;  // second digit
 
-                                    // Check for power-ups
-                                    if (user.PowerupOneActive)
+                                    l.WriteToLog("[Game]", "Double power-up: A = " + answerA + ", B = " + answerB + " - from " + answer, 1);
+
+                                    // Get 'best' answer
+                                    if (answerA == room.CorrectAnswer)
                                     {
-                                        // Two answers
-                                        string[] doubleAnswer = answer.Split(":|!");
+                                        answer = answerA.ToString();
+                                    }
+                                    else if (answerB == room.CorrectAnswer)
+                                    {
+                                        answer = answerB.ToString();
+                                    }
+                                }
 
-                                        // Select 'correct' answer
-                                        if (Convert.ToInt32(doubleAnswer[0]) == room.CorrectAnswer)
+                                // Apply vote to story
+                                string storyFromAnswer = room.SentStories[Convert.ToInt32(answer)];
+                                l.WriteToLog("[Game]", "Selected story is " + storyFromAnswer, 1);
+
+                                foreach (Classes.Score score in room.SelectedAnswers)
+                                {
+                                    // User-made story
+                                    if (Convert.ToInt32(storyFromAnswer.Split(":!|")[3]) != 0)
+                                    {
+                                        l.WriteToLog("[Game]", "Selected story is user-made: " + storyFromAnswer.Split(":!|")[3], 1);
+
+                                        if (score.SocketId == storyFromAnswer.Split(":!|")[3])
                                         {
-                                            answer = doubleAnswer[0];
-                                        }
-                                        else
-                                        {
-                                            answer = doubleAnswer[1];
+                                            l.WriteToLog("[Game]", "Added vote to score.", 1);
+
+                                            score.AttainedVotes++;
+
+                                            foreach (Classes.Story story in room.WrittenStories)
+                                            {
+                                                if (story.SocketId == storyFromAnswer.Split(":!|")[3])
+                                                {
+                                                    l.WriteToLog("[Game]", "Added vote to story.", 1);
+
+                                                    story.Votes++;
+                                                }
+                                            }
                                         }
                                     }
-
-                                    // Apply vote to story
-                                    string[] votedStory = room.SentStories[Convert.ToInt32(answer)].Split(":!|");
-                                    l.WriteToLog("[Game]", "Voted story owner id " + votedStory[3], 1);
-
-                                    foreach (Classes.Score votedScore in room.SelectedAnswers)
-                                    {
-                                        if (votedScore.SocketId == votedStory[3])
-                                        {
-                                            votedScore.RoundVotes += 1;
-
-                                            l.WriteToLog("[Game]", "Voted story owner id " + votedStory[3] + " now has " + votedScore.RoundVotes + " votes.", 1);
-                                        }
-                                    }
-
-                                    // Apply answer
-                                    score.Answers += answer;
-
-                                    // Correct
-                                    if (Convert.ToInt32(answer) == room.CorrectAnswer)
-                                    {
-                                        score.CorrectAnswers += '1';
-
-                                        if (user.PowerupOneActive)
-                                        {
-                                            score.FollowerAmount += (room.Config.FollowerGain / 2);
-                                        }
-                                        else if (user.PowerupTwoActive)
-                                        {
-                                            score.FollowerAmount += (room.Config.FollowerGain * 2);
-                                        }
-                                        else
-                                        {
-                                            score.FollowerAmount += room.Config.FollowerGain;
-                                        }
-                                    }
-                                    // False
+                                    // Root story
                                     else
                                     {
-                                        score.CorrectAnswers += '0';
+                                        foreach (Classes.Story story in room.RetrievedStories)
+                                        {
+                                            if (story.OwnerId == Convert.ToInt32(storyFromAnswer.Split(":!|")[0]))
+                                            {
+                                                if (story.Title == storyFromAnswer.Split(":!|")[1])
+                                                {
+                                                    l.WriteToLog("[Game]", "Selected story is root: " + storyFromAnswer.Split(":!|")[3], 1);
 
-                                        if (user.PowerupOneActive)
-                                        {
-                                            score.FollowerAmount -= (room.Config.FollowerLoss / 2);
+                                                    l.WriteToLog("[Game]", "Added vote to story.", 1);
+
+                                                    story.Votes++;
+                                                }
+                                            }
                                         }
-                                        else if (user.PowerupTwoActive)
+                                    }
+                                }
+
+                                // Apply variables to score
+                                foreach (Classes.Score score in room.SelectedAnswers)
+                                {
+                                    if (score.SocketId == socketId)
+                                    {
+                                        l.WriteToLog("[Game]", "Added answer to score.", 1);
+
+                                        score.Answers += answer;
+
+                                        // Answer is correct
+                                        if (Convert.ToInt32(answer) == room.CorrectAnswer)
                                         {
-                                            score.FollowerAmount -= (room.Config.FollowerLoss * 2);
+                                            l.WriteToLog("[Game]", "Answer was correct btw.", 1);
+
+                                            score.CorrectAnswers += '1';
+
+                                            if (user.PowerupOneActive)
+                                            {
+                                                l.WriteToLog("[Game]", "Bad player gained " + (room.Config.FollowerGain / 2) + " followers.", 2);
+
+                                                score.FollowerAmount += (room.Config.FollowerGain / 2);
+                                            }
+                                            else if (user.PowerupTwoActive)
+                                            {
+                                                l.WriteToLog("[Game]", "Absolute gamer gained " + (room.Config.FollowerGain * 2) + " followers.", 2);
+
+                                                score.FollowerAmount += (room.Config.FollowerGain * 2);
+                                            }
+                                            else
+                                            {
+                                                l.WriteToLog("[Game]", "Player gained " + room.Config.FollowerGain + " followers.", 2);
+
+                                                score.FollowerAmount += room.Config.FollowerGain;
+                                            }
                                         }
+                                        // Answer is false
                                         else
                                         {
-                                            score.FollowerAmount -= room.Config.FollowerLoss;
+                                            score.CorrectAnswers += '0';
+
+                                            if (user.PowerupOneActive)
+                                            {
+                                                l.WriteToLog("[Game]", "Bad player lost " + (room.Config.FollowerGain / 2) + " followers.", 2);
+
+                                                score.FollowerAmount -= (room.Config.FollowerGain / 2);
+                                            }
+                                            else if (user.PowerupTwoActive)
+                                            {
+                                                l.WriteToLog("[Game]", "Absolute gamer lost " + (room.Config.FollowerGain * 2) + " followers.", 2);
+
+                                                score.FollowerAmount -= (room.Config.FollowerGain * 2);
+                                            }
+                                            else
+                                            {
+                                                l.WriteToLog("[Game]", "Player lost " + room.Config.FollowerGain + " followers.", 2);
+
+                                                score.FollowerAmount -= room.Config.FollowerGain;
+                                            }
                                         }
 
                                         if (score.FollowerAmount <= 0)
@@ -705,26 +759,21 @@ namespace WerkelijkWaar
                                             score.FollowerAmount = 0;
                                         }
                                     }
-
-                                    l.WriteToLog("[Game]", "Player " + user.Username + " | " + user.SocketId + " followers are now " + score.FollowerAmount, 2);
                                 }
+
+                                user.ChoseStory = true;
                             }
+
                         }
 
                         if (user.ChoseStory)
                         {
                             usersThatSelectedAnswers++;
                         }
-
-                        if (user.PowerupFourActive)
-                        {
-                            // await ReturnAnswerAmount(roomCode, socketId);
-                        }
                     }
 
                     if (usersThatSelectedAnswers == room.NeededAnswers)
                     {
-                        // Loop
                         foreach (Classes.User user in room.Users)
                         {
                             user.ChoseStory = false;
@@ -892,7 +941,7 @@ namespace WerkelijkWaar
                     }
 
                     Classes.Story rootStory = room.RetrievedStories[gameGroup-1];
-                    string root = rootStory.OwnerId.ToString() + ":!|" + rootStory.Title + ":!|" + rootStory.Description;
+                    string root = rootStory.OwnerId.ToString() + ":!|" + rootStory.Title + ":!|" + rootStory.Description + ":!|0";
                     storiesToSend.Add(root);
 
                     // Shuffle story list
@@ -983,7 +1032,7 @@ namespace WerkelijkWaar
                                             l.WriteToLog("[Game]", "Chosen power-up is 'cross out 50% of the wrong answers'.", 2);
 
                                             await InvokeClientMethodToAllAsync("updatePowerups", roomCode, socketId, 3, score.CashAmount);
-                                            // await ReturnWrongAnswers(roomCode, socketId);
+                                            await ReturnWrongAnswers(roomCode, socketId);
                                         }
                                         else if (powerup == "4" && score.CashAmount >= (15.00 * room.Config.PowerupsCostMult))
                                         {
@@ -1032,38 +1081,54 @@ namespace WerkelijkWaar
             }
         }
 
-        //public async Task ReturnWrongAnswers(string roomCode, string socketId)
-        //{
-        //    List<int> buttonsToStrike = new List<int>();
+        public async Task ReturnWrongAnswers(string roomCode, string socketId)
+        {
+            foreach (Classes.Room room in _gameManager.Rooms)
+            {
+                if (room.RoomCode == roomCode)
+                {
+                    foreach (Classes.User user in room.Users)
+                    {
+                        if (user.SocketId == socketId)
+                        {
+                            l.WriteToLog("[Game]", "Power-up 3 for user " + socketId + ". Correct answer is " + room.CorrectAnswer, 0);
 
-        //    foreach (Classes.Room room in _gameManager.Rooms)
-        //    {
-        //        if (room.RoomCode == roomCode)
-        //        {
-        //            foreach (Classes.User user in room.Users)
-        //            {
-        //                if (user.SocketId == socketId)
-        //                { 
-        //                    foreach (string story in room.SentStories)
-        //                    {
-        //                        string[] storyParts = story.Split(":!|");
+                            Random rng = new Random();
+                            List<string> newList = room.SentStories;
 
-        //                        if (Convert.ToInt32(storyParts[0]) != room.CorrectAnswer)
-        //                        {
-        //                            buttonsToStrike.Add();
-        //                        }
-        //                    }
-        //                }
-        //            }
-        //        }
-        //    }
-        //}
+                            int maxStrikes = newList.Count / 2;
 
-        //public async Task ReturnAnswerAmount(string roomCode, string socketId)
-        //{
+                            // Set flags
+                            while (maxStrikes > 0)
+                            {
+                                int chosenStory = rng.Next(newList.Count);
 
-        //}
+                                if (chosenStory != room.CorrectAnswer)
+                                {
+                                    maxStrikes--;
+                                    newList[chosenStory] += ":!|1";
 
+                                    l.WriteToLog("[Game]", "Story " + chosenStory + " got flagged as wrong answer.", 1);
+                                }
+                            }
+
+                            // Get rest
+                            for (int i = newList.Count; i > 0; i--)
+                            {
+                                if (!newList[i].Contains(":!|1"))
+                                {
+                                    newList[i] += ":!|0";
+
+                                    l.WriteToLog("[Game]", "Story " + i + " got flagged as possibly correct answer.", 1);
+                                }
+                            }
+
+                            await InvokeClientMethodToAllAsync("returnWrongAnswers", roomCode, socketId, Newtonsoft.Json.JsonConvert.SerializeObject(newList));
+                        }
+                    }
+                }
+            }
+        }
         #endregion
 
         #region Visual
