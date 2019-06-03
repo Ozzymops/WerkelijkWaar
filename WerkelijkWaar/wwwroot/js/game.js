@@ -169,9 +169,11 @@ $(document).ready(function () {
         }
     }
 
-    connection.clientMethods["goToReadPhase"] = (roomCode) => {
+    connection.clientMethods["goToReadPhase"] = (roomCode, socketId, group, currentGroup) => {
         if ($roomContent.val() == roomCode) {
-            startReading();
+            if (connection.connectionId == socketId) {
+                startReading(group, currentGroup);            
+            }
         }
     }
 
@@ -286,7 +288,7 @@ $(document).ready(function () {
         }
     }
 
-    connection.clientMethods["updatePowerups"] = (roomCode, socketId, powerup) => {
+    connection.clientMethods["updatePowerups"] = (roomCode, socketId, powerup, newCash) => {
         if ($roomContent.val() == roomCode) {
             if (connection.connectionId == socketId) {
 
@@ -305,6 +307,11 @@ $(document).ready(function () {
                 else if (powerup == 4) {
                     document.getElementById("powerupFeedback").innerHTML = "Je kan nu het aantal stemmen zien.";
                 }
+
+                currentMoney = newCash;
+                $('#moneyCount').html("Geld: €" + currentMoney + "-");
+
+                $('#btn-activatePowerup').css("display", "none");
             }
         }
     }
@@ -324,7 +331,7 @@ $(document).ready(function () {
             $('#btn-activatePowerup-2').val("€" + cost2 + "-: Dubbele punten");
             $('#btn-activatePowerup-3').val("€" + cost3 + "-: 50% wegstrepen");
             $('#btn-activatePowerup-4').val("€" + cost4 + "-: Spieken");
-            // $('#btn-activatePowerup-5').val("€" + cost5 + "-: Twee antwoorden kiezen");
+            $('#btn-activatePowerup-5').val("€" + cost5 + "-: Dubbele punten voor jouw verhaal");
 
             // Colours
             if (currentMoney < cost1) {
@@ -355,12 +362,12 @@ $(document).ready(function () {
                 $('#btn-activatePowerup-4').css("background-color", "green");
             }
 
-            //if (currentMoney < cost5) {
-            //    $('#btn-activatePowerup-5').css("background-color", "red");
-            //}
-            //else {
-            //    $('#btn-activatePowerup-5').css("background-color", "green");
-            //}
+            if (currentMoney < cost5) {
+                $('#btn-activatePowerup-5').css("background-color", "red");
+            }
+            else {
+                $('#btn-activatePowerup-5').css("background-color", "green");
+            }
         }
     }
 
@@ -535,6 +542,11 @@ $(document).ready(function () {
         activatePowerup(4);
     });
 
+    $('#btn-activatePowerup-5').click(function () {
+        console.log("powerup 5");
+        activatePowerup(5);
+    });
+
     $('#btn-nextRound').click(function () {
         connection.invoke("GoToReadPhase", $roomContent.val(), false);
     });
@@ -656,7 +668,7 @@ $(document).ready(function () {
         }
     }
 
-    function startReading() {
+    function startReading(group, currentGroup) {
         document.getElementById("game-tutorial-1").style.display = "none";
         document.getElementById("game-tutorial-2").style.display = "none";
         document.getElementById("game-tutorial-3").style.display = "none";
@@ -664,6 +676,34 @@ $(document).ready(function () {
         document.getElementById("game-write").style.display = "none";
         document.getElementById("game-read").style.display = "block";
         document.getElementById("game-leaderboard").style.display = "none";
+
+        // writer turn
+        if (group == currentGroup) {
+            // no button
+            $('#turnString').css("display", "block");
+            $('#articleString').val("Artikelen");
+            $('#btn-shareStory').css("display", "none");
+
+            // power-ups
+            $('#btn-activatePowerup-1').css("display", "none");
+            $('#btn-activatePowerup-2').css("display", "none");
+            $('#btn-activatePowerup-3').css("display", "none");
+            $('#btn-activatePowerup-4').css("display", "none");
+            $('#btn-activatePowerup-5').css("display", "block");
+        }
+        else {
+            // button
+            $('#turnString').css("display", "none");
+            $('#articleString').val("Welk artikel deel je?");
+            $('#btn-shareStory').css("display", "block");
+
+            // power-ups
+            $('#btn-activatePowerup-1').css("display", "block");
+            $('#btn-activatePowerup-2').css("display", "block");
+            $('#btn-activatePowerup-3').css("display", "block");
+            $('#btn-activatePowerup-4').css("display", "block");
+            $('#btn-activatePowerup-5').css("display", "none");
+        }
     }
 
     function startWriting() {

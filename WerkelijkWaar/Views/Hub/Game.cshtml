@@ -82,7 +82,8 @@
                         <div id="read-busy">
                             <div style="display: flex; flex-direction: row;">
                                 <div style="display: flex; flex-direction: column;">
-                                    <p>Welk artikel deel je?</p>
+                                    <p id="turnString" style="display: none;">Jouw verhaal is aan de beurt. Je mag verhalen lezen maar niet delen.</p>
+                                    <p id="articleString">Welk artikel deel je?</p>
                                     <div id="storyList"></div>
                                 </div>
                                 <div>
@@ -97,11 +98,14 @@
                                     <input id="btn-activatePowerup-2" class="form-button-orange" type="button" value="Dubbele punten" />
                                     <input id="btn-activatePowerup-3" class="form-button-orange" type="button" value="50% wegstrepen" />
                                     <input id="btn-activatePowerup-4" class="form-button-orange" type="button" value="Spieken" />
+                                    <input id="btn-activatePowerup-5" class="form-button-orange" type="button" value="Dubbele punten voor jouw verhaal" style="display: none;" />
                                 </div>
                             </div>
                         </div>
                         <div id="read-finished">
                             <p>Was dat het juiste antwoord? We zullen zien!</p>
+                        </div>
+                        <div id="read-notallowed">
                         </div>
                         <span class="clockBar" style="display: none; margin-left: auto; margin-right: auto; width: 100vw; height: 50px; background-color: #f7c747; text-align: center;"></span>
                     </div>

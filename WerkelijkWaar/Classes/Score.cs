@@ -15,6 +15,7 @@ namespace WerkelijkWaar.Classes
         public int FollowerAmount { get; set; }
         public double CashAmount { get; set; }
         public int AttainedVotes { get; set; }
+        public int RoundVotes { get; set; }
         public string Answers { get; set; }
         public string CorrectAnswers { get; set; }
         public DateTime Date { get; set; }

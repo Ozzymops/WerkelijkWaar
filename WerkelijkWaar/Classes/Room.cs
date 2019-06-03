@@ -36,6 +36,7 @@ namespace WerkelijkWaar.Classes
         public int CurrentGroup = 0;
         public int GroupCount = 0;
         public int CorrectAnswer = 0;
+        public int NeededAnswers { get; set; }
 
         // Configuration
 

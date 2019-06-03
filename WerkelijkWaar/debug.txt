@@ -1219,3 +1219,1995 @@ Error Number:201,State:4,Class:16
 3-6-2019 | 11:36: End.
 ---[DEBUG MSG END]---
 
+---[DEBUG MSG START]---
+[Startup]
+3-6-2019 | 12:29: 7ms. Launching server
+3-6-2019 | 12:29: 21ms. Server is up
+3-6-2019 | 12:29: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[CheckLogin]
+3-6-2019 | 12:30: 2ms. Checking login for JMuris
+3-6-2019 | 12:30: 58ms. Found JMuris
+3-6-2019 | 12:30: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[RetrieveUser]
+3-6-2019 | 12:30: 2ms. Retrieving user 4
+3-6-2019 | 12:30: 13ms. Found user 4
+3-6-2019 | 12:30: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[CheckLogin]
+3-6-2019 | 12:30: 3ms. Checking login for AAppel
+3-6-2019 | 12:30: 18ms. Found AAppel
+3-6-2019 | 12:30: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[RetrieveUser]
+3-6-2019 | 12:30: 2ms. Retrieving user 5
+3-6-2019 | 12:30: 16ms. Found user 5
+3-6-2019 | 12:30: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[Game]
+3-6-2019 | 12:30: Creating new room.
+---[DEBUG MSG START]---
+[Room]
+3-6-2019 | 12:30: 5ms. Creating room...
+3-6-2019 | 12:30: 8ms. Generating code...
+3-6-2019 | 12:30: 12ms. Setting timers...
+3-6-2019 | 12:30: 18ms. Room created with code R2M7d1
+3-6-2019 | 12:30: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[RetrieveUser]
+3-6-2019 | 12:30: 2ms. Retrieving user 4
+3-6-2019 | 12:30: 9ms. Found user 4
+3-6-2019 | 12:30: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[RetrieveConfig]
+3-6-2019 | 12:30: 2ms. Attempting to retrieve config
+3-6-2019 | 12:30: 7ms. Got: 9 - 4
+3-6-2019 | 12:30: 12ms. Found config.
+3-6-2019 | 12:30: End.
+---[DEBUG MSG END]---
+
+3-6-2019 | 12:30: Teacher: JMuris
+3-6-2019 | 12:30: Config: 9
+3-6-2019 | 12:30: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[RetrieveAllStories]
+3-6-2019 | 12:30: 2ms. Attempting to retrieve all stories.
+3-6-2019 | 12:30: 10ms. Got: 1 - Een root verhaal
+3-6-2019 | 12:30: 12ms. Got: 2 - Een verhaal
+3-6-2019 | 12:30: 15ms. Got: 3 - Nog een verhaal
+3-6-2019 | 12:30: 23ms. Found 3 stories.
+3-6-2019 | 12:30: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[CheckLogin]
+3-6-2019 | 12:31: 16ms. Checking login for 
+3-6-2019 | 12:31: 264ms. Exception:
+System.Data.SqlClient.SqlException (0x80131904): Procedure or function 'LogIn' expects parameter '@pUsername', which was not supplied.
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, SqlDataReader ds)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite, String method)
+   at System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, Boolean sendToPipe, Int32 timeout, Boolean asyncWrite, String methodName)
+   at System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   at WerkelijkWaar.Classes.DatabaseQueries.CheckLogin(String username, String password) in C:\Users\Justin Muris\source\repos\WerkelijkWaar\WerkelijkWaar\Classes\DatabaseQueries.cs:line 440
+ClientConnectionId:fde915f3-51c9-4bf8-865e-bc92e7372645
+Error Number:201,State:4,Class:16
+3-6-2019 | 12:31: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[CheckLogin]
+3-6-2019 | 12:33: 4ms. Checking login for JMuris
+3-6-2019 | 12:33: 19ms. Found JMuris
+3-6-2019 | 12:33: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[RetrieveUser]
+3-6-2019 | 12:33: 2ms. Retrieving user 4
+3-6-2019 | 12:33: 12ms. Found user 4
+3-6-2019 | 12:33: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[CheckLogin]
+3-6-2019 | 12:33: 3ms. Checking login for AAppel
+3-6-2019 | 12:33: 17ms. Found AAppel
+3-6-2019 | 12:33: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[RetrieveUser]
+3-6-2019 | 12:33: 3ms. Retrieving user 5
+3-6-2019 | 12:33: 11ms. Found user 5
+3-6-2019 | 12:33: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[Game]
+3-6-2019 | 12:33: Creating new room.
+---[DEBUG MSG START]---
+[Room]
+3-6-2019 | 12:33: 7ms. Creating room...
+3-6-2019 | 12:33: 10ms. Generating code...
+3-6-2019 | 12:33: 13ms. Setting timers...
+3-6-2019 | 12:33: 20ms. Room created with code 6A3Fp2
+3-6-2019 | 12:33: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[RetrieveUser]
+3-6-2019 | 12:33: 3ms. Retrieving user 4
+3-6-2019 | 12:33: 9ms. Found user 4
+3-6-2019 | 12:33: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[RetrieveConfig]
+3-6-2019 | 12:33: 2ms. Attempting to retrieve config
+3-6-2019 | 12:33: 8ms. Got: 9 - 4
+3-6-2019 | 12:33: 15ms. Found config.
+3-6-2019 | 12:33: End.
+---[DEBUG MSG END]---
+
+3-6-2019 | 12:33: Teacher: JMuris
+3-6-2019 | 12:33: Config: 9
+3-6-2019 | 12:33: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[RetrieveAllStories]
+3-6-2019 | 12:33: 3ms. Attempting to retrieve all stories.
+3-6-2019 | 12:33: 10ms. Got: 1 - Een root verhaal
+3-6-2019 | 12:33: 13ms. Got: 2 - Een verhaal
+3-6-2019 | 12:33: 16ms. Got: 3 - Nog een verhaal
+3-6-2019 | 12:33: 22ms. Found 3 stories.
+3-6-2019 | 12:33: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[CheckLogin]
+3-6-2019 | 12:34: 24ms. Checking login for 
+3-6-2019 | 12:34: 226ms. Exception:
+System.Data.SqlClient.SqlException (0x80131904): Procedure or function 'LogIn' expects parameter '@pUsername', which was not supplied.
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, SqlDataReader ds)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite, String method)
+   at System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, Boolean sendToPipe, Int32 timeout, Boolean asyncWrite, String methodName)
+   at System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   at WerkelijkWaar.Classes.DatabaseQueries.CheckLogin(String username, String password) in C:\Users\Justin Muris\source\repos\WerkelijkWaar\WerkelijkWaar\Classes\DatabaseQueries.cs:line 440
+ClientConnectionId:fde915f3-51c9-4bf8-865e-bc92e7372645
+Error Number:201,State:4,Class:16
+3-6-2019 | 12:34: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[CheckLogin]
+3-6-2019 | 12:34: 39ms. Checking login for 
+3-6-2019 | 12:34: 302ms. Exception:
+System.Data.SqlClient.SqlException (0x80131904): Procedure or function 'LogIn' expects parameter '@pUsername', which was not supplied.
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, SqlDataReader ds)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite, String method)
+   at System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, Boolean sendToPipe, Int32 timeout, Boolean asyncWrite, String methodName)
+   at System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   at WerkelijkWaar.Classes.DatabaseQueries.CheckLogin(String username, String password) in C:\Users\Justin Muris\source\repos\WerkelijkWaar\WerkelijkWaar\Classes\DatabaseQueries.cs:line 440
+ClientConnectionId:fde915f3-51c9-4bf8-865e-bc92e7372645
+Error Number:201,State:4,Class:16
+3-6-2019 | 12:34: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[Startup]
+3-6-2019 | 12:37: 6ms. Launching server
+3-6-2019 | 12:37: 21ms. Server is up
+3-6-2019 | 12:37: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[CheckLogin]
+3-6-2019 | 12:37: 9ms. Checking login for JMuris
+3-6-2019 | 12:37: 74ms. Found JMuris
+3-6-2019 | 12:37: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[RetrieveUser]
+3-6-2019 | 12:37: 2ms. Retrieving user 4
+3-6-2019 | 12:37: 12ms. Found user 4
+3-6-2019 | 12:37: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[CheckLogin]
+3-6-2019 | 12:37: 5ms. Checking login for AAppel
+3-6-2019 | 12:37: 13ms. Found AAppel
+3-6-2019 | 12:37: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[RetrieveUser]
+3-6-2019 | 12:37: 3ms. Retrieving user 5
+3-6-2019 | 12:37: 11ms. Found user 5
+3-6-2019 | 12:37: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[Game]
+3-6-2019 | 12:37: Creating new room.
+---[DEBUG MSG START]---
+[Room]
+3-6-2019 | 12:37: 3ms. Creating room...
+3-6-2019 | 12:37: 8ms. Generating code...
+3-6-2019 | 12:37: 11ms. Setting timers...
+3-6-2019 | 12:37: 17ms. Room created with code 0678W4
+3-6-2019 | 12:37: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[RetrieveUser]
+3-6-2019 | 12:37: 5ms. Retrieving user 4
+3-6-2019 | 12:37: 11ms. Found user 4
+3-6-2019 | 12:37: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[RetrieveConfig]
+3-6-2019 | 12:37: 3ms. Attempting to retrieve config
+3-6-2019 | 12:37: 8ms. Got: 9 - 4
+3-6-2019 | 12:37: 12ms. Found config.
+3-6-2019 | 12:37: End.
+---[DEBUG MSG END]---
+
+3-6-2019 | 12:37: Teacher: JMuris
+3-6-2019 | 12:37: Config: 9
+3-6-2019 | 12:37: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[RetrieveAllStories]
+3-6-2019 | 12:38: 3ms. Attempting to retrieve all stories.
+3-6-2019 | 12:38: 9ms. Got: 1 - Een root verhaal
+3-6-2019 | 12:38: 12ms. Got: 2 - Een verhaal
+3-6-2019 | 12:38: 15ms. Got: 3 - Nog een verhaal
+3-6-2019 | 12:38: 21ms. Found 3 stories.
+3-6-2019 | 12:38: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[CheckLogin]
+3-6-2019 | 12:39: 3ms. Checking login for JMuris
+3-6-2019 | 12:39: 19ms. Found JMuris
+3-6-2019 | 12:39: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[RetrieveUser]
+3-6-2019 | 12:39: 2ms. Retrieving user 4
+3-6-2019 | 12:39: 9ms. Found user 4
+3-6-2019 | 12:39: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[CheckLogin]
+3-6-2019 | 12:39: 3ms. Checking login for AAppel
+3-6-2019 | 12:39: 10ms. Found AAppel
+3-6-2019 | 12:39: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[RetrieveUser]
+3-6-2019 | 12:39: 3ms. Retrieving user 5
+3-6-2019 | 12:39: 9ms. Found user 5
+3-6-2019 | 12:39: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[Game]
+3-6-2019 | 12:39: Creating new room.
+---[DEBUG MSG START]---
+[Room]
+3-6-2019 | 12:39: 3ms. Creating room...
+3-6-2019 | 12:39: 8ms. Generating code...
+3-6-2019 | 12:39: 14ms. Setting timers...
+3-6-2019 | 12:39: 28ms. Room created with code Fk98e6
+3-6-2019 | 12:39: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[RetrieveUser]
+3-6-2019 | 12:39: 2ms. Retrieving user 4
+3-6-2019 | 12:39: 17ms. Found user 4
+3-6-2019 | 12:39: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[RetrieveConfig]
+3-6-2019 | 12:39: 3ms. Attempting to retrieve config
+3-6-2019 | 12:39: 11ms. Got: 9 - 4
+3-6-2019 | 12:39: 19ms. Found config.
+3-6-2019 | 12:39: End.
+---[DEBUG MSG END]---
+
+3-6-2019 | 12:39: Teacher: JMuris
+3-6-2019 | 12:39: Config: 9
+3-6-2019 | 12:39: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[Startup]
+3-6-2019 | 12:40: 15ms. Launching server
+3-6-2019 | 12:40: 47ms. Server is up
+3-6-2019 | 12:40: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[CheckLogin]
+3-6-2019 | 12:40: 6ms. Checking login for JMuris
+3-6-2019 | 12:40: 74ms. Found JMuris
+3-6-2019 | 12:40: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[RetrieveUser]
+3-6-2019 | 12:40: 3ms. Retrieving user 4
+3-6-2019 | 12:40: 14ms. Found user 4
+3-6-2019 | 12:40: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[CheckLogin]
+3-6-2019 | 12:40: 3ms. Checking login for AAppel
+3-6-2019 | 12:40: 11ms. Found AAppel
+3-6-2019 | 12:40: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[RetrieveUser]
+3-6-2019 | 12:40: 3ms. Retrieving user 5
+3-6-2019 | 12:40: 10ms. Found user 5
+3-6-2019 | 12:40: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[Game]
+3-6-2019 | 12:40: Creating new room.
+---[DEBUG MSG START]---
+[Room]
+3-6-2019 | 12:40: 3ms. Creating room...
+3-6-2019 | 12:40: 10ms. Generating code...
+3-6-2019 | 12:40: 17ms. Setting timers...
+3-6-2019 | 12:40: 27ms. Room created with code 857792
+3-6-2019 | 12:40: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[RetrieveUser]
+3-6-2019 | 12:40: 3ms. Retrieving user 4
+3-6-2019 | 12:40: 12ms. Found user 4
+3-6-2019 | 12:40: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[RetrieveConfig]
+3-6-2019 | 12:40: 4ms. Attempting to retrieve config
+3-6-2019 | 12:40: 11ms. Got: 9 - 4
+3-6-2019 | 12:40: 17ms. Found config.
+3-6-2019 | 12:40: End.
+---[DEBUG MSG END]---
+
+3-6-2019 | 12:40: Teacher: JMuris
+3-6-2019 | 12:40: Config: 9
+3-6-2019 | 12:40: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[RetrieveAllStories]
+3-6-2019 | 12:40: 2ms. Attempting to retrieve all stories.
+3-6-2019 | 12:40: 8ms. Got: 1 - Een root verhaal
+3-6-2019 | 12:40: 10ms. Got: 2 - Een verhaal
+3-6-2019 | 12:40: 13ms. Got: 3 - Nog een verhaal
+3-6-2019 | 12:40: 17ms. Found 3 stories.
+3-6-2019 | 12:40: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[CheckLogin]
+3-6-2019 | 12:41: 44ms. Checking login for 
+3-6-2019 | 12:41: 305ms. Exception:
+System.Data.SqlClient.SqlException (0x80131904): Procedure or function 'LogIn' expects parameter '@pUsername', which was not supplied.
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, SqlDataReader ds)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite, String method)
+   at System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, Boolean sendToPipe, Int32 timeout, Boolean asyncWrite, String methodName)
+   at System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   at WerkelijkWaar.Classes.DatabaseQueries.CheckLogin(String username, String password) in C:\Users\Justin Muris\source\repos\WerkelijkWaar\WerkelijkWaar\Classes\DatabaseQueries.cs:line 440
+ClientConnectionId:fbd623c2-88eb-4f86-81b7-09639d30a270
+Error Number:201,State:4,Class:16
+3-6-2019 | 12:41: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[CheckLogin]
+3-6-2019 | 12:41: 34ms. Checking login for 
+3-6-2019 | 12:41: 228ms. Exception:
+System.Data.SqlClient.SqlException (0x80131904): Procedure or function 'LogIn' expects parameter '@pUsername', which was not supplied.
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, SqlDataReader ds)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite, String method)
+   at System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, Boolean sendToPipe, Int32 timeout, Boolean asyncWrite, String methodName)
+   at System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   at WerkelijkWaar.Classes.DatabaseQueries.CheckLogin(String username, String password) in C:\Users\Justin Muris\source\repos\WerkelijkWaar\WerkelijkWaar\Classes\DatabaseQueries.cs:line 440
+ClientConnectionId:fbd623c2-88eb-4f86-81b7-09639d30a270
+Error Number:201,State:4,Class:16
+3-6-2019 | 12:41: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[Startup]
+3-6-2019 | 12:44: 8ms. Launching server
+3-6-2019 | 12:44: 20ms. Server is up
+3-6-2019 | 12:44: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[CheckLogin]
+3-6-2019 | 12:44: 2ms. Checking login for JMuris
+3-6-2019 | 12:44: 56ms. Found JMuris
+3-6-2019 | 12:44: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[RetrieveUser]
+3-6-2019 | 12:44: 2ms. Retrieving user 4
+3-6-2019 | 12:44: 14ms. Found user 4
+3-6-2019 | 12:44: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[CheckLogin]
+3-6-2019 | 12:44: 1ms. Checking login for AAppel
+3-6-2019 | 12:44: 7ms. Found AAppel
+3-6-2019 | 12:44: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[RetrieveUser]
+3-6-2019 | 12:44: 2ms. Retrieving user 5
+3-6-2019 | 12:44: 7ms. Found user 5
+3-6-2019 | 12:44: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[Game]
+3-6-2019 | 12:44: Creating new room.
+---[DEBUG MSG START]---
+[Room]
+3-6-2019 | 12:44: 2ms. Creating room...
+3-6-2019 | 12:44: 6ms. Generating code...
+3-6-2019 | 12:44: 9ms. Setting timers...
+3-6-2019 | 12:44: 17ms. Room created with code l18Bn7
+3-6-2019 | 12:44: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[RetrieveUser]
+3-6-2019 | 12:44: 2ms. Retrieving user 4
+3-6-2019 | 12:44: 13ms. Found user 4
+3-6-2019 | 12:44: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[RetrieveConfig]
+3-6-2019 | 12:44: 2ms. Attempting to retrieve config
+3-6-2019 | 12:44: 8ms. Got: 9 - 4
+3-6-2019 | 12:44: 14ms. Found config.
+3-6-2019 | 12:44: End.
+---[DEBUG MSG END]---
+
+3-6-2019 | 12:44: Teacher: JMuris
+3-6-2019 | 12:44: Config: 9
+3-6-2019 | 12:44: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[RetrieveAllStories]
+3-6-2019 | 12:44: 2ms. Attempting to retrieve all stories.
+3-6-2019 | 12:44: 9ms. Got: 1 - Een root verhaal
+3-6-2019 | 12:44: 12ms. Got: 2 - Een verhaal
+3-6-2019 | 12:44: 15ms. Got: 3 - Nog een verhaal
+3-6-2019 | 12:44: 22ms. Found 3 stories.
+3-6-2019 | 12:44: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[Startup]
+3-6-2019 | 12:46: 7ms. Launching server
+3-6-2019 | 12:46: 17ms. Server is up
+3-6-2019 | 12:46: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[CheckLogin]
+3-6-2019 | 12:46: 2ms. Checking login for JMuris
+3-6-2019 | 12:46: 62ms. Found JMuris
+3-6-2019 | 12:46: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[RetrieveUser]
+3-6-2019 | 12:46: 1ms. Retrieving user 4
+3-6-2019 | 12:46: 12ms. Found user 4
+3-6-2019 | 12:46: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[CheckLogin]
+3-6-2019 | 12:46: 2ms. Checking login for AAppel
+3-6-2019 | 12:46: 9ms. Found AAppel
+3-6-2019 | 12:46: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[RetrieveUser]
+3-6-2019 | 12:46: 5ms. Retrieving user 5
+3-6-2019 | 12:46: 11ms. Found user 5
+3-6-2019 | 12:46: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[Game]
+3-6-2019 | 12:46: Creating new room.
+---[DEBUG MSG START]---
+[Room]
+3-6-2019 | 12:46: 3ms. Creating room...
+3-6-2019 | 12:46: 6ms. Generating code...
+3-6-2019 | 12:46: 10ms. Setting timers...
+3-6-2019 | 12:46: 18ms. Room created with code q5A275
+3-6-2019 | 12:46: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[RetrieveUser]
+3-6-2019 | 12:46: 2ms. Retrieving user 4
+3-6-2019 | 12:46: 8ms. Found user 4
+3-6-2019 | 12:46: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[RetrieveConfig]
+3-6-2019 | 12:46: 2ms. Attempting to retrieve config
+3-6-2019 | 12:46: 9ms. Got: 9 - 4
+3-6-2019 | 12:46: 17ms. Found config.
+3-6-2019 | 12:46: End.
+---[DEBUG MSG END]---
+
+3-6-2019 | 12:46: Teacher: JMuris
+3-6-2019 | 12:46: Config: 9
+3-6-2019 | 12:46: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[RetrieveAllStories]
+3-6-2019 | 12:46: 2ms. Attempting to retrieve all stories.
+3-6-2019 | 12:46: 10ms. Got: 1 - Een root verhaal
+3-6-2019 | 12:46: 13ms. Got: 2 - Een verhaal
+3-6-2019 | 12:46: 16ms. Got: 3 - Nog een verhaal
+3-6-2019 | 12:46: 21ms. Found 3 stories.
+3-6-2019 | 12:46: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[Startup]
+3-6-2019 | 13:02: 6ms. Launching server
+3-6-2019 | 13:02: 20ms. Server is up
+3-6-2019 | 13:02: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[CheckLogin]
+3-6-2019 | 13:02: 2ms. Checking login for JMuris
+3-6-2019 | 13:02: 50ms. Found JMuris
+3-6-2019 | 13:02: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[RetrieveUser]
+3-6-2019 | 13:02: 2ms. Retrieving user 4
+3-6-2019 | 13:02: 9ms. Found user 4
+3-6-2019 | 13:02: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[RetrieveConfig]
+3-6-2019 | 13:02: 3ms. Attempting to retrieve config
+3-6-2019 | 13:02: 12ms. Got: 9 - 4
+3-6-2019 | 13:02: 17ms. Found config.
+3-6-2019 | 13:02: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[RetrieveConfig]
+3-6-2019 | 13:02: 2ms. Attempting to retrieve config
+3-6-2019 | 13:02: 7ms. Got: 9 - 4
+3-6-2019 | 13:02: 14ms. Found config.
+3-6-2019 | 13:02: End.
+---[DEBUG MSG END]---
+
+3-6-2019 | 13:02: Config does exist - 9/4.
+---[DEBUG MSG START]---
+[UpdateConfig]
+3-6-2019 | 13:02: 2ms. Trying to edit config with id 9
+3-6-2019 | 13:02: 5ms. Values are: - Owner Id: 4;
+- Max writing time: 600;
+- Max reading time: 900;
+- Follower gain: 5;
+- Follower loss: 5;
+- Followers per vote: 1;
+- Cash per follower: 1;
+- Cash per vote: 0,5;
+- Max players: 30;
+- Powerups allowed? False;
+- Powerup cost multiplier: 1
+3-6-2019 | 13:02: 18ms. Edited config with id 9
+3-6-2019 | 13:02: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[RetrieveConfig]
+3-6-2019 | 13:02: 2ms. Attempting to retrieve config
+3-6-2019 | 13:02: 6ms. Got: 9 - 4
+3-6-2019 | 13:02: 13ms. Found config.
+3-6-2019 | 13:02: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[RetrieveConfig]
+3-6-2019 | 13:02: 2ms. Attempting to retrieve config
+3-6-2019 | 13:02: 6ms. Got: 9 - 4
+3-6-2019 | 13:02: 17ms. Found config.
+3-6-2019 | 13:02: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[CheckLogin]
+3-6-2019 | 13:02: 3ms. Checking login for AAppel
+3-6-2019 | 13:02: 19ms. Found AAppel
+3-6-2019 | 13:02: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[RetrieveUser]
+3-6-2019 | 13:02: 3ms. Retrieving user 5
+3-6-2019 | 13:02: 12ms. Found user 5
+3-6-2019 | 13:02: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[Game]
+3-6-2019 | 13:03: Creating new room.
+---[DEBUG MSG START]---
+[Room]
+3-6-2019 | 13:03: 3ms. Creating room...
+3-6-2019 | 13:03: 11ms. Generating code...
+3-6-2019 | 13:03: 15ms. Setting timers...
+3-6-2019 | 13:03: 26ms. Room created with code 4S9t5W
+3-6-2019 | 13:03: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[RetrieveUser]
+3-6-2019 | 13:03: 2ms. Retrieving user 4
+3-6-2019 | 13:03: 12ms. Found user 4
+3-6-2019 | 13:03: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[RetrieveConfig]
+3-6-2019 | 13:03: 3ms. Attempting to retrieve config
+3-6-2019 | 13:03: 8ms. Got: 9 - 4
+3-6-2019 | 13:03: 16ms. Found config.
+3-6-2019 | 13:03: End.
+---[DEBUG MSG END]---
+
+3-6-2019 | 13:03: Teacher: JMuris
+3-6-2019 | 13:03: Config: 9
+3-6-2019 | 13:03: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[RetrieveAllStories]
+3-6-2019 | 13:03: 3ms. Attempting to retrieve all stories.
+3-6-2019 | 13:03: 10ms. Got: 1 - Een root verhaal
+3-6-2019 | 13:03: 12ms. Got: 2 - Een verhaal
+3-6-2019 | 13:03: 15ms. Got: 3 - Nog een verhaal
+3-6-2019 | 13:03: 21ms. Found 3 stories.
+3-6-2019 | 13:03: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[Startup]
+3-6-2019 | 13:07: 10ms. Launching server
+3-6-2019 | 13:07: 23ms. Server is up
+3-6-2019 | 13:07: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[Startup]
+3-6-2019 | 13:08: 12ms. Launching server
+3-6-2019 | 13:08: 29ms. Server is up
+3-6-2019 | 13:08: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[CheckLogin]
+3-6-2019 | 13:09: 2ms. Checking login for JMuris
+3-6-2019 | 13:09: 45ms. Found JMuris
+3-6-2019 | 13:09: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[RetrieveUser]
+3-6-2019 | 13:09: 2ms. Retrieving user 4
+3-6-2019 | 13:09: 9ms. Found user 4
+3-6-2019 | 13:09: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[RetrieveConfig]
+3-6-2019 | 13:09: 3ms. Attempting to retrieve config
+3-6-2019 | 13:09: 9ms. Got: 9 - 4
+3-6-2019 | 13:09: 16ms. Found config.
+3-6-2019 | 13:09: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[RetrieveConfig]
+3-6-2019 | 13:09: 2ms. Attempting to retrieve config
+3-6-2019 | 13:09: 6ms. Got: 9 - 4
+3-6-2019 | 13:09: 12ms. Found config.
+3-6-2019 | 13:09: End.
+---[DEBUG MSG END]---
+
+3-6-2019 | 13:09: Config does exist - 9/4.
+---[DEBUG MSG START]---
+[UpdateConfig]
+3-6-2019 | 13:09: 3ms. Trying to edit config with id 9
+3-6-2019 | 13:09: 6ms. Values are: - Owner Id: 4;
+- Max writing time: 600;
+- Max reading time: 900;
+- Follower gain: 5;
+- Follower loss: 5;
+- Followers per vote: 1;
+- Cash per follower: 1;
+- Cash per vote: 1;
+- Max players: 30;
+- Powerups allowed? False;
+- Powerup cost multiplier: 1
+3-6-2019 | 13:09: 17ms. Edited config with id 9
+3-6-2019 | 13:09: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[RetrieveConfig]
+3-6-2019 | 13:09: 2ms. Attempting to retrieve config
+3-6-2019 | 13:09: 7ms. Got: 9 - 4
+3-6-2019 | 13:09: 12ms. Found config.
+3-6-2019 | 13:09: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[CheckLogin]
+3-6-2019 | 13:09: 76ms. Checking login for 
+3-6-2019 | 13:09: 205ms. Exception:
+System.Data.SqlClient.SqlException (0x80131904): Procedure or function 'LogIn' expects parameter '@pUsername', which was not supplied.
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, SqlDataReader ds)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite, String method)
+   at System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, Boolean sendToPipe, Int32 timeout, Boolean asyncWrite, String methodName)
+   at System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   at WerkelijkWaar.Classes.DatabaseQueries.CheckLogin(String username, String password) in C:\Users\Justin Muris\source\repos\WerkelijkWaar\WerkelijkWaar\Classes\DatabaseQueries.cs:line 440
+ClientConnectionId:83f05003-04f2-4d80-820a-b580df434ae2
+Error Number:201,State:4,Class:16
+3-6-2019 | 13:09: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[RetrieveConfig]
+3-6-2019 | 13:09: 3ms. Attempting to retrieve config
+3-6-2019 | 13:09: 8ms. Got: 9 - 4
+3-6-2019 | 13:09: 14ms. Found config.
+3-6-2019 | 13:09: End.
+---[DEBUG MSG END]---
+
+3-6-2019 | 13:09: Config does exist - 9/4.
+---[DEBUG MSG START]---
+[UpdateConfig]
+3-6-2019 | 13:09: 3ms. Trying to edit config with id 9
+3-6-2019 | 13:09: 6ms. Values are: - Owner Id: 4;
+- Max writing time: 600;
+- Max reading time: 900;
+- Follower gain: 5;
+- Follower loss: 5;
+- Followers per vote: 1;
+- Cash per follower: 1;
+- Cash per vote: 1;
+- Max players: 30;
+- Powerups allowed? False;
+- Powerup cost multiplier: 1
+3-6-2019 | 13:09: 15ms. Edited config with id 9
+3-6-2019 | 13:09: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[RetrieveConfig]
+3-6-2019 | 13:09: 3ms. Attempting to retrieve config
+3-6-2019 | 13:09: 7ms. Got: 9 - 4
+3-6-2019 | 13:09: 13ms. Found config.
+3-6-2019 | 13:09: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[RetrieveConfig]
+3-6-2019 | 13:13: 2ms. Attempting to retrieve config
+3-6-2019 | 13:13: 9ms. Got: 9 - 4
+3-6-2019 | 13:13: 16ms. Found config.
+3-6-2019 | 13:13: End.
+---[DEBUG MSG END]---
+
+3-6-2019 | 13:13: Config does exist - 9/4.
+---[DEBUG MSG START]---
+[UpdateConfig]
+3-6-2019 | 13:13: 4ms. Trying to edit config with id 9
+3-6-2019 | 13:13: 10ms. Values are: - Owner Id: 4;
+- Max writing time: 600;
+- Max reading time: 900;
+- Follower gain: 5;
+- Follower loss: 5;
+- Followers per vote: 1;
+- Cash per follower: 1;
+- Cash per vote: 1;
+- Max players: 30;
+- Powerups allowed? True;
+- Powerup cost multiplier: 1
+3-6-2019 | 13:13: 24ms. Edited config with id 9
+3-6-2019 | 13:13: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[RetrieveConfig]
+3-6-2019 | 13:13: 3ms. Attempting to retrieve config
+3-6-2019 | 13:13: 9ms. Got: 9 - 4
+3-6-2019 | 13:13: 17ms. Found config.
+3-6-2019 | 13:13: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[RetrieveConfig]
+3-6-2019 | 13:13: 2ms. Attempting to retrieve config
+3-6-2019 | 13:13: 7ms. Got: 9 - 4
+3-6-2019 | 13:13: 15ms. Found config.
+3-6-2019 | 13:13: End.
+---[DEBUG MSG END]---
+
+3-6-2019 | 13:13: Config does exist - 9/4.
+---[DEBUG MSG START]---
+[UpdateConfig]
+3-6-2019 | 13:13: 2ms. Trying to edit config with id 9
+3-6-2019 | 13:13: 4ms. Values are: - Owner Id: 4;
+- Max writing time: 600;
+- Max reading time: 900;
+- Follower gain: 5;
+- Follower loss: 5;
+- Followers per vote: 1;
+- Cash per follower: 1;
+- Cash per vote: 1;
+- Max players: 30;
+- Powerups allowed? False;
+- Powerup cost multiplier: 1
+3-6-2019 | 13:13: 13ms. Edited config with id 9
+3-6-2019 | 13:13: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[RetrieveConfig]
+3-6-2019 | 13:13: 2ms. Attempting to retrieve config
+3-6-2019 | 13:13: 6ms. Got: 9 - 4
+3-6-2019 | 13:13: 11ms. Found config.
+3-6-2019 | 13:13: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[RetrieveConfig]
+3-6-2019 | 13:13: 3ms. Attempting to retrieve config
+3-6-2019 | 13:13: 11ms. Got: 9 - 4
+3-6-2019 | 13:13: 19ms. Found config.
+3-6-2019 | 13:13: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[RetrieveConfig]
+3-6-2019 | 13:13: 3ms. Attempting to retrieve config
+3-6-2019 | 13:13: 7ms. Got: 9 - 4
+3-6-2019 | 13:13: 15ms. Found config.
+3-6-2019 | 13:13: End.
+---[DEBUG MSG END]---
+
+3-6-2019 | 13:13: Config does exist - 9/4.
+---[DEBUG MSG START]---
+[UpdateConfig]
+3-6-2019 | 13:13: 2ms. Trying to edit config with id 9
+3-6-2019 | 13:13: 6ms. Values are: - Owner Id: 4;
+- Max writing time: 600;
+- Max reading time: 900;
+- Follower gain: 5;
+- Follower loss: 5;
+- Followers per vote: 1;
+- Cash per follower: 1;
+- Cash per vote: 1;
+- Max players: 30;
+- Powerups allowed? False;
+- Powerup cost multiplier: 1
+3-6-2019 | 13:13: 16ms. Edited config with id 9
+3-6-2019 | 13:13: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[RetrieveConfig]
+3-6-2019 | 13:13: 6ms. Attempting to retrieve config
+3-6-2019 | 13:13: 11ms. Got: 9 - 4
+3-6-2019 | 13:13: 17ms. Found config.
+3-6-2019 | 13:13: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[RetrieveConfig]
+3-6-2019 | 13:14: 2ms. Attempting to retrieve config
+3-6-2019 | 13:14: 7ms. Got: 9 - 4
+3-6-2019 | 13:14: 14ms. Found config.
+3-6-2019 | 13:14: End.
+---[DEBUG MSG END]---
+
+3-6-2019 | 13:14: Config does exist - 9/4.
+---[DEBUG MSG START]---
+[UpdateConfig]
+3-6-2019 | 13:14: 1ms. Trying to edit config with id 9
+3-6-2019 | 13:14: 4ms. Values are: - Owner Id: 4;
+- Max writing time: 600;
+- Max reading time: 900;
+- Follower gain: 5;
+- Follower loss: 5;
+- Followers per vote: 1;
+- Cash per follower: 1;
+- Cash per vote: 1;
+- Max players: 30;
+- Powerups allowed? False;
+- Powerup cost multiplier: 1
+3-6-2019 | 13:14: 16ms. Edited config with id 9
+3-6-2019 | 13:14: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[RetrieveConfig]
+3-6-2019 | 13:14: 2ms. Attempting to retrieve config
+3-6-2019 | 13:14: 5ms. Got: 9 - 4
+3-6-2019 | 13:14: 11ms. Found config.
+3-6-2019 | 13:14: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[RetrieveConfig]
+3-6-2019 | 13:14: 4ms. Attempting to retrieve config
+3-6-2019 | 13:14: 10ms. Got: 9 - 4
+3-6-2019 | 13:14: 15ms. Found config.
+3-6-2019 | 13:14: End.
+---[DEBUG MSG END]---
+
+3-6-2019 | 13:14: Config does exist - 9/4.
+---[DEBUG MSG START]---
+[UpdateConfig]
+3-6-2019 | 13:14: 3ms. Trying to edit config with id 9
+3-6-2019 | 13:14: 6ms. Values are: - Owner Id: 4;
+- Max writing time: 600;
+- Max reading time: 900;
+- Follower gain: 5;
+- Follower loss: 5;
+- Followers per vote: 1;
+- Cash per follower: 1;
+- Cash per vote: 1;
+- Max players: 30;
+- Powerups allowed? False;
+- Powerup cost multiplier: 1
+3-6-2019 | 13:14: 16ms. Edited config with id 9
+3-6-2019 | 13:14: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[RetrieveConfig]
+3-6-2019 | 13:14: 3ms. Attempting to retrieve config
+3-6-2019 | 13:14: 7ms. Got: 9 - 4
+3-6-2019 | 13:14: 11ms. Found config.
+3-6-2019 | 13:14: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[RetrieveConfig]
+3-6-2019 | 13:14: 4ms. Attempting to retrieve config
+3-6-2019 | 13:14: 10ms. Got: 9 - 4
+3-6-2019 | 13:14: 17ms. Found config.
+3-6-2019 | 13:14: End.
+---[DEBUG MSG END]---
+
+3-6-2019 | 13:14: Config does exist - 9/4.
+---[DEBUG MSG START]---
+[UpdateConfig]
+3-6-2019 | 13:14: 3ms. Trying to edit config with id 9
+3-6-2019 | 13:14: 7ms. Values are: - Owner Id: 4;
+- Max writing time: 600;
+- Max reading time: 900;
+- Follower gain: 5;
+- Follower loss: 5;
+- Followers per vote: 1;
+- Cash per follower: 1;
+- Cash per vote: 1;
+- Max players: 30;
+- Powerups allowed? True;
+- Powerup cost multiplier: 1
+3-6-2019 | 13:14: 17ms. Edited config with id 9
+3-6-2019 | 13:14: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[RetrieveConfig]
+3-6-2019 | 13:14: 3ms. Attempting to retrieve config
+3-6-2019 | 13:14: 7ms. Got: 9 - 4
+3-6-2019 | 13:14: 13ms. Found config.
+3-6-2019 | 13:14: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[RetrieveConfig]
+3-6-2019 | 13:14: 2ms. Attempting to retrieve config
+3-6-2019 | 13:14: 7ms. Got: 9 - 4
+3-6-2019 | 13:14: 14ms. Found config.
+3-6-2019 | 13:14: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[CheckLogin]
+3-6-2019 | 13:14: 3ms. Checking login for AAppel
+3-6-2019 | 13:14: 16ms. Found AAppel
+3-6-2019 | 13:14: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[RetrieveUser]
+3-6-2019 | 13:14: 2ms. Retrieving user 5
+3-6-2019 | 13:14: 9ms. Found user 5
+3-6-2019 | 13:14: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[Game]
+3-6-2019 | 13:15: Creating new room.
+---[DEBUG MSG START]---
+[Room]
+3-6-2019 | 13:15: 3ms. Creating room...
+3-6-2019 | 13:15: 5ms. Generating code...
+3-6-2019 | 13:15: 10ms. Setting timers...
+3-6-2019 | 13:15: 16ms. Room created with code 18JiJ8
+3-6-2019 | 13:15: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[RetrieveUser]
+3-6-2019 | 13:15: 3ms. Retrieving user 4
+3-6-2019 | 13:15: 10ms. Found user 4
+3-6-2019 | 13:15: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[RetrieveConfig]
+3-6-2019 | 13:15: 2ms. Attempting to retrieve config
+3-6-2019 | 13:15: 8ms. Got: 9 - 4
+3-6-2019 | 13:15: 14ms. Found config.
+3-6-2019 | 13:15: End.
+---[DEBUG MSG END]---
+
+3-6-2019 | 13:15: Teacher: JMuris
+3-6-2019 | 13:15: Config: 9
+3-6-2019 | 13:15: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[RetrieveAllStories]
+3-6-2019 | 13:15: 2ms. Attempting to retrieve all stories.
+3-6-2019 | 13:15: 7ms. Got: 1 - Een root verhaal
+3-6-2019 | 13:15: 10ms. Got: 2 - Een verhaal
+3-6-2019 | 13:15: 13ms. Got: 3 - Nog een verhaal
+3-6-2019 | 13:15: 18ms. Found 3 stories.
+3-6-2019 | 13:15: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[RetrieveAllStories]
+3-6-2019 | 13:15: 2ms. Attempting to retrieve all stories.
+3-6-2019 | 13:15: 5ms. Got: 1 - Een root verhaal
+3-6-2019 | 13:15: 8ms. Got: 2 - Een verhaal
+3-6-2019 | 13:15: 10ms. Got: 3 - Nog een verhaal
+3-6-2019 | 13:15: 14ms. Found 3 stories.
+3-6-2019 | 13:15: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[RetrieveAllStories]
+3-6-2019 | 13:15: 2ms. Attempting to retrieve all stories.
+3-6-2019 | 13:15: 5ms. Got: 1 - Een root verhaal
+3-6-2019 | 13:15: 8ms. Got: 2 - Een verhaal
+3-6-2019 | 13:15: 12ms. Got: 3 - Nog een verhaal
+3-6-2019 | 13:15: 18ms. Found 3 stories.
+3-6-2019 | 13:15: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[RetrieveAllStories]
+3-6-2019 | 13:15: 2ms. Attempting to retrieve all stories.
+3-6-2019 | 13:15: 6ms. Got: 1 - Een root verhaal
+3-6-2019 | 13:15: 8ms. Got: 2 - Een verhaal
+3-6-2019 | 13:15: 11ms. Got: 3 - Nog een verhaal
+3-6-2019 | 13:15: 16ms. Found 3 stories.
+3-6-2019 | 13:15: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[Startup]
+3-6-2019 | 13:15: 6ms. Launching server
+3-6-2019 | 13:15: 16ms. Server is up
+3-6-2019 | 13:15: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[CheckLogin]
+3-6-2019 | 13:15: 2ms. Checking login for JMuris
+3-6-2019 | 13:15: 58ms. Found JMuris
+3-6-2019 | 13:15: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[RetrieveUser]
+3-6-2019 | 13:15: 2ms. Retrieving user 4
+3-6-2019 | 13:15: 12ms. Found user 4
+3-6-2019 | 13:15: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[Game]
+3-6-2019 | 13:15: Creating new room.
+---[DEBUG MSG START]---
+[Room]
+3-6-2019 | 13:15: 2ms. Creating room...
+3-6-2019 | 13:15: 5ms. Generating code...
+3-6-2019 | 13:15: 9ms. Setting timers...
+3-6-2019 | 13:15: 15ms. Room created with code 797X1X
+3-6-2019 | 13:15: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[RetrieveUser]
+3-6-2019 | 13:15: 5ms. Retrieving user 4
+3-6-2019 | 13:15: 13ms. Found user 4
+3-6-2019 | 13:15: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[RetrieveConfig]
+3-6-2019 | 13:15: 3ms. Attempting to retrieve config
+3-6-2019 | 13:15: 10ms. Got: 9 - 4
+3-6-2019 | 13:15: 16ms. Found config.
+3-6-2019 | 13:15: End.
+---[DEBUG MSG END]---
+
+3-6-2019 | 13:15: Teacher: JMuris
+3-6-2019 | 13:15: Config: 9
+3-6-2019 | 13:15: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[CheckLogin]
+3-6-2019 | 13:15: 3ms. Checking login for AAppel
+3-6-2019 | 13:15: 10ms. Found AAppel
+3-6-2019 | 13:15: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[RetrieveUser]
+3-6-2019 | 13:15: 2ms. Retrieving user 5
+3-6-2019 | 13:15: 10ms. Found user 5
+3-6-2019 | 13:15: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[RetrieveAllStories]
+3-6-2019 | 13:16: 2ms. Attempting to retrieve all stories.
+3-6-2019 | 13:16: 8ms. Got: 1 - Een root verhaal
+3-6-2019 | 13:16: 10ms. Got: 2 - Een verhaal
+3-6-2019 | 13:16: 13ms. Got: 3 - Nog een verhaal
+3-6-2019 | 13:16: 17ms. Found 3 stories.
+3-6-2019 | 13:16: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[CheckLogin]
+3-6-2019 | 13:16: 5ms. Checking login for 
+3-6-2019 | 13:16: 30ms. Exception:
+System.Data.SqlClient.SqlException (0x80131904): Procedure or function 'LogIn' expects parameter '@pUsername', which was not supplied.
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, SqlDataReader ds)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite, String method)
+   at System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, Boolean sendToPipe, Int32 timeout, Boolean asyncWrite, String methodName)
+   at System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   at WerkelijkWaar.Classes.DatabaseQueries.CheckLogin(String username, String password) in C:\Users\Justin Muris\source\repos\WerkelijkWaar\WerkelijkWaar\Classes\DatabaseQueries.cs:line 440
+ClientConnectionId:78d43371-128f-4237-91d9-8e9ff34b9b0e
+Error Number:201,State:4,Class:16
+3-6-2019 | 13:16: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[Startup]
+3-6-2019 | 13:23: 11ms. Launching server
+3-6-2019 | 13:23: 23ms. Server is up
+3-6-2019 | 13:23: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[CheckLogin]
+3-6-2019 | 13:23: 2ms. Checking login for JMuris
+3-6-2019 | 13:23: 56ms. Found JMuris
+3-6-2019 | 13:23: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[RetrieveUser]
+3-6-2019 | 13:23: 2ms. Retrieving user 4
+3-6-2019 | 13:23: 9ms. Found user 4
+3-6-2019 | 13:23: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[CheckLogin]
+3-6-2019 | 13:24: 3ms. Checking login for AAppel
+3-6-2019 | 13:24: 11ms. Found AAppel
+3-6-2019 | 13:24: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[RetrieveUser]
+3-6-2019 | 13:24: 2ms. Retrieving user 5
+3-6-2019 | 13:24: 11ms. Found user 5
+3-6-2019 | 13:24: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[Game]
+3-6-2019 | 13:24: Creating new room.
+---[DEBUG MSG START]---
+[Room]
+3-6-2019 | 13:24: 5ms. Creating room...
+3-6-2019 | 13:24: 8ms. Generating code...
+3-6-2019 | 13:24: 12ms. Setting timers...
+3-6-2019 | 13:24: 17ms. Room created with code 7Mg12I
+3-6-2019 | 13:24: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[RetrieveUser]
+3-6-2019 | 13:24: 3ms. Retrieving user 4
+3-6-2019 | 13:24: 15ms. Found user 4
+3-6-2019 | 13:24: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[RetrieveConfig]
+3-6-2019 | 13:24: 3ms. Attempting to retrieve config
+3-6-2019 | 13:24: 12ms. Got: 9 - 4
+3-6-2019 | 13:24: 20ms. Found config.
+3-6-2019 | 13:24: End.
+---[DEBUG MSG END]---
+
+3-6-2019 | 13:24: Teacher: JMuris
+3-6-2019 | 13:24: Config: 9
+3-6-2019 | 13:24: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[RetrieveAllStories]
+3-6-2019 | 13:24: 2ms. Attempting to retrieve all stories.
+3-6-2019 | 13:24: 9ms. Got: 1 - Een root verhaal
+3-6-2019 | 13:24: 12ms. Got: 2 - Een verhaal
+3-6-2019 | 13:24: 15ms. Got: 3 - Nog een verhaal
+3-6-2019 | 13:24: 21ms. Found 3 stories.
+3-6-2019 | 13:24: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[Startup]
+3-6-2019 | 13:32: 8ms. Launching server
+3-6-2019 | 13:32: 31ms. Server is up
+3-6-2019 | 13:32: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[CheckLogin]
+3-6-2019 | 13:32: 2ms. Checking login for JMuris
+3-6-2019 | 13:32: 52ms. Found JMuris
+3-6-2019 | 13:32: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[RetrieveUser]
+3-6-2019 | 13:32: 3ms. Retrieving user 4
+3-6-2019 | 13:32: 15ms. Found user 4
+3-6-2019 | 13:32: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[CheckLogin]
+3-6-2019 | 13:32: 2ms. Checking login for AAppel
+3-6-2019 | 13:32: 13ms. Found AAppel
+3-6-2019 | 13:32: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[RetrieveUser]
+3-6-2019 | 13:32: 2ms. Retrieving user 5
+3-6-2019 | 13:32: 12ms. Found user 5
+3-6-2019 | 13:32: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[Game]
+3-6-2019 | 13:32: Creating new room.
+---[DEBUG MSG START]---
+[Room]
+3-6-2019 | 13:32: 2ms. Creating room...
+3-6-2019 | 13:32: 6ms. Generating code...
+3-6-2019 | 13:32: 10ms. Setting timers...
+3-6-2019 | 13:32: 18ms. Room created with code R2jQ74
+3-6-2019 | 13:32: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[RetrieveUser]
+3-6-2019 | 13:32: 3ms. Retrieving user 4
+3-6-2019 | 13:32: 9ms. Found user 4
+3-6-2019 | 13:32: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[RetrieveConfig]
+3-6-2019 | 13:32: 2ms. Attempting to retrieve config
+3-6-2019 | 13:32: 8ms. Got: 9 - 4
+3-6-2019 | 13:32: 14ms. Found config.
+3-6-2019 | 13:32: End.
+---[DEBUG MSG END]---
+
+3-6-2019 | 13:32: Teacher: JMuris
+3-6-2019 | 13:32: Config: 9
+3-6-2019 | 13:32: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[RetrieveAllStories]
+3-6-2019 | 13:32: 2ms. Attempting to retrieve all stories.
+3-6-2019 | 13:32: 9ms. Got: 1 - Een root verhaal
+3-6-2019 | 13:32: 12ms. Got: 2 - Een verhaal
+3-6-2019 | 13:32: 16ms. Got: 3 - Nog een verhaal
+3-6-2019 | 13:32: 21ms. Found 3 stories.
+3-6-2019 | 13:32: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[Startup]
+3-6-2019 | 13:38: 18ms. Launching server
+3-6-2019 | 13:38: 46ms. Server is up
+3-6-2019 | 13:38: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[CheckLogin]
+3-6-2019 | 13:39: 2ms. Checking login for JMuris
+3-6-2019 | 13:39: 58ms. Found JMuris
+3-6-2019 | 13:39: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[RetrieveUser]
+3-6-2019 | 13:39: 3ms. Retrieving user 4
+3-6-2019 | 13:39: 10ms. Found user 4
+3-6-2019 | 13:39: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[CheckLogin]
+3-6-2019 | 13:39: 3ms. Checking login for AAppel
+3-6-2019 | 13:39: 18ms. Found AAppel
+3-6-2019 | 13:39: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[RetrieveUser]
+3-6-2019 | 13:39: 2ms. Retrieving user 5
+3-6-2019 | 13:39: 10ms. Found user 5
+3-6-2019 | 13:39: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[Game]
+3-6-2019 | 13:39: Creating new room.
+---[DEBUG MSG START]---
+[Room]
+3-6-2019 | 13:39: 3ms. Creating room...
+3-6-2019 | 13:39: 8ms. Generating code...
+3-6-2019 | 13:39: 20ms. Setting timers...
+3-6-2019 | 13:39: 50ms. Room created with code 847M5s
+3-6-2019 | 13:39: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[RetrieveUser]
+3-6-2019 | 13:39: 5ms. Retrieving user 4
+3-6-2019 | 13:39: 13ms. Found user 4
+3-6-2019 | 13:39: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[RetrieveConfig]
+3-6-2019 | 13:39: 3ms. Attempting to retrieve config
+3-6-2019 | 13:39: 12ms. Got: 9 - 4
+3-6-2019 | 13:39: 23ms. Found config.
+3-6-2019 | 13:39: End.
+---[DEBUG MSG END]---
+
+3-6-2019 | 13:39: Teacher: JMuris
+3-6-2019 | 13:39: Config: 9
+3-6-2019 | 13:39: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[RetrieveAllStories]
+3-6-2019 | 13:39: 8ms. Attempting to retrieve all stories.
+3-6-2019 | 13:39: 13ms. Got: 1 - Een root verhaal
+3-6-2019 | 13:39: 16ms. Got: 2 - Een verhaal
+3-6-2019 | 13:39: 19ms. Got: 3 - Nog een verhaal
+3-6-2019 | 13:39: 25ms. Found 3 stories.
+3-6-2019 | 13:39: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[Startup]
+3-6-2019 | 13:45: 15ms. Launching server
+3-6-2019 | 13:45: 24ms. Server is up
+3-6-2019 | 13:45: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[CheckLogin]
+3-6-2019 | 13:45: 2ms. Checking login for JMuris
+3-6-2019 | 13:45: 53ms. Found JMuris
+3-6-2019 | 13:45: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[RetrieveUser]
+3-6-2019 | 13:45: 2ms. Retrieving user 4
+3-6-2019 | 13:45: 10ms. Found user 4
+3-6-2019 | 13:45: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[CheckLogin]
+3-6-2019 | 13:45: 2ms. Checking login for AAppel
+3-6-2019 | 13:45: 35ms. Found AAppel
+3-6-2019 | 13:45: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[RetrieveUser]
+3-6-2019 | 13:45: 4ms. Retrieving user 5
+3-6-2019 | 13:45: 20ms. Found user 5
+3-6-2019 | 13:45: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[Game]
+3-6-2019 | 13:45: Creating new room.
+---[DEBUG MSG START]---
+[Room]
+3-6-2019 | 13:45: 3ms. Creating room...
+3-6-2019 | 13:45: 5ms. Generating code...
+3-6-2019 | 13:45: 11ms. Setting timers...
+3-6-2019 | 13:45: 21ms. Room created with code c37Uwo
+3-6-2019 | 13:45: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[RetrieveUser]
+3-6-2019 | 13:45: 3ms. Retrieving user 4
+3-6-2019 | 13:45: 17ms. Found user 4
+3-6-2019 | 13:45: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[RetrieveConfig]
+3-6-2019 | 13:45: 5ms. Attempting to retrieve config
+3-6-2019 | 13:45: 15ms. Got: 9 - 4
+3-6-2019 | 13:45: 28ms. Found config.
+3-6-2019 | 13:45: End.
+---[DEBUG MSG END]---
+
+3-6-2019 | 13:45: Teacher: JMuris
+3-6-2019 | 13:45: Config: 9
+3-6-2019 | 13:45: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[RetrieveAllStories]
+3-6-2019 | 13:46: 4ms. Attempting to retrieve all stories.
+3-6-2019 | 13:46: 10ms. Got: 1 - Een root verhaal
+3-6-2019 | 13:46: 13ms. Got: 2 - Een verhaal
+3-6-2019 | 13:46: 16ms. Got: 3 - Nog een verhaal
+3-6-2019 | 13:46: 23ms. Found 3 stories.
+3-6-2019 | 13:46: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[Startup]
+3-6-2019 | 13:48: 16ms. Launching server
+3-6-2019 | 13:48: 46ms. Server is up
+3-6-2019 | 13:48: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[CheckLogin]
+3-6-2019 | 13:48: 1ms. Checking login for JMuris
+3-6-2019 | 13:48: 46ms. Found JMuris
+3-6-2019 | 13:48: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[RetrieveUser]
+3-6-2019 | 13:48: 1ms. Retrieving user 4
+3-6-2019 | 13:48: 13ms. Found user 4
+3-6-2019 | 13:48: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[CheckLogin]
+3-6-2019 | 13:48: 2ms. Checking login for AAppel
+3-6-2019 | 13:48: 9ms. Found AAppel
+3-6-2019 | 13:48: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[RetrieveUser]
+3-6-2019 | 13:48: 1ms. Retrieving user 5
+3-6-2019 | 13:48: 7ms. Found user 5
+3-6-2019 | 13:48: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[Game]
+3-6-2019 | 13:48: Creating new room.
+---[DEBUG MSG START]---
+[Room]
+3-6-2019 | 13:48: 2ms. Creating room...
+3-6-2019 | 13:48: 5ms. Generating code...
+3-6-2019 | 13:48: 10ms. Setting timers...
+3-6-2019 | 13:48: 15ms. Room created with code 82G8N8
+3-6-2019 | 13:48: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[RetrieveUser]
+3-6-2019 | 13:48: 2ms. Retrieving user 4
+3-6-2019 | 13:48: 9ms. Found user 4
+3-6-2019 | 13:48: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[RetrieveConfig]
+3-6-2019 | 13:48: 2ms. Attempting to retrieve config
+3-6-2019 | 13:48: 8ms. Got: 9 - 4
+3-6-2019 | 13:48: 13ms. Found config.
+3-6-2019 | 13:48: End.
+---[DEBUG MSG END]---
+
+3-6-2019 | 13:48: Teacher: JMuris
+3-6-2019 | 13:48: Config: 9
+3-6-2019 | 13:48: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[RetrieveAllStories]
+3-6-2019 | 13:48: 2ms. Attempting to retrieve all stories.
+3-6-2019 | 13:48: 8ms. Got: 1 - Een root verhaal
+3-6-2019 | 13:48: 11ms. Got: 2 - Een verhaal
+3-6-2019 | 13:48: 14ms. Got: 3 - Nog een verhaal
+3-6-2019 | 13:48: 18ms. Found 3 stories.
+3-6-2019 | 13:48: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[Startup]
+3-6-2019 | 13:50: 4ms. Launching server
+3-6-2019 | 13:50: 36ms. Server is up
+3-6-2019 | 13:50: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[CheckLogin]
+3-6-2019 | 13:50: 3ms. Checking login for JMuris
+3-6-2019 | 13:50: 123ms. Found JMuris
+3-6-2019 | 13:50: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[RetrieveUser]
+3-6-2019 | 13:50: 2ms. Retrieving user 4
+3-6-2019 | 13:50: 18ms. Found user 4
+3-6-2019 | 13:50: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[CheckLogin]
+3-6-2019 | 13:50: 3ms. Checking login for AAppel
+3-6-2019 | 13:50: 27ms. Found AAppel
+3-6-2019 | 13:50: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[RetrieveUser]
+3-6-2019 | 13:50: 3ms. Retrieving user 5
+3-6-2019 | 13:50: 19ms. Found user 5
+3-6-2019 | 13:50: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[Game]
+3-6-2019 | 13:50: Creating new room.
+---[DEBUG MSG START]---
+[Room]
+3-6-2019 | 13:50: 2ms. Creating room...
+3-6-2019 | 13:50: 19ms. Generating code...
+3-6-2019 | 13:50: 29ms. Setting timers...
+3-6-2019 | 13:50: 41ms. Room created with code h4X08r
+3-6-2019 | 13:50: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[RetrieveUser]
+3-6-2019 | 13:50: 3ms. Retrieving user 4
+3-6-2019 | 13:50: 20ms. Found user 4
+3-6-2019 | 13:50: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[RetrieveConfig]
+3-6-2019 | 13:50: 2ms. Attempting to retrieve config
+3-6-2019 | 13:50: 21ms. Got: 9 - 4
+3-6-2019 | 13:50: 37ms. Found config.
+3-6-2019 | 13:50: End.
+---[DEBUG MSG END]---
+
+3-6-2019 | 13:50: Teacher: JMuris
+3-6-2019 | 13:50: Config: 9
+3-6-2019 | 13:50: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[RetrieveAllStories]
+3-6-2019 | 13:51: 2ms. Attempting to retrieve all stories.
+3-6-2019 | 13:51: 19ms. Got: 1 - Een root verhaal
+3-6-2019 | 13:51: 25ms. Got: 2 - Een verhaal
+3-6-2019 | 13:51: 32ms. Got: 3 - Nog een verhaal
+3-6-2019 | 13:51: 47ms. Found 3 stories.
+3-6-2019 | 13:51: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[Startup]
+3-6-2019 | 13:53: 58ms. Launching server
+3-6-2019 | 13:53: 136ms. Server is up
+3-6-2019 | 13:53: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[CheckLogin]
+3-6-2019 | 13:53: 2ms. Checking login for JMuris
+3-6-2019 | 13:53: 52ms. Found JMuris
+3-6-2019 | 13:53: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[RetrieveUser]
+3-6-2019 | 13:53: 2ms. Retrieving user 4
+3-6-2019 | 13:53: 11ms. Found user 4
+3-6-2019 | 13:53: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[CheckLogin]
+3-6-2019 | 13:54: 2ms. Checking login for JMuris
+3-6-2019 | 13:54: 24ms. Found JMuris
+3-6-2019 | 13:54: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[RetrieveUser]
+3-6-2019 | 13:54: 2ms. Retrieving user 4
+3-6-2019 | 13:54: 12ms. Found user 4
+3-6-2019 | 13:54: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[CheckLogin]
+3-6-2019 | 13:54: 1ms. Checking login for AAppel
+3-6-2019 | 13:54: 8ms. Found AAppel
+3-6-2019 | 13:54: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[RetrieveUser]
+3-6-2019 | 13:54: 2ms. Retrieving user 5
+3-6-2019 | 13:54: 7ms. Found user 5
+3-6-2019 | 13:54: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[Game]
+3-6-2019 | 13:54: Creating new room.
+---[DEBUG MSG START]---
+[Room]
+3-6-2019 | 13:54: 2ms. Creating room...
+3-6-2019 | 13:54: 5ms. Generating code...
+3-6-2019 | 13:54: 10ms. Setting timers...
+3-6-2019 | 13:54: 15ms. Room created with code F235I9
+3-6-2019 | 13:54: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[RetrieveUser]
+3-6-2019 | 13:54: 2ms. Retrieving user 4
+3-6-2019 | 13:54: 8ms. Found user 4
+3-6-2019 | 13:54: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[RetrieveConfig]
+3-6-2019 | 13:54: 2ms. Attempting to retrieve config
+3-6-2019 | 13:54: 7ms. Got: 9 - 4
+3-6-2019 | 13:54: 13ms. Found config.
+3-6-2019 | 13:54: End.
+---[DEBUG MSG END]---
+
+3-6-2019 | 13:54: Teacher: JMuris
+3-6-2019 | 13:54: Config: 9
+3-6-2019 | 13:54: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[RetrieveAllStories]
+3-6-2019 | 13:54: 1ms. Attempting to retrieve all stories.
+3-6-2019 | 13:54: 8ms. Got: 1 - Een root verhaal
+3-6-2019 | 13:54: 10ms. Got: 2 - Een verhaal
+3-6-2019 | 13:54: 13ms. Got: 3 - Nog een verhaal
+3-6-2019 | 13:54: 17ms. Found 3 stories.
+3-6-2019 | 13:54: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[Startup]
+3-6-2019 | 13:55: 8ms. Launching server
+3-6-2019 | 13:55: 19ms. Server is up
+3-6-2019 | 13:55: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[Startup]
+3-6-2019 | 13:56: 12ms. Launching server
+3-6-2019 | 13:56: 54ms. Server is up
+3-6-2019 | 13:56: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[CheckLogin]
+3-6-2019 | 13:56: 3ms. Checking login for JMuris
+3-6-2019 | 13:56: 192ms. Found JMuris
+3-6-2019 | 13:56: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[RetrieveUser]
+3-6-2019 | 13:56: 2ms. Retrieving user 4
+3-6-2019 | 13:56: 23ms. Found user 4
+3-6-2019 | 13:56: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[CheckLogin]
+3-6-2019 | 13:56: 3ms. Checking login for AAppel
+3-6-2019 | 13:56: 26ms. Found AAppel
+3-6-2019 | 13:56: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[RetrieveUser]
+3-6-2019 | 13:56: 2ms. Retrieving user 5
+3-6-2019 | 13:56: 17ms. Found user 5
+3-6-2019 | 13:56: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[Game]
+3-6-2019 | 13:56: Creating new room.
+---[DEBUG MSG START]---
+[Room]
+3-6-2019 | 13:56: 2ms. Creating room...
+3-6-2019 | 13:56: 22ms. Generating code...
+3-6-2019 | 13:56: 65ms. Setting timers...
+3-6-2019 | 13:56: 82ms. Room created with code VHd462
+3-6-2019 | 13:56: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[RetrieveUser]
+3-6-2019 | 13:56: 3ms. Retrieving user 4
+3-6-2019 | 13:56: 18ms. Found user 4
+3-6-2019 | 13:56: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[RetrieveConfig]
+3-6-2019 | 13:56: 2ms. Attempting to retrieve config
+3-6-2019 | 13:56: 14ms. Got: 9 - 4
+3-6-2019 | 13:56: 20ms. Found config.
+3-6-2019 | 13:56: End.
+---[DEBUG MSG END]---
+
+3-6-2019 | 13:56: Teacher: JMuris
+3-6-2019 | 13:56: Config: 9
+3-6-2019 | 13:56: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[RetrieveAllStories]
+3-6-2019 | 13:56: 2ms. Attempting to retrieve all stories.
+3-6-2019 | 13:56: 18ms. Got: 1 - Een root verhaal
+3-6-2019 | 13:56: 23ms. Got: 2 - Een verhaal
+3-6-2019 | 13:56: 29ms. Got: 3 - Nog een verhaal
+3-6-2019 | 13:56: 43ms. Found 3 stories.
+3-6-2019 | 13:56: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[Startup]
+3-6-2019 | 13:58: 14ms. Launching server
+3-6-2019 | 13:58: 32ms. Server is up
+3-6-2019 | 13:58: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[CheckLogin]
+3-6-2019 | 13:58: 1ms. Checking login for JMuris
+3-6-2019 | 13:58: 43ms. Found JMuris
+3-6-2019 | 13:58: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[RetrieveUser]
+3-6-2019 | 13:58: 1ms. Retrieving user 4
+3-6-2019 | 13:58: 9ms. Found user 4
+3-6-2019 | 13:58: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[CheckLogin]
+3-6-2019 | 13:58: 2ms. Checking login for AAppel
+3-6-2019 | 13:58: 8ms. Found AAppel
+3-6-2019 | 13:58: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[RetrieveUser]
+3-6-2019 | 13:58: 2ms. Retrieving user 5
+3-6-2019 | 13:58: 7ms. Found user 5
+3-6-2019 | 13:58: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[Game]
+3-6-2019 | 13:58: Creating new room.
+---[DEBUG MSG START]---
+[Room]
+3-6-2019 | 13:58: 2ms. Creating room...
+3-6-2019 | 13:58: 6ms. Generating code...
+3-6-2019 | 13:58: 11ms. Setting timers...
+3-6-2019 | 13:58: 19ms. Room created with code g00V14
+3-6-2019 | 13:58: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[RetrieveUser]
+3-6-2019 | 13:58: 3ms. Retrieving user 4
+3-6-2019 | 13:58: 13ms. Found user 4
+3-6-2019 | 13:58: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[RetrieveConfig]
+3-6-2019 | 13:58: 2ms. Attempting to retrieve config
+3-6-2019 | 13:58: 10ms. Got: 9 - 4
+3-6-2019 | 13:58: 15ms. Found config.
+3-6-2019 | 13:58: End.
+---[DEBUG MSG END]---
+
+3-6-2019 | 13:58: Teacher: JMuris
+3-6-2019 | 13:58: Config: 9
+3-6-2019 | 13:58: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[RetrieveAllStories]
+3-6-2019 | 13:58: 2ms. Attempting to retrieve all stories.
+3-6-2019 | 13:58: 7ms. Got: 1 - Een root verhaal
+3-6-2019 | 13:58: 9ms. Got: 2 - Een verhaal
+3-6-2019 | 13:58: 12ms. Got: 3 - Nog een verhaal
+3-6-2019 | 13:58: 16ms. Found 3 stories.
+3-6-2019 | 13:58: End.
+---[DEBUG MSG END]---
+
