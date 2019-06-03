@@ -36,15 +36,17 @@ namespace WerkelijkWaar.Controllers
         /// Navigeer naar de spel configuratiescherm
         /// </summary>
         /// <returns>View</returns>
-        public IActionResult GameConfig()
+        public IActionResult GameConfig(string StatusString)
         {
             // login check
             if (!String.IsNullOrEmpty(HttpContext.Session.GetString("User")))
             {
-                HubModel hm = new HubModel();
-                hm.User = Newtonsoft.Json.JsonConvert.DeserializeObject<Classes.User>(HttpContext.Session.GetString("User"));
+                ConfigModel cm = new ConfigModel();
+                cm.StatusString = StatusString;
+                cm.Teacher = Newtonsoft.Json.JsonConvert.DeserializeObject<Classes.User>(HttpContext.Session.GetString("User"));
+                cm.Config = dq.RetrieveConfig(cm.Teacher.Id);
 
-                return View(hm);
+                return View(cm);
             }
 
             return RedirectToAction("Index", "Home");

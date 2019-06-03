@@ -16,11 +16,12 @@ namespace WerkelijkWaar.Classes
         public string RoomCode { get; set; }
         public string RoomOwnerId { get; set; }
         public string RoomOwner { get; set; }
+        public User Teacher { get; set; }
         public State RoomState { get; set; }
         public Configuration Config { get; set; }
         public int MaxIdleStrikes = 3;
         public int MaxProgressStrikes = 20;
-        public int MaxPlayers = 30;
+        public int MaxPlayers { get; set; }
         public int MinPlayers = 3;
         // Dynamic
         public int CurrentStrikes;
@@ -42,6 +43,7 @@ namespace WerkelijkWaar.Classes
         public Timer timer = new Timer(TimeSpan.FromSeconds(60).TotalMilliseconds); // Tick every sixty seconds
         public Timer gameTimer = new Timer(TimeSpan.FromSeconds(1).TotalMilliseconds);
 
+        public DatabaseQueries dq = new DatabaseQueries();
 
         /// <summary>
         /// Constructor: generate random code and set timer.

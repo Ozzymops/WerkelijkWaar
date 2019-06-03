@@ -2,6 +2,7 @@
     ViewData["Title"] = "Spel configuratie";
     Layout = "_LayoutSide";
 }
+@model ConfigModel
 
 <body>
     <div style="margin-top: 10px;">
@@ -26,30 +27,57 @@
         <div style="display: flex; flex-direction: row; justify-content: space-around;">
             <div style="width: 1000px;">
                 <h1 class="title">Spelinstellingen</h1>
-                <div style="display: flex; flex-direction: row;">
-                    <p class="before-input" style="display: inline-block; text-align: left; width: 550px;">Het aantal verkregen volgers [+] voor een correct antwoord:</p>
-                    <input class="text-input-thin" type="text" style="margin-left: -150px; width: 50px;" value="5" />
-                </div>
-                <div style="display: flex; flex-direction: row;">
-                    <p class="before-input" style="display: inline-block; text-align: left; width: 550px;">Het aantal verloren volgers [-] voor een fout antwoord:</p>
-                    <input class="text-input-thin" type="text" style="margin-left: -150px; width: 50px;" value="5" />
-                </div>
-                <div style="display: flex; flex-direction: row;">
-                    <p class="before-input" style="display: inline-block; text-align: left; width: 550px;">Het aantal verkregen volgers per keer dat jouw verhaal is gekozen:</p>
-                    <input class="text-input-thin" type="text" style="margin-left: -150px; width: 50px;" value="1" />
-                </div>
-                <div style="display: flex; flex-direction: row;">
-                    <p class="before-input" style="display: inline-block; text-align: left; width: 550px;">Het aantal verkregen euro's per volger:</p>
-                    <input class="text-input-thin" type="text" style="margin-left: -150px; width: 50px;" value="1" />
-                    <input class="text-input-thin" type="text" style="margin-left: -475px; width: 50px;" value="00" />
-                </div>
-                <div style="display: flex; flex-direction: row;">
-                    <p class="before-input" style="display: inline-block; text-align: left; width: 550px;">Het aantal verkregen euro's per keer dat jouw verhaal is gekozen:</p>
-                    <input class="text-input-thin" type="text" style="margin-left: -150px; width: 50px;" value="0" />
-                    <input class="text-input-thin" type="text" style="margin-left: -475px; width: 50px;" value="50" />
-                </div>
+                @if (!String.IsNullOrEmpty(Model.StatusString))
+                {
+                    <p class="before-input" style="color: red;">@Model.StatusString</p>
+                }
+                <form asp-action="CreateConfig" asp-controller="Config">
+                    <input asp-for="Config.Id" type="hidden" value="@Model.Config.Id" />
+                    <input asp-for="Config.OwnerId" type="hidden" value="@Model.Teacher.Id" />
+                    <div style="display: flex; flex-direction: row;">
+                        <p class="before-input" style="display: inline-block; text-align: left; width: 550px;">Het aantal tijd dat je krijgt om een verhaal te schrijven (in seconden):</p>
+                        <input asp-for="Config.MaxWritingTime" class="text-input-thin" type="text" style="margin-left: -150px; width: 50px;" value="@Model.Config.MaxWritingTime" />
+                    </div>
+                    <div style="display: flex; flex-direction: row;">
+                        <p class="before-input" style="display: inline-block; text-align: left; width: 550px;">Het aantal tijd dat je krijgt om verhalen te lezen (in seconden):</p>
+                        <input asp-for="Config.MaxReadingTime" class="text-input-thin" type="text" style="margin-left: -150px; width: 50px;" value="@Model.Config.MaxReadingTime" />
+                    </div>
+                    <div style="display: flex; flex-direction: row;">
+                        <p class="before-input" style="display: inline-block; text-align: left; width: 550px;">Maximum aantal spelers:</p>
+                        <input asp-for="Config.MaxPlayers" class="text-input-thin" type="text" style="margin-left: -150px; width: 50px;" value="@Model.Config.MaxPlayers" />
+                    </div>
+                    <div style="display: flex; flex-direction: row;">
+                        <p class="before-input" style="display: inline-block; text-align: left; width: 550px;">Het aantal verkregen volgers [+] voor een correct antwoord:</p>
+                        <input asp-for="Config.FollowerGain" class="text-input-thin" type="text" style="margin-left: -150px; width: 50px;" value="@Model.Config.FollowerGain" />
+                    </div>
+                    <div style="display: flex; flex-direction: row;">
+                        <p class="before-input" style="display: inline-block; text-align: left; width: 550px;">Het aantal verloren volgers [-] voor een fout antwoord:</p>
+                        <input asp-for="Config.FollowerLoss" class="text-input-thin" type="text" style="margin-left: -150px; width: 50px;" value="@Model.Config.FollowerLoss" />
+                    </div>
+                    <div style="display: flex; flex-direction: row;">
+                        <p class="before-input" style="display: inline-block; text-align: left; width: 550px;">Het aantal verkregen volgers per keer dat jouw verhaal is gekozen:</p>
+                        <input asp-for="Config.FollowerPerVote" class="text-input-thin" type="text" style="margin-left: -150px; width: 50px;" value="@Model.Config.FollowerPerVote" />
+                    </div>
+                    <div style="display: flex; flex-direction: row;">
+                        <p class="before-input" style="display: inline-block; text-align: left; width: 550px;">Het aantal verkregen euro's per volger:</p>
+                        <input asp-for="Config.CashPerFollower" class="text-input-thin" type="text" style="margin-left: -150px; width: 50px;" value="@Model.Config.CashPerFollower" />
+                    </div>
+                    <div style="display: flex; flex-direction: row;">
+                        <p class="before-input" style="display: inline-block; text-align: left; width: 550px;">Het aantal verkregen euro's per keer dat jouw verhaal is gekozen:</p>
+                        <input asp-for="Config.CashPerVote" class="text-input-thin" type="text" style="margin-left: -150px; width: 50px;" value="@Model.Config.CashPerVote" />
+                    </div>
+                    <div style="display: flex; flex-direction: row;">
+                        <p class="before-input" style="display: inline-block; text-align: left; width: 550px;">Zijn power-ups toegestaan?</p>
+                        <input asp-for="Config.PowerupsAllowed" type="checkbox" style="margin-left: -150px; width: 50px;" value="@Model.Config.PowerupsAllowed" />
+                    </div>
+                    <div style="display: flex; flex-direction: row;">
+                        <p class="before-input" style="display: inline-block; text-align: left; width: 550px;">Power-up prijzen:</p>
+                        <input asp-for="Config.PowerupsCostMult" class="text-input-thin" type="text" style="margin-left: -150px; width: 50px;" value="@Model.Config.PowerupsCostMult" />
+                    </div>
+                    <input type="image" src="~/content/image/Save.png" alt="Submit Form" value="Opslaan" style="position: absolute; right: 0; top: 100px;" />
+                    @*<a type=""><img class="small_icon" style="position: absolute; right: 0; top: 100px;" src="~/content/image/Save.png" title="Opslaan" alt="Opslaan" /></a>*@
+                </form>
             </div>
         </div>
-        <a asp-controller="Home" asp-action="Index"><img class="small_icon" style="position: absolute; right: 0; top: 100px;" src="~/content/image/Save.png" title="Opslaan" alt="Opslaan" /></a>
     </div>
 </body>

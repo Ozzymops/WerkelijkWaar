@@ -164,13 +164,22 @@ namespace WerkelijkWaar
         /// <param name="socketId">Owner ID</param>
         /// <param name="username">Owner username</param>
         /// <returns></returns>
-        public async Task HostRoom(string socketId, string username)
+        public async Task HostRoom(string userId, string socketId, string username)
         {
+            l.DebugToLog("[Game]", "Creating new room.", 0);
+
             Classes.Room Room = new Classes.Room();
 
             Room.RoomOwnerId = socketId;
             Room.RoomOwner = username;
+            Room.Teacher = dq.RetrieveUser(Convert.ToInt32(userId));
+            Room.Config = dq.RetrieveConfig(Convert.ToInt32(userId));
+            l.DebugToLog("[Game]", "Teacher: " + Room.Teacher.Username, 1);
+            l.DebugToLog("[Game]", "Config: " + Room.Config.Id, 2);
             // Room.Users.Add(new Classes.User { SocketId = socketId, Username = username });
+
+            // Apply config to relevant parts
+            Room.MaxPlayers = Room.Config.MaxPlayers;
 
             _gameManager.Rooms.Add(Room);
 
@@ -204,6 +213,7 @@ namespace WerkelijkWaar
                             room.Users.Add(new Classes.User { Id = Convert.ToInt32(userId), SocketId = socketId, Username = username, ReadyToPlay = false, WroteStory = false, ChoseStory = false });
                             await InvokeClientMethodToAllAsync("joinRoom", socketId, roomCode);
                             await RetrievePlayerList(room.RoomCode, false);
+                            await PowerupVisuals(room.RoomCode);
                         }
                         else
                         {
@@ -412,7 +422,7 @@ namespace WerkelijkWaar
                     room.RoomState = Classes.Room.State.Writing;
 
                     await InvokeClientMethodToAllAsync("goToWritePhase", roomCode);
-                    await StartGameTimer(roomCode, 600, room.RoomOwnerId);
+                    await StartGameTimer(roomCode, room.Config.MaxWritingTime, room.RoomOwnerId);
                     await RetrieveRootStory(roomCode);
                 }
             }
@@ -444,7 +454,7 @@ namespace WerkelijkWaar
                         {
                             l.WriteToLog("[Game]", "Game " + room.CurrentGroup + " of room '" + roomCode + "' started.", 2);
                             await InvokeClientMethodToAllAsync("goToReadPhase", roomCode);
-                            await StartGameTimer(roomCode, 900, room.RoomOwnerId);
+                            await StartGameTimer(roomCode, room.Config.MaxReadingTime, room.RoomOwnerId);
                             await RetrieveWrittenStories(roomCode, room.CurrentGroup);
                         }
                         else
@@ -456,7 +466,7 @@ namespace WerkelijkWaar
                     {
                         l.WriteToLog("[Game]", "First game of room '" + roomCode + "' started.", 2);
                         await InvokeClientMethodToAllAsync("goToReadPhase", roomCode);
-                        await StartGameTimer(roomCode, 900, room.RoomOwnerId);
+                        await StartGameTimer(roomCode, room.Config.MaxReadingTime, room.RoomOwnerId);
                         await RetrieveWrittenStories(roomCode, room.CurrentGroup);
                     }
                 }
@@ -611,8 +621,8 @@ namespace WerkelijkWaar
                                         if (votedScore.SocketId == votedStoryId)
                                         {
                                             votedScore.AttainedVotes += 1;
-                                            votedScore.FollowerAmount += 1;
-                                            votedScore.CashAmount += 0.50;
+                                            votedScore.FollowerAmount += room.Config.FollowerPerVote;
+                                            votedScore.CashAmount += room.Config.CashPerVote;
                                         }
                                     }
 
@@ -626,15 +636,15 @@ namespace WerkelijkWaar
 
                                         if (user.PowerupOneActive)
                                         {
-                                            score.FollowerAmount += 2;
+                                            score.FollowerAmount += (room.Config.FollowerGain / 2);
                                         }
                                         else if (user.PowerupTwoActive)
                                         {
-                                            score.FollowerAmount += 10;
+                                            score.FollowerAmount += (room.Config.FollowerGain * 2);
                                         }
                                         else
                                         {
-                                            score.FollowerAmount += 5;
+                                            score.FollowerAmount += room.Config.FollowerGain;
                                         }
                                     }
                                     // False
@@ -644,15 +654,15 @@ namespace WerkelijkWaar
 
                                         if (user.PowerupOneActive)
                                         {
-                                            score.FollowerAmount -= 2;
+                                            score.FollowerAmount -= (room.Config.FollowerLoss / 2);
                                         }
                                         else if (user.PowerupTwoActive)
                                         {
-                                            score.FollowerAmount -= 10;
+                                            score.FollowerAmount -= (room.Config.FollowerLoss * 2);
                                         }
                                         else
                                         {
-                                            score.FollowerAmount -= 5;
+                                            score.FollowerAmount -= room.Config.FollowerLoss;
                                         }
 
                                         if (score.FollowerAmount <= 0)
@@ -703,7 +713,10 @@ namespace WerkelijkWaar
                         {
                             if (user.SocketId == score.SocketId)
                             {
-                                score.CashAmount += 1.00 + (1.00 * score.FollowerAmount);
+                                score.CashAmount += 1.00 + (room.Config.CashPerFollower * score.FollowerAmount);
+
+                                await InvokeClientMethodToAllAsync("updateScore", roomCode, user.SocketId, score.CashAmount, score.FollowerAmount);
+                                await PowerupVisuals(roomCode);
                             }
                         }
                     }
@@ -824,85 +837,94 @@ namespace WerkelijkWaar
             {
                 if (room.RoomCode == roomCode)
                 {
-                    foreach (Classes.User user in room.Users)
+                    if (room.Config.PowerupsAllowed)
                     {
-                        if (user.SocketId == socketId)
+                        foreach (Classes.User user in room.Users)
                         {
-                            foreach (Classes.Score score in room.SelectedAnswers)
+                            if (user.SocketId == socketId)
                             {
-                                if (score.SocketId == socketId)
+                                foreach (Classes.Score score in room.SelectedAnswers)
                                 {
-                                    l.WriteToLog("[Game]", "User " + user.Username + " bought a power-up.", 1);
-
-                                    //  && score.CashAmount >= (0.00 * room.Config.PowerupsCostMult)
-                                    // score.CashAmount -= (0.00 * room.Config.PowerupsCostMult);
-
-                                    if (powerup == "1")
+                                    if (score.SocketId == socketId)
                                     {
-                                        // Choose two answers for 50% value - €20,00-
+                                        l.WriteToLog("[Game]", "User " + user.Username + " bought a power-up.", 1);
 
-                                        user.PowerupOneActive = true;
+                                        //  && score.CashAmount >= (0.00 * room.Config.PowerupsCostMult)
+                                        // score.CashAmount -= (0.00 * room.Config.PowerupsCostMult);
 
-                                        l.WriteToLog("[Game]", "Chosen power-up is 'choose two answers for 50% value'.", 2);
-
-                                        await InvokeClientMethodToAllAsync("updatePowerups", roomCode, socketId, 1);
-                                    }
-                                    else if (powerup == "2")
-                                    {
-                                        // Answers count for 200% value, positively and negatively - €25,00-
-
-                                        user.PowerupTwoActive = true;
-
-                                        l.WriteToLog("[Game]", "Chosen power-up is 'answers count for 200% value'.", 2);
-
-                                        await InvokeClientMethodToAllAsync("updatePowerups", roomCode, socketId, 2);
-                                    }
-                                    else if (powerup == "3")
-                                    {
-                                        // Cross out 50% of the wrong answers - €10,00-
-
-                                        user.PowerupThreeActive = true;
-
-                                        l.WriteToLog("[Game]", "Chosen power-up is 'cross out 50% of the wrong answers'.", 2);
-
-                                        await InvokeClientMethodToAllAsync("updatePowerups", roomCode, socketId, 3);
-                                        // await ReturnWrongAnswers(roomCode, socketId);
-                                    }
-                                    else if (powerup == "4")
-                                    {
-                                        // Show the amount of answers on each story - €15,00-
-
-                                        user.PowerupFourActive = true;
-
-                                        l.WriteToLog("[Game]", "Chosen power-up is 'show the amount of answers on each story'.", 2);
-
-                                        await InvokeClientMethodToAllAsync("updatePowerups", roomCode, socketId, 4);
-                                    }
-                                    else if (powerup == "5")
-                                    {
-                                        // Your story counts for 200% value when chosen - €15,00-
-
-                                        foreach (Classes.Story story in room.WrittenStories)
+                                        if (powerup == "1" && score.CashAmount >= (20.00 * room.Config.PowerupsCostMult))
                                         {
-                                            if (story.SocketId == user.SocketId)
-                                            {
-                                                story.PowerupActive = true;
+                                            // Choose two answers for 50% value - €20,00-
 
-                                                l.WriteToLog("[Game]", "Chosen power-up is 'written story counts for 200% value when chosen'. Applied to '" + story.Title + "'", 2);
-                                            }
+                                            user.PowerupOneActive = true;
+
+                                            l.WriteToLog("[Game]", "Chosen power-up is 'choose two answers for 50% value'.", 2);
+
+                                            await InvokeClientMethodToAllAsync("updatePowerups", roomCode, socketId, 1);
                                         }
+                                        else if (powerup == "2" && score.CashAmount >= (25.00 * room.Config.PowerupsCostMult))
+                                        {
+                                            // Answers count for 200% value, positively and negatively - €25,00-
 
-                                        await InvokeClientMethodToAllAsync("updatePowerups", roomCode, socketId, 5);
-                                    }
-                                    else
-                                    {
-                                        l.WriteToLog("[Game]", "Sike, no power-up after all. Gottem.", 2);
+                                            user.PowerupTwoActive = true;
 
-                                        await InvokeClientMethodToAllAsync("updatePowerups", roomCode, socketId, 0);
+                                            l.WriteToLog("[Game]", "Chosen power-up is 'answers count for 200% value'.", 2);
+
+                                            await InvokeClientMethodToAllAsync("updatePowerups", roomCode, socketId, 2);
+                                        }
+                                        else if (powerup == "3" && score.CashAmount >= (10.00 * room.Config.PowerupsCostMult))
+                                        {
+                                            // Cross out 50% of the wrong answers - €10,00-
+
+                                            user.PowerupThreeActive = true;
+
+                                            l.WriteToLog("[Game]", "Chosen power-up is 'cross out 50% of the wrong answers'.", 2);
+
+                                            await InvokeClientMethodToAllAsync("updatePowerups", roomCode, socketId, 3);
+                                            // await ReturnWrongAnswers(roomCode, socketId);
+                                        }
+                                        else if (powerup == "4" && score.CashAmount >= (15.00 * room.Config.PowerupsCostMult))
+                                        {
+                                            // Show the amount of answers on each story - €15,00-
+
+                                            user.PowerupFourActive = true;
+
+                                            l.WriteToLog("[Game]", "Chosen power-up is 'show the amount of answers on each story'.", 2);
+
+                                            await InvokeClientMethodToAllAsync("updatePowerups", roomCode, socketId, 4);
+                                        }
+                                        else if (powerup == "5" && score.CashAmount >= (15.00 * room.Config.PowerupsCostMult))
+                                        {
+                                            // Your story counts for 200% value when chosen - €15,00-
+
+                                            foreach (Classes.Story story in room.WrittenStories)
+                                            {
+                                                if (story.SocketId == user.SocketId)
+                                                {
+                                                    story.PowerupActive = true;
+
+                                                    l.WriteToLog("[Game]", "Chosen power-up is 'written story counts for 200% value when chosen'. Applied to '" + story.Title + "'", 2);
+                                                }
+                                            }
+
+                                            await InvokeClientMethodToAllAsync("updatePowerups", roomCode, socketId, 5);
+                                        }
+                                        else
+                                        {
+                                            l.WriteToLog("[Game]", "Sike, no power-up after all. Gottem.", 2);
+
+                                            await InvokeClientMethodToAllAsync("updatePowerups", roomCode, socketId, 0);
+                                        }
                                     }
                                 }
                             }
                         }
+                    }    
+                    else
+                    { 
+                        l.WriteToLog("[Game]", "Sike, no power-up after all. Gottem.", 2);
+
+                        await InvokeClientMethodToAllAsync("updatePowerups", roomCode, socketId, 0);
                     }
                 }
             }
@@ -987,6 +1009,24 @@ namespace WerkelijkWaar
             else
             {
                 await InvokeClientMethodToAllAsync("retrievePlayerList", roomCode, ownerId, Newtonsoft.Json.JsonConvert.SerializeObject(UsernameList), false);
+            }
+        }
+
+        public async Task PowerupVisuals(string roomCode)
+        {
+            foreach (Classes.Room room in _gameManager.Rooms)
+            {
+                if (room.RoomCode == roomCode)
+                {
+                    if (!room.Config.PowerupsAllowed)
+                    {
+                        await InvokeClientMethodToAllAsync("powerupVisuals", roomCode, room.Config.PowerupsAllowed, 20.00 * room.Config.PowerupsCostMult, 25.00 * room.Config.PowerupsCostMult, 10.00 * room.Config.PowerupsCostMult, 15.00 * room.Config.PowerupsCostMult, 15.00 * room.Config.PowerupsCostMult);
+                    }
+                    else
+                    {
+                        await InvokeClientMethodToAllAsync("powerupVisuals", roomCode, false, 0, 0, 0, 0, 0);
+                    }
+                }
             }
         }
         #endregion

@@ -334,6 +334,74 @@ namespace WerkelijkWaar.Classes
                 }
             }
         }
+
+        public bool CreateConfig(Configuration config)
+        {
+            sw.Restart();
+            l.WriteToLog("[CreateConfig]", "Trying to create score for user with Id " + config.OwnerId, 0);
+            l.DebugToLog("[CreateConfig]", sw.ElapsedMilliseconds.ToString() + "ms. Adding score of user " + config.OwnerId, 0);
+
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                SqlCommand command = new SqlCommand("INSERT INTO [Configuration] SELECT @ownerId, @maxWritingTime, @maxReadingTime, @followerGain, @followerLoss, " +
+                                                    "@followerPerVote, @cashPerFollower, @cashPerVote, @maxPlayers, @powerupsAllowed, @powerupsCostMult", connection);
+
+                command.Parameters.Add(new SqlParameter("@ownerId", config.OwnerId));
+                command.Parameters.Add(new SqlParameter("@maxWritingTime", config.MaxWritingTime));
+                command.Parameters.Add(new SqlParameter("@maxReadingTime", config.MaxReadingTime));
+                command.Parameters.Add(new SqlParameter("@followerGain", config.FollowerGain));
+                command.Parameters.Add(new SqlParameter("@followerLoss", config.FollowerLoss));
+                command.Parameters.Add(new SqlParameter("@followerPerVote", config.FollowerPerVote));
+                command.Parameters.Add(new SqlParameter("@cashPerFollower", config.CashPerFollower));
+                command.Parameters.Add(new SqlParameter("@cashPerVote", config.CashPerVote));
+                command.Parameters.Add(new SqlParameter("@maxPlayers", config.MaxPlayers));
+                command.Parameters.Add(new SqlParameter("@powerupsAllowed", config.PowerupsAllowed));
+                command.Parameters.Add(new SqlParameter("@powerupsCostMult", config.PowerupsCostMult));
+
+                l.DebugToLog("[CreateConfig]", sw.ElapsedMilliseconds.ToString() + "ms. Values are: " +
+                                "- Owner Id: " + config.OwnerId + ";\n" +
+                                "- Max writing time: " + config.MaxWritingTime + ";\n" +
+                                "- Max reading time: " + config.MaxReadingTime + ";\n" +
+                                "- Follower gain: " + config.FollowerGain + ";\n" +
+                                "- Follower loss: " + config.FollowerLoss + ";\n" +
+                                "- Followers per vote: " + config.FollowerPerVote + ";\n" +
+                                "- Cash per follower: " + config.CashPerFollower + ";\n" +
+                                "- Cash per vote: " + config.CashPerVote + ";\n" +
+                                "- Max players: " + config.MaxPlayers + ";\n" +
+                                "- Powerups allowed? " + config.PowerupsAllowed + ";\n" +
+                                "- Powerup cost multiplier: " + config.PowerupsCostMult, 1);
+
+                try
+                {
+                    connection.Open();
+
+                    int rows = command.ExecuteNonQuery();
+
+                    if (rows > 0)
+                    {
+                        l.WriteToLog("[CreateConfig]", "Config for " + config.OwnerId + " successfully added.", 2);
+                        l.DebugToLog("[CreateConfig]", sw.ElapsedMilliseconds.ToString() + "ms. Config for " + config.OwnerId + " succesfully added.", 2);
+
+                        sw.Stop();
+                        return true;
+                    }
+
+                    l.WriteToLog("[CreateConfig]", "Failed to add config for " + config.OwnerId + ".", 2);
+                    l.DebugToLog("[CreateConfig]", sw.ElapsedMilliseconds.ToString() + "ms. Failed to add config for " + config.OwnerId + ".", 2);
+
+                    sw.Stop();
+                    return false;
+                }
+                catch (Exception ex)
+                {
+                    l.WriteToLog("[CreateConfig]", "Something went wrong. Check debug.txt", 2);
+                    l.DebugToLog("[CreateConfig]", sw.ElapsedMilliseconds.ToString() + "ms. Exception:\n" + ex.ToString(), 2);
+
+                    sw.Stop();
+                    return false;
+                }
+            }
+        }
         #endregion
 
         #region READ
@@ -1109,6 +1177,88 @@ namespace WerkelijkWaar.Classes
                 }
             }
         }
+
+        public Configuration RetrieveConfig(int userId)
+        {
+            sw.Restart();
+            l.WriteToLog("[RetrieveConfig]", "Attempting to retrieve config...", 0);
+            l.DebugToLog("[RetrieveConfig]", sw.ElapsedMilliseconds.ToString() + "ms. Attempting to retrieve config", 0);
+
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                SqlCommand command = new SqlCommand("SELECT * FROM [Configuration] WHERE [OwnerId] = @ownerId", connection);
+                command.Parameters.Add(new SqlParameter("@ownerId", userId));
+
+                Configuration newConfig = new Configuration();
+
+                try
+                {
+                    connection.Open();
+
+                    using (SqlDataReader reader = command.ExecuteReader())
+                    {
+                        if (reader.HasRows)
+                        {
+                            while (reader.Read())
+                            {
+                                newConfig = new Configuration {
+                                    Id = (int)reader["Id"],
+                                    OwnerId = (int)reader["OwnerId"],
+                                    MaxWritingTime = (int)reader["MaxWritingTime"],
+                                    MaxReadingTime = (int)reader["MaxReadingTime"],
+                                    FollowerGain = (int)reader["FollowerGain"],
+                                    FollowerLoss = (int)reader["FollowerLoss"],
+                                    FollowerPerVote = (int)reader["FollowerPerVote"],
+                                    CashPerFollower = Convert.ToDouble(reader["CashPerFollower"]),
+                                    CashPerVote = Convert.ToDouble(reader["CashPerVote"]),
+                                    MaxPlayers = (int)reader["MaxPlayers"],
+                                    PowerupsAllowed = Convert.ToBoolean(reader["PowerupsAllowed"]),
+                                    PowerupsCostMult = Convert.ToDouble(reader["PowerupsCostMult"])
+                                };
+
+                                l.DebugToLog("[RetrieveConfig]", sw.ElapsedMilliseconds.ToString() + "ms. Got: " + newConfig.Id + " - " + newConfig.OwnerId, 1);
+                            }
+
+                            l.WriteToLog("[RetrieveConfig]", "Found config.", 2);
+                            l.DebugToLog("[RetrieveConfig]", sw.ElapsedMilliseconds.ToString() + "ms. Found config.", 2);
+
+                            sw.Stop();
+                            return newConfig;
+                        }
+                    }
+
+                    l.WriteToLog("[RetrieveConfig]", "Could not find a config.", 2);
+                    l.DebugToLog("[RetrieveConfig]", sw.ElapsedMilliseconds.ToString() + "ms. Could not find a config.", 2);
+
+                    newConfig = new Configuration
+                    {
+                        Id = 0,
+                        OwnerId = userId,
+                        MaxWritingTime = 600,
+                        MaxReadingTime = 900,
+                        FollowerGain = 5,
+                        FollowerLoss = 5,
+                        FollowerPerVote = 1,
+                        CashPerFollower = 1.00,
+                        CashPerVote = 0.50,
+                        MaxPlayers = 30,
+                        PowerupsAllowed = true,
+                        PowerupsCostMult = 1.00
+                    };
+
+                    sw.Stop();
+                    return newConfig;
+                }
+                catch (Exception ex)
+                {
+                    l.WriteToLog("[RetrieveConfig]", "Something went wrong. Check debug.txt", 2);
+                    l.DebugToLog("[RetrieveConfig]", sw.ElapsedMilliseconds.ToString() + "ms. Exception:\n" + ex.ToString(), 2);
+
+                    sw.Stop();
+                    return newConfig;
+                }
+            }
+        }
         #endregion
 
         #region UPDATE
@@ -1319,6 +1469,78 @@ namespace WerkelijkWaar.Classes
                 {
                     l.WriteToLog("[UpdateStoryStatus]", "Something went wrong. Check debug.txt", 2);
                     l.DebugToLog("[UpdateStoryStatus]", sw.ElapsedMilliseconds.ToString() + "ms. Exception:\n" + ex.ToString(), 2);
+
+                    sw.Stop();
+                    return false;
+                }
+            }
+        }
+
+        public bool UpdateConfig(Configuration config)
+        {
+            sw.Restart();
+            l.WriteToLog("[UpdateConfig]", "Trying to edit config with id " + config.Id, 0);
+            l.DebugToLog("[UpdateConfig]", sw.ElapsedMilliseconds.ToString() + "ms. Trying to edit config with id " + config.Id, 0);
+
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                SqlCommand command = new SqlCommand();
+
+                command = new SqlCommand("UPDATE [Configuration] SET [MaxWritingTime] = @maxWritingTime, [MaxReadingTime] = @maxReadingTime, " +
+                                         "[FollowerGain] = @followerGain, [FollowerLoss] = @followerLoss, [FollowerPerVote] = @followerPerVote, " +
+                                         "[CashPerFollower] = @cashPerFollower, [CashPerVote] = @cashPerVote, [MaxPlayers] = @maxPlayers, " +
+                                         "[PowerupsAllowed] = @powerupsAllowed, [PowerupsCostMult] = @powerupsCostMult WHERE [Id] = @configId", connection);
+
+                command.Parameters.Add(new SqlParameter("@configId", config.Id));
+                command.Parameters.Add(new SqlParameter("@maxWritingTime", config.MaxWritingTime));
+                command.Parameters.Add(new SqlParameter("@maxReadingTime", config.MaxReadingTime));
+                command.Parameters.Add(new SqlParameter("@followerGain", config.FollowerGain));
+                command.Parameters.Add(new SqlParameter("@followerLoss", config.FollowerLoss));
+                command.Parameters.Add(new SqlParameter("@followerPerVote", config.FollowerPerVote));
+                command.Parameters.Add(new SqlParameter("@cashPerFollower", config.CashPerFollower));
+                command.Parameters.Add(new SqlParameter("@cashPerVote", config.CashPerVote));
+                command.Parameters.Add(new SqlParameter("@maxPlayers", config.MaxPlayers));
+                command.Parameters.Add(new SqlParameter("@powerupsAllowed", config.PowerupsAllowed));
+                command.Parameters.Add(new SqlParameter("@powerupsCostMult", config.PowerupsCostMult));
+
+                l.DebugToLog("[UpdateConfig]", sw.ElapsedMilliseconds.ToString() + "ms. Values are: " +
+                                "- Owner Id: " + config.OwnerId + ";\n" +
+                                "- Max writing time: " + config.MaxWritingTime + ";\n" +
+                                "- Max reading time: " + config.MaxReadingTime + ";\n" +
+                                "- Follower gain: " + config.FollowerGain + ";\n" +
+                                "- Follower loss: " + config.FollowerLoss + ";\n" +
+                                "- Followers per vote: " + config.FollowerPerVote + ";\n" +
+                                "- Cash per follower: " + config.CashPerFollower + ";\n" +
+                                "- Cash per vote: " + config.CashPerVote + ";\n" +
+                                "- Max players: " + config.MaxPlayers + ";\n" +
+                                "- Powerups allowed? " + config.PowerupsAllowed + ";\n" +
+                                "- Powerup cost multiplier: " + config.PowerupsCostMult, 1);
+
+                try
+                {
+                    connection.Open();
+
+                    int rows = command.ExecuteNonQuery();
+
+                    if (rows > 0)
+                    {
+                        l.WriteToLog("[UpdateConfig]", "Edited config with id " + config.Id, 2);
+                        l.DebugToLog("[UpdateConfig]", sw.ElapsedMilliseconds.ToString() + "ms. Edited config with id " + config.Id, 2);
+
+                        sw.Stop();
+                        return true;
+                    }
+
+                    l.WriteToLog("[UpdateConfig]", "Could not find config with id " + config.Id, 2);
+                    l.DebugToLog("[UpdateConfig]", sw.ElapsedMilliseconds.ToString() + "ms. Could not find config with id " + config.Id, 2);
+
+                    sw.Stop();
+                    return false;
+                }
+                catch (Exception ex)
+                {
+                    l.WriteToLog("[UpdateConfig]", "Something went wrong. Check debug.txt", 2);
+                    l.DebugToLog("[UpdateConfig]", sw.ElapsedMilliseconds.ToString() + "ms. Exception:\n" + ex.ToString(), 2);
 
                     sw.Stop();
                     return false;

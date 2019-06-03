@@ -309,6 +309,73 @@ $(document).ready(function () {
         }
     }
 
+    connection.clientMethods["powerupVisuals"] = (roomCode, allowed, cost1, cost2, cost3, cost4, cost5) => {
+        if ($roomContent.val() == roomCode) {
+            // powerupsAllowed = allowed;
+            if (!allowed) {
+                $('#btn-activatePowerup').css("display", "none");
+            }
+            else {
+                $('#btn-activatePowerup').css("display", "block");
+            }
+
+            // Text
+            $('#btn-activatePowerup-1').val("€" + cost1 + "-: Twee antwoorden kiezen");
+            $('#btn-activatePowerup-2').val("€" + cost2 + "-: Dubbele punten");
+            $('#btn-activatePowerup-3').val("€" + cost3 + "-: 50% wegstrepen");
+            $('#btn-activatePowerup-4').val("€" + cost4 + "-: Spieken");
+            // $('#btn-activatePowerup-5').val("€" + cost5 + "-: Twee antwoorden kiezen");
+
+            // Colours
+            if (currentMoney < cost1) {
+                $('#btn-activatePowerup-1').css("background-color", "red");
+            }
+            else {
+                $('#btn-activatePowerup-1').css("background-color", "green");
+            }
+
+            if (currentMoney < cost1) {
+                $('#btn-activatePowerup-2').css("background-color", "red");
+            }
+            else {
+                $('#btn-activatePowerup-2').css("background-color", "green");
+            }
+
+            if (currentMoney < cost3) {
+                $('#btn-activatePowerup-3').css("background-color", "red");
+            }
+            else {
+                $('#btn-activatePowerup-3').css("background-color", "green");
+            }
+
+            if (currentMoney < cost4) {
+                $('#btn-activatePowerup-4').css("background-color", "red");
+            }
+            else {
+                $('#btn-activatePowerup-4').css("background-color", "green");
+            }
+
+            //if (currentMoney < cost5) {
+            //    $('#btn-activatePowerup-5').css("background-color", "red");
+            //}
+            //else {
+            //    $('#btn-activatePowerup-5').css("background-color", "green");
+            //}
+        }
+    }
+
+    connection.clientMethods["updateScore"] = (roomCode, socketId, money, followers) => {
+        if ($roomContent.val() == roomCode) {
+            if (connection.connectionId == socketId) {
+                currentMoney = money;
+                currentFollowers = followers;
+
+                $('#followerCount').html("Volgers: " + currentFollowers);
+                $('#moneyCount').html("Geld: €" + currentMoney + "-");
+            }
+        }
+    }
+
     connection.clientMethods["endGame"] = (roomCode, rank) => {
         if ($roomContent.val() == roomCode) {
             console.log("Game ended.");
@@ -330,6 +397,7 @@ $(document).ready(function () {
     var $userContent = $('#usernameInput');
     var $roomContent = $('#roomInput');
     var $roleContent = $('#roleId');
+    var $idContent = $('#idInput');
     var tutorialState = 0;
     var timer = 0;
     var soundState = 0;
@@ -339,6 +407,8 @@ $(document).ready(function () {
     var selectedAnswer = "";
     var toSelect = 0;
     var answerCount = 1;
+    var powerupsAllowed = true;
+    var currentMoney = 0.00;
 
     // Host a room
     $('#btn-openLobby').click(function () {
@@ -347,9 +417,10 @@ $(document).ready(function () {
 
         // Clean and validate
         var user = $userContent.val().trim();
+        var id = $idContent.val().trim();
 
         if (user.length != 0) {
-            connection.invoke("HostRoom", connection.connectionId, user);
+            connection.invoke("HostRoom", id, connection.connectionId, user);
         }
     });
 
@@ -670,7 +741,6 @@ $(document).ready(function () {
         document.getElementById("btn-activatePowerup").style.display = "block";
         document.getElementById("powerupBar").style.display = "none";
     }
-
     //#endregion
 
     // Start WebSocket connection

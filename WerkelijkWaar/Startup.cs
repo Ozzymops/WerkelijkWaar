@@ -49,7 +49,7 @@ namespace WerkelijkWaar
             });
 
             services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
-            services.AddSession(s => s.IdleTimeout = TimeSpan.FromMinutes(30));
+            services.AddSession(s => s.IdleTimeout = TimeSpan.FromMinutes(120));
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
         }
 
