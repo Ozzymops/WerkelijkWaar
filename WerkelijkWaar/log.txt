@@ -352,3 +352,220 @@
 3-6-2019 | 16:15: End.
 ---[LOG MSG END]---
 
+---[LOG MSG START]---
+[Startup]
+4-6-2019 | 09:55: Starting server...
+4-6-2019 | 09:55: Server is up and running!
+4-6-2019 | 09:55: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[CheckLogin]
+4-6-2019 | 09:56: Logging in AAppel...
+4-6-2019 | 09:56: Log in found for user AAppel
+4-6-2019 | 09:56: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveUser]
+4-6-2019 | 09:56: Attempting to retrieve user with id 5
+4-6-2019 | 09:56: Found user with id 5
+4-6-2019 | 09:56: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[AccountController]
+4-6-2019 | 09:56: AAppel validated.
+4-6-2019 | 09:56: AAppel navigated to Hub/Game
+4-6-2019 | 09:56: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[AccountController]
+4-6-2019 | 09:56: AAppel validated.
+4-6-2019 | 09:56: AAppel navigated to Account/AccountView.
+4-6-2019 | 09:56: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[Startup]
+4-6-2019 | 09:57: Starting server...
+4-6-2019 | 09:57: Server is up and running!
+4-6-2019 | 09:57: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[CheckLogin]
+4-6-2019 | 09:57: Logging in AAppel...
+4-6-2019 | 09:57: Log in found for user AAppel
+4-6-2019 | 09:57: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveUser]
+4-6-2019 | 09:57: Attempting to retrieve user with id 5
+4-6-2019 | 09:57: Found user with id 5
+4-6-2019 | 09:57: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[AccountController]
+4-6-2019 | 09:57: AAppel validated.
+4-6-2019 | 09:57: AAppel navigated to Hub/Game
+4-6-2019 | 09:57: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[AccountController]
+4-6-2019 | 09:57: AAppel validated.
+4-6-2019 | 09:57: AAppel navigated to Account/AccountView.
+4-6-2019 | 09:57: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[EditUserNames]
+4-6-2019 | 09:57: Trying to edit user Aarie
+4-6-2019 | 09:57: Edited user with id 5
+4-6-2019 | 09:57: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveUser]
+4-6-2019 | 09:57: Attempting to retrieve user with id 5
+4-6-2019 | 09:57: Found user with id 5
+4-6-2019 | 09:57: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[AccountController]
+4-6-2019 | 09:57: AAppel validated.
+4-6-2019 | 09:57: AAppel navigated to Account/AccountView.
+4-6-2019 | 09:57: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[AccountController]
+4-6-2019 | 10:00: AAppel validated.
+4-6-2019 | 10:00: AAppel navigated to Hub/Game
+4-6-2019 | 10:00: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[CheckLogin]
+4-6-2019 | 10:00: Logging in AAppel...
+4-6-2019 | 10:00: Log in found for user AAppel
+4-6-2019 | 10:00: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveUser]
+4-6-2019 | 10:00: Attempting to retrieve user with id 5
+4-6-2019 | 10:00: Found user with id 5
+4-6-2019 | 10:00: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[AccountController]
+4-6-2019 | 10:00: AAppel validated.
+4-6-2019 | 10:00: AAppel navigated to Hub/Game
+4-6-2019 | 10:00: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[AccountController]
+4-6-2019 | 10:00: AAppel validated.
+4-6-2019 | 10:00: AAppel navigated to Account/AccountView.
+4-6-2019 | 10:00: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[Startup]
+4-6-2019 | 10:00: Starting server...
+4-6-2019 | 10:00: Server is up and running!
+4-6-2019 | 10:00: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[CheckLogin]
+4-6-2019 | 10:00: Logging in AAppel...
+4-6-2019 | 10:00: Log in found for user AAppel
+4-6-2019 | 10:00: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveUser]
+4-6-2019 | 10:00: Attempting to retrieve user with id 5
+4-6-2019 | 10:00: Found user with id 5
+4-6-2019 | 10:00: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[AccountController]
+4-6-2019 | 10:00: AAppel validated.
+4-6-2019 | 10:00: AAppel navigated to Hub/Game
+4-6-2019 | 10:00: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[AccountController]
+4-6-2019 | 10:00: AAppel validated.
+4-6-2019 | 10:00: AAppel navigated to Account/AccountView.
+4-6-2019 | 10:00: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[EditUserAvatar]
+4-6-2019 | 10:00: Trying to write to user 5's avatar.
+4-6-2019 | 10:00: Edited user with id 5
+4-6-2019 | 10:00: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveUser]
+4-6-2019 | 10:00: Attempting to retrieve user with id 5
+4-6-2019 | 10:00: Found user with id 5
+4-6-2019 | 10:00: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[AccountController]
+4-6-2019 | 10:00: AAppel validated.
+4-6-2019 | 10:00: AAppel navigated to Account/AccountView.
+4-6-2019 | 10:00: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[AccountController]
+4-6-2019 | 10:01: AAppel validated.
+4-6-2019 | 10:01: AAppel logged out.
+4-6-2019 | 10:01: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[CheckLogin]
+4-6-2019 | 10:01: Logging in AAppel...
+4-6-2019 | 10:01: Log in found for user AAppel
+4-6-2019 | 10:01: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveUser]
+4-6-2019 | 10:01: Attempting to retrieve user with id 5
+4-6-2019 | 10:01: Found user with id 5
+4-6-2019 | 10:01: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[AccountController]
+4-6-2019 | 10:01: AAppel validated.
+4-6-2019 | 10:01: AAppel navigated to Hub/Game
+4-6-2019 | 10:01: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[AccountController]
+4-6-2019 | 10:01: AAppel validated.
+4-6-2019 | 10:01: AAppel navigated to Account/AccountView.
+4-6-2019 | 10:01: End.
+---[LOG MSG END]---
+

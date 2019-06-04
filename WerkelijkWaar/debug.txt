@@ -152,3 +152,125 @@
 3-6-2019 | 16:14: End.
 ---[DEBUG MSG END]---
 
+---[DEBUG MSG START]---
+[Startup]
+4-6-2019 | 09:55: 11ms. Launching server
+4-6-2019 | 09:55: 28ms. Server is up
+4-6-2019 | 09:55: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[CheckLogin]
+4-6-2019 | 09:56: 1ms. Checking login for AAppel
+4-6-2019 | 09:56: 82ms. Found AAppel
+4-6-2019 | 09:56: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[RetrieveUser]
+4-6-2019 | 09:56: 1ms. Retrieving user 5
+4-6-2019 | 09:56: 11ms. Found user 5
+4-6-2019 | 09:56: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[Startup]
+4-6-2019 | 09:57: 10ms. Launching server
+4-6-2019 | 09:57: 18ms. Server is up
+4-6-2019 | 09:57: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[CheckLogin]
+4-6-2019 | 09:57: 2ms. Checking login for AAppel
+4-6-2019 | 09:57: 59ms. Found AAppel
+4-6-2019 | 09:57: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[RetrieveUser]
+4-6-2019 | 09:57: 2ms. Retrieving user 5
+4-6-2019 | 09:57: 12ms. Found user 5
+4-6-2019 | 09:57: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[EditUserNames]
+4-6-2019 | 09:57: 2ms. Trying to edit user Aarie
+4-6-2019 | 09:57: 5ms. Values are: - Name: Aarie;
+- Surname: Appeltje;
+- Username: AAppel
+4-6-2019 | 09:57: 18ms. Edited user with id 5
+4-6-2019 | 09:57: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[RetrieveUser]
+4-6-2019 | 09:57: 2ms. Retrieving user 5
+4-6-2019 | 09:57: 7ms. Found user 5
+4-6-2019 | 09:57: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[CheckLogin]
+4-6-2019 | 10:00: 3ms. Checking login for AAppel
+4-6-2019 | 10:00: 16ms. Found AAppel
+4-6-2019 | 10:00: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[RetrieveUser]
+4-6-2019 | 10:00: 3ms. Retrieving user 5
+4-6-2019 | 10:00: 11ms. Found user 5
+4-6-2019 | 10:00: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[Startup]
+4-6-2019 | 10:00: 24ms. Launching server
+4-6-2019 | 10:00: 64ms. Server is up
+4-6-2019 | 10:00: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[CheckLogin]
+4-6-2019 | 10:00: 2ms. Checking login for AAppel
+4-6-2019 | 10:00: 44ms. Found AAppel
+4-6-2019 | 10:00: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[RetrieveUser]
+4-6-2019 | 10:00: 2ms. Retrieving user 5
+4-6-2019 | 10:00: 9ms. Found user 5
+4-6-2019 | 10:00: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[EditUserAvatar]
+4-6-2019 | 10:00: 2ms. Trying to write to user 5's avatar.
+4-6-2019 | 10:00: 10ms. Edited user with id 5
+4-6-2019 | 10:00: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[RetrieveUser]
+4-6-2019 | 10:00: 2ms. Retrieving user 5
+4-6-2019 | 10:00: 6ms. Found user 5
+4-6-2019 | 10:00: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[CheckLogin]
+4-6-2019 | 10:01: 2ms. Checking login for AAppel
+4-6-2019 | 10:01: 8ms. Found AAppel
+4-6-2019 | 10:01: End.
+---[DEBUG MSG END]---
+
+---[DEBUG MSG START]---
+[RetrieveUser]
+4-6-2019 | 10:01: 2ms. Retrieving user 5
+4-6-2019 | 10:01: 7ms. Found user 5
+4-6-2019 | 10:01: End.
+---[DEBUG MSG END]---
+

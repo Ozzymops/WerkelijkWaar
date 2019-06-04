@@ -240,6 +240,9 @@ namespace WerkelijkWaar.Controllers
                     {
                         avm.StatusString = "Succes.";
                         avm.StatusLocation = 0;
+
+                        Classes.User tempUser = dq.RetrieveUser(Newtonsoft.Json.JsonConvert.DeserializeObject<Classes.User>(HttpContext.Session.GetString("User")).Id);
+                        HttpContext.Session.SetString("User", Newtonsoft.Json.JsonConvert.SerializeObject(tempUser));
                     }
                     else
                     {
@@ -283,6 +286,9 @@ namespace WerkelijkWaar.Controllers
                             {
                                 avm.StatusString = "Succes.";
                                 avm.StatusLocation = 1;
+
+                                Classes.User tempUser = dq.RetrieveUser(Newtonsoft.Json.JsonConvert.DeserializeObject<Classes.User>(HttpContext.Session.GetString("User")).Id);
+                                HttpContext.Session.SetString("User", Newtonsoft.Json.JsonConvert.SerializeObject(tempUser));
                             }
                             else
                             {
@@ -309,59 +315,62 @@ namespace WerkelijkWaar.Controllers
             return RedirectToAction("Index", "Home");
         }
 
-        public IActionResult EditAvatar(EditAccountModel eam)
+        public IActionResult EditAvatar(AccountViewModel avm)
         {
             // check if logged in
             if (!String.IsNullOrEmpty(HttpContext.Session.GetString("User")))
             {
-                // Sla de image tijdelijk op.
-                var img = eam.NewAvatar;
+                avm.User = Newtonsoft.Json.JsonConvert.DeserializeObject<Classes.User>(HttpContext.Session.GetString("User"));
 
-                // Haal bestandstype op
-                var fileType = Path.GetFileName(img.FileName);
+                string fileType = Path.GetFileName(avm.UploadedAvatar.FileName);
+                string fileName = "";
 
-                // Haal de filename van de image op.
-                var fileName = "";
-
+                // check filetype
                 if (fileType.EndsWith(".jpg"))
                 {
-                    fileName = "avatar_" + eam.Id.ToString() + ".jpg";
+                    fileName = "avatar_" + avm.User.Id.ToString() + ".jpg";
                 }
                 else if (fileType.EndsWith(".png"))
                 {
-                    fileName = "avatar_" + eam.Id.ToString() + ".png";
+                    fileName = "avatar_" + avm.User.Id.ToString() + ".png";
                 }
                 else
                 {
-                    return RedirectToAction("EditAccount", "Account", eam);
+                    avm.StatusString = "Upload a.u.b. een .jpg of .png bestand.";
+                    avm.StatusLocation = 2;
+
+                    return View("AccountView", avm);
                 }
 
-                // todo: check of image daadwerkelijk een image is.
-
-                // Haal de User ID op van de nieuwe gebruiker.
-                int userId = eam.Id;
-
-                // Bouw het pad naar de image op.
-                var loc = Path.Combine(hostingEnvironment.WebRootPath, "content\\image\\avatars\\" + userId);
-                var path = Path.Combine(loc, fileName);
-
-                // Creëer het pad naar de image.
+                // pathing
+                string loc = Path.Combine(hostingEnvironment.WebRootPath, "content\\image\\avatars\\" + avm.User.Id);
+                string path = Path.Combine(loc, fileName);
                 Directory.CreateDirectory(loc);
 
-                // Kopiëer de image naar het pad.
-                img.CopyTo(new FileStream(path, FileMode.Create));
+                // move image
+                avm.UploadedAvatar.CopyTo(new FileStream(path, FileMode.Create));
 
                 // Sla het pad op in de database bij de nieuwe gebruiker.
-                bool result = dq.EditUserAvatar(eam.Id, fileName);
+                bool result = dq.EditUserAvatar(avm.User.Id, fileName);
 
                 if (result)
                 {
-                    HttpContext.Session.Remove("User");
-                    HttpContext.Session.SetString("User", Newtonsoft.Json.JsonConvert.SerializeObject(dq.RetrieveUser(eam.Id)));
+                    avm.StatusString = "Succes.";
+                    avm.StatusLocation = 2;
+
+                    Classes.User tempUser = dq.RetrieveUser(Newtonsoft.Json.JsonConvert.DeserializeObject<Classes.User>(HttpContext.Session.GetString("User")).Id);
+                    HttpContext.Session.SetString("User", Newtonsoft.Json.JsonConvert.SerializeObject(tempUser));
                 }
+                else
+                {
+                    avm.StatusString = "Er is iets mis gegaan. Probeer het a.u.b. opnieuw.";
+                    avm.StatusLocation = 2;
+                }
+
+                return View("AccountView", avm);
             }
 
-            return RedirectToAction("EditAccount", "Account", eam);
+            return RedirectToAction("Index", "Home");
         }
 
         public IActionResult DeleteAccount(int id)

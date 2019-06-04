@@ -53,7 +53,7 @@ p.before-input {
     text-align: center;
 }
 
-input[type=text].text-input, input[type=password].text-input, input[type=number].number-input {
+input[type=text].text-input, input[type=password].text-input, input[type=number].number-input, input[type=file].text-input {
     display: block;
     margin-left: auto;
     margin-right: auto;
@@ -64,7 +64,7 @@ input[type=text].text-input, input[type=password].text-input, input[type=number]
     height: 33px;
 }
 
-input[type=text].text-input:focus, input[type=password].text-input:focus, input[type=number].number-input:focus {
+input[type=text].text-input:focus, input[type=password].text-input:focus, input[type=number].number-input:focus, input[type=file].text-input:focus {
     display: block;
     margin-left: auto;
     margin-right: auto;
