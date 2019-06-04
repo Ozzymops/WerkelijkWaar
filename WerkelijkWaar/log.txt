@@ -569,3 +569,1890 @@
 4-6-2019 | 10:01: End.
 ---[LOG MSG END]---
 
+---[LOG MSG START]---
+[Startup]
+4-6-2019 | 10:01: Starting server...
+4-6-2019 | 10:01: Server is up and running!
+4-6-2019 | 10:01: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[CheckLogin]
+4-6-2019 | 10:01: Logging in AAppel...
+4-6-2019 | 10:01: Log in found for user AAppel
+4-6-2019 | 10:01: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveUser]
+4-6-2019 | 10:01: Attempting to retrieve user with id 5
+4-6-2019 | 10:01: Found user with id 5
+4-6-2019 | 10:01: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[AccountController]
+4-6-2019 | 10:01: AAppel validated.
+4-6-2019 | 10:01: AAppel navigated to Hub/Game
+4-6-2019 | 10:01: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[AccountController]
+4-6-2019 | 10:01: AAppel validated.
+4-6-2019 | 10:01: AAppel navigated to Account/AccountView.
+4-6-2019 | 10:01: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[Startup]
+4-6-2019 | 10:27: Starting server...
+4-6-2019 | 10:27: Server is up and running!
+4-6-2019 | 10:27: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[CheckLogin]
+4-6-2019 | 10:27: Logging in JMuris...
+4-6-2019 | 10:27: Log in found for user JMuris
+4-6-2019 | 10:27: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveUser]
+4-6-2019 | 10:27: Attempting to retrieve user with id 4
+4-6-2019 | 10:27: Found user with id 4
+4-6-2019 | 10:27: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[AccountController]
+4-6-2019 | 10:27: JMuris validated.
+4-6-2019 | 10:27: JMuris navigated to Hub/Game
+4-6-2019 | 10:27: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveUserListByGroup]
+4-6-2019 | 10:27: Attempting to retrieve users from group 2
+4-6-2019 | 10:27: Found 2 users from group 2
+4-6-2019 | 10:27: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveScoresOfUser]
+4-6-2019 | 10:27: Attempting to retrieve scores of user 5
+4-6-2019 | 10:27: Found 3 scores from user 5
+4-6-2019 | 10:27: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveScoresOfUser]
+4-6-2019 | 10:27: Attempting to retrieve scores of user 6
+4-6-2019 | 10:27: Found 3 scores from user 6
+4-6-2019 | 10:27: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveUser]
+4-6-2019 | 10:27: Attempting to retrieve user with id 5
+4-6-2019 | 10:27: Found user with id 5
+4-6-2019 | 10:27: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveStoriesOfUser]
+4-6-2019 | 10:27: Attempting to retrieve stories of user 5
+4-6-2019 | 10:27: Found 1 stories from user 5
+4-6-2019 | 10:27: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveScoresOfUser]
+4-6-2019 | 10:27: Attempting to retrieve scores of user 5
+4-6-2019 | 10:27: Found 3 scores from user 5
+4-6-2019 | 10:27: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[Startup]
+4-6-2019 | 10:28: Starting server...
+4-6-2019 | 10:28: Server is up and running!
+4-6-2019 | 10:28: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[CheckLogin]
+4-6-2019 | 10:28: Logging in JMuris...
+4-6-2019 | 10:28: Log in found for user JMuris
+4-6-2019 | 10:28: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveUser]
+4-6-2019 | 10:28: Attempting to retrieve user with id 4
+4-6-2019 | 10:28: Found user with id 4
+4-6-2019 | 10:28: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[AccountController]
+4-6-2019 | 10:28: JMuris validated.
+4-6-2019 | 10:28: JMuris navigated to Hub/Game
+4-6-2019 | 10:28: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveUserListByGroup]
+4-6-2019 | 10:28: Attempting to retrieve users from group 2
+4-6-2019 | 10:28: Found 2 users from group 2
+4-6-2019 | 10:28: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveScoresOfUser]
+4-6-2019 | 10:28: Attempting to retrieve scores of user 5
+4-6-2019 | 10:28: Found 3 scores from user 5
+4-6-2019 | 10:28: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveScoresOfUser]
+4-6-2019 | 10:28: Attempting to retrieve scores of user 6
+4-6-2019 | 10:28: Found 3 scores from user 6
+4-6-2019 | 10:28: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveUser]
+4-6-2019 | 10:28: Attempting to retrieve user with id 5
+4-6-2019 | 10:28: Found user with id 5
+4-6-2019 | 10:28: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveStoriesOfUser]
+4-6-2019 | 10:28: Attempting to retrieve stories of user 5
+4-6-2019 | 10:28: Found 1 stories from user 5
+4-6-2019 | 10:28: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveScoresOfUser]
+4-6-2019 | 10:28: Attempting to retrieve scores of user 5
+4-6-2019 | 10:28: Found 3 scores from user 5
+4-6-2019 | 10:28: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[Startup]
+4-6-2019 | 10:29: Starting server...
+4-6-2019 | 10:29: Server is up and running!
+4-6-2019 | 10:29: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[CheckLogin]
+4-6-2019 | 10:29: Logging in JMuris...
+4-6-2019 | 10:29: Log in found for user JMuris
+4-6-2019 | 10:29: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveUser]
+4-6-2019 | 10:29: Attempting to retrieve user with id 4
+4-6-2019 | 10:29: Found user with id 4
+4-6-2019 | 10:29: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[AccountController]
+4-6-2019 | 10:29: JMuris validated.
+4-6-2019 | 10:29: JMuris navigated to Hub/Game
+4-6-2019 | 10:29: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveUserListByGroup]
+4-6-2019 | 10:29: Attempting to retrieve users from group 2
+4-6-2019 | 10:29: Found 2 users from group 2
+4-6-2019 | 10:29: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveScoresOfUser]
+4-6-2019 | 10:29: Attempting to retrieve scores of user 5
+4-6-2019 | 10:29: Found 3 scores from user 5
+4-6-2019 | 10:29: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveScoresOfUser]
+4-6-2019 | 10:29: Attempting to retrieve scores of user 6
+4-6-2019 | 10:29: Found 3 scores from user 6
+4-6-2019 | 10:29: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveUser]
+4-6-2019 | 10:29: Attempting to retrieve user with id 5
+4-6-2019 | 10:29: Found user with id 5
+4-6-2019 | 10:29: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveStoriesOfUser]
+4-6-2019 | 10:29: Attempting to retrieve stories of user 5
+4-6-2019 | 10:29: Found 1 stories from user 5
+4-6-2019 | 10:29: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveScoresOfUser]
+4-6-2019 | 10:29: Attempting to retrieve scores of user 5
+4-6-2019 | 10:29: Found 3 scores from user 5
+4-6-2019 | 10:29: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveUser]
+4-6-2019 | 10:29: Attempting to retrieve user with id 5
+4-6-2019 | 10:29: Found user with id 5
+4-6-2019 | 10:29: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveUser]
+4-6-2019 | 10:30: Attempting to retrieve user with id 5
+4-6-2019 | 10:30: Found user with id 5
+4-6-2019 | 10:30: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveUser]
+4-6-2019 | 10:31: Attempting to retrieve user with id 5
+4-6-2019 | 10:31: Found user with id 5
+4-6-2019 | 10:31: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveUser]
+4-6-2019 | 10:31: Attempting to retrieve user with id 5
+4-6-2019 | 10:31: Found user with id 5
+4-6-2019 | 10:31: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveUser]
+4-6-2019 | 10:32: Attempting to retrieve user with id 5
+4-6-2019 | 10:32: Found user with id 5
+4-6-2019 | 10:32: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveUser]
+4-6-2019 | 10:32: Attempting to retrieve user with id 5
+4-6-2019 | 10:32: Found user with id 5
+4-6-2019 | 10:32: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveUser]
+4-6-2019 | 10:32: Attempting to retrieve user with id 5
+4-6-2019 | 10:32: Found user with id 5
+4-6-2019 | 10:32: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveUser]
+4-6-2019 | 10:33: Attempting to retrieve user with id 5
+4-6-2019 | 10:33: Found user with id 5
+4-6-2019 | 10:33: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveUser]
+4-6-2019 | 10:33: Attempting to retrieve user with id 5
+4-6-2019 | 10:33: Found user with id 5
+4-6-2019 | 10:33: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveUser]
+4-6-2019 | 10:36: Attempting to retrieve user with id 5
+4-6-2019 | 10:36: Found user with id 5
+4-6-2019 | 10:36: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveUser]
+4-6-2019 | 10:36: Attempting to retrieve user with id 5
+4-6-2019 | 10:36: Found user with id 5
+4-6-2019 | 10:36: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveUser]
+4-6-2019 | 10:37: Attempting to retrieve user with id 5
+4-6-2019 | 10:37: Found user with id 5
+4-6-2019 | 10:37: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveUser]
+4-6-2019 | 10:38: Attempting to retrieve user with id 5
+4-6-2019 | 10:38: Found user with id 5
+4-6-2019 | 10:38: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveUser]
+4-6-2019 | 10:39: Attempting to retrieve user with id 5
+4-6-2019 | 10:39: Found user with id 5
+4-6-2019 | 10:39: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveUser]
+4-6-2019 | 10:39: Attempting to retrieve user with id 5
+4-6-2019 | 10:39: Found user with id 5
+4-6-2019 | 10:39: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveUser]
+4-6-2019 | 10:39: Attempting to retrieve user with id 5
+4-6-2019 | 10:39: Found user with id 5
+4-6-2019 | 10:39: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveUser]
+4-6-2019 | 10:40: Attempting to retrieve user with id 5
+4-6-2019 | 10:40: Found user with id 5
+4-6-2019 | 10:40: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveUser]
+4-6-2019 | 10:40: Attempting to retrieve user with id 5
+4-6-2019 | 10:40: Found user with id 5
+4-6-2019 | 10:40: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveUser]
+4-6-2019 | 10:41: Attempting to retrieve user with id 5
+4-6-2019 | 10:41: Found user with id 5
+4-6-2019 | 10:41: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveUser]
+4-6-2019 | 10:42: Attempting to retrieve user with id 5
+4-6-2019 | 10:42: Found user with id 5
+4-6-2019 | 10:42: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveUser]
+4-6-2019 | 10:42: Attempting to retrieve user with id 5
+4-6-2019 | 10:42: Found user with id 5
+4-6-2019 | 10:42: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveUser]
+4-6-2019 | 10:43: Attempting to retrieve user with id 5
+4-6-2019 | 10:43: Found user with id 5
+4-6-2019 | 10:43: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveStoriesOfUser]
+4-6-2019 | 10:43: Attempting to retrieve stories of user 5
+4-6-2019 | 10:43: Found 1 stories from user 5
+4-6-2019 | 10:43: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveScoresOfUser]
+4-6-2019 | 10:43: Attempting to retrieve scores of user 5
+4-6-2019 | 10:43: Found 3 scores from user 5
+4-6-2019 | 10:43: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveUser]
+4-6-2019 | 10:43: Attempting to retrieve user with id 5
+4-6-2019 | 10:43: Found user with id 5
+4-6-2019 | 10:43: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveScore]
+4-6-2019 | 10:43: Attempting to retrieve score with id 1
+4-6-2019 | 10:43: Found score with id 1
+---[LOG MSG START]---
+[RetrieveUser]
+4-6-2019 | 10:43: Attempting to retrieve user with id 5
+4-6-2019 | 10:43: Found user with id 5
+4-6-2019 | 10:43: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveStoriesOfUser]
+4-6-2019 | 10:43: Attempting to retrieve stories of user 5
+4-6-2019 | 10:43: Found 1 stories from user 5
+4-6-2019 | 10:43: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveScoresOfUser]
+4-6-2019 | 10:43: Attempting to retrieve scores of user 5
+4-6-2019 | 10:43: Found 3 scores from user 5
+4-6-2019 | 10:43: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveUser]
+4-6-2019 | 10:43: Attempting to retrieve user with id 5
+4-6-2019 | 10:43: Found user with id 5
+4-6-2019 | 10:43: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveScore]
+4-6-2019 | 10:43: Attempting to retrieve score with id 3
+4-6-2019 | 10:43: Found score with id 3
+---[LOG MSG START]---
+[RetrieveUser]
+4-6-2019 | 10:43: Attempting to retrieve user with id 5
+4-6-2019 | 10:43: Found user with id 5
+4-6-2019 | 10:43: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveStoriesOfUser]
+4-6-2019 | 10:43: Attempting to retrieve stories of user 5
+4-6-2019 | 10:43: Found 1 stories from user 5
+4-6-2019 | 10:43: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveScoresOfUser]
+4-6-2019 | 10:43: Attempting to retrieve scores of user 5
+4-6-2019 | 10:43: Found 3 scores from user 5
+4-6-2019 | 10:43: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveUser]
+4-6-2019 | 10:43: Attempting to retrieve user with id 5
+4-6-2019 | 10:43: Found user with id 5
+4-6-2019 | 10:43: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveScore]
+4-6-2019 | 10:43: Attempting to retrieve score with id 1
+4-6-2019 | 10:43: Found score with id 1
+---[LOG MSG START]---
+[RetrieveUser]
+4-6-2019 | 10:43: Attempting to retrieve user with id 5
+4-6-2019 | 10:43: Found user with id 5
+4-6-2019 | 10:43: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveStoriesOfUser]
+4-6-2019 | 10:43: Attempting to retrieve stories of user 5
+4-6-2019 | 10:43: Found 1 stories from user 5
+4-6-2019 | 10:43: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveScoresOfUser]
+4-6-2019 | 10:43: Attempting to retrieve scores of user 5
+4-6-2019 | 10:43: Found 3 scores from user 5
+4-6-2019 | 10:43: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveUser]
+4-6-2019 | 10:44: Attempting to retrieve user with id 5
+4-6-2019 | 10:44: Found user with id 5
+4-6-2019 | 10:44: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveScore]
+4-6-2019 | 10:44: Attempting to retrieve score with id 2
+4-6-2019 | 10:44: Found score with id 2
+---[LOG MSG START]---
+[RetrieveUser]
+4-6-2019 | 10:44: Attempting to retrieve user with id 5
+4-6-2019 | 10:44: Found user with id 5
+4-6-2019 | 10:44: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveStoriesOfUser]
+4-6-2019 | 10:44: Attempting to retrieve stories of user 5
+4-6-2019 | 10:44: Found 1 stories from user 5
+4-6-2019 | 10:44: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveScoresOfUser]
+4-6-2019 | 10:44: Attempting to retrieve scores of user 5
+4-6-2019 | 10:44: Found 3 scores from user 5
+4-6-2019 | 10:44: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveUser]
+4-6-2019 | 10:44: Attempting to retrieve user with id 5
+4-6-2019 | 10:44: Found user with id 5
+4-6-2019 | 10:44: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveUser]
+4-6-2019 | 10:47: Attempting to retrieve user with id 5
+4-6-2019 | 10:47: Found user with id 5
+4-6-2019 | 10:47: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveUser]
+4-6-2019 | 10:47: Attempting to retrieve user with id 5
+4-6-2019 | 10:47: Found user with id 5
+4-6-2019 | 10:47: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveStoriesOfUser]
+4-6-2019 | 10:47: Attempting to retrieve stories of user 5
+4-6-2019 | 10:47: Found 1 stories from user 5
+4-6-2019 | 10:47: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveScoresOfUser]
+4-6-2019 | 10:47: Attempting to retrieve scores of user 5
+4-6-2019 | 10:47: Found 3 scores from user 5
+4-6-2019 | 10:47: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveUser]
+4-6-2019 | 10:47: Attempting to retrieve user with id 5
+4-6-2019 | 10:47: Found user with id 5
+4-6-2019 | 10:47: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveScore]
+4-6-2019 | 10:47: Attempting to retrieve score with id 1
+4-6-2019 | 10:47: Found score with id 1
+---[LOG MSG START]---
+[RetrieveUser]
+4-6-2019 | 10:48: Attempting to retrieve user with id 5
+4-6-2019 | 10:48: Found user with id 5
+4-6-2019 | 10:48: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveScore]
+4-6-2019 | 10:48: Attempting to retrieve score with id 1
+4-6-2019 | 10:48: Found score with id 1
+---[LOG MSG START]---
+[RetrieveUser]
+4-6-2019 | 10:48: Attempting to retrieve user with id 5
+4-6-2019 | 10:48: Found user with id 5
+4-6-2019 | 10:48: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveStoriesOfUser]
+4-6-2019 | 10:48: Attempting to retrieve stories of user 5
+4-6-2019 | 10:48: Found 1 stories from user 5
+4-6-2019 | 10:48: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveScoresOfUser]
+4-6-2019 | 10:48: Attempting to retrieve scores of user 5
+4-6-2019 | 10:48: Found 3 scores from user 5
+4-6-2019 | 10:48: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveUserListByGroup]
+4-6-2019 | 10:49: Attempting to retrieve users from group 2
+4-6-2019 | 10:49: Found 2 users from group 2
+4-6-2019 | 10:49: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveScoresOfUser]
+4-6-2019 | 10:49: Attempting to retrieve scores of user 5
+4-6-2019 | 10:49: Found 3 scores from user 5
+4-6-2019 | 10:49: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveScoresOfUser]
+4-6-2019 | 10:49: Attempting to retrieve scores of user 6
+4-6-2019 | 10:49: Found 3 scores from user 6
+4-6-2019 | 10:49: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveUser]
+4-6-2019 | 10:49: Attempting to retrieve user with id 5
+4-6-2019 | 10:49: Found user with id 5
+4-6-2019 | 10:49: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveStoriesOfUser]
+4-6-2019 | 10:49: Attempting to retrieve stories of user 5
+4-6-2019 | 10:49: Found 1 stories from user 5
+4-6-2019 | 10:49: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveScoresOfUser]
+4-6-2019 | 10:49: Attempting to retrieve scores of user 5
+4-6-2019 | 10:49: Found 3 scores from user 5
+4-6-2019 | 10:49: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveUser]
+4-6-2019 | 10:49: Attempting to retrieve user with id 5
+4-6-2019 | 10:49: Found user with id 5
+4-6-2019 | 10:49: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[Startup]
+4-6-2019 | 10:49: Starting server...
+4-6-2019 | 10:49: Server is up and running!
+4-6-2019 | 10:49: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[CheckLogin]
+4-6-2019 | 10:49: Logging in JMuris...
+4-6-2019 | 10:49: Log in found for user JMuris
+4-6-2019 | 10:49: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveUser]
+4-6-2019 | 10:49: Attempting to retrieve user with id 4
+4-6-2019 | 10:49: Found user with id 4
+4-6-2019 | 10:49: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[AccountController]
+4-6-2019 | 10:49: JMuris validated.
+4-6-2019 | 10:49: JMuris navigated to Hub/Game
+4-6-2019 | 10:49: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveUserListByGroup]
+4-6-2019 | 10:49: Attempting to retrieve users from group 2
+4-6-2019 | 10:49: Found 2 users from group 2
+4-6-2019 | 10:49: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveScoresOfUser]
+4-6-2019 | 10:49: Attempting to retrieve scores of user 5
+4-6-2019 | 10:49: Found 3 scores from user 5
+4-6-2019 | 10:49: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveScoresOfUser]
+4-6-2019 | 10:49: Attempting to retrieve scores of user 6
+4-6-2019 | 10:49: Found 3 scores from user 6
+4-6-2019 | 10:49: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveUser]
+4-6-2019 | 10:49: Attempting to retrieve user with id 5
+4-6-2019 | 10:49: Found user with id 5
+4-6-2019 | 10:49: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveStoriesOfUser]
+4-6-2019 | 10:49: Attempting to retrieve stories of user 5
+4-6-2019 | 10:49: Found 1 stories from user 5
+4-6-2019 | 10:49: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveScoresOfUser]
+4-6-2019 | 10:49: Attempting to retrieve scores of user 5
+4-6-2019 | 10:49: Found 3 scores from user 5
+4-6-2019 | 10:49: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveUser]
+4-6-2019 | 10:49: Attempting to retrieve user with id 5
+4-6-2019 | 10:49: Found user with id 5
+4-6-2019 | 10:49: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[Startup]
+4-6-2019 | 10:50: Starting server...
+4-6-2019 | 10:50: Server is up and running!
+4-6-2019 | 10:50: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[CheckLogin]
+4-6-2019 | 10:50: Logging in JMuris...
+4-6-2019 | 10:50: Log in found for user JMuris
+4-6-2019 | 10:50: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveUser]
+4-6-2019 | 10:50: Attempting to retrieve user with id 4
+4-6-2019 | 10:50: Found user with id 4
+4-6-2019 | 10:50: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[AccountController]
+4-6-2019 | 10:50: JMuris validated.
+4-6-2019 | 10:50: JMuris navigated to Hub/Game
+4-6-2019 | 10:50: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveUserListByGroup]
+4-6-2019 | 10:50: Attempting to retrieve users from group 2
+4-6-2019 | 10:50: Found 2 users from group 2
+4-6-2019 | 10:50: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveScoresOfUser]
+4-6-2019 | 10:50: Attempting to retrieve scores of user 5
+4-6-2019 | 10:50: Found 3 scores from user 5
+4-6-2019 | 10:50: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveScoresOfUser]
+4-6-2019 | 10:50: Attempting to retrieve scores of user 6
+4-6-2019 | 10:50: Found 3 scores from user 6
+4-6-2019 | 10:50: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveUser]
+4-6-2019 | 10:50: Attempting to retrieve user with id 5
+4-6-2019 | 10:50: Found user with id 5
+4-6-2019 | 10:50: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveStoriesOfUser]
+4-6-2019 | 10:50: Attempting to retrieve stories of user 5
+4-6-2019 | 10:50: Found 1 stories from user 5
+4-6-2019 | 10:50: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveScoresOfUser]
+4-6-2019 | 10:50: Attempting to retrieve scores of user 5
+4-6-2019 | 10:50: Found 3 scores from user 5
+4-6-2019 | 10:50: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveUser]
+4-6-2019 | 10:50: Attempting to retrieve user with id 5
+4-6-2019 | 10:50: Found user with id 5
+4-6-2019 | 10:50: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveUser]
+4-6-2019 | 10:50: Attempting to retrieve user with id 5
+4-6-2019 | 10:50: Found user with id 5
+4-6-2019 | 10:50: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveUser]
+4-6-2019 | 10:51: Attempting to retrieve user with id 5
+4-6-2019 | 10:51: Found user with id 5
+4-6-2019 | 10:51: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[CheckLogin]
+4-6-2019 | 10:51: Logging in ...
+4-6-2019 | 10:51: Something went wrong. Check debug.txt
+4-6-2019 | 10:51: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveUser]
+4-6-2019 | 10:51: Attempting to retrieve user with id 5
+4-6-2019 | 10:51: Found user with id 5
+4-6-2019 | 10:51: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveUser]
+4-6-2019 | 10:52: Attempting to retrieve user with id 5
+4-6-2019 | 10:52: Found user with id 5
+4-6-2019 | 10:52: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveUser]
+4-6-2019 | 10:52: Attempting to retrieve user with id 5
+4-6-2019 | 10:52: Found user with id 5
+4-6-2019 | 10:52: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveUser]
+4-6-2019 | 10:53: Attempting to retrieve user with id 5
+4-6-2019 | 10:53: Found user with id 5
+4-6-2019 | 10:53: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveUser]
+4-6-2019 | 10:53: Attempting to retrieve user with id 5
+4-6-2019 | 10:53: Found user with id 5
+4-6-2019 | 10:53: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveStoriesOfUser]
+4-6-2019 | 10:53: Attempting to retrieve stories of user 5
+4-6-2019 | 10:53: Found 1 stories from user 5
+4-6-2019 | 10:53: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveScoresOfUser]
+4-6-2019 | 10:53: Attempting to retrieve scores of user 5
+4-6-2019 | 10:53: Found 3 scores from user 5
+4-6-2019 | 10:53: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveUser]
+4-6-2019 | 10:53: Attempting to retrieve user with id 5
+4-6-2019 | 10:53: Found user with id 5
+4-6-2019 | 10:53: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[Startup]
+4-6-2019 | 10:56: Starting server...
+4-6-2019 | 10:56: Server is up and running!
+4-6-2019 | 10:56: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[CheckLogin]
+4-6-2019 | 10:56: Logging in JMuris...
+4-6-2019 | 10:56: Log in found for user JMuris
+4-6-2019 | 10:56: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveUser]
+4-6-2019 | 10:56: Attempting to retrieve user with id 4
+4-6-2019 | 10:56: Found user with id 4
+4-6-2019 | 10:56: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[AccountController]
+4-6-2019 | 10:56: JMuris validated.
+4-6-2019 | 10:56: JMuris navigated to Hub/Game
+4-6-2019 | 10:56: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveUserListByGroup]
+4-6-2019 | 10:56: Attempting to retrieve users from group 2
+4-6-2019 | 10:56: Found 2 users from group 2
+4-6-2019 | 10:56: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveScoresOfUser]
+4-6-2019 | 10:56: Attempting to retrieve scores of user 5
+4-6-2019 | 10:56: Found 3 scores from user 5
+4-6-2019 | 10:56: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveScoresOfUser]
+4-6-2019 | 10:56: Attempting to retrieve scores of user 6
+4-6-2019 | 10:56: Found 3 scores from user 6
+4-6-2019 | 10:56: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveUser]
+4-6-2019 | 10:56: Attempting to retrieve user with id 5
+4-6-2019 | 10:56: Found user with id 5
+4-6-2019 | 10:56: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveStoriesOfUser]
+4-6-2019 | 10:56: Attempting to retrieve stories of user 5
+4-6-2019 | 10:56: Found 1 stories from user 5
+4-6-2019 | 10:56: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveScoresOfUser]
+4-6-2019 | 10:56: Attempting to retrieve scores of user 5
+4-6-2019 | 10:56: Found 3 scores from user 5
+4-6-2019 | 10:56: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveUser]
+4-6-2019 | 10:56: Attempting to retrieve user with id 5
+4-6-2019 | 10:56: Found user with id 5
+4-6-2019 | 10:56: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[CreateScore]
+4-6-2019 | 10:56: Trying to create score for user with Id 5
+4-6-2019 | 10:56: Something went wrong. Check debug.txt
+4-6-2019 | 10:56: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[Startup]
+4-6-2019 | 10:57: Starting server...
+4-6-2019 | 10:57: Server is up and running!
+4-6-2019 | 10:57: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[CheckLogin]
+4-6-2019 | 10:57: Logging in JMuris...
+4-6-2019 | 10:57: Log in found for user JMuris
+4-6-2019 | 10:57: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveUser]
+4-6-2019 | 10:57: Attempting to retrieve user with id 4
+4-6-2019 | 10:57: Found user with id 4
+4-6-2019 | 10:57: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[AccountController]
+4-6-2019 | 10:57: JMuris validated.
+4-6-2019 | 10:57: JMuris navigated to Hub/Game
+4-6-2019 | 10:57: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveUserListByGroup]
+4-6-2019 | 10:57: Attempting to retrieve users from group 2
+4-6-2019 | 10:57: Found 2 users from group 2
+4-6-2019 | 10:57: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveScoresOfUser]
+4-6-2019 | 10:57: Attempting to retrieve scores of user 5
+4-6-2019 | 10:57: Found 3 scores from user 5
+4-6-2019 | 10:57: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveScoresOfUser]
+4-6-2019 | 10:57: Attempting to retrieve scores of user 6
+4-6-2019 | 10:57: Found 3 scores from user 6
+4-6-2019 | 10:57: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveUser]
+4-6-2019 | 10:58: Attempting to retrieve user with id 5
+4-6-2019 | 10:58: Found user with id 5
+4-6-2019 | 10:58: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveStoriesOfUser]
+4-6-2019 | 10:58: Attempting to retrieve stories of user 5
+4-6-2019 | 10:58: Found 1 stories from user 5
+4-6-2019 | 10:58: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveScoresOfUser]
+4-6-2019 | 10:58: Attempting to retrieve scores of user 5
+4-6-2019 | 10:58: Found 3 scores from user 5
+4-6-2019 | 10:58: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveUser]
+4-6-2019 | 10:58: Attempting to retrieve user with id 5
+4-6-2019 | 10:58: Found user with id 5
+4-6-2019 | 10:58: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[CreateScore]
+4-6-2019 | 10:58: Trying to create score for user with Id 5
+4-6-2019 | 10:58: Something went wrong. Check debug.txt
+4-6-2019 | 10:58: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[Startup]
+4-6-2019 | 11:00: Starting server...
+4-6-2019 | 11:00: Server is up and running!
+4-6-2019 | 11:00: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[CheckLogin]
+4-6-2019 | 11:00: Logging in JMuris...
+4-6-2019 | 11:00: Log in found for user JMuris
+4-6-2019 | 11:00: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveUser]
+4-6-2019 | 11:00: Attempting to retrieve user with id 4
+4-6-2019 | 11:00: Found user with id 4
+4-6-2019 | 11:00: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[AccountController]
+4-6-2019 | 11:00: JMuris validated.
+4-6-2019 | 11:00: JMuris navigated to Hub/Game
+4-6-2019 | 11:00: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveUserListByGroup]
+4-6-2019 | 11:00: Attempting to retrieve users from group 2
+4-6-2019 | 11:00: Found 2 users from group 2
+4-6-2019 | 11:00: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveScoresOfUser]
+4-6-2019 | 11:00: Attempting to retrieve scores of user 5
+4-6-2019 | 11:00: Found 3 scores from user 5
+4-6-2019 | 11:00: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveScoresOfUser]
+4-6-2019 | 11:00: Attempting to retrieve scores of user 6
+4-6-2019 | 11:00: Found 3 scores from user 6
+4-6-2019 | 11:00: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveUser]
+4-6-2019 | 11:00: Attempting to retrieve user with id 5
+4-6-2019 | 11:00: Found user with id 5
+4-6-2019 | 11:00: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveStoriesOfUser]
+4-6-2019 | 11:00: Attempting to retrieve stories of user 5
+4-6-2019 | 11:00: Found 1 stories from user 5
+4-6-2019 | 11:00: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveScoresOfUser]
+4-6-2019 | 11:00: Attempting to retrieve scores of user 5
+4-6-2019 | 11:00: Found 3 scores from user 5
+4-6-2019 | 11:00: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveUser]
+4-6-2019 | 11:00: Attempting to retrieve user with id 5
+4-6-2019 | 11:00: Found user with id 5
+4-6-2019 | 11:00: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[CreateScore]
+4-6-2019 | 11:00: Trying to create score for user with Id 5
+4-6-2019 | 11:00: Something went wrong. Check debug.txt
+4-6-2019 | 11:00: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[Startup]
+4-6-2019 | 11:05: Starting server...
+4-6-2019 | 11:05: Server is up and running!
+4-6-2019 | 11:05: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[CheckLogin]
+4-6-2019 | 11:05: Logging in JMuris...
+4-6-2019 | 11:05: Log in found for user JMuris
+4-6-2019 | 11:05: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveUser]
+4-6-2019 | 11:05: Attempting to retrieve user with id 4
+4-6-2019 | 11:05: Found user with id 4
+4-6-2019 | 11:05: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[AccountController]
+4-6-2019 | 11:05: JMuris validated.
+4-6-2019 | 11:05: JMuris navigated to Hub/Game
+4-6-2019 | 11:05: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveUserListByGroup]
+4-6-2019 | 11:05: Attempting to retrieve users from group 2
+4-6-2019 | 11:05: Found 2 users from group 2
+4-6-2019 | 11:05: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveScoresOfUser]
+4-6-2019 | 11:05: Attempting to retrieve scores of user 5
+4-6-2019 | 11:05: Found 3 scores from user 5
+4-6-2019 | 11:05: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveScoresOfUser]
+4-6-2019 | 11:05: Attempting to retrieve scores of user 6
+4-6-2019 | 11:05: Found 3 scores from user 6
+4-6-2019 | 11:05: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveUser]
+4-6-2019 | 11:05: Attempting to retrieve user with id 5
+4-6-2019 | 11:05: Found user with id 5
+4-6-2019 | 11:05: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveStoriesOfUser]
+4-6-2019 | 11:05: Attempting to retrieve stories of user 5
+4-6-2019 | 11:05: Found 1 stories from user 5
+4-6-2019 | 11:05: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveScoresOfUser]
+4-6-2019 | 11:05: Attempting to retrieve scores of user 5
+4-6-2019 | 11:05: Found 3 scores from user 5
+4-6-2019 | 11:05: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveUser]
+4-6-2019 | 11:05: Attempting to retrieve user with id 5
+4-6-2019 | 11:05: Found user with id 5
+4-6-2019 | 11:05: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[Startup]
+4-6-2019 | 11:06: Starting server...
+4-6-2019 | 11:06: Server is up and running!
+4-6-2019 | 11:06: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[CheckLogin]
+4-6-2019 | 11:07: Logging in JMuris...
+4-6-2019 | 11:07: Log in found for user JMuris
+4-6-2019 | 11:07: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveUser]
+4-6-2019 | 11:07: Attempting to retrieve user with id 4
+4-6-2019 | 11:07: Found user with id 4
+4-6-2019 | 11:07: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[AccountController]
+4-6-2019 | 11:07: JMuris validated.
+4-6-2019 | 11:07: JMuris navigated to Hub/Game
+4-6-2019 | 11:07: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveUserListByGroup]
+4-6-2019 | 11:07: Attempting to retrieve users from group 2
+4-6-2019 | 11:07: Found 2 users from group 2
+4-6-2019 | 11:07: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveScoresOfUser]
+4-6-2019 | 11:07: Attempting to retrieve scores of user 5
+4-6-2019 | 11:07: Found 3 scores from user 5
+4-6-2019 | 11:07: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveScoresOfUser]
+4-6-2019 | 11:07: Attempting to retrieve scores of user 6
+4-6-2019 | 11:07: Found 3 scores from user 6
+4-6-2019 | 11:07: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveUser]
+4-6-2019 | 11:07: Attempting to retrieve user with id 5
+4-6-2019 | 11:07: Found user with id 5
+4-6-2019 | 11:07: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveStoriesOfUser]
+4-6-2019 | 11:07: Attempting to retrieve stories of user 5
+4-6-2019 | 11:07: Found 1 stories from user 5
+4-6-2019 | 11:07: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveScoresOfUser]
+4-6-2019 | 11:07: Attempting to retrieve scores of user 5
+4-6-2019 | 11:07: Found 3 scores from user 5
+4-6-2019 | 11:07: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveUser]
+4-6-2019 | 11:07: Attempting to retrieve user with id 5
+4-6-2019 | 11:07: Found user with id 5
+4-6-2019 | 11:07: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[CreateScore]
+4-6-2019 | 11:07: Trying to create score for user with Id 5
+4-6-2019 | 11:07: Score for 5 successfully added.
+4-6-2019 | 11:07: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveUser]
+4-6-2019 | 11:07: Attempting to retrieve user with id 5
+4-6-2019 | 11:07: Found user with id 5
+4-6-2019 | 11:07: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveStoriesOfUser]
+4-6-2019 | 11:07: Attempting to retrieve stories of user 5
+4-6-2019 | 11:07: Found 1 stories from user 5
+4-6-2019 | 11:07: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveScoresOfUser]
+4-6-2019 | 11:07: Attempting to retrieve scores of user 5
+4-6-2019 | 11:07: Found 4 scores from user 5
+4-6-2019 | 11:07: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveUser]
+4-6-2019 | 11:07: Attempting to retrieve user with id 5
+4-6-2019 | 11:07: Found user with id 5
+4-6-2019 | 11:07: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveScore]
+4-6-2019 | 11:07: Attempting to retrieve score with id 12
+4-6-2019 | 11:07: Found score with id 12
+---[LOG MSG START]---
+[RetrieveUser]
+4-6-2019 | 11:07: Attempting to retrieve user with id 5
+4-6-2019 | 11:07: Found user with id 5
+4-6-2019 | 11:07: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveStoriesOfUser]
+4-6-2019 | 11:07: Attempting to retrieve stories of user 5
+4-6-2019 | 11:07: Found 1 stories from user 5
+4-6-2019 | 11:07: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveScoresOfUser]
+4-6-2019 | 11:07: Attempting to retrieve scores of user 5
+4-6-2019 | 11:07: Found 4 scores from user 5
+4-6-2019 | 11:07: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[Startup]
+4-6-2019 | 11:08: Starting server...
+4-6-2019 | 11:08: Server is up and running!
+4-6-2019 | 11:08: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[CheckLogin]
+4-6-2019 | 11:08: Logging in JMuris...
+4-6-2019 | 11:08: Log in found for user JMuris
+4-6-2019 | 11:08: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveUser]
+4-6-2019 | 11:08: Attempting to retrieve user with id 4
+4-6-2019 | 11:08: Found user with id 4
+4-6-2019 | 11:08: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[AccountController]
+4-6-2019 | 11:08: JMuris validated.
+4-6-2019 | 11:08: JMuris navigated to Hub/Game
+4-6-2019 | 11:08: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveUserListByGroup]
+4-6-2019 | 11:08: Attempting to retrieve users from group 2
+4-6-2019 | 11:08: Found 2 users from group 2
+4-6-2019 | 11:08: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveScoresOfUser]
+4-6-2019 | 11:08: Attempting to retrieve scores of user 5
+4-6-2019 | 11:08: Found 4 scores from user 5
+4-6-2019 | 11:08: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveScoresOfUser]
+4-6-2019 | 11:08: Attempting to retrieve scores of user 6
+4-6-2019 | 11:08: Found 3 scores from user 6
+4-6-2019 | 11:08: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveUser]
+4-6-2019 | 11:08: Attempting to retrieve user with id 5
+4-6-2019 | 11:08: Found user with id 5
+4-6-2019 | 11:08: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveStoriesOfUser]
+4-6-2019 | 11:08: Attempting to retrieve stories of user 5
+4-6-2019 | 11:08: Found 1 stories from user 5
+4-6-2019 | 11:08: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveScoresOfUser]
+4-6-2019 | 11:08: Attempting to retrieve scores of user 5
+4-6-2019 | 11:08: Found 4 scores from user 5
+4-6-2019 | 11:08: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveUser]
+4-6-2019 | 11:08: Attempting to retrieve user with id 5
+4-6-2019 | 11:08: Found user with id 5
+4-6-2019 | 11:08: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveScore]
+4-6-2019 | 11:08: Attempting to retrieve score with id 12
+4-6-2019 | 11:08: Found score with id 12
+---[LOG MSG START]---
+[Startup]
+4-6-2019 | 11:10: Starting server...
+4-6-2019 | 11:10: Server is up and running!
+4-6-2019 | 11:10: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[CheckLogin]
+4-6-2019 | 11:10: Logging in JMuris...
+4-6-2019 | 11:10: Log in found for user JMuris
+4-6-2019 | 11:10: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveUser]
+4-6-2019 | 11:10: Attempting to retrieve user with id 4
+4-6-2019 | 11:10: Found user with id 4
+4-6-2019 | 11:10: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[AccountController]
+4-6-2019 | 11:10: JMuris validated.
+4-6-2019 | 11:10: JMuris navigated to Hub/Game
+4-6-2019 | 11:10: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveUserListByGroup]
+4-6-2019 | 11:10: Attempting to retrieve users from group 2
+4-6-2019 | 11:10: Found 2 users from group 2
+4-6-2019 | 11:10: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveScoresOfUser]
+4-6-2019 | 11:10: Attempting to retrieve scores of user 5
+4-6-2019 | 11:10: Found 4 scores from user 5
+4-6-2019 | 11:10: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveScoresOfUser]
+4-6-2019 | 11:10: Attempting to retrieve scores of user 6
+4-6-2019 | 11:10: Found 3 scores from user 6
+4-6-2019 | 11:10: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveUser]
+4-6-2019 | 11:10: Attempting to retrieve user with id 5
+4-6-2019 | 11:10: Found user with id 5
+4-6-2019 | 11:10: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveStoriesOfUser]
+4-6-2019 | 11:10: Attempting to retrieve stories of user 5
+4-6-2019 | 11:10: Found 1 stories from user 5
+4-6-2019 | 11:10: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveScoresOfUser]
+4-6-2019 | 11:10: Attempting to retrieve scores of user 5
+4-6-2019 | 11:10: Found 4 scores from user 5
+4-6-2019 | 11:10: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveUser]
+4-6-2019 | 11:10: Attempting to retrieve user with id 5
+4-6-2019 | 11:10: Found user with id 5
+4-6-2019 | 11:10: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveScore]
+4-6-2019 | 11:10: Attempting to retrieve score with id 1
+4-6-2019 | 11:10: Found score with id 1
+---[LOG MSG START]---
+[Startup]
+4-6-2019 | 11:11: Starting server...
+4-6-2019 | 11:11: Server is up and running!
+4-6-2019 | 11:11: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[CheckLogin]
+4-6-2019 | 11:12: Logging in JMuris...
+4-6-2019 | 11:12: Log in found for user JMuris
+4-6-2019 | 11:12: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveUser]
+4-6-2019 | 11:12: Attempting to retrieve user with id 4
+4-6-2019 | 11:12: Found user with id 4
+4-6-2019 | 11:12: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[AccountController]
+4-6-2019 | 11:12: JMuris validated.
+4-6-2019 | 11:12: JMuris navigated to Hub/Game
+4-6-2019 | 11:12: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveUserListByGroup]
+4-6-2019 | 11:12: Attempting to retrieve users from group 2
+4-6-2019 | 11:12: Found 2 users from group 2
+4-6-2019 | 11:12: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveScoresOfUser]
+4-6-2019 | 11:12: Attempting to retrieve scores of user 5
+4-6-2019 | 11:12: Found 4 scores from user 5
+4-6-2019 | 11:12: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveScoresOfUser]
+4-6-2019 | 11:12: Attempting to retrieve scores of user 6
+4-6-2019 | 11:12: Found 3 scores from user 6
+4-6-2019 | 11:12: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveUser]
+4-6-2019 | 11:12: Attempting to retrieve user with id 5
+4-6-2019 | 11:12: Found user with id 5
+4-6-2019 | 11:12: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveStoriesOfUser]
+4-6-2019 | 11:12: Attempting to retrieve stories of user 5
+4-6-2019 | 11:12: Found 1 stories from user 5
+4-6-2019 | 11:12: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveScoresOfUser]
+4-6-2019 | 11:12: Attempting to retrieve scores of user 5
+4-6-2019 | 11:12: Found 4 scores from user 5
+4-6-2019 | 11:12: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveUser]
+4-6-2019 | 11:12: Attempting to retrieve user with id 5
+4-6-2019 | 11:12: Found user with id 5
+4-6-2019 | 11:12: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveScore]
+4-6-2019 | 11:12: Attempting to retrieve score with id 1
+4-6-2019 | 11:12: Found score with id 1
+---[LOG MSG START]---
+[Startup]
+4-6-2019 | 11:13: Starting server...
+4-6-2019 | 11:13: Server is up and running!
+4-6-2019 | 11:13: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[CheckLogin]
+4-6-2019 | 11:13: Logging in JMuris...
+4-6-2019 | 11:13: Log in found for user JMuris
+4-6-2019 | 11:13: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveUser]
+4-6-2019 | 11:13: Attempting to retrieve user with id 4
+4-6-2019 | 11:13: Found user with id 4
+4-6-2019 | 11:13: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[AccountController]
+4-6-2019 | 11:13: JMuris validated.
+4-6-2019 | 11:13: JMuris navigated to Hub/Game
+4-6-2019 | 11:13: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveUserListByGroup]
+4-6-2019 | 11:13: Attempting to retrieve users from group 2
+4-6-2019 | 11:13: Found 2 users from group 2
+4-6-2019 | 11:13: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveScoresOfUser]
+4-6-2019 | 11:13: Attempting to retrieve scores of user 5
+4-6-2019 | 11:13: Found 4 scores from user 5
+4-6-2019 | 11:13: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveScoresOfUser]
+4-6-2019 | 11:13: Attempting to retrieve scores of user 6
+4-6-2019 | 11:13: Found 3 scores from user 6
+4-6-2019 | 11:13: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveUser]
+4-6-2019 | 11:13: Attempting to retrieve user with id 5
+4-6-2019 | 11:13: Found user with id 5
+4-6-2019 | 11:13: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveStoriesOfUser]
+4-6-2019 | 11:13: Attempting to retrieve stories of user 5
+4-6-2019 | 11:13: Found 1 stories from user 5
+4-6-2019 | 11:13: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveScoresOfUser]
+4-6-2019 | 11:13: Attempting to retrieve scores of user 5
+4-6-2019 | 11:13: Found 4 scores from user 5
+4-6-2019 | 11:13: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveUser]
+4-6-2019 | 11:13: Attempting to retrieve user with id 5
+4-6-2019 | 11:13: Found user with id 5
+4-6-2019 | 11:13: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveScore]
+4-6-2019 | 11:13: Attempting to retrieve score with id 1
+4-6-2019 | 11:13: Found score with id 1
+---[LOG MSG START]---
+[Startup]
+4-6-2019 | 11:14: Starting server...
+4-6-2019 | 11:14: Server is up and running!
+4-6-2019 | 11:14: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[CheckLogin]
+4-6-2019 | 11:14: Logging in JMuris...
+4-6-2019 | 11:14: Log in found for user JMuris
+4-6-2019 | 11:14: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveUser]
+4-6-2019 | 11:14: Attempting to retrieve user with id 4
+4-6-2019 | 11:14: Found user with id 4
+4-6-2019 | 11:14: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[AccountController]
+4-6-2019 | 11:14: JMuris validated.
+4-6-2019 | 11:14: JMuris navigated to Hub/Game
+4-6-2019 | 11:14: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveUserListByGroup]
+4-6-2019 | 11:14: Attempting to retrieve users from group 2
+4-6-2019 | 11:14: Found 2 users from group 2
+4-6-2019 | 11:14: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveScoresOfUser]
+4-6-2019 | 11:14: Attempting to retrieve scores of user 5
+4-6-2019 | 11:14: Found 4 scores from user 5
+4-6-2019 | 11:14: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveScoresOfUser]
+4-6-2019 | 11:14: Attempting to retrieve scores of user 6
+4-6-2019 | 11:14: Found 3 scores from user 6
+4-6-2019 | 11:14: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveUser]
+4-6-2019 | 11:14: Attempting to retrieve user with id 5
+4-6-2019 | 11:14: Found user with id 5
+4-6-2019 | 11:14: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveStoriesOfUser]
+4-6-2019 | 11:14: Attempting to retrieve stories of user 5
+4-6-2019 | 11:14: Found 1 stories from user 5
+4-6-2019 | 11:14: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveScoresOfUser]
+4-6-2019 | 11:14: Attempting to retrieve scores of user 5
+4-6-2019 | 11:14: Found 4 scores from user 5
+4-6-2019 | 11:14: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveUser]
+4-6-2019 | 11:14: Attempting to retrieve user with id 5
+4-6-2019 | 11:14: Found user with id 5
+4-6-2019 | 11:14: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveScore]
+4-6-2019 | 11:14: Attempting to retrieve score with id 1
+4-6-2019 | 11:14: Found score with id 1
+---[LOG MSG START]---
+[RetrieveUser]
+4-6-2019 | 11:14: Attempting to retrieve user with id 5
+4-6-2019 | 11:14: Found user with id 5
+4-6-2019 | 11:14: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveStoriesOfUser]
+4-6-2019 | 11:14: Attempting to retrieve stories of user 5
+4-6-2019 | 11:14: Found 1 stories from user 5
+4-6-2019 | 11:14: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveScoresOfUser]
+4-6-2019 | 11:14: Attempting to retrieve scores of user 5
+4-6-2019 | 11:14: Found 4 scores from user 5
+4-6-2019 | 11:14: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveUser]
+4-6-2019 | 11:14: Attempting to retrieve user with id 5
+4-6-2019 | 11:14: Found user with id 5
+4-6-2019 | 11:14: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveScore]
+4-6-2019 | 11:14: Attempting to retrieve score with id 12
+4-6-2019 | 11:14: Found score with id 12
+---[LOG MSG START]---
+[RetrieveUser]
+4-6-2019 | 11:14: Attempting to retrieve user with id 5
+4-6-2019 | 11:14: Found user with id 5
+4-6-2019 | 11:14: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveStoriesOfUser]
+4-6-2019 | 11:14: Attempting to retrieve stories of user 5
+4-6-2019 | 11:14: Found 1 stories from user 5
+4-6-2019 | 11:14: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveScoresOfUser]
+4-6-2019 | 11:14: Attempting to retrieve scores of user 5
+4-6-2019 | 11:14: Found 4 scores from user 5
+4-6-2019 | 11:14: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveUser]
+4-6-2019 | 11:14: Attempting to retrieve user with id 5
+4-6-2019 | 11:14: Found user with id 5
+4-6-2019 | 11:14: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveScore]
+4-6-2019 | 11:14: Attempting to retrieve score with id 3
+4-6-2019 | 11:14: Found score with id 3
+---[LOG MSG START]---
+[RetrieveUser]
+4-6-2019 | 11:14: Attempting to retrieve user with id 5
+4-6-2019 | 11:14: Found user with id 5
+4-6-2019 | 11:14: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveStoriesOfUser]
+4-6-2019 | 11:14: Attempting to retrieve stories of user 5
+4-6-2019 | 11:14: Found 1 stories from user 5
+4-6-2019 | 11:14: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveScoresOfUser]
+4-6-2019 | 11:14: Attempting to retrieve scores of user 5
+4-6-2019 | 11:14: Found 4 scores from user 5
+4-6-2019 | 11:14: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveUser]
+4-6-2019 | 11:14: Attempting to retrieve user with id 5
+4-6-2019 | 11:14: Found user with id 5
+4-6-2019 | 11:14: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveScore]
+4-6-2019 | 11:14: Attempting to retrieve score with id 2
+4-6-2019 | 11:14: Found score with id 2
+---[LOG MSG START]---
+[RetrieveUser]
+4-6-2019 | 11:14: Attempting to retrieve user with id 5
+4-6-2019 | 11:14: Found user with id 5
+4-6-2019 | 11:14: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveStoriesOfUser]
+4-6-2019 | 11:14: Attempting to retrieve stories of user 5
+4-6-2019 | 11:14: Found 1 stories from user 5
+4-6-2019 | 11:14: End.
+---[LOG MSG END]---
+
+---[LOG MSG START]---
+[RetrieveScoresOfUser]
+4-6-2019 | 11:14: Attempting to retrieve scores of user 5
+4-6-2019 | 11:14: Found 4 scores from user 5
+4-6-2019 | 11:14: End.
+---[LOG MSG END]---
+

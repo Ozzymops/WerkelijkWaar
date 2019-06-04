@@ -206,6 +206,60 @@ input[type=checkbox].form-checkbox:hover {
     width: 33px;
     height: 33px;
 }
+
+input[type=date] {
+    display: block;
+    background-color: #2db6bc;
+    color: white;
+    border: none;
+    width: 150px;
+    height: 33px;
+}
+
+input[type=date]:hover, input[type=date]:focus {
+    display: block;
+    background-color: #58c5ca;
+    color: white;
+    border: none;
+    width: 150px;
+    height: 33px;
+}
+
+.dropdown {
+    display: block;
+    background-color: #2db6bc;
+    color: white;
+    border: none;
+    width: 150px;
+    height: 33px;
+}
+
+.dropdown:hover, .dropdown:focus {
+    display: block;
+    background-color: #2db6bc;
+    color: white;
+    border: none;
+    width: 150px;
+    height: 33px;
+}
+
+textarea {
+    display: block;
+    background-color: #2db6bc;
+    color: white;
+    border: none;
+    width: 750px;
+    height: 250px;
+}
+
+textarea:hover, textarea:focus {
+    display: block;
+    background-color: #2db6bc;
+    color: white;
+    border: none;
+    width: 750px;
+    height: 250px;
+}
 /* #endregion */
 
 /* #region Layout */

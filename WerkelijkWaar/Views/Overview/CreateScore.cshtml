@@ -1,0 +1,35 @@
+﻿@{
+    ViewData["Title"] = "Score creëeren voor " + Model.User.Name;
+    Layout = "_LayoutSide";
+}
+@model IndividualModel
+
+<body>
+    <div style="margin-top: 10px;">
+        <div style="background-color: #f7c747; display: flex; flex-direction: column;">
+            <form asp-controller="Overview" asp-action="UploadScore">
+                <div style="display: flex;">
+                    <a asp-controller="Overview" asp-action="ScoreOverview" asp-route-id="@Model.User.Id" style="margin-left: 700px;"><input class="form-button" type="button" value="Terugkeren" style="margin-right: 0; width: 200px;" /></a>
+                    <input class="form-button" type="submit" value="Opslaan" style="margin-right: 0; width: 200px;" />
+                    <input asp-for="Score.OwnerId" type="hidden" value="@Model.User.Id" />
+                </div>
+                <div style="padding: 10px;">
+                    @Html.DropDownListFor(model => model.GameTypeIndex, Model.GameType, "Kies een spel", new { @class = "dropdown" })
+                    <p style="padding-top: 10px;">Sessie van <input asp-for="Score.Date" type="date" class="date-input" /></p>
+                </div>
+                <div style="display: flex; flex-direction: row; padding: 10px;">
+                    <div style="display: flex; flex-direction: column; padding-right: 100px;">
+                        <p>Volgers:</p>
+                        <p style="padding-top: 10px;">Euro's:</p>
+                        <p style="padding-top: 10px;">Antwoorden:</p>
+                    </div>
+                    <div>
+                        <input asp-for="Score.FollowerAmount" type="number" class="number-input" style="width: 75px; margin-left: 0px; text-align: center;" />
+                        <input asp-for="ScoreCashString" type="text" class="number-input" style="width: 75px; margin-left: 0px; text-align: center; margin-top:17px;" />
+                        <textarea asp-for="ScoreAnswerArray" id="ScoreAnswerArray" name="ScoreAnswerArray" style="margin-top: 17px;"></textarea>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>

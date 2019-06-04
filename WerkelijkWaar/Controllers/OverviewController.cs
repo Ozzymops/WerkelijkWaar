@@ -209,27 +209,29 @@ namespace WerkelijkWaar.Controllers
         /// </summary>
         /// <param name="id">User ID</param>
         /// <returns>View</returns>
-        public IActionResult CreateScore(int id, int rank)
+        public IActionResult CreateScore(int id)
         {
             // Check if logged in
             if (!String.IsNullOrEmpty(HttpContext.Session.GetString("User")))
             {
-                // Check if teacher
                 Classes.User tempUser = Newtonsoft.Json.JsonConvert.DeserializeObject<Classes.User>(HttpContext.Session.GetString("User"));
 
                 if (tempUser.RoleId == 1)
                 {
                     IndividualModel ism = new IndividualModel();
-                    // ism.GetUser(id);
-                    // ism.Rank = rank;
+                    ism.User = dq.RetrieveUser(id);
                     ism.Score = new Classes.Score();
 
                     List<Classes.GameType> gameTypeList = new List<Classes.GameType>();
-                    gameTypeList.Add(new Classes.GameType { TypeIndex = 2, TypeName = "Spel 1" });
-                    gameTypeList.Add(new Classes.GameType { TypeIndex = 3, TypeName = "Spel 2" });
-                    gameTypeList.Add(new Classes.GameType { TypeIndex = 4, TypeName = "Spel 3" });
-                    gameTypeList.Add(new Classes.GameType { TypeIndex = 5, TypeName = "Spel 4" });
-                    gameTypeList.Add(new Classes.GameType { TypeIndex = 6, TypeName = "Spel 5" });
+                    gameTypeList.Add(new Classes.GameType { TypeIndex = 1, TypeName = "Werkelijk Waar?" });
+                    gameTypeList.Add(new Classes.GameType { TypeIndex = 2, TypeName = "Liegen" });
+                    gameTypeList.Add(new Classes.GameType { TypeIndex = 3, TypeName = "Overladen" });
+                    gameTypeList.Add(new Classes.GameType { TypeIndex = 4, TypeName = "Misleiden" });
+                    gameTypeList.Add(new Classes.GameType { TypeIndex = 5, TypeName = "Quizmaster" });
+                    gameTypeList.Add(new Classes.GameType { TypeIndex = 6, TypeName = "Verkoper" });
+                    gameTypeList.Add(new Classes.GameType { TypeIndex = 7, TypeName = "Detective" });
+                    gameTypeList.Add(new Classes.GameType { TypeIndex = 8, TypeName = "Sneller dan het licht" });
+                    gameTypeList.Add(new Classes.GameType { TypeIndex = 9, TypeName = "De machine" });
 
                     ism.GameType = new SelectList(gameTypeList, "TypeIndex", "TypeName");
 
@@ -245,7 +247,7 @@ namespace WerkelijkWaar.Controllers
         /// </summary>
         /// <param name="ism">IndividualModel</param>
         /// <returns></returns>
-        public IActionResult PushScore(IndividualModel im)
+        public IActionResult UploadScore(IndividualModel ism)
         {
             // Check if logged in
             if (!String.IsNullOrEmpty(HttpContext.Session.GetString("User")))
@@ -255,11 +257,20 @@ namespace WerkelijkWaar.Controllers
 
                 if (tempUser.RoleId == 1)
                 {
-                    im.Score.GameType = im.GameTypeIndex;
-                    bool results = dq.CreateScore(im.Score);
+                    ism.Score.CashAmount = Convert.ToDouble(ism.ScoreCashString);
+
+                    string answerString = "";
+                    foreach (string s in ism.ScoreAnswerArray)
+                    {
+                        answerString += s + " ";
+                    }
+
+                    ism.Score.Answers = answerString;
+                    ism.Score.GameType = ism.GameTypeIndex;
+                    bool results = dq.CreateScore(ism.Score);
                 }
 
-                return RedirectToAction("IndividualScores", "Overview", new { id = im.User.Id, scoreId = 0 });
+                return RedirectToAction("ScoreOverview", "Overview", new { id = ism.Score.OwnerId, rank = 0 });
             }
 
             return RedirectToAction("Index", "Home");

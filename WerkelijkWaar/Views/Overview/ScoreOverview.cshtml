@@ -53,7 +53,7 @@
                         <input asp-controller="" asp-action="" class="form-button" type="button" value="Meer tonen..." />
                     </li>
                     <li style="padding: 2px;">
-                        <input asp-controller="" asp-action="" class="form-button" type="button" value="Score aanmaken" />
+                        <a  asp-controller="Overview" asp-action="CreateScore" asp-route-id="@Model.User.Id"><input class="form-button" type="button" value="Score aanmaken" /></a>
                     </li>
                 </ul>
             </div>

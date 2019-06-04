@@ -721,7 +721,6 @@ namespace WerkelijkWaar.Classes
                                 {
                                     Id = (int)reader["Id"],
                                     OwnerId = (int)reader["OwnerId"],
-                                    Answers = (string)reader["Answers"],
                                     Date = (DateTime)reader["Date"],
                                     GameType = (int)reader["GameType"]
                                 };
@@ -739,6 +738,15 @@ namespace WerkelijkWaar.Classes
                                 if (reader["FollowerAmount"] != System.DBNull.Value)
                                 {
                                     newScore.FollowerAmount = (int)reader["FollowerAmount"];
+                                }
+
+                                if (reader["Answers"] != System.DBNull.Value)
+                                {
+                                    newScore.Answers = (string)reader["Answers"];
+                                }
+                                else
+                                {
+                                    newScore.Answers = "";
                                 }
 
                                 l.DebugToLog("[RetrieveScoresOfUser]", "Got: " + newScore.Id, 1);
@@ -1022,6 +1030,15 @@ namespace WerkelijkWaar.Classes
                                 if (reader["FollowerAmount"] != System.DBNull.Value)
                                 {
                                     newScore.FollowerAmount = (int)reader["FollowerAmount"];
+                                }
+
+                                if (reader["Answers"] != System.DBNull.Value)
+                                {
+                                    newScore.Answers = (string)reader["Answers"];
+                                }
+                                else
+                                {
+                                    newScore.Answers = "";
                                 }
 
                                 return newScore;

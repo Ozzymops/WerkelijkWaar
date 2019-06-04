@@ -11,10 +11,14 @@ namespace WerkelijkWaar.Models
     {
         public Classes.User User { get; set; }
 
-        public Classes.Score Score { get; set; }
+        public Classes.Score Score { get; set; } = new Classes.Score();
         public Classes.Story Story { get; set; }
 
         public int GameTypeIndex { get; set; }
         public SelectList GameType { get; set; }
+
+        // Create score
+        public string ScoreCashString { get; set; }
+        public string[] ScoreAnswerArray { get; set; }
     }
 }
