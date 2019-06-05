@@ -1195,6 +1195,176 @@ namespace WerkelijkWaar.Classes
             }
         }
 
+        public School RetrieveSchool(int schoolId)
+        {
+            sw.Restart();
+            l.WriteToLog("[RetrieveSchool]", "Attempting to retrieve school " + schoolId + "...", 0);
+            l.DebugToLog("[RetrieveSchool]", sw.ElapsedMilliseconds.ToString() + "ms. Attempting to retrieve school " + schoolId, 0);
+
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                SqlCommand command = new SqlCommand("SELECT * FROM [School] WHERE [Id] = @id", connection);
+                command.Parameters.Add(new SqlParameter("@id", schoolId));
+
+                try
+                {
+                    connection.Open();
+
+                    using (SqlDataReader reader = command.ExecuteReader())
+                    {
+                        if (reader.HasRows)
+                        {
+                            while (reader.Read())
+                            {
+                                School newSchool = new School
+                                {
+                                    Id = (int)reader["Id"],
+                                    SchoolName = (string)reader["Name"]
+                                };
+
+                                l.DebugToLog("[RetrieveSchool]", sw.ElapsedMilliseconds.ToString() + "ms. Got: " + newSchool.Id + " - " + newSchool.SchoolName, 1);
+
+                                sw.Stop();
+                                return newSchool;
+                            }
+                        }
+                    }
+
+                    l.WriteToLog("[RetrieveSchool]", "Could not find any schools with id " + schoolId, 2);
+                    l.DebugToLog("[RetrieveSchool]", sw.ElapsedMilliseconds.ToString() + "ms. Could not find any schools with id " + schoolId, 2);
+
+                    sw.Stop();
+                    return null;
+                }
+                catch (Exception ex)
+                {
+                    l.WriteToLog("[RetrieveSchool]", "Something went wrong. Check debug.txt", 2);
+                    l.DebugToLog("[RetrieveSchool]", sw.ElapsedMilliseconds.ToString() + "ms. Exception:\n" + ex.ToString(), 2);
+
+                    sw.Stop();
+                    return null;
+                }
+            }
+        }
+
+        public List<Group> RetrieveGroupsOfSchool(int schoolId)
+        {
+            sw.Restart();
+            l.WriteToLog("[RetrieveGroupsOfSchool]", "Attempting to retrieve groups of school " + schoolId + "...", 0);
+            l.DebugToLog("[RetrieveGroupsOfSchool]", sw.ElapsedMilliseconds.ToString() + "ms. Attempting to retrieve groups of school " + schoolId, 0);
+
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                SqlCommand command = new SqlCommand("SELECT * FROM [Group] WHERE [SchoolId] = @id", connection);
+                command.Parameters.Add(new SqlParameter("@id", schoolId));
+
+                List<Group> GroupList = new List<Group>();
+
+                try
+                {
+                    connection.Open();
+
+                    using (SqlDataReader reader = command.ExecuteReader())
+                    {
+                        if (reader.HasRows)
+                        {
+                            int rowCount = 0;
+
+                            while (reader.Read())
+                            {
+                                Group newGroup = new Group
+                                {
+                                    Id = (int)reader["Id"],
+                                    SchoolId = (int)reader["SchoolId"],
+                                    GroupId = (int)reader["GroupId"],
+                                    GroupName = (string)reader["GroupName"]
+                                };
+
+                                l.DebugToLog("[RetrieveGroupsOfSchool]", sw.ElapsedMilliseconds.ToString() + "ms. Got: " + newGroup.Id + " - " + newGroup.GroupName, 1);
+
+                                GroupList.Add(newGroup);
+                                rowCount++;
+                            }
+
+                            l.WriteToLog("[RetrieveGroupsOfSchool]", "Found " + rowCount + " groups.", 2);
+                            l.DebugToLog("[RetrieveGroupsOfSchool]", sw.ElapsedMilliseconds.ToString() + "ms. Found " + rowCount + " groups.", 2);
+
+                            sw.Stop();
+                            return GroupList;
+                        }
+                    }
+
+                    l.WriteToLog("[RetrieveGroupsOfSchool]", "Could not find any groups of school " + schoolId, 2);
+                    l.DebugToLog("[RetrieveGroupsOfSchool]", sw.ElapsedMilliseconds.ToString() + "ms. Could not find any groups of school " + schoolId, 2);
+
+                    sw.Stop();
+                    return null;
+                }
+                catch (Exception ex)
+                {
+                    l.WriteToLog("[RetrieveGroupsOfSchool]", "Something went wrong. Check debug.txt", 2);
+                    l.DebugToLog("[RetrieveGroupsOfSchool]", sw.ElapsedMilliseconds.ToString() + "ms. Exception:\n" + ex.ToString(), 2);
+
+                    sw.Stop();
+                    return null;
+                }
+            }
+        }
+
+        public Group RetrieveGroup(int groupId)
+        {
+            sw.Restart();
+            l.WriteToLog("[RetrieveGroup]", "Attempting to retrieve group " + groupId + "...", 0);
+            l.DebugToLog("[RetrieveGroup]", sw.ElapsedMilliseconds.ToString() + "ms. Attempting to retrieve group " + groupId, 0);
+
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                SqlCommand command = new SqlCommand("SELECT * FROM [Group] WHERE [Id] = @id", connection);
+                command.Parameters.Add(new SqlParameter("@id", groupId));
+
+                try
+                {
+                    connection.Open();
+
+                    using (SqlDataReader reader = command.ExecuteReader())
+                    {
+                        if (reader.HasRows)
+                        {
+                            while (reader.Read())
+                            {
+                                Group newGroup = new Group
+                                {
+                                    Id = (int)reader["Id"],
+                                    SchoolId = (int)reader["SchoolId"],
+                                    GroupId = (int)reader["GroupId"],
+                                    GroupName = (string)reader["GroupName"]
+                                };
+
+                                l.DebugToLog("[RetrieveGroup]", sw.ElapsedMilliseconds.ToString() + "ms. Got: " + newGroup.Id + " - " + newGroup.GroupName, 1);
+
+                                sw.Stop();
+                                return newGroup;
+                            }
+                        }
+                    }
+
+                    l.WriteToLog("[RetrieveGroup]", "Could not find any groups with id " + groupId, 2);
+                    l.DebugToLog("[RetrieveGroup]", sw.ElapsedMilliseconds.ToString() + "ms. Could not find any groups with id " + groupId, 2);
+
+                    sw.Stop();
+                    return null;
+                }
+                catch (Exception ex)
+                {
+                    l.WriteToLog("[RetrieveGroup]", "Something went wrong. Check debug.txt", 2);
+                    l.DebugToLog("[RetrieveGroup]", sw.ElapsedMilliseconds.ToString() + "ms. Exception:\n" + ex.ToString(), 2);
+
+                    sw.Stop();
+                    return null;
+                }
+            }
+        }
+
         public Configuration RetrieveConfig(int userId)
         {
             sw.Restart();
@@ -1441,6 +1611,53 @@ namespace WerkelijkWaar.Classes
             }
         }
 
+        public bool EditUserNumbers(Classes.User user)
+        {
+            sw.Restart();
+            l.WriteToLog("[EditUserNumbers]", "Trying to edit user " + user.Id + " numbers", 0);
+            l.DebugToLog("[EditUserNumbers]", sw.ElapsedMilliseconds.ToString() + "ms. Trying to edit user " + user.Id + " numbers", 0);
+
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                SqlCommand command = new SqlCommand();
+
+                command = new SqlCommand("UPDATE [User] SET [RoleId] = @role, [GroupId] = @group WHERE [Id] = @id", connection);
+                command.Parameters.Add(new SqlParameter("@role", user.RoleId));
+                command.Parameters.Add(new SqlParameter("@group", user.Group));
+                command.Parameters.Add(new SqlParameter("@id", user.Id));
+
+                try
+                {
+                    connection.Open();
+
+                    int rows = command.ExecuteNonQuery();
+
+                    if (rows > 0)
+                    {
+                        l.WriteToLog("[EditUserNumbers]", "Edited user with id " + user.Id, 2);
+                        l.DebugToLog("[EditUserNumbers]", sw.ElapsedMilliseconds.ToString() + "ms. Edited user with id " + user.Id, 2);
+
+                        sw.Stop();
+                        return true;
+                    }
+
+                    l.WriteToLog("[EditUserNumbers]", "Could not find user with id " + user.Id, 2);
+                    l.DebugToLog("[EditUserNumbers]", sw.ElapsedMilliseconds.ToString() + "ms. Could not find user with id " + user.Id, 2);
+
+                    sw.Stop();
+                    return false;
+                }
+                catch (Exception ex)
+                {
+                    l.WriteToLog("[EditUserNumbers]", "Something went wrong. Check debug.txt", 2);
+                    l.DebugToLog("[EditUserNumbers]", sw.ElapsedMilliseconds.ToString() + "ms. Exception:\n" + ex.ToString(), 2);
+
+                    sw.Stop();
+                    return false;
+                }
+            }
+        }
+
         /// <summary>
         /// Wijzig de status van een verhaal.
         /// </summary>
@@ -1654,6 +1871,132 @@ namespace WerkelijkWaar.Classes
                 {
                     l.WriteToLog("[DeleteStory]", "Something went wrong. Check debug.txt", 2);
                     l.DebugToLog("[DeleteStory]", sw.ElapsedMilliseconds.ToString() + "ms. Exception:\n" + ex.ToString(), 2);
+
+                    sw.Stop();
+                    return false;
+                }
+            }
+        }
+
+        public bool DeleteStoriesOfUser(int userId)
+        {
+            sw.Restart();
+            l.WriteToLog("[DeleteStoriesOfUser]", "Attempting to delete story with ownerId " + userId, 0);
+            l.DebugToLog("[DeleteStoriesOfUser]", sw.ElapsedMilliseconds.ToString() + "ms. Deleting story with ownerId " + userId, 0);
+
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                SqlCommand command = new SqlCommand("DELETE FROM [Story] WHERE [OwnerId] = @id", connection);
+                command.Parameters.Add(new SqlParameter("@id", userId));
+
+                try
+                {
+                    connection.Open();
+                    int rows = command.ExecuteNonQuery();
+
+                    if (rows > 0)
+                    {
+                        l.WriteToLog("[DeleteStoriesOfUser]", "Deleted story with ownerId " + userId, 2);
+                        l.DebugToLog("[DeleteStoriesOfUser]", sw.ElapsedMilliseconds.ToString() + "ms. Deleted story with ownerId " + userId, 2);
+
+                        sw.Stop();
+                        return true;
+                    }
+
+                    l.WriteToLog("[DeleteStoriesOfUser]", "Could not find story with ownerId " + userId, 2);
+                    l.DebugToLog("[DeleteStoriesOfUser]", sw.ElapsedMilliseconds.ToString() + "ms. Could not find story with ownerId " + userId, 2);
+
+                    sw.Stop();
+                    return false;
+                }
+                catch (Exception ex)
+                {
+                    l.WriteToLog("[DeleteStoriesOfUser]", "Something went wrong. Check debug.txt", 2);
+                    l.DebugToLog("[DeleteStoriesOfUser]", sw.ElapsedMilliseconds.ToString() + "ms. Exception:\n" + ex.ToString(), 2);
+
+                    sw.Stop();
+                    return false;
+                }
+            }
+        }
+
+        public bool DeleteScoresOfUser(int userId)
+        {
+            sw.Restart();
+            l.WriteToLog("[DeleteScoresOfUser]", "Attempting to delete score with ownerId " + userId, 0);
+            l.DebugToLog("[DeleteScoresOfUser]", sw.ElapsedMilliseconds.ToString() + "ms. Deleting score with ownerId " + userId, 0);
+
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                SqlCommand command = new SqlCommand("DELETE FROM [Score] WHERE [OwnerId] = @id", connection);
+                command.Parameters.Add(new SqlParameter("@id", userId));
+
+                try
+                {
+                    connection.Open();
+                    int rows = command.ExecuteNonQuery();
+
+                    if (rows > 0)
+                    {
+                        l.WriteToLog("[DeleteScoresOfUser]", "Deleted score with ownerId " + userId, 2);
+                        l.DebugToLog("[DeleteScoresOfUser]", sw.ElapsedMilliseconds.ToString() + "ms. Deleted score with ownerId " + userId, 2);
+
+                        sw.Stop();
+                        return true;
+                    }
+
+                    l.WriteToLog("[DeleteScoresOfUser]", "Could not find score with ownerId " + userId, 2);
+                    l.DebugToLog("[DeleteScoresOfUser]", sw.ElapsedMilliseconds.ToString() + "ms. Could not find score with ownerId " + userId, 2);
+
+                    sw.Stop();
+                    return false;
+                }
+                catch (Exception ex)
+                {
+                    l.WriteToLog("[DeleteScoresOfUser]", "Something went wrong. Check debug.txt", 2);
+                    l.DebugToLog("[DeleteScoresOfUser]", sw.ElapsedMilliseconds.ToString() + "ms. Exception:\n" + ex.ToString(), 2);
+
+                    sw.Stop();
+                    return false;
+                }
+            }
+        }
+
+        public bool DeleteConfig(int userId)
+        {
+            sw.Restart();
+            l.WriteToLog("[DeleteConfig]", "Attempting to delete config of " + userId, 0);
+            l.DebugToLog("[DeleteConfig]", sw.ElapsedMilliseconds.ToString() + "ms. Deleting config of " + userId, 0);
+
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                SqlCommand command = new SqlCommand("DELETE FROM [Configuration] WHERE [OwnerId] = @id", connection);
+                command.Parameters.Add(new SqlParameter("@id", userId));
+
+                try
+                {
+                    connection.Open();
+                    int rows = command.ExecuteNonQuery();
+
+                    if (rows > 0)
+                    {
+                        l.WriteToLog("[DeleteConfig]", "Deleted config with ownerId " + userId, 2);
+                        l.DebugToLog("[DeleteConfig]", sw.ElapsedMilliseconds.ToString() + "ms. Deleted story with id " + userId, 2);
+
+                        sw.Stop();
+                        return true;
+                    }
+
+                    l.WriteToLog("[DeleteConfig]", "Could not find config with ownerId " + userId, 2);
+                    l.DebugToLog("[DeleteConfig]", sw.ElapsedMilliseconds.ToString() + "ms. Could not find config with ownerId " + userId, 2);
+
+                    sw.Stop();
+                    return false;
+                }
+                catch (Exception ex)
+                {
+                    l.WriteToLog("[DeleteConfig]", "Something went wrong. Check debug.txt", 2);
+                    l.DebugToLog("[DeleteConfig]", sw.ElapsedMilliseconds.ToString() + "ms. Exception:\n" + ex.ToString(), 2);
 
                     sw.Stop();
                     return false;

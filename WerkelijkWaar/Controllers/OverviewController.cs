@@ -281,7 +281,7 @@ namespace WerkelijkWaar.Controllers
         /// </summary>
         /// <param name="id">Story ID</param>
         /// <returns></returns>
-        public IActionResult IndividualStoryConfirmation(int id)
+        public IActionResult EditStoryStatus(int id, int status)
         {
             // Check if logged in
             if (!String.IsNullOrEmpty(HttpContext.Session.GetString("User")))
@@ -290,16 +290,18 @@ namespace WerkelijkWaar.Controllers
                 AdminModel am = new AdminModel();
                 Classes.User tempUser = Newtonsoft.Json.JsonConvert.DeserializeObject<Classes.User>(HttpContext.Session.GetString("User"));
 
-                if (tempUser.RoleId == 2)
+                if (tempUser.RoleId == 2 || tempUser.RoleId == 3)
                 {
-                    am.Story = dq.RetrieveStory(id);
-
-                    if (am.Story.Status != 2)
+                    if (status == -1)
                     {
-                        dq.UpdateStoryStatus(id, 1);
+                        dq.DeleteStory(id);
+                    }
+                    else
+                    {
+                        dq.UpdateStoryStatus(id, status);
                     }
 
-                    return View(am);
+                    return RedirectToAction("StoryOverview", "Overview");
                 }
             }
 
@@ -320,9 +322,46 @@ namespace WerkelijkWaar.Controllers
                 AdminModel am = new AdminModel();
                 Classes.User tempUser = Newtonsoft.Json.JsonConvert.DeserializeObject<Classes.User>(HttpContext.Session.GetString("User"));
 
-                if (tempUser.RoleId == 2)
+                if (tempUser.RoleId == 2 || tempUser.RoleId == 3)
                 {
                     am.User = dq.RetrieveUser(id);
+                    //am.Group = dq.RetrieveGroup(am.User.Group);
+                    //am.School = dq.RetrieveSchool(am.Group.SchoolId);
+
+                    //List<Classes.School> tempSchoolList = dq.RetrieveSchools();
+                    //List<Classes.Group> tempGroupList = dq.RetrieveGroupsOfSchool(am.Group.SchoolId); // edit later to include other schools
+
+                    List<Classes.Role> roleList = new List<Classes.Role>();
+                    //List<Classes.Group> groupList = new List<Classes.Group>();
+                    //List<Classes.School> schoolList = new List<Classes.School>();
+
+                    roleList.Add(new Classes.Role { RoleIndex = 0, RoleName = "Student" });
+                    roleList.Add(new Classes.Role { RoleIndex = 1, RoleName = "Docent" });
+                    roleList.Add(new Classes.Role { RoleIndex = 2, RoleName = "Beheerder" });
+                    roleList.Add(new Classes.Role { RoleIndex = 3, RoleName = "Überbeheerder" });
+
+                    //l.DebugToLog("[IndividualUser]", "Forming group list.", 0);
+
+                    //foreach(Classes.Group group in tempGroupList)
+                    //{
+                    //    groupList.Add(new Classes.Group { GroupId = group.Id, GroupName = group.GroupName });
+                    //    l.DebugToLog("[IndividualUser]", "Group " + group.Id + " - " + group.GroupName + ".", 1);
+                    //}
+
+                    //l.DebugToLog("[IndividualUser]", "Forming school list.", 1);
+
+                    //foreach (Classes.School school in tempSchoolList)
+                    //{
+                    //    schoolList.Add(new Classes.School { Id = school.Id, SchoolName = school.SchoolName });
+                    //    l.DebugToLog("[IndividualUser]", "School " + school.Id + " - " + school.SchoolName + ".", 1);
+                    //}
+
+                    //l.DebugToLog("[IndividualUser]", "Done.", 2);
+
+                    am.RoleList = new SelectList(roleList, "RoleIndex", "RoleName");
+                    //am.GroupList = new SelectList(groupList, "GroupId", "GroupName");
+                    //am.SchoolList = new SelectList(schoolList, "Id", "SchoolName");
+
                     return View(am);
                 }
             }

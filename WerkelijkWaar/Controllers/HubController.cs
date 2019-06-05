@@ -4,6 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.Rendering;
 using WerkelijkWaar.Models;
 
 namespace WerkelijkWaar.Controllers
@@ -62,13 +63,20 @@ namespace WerkelijkWaar.Controllers
 
                 if (am.User.RoleId == 2)
                 {
-                    am.SchoolList = dq.RetrieveSchools();
-                    am.GenerateSchoolListItems();
+                    am.Group = dq.RetrieveGroup(am.User.Group);
+                    am.School = dq.RetrieveSchool(am.Group.SchoolId);
                 }
                 else if (am.User.RoleId == 3)
                 {
-                    am.SchoolList = dq.RetrieveSchools();
-                    am.GenerateSchoolListItems();
+                    List<Classes.School> tempSchoolList = dq.RetrieveSchools();
+                    List<Classes.School> schoolList = new List<Classes.School>();
+
+                    foreach (Classes.School school in tempSchoolList)
+                    {
+                        schoolList.Add(new Classes.School { Id = school.Id, SchoolName = school.SchoolName });
+                    }
+
+                    am.SchoolList = new SelectList(schoolList, "Id", "SchoolName");
                 }
 
                 return View(am);

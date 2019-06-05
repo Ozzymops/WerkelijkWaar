@@ -373,6 +373,86 @@ namespace WerkelijkWaar.Controllers
             return RedirectToAction("Index", "Home");
         }
 
+        public IActionResult EditUser(AdminModel am)
+        {
+            // check if logged in
+            if (!String.IsNullOrEmpty(HttpContext.Session.GetString("User")))
+            {
+                if (String.IsNullOrEmpty(am.User.Name) || String.IsNullOrEmpty(am.User.Surname) || String.IsNullOrEmpty(am.User.Username))
+                {
+                    am.StatusString = "Vul a.u.b. de velden correct in.";
+                }
+                else
+                {
+                    bool editedNames = dq.EditUserNames(am.User);
+
+                    if (editedNames)
+                    {
+                        // bool editedNumbers = dq.EditUserNumbers(am.User);
+                        bool editedNumbers = true;
+
+                        if (editedNumbers)
+                        {
+                            if (am.UploadedAvatar != null)
+                            {
+                                string fileType = Path.GetFileName(am.UploadedAvatar.FileName);
+                                string fileName = "";
+
+                                // check filetype
+                                if (fileType.EndsWith(".jpg"))
+                                {
+                                    fileName = "avatar_" + am.User.Id.ToString() + ".jpg";
+                                }
+                                else if (fileType.EndsWith(".png"))
+                                {
+                                    fileName = "avatar_" + am.User.Id.ToString() + ".png";
+                                }
+                                else
+                                {
+                                    am.StatusString = "Upload a.u.b. een .jpg of .png bestand.";
+
+                                    return RedirectToAction("IndividualUsers", "Overview", am);
+                                }
+
+                                // pathing
+                                string loc = Path.Combine(hostingEnvironment.WebRootPath, "content\\image\\avatars\\" + am.User.Id);
+                                string path = Path.Combine(loc, fileName);
+                                Directory.CreateDirectory(loc);
+
+                                // move image
+                                am.UploadedAvatar.CopyTo(new FileStream(path, FileMode.Create));
+
+                                bool editedAvatar = dq.EditUserAvatar(am.User.Id, fileName);
+
+                                if (editedAvatar)
+                                {
+                                    am.StatusString = "Succes.";
+                                }
+                                else
+                                {
+                                    am.StatusString = "Er is iets mis gegaan. Probeer het opnieuw.";
+                                }
+                            }
+
+                            am.StatusString = "Succes."; 
+                        }
+                        else
+                        {
+                            am.StatusString = "Er is iets mis gegaan. Probeer het opnieuw.";
+                        }
+                    }
+                    else
+                    {
+                        am.StatusString = "Er is iets mis gegaan. Probeer het opnieuw.";
+                    }
+                }
+
+                return RedirectToAction("IndividualUsers", "Overview", new { id = am.User.Id });
+            }
+
+            return RedirectToAction("Index", "Home");
+        }
+
         public IActionResult DeleteAccount(int id)
         {
             // check if logged in as the user it's trying to destroy
@@ -380,13 +460,24 @@ namespace WerkelijkWaar.Controllers
             {
                 Classes.User tempUser = Newtonsoft.Json.JsonConvert.DeserializeObject<Classes.User>(HttpContext.Session.GetString("User"));
 
-                if (tempUser.Id == id)
+                if (tempUser.Id == id || tempUser.RoleId == 3)
                 {
+                    bool deletedStories = dq.DeleteStoriesOfUser(id);
+                    bool deletedScores = dq.DeleteScoresOfUser(id);
+                    bool deletedConfig = dq.DeleteConfig(id);
+
                     bool deleted = dq.DeleteUser(id);
 
                     if (deleted)
                     {
-                        HttpContext.Session.Remove("User");
+                        if (tempUser.RoleId != 3)
+                        {
+                            HttpContext.Session.Remove("User");
+                        }
+                        else
+                        {
+                            return RedirectToAction("UserOverview", "Overview");
+                        }
                     }
                 }
             }
