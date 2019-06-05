@@ -11,11 +11,16 @@ namespace WerkelijkWaar.Controllers
 {
     public class HomeController : Controller
     {
-        public IActionResult Index(LoginModel lm)
+        /// <summary>
+        /// Navigate to Index
+        /// </summary>
+        /// <param name="loginModel"></param>
+        /// <returns>View</returns>
+        public IActionResult Index(LoginModel loginModel)
         {
-            if (lm == null)
+            if (loginModel == null)
             {
-                lm = new LoginModel();
+                loginModel = new LoginModel();
             }
 
             // login check
@@ -24,24 +29,40 @@ namespace WerkelijkWaar.Controllers
                 return RedirectToAction("Login", "Account");
             }
 
-            return View(lm);
+            return View(loginModel);
         }
 
+        /// <summary>
+        /// Navigate to Register
+        /// </summary>
+        /// <returns>View</returns>
         public IActionResult GoToRegister()
         {
             return RedirectToAction("Register", "Account");
         }
 
+        /// <summary>
+        /// Navigate to GameInfo
+        /// </summary>
+        /// <returns>View</returns>
         public IActionResult GameInfo()
         {
             return View();
         }
 
+        /// <summary>
+        /// Navigate to Privacy
+        /// </summary>
+        /// <returns>View</returns>
         public IActionResult Privacy()
         {
             return View();
         }
 
+        /// <summary>
+        /// Return ErrorViewModel
+        /// </summary>
+        /// <returns>View</returns>
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
         {

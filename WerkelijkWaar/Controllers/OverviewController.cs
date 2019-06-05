@@ -14,74 +14,70 @@ namespace WerkelijkWaar.Controllers
 {
     public class OverviewController : Controller
     {
-        // Standaard, overal toepasselijk
-        Classes.Logger l = new Classes.Logger();
+        // Standard classes
+        Classes.Logger logger = new Classes.Logger();
         Classes.DatabaseQueries dq = new Classes.DatabaseQueries();
 
-        public IActionResult Index()
-        {
-            return View();
-        }
-
         /// <summary>
-        /// Navigeer naar de scoreoverzicht.
+        /// Navigate to ScoreOverview
         /// </summary>
+        /// <param name="userId">User ID</param>
+        /// <param name="rank">User rank</param>
         /// <returns>View</returns>
-        public IActionResult ScoreOverview(int id, int rank)
+        public IActionResult ScoreOverview(int userId, int rank)
         {
             // Check if logged in
             if (!String.IsNullOrEmpty(HttpContext.Session.GetString("User")))
             {
-                ScoreOverviewModel som = new ScoreOverviewModel();
+                ScoreOverviewModel scoreOverviewModel = new ScoreOverviewModel();
 
-                som.Viewer = Newtonsoft.Json.JsonConvert.DeserializeObject<Classes.User>(HttpContext.Session.GetString("User"));
+                scoreOverviewModel.Viewer = Newtonsoft.Json.JsonConvert.DeserializeObject<Classes.User>(HttpContext.Session.GetString("User"));
 
-                if (som.Viewer.RoleId == 1)
+                if (scoreOverviewModel.Viewer.RoleId == 1)
                 {
-                    som.User = dq.RetrieveUser(id);
-                    som.Stories = dq.RetrieveStoriesOfUser(id);
-                    som.Scores = dq.RetrieveScoresOfUser(id);
-                    som.Rank = rank;
+                    scoreOverviewModel.User = dq.RetrieveUser(userId);
+                    scoreOverviewModel.Stories = dq.RetrieveStoriesOfUser(userId);
+                    scoreOverviewModel.Scores = dq.RetrieveScoresOfUser(userId);
+                    scoreOverviewModel.Rank = rank;
                 }
                 else
                 {
-                    som.User = dq.RetrieveUser(som.Viewer.Id);
-                    som.Stories = dq.RetrieveStoriesOfUser(som.Viewer.Id);
-                    som.Scores = dq.RetrieveScoresOfUser(som.Viewer.Id);
-                    som.Rank = rank;
+                    scoreOverviewModel.User = dq.RetrieveUser(scoreOverviewModel.Viewer.Id);
+                    scoreOverviewModel.Stories = dq.RetrieveStoriesOfUser(scoreOverviewModel.Viewer.Id);
+                    scoreOverviewModel.Scores = dq.RetrieveScoresOfUser(scoreOverviewModel.Viewer.Id);
+                    scoreOverviewModel.Rank = rank;
                 }
 
-                som.GenerateAverage();
+                scoreOverviewModel.GenerateAverage();
 
-                return View(som);
+                return View(scoreOverviewModel);
             }
 
             return RedirectToAction("Index", "Home");
         }
 
         /// <summary>
-        /// Navigeer naar het klasoverzicht
+        /// Navigate to ClassOverview
         /// </summary>
         /// <returns>View</returns>
         public IActionResult ClassOverview()
         {
-            // login check
+            // Check if logged in
             if (!String.IsNullOrEmpty(HttpContext.Session.GetString("User")))
             {
-                HubModel hm = new HubModel();
-                hm.User = Newtonsoft.Json.JsonConvert.DeserializeObject<Classes.User>(HttpContext.Session.GetString("User"));
+                HubModel hubModel = new HubModel();
+                hubModel.User = Newtonsoft.Json.JsonConvert.DeserializeObject<Classes.User>(HttpContext.Session.GetString("User"));
 
-                if (hm.User.RoleId == 0)
+                if (hubModel.User.RoleId == 0)
                 {
-                    return RedirectToAction("ScoreOverview", "Overview", new { id = hm.User.Id, rank = -1 });
+                    return RedirectToAction("ScoreOverview", "Overview", new { id = hubModel.User.Id, rank = -1 });
                 }
-                else if (hm.User.RoleId == 1)
+                else if (hubModel.User.RoleId == 1)
                 {
-                    // Haal data op
-                    hm.UserList = dq.RetrieveUserListByGroup(hm.User.Group);
-                    hm.GenerateAverage();
+                    hubModel.UserList = dq.RetrieveUserListByGroup(hubModel.User.Group);
+                    hubModel.GenerateAverage();
 
-                    return View(hm);
+                    return View(hubModel);
                 }
             }
 
@@ -89,7 +85,7 @@ namespace WerkelijkWaar.Controllers
         }
 
         /// <summary>
-        /// Navigeer naar de gebruikersoverzicht.
+        /// Navigate to UserOverview
         /// </summary>
         /// <returns>View</returns>
         public IActionResult UserOverview()
@@ -97,19 +93,18 @@ namespace WerkelijkWaar.Controllers
             // Check if logged in
             if (!String.IsNullOrEmpty(HttpContext.Session.GetString("User")))
             {
-                // Check if administrator
-                AdminModel am = new AdminModel();
+                AdminModel adminModel = new AdminModel();
                 Classes.User tempUser = Newtonsoft.Json.JsonConvert.DeserializeObject<Classes.User>(HttpContext.Session.GetString("User"));
 
                 if (tempUser.RoleId == 2)
                 {
-                    am.UserList = dq.RetrieveAllUsers();
-                    return View(am);
+                    adminModel.UserList = dq.RetrieveAllUsers();
+                    return View(adminModel);
                 }
                 else if (tempUser.RoleId == 3)
                 {
-                    am.UserList = dq.RetrieveAllUsers();
-                    return View(am);
+                    adminModel.UserList = dq.RetrieveAllUsers();
+                    return View(adminModel);
                 }
             }
 
@@ -117,7 +112,7 @@ namespace WerkelijkWaar.Controllers
         }
 
         /// <summary>
-        /// Navigeer naar de verhalenoverzicht.
+        /// Navigate to StoryOverview
         /// </summary>
         /// <returns>View</returns>
         public IActionResult StoryOverview()
@@ -141,75 +136,75 @@ namespace WerkelijkWaar.Controllers
         }
 
         /// <summary>
-        /// Zie de geselecteerde score in.
+        /// Navigate to IndividualScores
         /// </summary>
-        /// <param name="id">User ID</param>
-        /// <param name="rank">Ranknummer</param>
+        /// <param name="userId">User ID</param>
+        /// <param name="rank">Rank</param>
         /// <param name="scoreId">Score ID</param>
         /// <returns>View</returns>
-        public IActionResult IndividualScores(int id, int rank, int scoreId)
+        public IActionResult IndividualScores(int userId, int rank, int scoreId)
         {
             // Check if logged in
             if (!String.IsNullOrEmpty(HttpContext.Session.GetString("User")))
             {
                 Classes.User tempUser = Newtonsoft.Json.JsonConvert.DeserializeObject<Classes.User>(HttpContext.Session.GetString("User"));
-                IndividualModel ism = new IndividualModel();
+                IndividualModel individualModel = new IndividualModel();
 
                 if (tempUser.RoleId == 1)
                 {
-                    ism.User = dq.RetrieveUser(id);
+                    individualModel.User = dq.RetrieveUser(userId);
                 }
                 else
                 {
-                    ism.User = tempUser;
+                    individualModel.User = tempUser;
                 }
 
-                ism.Score = dq.RetrieveScore(scoreId);
+                individualModel.Score = dq.RetrieveScore(scoreId);
 
-                return View(ism);
+                return View(individualModel);
             }
 
             return RedirectToAction("Index", "Home");
         }
 
         /// <summary>
-        /// Zie het geselecteerde verhaal in.
+        /// Navigate to IndividualStories
         /// </summary>
-        /// <param name="id">User ID</param>
+        /// <param name="userId">User ID</param>
         /// <param name="rank">Ranknummer</param>
         /// <param name="storyId">Story ID</param>
-        /// <returns></returns>
-        public IActionResult IndividualStories(int id, int rank, int storyId)
+        /// <returns>View</returns>
+        public IActionResult IndividualStories(int userId, int rank, int storyId)
         {
             // Check if logged in
             if (!String.IsNullOrEmpty(HttpContext.Session.GetString("User")))
             {
                 Classes.User tempUser = Newtonsoft.Json.JsonConvert.DeserializeObject<Classes.User>(HttpContext.Session.GetString("User"));
-                IndividualModel ism = new IndividualModel();
+                IndividualModel individualModel = new IndividualModel();
 
                 if (tempUser.RoleId == 1)
                 {
-                    ism.User = dq.RetrieveUser(id);
+                    individualModel.User = dq.RetrieveUser(userId);
                 }
                 else
                 {
-                    ism.User = tempUser;
+                    individualModel.User = tempUser;
                 }
 
-                ism.Story = dq.RetrieveStory(storyId);
+                individualModel.Story = dq.RetrieveStory(storyId);
 
-                return View(ism);
+                return View(individualModel);
             }
 
             return RedirectToAction("Index", "Home");
         }
 
         /// <summary>
-        /// Navigeer naar de CreateScore pagina
+        /// Navigate to CreateScore
         /// </summary>
-        /// <param name="id">User ID</param>
+        /// <param name="userId">User ID</param>
         /// <returns>View</returns>
-        public IActionResult CreateScore(int id)
+        public IActionResult CreateScore(int userId)
         {
             // Check if logged in
             if (!String.IsNullOrEmpty(HttpContext.Session.GetString("User")))
@@ -218,9 +213,9 @@ namespace WerkelijkWaar.Controllers
 
                 if (tempUser.RoleId == 1)
                 {
-                    IndividualModel ism = new IndividualModel();
-                    ism.User = dq.RetrieveUser(id);
-                    ism.Score = new Classes.Score();
+                    IndividualModel individualModel = new IndividualModel();
+                    individualModel.User = dq.RetrieveUser(userId);
+                    individualModel.Score = new Classes.Score();
 
                     List<Classes.GameType> gameTypeList = new List<Classes.GameType>();
                     gameTypeList.Add(new Classes.GameType { TypeIndex = 1, TypeName = "Werkelijk Waar?" });
@@ -233,9 +228,9 @@ namespace WerkelijkWaar.Controllers
                     gameTypeList.Add(new Classes.GameType { TypeIndex = 8, TypeName = "Sneller dan het licht" });
                     gameTypeList.Add(new Classes.GameType { TypeIndex = 9, TypeName = "De machine" });
 
-                    ism.GameType = new SelectList(gameTypeList, "TypeIndex", "TypeName");
+                    individualModel.GameType = new SelectList(gameTypeList, "TypeIndex", "TypeName");
 
-                    return View(ism);
+                    return View(individualModel);
                 }
             }
 
@@ -243,11 +238,11 @@ namespace WerkelijkWaar.Controllers
         }
 
         /// <summary>
-        /// Maak een score aan.
+        /// Upload a score to the database
         /// </summary>
-        /// <param name="ism">IndividualModel</param>
-        /// <returns></returns>
-        public IActionResult UploadScore(IndividualModel ism)
+        /// <param name="individualModel">IndividualModel</param>
+        /// <returns>View</returns>
+        public IActionResult UploadScore(IndividualModel individualModel)
         {
             // Check if logged in
             if (!String.IsNullOrEmpty(HttpContext.Session.GetString("User")))
@@ -257,48 +252,48 @@ namespace WerkelijkWaar.Controllers
 
                 if (tempUser.RoleId == 1)
                 {
-                    ism.Score.CashAmount = Convert.ToDouble(ism.ScoreCashString);
+                    individualModel.Score.CashAmount = Convert.ToDouble(individualModel.ScoreCashString);
 
                     string answerString = "";
-                    foreach (string s in ism.ScoreAnswerArray)
+
+                    foreach (string s in individualModel.ScoreAnswerArray)
                     {
                         answerString += s + " ";
                     }
 
-                    ism.Score.Answers = answerString;
-                    ism.Score.GameType = ism.GameTypeIndex;
-                    bool results = dq.CreateScore(ism.Score);
+                    individualModel.Score.Answers = answerString;
+                    individualModel.Score.GameType = individualModel.GameTypeIndex;
+                    bool results = dq.CreateScore(individualModel.Score);
                 }
 
-                return RedirectToAction("ScoreOverview", "Overview", new { id = ism.Score.OwnerId, rank = 0 });
+                return RedirectToAction("ScoreOverview", "Overview", new { scoreId = individualModel.Score.OwnerId, rank = 0 });
             }
 
             return RedirectToAction("Index", "Home");
         }
 
         /// <summary>
-        /// Zie het geselecteerde verhaal in.
+        /// Update story status
         /// </summary>
-        /// <param name="id">Story ID</param>
-        /// <returns></returns>
-        public IActionResult EditStoryStatus(int id, int status)
+        /// <param name="storyId">Story ID</param>
+        /// <returns>View</returns>
+        public IActionResult EditStoryStatus(int storyId, int status)
         {
             // Check if logged in
             if (!String.IsNullOrEmpty(HttpContext.Session.GetString("User")))
             {
                 // Check if administrator
-                AdminModel am = new AdminModel();
                 Classes.User tempUser = Newtonsoft.Json.JsonConvert.DeserializeObject<Classes.User>(HttpContext.Session.GetString("User"));
 
                 if (tempUser.RoleId == 2 || tempUser.RoleId == 3)
                 {
                     if (status == -1)
                     {
-                        dq.DeleteStory(id);
+                        dq.DeleteStory(storyId);
                     }
                     else
                     {
-                        dq.UpdateStoryStatus(id, status);
+                        dq.UpdateStoryStatus(storyId, status);
                     }
 
                     return RedirectToAction("StoryOverview", "Overview");
@@ -309,27 +304,27 @@ namespace WerkelijkWaar.Controllers
         }
 
         /// <summary>
-        /// Zie de geselecteerde gebruiker in.
+        /// Navigate to IndividualUsers
         /// </summary>
-        /// <param name="id">User ID</param>
+        /// <param name="userId">User ID</param>
         /// <returns>View</returns>
-        public IActionResult IndividualUsers(int id)
+        public IActionResult IndividualUsers(int userId)
         {
             // Check if logged in
             if (!String.IsNullOrEmpty(HttpContext.Session.GetString("User")))
             {
                 // Check if administrator
-                AdminModel am = new AdminModel();
+                AdminModel adminModel = new AdminModel();
                 Classes.User tempUser = Newtonsoft.Json.JsonConvert.DeserializeObject<Classes.User>(HttpContext.Session.GetString("User"));
 
                 if (tempUser.RoleId == 2 || tempUser.RoleId == 3)
                 {
-                    am.User = dq.RetrieveUser(id);
-                    //am.Group = dq.RetrieveGroup(am.User.Group);
-                    //am.School = dq.RetrieveSchool(am.Group.SchoolId);
+                    adminModel.User = dq.RetrieveUser(userId);
+                    //adminModel.Group = dq.RetrieveGroup(adminModel.User.Group);
+                    //adminModel.School = dq.RetrieveSchool(adminModel.Group.SchoolId);
 
                     //List<Classes.School> tempSchoolList = dq.RetrieveSchools();
-                    //List<Classes.Group> tempGroupList = dq.RetrieveGroupsOfSchool(am.Group.SchoolId); // edit later to include other schools
+                    //List<Classes.Group> tempGroupList = dq.RetrieveGroupsOfSchool(adminModel.Group.SchoolId); // edit later to include other schools
 
                     List<Classes.Role> roleList = new List<Classes.Role>();
                     //List<Classes.Group> groupList = new List<Classes.Group>();
@@ -358,11 +353,11 @@ namespace WerkelijkWaar.Controllers
 
                     //l.DebugToLog("[IndividualUser]", "Done.", 2);
 
-                    am.RoleList = new SelectList(roleList, "RoleIndex", "RoleName");
-                    //am.GroupList = new SelectList(groupList, "GroupId", "GroupName");
-                    //am.SchoolList = new SelectList(schoolList, "Id", "SchoolName");
+                    adminModel.RoleList = new SelectList(roleList, "RoleIndex", "RoleName");
+                    //adminModel.GroupList = new SelectList(groupList, "GroupId", "GroupName");
+                    //adminModel.SchoolList = new SelectList(schoolList, "Id", "SchoolName");
 
-                    return View(am);
+                    return View(adminModel);
                 }
             }
 
@@ -370,47 +365,7 @@ namespace WerkelijkWaar.Controllers
         }
 
         /// <summary>
-        /// Wijzig de status van een verhaal.
-        /// </summary>
-        /// <param name="type">Status</param>
-        /// <param name="id">Story ID</param>
-        /// <returns>View</returns>
-        public IActionResult ModifyStory (int type, int id)
-        {
-            // Check if logged in
-            if (!String.IsNullOrEmpty(HttpContext.Session.GetString("User")))
-            {
-                // Check if administrator
-                AdminModel am = new AdminModel();
-                Classes.User tempUser = Newtonsoft.Json.JsonConvert.DeserializeObject<Classes.User>(HttpContext.Session.GetString("User"));
-
-                if (tempUser.RoleId == 2)
-                {
-                    if (type == 0)
-                    {
-                        // Read
-                        bool result = dq.UpdateStoryStatus(id, 1);
-                    }
-                    else if (type == 1)
-                    {
-                        // Accept
-                        bool result = dq.UpdateStoryStatus(id, 2);
-                    }
-                    else if (type == 2)
-                    {
-                        // Delete
-                        bool result = dq.DeleteStory(id);
-                    }
-
-                    return RedirectToAction("StoryOverview", "Overview");
-                }
-            }
-
-            return RedirectToAction("Index", "Home");
-        }
-
-        /// <summary>
-        /// Navigeer naar de serverconfiguratie.
+        /// Navigate to ServerConfiguration
         /// </summary>
         /// <returns>View</returns>
         public IActionResult ServerConfiguration()
@@ -419,17 +374,16 @@ namespace WerkelijkWaar.Controllers
             if (!String.IsNullOrEmpty(HttpContext.Session.GetString("User")))
             {
                 // Check if administrator
-                AdminModel am = new AdminModel();
                 Classes.User tempUser = Newtonsoft.Json.JsonConvert.DeserializeObject<Classes.User>(HttpContext.Session.GetString("User"));
 
                 if (tempUser.RoleId == 2)
                 {
-                    ServerConfigModel scm = new ServerConfigModel();
-                    scm.DbConnectionString = ConfigurationManager.AppSettings["connectionString"];
-                    scm.DbUsername = ConfigurationManager.AppSettings["dbUsername"];
-                    scm.DbPassword = ConfigurationManager.AppSettings["dbPassword"];
+                    ServerConfigModel serverConfigModel = new ServerConfigModel();
+                    serverConfigModel.DbConnectionString = ConfigurationManager.AppSettings["connectionString"];
+                    serverConfigModel.DbUsername = ConfigurationManager.AppSettings["dbUsername"];
+                    serverConfigModel.DbPassword = ConfigurationManager.AppSettings["dbPassword"];
 
-                    return View(scm);
+                    return View(serverConfigModel);
                 }
             }
 
@@ -437,25 +391,24 @@ namespace WerkelijkWaar.Controllers
         }
 
         /// <summary>
-        /// Update web.config met nieuwe waarden.
+        /// Update web.config with new attributes [w.i.p.]
         /// </summary>
         /// <returns>View</returns>
-        public IActionResult UpdateConfig(ServerConfigModel scm)
+        public IActionResult UpdateConfig(ServerConfigModel serverConfigModel)
         {
             // Check if logged in
             if (!String.IsNullOrEmpty(HttpContext.Session.GetString("User")))
             {
                 // Check if administrator
-                AdminModel am = new AdminModel();
                 Classes.User tempUser = Newtonsoft.Json.JsonConvert.DeserializeObject<Classes.User>(HttpContext.Session.GetString("User"));
 
                 if (tempUser.RoleId == 2)
                 {
                     Configuration configuration = ConfigurationManager.OpenExeConfiguration(Assembly.GetExecutingAssembly().Location);
 
-                    configuration.AppSettings.Settings["connectionString"].Value = scm.DbConnectionString;
-                    configuration.AppSettings.Settings["dbUsername"].Value = scm.DbUsername;
-                    configuration.AppSettings.Settings["dbPassword"].Value = scm.DbPassword;
+                    configuration.AppSettings.Settings["connectionString"].Value = serverConfigModel.DbConnectionString;
+                    configuration.AppSettings.Settings["dbUsername"].Value = serverConfigModel.DbUsername;
+                    configuration.AppSettings.Settings["dbPassword"].Value = serverConfigModel.DbPassword;
 
                     configuration.Save();
                     ConfigurationManager.RefreshSection("appSettings");
@@ -468,7 +421,7 @@ namespace WerkelijkWaar.Controllers
         }
 
         /// <summary>
-        /// Reset de server.
+        /// Reset server [w.i.p.]
         /// </summary>
         /// <returns>View</returns>
         public IActionResult ResetServer()
@@ -477,7 +430,6 @@ namespace WerkelijkWaar.Controllers
             if (!String.IsNullOrEmpty(HttpContext.Session.GetString("User")))
             {
                 // Check if administrator
-                AdminModel am = new AdminModel();
                 Classes.User tempUser = Newtonsoft.Json.JsonConvert.DeserializeObject<Classes.User>(HttpContext.Session.GetString("User"));
 
                 if (tempUser.RoleId == 2)

@@ -10,26 +10,25 @@ namespace WerkelijkWaar.Classes
 {
     public class DatabaseQueries
     {
-        // Standaard, overal toepasselijk
-        Classes.Logger l = new Classes.Logger();
-        Stopwatch sw = new Stopwatch();
+        // Standard classes
+        Classes.Logger logger = new Classes.Logger();
+        Stopwatch stopWatch = new Stopwatch();
 
-        // private string connectionString = ConfigurationManager.AppSettings["connectionString"];
+        // Construct connection string
         private string connectionString = ConfigurationManager.AppSettings["connectionString"] + "User Id='" + ConfigurationManager.AppSettings["dbUsername"] + "';" +
-            "Password='" + ConfigurationManager.AppSettings["dbPassword"] + "';";
+            "password='" + ConfigurationManager.AppSettings["dbpassword"] + "';";
 
-        // CRUD
+        // CRUD - CREATE, READ, UPDATE, DELETE
         #region CREATE
         /// <summary>
-        /// Maak een gebruiker aan in het systeem.
+        /// Register a user to the database.
         /// </summary>
         /// <param name="user">User</param>
-        /// <returns>true or false</returns>
+        /// <returns>boolean</returns>
         public bool RegisterUser(User user)
         {
-            sw.Restart();
-            l.WriteToLog("[RegisterUser]", "Trying to register user " + user.Username, 0);
-            l.DebugToLog("[RegisterUser]", sw.ElapsedMilliseconds.ToString() + "ms. Registering " + user.Name, 0);
+            stopWatch.Restart();
+            logger.Log("[RegisterUser]", stopWatch.ElapsedMilliseconds.ToString() + "ms. Trying to register user " + user.Username, 0, 1, false);
 
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
@@ -48,12 +47,12 @@ namespace WerkelijkWaar.Classes
                 output.Size = 255;
                 command.Parameters.Add(output);
 
-                l.DebugToLog("[RegisterUser]", sw.ElapsedMilliseconds.ToString() + "ms. Values are: " +
+                logger.Log("[RegisterUser]", stopWatch.ElapsedMilliseconds.ToString() + "ms. Values are: " +
                                                 "- Role Id: " + user.RoleId + ";\n" +
                                                 "- Group Id: " + user.Group + ";\n" +
                                                 "- Name: " + user.Name + ";\n" +
                                                 "- Surname: " + user.Surname + ";\n" +
-                                                "- Username: " + user.Username, 1);
+                                                "- Username: " + user.Username, 1, 1, false);
 
                 try
                 {
@@ -62,43 +61,39 @@ namespace WerkelijkWaar.Classes
 
                     if (command.Parameters["@responseMessage"].Value.ToString().Contains("Success"))
                     {
-                        l.WriteToLog("[RegisterUser]", "User " + user.Username + " successfully registered.", 2);
-                        l.DebugToLog("[RegisterUser]", sw.ElapsedMilliseconds.ToString() + "ms. User " + user.Username + " succesfully registered.", 2);
+                        logger.Log("[RegisterUser]", stopWatch.ElapsedMilliseconds.ToString() + "ms. User " + user.Username + " succesfully registered.", 2, 1, false);
 
-                        sw.Stop();
+                        stopWatch.Stop();
                         return true;
                     }
                     else
                     {
-                        l.WriteToLog("[RegisterUser]", "Failed to register user " + user.Name + ".", 2);
-                        l.DebugToLog("[RegisterUser]", sw.ElapsedMilliseconds.ToString() + "ms. Failed to register user " + user.Username + ": " + command.Parameters["@responseMessage"].Value.ToString(), 2);
+                        logger.Log("[RegisterUser]", stopWatch.ElapsedMilliseconds.ToString() + "ms. Failed to register user " + user.Username + ": " + command.Parameters["@responseMessage"].Value.ToString(), 2, 1, false);
 
-                        sw.Stop();
+                        stopWatch.Stop();
                         return false;
                     }
 
                 }
-                catch (Exception ex)
+                catch (Exception exception)
                 {
-                    l.DebugToLog("[RegisterUser]", "Something went wrong. Check debug.txt", 2);
-                    l.DebugToLog("[RegisterUser]", sw.ElapsedMilliseconds.ToString() + "ms. Exception:\n" + ex.ToString(), 2);
+                    logger.Log("[RegisterUser]", stopWatch.ElapsedMilliseconds.ToString() + "ms. Exception:\n" + exception.ToString(), 2, 1, false);
 
-                    sw.Stop();
+                    stopWatch.Stop();
                     return false;
                 }
             }
         }
 
         /// <summary>
-        /// Maak een score aan in de database.
+        /// Save a score object in the database
         /// </summary>
         /// <param name="score">Score</param>
-        /// <returns>true or false</returns>
+        /// <returns>boolean</returns>
         public bool CreateScore(Score score)
         {
-            sw.Restart();
-            l.WriteToLog("[CreateScore]", "Trying to create score for user with Id " + score.OwnerId, 0);
-            l.DebugToLog("[CreateScore]", sw.ElapsedMilliseconds.ToString() + "ms. Adding score of user " + score.OwnerId, 0);
+            stopWatch.Restart();
+            logger.Log("[CreateScore]", stopWatch.ElapsedMilliseconds.ToString() + "ms. Adding score of user " + score.OwnerId, 0, 1, false);
 
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
@@ -109,14 +104,14 @@ namespace WerkelijkWaar.Classes
                 command.Parameters.Add(new SqlParameter("@answers", score.Answers));
                 command.Parameters.Add(new SqlParameter("@date", score.Date));
 
-                l.DebugToLog("[CreateScore]", sw.ElapsedMilliseconds.ToString() + "ms. Values are: " +
+                logger.Log("[CreateScore]", stopWatch.ElapsedMilliseconds.ToString() + "ms. Values are: " +
                                 "- Owner Id: " + score.OwnerId + ";\n" +
                                 "- Gametype: " + score.GameType + ";\n" +
                                 "- Answers: " + score.Answers + ";\n" +
                                 "- Followers: " + score.FollowerAmount + ";\n" +
                                 "- Cash: " + score.CashAmount + ";\n" +
                                 "- Votes: " + score.AttainedVotes + ";\n" +
-                                "- Date: " + score.Date, 1);
+                                "- Date: " + score.Date, 1, 1, false);
 
                 // Check for nullables
                 if (score.FollowerAmount == -1)
@@ -154,35 +149,36 @@ namespace WerkelijkWaar.Classes
 
                     if (rows > 0)
                     {
-                        l.WriteToLog("[CreateScore]", "Score for " + score.OwnerId + " successfully added.", 2);
-                        l.DebugToLog("[CreateScore]", sw.ElapsedMilliseconds.ToString() + "ms. Score for " + score.OwnerId + " succesfully added.", 2);
+                        logger.Log("[CreateScore]", stopWatch.ElapsedMilliseconds.ToString() + "ms. Score for " + score.OwnerId + " succesfully added.", 2, 1, false);
 
-                        sw.Stop();
+                        stopWatch.Stop();
                         return true;
                     }
 
-                    l.WriteToLog("[CreateScore]", "Failed to add score for " + score.OwnerId + ".", 2);
-                    l.DebugToLog("[CreateScore]", sw.ElapsedMilliseconds.ToString() + "ms. Failed to add score for " + score.OwnerId + ".", 2);
+                    logger.Log("[CreateScore]", stopWatch.ElapsedMilliseconds.ToString() + "ms. Failed to add score for " + score.OwnerId + ".", 2, 1, false);
 
-                    sw.Stop();
+                    stopWatch.Stop();
                     return false;
                 }
-                catch (Exception ex)
+                catch (Exception exception)
                 {
-                    l.WriteToLog("[CreateScore]", "Something went wrong. Check debug.txt", 2);
-                    l.DebugToLog("[CreateScore]", sw.ElapsedMilliseconds.ToString() + "ms. Exception:\n" + ex.ToString(), 2);
+                    logger.Log("[CreateScore]", stopWatch.ElapsedMilliseconds.ToString() + "ms. Exception:\n" + exception.ToString(), 2, 1, false);
 
-                    sw.Stop();
+                    stopWatch.Stop();
                     return false;
                 }
             }
         }
 
+        /// <summary>
+        /// Save a story object in the database
+        /// </summary>
+        /// <param name="story">Story</param>
+        /// <returns>boolean</returns>
         public bool CreateStory(Story story)
         {
-            sw.Restart();
-            l.WriteToLog("[CreateStory]", "Trying to create story for user " + story.OwnerId, 0);
-            l.DebugToLog("[CreateStory]", sw.ElapsedMilliseconds.ToString() + "ms. Trying to create story for user " + story.OwnerId, 0);
+            stopWatch.Restart();
+            logger.Log("[CreateStory]", stopWatch.ElapsedMilliseconds.ToString() + "ms. Trying to create story for user " + story.OwnerId, 0, 1, false);
 
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
@@ -196,14 +192,14 @@ namespace WerkelijkWaar.Classes
                 command.Parameters.Add(new SqlParameter("@status", 2));
                 command.Parameters.Add(new SqlParameter("@source", story.Source));
 
-                l.DebugToLog("[CreateStory]", sw.ElapsedMilliseconds.ToString() + "ms. Values are: " +
+                logger.Log("[CreateStory]", stopWatch.ElapsedMilliseconds.ToString() + "ms. Values are: " +
                                 "- Owner Id: " + story.OwnerId + ";\n" +
                                 "- Root: " + story.IsRoot + ";\n" +
                                 "- Title: " + story.Title + ";\n" +
                                 "- Description: " + story.Description + ";\n" +
                                 "- Status: " + 2 + ";\n" +
                                 "- Source: " + story.Source + ";\n" +
-                                "- Date: " + story.Date, 1);
+                                "- Date: " + story.Date, 1, 1, false);
 
                 try
                 {
@@ -213,35 +209,36 @@ namespace WerkelijkWaar.Classes
 
                     if (rows > 0)
                     {
-                        l.WriteToLog("[CreateStory]", "Story for " + story.OwnerId + " successfully added.", 2);
-                        l.DebugToLog("[CreateStory", sw.ElapsedMilliseconds.ToString() + "ms. Story for " + story.OwnerId + " successfully added.", 2);
+                        logger.Log("[CreateStory", stopWatch.ElapsedMilliseconds.ToString() + "ms. Story for " + story.OwnerId + " successfully added.", 2, 1, false);
 
-                        sw.Stop();
+                        stopWatch.Stop();
                         return true;
                     }
 
-                    l.WriteToLog("[CreateStory]", "Failed to add story for " + story.OwnerId + ".", 2);
-                    l.DebugToLog("[CreateStory]", sw.ElapsedMilliseconds.ToString() + "ms. Failed to add story for " + story.OwnerId + ".", 2);
+                    logger.Log("[CreateStory]", stopWatch.ElapsedMilliseconds.ToString() + "ms. Failed to add story for " + story.OwnerId + ".", 2, 1, false);
 
-                    sw.Stop();
+                    stopWatch.Stop();
                     return false;
                 }
-                catch (Exception ex)
+                catch (Exception exception)
                 {
-                    l.WriteToLog("[CreateStory]", "Something went wrong. Check debug.txt", 2);
-                    l.DebugToLog("[CreateStory]", sw.ElapsedMilliseconds.ToString() + "ms. Exception:\n" + ex.ToString(), 2);
+                    logger.Log("[CreateStory]", stopWatch.ElapsedMilliseconds.ToString() + "ms. Exception:\n" + exception.ToString(), 2, 1, false);
 
-                    sw.Stop();
+                    stopWatch.Stop();
                     return false;
                 }
             }
         }
 
+        /// <summary>
+        /// Save a group object in the database
+        /// </summary>
+        /// <param name="group">Group</param>
+        /// <returns>boolean</returns>
         public bool CreateGroup(Group group)
         {
-            sw.Restart();
-            l.WriteToLog("[CreateGroup]", "Trying to create group with name " + group.GroupName, 0);
-            l.DebugToLog("[CreateGroup]", sw.ElapsedMilliseconds.ToString() + "ms. Trying to create group with name " + group.GroupName, 0);
+            stopWatch.Restart();
+            logger.Log("[CreateGroup]", stopWatch.ElapsedMilliseconds.ToString() + "ms. Trying to create group with name " + group.GroupName, 0, 1, false);
 
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
@@ -251,10 +248,10 @@ namespace WerkelijkWaar.Classes
                 command.Parameters.Add(new SqlParameter("@GroupId", group.GroupId));
                 command.Parameters.Add(new SqlParameter("@GroupName", group.GroupName));
 
-                l.DebugToLog("[CreateGroup]", sw.ElapsedMilliseconds.ToString() + "ms. Values are: " +
+                logger.Log("[CreateGroup]", stopWatch.ElapsedMilliseconds.ToString() + "ms. Values are: " +
                                 "- School Id: " + group.SchoolId + ";\n" +
                                 "- Group Id: " + group.GroupId + ";\n" +
-                                "- Group name: " + group.GroupName, 1);
+                                "- Group name: " + group.GroupName, 1, 1, false);
 
                 try
                 {
@@ -264,35 +261,36 @@ namespace WerkelijkWaar.Classes
 
                     if (rows > 0)
                     {
-                        l.WriteToLog("[CreateGroup]", "Group with name " + group.GroupName + " successfully added.", 2);
-                        l.DebugToLog("[CreateGroup]", sw.ElapsedMilliseconds.ToString() + "ms. Group " + group.GroupName + " successfully added.", 2);
+                        logger.Log("[CreateGroup]", stopWatch.ElapsedMilliseconds.ToString() + "ms. Group " + group.GroupName + " successfully added.", 2, 1, false);
 
-                        sw.Stop();
+                        stopWatch.Stop();
                         return true;
                     }
 
-                    l.WriteToLog("[CreateGroup]", "Failed to add group with name " + group.GroupName + ".", 2);
-                    l.DebugToLog("[CreateGroup]", sw.ElapsedMilliseconds.ToString() + "ms. Failed to add group " + group.GroupName + ".", 2);
+                    logger.Log("[CreateGroup]", stopWatch.ElapsedMilliseconds.ToString() + "ms. Failed to add group " + group.GroupName + ".", 2, 1, false);
 
-                    sw.Stop();
+                    stopWatch.Stop();
                     return false;
                 }
-                catch (Exception ex)
+                catch (Exception exception)
                 {
-                    l.WriteToLog("[CreateGroup]", "Something went wrong. Check debug.txt", 2);
-                    l.DebugToLog("[CreateGroup]", sw.ElapsedMilliseconds.ToString() + "ms. Exception:\n" + ex.ToString(), 2);
+                    logger.Log("[CreateGroup]", stopWatch.ElapsedMilliseconds.ToString() + "ms. Exception:\n" + exception.ToString(), 2, 1, false);
 
-                    sw.Stop();
+                    stopWatch.Stop();
                     return false;
                 }
             }
         }
 
+        /// <summary>
+        /// Save a school object in the database
+        /// </summary>
+        /// <param name="school">School</param>
+        /// <returns>boolean</returns>
         public bool CreateSchool(School school)
         {
-            sw.Restart();
-            l.WriteToLog("[CreateSchool]", "Trying to create school with name " + school.SchoolName, 0);
-            l.DebugToLog("[CreateSchool]", sw.ElapsedMilliseconds.ToString() + "ms. Trying to create school " + school.SchoolName, 0);
+            stopWatch.Restart();
+            logger.Log("[CreateSchool]", stopWatch.ElapsedMilliseconds.ToString() + "ms. Trying to create school " + school.SchoolName, 0, 1, false);
 
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
@@ -300,8 +298,8 @@ namespace WerkelijkWaar.Classes
 
                 command.Parameters.Add(new SqlParameter("@SchoolName", school.SchoolName));
 
-                l.DebugToLog("[CreateSchool]", sw.ElapsedMilliseconds.ToString() + "ms. Values are: " +
-                                "- School name: " + school.SchoolName, 1);
+                logger.Log("[CreateSchool]", stopWatch.ElapsedMilliseconds.ToString() + "ms. Values are: " +
+                                "- School name: " + school.SchoolName, 1, 1, false);
 
                 try
                 {
@@ -311,35 +309,36 @@ namespace WerkelijkWaar.Classes
 
                     if (rows > 0)
                     {
-                        l.WriteToLog("[CreateSchool]", "School with name " + school.SchoolName + " successfully added.", 2);
-                        l.DebugToLog("[CreateSchool]", sw.ElapsedMilliseconds.ToString() + "ms. School " + school.SchoolName + " successfully added.", 2);
+                        logger.Log("[CreateSchool]", stopWatch.ElapsedMilliseconds.ToString() + "ms. School " + school.SchoolName + " successfully added.", 2, 1, false);
 
-                        sw.Stop();
+                        stopWatch.Stop();
                         return true;
                     }
 
-                    l.WriteToLog("[CreateSchool]", "Failed to add school with name " + school.SchoolName + ".", 2);
-                    l.DebugToLog("[CreateSchool]", "Failed to add school " + school.SchoolName + ".", 2);
+                    logger.Log("[CreateSchool]", "Failed to add school " + school.SchoolName + ".", 2, 1, false);
 
-                    sw.Stop();
+                    stopWatch.Stop();
                     return false;
                 }
-                catch (Exception ex)
+                catch (Exception exception)
                 {
-                    l.WriteToLog("[CreateSchool]", "Something went wrong. Check debug.txt", 2);
-                    l.DebugToLog("[CreateSchool]", sw.ElapsedMilliseconds.ToString() + "ms. Exception:\n" + ex.ToString(), 2);
+                    logger.Log("[CreateSchool]", stopWatch.ElapsedMilliseconds.ToString() + "ms. Exception:\n" + exception.ToString(), 2, 1, false);
 
-                    sw.Stop();
+                    stopWatch.Stop();
                     return false;
                 }
             }
         }
 
+        /// <summary>
+        /// Save a configuration object in the database
+        /// </summary>
+        /// <param name="config">Configuration</param>
+        /// <returns>boolean</returns>
         public bool CreateConfig(Configuration config)
         {
-            sw.Restart();
-            l.WriteToLog("[CreateConfig]", "Trying to create score for user with Id " + config.OwnerId, 0);
-            l.DebugToLog("[CreateConfig]", sw.ElapsedMilliseconds.ToString() + "ms. Adding score of user " + config.OwnerId, 0);
+            stopWatch.Restart();
+            logger.Log("[CreateConfig]", stopWatch.ElapsedMilliseconds.ToString() + "ms. Adding score of user " + config.OwnerId, 0, 1, false);
 
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
@@ -358,7 +357,7 @@ namespace WerkelijkWaar.Classes
                 command.Parameters.Add(new SqlParameter("@powerupsAllowed", config.PowerupsAllowed));
                 command.Parameters.Add(new SqlParameter("@powerupsCostMult", config.PowerupsCostMult));
 
-                l.DebugToLog("[CreateConfig]", sw.ElapsedMilliseconds.ToString() + "ms. Values are: " +
+                logger.Log("[CreateConfig]", stopWatch.ElapsedMilliseconds.ToString() + "ms. Values are: " +
                                 "- Owner Id: " + config.OwnerId + ";\n" +
                                 "- Max writing time: " + config.MaxWritingTime + ";\n" +
                                 "- Max reading time: " + config.MaxReadingTime + ";\n" +
@@ -369,7 +368,7 @@ namespace WerkelijkWaar.Classes
                                 "- Cash per vote: " + config.CashPerVote + ";\n" +
                                 "- Max players: " + config.MaxPlayers + ";\n" +
                                 "- Powerups allowed? " + config.PowerupsAllowed + ";\n" +
-                                "- Powerup cost multiplier: " + config.PowerupsCostMult, 1);
+                                "- Powerup cost multiplier: " + config.PowerupsCostMult, 1, 1, false);
 
                 try
                 {
@@ -379,25 +378,22 @@ namespace WerkelijkWaar.Classes
 
                     if (rows > 0)
                     {
-                        l.WriteToLog("[CreateConfig]", "Config for " + config.OwnerId + " successfully added.", 2);
-                        l.DebugToLog("[CreateConfig]", sw.ElapsedMilliseconds.ToString() + "ms. Config for " + config.OwnerId + " succesfully added.", 2);
+                        logger.Log("[CreateConfig]", stopWatch.ElapsedMilliseconds.ToString() + "ms. Config for " + config.OwnerId + " succesfully added.", 2, 1, false);
 
-                        sw.Stop();
+                        stopWatch.Stop();
                         return true;
                     }
 
-                    l.WriteToLog("[CreateConfig]", "Failed to add config for " + config.OwnerId + ".", 2);
-                    l.DebugToLog("[CreateConfig]", sw.ElapsedMilliseconds.ToString() + "ms. Failed to add config for " + config.OwnerId + ".", 2);
+                    logger.Log("[CreateConfig]", stopWatch.ElapsedMilliseconds.ToString() + "ms. Failed to add config for " + config.OwnerId + ".", 2, 1, false);
 
-                    sw.Stop();
+                    stopWatch.Stop();
                     return false;
                 }
-                catch (Exception ex)
+                catch (Exception exception)
                 {
-                    l.WriteToLog("[CreateConfig]", "Something went wrong. Check debug.txt", 2);
-                    l.DebugToLog("[CreateConfig]", sw.ElapsedMilliseconds.ToString() + "ms. Exception:\n" + ex.ToString(), 2);
+                    logger.Log("[CreateConfig]", stopWatch.ElapsedMilliseconds.ToString() + "ms. Exception:\n" + exception.ToString(), 2, 1, false);
 
-                    sw.Stop();
+                    stopWatch.Stop();
                     return false;
                 }
             }
@@ -406,16 +402,15 @@ namespace WerkelijkWaar.Classes
 
         #region READ
         /// <summary>
-        /// Check of de gegeven combinatie bestaat in de database.
+        /// Check if user exists in database
         /// </summary>
-        /// <param name="username">Gebruikersnaam</param>
-        /// <param name="password">Wachtwoord</param>
+        /// <param name="username">Username</param>
+        /// <param name="password">Password</param>
         /// <returns>User ID</returns>
         public int CheckLogin(string username, string password)
         {
-            sw.Start();
-            l.WriteToLog("[CheckLogin]", "Logging in " + username + "...", 0);
-            l.DebugToLog("[CheckLogin]", sw.ElapsedMilliseconds.ToString() + "ms. Checking login for " + username, 0);
+            stopWatch.Start();
+            logger.Log("[CheckLogin]", stopWatch.ElapsedMilliseconds.ToString() + "ms. Checking login for " + username, 0, 1, false);
 
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
@@ -441,42 +436,38 @@ namespace WerkelijkWaar.Classes
 
                     if (command.Parameters["@responseMessage"].Value.ToString().Contains("Success"))
                     {
-                        l.WriteToLog("[CheckLogin]", "Log in found for user " + username, 2);
-                        l.DebugToLog("[CheckLogin]", sw.ElapsedMilliseconds.ToString() + "ms. Found " + username, 2);
+                        logger.Log("[CheckLogin]", stopWatch.ElapsedMilliseconds.ToString() + "ms. Found " + username, 2, 1, false);
 
-                        sw.Stop();
+                        stopWatch.Stop();
                         return (int)command.Parameters["@userId"].Value;
                     }
                     else
                     {
-                        l.WriteToLog("[CheckLogin]", "Log in not found for user " + username, 2);
-                        l.DebugToLog("[CheckLogin]", sw.ElapsedMilliseconds.ToString() + "ms. Did not find " + username, 2);
+                        logger.Log("[CheckLogin]", stopWatch.ElapsedMilliseconds.ToString() + "ms. Did not find " + username, 2, 1, false);
 
-                        sw.Stop();
+                        stopWatch.Stop();
                         return 0;
                     }
                 }
-                catch (Exception ex)
+                catch (Exception exception)
                 {
-                    l.WriteToLog("[CheckLogin]", "Something went wrong. Check debug.txt", 2);
-                    l.DebugToLog("[CheckLogin]", sw.ElapsedMilliseconds.ToString() + "ms. Exception:\n" + ex.ToString(), 2);
+                    logger.Log("[CheckLogin]", stopWatch.ElapsedMilliseconds.ToString() + "ms. Exception:\n" + exception.ToString(), 2, 1, false);
 
-                    sw.Stop();
+                    stopWatch.Stop();
                     return 0;
                 }
             }
         }
 
         /// <summary>
-        /// Haal een gebruiker op uit de database inclusief alle persoonsgegevens.
+        /// Retrieve a user from the database
         /// </summary>
-        /// <param name="userId">Id</param>
+        /// <param name="userId">User ID</param>
         /// <returns>User</returns>
         public User RetrieveUser(int userId)
         {
-            sw.Restart();
-            l.WriteToLog("[RetrieveUser]", "Attempting to retrieve user with id " + userId, 0);
-            l.DebugToLog("[RetrieveUser]", sw.ElapsedMilliseconds.ToString() + "ms. Retrieving user " + userId, 0);
+            stopWatch.Restart();
+            logger.Log("[RetrieveUser]", stopWatch.ElapsedMilliseconds.ToString() + "ms. Retrieving user " + userId, 0, 1, false);
 
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
@@ -493,8 +484,7 @@ namespace WerkelijkWaar.Classes
                         {
                             while (reader.Read())
                             {
-                                l.WriteToLog("[RetrieveUser]", "Found user with id " + userId, 2);
-                                l.DebugToLog("[RetrieveUser]", sw.ElapsedMilliseconds.ToString() + "ms. Found user " + userId, 2);
+                                logger.Log("[RetrieveUser]", stopWatch.ElapsedMilliseconds.ToString() + "ms. Found user " + userId, 2, 1, false);
 
                                 User newUser = new User
                                 {
@@ -512,39 +502,36 @@ namespace WerkelijkWaar.Classes
                                     newUser.ImageSource = (string)reader["ImageSource"];
                                 }
 
-                                sw.Stop();
+                                stopWatch.Stop();
                                 return newUser;
                             }
                         }
                     }
 
-                    l.WriteToLog("[RetrieveUser]", "Could not find user with id " + userId, 2);
-                    l.DebugToLog("[RetrieveUser]", sw.ElapsedMilliseconds.ToString() + "ms. Could not find " + userId, 2);
+                    logger.Log("[RetrieveUser]", stopWatch.ElapsedMilliseconds.ToString() + "ms. Could not find " + userId, 2, 1, false);
                     
-                    sw.Stop();
+                    stopWatch.Stop();
                     return null;
                 }
-                catch (Exception ex)
+                catch (Exception exception)
                 {
-                    l.WriteToLog("[RetrieveUser]", "Something went wrong. Check debug.txt" + ex, 2);
-                    l.DebugToLog("[RetrieveUser]", sw.ElapsedMilliseconds.ToString() + "ms. Exception:\n" + ex.ToString(), 2);
+                    logger.Log("[RetrieveUser]", stopWatch.ElapsedMilliseconds.ToString() + "ms. Exception:\n" + exception.ToString(), 2, 1, false);
 
-                    sw.Stop();
+                    stopWatch.Stop();
                     return null;
                 }
             }
         }
 
         /// <summary>
-        /// Haal een lijst van gebruikers op die uit dezelfde groep komen.
+        /// Retrieve a list of users that belong to a certain Group ID from the database
         /// </summary>
-        /// <param name="group">Groep</param>
-        /// <returns>Lijst van Users</returns>
+        /// <param name="group">Group ID</param>
+        /// <returns>List of Users</returns>
         public List<User> RetrieveUserListByGroup(int group)
         {
-            sw.Restart();
-            l.WriteToLog("[RetrieveUserListByGroup]", "Attempting to retrieve users from group " + group, 0);
-            l.DebugToLog("[RetrieveUserListByGroup]", sw.ElapsedMilliseconds.ToString() + "ms. Retrieving users from group " + group, 0);
+            stopWatch.Restart();
+            logger.Log("[RetrieveUserListByGroup]", stopWatch.ElapsedMilliseconds.ToString() + "ms. Retrieving users from group " + group, 0, 1, false);
 
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
@@ -581,46 +568,42 @@ namespace WerkelijkWaar.Classes
                                     newUser.ImageSource = (string)reader["ImageSource"];
                                 }
 
-                                l.DebugToLog("[RetrieveUserListByGroup]", sw.ElapsedMilliseconds.ToString() + "ms. Got: " + newUser.Id + " - " + newUser.Username, 1);
+                                logger.Log("[RetrieveUserListByGroup]", stopWatch.ElapsedMilliseconds.ToString() + "ms. Got: " + newUser.Id + " - " + newUser.Username, 1, 1, false);
 
                                 UserList.Add(newUser);
                                 rowCount++;
                             }
 
-                            l.WriteToLog("[RetrieveUserListByGroup]", "Found " + rowCount + " users from group " + group, 2);
-                            l.DebugToLog("[RetrieveUserListByGroup]", sw.ElapsedMilliseconds.ToString() + "ms. Found " + rowCount + "users", 2);
+                            logger.Log("[RetrieveUserListByGroup]", stopWatch.ElapsedMilliseconds.ToString() + "ms. Found " + rowCount + "users", 2, 1, false);
 
-                            sw.Stop();
+                            stopWatch.Stop();
                             return UserList;
                         }
                     }
 
-                    l.WriteToLog("[RetrieveUserListByGroup]", "Could not find any users from group " + group, 2);
-                    l.DebugToLog("[RetrieveUserListByGroup]", sw.ElapsedMilliseconds.ToString() + "ms. Could not find any users", 2);
+                    logger.Log("[RetrieveUserListByGroup]", stopWatch.ElapsedMilliseconds.ToString() + "ms. Could not find any users", 2, 1, false);
 
-                    sw.Stop();
+                    stopWatch.Stop();
                     return null;
                 }
-                catch (Exception ex)
+                catch (Exception exception)
                 {
-                    l.WriteToLog("[RetrieveUserListByGroup]", "Something went wrong. Check debug.txt", 2);
-                    l.DebugToLog("[RetrieveUserListByGroup]", sw.ElapsedMilliseconds.ToString() + "ms. Exception:\n" + ex.ToString(), 2);
+                    logger.Log("[RetrieveUserListByGroup]", stopWatch.ElapsedMilliseconds.ToString() + "ms. Exception:\n" + exception.ToString(), 2, 1, false);
 
-                    sw.Stop();
+                    stopWatch.Stop();
                     return null;
                 }
             }
         }
 
         /// <summary>
-        /// Haal alle gebruikers op uit het systeem.
+        /// Retrieve a list of all users from the database
         /// </summary>
-        /// <returns>Lijst van Users</returns>
+        /// <returns>List of Users</returns>
         public List<User> RetrieveAllUsers()
         {
-            sw.Restart();
-            l.WriteToLog("[RetrieveAllUsers]", "Attempting to retrieve all users", 0);
-            l.DebugToLog("[RetrieveAllUsers]", sw.ElapsedMilliseconds.ToString() + "ms. Retrieving all users", 0);
+            stopWatch.Restart();
+            logger.Log("[RetrieveAllUsers]", stopWatch.ElapsedMilliseconds.ToString() + "ms. Retrieving all users", 0, 1, false);
 
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
@@ -656,52 +639,48 @@ namespace WerkelijkWaar.Classes
                                     newUser.ImageSource = (string)reader["ImageSource"];
                                 }
 
-                                l.DebugToLog("[RetrieveAllUsers]", sw.ElapsedMilliseconds.ToString() + "ms. Got: " + newUser.Id + " - " + newUser.Username, 1);
+                                logger.Log("[RetrieveAllUsers]", stopWatch.ElapsedMilliseconds.ToString() + "ms. Got: " + newUser.Id + " - " + newUser.Username, 1, 1, false);
 
                                 UserList.Add(newUser);
                                 rowCount++;
                             }
 
-                            l.WriteToLog("[RetrieveAllUsers]", "Found " + rowCount + " users.", 2);
-                            l.DebugToLog("[RetrieveAllUsers]", sw.ElapsedMilliseconds.ToString() + "ms. Found " + rowCount + "users", 2);
+                            logger.Log("[RetrieveAllUsers]", stopWatch.ElapsedMilliseconds.ToString() + "ms. Found " + rowCount + "users", 2, 1, false);
 
-                            sw.Stop();
+                            stopWatch.Stop();
                             return UserList;
                         }
                     }
 
-                    l.WriteToLog("[RetrieveAllUsers]", "Could not find any users.", 2);
-                    l.DebugToLog("[RetrieveAllUsers]", sw.ElapsedMilliseconds.ToString() + "ms. Could not find any users", 2);
+                    logger.Log("[RetrieveAllUsers]", stopWatch.ElapsedMilliseconds.ToString() + "ms. Could not find any users", 2, 1, false);
 
-                    sw.Stop();
+                    stopWatch.Stop();
                     return null;
                 }
-                catch (Exception ex)
+                catch (Exception exception)
                 {
-                    l.WriteToLog("[RetrieveAllUsers]", "Something went wrong. Check debug.txt", 2);
-                    l.DebugToLog("[RetrieveAllUsers]", sw.ElapsedMilliseconds.ToString() + "ms. Exception:\n" + ex.ToString(), 2);
+                    logger.Log("[RetrieveAllUsers]", stopWatch.ElapsedMilliseconds.ToString() + "ms. Exception:\n" + exception.ToString(), 2, 1, false);
 
-                    sw.Stop();
+                    stopWatch.Stop();
                     return null;
                 }
             }
         }
 
         /// <summary>
-        /// Haal een lijst van scores op die bij een bepaalde gebruiker horen.
+        /// Retrieve a list of scores that belong to a certain User ID from the database
         /// </summary>
-        /// <param name="id">User ID</param>
-        /// <returns>Lijst van Scores</returns>
-        public List<Score> RetrieveScoresOfUser(int id)
+        /// <param name="userId">User ID</param>
+        /// <returns>List of Scores</returns>
+        public List<Score> RetrieveScoresOfUser(int userId)
         {
-            sw.Restart();
-            l.WriteToLog("[RetrieveScoresOfUser]", "Attempting to retrieve scores of user " + id, 0);
-            l.DebugToLog("[RetrieveScoresOfUser]", sw.ElapsedMilliseconds.ToString() + "ms. Retrieving scores of user " + id, 0);
+            stopWatch.Restart();
+            logger.Log("[RetrieveScoresOfUser]", stopWatch.ElapsedMilliseconds.ToString() + "ms. Retrieving scores of user " + userId, 0, 1, false);
 
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
                 SqlCommand command = new SqlCommand("SELECT * FROM [Score] WHERE [OwnerId] = @id", connection);
-                command.Parameters.Add(new SqlParameter("@id", id));
+                command.Parameters.Add(new SqlParameter("@id", userId));
 
                 List<Score> ScoreList = new List<Score>();
 
@@ -749,52 +728,48 @@ namespace WerkelijkWaar.Classes
                                     newScore.Answers = "";
                                 }
 
-                                l.DebugToLog("[RetrieveScoresOfUser]", "Got: " + newScore.Id, 1);
+                                logger.Log("[RetrieveScoresOfUser]", "Got: " + newScore.Id, 1, 1, false);
 
                                 ScoreList.Add(newScore);
                                 rowCount++;
                             }
 
-                            l.WriteToLog("[RetrieveScoresOfUser]", "Found " + rowCount + " scores from user " + id, 2);
-                            l.DebugToLog("[RetrieveScoresOfUser]", sw.ElapsedMilliseconds.ToString() + "ms. Found " + rowCount + " scores from user " + id, 2);
+                            logger.Log("[RetrieveScoresOfUser]", stopWatch.ElapsedMilliseconds.ToString() + "ms. Found " + rowCount + " scores from user " + userId, 2, 1, false);
 
-                            sw.Stop();
+                            stopWatch.Stop();
                             return ScoreList;
                         }
                     }
 
-                    l.WriteToLog("[RetrieveScoresOfUser]", "Could not find any scores of user " + id, 2);
-                    l.DebugToLog("[RetrieveScoresOfUser]", sw.ElapsedMilliseconds.ToString() + "ms. Could not find any scores of user " + id, 2);
+                    logger.Log("[RetrieveScoresOfUser]", stopWatch.ElapsedMilliseconds.ToString() + "ms. Could not find any scores of user " + userId, 2, 1, false);
 
-                    sw.Stop();
+                    stopWatch.Stop();
                     return null;
                 }
-                catch (Exception ex)
+                catch (Exception exception)
                 {
-                    l.WriteToLog("[RetrieveScoresOfUser]", "Something went wrong. Check debug.txt", 2);
-                    l.DebugToLog("[RetrieveScoresOfUser]", sw.ElapsedMilliseconds.ToString() + "ms. Exception:\n" + ex.ToString(), 2);
+                    logger.Log("[RetrieveScoresOfUser]", stopWatch.ElapsedMilliseconds.ToString() + "ms. Exception:\n" + exception.ToString(), 2, 1, false);
 
-                    sw.Stop();
+                    stopWatch.Stop();
                     return null;
                 }
             }
         }
 
         /// <summary>
-        /// Haal een lijst van verhalen op die bij een bepaalde gebruiker horen.
+        /// Retrieve a list of stories that belong to a certain User ID from the database
         /// </summary>
-        /// <param name="id">User ID</param>
-        /// <returns>Lijst van Stories</returns>
-        public List<Story> RetrieveStoriesOfUser(int id)
+        /// <param name="userId">User ID</param>
+        /// <returns>List of Stories</returns>
+        public List<Story> RetrieveStoriesOfUser(int userId)
         {
-            sw.Restart();
-            l.WriteToLog("[RetrieveStoriesOfUser]", "Attempting to retrieve stories of user " + id, 0);
-            l.DebugToLog("[RetrieveStoriesOfUser]", sw.ElapsedMilliseconds.ToString() + "ms. Attempting to retrieve stories of user " + id, 0);
+            stopWatch.Restart();
+            logger.Log("[RetrieveStoriesOfUser]", stopWatch.ElapsedMilliseconds.ToString() + "ms. Attempting to retrieve stories of user " + userId, 0, 1, false);
 
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
                 SqlCommand command = new SqlCommand("SELECT * FROM [Story] WHERE [OwnerId] = @id", connection);
-                command.Parameters.Add(new SqlParameter("@id", id));
+                command.Parameters.Add(new SqlParameter("@id", userId));
 
                 List<Story> StoryList = new List<Story>();
 
@@ -822,46 +797,42 @@ namespace WerkelijkWaar.Classes
                                     Source = (int)reader["Source"]
                                 };
 
-                                l.DebugToLog("[RetrieveStoriesOfUser]", sw.ElapsedMilliseconds.ToString() + "ms. Got: " + newStory.Id + " - " + newStory.Title, 1);
+                                logger.Log("[RetrieveStoriesOfUser]", stopWatch.ElapsedMilliseconds.ToString() + "ms. Got: " + newStory.Id + " - " + newStory.Title, 1, 1, false);
 
                                 StoryList.Add(newStory);
                                 rowCount++;
                             }
 
-                            l.WriteToLog("[RetrieveStoriesOfUser]", "Found " + rowCount + " stories from user " + id, 2);
-                            l.DebugToLog("[RetrieveStoriesOfUser]", sw.ElapsedMilliseconds.ToString() + "ms. Found " + rowCount + " stories from user " + id, 2);
+                            logger.Log("[RetrieveStoriesOfUser]", stopWatch.ElapsedMilliseconds.ToString() + "ms. Found " + rowCount + " stories from user " + userId, 2, 1, false);
 
-                            sw.Stop();
+                            stopWatch.Stop();
                             return StoryList;
                         }
                     }
 
-                    l.WriteToLog("[RetrieveStoriesOfUser]", "Could not find any stories of user " + id, 2);
-                    l.DebugToLog("[RetrieveStoriesOfUser]", sw.ElapsedMilliseconds.ToString() + "ms. Could not find any stories of user " + id, 2);
+                    logger.Log("[RetrieveStoriesOfUser]", stopWatch.ElapsedMilliseconds.ToString() + "ms. Could not find any stories of user " + userId, 2, 1, false);
 
-                    sw.Stop();
+                    stopWatch.Stop();
                     return null;
                 }
-                catch (Exception ex)
+                catch (Exception exception)
                 {
-                    l.WriteToLog("[RetrieveStoriesOfUser]", "Something went wrong. Check debug.txt", 2);
-                    l.DebugToLog("[RetrieveStoriesOfUser]", sw.ElapsedMilliseconds.ToString() + "ms. Exception:\n" + ex.ToString(), 2);
+                    logger.Log("[RetrieveStoriesOfUser]", stopWatch.ElapsedMilliseconds.ToString() + "ms. Exception:\n" + exception.ToString(), 2, 1, false);
 
-                    sw.Stop();
+                    stopWatch.Stop();
                     return null;
                 }
             }
         }
 
         /// <summary>
-        /// Haal alle verhalen op uit het systeem.
+        /// Retrieve all stories from the database
         /// </summary>
-        /// <returns>Lijst van Verhalen</returns>
+        /// <returns>List of Stories</returns>
         public List<Story> RetrieveAllStories()
         {
-            sw.Restart();
-            l.WriteToLog("[RetrieveAllStories]", "Attempting to retrieve all stories.", 0);
-            l.DebugToLog("[RetrieveAllStories]", sw.ElapsedMilliseconds.ToString() + "ms. Attempting to retrieve all stories.", 0);
+            stopWatch.Restart();
+            logger.Log("[RetrieveAllStories]", stopWatch.ElapsedMilliseconds.ToString() + "ms. Attempting to retrieve all stories.", 0, 1, false);
 
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
@@ -893,47 +864,43 @@ namespace WerkelijkWaar.Classes
                                     Source = (int)reader["Source"]
                                 };
 
-                                l.DebugToLog("[RetrieveAllStories]", sw.ElapsedMilliseconds.ToString() + "ms. Got: " + newStory.Id + " - " + newStory.Title, 1);
+                                logger.Log("[RetrieveAllStories]", stopWatch.ElapsedMilliseconds.ToString() + "ms. Got: " + newStory.Id + " - " + newStory.Title, 1, 1, false);
 
                                 StoryList.Add(newStory);
                                 rowCount++;
                             }
 
-                            l.WriteToLog("[RetrieveAllStories]", "Found " + rowCount + " stories.", 2);
-                            l.DebugToLog("[RetrieveAllStories]", sw.ElapsedMilliseconds.ToString() + "ms. Found " + rowCount + " stories.", 2);
+                            logger.Log("[RetrieveAllStories]", stopWatch.ElapsedMilliseconds.ToString() + "ms. Found " + rowCount + " stories.", 2, 1, false);
 
-                            sw.Stop();
+                            stopWatch.Stop();
                             return StoryList;
                         }
                     }
 
-                    l.WriteToLog("[RetrieveAllStories]", "Could not find any stories", 2);
-                    l.DebugToLog("[RetrieveAllStories]", sw.ElapsedMilliseconds.ToString() + "ms. Could not find any stories", 2);
+                    logger.Log("[RetrieveAllStories]", stopWatch.ElapsedMilliseconds.ToString() + "ms. Could not find any stories", 2, 1, false);
 
-                    sw.Stop();
+                    stopWatch.Stop();
                     return null;
                 }
-                catch (Exception ex)
+                catch (Exception exception)
                 {
-                    l.WriteToLog("[RetrieveAllStories]", "Something went wrong. Check debug.txt", 2);
-                    l.DebugToLog("[RetrieveAllStories]", sw.ElapsedMilliseconds.ToString() + "ms. Exception:\n" + ex.ToString(), 2);
+                    logger.Log("[RetrieveAllStories]", stopWatch.ElapsedMilliseconds.ToString() + "ms. Exception:\n" + exception.ToString(), 2, 1, false);
 
-                    sw.Stop();
+                    stopWatch.Stop();
                     return null;
                 }
             }
         }
 
         /// <summary>
-        /// Haal een verhaal op uit de database.
+        /// Retrieve a story from the database
         /// </summary>
         /// <param name="storyId">Story ID</param>
         /// <returns>Story</returns>
         public Story RetrieveStory(int storyId)
         {
-            sw.Restart();
-            l.WriteToLog("[RetrieveStory]", "Attempting to retrieve story with id " + storyId, 0);
-            l.DebugToLog("[RetrieveStory]", sw.ElapsedMilliseconds.ToString() + "ms. Attempting to retrieve story with id " + storyId, 0);
+            stopWatch.Restart();
+            logger.Log("[RetrieveStory]", stopWatch.ElapsedMilliseconds.ToString() + "ms. Attempting to retrieve story with id " + storyId, 0, 1, false);
 
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
@@ -950,8 +917,7 @@ namespace WerkelijkWaar.Classes
                         {
                             while (reader.Read())
                             {
-                                l.WriteToLog("[RetrieveStory]", "Found story with id " + storyId, 1);
-                                l.DebugToLog("[RetrieveStory]", sw.ElapsedMilliseconds.ToString() + "ms. Found story with id " + storyId + " - " + (string)reader["Title"], 1);
+                                logger.Log("[RetrieveStory]", stopWatch.ElapsedMilliseconds.ToString() + "ms. Found story with id " + storyId + " - " + (string)reader["Title"], 1, 1, false);
 
                                 return new Story
                                 {
@@ -968,28 +934,30 @@ namespace WerkelijkWaar.Classes
                         }
                     }
 
-                    l.WriteToLog("[RetrieveStory]", "Could not find story with id " + storyId, 2);
-                    l.DebugToLog("[RetrieveStory]", sw.ElapsedMilliseconds.ToString() + "ms. Could not find story with id " + storyId, 2);
+                    logger.Log("[RetrieveStory]", stopWatch.ElapsedMilliseconds.ToString() + "ms. Could not find story with id " + storyId, 2, 1, false);
 
-                    sw.Stop();
+                    stopWatch.Stop();
                     return null;
                 }
-                catch (Exception ex)
+                catch (Exception exception)
                 {
-                    l.WriteToLog("[RetrieveStory]", "Something went wrong. Check debug.txt", 2);
-                    l.DebugToLog("[RetrieveStory]", sw.ElapsedMilliseconds.ToString() + "ms. Exception:\n" + ex.ToString(), 2);
+                    logger.Log("[RetrieveStory]", stopWatch.ElapsedMilliseconds.ToString() + "ms. Exception:\n" + exception.ToString(), 2, 1, false);
 
-                    sw.Stop();
+                    stopWatch.Stop();
                     return null;
                 }
             }
         }
 
+        /// <summary>
+        /// Retrieve a score from the database
+        /// </summary>
+        /// <param name="scoreId">Score ID</param>
+        /// <returns>Score</returns>
         public Score RetrieveScore(int scoreId)
         {
-            sw.Restart();
-            l.WriteToLog("[RetrieveScore]", "Attempting to retrieve score with id " + scoreId, 0);
-            l.DebugToLog("[RetrieveScore]", sw.ElapsedMilliseconds.ToString() + "ms. Attempting to retrieve score with id " + scoreId, 0);
+            stopWatch.Restart();
+            logger.Log("[RetrieveScore]", stopWatch.ElapsedMilliseconds.ToString() + "ms. Attempting to retrieve score with id " + scoreId, 0, 1, false);
 
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
@@ -1006,8 +974,7 @@ namespace WerkelijkWaar.Classes
                         {
                             while (reader.Read())
                             {
-                                l.WriteToLog("[RetrieveScore]", "Found score with id " + scoreId, 1);
-                                l.DebugToLog("[RetrieveScore]", sw.ElapsedMilliseconds.ToString() + "ms. Found score with id " + scoreId, 1);
+                                logger.Log("[RetrieveScore]", stopWatch.ElapsedMilliseconds.ToString() + "ms. Found score with id " + scoreId, 1, 1, false);
 
                                 Score newScore = new Score
                                 {
@@ -1046,32 +1013,29 @@ namespace WerkelijkWaar.Classes
                         }
                     }
 
-                    l.WriteToLog("[RetrieveScore]", "Could not find story with id " + scoreId, 2);
-                    l.DebugToLog("[RetrieveScore]", sw.ElapsedMilliseconds.ToString() + "ms. Could not find story with id " + scoreId, 2);
+                    logger.Log("[RetrieveScore]", stopWatch.ElapsedMilliseconds.ToString() + "ms. Could not find story with id " + scoreId, 2, 1, false);
 
-                    sw.Stop();
+                    stopWatch.Stop();
                     return null;
                 }
-                catch (Exception ex)
+                catch (Exception exception)
                 {
-                    l.WriteToLog("[RetrieveScore]", "Something went wrong. Check debug.txt", 2);
-                    l.DebugToLog("[RetrieveScore]", sw.ElapsedMilliseconds.ToString() + "ms. Exception:\n" + ex.ToString(), 2);
+                    logger.Log("[RetrieveScore]", stopWatch.ElapsedMilliseconds.ToString() + "ms. Exception:\n" + exception.ToString(), 2, 1, false);
 
-                    sw.Stop();
+                    stopWatch.Stop();
                     return null;
                 }
             }
         }
 
         /// <summary>
-        /// Haal alle verhalen op met status 0 (ongelezen) of 1 (gelezen, maar nog niet goedgekeurd).
+        /// Retrieve all stories with a status of 0 or 1 from the database
         /// </summary>
-        /// <returns>Lijst van Stories</returns>
+        /// <returns>List of Stories</returns>
         public List<Story> RetrieveStoryQueue()
         {
-            sw.Restart();
-            l.WriteToLog("[RetrieveStoryQueue]", "Attempting to retrieve stories with status 0 and 1.", 0);
-            l.DebugToLog("[RetrieveStoryQueue]", sw.ElapsedMilliseconds.ToString() + "ms. Attempting to retrieve story queue", 0);
+            stopWatch.Restart();
+            logger.Log("[RetrieveStoryQueue]", stopWatch.ElapsedMilliseconds.ToString() + "ms. Attempting to retrieve story queue", 0, 1, false);
 
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
@@ -1103,42 +1067,42 @@ namespace WerkelijkWaar.Classes
                                     Source = (int)reader["Source"]
                                 };
 
-                                l.DebugToLog("[RetrieveStoryQueue]", sw.ElapsedMilliseconds.ToString() + "ms. Got: " + newStory.Id + " - " + newStory.Title + ", status: " + newStory.Status, 1);
+                                logger.Log("[RetrieveStoryQueue]", stopWatch.ElapsedMilliseconds.ToString() + "ms. Got: " + newStory.Id + " - " + newStory.Title + ", status: " + newStory.Status, 1, 1, false);
 
                                 StoryList.Add(newStory);
                                 rowCount++;
                             }
 
-                            l.WriteToLog("[RetrieveStoryQueue]", "Found " + rowCount + " stories.", 2);
-                            l.DebugToLog("[RetrieveStoryQueue]", sw.ElapsedMilliseconds.ToString() + "ms. Found " + rowCount + " stories.", 2);
+                            logger.Log("[RetrieveStoryQueue]", stopWatch.ElapsedMilliseconds.ToString() + "ms. Found " + rowCount + " stories.", 2, 1, false);
 
-                            sw.Stop();
+                            stopWatch.Stop();
                             return StoryList;
                         }
                     }
 
-                    l.WriteToLog("[RetrieveStoryQueue]", "Could not find any stories with status 0 or 1", 2);
-                    l.DebugToLog("[RetrieveStoryQueue]", sw.ElapsedMilliseconds.ToString() + "ms. Could not find any stories in queue", 2);
+                    logger.Log("[RetrieveStoryQueue]", stopWatch.ElapsedMilliseconds.ToString() + "ms. Could not find any stories in queue", 2, 1, false);
 
-                    sw.Stop();
+                    stopWatch.Stop();
                     return null;
                 }
-                catch (Exception ex)
+                catch (Exception exception)
                 {
-                    l.WriteToLog("[RetrieveStoryQueue]", "Something went wrong. Check debug.txt", 2);
-                    l.DebugToLog("[RetrieveStoryQueue]", sw.ElapsedMilliseconds.ToString() + "ms. Exception:\n" + ex.ToString(), 2);
+                    logger.Log("[RetrieveStoryQueue]", stopWatch.ElapsedMilliseconds.ToString() + "ms. Exception:\n" + exception.ToString(), 2, 1, false);
 
-                    sw.Stop();
+                    stopWatch.Stop();
                     return null;
                 }
             }
         }
 
+        /// <summary>
+        /// Retrieve all schools from the database
+        /// </summary>
+        /// <returns>List of Schools</returns>
         public List<School> RetrieveSchools()
         {
-            sw.Restart();
-            l.WriteToLog("[RetrieveSchools]", "Attempting to retrieve schools...", 0);
-            l.DebugToLog("[RetrieveSchools]", sw.ElapsedMilliseconds.ToString() + "ms. Attempting to retrieve schools", 0);
+            stopWatch.Restart();
+            logger.Log("[RetrieveSchools]", stopWatch.ElapsedMilliseconds.ToString() + "ms. Attempting to retrieve schools", 0, 1, false);
 
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
@@ -1164,42 +1128,43 @@ namespace WerkelijkWaar.Classes
                                     SchoolName = (string)reader["Name"]
                                 };
 
-                                l.DebugToLog("[RetrieveSchools]", sw.ElapsedMilliseconds.ToString() + "ms. Got: " + newSchool.Id + " - " + newSchool.SchoolName, 1);
+                                logger.Log("[RetrieveSchools]", stopWatch.ElapsedMilliseconds.ToString() + "ms. Got: " + newSchool.Id + " - " + newSchool.SchoolName, 1, 1, false);
 
                                 SchoolList.Add(newSchool);
                                 rowCount++;
                             }
 
-                            l.WriteToLog("[RetrieveSchools]", "Found " + rowCount + " schools.", 2);
-                            l.DebugToLog("[RetrieveSchools]", sw.ElapsedMilliseconds.ToString() + "ms. Found " + rowCount + " schools.", 2);
+                            logger.Log("[RetrieveSchools]", stopWatch.ElapsedMilliseconds.ToString() + "ms. Found " + rowCount + " schools.", 2, 1, false);
 
-                            sw.Stop();
+                            stopWatch.Stop();
                             return SchoolList;
                         }
                     }
 
-                    l.WriteToLog("[RetrieveSchools]", "Could not find any schools.", 2);
-                    l.DebugToLog("[RetrieveSchools]", sw.ElapsedMilliseconds.ToString() + "ms. Could not find any schools.", 2);
+                    logger.Log("[RetrieveSchools]", stopWatch.ElapsedMilliseconds.ToString() + "ms. Could not find any schools.", 2, 1, false);
 
-                    sw.Stop();
+                    stopWatch.Stop();
                     return null;
                 }
-                catch (Exception ex)
+                catch (Exception exception)
                 {
-                    l.WriteToLog("[RetrieveSchools]", "Something went wrong. Check debug.txt", 2);
-                    l.DebugToLog("[RetrieveSchools]", sw.ElapsedMilliseconds.ToString() + "ms. Exception:\n" + ex.ToString(), 2);
+                    logger.Log("[RetrieveSchools]", stopWatch.ElapsedMilliseconds.ToString() + "ms. Exception:\n" + exception.ToString(), 2, 1, false);
 
-                    sw.Stop();
+                    stopWatch.Stop();
                     return null;
                 }
             }
         }
 
+        /// <summary>
+        /// Retrieve a school from the database
+        /// </summary>
+        /// <param name="schoolId">School ID</param>
+        /// <returns>School</returns>
         public School RetrieveSchool(int schoolId)
         {
-            sw.Restart();
-            l.WriteToLog("[RetrieveSchool]", "Attempting to retrieve school " + schoolId + "...", 0);
-            l.DebugToLog("[RetrieveSchool]", sw.ElapsedMilliseconds.ToString() + "ms. Attempting to retrieve school " + schoolId, 0);
+            stopWatch.Restart();
+            logger.Log("[RetrieveSchool]", stopWatch.ElapsedMilliseconds.ToString() + "ms. Attempting to retrieve school " + schoolId, 0, 1, false);
 
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
@@ -1222,36 +1187,38 @@ namespace WerkelijkWaar.Classes
                                     SchoolName = (string)reader["Name"]
                                 };
 
-                                l.DebugToLog("[RetrieveSchool]", sw.ElapsedMilliseconds.ToString() + "ms. Got: " + newSchool.Id + " - " + newSchool.SchoolName, 1);
+                                logger.Log("[RetrieveSchool]", stopWatch.ElapsedMilliseconds.ToString() + "ms. Got: " + newSchool.Id + " - " + newSchool.SchoolName, 1, 1, false);
 
-                                sw.Stop();
+                                stopWatch.Stop();
                                 return newSchool;
                             }
                         }
                     }
 
-                    l.WriteToLog("[RetrieveSchool]", "Could not find any schools with id " + schoolId, 2);
-                    l.DebugToLog("[RetrieveSchool]", sw.ElapsedMilliseconds.ToString() + "ms. Could not find any schools with id " + schoolId, 2);
+                    logger.Log("[RetrieveSchool]", stopWatch.ElapsedMilliseconds.ToString() + "ms. Could not find any schools with id " + schoolId, 2, 1, false);
 
-                    sw.Stop();
+                    stopWatch.Stop();
                     return null;
                 }
-                catch (Exception ex)
+                catch (Exception exception)
                 {
-                    l.WriteToLog("[RetrieveSchool]", "Something went wrong. Check debug.txt", 2);
-                    l.DebugToLog("[RetrieveSchool]", sw.ElapsedMilliseconds.ToString() + "ms. Exception:\n" + ex.ToString(), 2);
+                    logger.Log("[RetrieveSchool]", stopWatch.ElapsedMilliseconds.ToString() + "ms. Exception:\n" + exception.ToString(), 2, 1, false);
 
-                    sw.Stop();
+                    stopWatch.Stop();
                     return null;
                 }
             }
         }
 
+        /// <summary>
+        /// Retrieve all groups that belong to a certain School ID from the database
+        /// </summary>
+        /// <param name="schoolId">School ID</param>
+        /// <returns>List of Groups</returns>
         public List<Group> RetrieveGroupsOfSchool(int schoolId)
         {
-            sw.Restart();
-            l.WriteToLog("[RetrieveGroupsOfSchool]", "Attempting to retrieve groups of school " + schoolId + "...", 0);
-            l.DebugToLog("[RetrieveGroupsOfSchool]", sw.ElapsedMilliseconds.ToString() + "ms. Attempting to retrieve groups of school " + schoolId, 0);
+            stopWatch.Restart();
+            logger.Log("[RetrieveGroupsOfSchool]", stopWatch.ElapsedMilliseconds.ToString() + "ms. Attempting to retrieve groups of school " + schoolId, 0, 1, false);
 
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
@@ -1280,42 +1247,43 @@ namespace WerkelijkWaar.Classes
                                     GroupName = (string)reader["GroupName"]
                                 };
 
-                                l.DebugToLog("[RetrieveGroupsOfSchool]", sw.ElapsedMilliseconds.ToString() + "ms. Got: " + newGroup.Id + " - " + newGroup.GroupName, 1);
+                                logger.Log("[RetrieveGroupsOfSchool]", stopWatch.ElapsedMilliseconds.ToString() + "ms. Got: " + newGroup.Id + " - " + newGroup.GroupName, 1, 1, false);
 
                                 GroupList.Add(newGroup);
                                 rowCount++;
                             }
 
-                            l.WriteToLog("[RetrieveGroupsOfSchool]", "Found " + rowCount + " groups.", 2);
-                            l.DebugToLog("[RetrieveGroupsOfSchool]", sw.ElapsedMilliseconds.ToString() + "ms. Found " + rowCount + " groups.", 2);
+                            logger.Log("[RetrieveGroupsOfSchool]", stopWatch.ElapsedMilliseconds.ToString() + "ms. Found " + rowCount + " groups.", 2, 1, false);
 
-                            sw.Stop();
+                            stopWatch.Stop();
                             return GroupList;
                         }
                     }
 
-                    l.WriteToLog("[RetrieveGroupsOfSchool]", "Could not find any groups of school " + schoolId, 2);
-                    l.DebugToLog("[RetrieveGroupsOfSchool]", sw.ElapsedMilliseconds.ToString() + "ms. Could not find any groups of school " + schoolId, 2);
+                    logger.Log("[RetrieveGroupsOfSchool]", stopWatch.ElapsedMilliseconds.ToString() + "ms. Could not find any groups of school " + schoolId, 2, 1, false);
 
-                    sw.Stop();
+                    stopWatch.Stop();
                     return null;
                 }
-                catch (Exception ex)
+                catch (Exception exception)
                 {
-                    l.WriteToLog("[RetrieveGroupsOfSchool]", "Something went wrong. Check debug.txt", 2);
-                    l.DebugToLog("[RetrieveGroupsOfSchool]", sw.ElapsedMilliseconds.ToString() + "ms. Exception:\n" + ex.ToString(), 2);
+                    logger.Log("[RetrieveGroupsOfSchool]", stopWatch.ElapsedMilliseconds.ToString() + "ms. Exception:\n" + exception.ToString(), 2, 1, false);
 
-                    sw.Stop();
+                    stopWatch.Stop();
                     return null;
                 }
             }
         }
 
+        /// <summary>
+        /// Retrieve a group from the database
+        /// </summary>
+        /// <param name="groupId">Group ID</param>
+        /// <returns>Group</returns>
         public Group RetrieveGroup(int groupId)
         {
-            sw.Restart();
-            l.WriteToLog("[RetrieveGroup]", "Attempting to retrieve group " + groupId + "...", 0);
-            l.DebugToLog("[RetrieveGroup]", sw.ElapsedMilliseconds.ToString() + "ms. Attempting to retrieve group " + groupId, 0);
+            stopWatch.Restart();
+            logger.Log("[RetrieveGroup]", stopWatch.ElapsedMilliseconds.ToString() + "ms. Attempting to retrieve group " + groupId, 0, 1, false);
 
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
@@ -1340,36 +1308,38 @@ namespace WerkelijkWaar.Classes
                                     GroupName = (string)reader["GroupName"]
                                 };
 
-                                l.DebugToLog("[RetrieveGroup]", sw.ElapsedMilliseconds.ToString() + "ms. Got: " + newGroup.Id + " - " + newGroup.GroupName, 1);
+                                logger.Log("[RetrieveGroup]", stopWatch.ElapsedMilliseconds.ToString() + "ms. Got: " + newGroup.Id + " - " + newGroup.GroupName, 1, 1, false);
 
-                                sw.Stop();
+                                stopWatch.Stop();
                                 return newGroup;
                             }
                         }
                     }
 
-                    l.WriteToLog("[RetrieveGroup]", "Could not find any groups with id " + groupId, 2);
-                    l.DebugToLog("[RetrieveGroup]", sw.ElapsedMilliseconds.ToString() + "ms. Could not find any groups with id " + groupId, 2);
+                    logger.Log("[RetrieveGroup]", stopWatch.ElapsedMilliseconds.ToString() + "ms. Could not find any groups with id " + groupId, 2, 1, false);
 
-                    sw.Stop();
+                    stopWatch.Stop();
                     return null;
                 }
-                catch (Exception ex)
+                catch (Exception exception)
                 {
-                    l.WriteToLog("[RetrieveGroup]", "Something went wrong. Check debug.txt", 2);
-                    l.DebugToLog("[RetrieveGroup]", sw.ElapsedMilliseconds.ToString() + "ms. Exception:\n" + ex.ToString(), 2);
+                    logger.Log("[RetrieveGroup]", stopWatch.ElapsedMilliseconds.ToString() + "ms. Exception:\n" + exception.ToString(), 2, 1, false);
 
-                    sw.Stop();
+                    stopWatch.Stop();
                     return null;
                 }
             }
         }
 
+        /// <summary>
+        /// Retrieve a configuration that belongs to a certain User ID from the database
+        /// </summary>
+        /// <param name="userId">User ID</param>
+        /// <returns>Configuration</returns>
         public Configuration RetrieveConfig(int userId)
         {
-            sw.Restart();
-            l.WriteToLog("[RetrieveConfig]", "Attempting to retrieve config...", 0);
-            l.DebugToLog("[RetrieveConfig]", sw.ElapsedMilliseconds.ToString() + "ms. Attempting to retrieve config", 0);
+            stopWatch.Restart();
+            logger.Log("[RetrieveConfig]", stopWatch.ElapsedMilliseconds.ToString() + "ms. Attempting to retrieve config", 0, 1, false);
 
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
@@ -1403,20 +1373,19 @@ namespace WerkelijkWaar.Classes
                                     PowerupsCostMult = Convert.ToDouble(reader["PowerupsCostMult"])
                                 };
 
-                                l.DebugToLog("[RetrieveConfig]", sw.ElapsedMilliseconds.ToString() + "ms. Got: " + newConfig.Id + " - " + newConfig.OwnerId, 1);
+                                logger.Log("[RetrieveConfig]", stopWatch.ElapsedMilliseconds.ToString() + "ms. Got: " + newConfig.Id + " - " + newConfig.OwnerId, 1, 1, false);
                             }
 
-                            l.WriteToLog("[RetrieveConfig]", "Found config.", 2);
-                            l.DebugToLog("[RetrieveConfig]", sw.ElapsedMilliseconds.ToString() + "ms. Found config.", 2);
+                            logger.Log("[RetrieveConfig]", stopWatch.ElapsedMilliseconds.ToString() + "ms. Found config.", 2, 1, false);
 
-                            sw.Stop();
+                            stopWatch.Stop();
                             return newConfig;
                         }
                     }
 
-                    l.WriteToLog("[RetrieveConfig]", "Could not find a config.", 2);
-                    l.DebugToLog("[RetrieveConfig]", sw.ElapsedMilliseconds.ToString() + "ms. Could not find a config.", 2);
+                    logger.Log("[RetrieveConfig]", stopWatch.ElapsedMilliseconds.ToString() + "ms. Could not find a config.", 2, 1, false);
 
+                    // Default values
                     newConfig = new Configuration
                     {
                         Id = 0,
@@ -1433,15 +1402,14 @@ namespace WerkelijkWaar.Classes
                         PowerupsCostMult = 1.00
                     };
 
-                    sw.Stop();
+                    stopWatch.Stop();
                     return newConfig;
                 }
-                catch (Exception ex)
+                catch (Exception exception)
                 {
-                    l.WriteToLog("[RetrieveConfig]", "Something went wrong. Check debug.txt", 2);
-                    l.DebugToLog("[RetrieveConfig]", sw.ElapsedMilliseconds.ToString() + "ms. Exception:\n" + ex.ToString(), 2);
+                    logger.Log("[RetrieveConfig]", stopWatch.ElapsedMilliseconds.ToString() + "ms. Exception:\n" + exception.ToString(), 2, 1, false);
 
-                    sw.Stop();
+                    stopWatch.Stop();
                     return newConfig;
                 }
             }
@@ -1450,15 +1418,14 @@ namespace WerkelijkWaar.Classes
 
         #region UPDATE
         /// <summary>
-        /// Wijzig de gegevens van een gebruiker.
+        /// Change the name, surname and/or username of a user
         /// </summary>
         /// <param name="user">User</param>
-        /// <returns>true or false</returns>
+        /// <returns>boolean</returns>
         public bool EditUserNames(User user)
         {
-            sw.Restart();
-            l.WriteToLog("[EditUserNames]", "Trying to edit user " + user.Name, 0);
-            l.DebugToLog("[EditUserNames]", sw.ElapsedMilliseconds.ToString() + "ms. Trying to edit user " + user.Name, 0);
+            stopWatch.Restart();
+            logger.Log("[EditUserNames]", stopWatch.ElapsedMilliseconds.ToString() + "ms. Trying to edit user " + user.Name, 0, 1, false);
 
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
@@ -1470,10 +1437,10 @@ namespace WerkelijkWaar.Classes
                 command.Parameters.Add(new SqlParameter("@username", user.Username));
                 command.Parameters.Add(new SqlParameter("@id", user.Id));
 
-                l.DebugToLog("[EditUserNames]", sw.ElapsedMilliseconds.ToString() + "ms. Values are: " +
+                logger.Log("[EditUserNames]", stopWatch.ElapsedMilliseconds.ToString() + "ms. Values are: " +
                                 "- Name: " + user.Name + ";\n" +
                                 "- Surname: " + user.Surname + ";\n" +
-                                "- Username: " + user.Username, 1);
+                                "- Username: " + user.Username, 1, 1, false);
 
                 try
                 {
@@ -1483,39 +1450,40 @@ namespace WerkelijkWaar.Classes
 
                     if (rows > 0)
                     {
-                        l.WriteToLog("[EditUserNames]", "Edited user with id " + user.Id, 2);
-                        l.DebugToLog("[EditUserNames]", sw.ElapsedMilliseconds.ToString() + "ms. Edited user with id " + user.Id, 2);
+                        logger.Log("[EditUserNames]", stopWatch.ElapsedMilliseconds.ToString() + "ms. Edited user with id " + user.Id, 2, 1, false);
 
-                        sw.Stop();
+                        stopWatch.Stop();
                         return true;
                     }
 
-                    l.WriteToLog("[EditUserNames]", "Could not find user with id " + user.Id, 2);
-                    l.DebugToLog("[EditUserNames]", sw.ElapsedMilliseconds.ToString() + "ms. Could not find user with id " + user.Id, 2);
+                    logger.Log("[EditUserNames]", stopWatch.ElapsedMilliseconds.ToString() + "ms. Could not find user with id " + user.Id, 2, 1, false);
 
-                    sw.Stop();
+                    stopWatch.Stop();
                     return false;
                 }
-                catch (Exception ex)
+                catch (Exception exception)
                 {
-                    l.WriteToLog("[EditUserNames]", "Something went wrong. Check debug.txt", 2);
-                    l.DebugToLog("[EditUserNames]", sw.ElapsedMilliseconds.ToString() + "ms. Exception:\n" + ex.ToString(), 2);
+                    logger.Log("[EditUserNames]", stopWatch.ElapsedMilliseconds.ToString() + "ms. Exception:\n" + exception.ToString(), 2, 1, false);
 
-                    sw.Stop();
+                    stopWatch.Stop();
                     return false;
                 }
             }
         }
 
+        /// <summary>
+        /// Change the password of a user
+        /// </summary>
+        /// <param name="user">User</param>
+        /// <returns>boolean</returns>
         public bool EditPassword(User user)
         {
-            sw.Start();
-            l.WriteToLog("[EditPassword]", "Changing password of " + user.Username + "...", 0);
-            l.DebugToLog("[EditPassword]", sw.ElapsedMilliseconds.ToString() + "ms. Changing password of " + user.Username, 0);
+            stopWatch.Start();
+            logger.Log("[EditPassword]", stopWatch.ElapsedMilliseconds.ToString() + "ms. Changing password of " + user.Username, 0, 1, false);
 
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
-                SqlCommand command = new SqlCommand("EditPassword", connection);
+                SqlCommand command = new SqlCommand("Editpassword", connection);
                 command.CommandType = System.Data.CommandType.StoredProcedure;
 
                 command.Parameters.Add(new SqlParameter("@pId", user.Id));
@@ -1533,51 +1501,47 @@ namespace WerkelijkWaar.Classes
 
                     if (command.Parameters["@responseMessage"].Value.ToString().Contains("Success"))
                     {
-                        l.WriteToLog("[EditPassword]", "Password changed.", 2);
-                        l.DebugToLog("[EditPassword]", sw.ElapsedMilliseconds.ToString() + "Password changed.", 2);
+                        logger.Log("[EditPassword]", stopWatch.ElapsedMilliseconds.ToString() + "password changed.", 2, 1, false);
 
-                        sw.Stop();
+                        stopWatch.Stop();
                         return true;
                     }
                     else
                     {
-                        l.WriteToLog("[EditPassword]", "Password not changed. Check debug.txt", 2);
-                        l.DebugToLog("[EditPassword]", sw.ElapsedMilliseconds.ToString() + "Password not changed:\n" + command.Parameters["@responseMessage"].Value.ToString(), 2);
+                        logger.Log("[EditPassword]", stopWatch.ElapsedMilliseconds.ToString() + "password not changed:\n" + command.Parameters["@responseMessage"].Value.ToString(), 2, 1, false);
 
-                        sw.Stop();
+                        stopWatch.Stop();
                         return false;
                     }
                 }
-                catch (Exception ex)
+                catch (Exception exception)
                 {
-                    l.WriteToLog("[EditPassword]", "Something went wrong. Check debug.txt", 2);
-                    l.DebugToLog("[EditPassword]", sw.ElapsedMilliseconds.ToString() + "ms. Exception:\n" + ex.ToString(), 2);
+                    logger.Log("[EditPassword]", stopWatch.ElapsedMilliseconds.ToString() + "ms. Exception:\n" + exception.ToString(), 2, 1, false);
 
-                    sw.Stop();
+                    stopWatch.Stop();
                     return false;
                 }
             }
         }
 
         /// <summary>
-        /// Wijzig de avatar van een gebruiker.
+        /// Change the avatar of a user
         /// </summary>
-        /// <param name="id">User ID</param>
-        /// <param name="path">Bestandsnaam</param>
-        /// <returns>true or false</returns>
-        public bool EditUserAvatar(int id, string path)
+        /// <param name="userId">User ID</param>
+        /// <param name="fileName">Filename</param>
+        /// <returns>boolean</returns>
+        public bool EditUserAvatar(int userId, string fileName)
         {
-            sw.Restart();
-            l.WriteToLog("[EditUserAvatar]", "Trying to write to user " + id + "'s avatar.", 0);
-            l.DebugToLog("[EditUserAvatar]", sw.ElapsedMilliseconds.ToString() + "ms. Trying to write to user " + id + "'s avatar.", 0);
+            stopWatch.Restart();
+            logger.Log("[EditUserAvatar]", stopWatch.ElapsedMilliseconds.ToString() + "ms. Trying to write to user " + userId + "'s avatar.", 0, 1, false);
 
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
                 SqlCommand command = new SqlCommand();
 
-                command = new SqlCommand("UPDATE [User] SET [ImageSource] = @path WHERE [Id] = @id", connection);
-                command.Parameters.Add(new SqlParameter("@path", path));
-                command.Parameters.Add(new SqlParameter("@id", id));
+                command = new SqlCommand("UPDATE [User] SET [ImageSource] = @fileName WHERE [Id] = @id", connection);
+                command.Parameters.Add(new SqlParameter("@fileName", fileName));
+                command.Parameters.Add(new SqlParameter("@id", userId));
 
                 try
                 {
@@ -1587,35 +1551,36 @@ namespace WerkelijkWaar.Classes
 
                     if (rows > 0)
                     {
-                        l.WriteToLog("[EditUserAvatar]", "Edited user with id " + id, 2);
-                        l.DebugToLog("[EditUserAvatar]", sw.ElapsedMilliseconds.ToString() + "ms. Edited user with id " + id, 2);
+                        logger.Log("[EditUserAvatar]", stopWatch.ElapsedMilliseconds.ToString() + "ms. Edited user with id " + userId, 2, 1, false);
 
-                        sw.Stop();
+                        stopWatch.Stop();
                         return true;
                     }
 
-                    l.WriteToLog("[EditUserAvatar]", "Could not find user with id " + id, 2);
-                    l.DebugToLog("[EditUserAvatar]", sw.ElapsedMilliseconds.ToString() + "ms. Could not find user with id " + id, 2);
+                    logger.Log("[EditUserAvatar]", stopWatch.ElapsedMilliseconds.ToString() + "ms. Could not find user with id " + userId, 2, 1, false);
 
-                    sw.Stop();
+                    stopWatch.Stop();
                     return false;
                 }
-                catch (Exception ex)
+                catch (Exception exception)
                 {
-                    l.WriteToLog("[EditUserAvatar]", "Something went wrong. Check debug.txt", 2);
-                    l.DebugToLog("[EditUserAvatar]", sw.ElapsedMilliseconds.ToString() + "ms. Exception:\n" + ex.ToString(), 2);
+                    logger.Log("[EditUserAvatar]", stopWatch.ElapsedMilliseconds.ToString() + "ms. Exception:\n" + exception.ToString(), 2, 1, false);
 
-                    sw.Stop();
+                    stopWatch.Stop();
                     return false;
                 }
             }
         }
 
+        /// <summary>
+        /// Change the Role ID and/or Group ID of a user
+        /// </summary>
+        /// <param name="user">User</param>
+        /// <returns>boolean</returns>
         public bool EditUserNumbers(Classes.User user)
         {
-            sw.Restart();
-            l.WriteToLog("[EditUserNumbers]", "Trying to edit user " + user.Id + " numbers", 0);
-            l.DebugToLog("[EditUserNumbers]", sw.ElapsedMilliseconds.ToString() + "ms. Trying to edit user " + user.Id + " numbers", 0);
+            stopWatch.Restart();
+            logger.Log("[EditUserNumbers]", stopWatch.ElapsedMilliseconds.ToString() + "ms. Trying to edit user " + user.Id + " numbers", 0, 1, false);
 
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
@@ -1634,41 +1599,37 @@ namespace WerkelijkWaar.Classes
 
                     if (rows > 0)
                     {
-                        l.WriteToLog("[EditUserNumbers]", "Edited user with id " + user.Id, 2);
-                        l.DebugToLog("[EditUserNumbers]", sw.ElapsedMilliseconds.ToString() + "ms. Edited user with id " + user.Id, 2);
+                        logger.Log("[EditUserNumbers]", stopWatch.ElapsedMilliseconds.ToString() + "ms. Edited user with id " + user.Id, 2, 1, false);
 
-                        sw.Stop();
+                        stopWatch.Stop();
                         return true;
                     }
 
-                    l.WriteToLog("[EditUserNumbers]", "Could not find user with id " + user.Id, 2);
-                    l.DebugToLog("[EditUserNumbers]", sw.ElapsedMilliseconds.ToString() + "ms. Could not find user with id " + user.Id, 2);
+                    logger.Log("[EditUserNumbers]", stopWatch.ElapsedMilliseconds.ToString() + "ms. Could not find user with id " + user.Id, 2, 1, false);
 
-                    sw.Stop();
+                    stopWatch.Stop();
                     return false;
                 }
-                catch (Exception ex)
+                catch (Exception exception)
                 {
-                    l.WriteToLog("[EditUserNumbers]", "Something went wrong. Check debug.txt", 2);
-                    l.DebugToLog("[EditUserNumbers]", sw.ElapsedMilliseconds.ToString() + "ms. Exception:\n" + ex.ToString(), 2);
+                    logger.Log("[EditUserNumbers]", stopWatch.ElapsedMilliseconds.ToString() + "ms. Exception:\n" + exception.ToString(), 2, 1, false);
 
-                    sw.Stop();
+                    stopWatch.Stop();
                     return false;
                 }
             }
         }
 
         /// <summary>
-        /// Wijzig de status van een verhaal.
+        /// Change the status of a story
         /// </summary>
         /// <param name="storyId">Story ID</param>
         /// <param name="status">Status</param>
-        /// <returns>true or false</returns>
+        /// <returns>boolean</returns>
         public bool UpdateStoryStatus(int storyId, int status)
         {
-            sw.Restart();
-            l.WriteToLog("[UpdateStoryStatus]", "Trying to edit story with id " + storyId, 0);
-            l.DebugToLog("[UpdateStoryStatus]", sw.ElapsedMilliseconds.ToString() + "ms. Trying to edit story with id " + storyId, 0);
+            stopWatch.Restart();
+            logger.Log("[UpdateStoryStatus]", stopWatch.ElapsedMilliseconds.ToString() + "ms. Trying to edit story with id " + storyId, 0, 1, false);
 
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
@@ -1686,35 +1647,36 @@ namespace WerkelijkWaar.Classes
 
                     if (rows > 0)
                     {
-                        l.WriteToLog("[UpdateStoryStatus]", "Edited story with id " + storyId, 2);
-                        l.DebugToLog("[UpdateStoryStatus]", sw.ElapsedMilliseconds.ToString() + "ms. Edited story with id " + storyId, 2);
+                        logger.Log("[UpdateStoryStatus]", stopWatch.ElapsedMilliseconds.ToString() + "ms. Edited story with id " + storyId, 2, 1, false);
 
-                        sw.Stop();
+                        stopWatch.Stop();
                         return true;
                     }
 
-                    l.WriteToLog("[UpdateStoryStatus]", "Could not find story with id " + storyId, 2);
-                    l.DebugToLog("[UpdateStoryStatus]", sw.ElapsedMilliseconds.ToString() + "ms. Could not find story with id " + storyId, 2);
+                    logger.Log("[UpdateStoryStatus]", stopWatch.ElapsedMilliseconds.ToString() + "ms. Could not find story with id " + storyId, 2, 1, false);
 
-                    sw.Stop();
+                    stopWatch.Stop();
                     return false;
                 }
-                catch (Exception ex)
+                catch (Exception exception)
                 {
-                    l.WriteToLog("[UpdateStoryStatus]", "Something went wrong. Check debug.txt", 2);
-                    l.DebugToLog("[UpdateStoryStatus]", sw.ElapsedMilliseconds.ToString() + "ms. Exception:\n" + ex.ToString(), 2);
+                    logger.Log("[UpdateStoryStatus]", stopWatch.ElapsedMilliseconds.ToString() + "ms. Exception:\n" + exception.ToString(), 2, 1, false);
 
-                    sw.Stop();
+                    stopWatch.Stop();
                     return false;
                 }
             }
         }
 
+        /// <summary>
+        /// Change the configuration belonging to a user
+        /// </summary>
+        /// <param name="config">Configuration</param>
+        /// <returns>boolean</returns>
         public bool UpdateConfig(Configuration config)
         {
-            sw.Restart();
-            l.WriteToLog("[UpdateConfig]", "Trying to edit config with id " + config.Id, 0);
-            l.DebugToLog("[UpdateConfig]", sw.ElapsedMilliseconds.ToString() + "ms. Trying to edit config with id " + config.Id, 0);
+            stopWatch.Restart();
+            logger.Log("[UpdateConfig]", stopWatch.ElapsedMilliseconds.ToString() + "ms. Trying to edit config with id " + config.Id, 0, 1, false);
 
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
@@ -1737,7 +1699,7 @@ namespace WerkelijkWaar.Classes
                 command.Parameters.Add(new SqlParameter("@powerupsAllowed", config.PowerupsAllowed));
                 command.Parameters.Add(new SqlParameter("@powerupsCostMult", config.PowerupsCostMult));
 
-                l.DebugToLog("[UpdateConfig]", sw.ElapsedMilliseconds.ToString() + "ms. Values are: " +
+                logger.Log("[UpdateConfig]", stopWatch.ElapsedMilliseconds.ToString() + "ms. Values are: " +
                                 "- Owner Id: " + config.OwnerId + ";\n" +
                                 "- Max writing time: " + config.MaxWritingTime + ";\n" +
                                 "- Max reading time: " + config.MaxReadingTime + ";\n" +
@@ -1748,7 +1710,7 @@ namespace WerkelijkWaar.Classes
                                 "- Cash per vote: " + config.CashPerVote + ";\n" +
                                 "- Max players: " + config.MaxPlayers + ";\n" +
                                 "- Powerups allowed? " + config.PowerupsAllowed + ";\n" +
-                                "- Powerup cost multiplier: " + config.PowerupsCostMult, 1);
+                                "- Powerup cost multiplier: " + config.PowerupsCostMult, 1, 1, false);
 
                 try
                 {
@@ -1758,25 +1720,22 @@ namespace WerkelijkWaar.Classes
 
                     if (rows > 0)
                     {
-                        l.WriteToLog("[UpdateConfig]", "Edited config with id " + config.Id, 2);
-                        l.DebugToLog("[UpdateConfig]", sw.ElapsedMilliseconds.ToString() + "ms. Edited config with id " + config.Id, 2);
+                        logger.Log("[UpdateConfig]", stopWatch.ElapsedMilliseconds.ToString() + "ms. Edited config with id " + config.Id, 2, 1, false);
 
-                        sw.Stop();
+                        stopWatch.Stop();
                         return true;
                     }
 
-                    l.WriteToLog("[UpdateConfig]", "Could not find config with id " + config.Id, 2);
-                    l.DebugToLog("[UpdateConfig]", sw.ElapsedMilliseconds.ToString() + "ms. Could not find config with id " + config.Id, 2);
+                    logger.Log("[UpdateConfig]", stopWatch.ElapsedMilliseconds.ToString() + "ms. Could not find config with id " + config.Id, 2, 1, false);
 
-                    sw.Stop();
+                    stopWatch.Stop();
                     return false;
                 }
-                catch (Exception ex)
+                catch (Exception exception)
                 {
-                    l.WriteToLog("[UpdateConfig]", "Something went wrong. Check debug.txt", 2);
-                    l.DebugToLog("[UpdateConfig]", sw.ElapsedMilliseconds.ToString() + "ms. Exception:\n" + ex.ToString(), 2);
+                    logger.Log("[UpdateConfig]", stopWatch.ElapsedMilliseconds.ToString() + "ms. Exception:\n" + exception.ToString(), 2, 1, false);
 
-                    sw.Stop();
+                    stopWatch.Stop();
                     return false;
                 }
             }
@@ -1785,15 +1744,14 @@ namespace WerkelijkWaar.Classes
 
         #region DELETE
         /// <summary>
-        /// Verwijder een gebruiker. (inclusief scores/verhalen)
+        /// Delete a user from the database
         /// </summary>
         /// <param name="userId">User ID</param>
-        /// <returns>true or false</returns>
+        /// <returns>boolean</returns>
         public bool DeleteUser(int userId)
         {
-            sw.Restart();
-            l.WriteToLog("[DeleteUser]", "Attempting to delete user with id " + userId, 0);
-            l.DebugToLog("[DeleteUser]", sw.ElapsedMilliseconds.ToString() + "ms. Deleting user " + userId, 0);
+            stopWatch.Restart();
+            logger.Log("[DeleteUser]", stopWatch.ElapsedMilliseconds.ToString() + "ms. Deleting user " + userId, 0, 1, false);
 
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
@@ -1807,40 +1765,36 @@ namespace WerkelijkWaar.Classes
                     
                     if (rows > 0)
                     {
-                        l.WriteToLog("[DeleteUser]", "Deleted user with id " + userId, 2);
-                        l.DebugToLog("[DeleteUser]", sw.ElapsedMilliseconds.ToString() + "ms. Deleted user with id " + userId, 2);
+                        logger.Log("[DeleteUser]", stopWatch.ElapsedMilliseconds.ToString() + "ms. Deleted user with id " + userId, 2, 1, false);
 
-                        sw.Stop();
+                        stopWatch.Stop();
                         return true;
                     }
 
-                    l.WriteToLog("[DeleteUser]", "Could not find user with id " + userId, 2);
-                    l.DebugToLog("[DeleteUser]", sw.ElapsedMilliseconds.ToString() + "ms. Could not find user with id " + userId, 2);
+                    logger.Log("[DeleteUser]", stopWatch.ElapsedMilliseconds.ToString() + "ms. Could not find user with id " + userId, 2, 1, false);
 
-                    sw.Stop();
+                    stopWatch.Stop();
                     return false;
                 }
-                catch (Exception ex)
+                catch (Exception exception)
                 {
-                    l.WriteToLog("[DeleteUser]", "Something went wrong. Check debug.txt", 2);
-                    l.DebugToLog("[DeleteUser]", sw.ElapsedMilliseconds.ToString() + "ms. Exception:\n" + ex.ToString(), 2);
+                    logger.Log("[DeleteUser]", stopWatch.ElapsedMilliseconds.ToString() + "ms. Exception:\n" + exception.ToString(), 2, 1, false);
 
-                    sw.Stop();
+                    stopWatch.Stop();
                     return false;
                 }
             }
         }
 
         /// <summary>
-        /// Verwijder een verhaal.
+        /// Delete a story from the database
         /// </summary>
         /// <param name="storyId">Story ID</param>
-        /// <returns>true or false</returns>
+        /// <returns>boolean</returns>
         public bool DeleteStory(int storyId)
         {
-            sw.Restart();
-            l.WriteToLog("[DeleteStory]", "Attempting to delete story with id " + storyId, 0);
-            l.DebugToLog("[DeleteStory]", sw.ElapsedMilliseconds.ToString() + "ms. Deleting story " + storyId, 0);
+            stopWatch.Restart();
+            logger.Log("[DeleteStory]", stopWatch.ElapsedMilliseconds.ToString() + "ms. Deleting story " + storyId, 0, 1, false);
 
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
@@ -1854,35 +1808,36 @@ namespace WerkelijkWaar.Classes
 
                     if (rows > 0)
                     {
-                        l.WriteToLog("[DeleteStory]", "Deleted user with id " + storyId, 2);
-                        l.DebugToLog("[DeleteStory]", sw.ElapsedMilliseconds.ToString() + "ms. Deleted story with id " + storyId, 2);
+                        logger.Log("[DeleteStory]", stopWatch.ElapsedMilliseconds.ToString() + "ms. Deleted story with id " + storyId, 2, 1, false);
 
-                        sw.Stop();
+                        stopWatch.Stop();
                         return true;
                     }
 
-                    l.WriteToLog("[DeleteStory]", "Could not find story with id " + storyId, 2);
-                    l.DebugToLog("[DeleteStory]", sw.ElapsedMilliseconds.ToString() + "ms. Could not find story with id " + storyId, 2);
+                    logger.Log("[DeleteStory]", stopWatch.ElapsedMilliseconds.ToString() + "ms. Could not find story with id " + storyId, 2, 1, false);
 
-                    sw.Stop();
+                    stopWatch.Stop();
                     return false;
                 }
-                catch (Exception ex)
+                catch (Exception exception)
                 {
-                    l.WriteToLog("[DeleteStory]", "Something went wrong. Check debug.txt", 2);
-                    l.DebugToLog("[DeleteStory]", sw.ElapsedMilliseconds.ToString() + "ms. Exception:\n" + ex.ToString(), 2);
+                    logger.Log("[DeleteStory]", stopWatch.ElapsedMilliseconds.ToString() + "ms. Exception:\n" + exception.ToString(), 2, 1, false);
 
-                    sw.Stop();
+                    stopWatch.Stop();
                     return false;
                 }
             }
         }
 
+        /// <summary>
+        /// Delete all stories that belong to a certain User ID
+        /// </summary>
+        /// <param name="userId">User ID</param>
+        /// <returns>boolean</returns>
         public bool DeleteStoriesOfUser(int userId)
         {
-            sw.Restart();
-            l.WriteToLog("[DeleteStoriesOfUser]", "Attempting to delete story with ownerId " + userId, 0);
-            l.DebugToLog("[DeleteStoriesOfUser]", sw.ElapsedMilliseconds.ToString() + "ms. Deleting story with ownerId " + userId, 0);
+            stopWatch.Restart();
+            logger.Log("[DeleteStoriesOfUser]", stopWatch.ElapsedMilliseconds.ToString() + "ms. Deleting story with ownerId " + userId, 0, 1, false);
 
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
@@ -1896,35 +1851,36 @@ namespace WerkelijkWaar.Classes
 
                     if (rows > 0)
                     {
-                        l.WriteToLog("[DeleteStoriesOfUser]", "Deleted story with ownerId " + userId, 2);
-                        l.DebugToLog("[DeleteStoriesOfUser]", sw.ElapsedMilliseconds.ToString() + "ms. Deleted story with ownerId " + userId, 2);
+                        logger.Log("[DeleteStoriesOfUser]", stopWatch.ElapsedMilliseconds.ToString() + "ms. Deleted story with ownerId " + userId, 2, 1, false);
 
-                        sw.Stop();
+                        stopWatch.Stop();
                         return true;
                     }
 
-                    l.WriteToLog("[DeleteStoriesOfUser]", "Could not find story with ownerId " + userId, 2);
-                    l.DebugToLog("[DeleteStoriesOfUser]", sw.ElapsedMilliseconds.ToString() + "ms. Could not find story with ownerId " + userId, 2);
+                    logger.Log("[DeleteStoriesOfUser]", stopWatch.ElapsedMilliseconds.ToString() + "ms. Could not find story with ownerId " + userId, 2, 1, false);
 
-                    sw.Stop();
+                    stopWatch.Stop();
                     return false;
                 }
-                catch (Exception ex)
+                catch (Exception exception)
                 {
-                    l.WriteToLog("[DeleteStoriesOfUser]", "Something went wrong. Check debug.txt", 2);
-                    l.DebugToLog("[DeleteStoriesOfUser]", sw.ElapsedMilliseconds.ToString() + "ms. Exception:\n" + ex.ToString(), 2);
+                    logger.Log("[DeleteStoriesOfUser]", stopWatch.ElapsedMilliseconds.ToString() + "ms. Exception:\n" + exception.ToString(), 2, 1, false);
 
-                    sw.Stop();
+                    stopWatch.Stop();
                     return false;
                 }
             }
         }
 
+        /// <summary>
+        /// Delete all scores that belong to a certain User ID
+        /// </summary>
+        /// <param name="userId">User ID</param>
+        /// <returns>boolean</returns>
         public bool DeleteScoresOfUser(int userId)
         {
-            sw.Restart();
-            l.WriteToLog("[DeleteScoresOfUser]", "Attempting to delete score with ownerId " + userId, 0);
-            l.DebugToLog("[DeleteScoresOfUser]", sw.ElapsedMilliseconds.ToString() + "ms. Deleting score with ownerId " + userId, 0);
+            stopWatch.Restart();
+            logger.Log("[DeleteScoresOfUser]", stopWatch.ElapsedMilliseconds.ToString() + "ms. Deleting score with ownerId " + userId, 0, 1, false);
 
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
@@ -1938,35 +1894,36 @@ namespace WerkelijkWaar.Classes
 
                     if (rows > 0)
                     {
-                        l.WriteToLog("[DeleteScoresOfUser]", "Deleted score with ownerId " + userId, 2);
-                        l.DebugToLog("[DeleteScoresOfUser]", sw.ElapsedMilliseconds.ToString() + "ms. Deleted score with ownerId " + userId, 2);
+                        logger.Log("[DeleteScoresOfUser]", stopWatch.ElapsedMilliseconds.ToString() + "ms. Deleted score with ownerId " + userId, 2, 1, false);
 
-                        sw.Stop();
+                        stopWatch.Stop();
                         return true;
                     }
 
-                    l.WriteToLog("[DeleteScoresOfUser]", "Could not find score with ownerId " + userId, 2);
-                    l.DebugToLog("[DeleteScoresOfUser]", sw.ElapsedMilliseconds.ToString() + "ms. Could not find score with ownerId " + userId, 2);
+                    logger.Log("[DeleteScoresOfUser]", stopWatch.ElapsedMilliseconds.ToString() + "ms. Could not find score with ownerId " + userId, 2, 1, false);
 
-                    sw.Stop();
+                    stopWatch.Stop();
                     return false;
                 }
-                catch (Exception ex)
+                catch (Exception exception)
                 {
-                    l.WriteToLog("[DeleteScoresOfUser]", "Something went wrong. Check debug.txt", 2);
-                    l.DebugToLog("[DeleteScoresOfUser]", sw.ElapsedMilliseconds.ToString() + "ms. Exception:\n" + ex.ToString(), 2);
+                    logger.Log("[DeleteScoresOfUser]", stopWatch.ElapsedMilliseconds.ToString() + "ms. Exception:\n" + exception.ToString(), 2, 1, false);
 
-                    sw.Stop();
+                    stopWatch.Stop();
                     return false;
                 }
             }
         }
 
+        /// <summary>
+        /// Delete a configuration that belongs to a certain User ID
+        /// </summary>
+        /// <param name="userId"></param>
+        /// <returns></returns>
         public bool DeleteConfig(int userId)
         {
-            sw.Restart();
-            l.WriteToLog("[DeleteConfig]", "Attempting to delete config of " + userId, 0);
-            l.DebugToLog("[DeleteConfig]", sw.ElapsedMilliseconds.ToString() + "ms. Deleting config of " + userId, 0);
+            stopWatch.Restart();
+            logger.Log("[DeleteConfig]", stopWatch.ElapsedMilliseconds.ToString() + "ms. Deleting config of " + userId, 0, 1, false);
 
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
@@ -1980,25 +1937,22 @@ namespace WerkelijkWaar.Classes
 
                     if (rows > 0)
                     {
-                        l.WriteToLog("[DeleteConfig]", "Deleted config with ownerId " + userId, 2);
-                        l.DebugToLog("[DeleteConfig]", sw.ElapsedMilliseconds.ToString() + "ms. Deleted story with id " + userId, 2);
+                        logger.Log("[DeleteConfig]", stopWatch.ElapsedMilliseconds.ToString() + "ms. Deleted story with id " + userId, 2, 1, false);
 
-                        sw.Stop();
+                        stopWatch.Stop();
                         return true;
                     }
 
-                    l.WriteToLog("[DeleteConfig]", "Could not find config with ownerId " + userId, 2);
-                    l.DebugToLog("[DeleteConfig]", sw.ElapsedMilliseconds.ToString() + "ms. Could not find config with ownerId " + userId, 2);
+                    logger.Log("[DeleteConfig]", stopWatch.ElapsedMilliseconds.ToString() + "ms. Could not find config with ownerId " + userId, 2, 1, false);
 
-                    sw.Stop();
+                    stopWatch.Stop();
                     return false;
                 }
-                catch (Exception ex)
+                catch (Exception exception)
                 {
-                    l.WriteToLog("[DeleteConfig]", "Something went wrong. Check debug.txt", 2);
-                    l.DebugToLog("[DeleteConfig]", sw.ElapsedMilliseconds.ToString() + "ms. Exception:\n" + ex.ToString(), 2);
+                    logger.Log("[DeleteConfig]", stopWatch.ElapsedMilliseconds.ToString() + "ms. Exception:\n" + exception.ToString(), 2, 1, false);
 
-                    sw.Stop();
+                    stopWatch.Stop();
                     return false;
                 }
             }

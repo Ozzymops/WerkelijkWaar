@@ -7,15 +7,36 @@ namespace WerkelijkWaar.Models
 {
     public class ScoreOverviewModel
     {
+        /// <summary>
+        /// User that is viewing the page
+        /// </summary>
         public Classes.User Viewer { get; set; }
+
+        /// <summary>
+        /// User that is being displayed on page
+        /// </summary>
         public Classes.User User { get; set; }
+
+        /// <summary>
+        /// List of Stories by User
+        /// </summary>
         public List<Classes.Story> Stories { get; set; }
+
+        /// <summary>
+        /// List of Scores by User
+        /// </summary>
         public List<Classes.Score> Scores { get; set; }
+
+        /// <summary>
+        /// User rank
+        /// </summary>
         public int Rank { get; set; }
 
+        /// <summary>
+        /// Generate the average class score
+        /// </summary>
         public void GenerateAverage()
         {
-            // Classes.Logger l = new Classes.Logger();
             Classes.DatabaseQueries dq = new Classes.DatabaseQueries();
 
             if (Scores != null && Scores.Count != 0)

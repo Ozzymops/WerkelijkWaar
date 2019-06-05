@@ -7,22 +7,31 @@ namespace WerkelijkWaar.Models
 {
     public class HubModel
     {
+        Classes.Logger logger = new Classes.Logger();
+        Classes.DatabaseQueries dq = new Classes.DatabaseQueries();
+
+        /// <summary>
+        /// User
+        /// </summary>
         public Classes.User User { get; set; }
+
+        /// <summary>
+        /// List of Users
+        /// </summary>
         public List<Classes.User> UserList { get; set; }
 
+        /// <summary>
+        /// Average score of all scores in class
+        /// </summary>
         public double AverageScore { get; set; }
 
+        /// <summary>
+        /// Generate the average class score
+        /// </summary>
         public void GenerateAverage()
         {
-            Classes.Logger l = new Classes.Logger();
-            Classes.DatabaseQueries dq = new Classes.DatabaseQueries();
-
-            l.DebugToLog("[GenerateAverage]", UserList.Count + " users.", 0);
-
             if (UserList != null && UserList.Count != 0)
             {
-                l.DebugToLog("[GenerateAverage]", "Generating average for " + UserList.Count + " users.", 1);
-
                 // Individual
                 foreach (Classes.User user in UserList)
                 {
@@ -32,8 +41,6 @@ namespace WerkelijkWaar.Models
                     {
                         decimal correctAnswers = 0;
                         decimal totalLengthOfAnswers = 0;
-
-                        l.DebugToLog("[GenerateAverage]", "User " + user.Username + " has " + listOfScores.Count + " scores to his/her name.", 1);
 
                         foreach (Classes.Score score in listOfScores)
                         {
@@ -50,12 +57,8 @@ namespace WerkelijkWaar.Models
 
                                     totalLengthOfAnswers += 1;
                                 }
-
-                                l.DebugToLog("[GenerateAverage]", "Score " + score.Id + ": " + correctAnswers + " correct answers from here on out.", 1);
                             }
                         }
-
-                        l.DebugToLog("[GenerateAverage]", correctAnswers + "/" + totalLengthOfAnswers + " = " + (correctAnswers/totalLengthOfAnswers)*10, 1);
 
                         double tempAverage = (double)((correctAnswers / totalLengthOfAnswers) * 10);
                         user.AverageScore = tempAverage;
@@ -64,8 +67,6 @@ namespace WerkelijkWaar.Models
                     {
                         user.AverageScore = 0.0;
                     }
-
-                    l.DebugToLog("[GenerateAverage]", "Average score: " + user.AverageScore + ".", 1);
                 }
 
                 // Class
@@ -77,7 +78,6 @@ namespace WerkelijkWaar.Models
                 }
 
                 AverageScore = (totalAverage / UserList.Count);
-                l.DebugToLog("[GenerateAverage]", "Class average is " + AverageScore, 2);
             }
         }
     }

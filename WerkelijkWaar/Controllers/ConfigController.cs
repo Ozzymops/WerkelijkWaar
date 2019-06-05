@@ -10,37 +10,50 @@ namespace WerkelijkWaar.Controllers
 {
     public class ConfigController : Controller
     {
-        // Standaard, overal toepasselijk
-        Classes.Logger l = new Classes.Logger();
+        // Standard classes
         Classes.DatabaseQueries dq = new Classes.DatabaseQueries();
+        Classes.Logger logger = new Classes.Logger();
 
-        public IActionResult CreateConfig(ConfigModel cm)
+        /// <summary>
+        /// Write a configuration to the database
+        /// </summary>
+        /// <param name="configModel">ConfigModel</param>
+        /// <returns>View</returns>
+        public IActionResult CreateConfig(ConfigModel configModel)
         {
             // login check
             if (!String.IsNullOrEmpty(HttpContext.Session.GetString("User")))
             {
-                cm.Teacher = Newtonsoft.Json.JsonConvert.DeserializeObject<Classes.User>(HttpContext.Session.GetString("User"));
+                logger.Log("[ConfigController - CreateConfig]", "User validated.", 0, 2, false);
+
+                configModel.Teacher = Newtonsoft.Json.JsonConvert.DeserializeObject<Classes.User>(HttpContext.Session.GetString("User"));
 
                 bool success = false;
                 string response = "";
 
-                if (dq.RetrieveConfig(cm.Teacher.Id) == null || cm.Config.Id == 0)
+                if (dq.RetrieveConfig(configModel.Teacher.Id) == null || configModel.Config.Id == 0)
                 {
-                    l.DebugToLog("[x]", "Config does not exist - " + cm.Config.Id + "/" + cm.Teacher.Id + ".", 1);
-                    success = dq.CreateConfig(cm.Config);
+                    logger.Log("[ConfigController - CreateConfig]", "Configuration of (" + configModel.Teacher.Id + ") does not exist yet. Creating...", 1, 2, false);
+
+                    success = dq.CreateConfig(configModel.Config);
                 }
                 else
                 {
-                    l.DebugToLog("[x]", "Config does exist - " + cm.Config.Id + "/" + cm.Teacher.Id + ".", 1);
-                    success = dq.UpdateConfig(cm.Config);
+                    logger.Log("[ConfigController - CreateConfig]", "Configuration of (" + configModel.Teacher.Id + ") already exists. Updating...", 1, 2, false);
+
+                    success = dq.UpdateConfig(configModel.Config);
                 }
 
                 if (success)
                 {
+                    logger.Log("[ConfigController - CreateConfig]", "Created/updated (" + configModel.Teacher.Id + ")'s configuration.", 2, 2, false);
+
                     response = "Succes.";
                 }
                 else
                 {
+                    logger.Log("[ConfigController - CreateConfig]", "Something went wrong.", 2, 2, false);
+
                     response = "Er is iets mis gegaan.";
                 }
 

@@ -9,58 +9,143 @@ namespace WerkelijkWaar.Classes
 {
     public class Room
     {
-        private Classes.Logger l = new Classes.Logger();
-        private Stopwatch sw = new Stopwatch();
-
-        // Static
-        public string RoomCode { get; set; }
-        public string RoomOwnerId { get; set; }
-        public string RoomOwner { get; set; }
-        public User Teacher { get; set; }
-        public State RoomState { get; set; }
-        public Configuration Config { get; set; }
-        public int MaxIdleStrikes = 3;
-        public int MaxProgressStrikes = 20;
-        public int MaxPlayers { get; set; }
-        public int MinPlayers = 3;
-        // Dynamic
-        public int CurrentStrikes;
-        public enum State { Waiting, Writing, Reading, Finished, Dead };
-        public List<Classes.User> Users { get; set; } = new List<Classes.User>();
-        public List<Classes.Story> RetrievedStories { get; set; } = new List<Classes.Story>();
-        public List<Classes.Story> WrittenStories { get; set; } = new List<Classes.Story>();
-        public List<string> SentStories { get; set; } = new List<string>();
-        public List<Classes.Score> SelectedAnswers { get; set; } = new List<Classes.Score>();
-        public int RemainingTime { get; set; }
-        public int NumberOfReadyPlayers { get; set; }
-        public int CurrentGroup = 0;
-        public int GroupCount = 0;
-        public int CorrectAnswer = 0;
-        public int NeededAnswers { get; set; }
-
-        // Configuration
-
-        // Timers
-        public Timer timer = new Timer(TimeSpan.FromSeconds(60).TotalMilliseconds); // Tick every sixty seconds
-        public Timer gameTimer = new Timer(TimeSpan.FromSeconds(1).TotalMilliseconds);
-
+        private Classes.Logger logger = new Classes.Logger();
+        private Stopwatch stopWatch = new Stopwatch();
         public DatabaseQueries dq = new DatabaseQueries();
 
+        #region Variables
         /// <summary>
-        /// Constructor: generate random code and set timer.
+        /// Idle timer. Ticks every 60 seconds
+        /// </summary>
+        public Timer timer = new Timer(TimeSpan.FromSeconds(60).TotalMilliseconds);
+
+        /// <summary>
+        /// Game timer. Ticks every second
+        /// </summary>
+        public Timer gameTimer = new Timer(TimeSpan.FromSeconds(1).TotalMilliseconds);
+
+        /// <summary>
+        /// Teacher (owner) of the room
+        /// </summary>
+        public User Teacher { get; set; }
+
+        /// <summary>
+        /// Configuration used for the room
+        /// </summary>
+        public Configuration Config { get; set; }
+
+        /// <summary>
+        /// Available game states
+        /// </summary>
+        public enum State { Waiting, Writing, Reading, Finished, Dead };
+
+        /// <summary>
+        /// Current game state
+        /// </summary>
+        public State RoomState { get; set; }
+
+        /// <summary>
+        /// List of connected users
+        /// </summary>
+        public List<Classes.User> Users { get; set; } = new List<Classes.User>();
+
+        /// <summary>
+        /// List of retrieved root stories
+        /// </summary>
+        public List<Classes.Story> RetrievedStories { get; set; } = new List<Classes.Story>();
+
+        /// <summary>
+        /// List of uploaded written stories from users
+        /// </summary>
+        public List<Classes.Story> WrittenStories { get; set; } = new List<Classes.Story>();
+
+        /// <summary>
+        /// List of uploaded answers from users
+        /// </summary>
+        public List<Classes.Score> SelectedAnswers { get; set; } = new List<Classes.Score>();
+
+        /// <summary>
+        /// List of stories sent to users (JavaScript JSON)
+        /// </summary>
+        public List<string> SentStories { get; set; } = new List<string>();
+
+        /// <summary>
+        /// Generated room code. Used to connect to the room
+        /// </summary>
+        public string RoomCode { get; set; }
+
+        /// <summary>
+        /// RoomOwner ID
+        /// </summary>
+        public string RoomOwnerId { get; set; }
+
+        /// <summary>
+        /// RoomOwner name
+        /// </summary>
+        public string RoomOwner { get; set; }
+
+        /// <summary>
+        /// Current idle strikes
+        /// </summary>
+        public int CurrentStrikes;
+
+        /// <summary>
+        /// Maximum idle strikes. 3 by default
+        /// </summary>
+        public int MaxIdleStrikes = 3;
+
+        /// <summary>
+        /// Maximum progress strikes (ingame idle strikes). 20 by default
+        /// </summary>
+        public int MaxProgressStrikes = 20;
+
+        /// <summary>
+        /// Maximum amount of allowed players. Acquired from Configuration
+        /// </summary>
+        public int MaxPlayers { get; set; }
+
+        /// <summary>
+        /// Minimum amount of players needed to start the game. 3 by default
+        /// </summary>
+        public int MinPlayers = 3;
+
+        /// <summary>
+        /// Remaining amount of seconds for current game phase
+        /// </summary>
+        public int RemainingTime { get; set; }
+
+        /// <summary>
+        /// Number of players readied up (that read the tutorial)
+        /// </summary>
+        public int NumberOfReadyPlayers { get; set; }
+
+        /// <summary>
+        /// Current group used for the reading phase
+        /// </summary>
+        public int CurrentGroup = 0;
+
+        /// <summary>
+        /// Total amount of groups
+        /// </summary>
+        public int GroupCount = 0;
+
+        /// <summary>
+        /// Planted correct answer
+        /// </summary>
+        public int CorrectAnswer = 0;
+
+        /// <summary>
+        /// Needed amount of answers to progress
+        /// </summary>
+        public int NeededAnswers { get; set; }
+        #endregion
+
+        /// <summary>
+        /// CONSTRUCTOR: set the room up
         /// </summary>
         public Room()
         {
-            sw.Restart();
-
-            l.WriteToLog("[Room]", "Creating room...", 0);
-            l.DebugToLog("[Room]", sw.ElapsedMilliseconds.ToString() + "ms. Creating room...", 0);
-
-            l.DebugToLog("[Room]", sw.ElapsedMilliseconds.ToString() + "ms. Generating code...", 1);
-
             GenerateCode();
-
-            l.DebugToLog("[Room]", sw.ElapsedMilliseconds.ToString() + "ms. Setting timers...", 1);
 
             // Idle timer
             timer.AutoReset = true;
@@ -70,21 +155,17 @@ namespace WerkelijkWaar.Classes
             // Game timer
             gameTimer.AutoReset = true;
             gameTimer.Elapsed += new ElapsedEventHandler(GameTimer);
-
-            l.WriteToLog("[Room]", "Room created with code " + RoomCode, 2);
-            l.DebugToLog("[Room]", sw.ElapsedMilliseconds.ToString() + "ms. Room created with code " + RoomCode, 2);
-
-            sw.Stop();
         }
 
         /// <summary>
-        /// Generate code - random six digit code consisting of upper- and lowercase letters and numbers.
+        /// Generate a random six digit code consisting out of numbers and upper-/lowercase characters. Applied immediately to RoomCode
         /// </summary>
         private void GenerateCode()
         {
+            logger.Log("[Room - GenerateCode]", "Generating random code...", 1, 1, false);
+
             string code = "";
 
-            // Six digit code
             for (int i = 0; i < 6; i++)
             {
                 Random rng = new Random();
@@ -111,26 +192,31 @@ namespace WerkelijkWaar.Classes
 
             RoomCode = code;
             RoomState = State.Waiting;
+
+            logger.Log("[Room - GenerateCode]", "Generated code is " + RoomCode + ". Room state is now Waiting.", 2, 1, false);
         }
 
         /// <summary>
-        /// Idle timer - check if the room is still being actively used.
+        /// Idle timeout ticks
         /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
+        /// <param name="sender">Sender</param>
+        /// <param name="e">ElapsedEventArgs</param>
         public void IdleTimer(object sender, ElapsedEventArgs e)
         {
-            // Tick timer - reset in every function call from handler
             if (CurrentStrikes > 0)
             {
                 CurrentStrikes -= 1;
             }
 
-            // Die after strikes are up
+            // Kill room after strikes are up
             if (CurrentStrikes <= 0 && RoomState != State.Dead)
             {
+                logger.Log("[Room - IdleTimer]", "IdleStrikes are 0.", 0, 1, false);
+
                 RoomState = State.Dead;
                 timer.Stop();
+
+                logger.Log("[Room - IdleTimer]", "Room " + RoomCode + " has died and is being removed.", 2, 1, false);
             }
         }
 
@@ -153,17 +239,28 @@ namespace WerkelijkWaar.Classes
             }
         }
 
+        /// <summary>
+        /// Prepare the room for gameplay
+        /// </summary>
+        /// <returns>boolean</returns>
         public bool GamePreparation()
         {
-            DatabaseQueries dq = new DatabaseQueries();
+            logger.Log("[Room - GamePreparation]", "Room is being prepared for gameplay.", 0, 1, false);
+
             int playerCount = Users.Count();
+
+            logger.Log("[Room - GamePreparation]", "Room contains " + playerCount + " players.", 1, 1, false);
 
             // Enough players?
             if (playerCount >= (MinPlayers*2))
             {
+                logger.Log("[Room - GamePreparation]", "Room has enough players (" + playerCount + "/" + MinPlayers + ")", 1, 1, false);
+
                 // Shuffle user list
                 Random rng = new Random();
                 List<User> shuffledUsers = Users;
+
+                logger.Log("[Room - GamePreparation]", "Shuffling user list...", 1, 1, false);
 
                 int playersToProcess = playerCount;
                 while (playersToProcess > 1)
@@ -174,6 +271,8 @@ namespace WerkelijkWaar.Classes
                     shuffledUsers[userIndex] = shuffledUsers[playersToProcess];
                     shuffledUsers[playersToProcess] = selectedUser;
                 }
+
+                logger.Log("[Room - GamePreparation]", "Assigning players to groups...", 1, 1, false);
 
                 // Assign players to groups
                 int currentGroup = 1;
@@ -221,6 +320,8 @@ namespace WerkelijkWaar.Classes
                 // Assign stories to groups
                 List<Story> shuffledStories = dq.RetrieveAllStories();
 
+                logger.Log("[Room - GamePreparation]", "Assigning stories to groups...", 1, 1, false);
+
                 // Shuffle stories
                 int storiesToProcess = shuffledStories.Count;
                 while (storiesToProcess > 1)
@@ -237,6 +338,8 @@ namespace WerkelijkWaar.Classes
                     RetrievedStories.Add(shuffledStories[group - 1]);
                 }
 
+                logger.Log("[Room - GamePreparation]", "Creating score objects for the players...", 1, 1, false);
+
                 // Create empty Score list
                 foreach (User user in Users)
                 {
@@ -244,14 +347,23 @@ namespace WerkelijkWaar.Classes
                     SelectedAnswers.Add(tempScore);
                 }
 
+                logger.Log("[Room - GamePreparation]", "Room is prepared.", 2, 1, false);
+
                 return true;
             }
             else
             {
+                logger.Log("[Room - GamePreparation]", "Room does not have enough players (" + playerCount + "/" + MinPlayers + ")", 2, 1, false);
+
                 return false;
             }
         }
 
+        /// <summary>
+        /// Game timer for actions such as the writing/reading countdown
+        /// </summary>
+        /// <param name="sender">Sender</param>
+        /// <param name="e">ElapsedEventArgs</param>
         public void GameTimer(object sender, ElapsedEventArgs e)
         {
             RemainingTime -= 1;

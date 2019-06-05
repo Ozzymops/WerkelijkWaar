@@ -11,12 +11,12 @@ namespace WerkelijkWaar.Controllers
 {
     public class HubController : Controller
     {
-        // Standaard, overal toepasselijk
-        Classes.Logger l = new Classes.Logger();
+        // Standard classes
+        Classes.Logger logger = new Classes.Logger();
         Classes.DatabaseQueries dq = new Classes.DatabaseQueries();
 
         /// <summary>
-        /// Navigeer naar het spel
+        /// Navigeer to Game
         /// </summary>
         /// <returns>View</returns>
         public IActionResult Game()
@@ -24,49 +24,54 @@ namespace WerkelijkWaar.Controllers
             // login check
             if (!String.IsNullOrEmpty(HttpContext.Session.GetString("User")))
             {
-                HubModel hm = new HubModel();
-                hm.User = Newtonsoft.Json.JsonConvert.DeserializeObject<Classes.User>(HttpContext.Session.GetString("User"));
+                HubModel hubModel = new HubModel();
+                hubModel.User = Newtonsoft.Json.JsonConvert.DeserializeObject<Classes.User>(HttpContext.Session.GetString("User"));
 
-                return View(hm);
+                return View(hubModel);
             }
 
             return RedirectToAction("Index", "Home");
         }
 
         /// <summary>
-        /// Navigeer naar de spel configuratiescherm
+        /// Navigate to GameConfig
         /// </summary>
-        /// <returns>View</returns>
+        /// <param name="StatusString">Status string</param>
+        /// <returns></returns>
         public IActionResult GameConfig(string StatusString)
         {
             // login check
             if (!String.IsNullOrEmpty(HttpContext.Session.GetString("User")))
             {
-                ConfigModel cm = new ConfigModel();
-                cm.StatusString = StatusString;
-                cm.Teacher = Newtonsoft.Json.JsonConvert.DeserializeObject<Classes.User>(HttpContext.Session.GetString("User"));
-                cm.Config = dq.RetrieveConfig(cm.Teacher.Id);
+                ConfigModel configModel = new ConfigModel();
+                configModel.StatusString = StatusString;
+                configModel.Teacher = Newtonsoft.Json.JsonConvert.DeserializeObject<Classes.User>(HttpContext.Session.GetString("User"));
+                configModel.Config = dq.RetrieveConfig(configModel.Teacher.Id);
 
-                return View(cm);
+                return View(configModel);
             }
 
             return RedirectToAction("Index", "Home");
         }
 
+        /// <summary>
+        /// Navigate to Log
+        /// </summary>
+        /// <returns></returns>
         public IActionResult Log()
         {
             // login check
             if (!String.IsNullOrEmpty(HttpContext.Session.GetString("User")))
             {
-                AdminModel am = new AdminModel();
-                am.User = Newtonsoft.Json.JsonConvert.DeserializeObject<Classes.User>(HttpContext.Session.GetString("User"));
+                AdminModel adminModel = new AdminModel();
+                adminModel.User = Newtonsoft.Json.JsonConvert.DeserializeObject<Classes.User>(HttpContext.Session.GetString("User"));
 
-                if (am.User.RoleId == 2)
+                if (adminModel.User.RoleId == 2)
                 {
-                    am.Group = dq.RetrieveGroup(am.User.Group);
-                    am.School = dq.RetrieveSchool(am.Group.SchoolId);
+                    adminModel.Group = dq.RetrieveGroup(adminModel.User.Group);
+                    adminModel.School = dq.RetrieveSchool(adminModel.Group.SchoolId);
                 }
-                else if (am.User.RoleId == 3)
+                else if (adminModel.User.RoleId == 3)
                 {
                     List<Classes.School> tempSchoolList = dq.RetrieveSchools();
                     List<Classes.School> schoolList = new List<Classes.School>();
@@ -76,26 +81,30 @@ namespace WerkelijkWaar.Controllers
                         schoolList.Add(new Classes.School { Id = school.Id, SchoolName = school.SchoolName });
                     }
 
-                    am.SchoolList = new SelectList(schoolList, "Id", "SchoolName");
+                    adminModel.SchoolList = new SelectList(schoolList, "Id", "SchoolName");
                 }
 
-                return View(am);
+                return View(adminModel);
             }
 
             return RedirectToAction("Index", "Home");
         }
 
+        /// <summary>
+        /// Navigate to ServerConfig
+        /// </summary>
+        /// <returns></returns>
         public IActionResult ServerConfig()
         {
             // login check
             if (!String.IsNullOrEmpty(HttpContext.Session.GetString("User")))
             {
-                HubModel hm = new HubModel();
-                hm.User = Newtonsoft.Json.JsonConvert.DeserializeObject<Classes.User>(HttpContext.Session.GetString("User"));
+                HubModel hubModel = new HubModel();
+                hubModel.User = Newtonsoft.Json.JsonConvert.DeserializeObject<Classes.User>(HttpContext.Session.GetString("User"));
 
-                if (hm.User.RoleId == 3)
+                if (hubModel.User.RoleId == 3)
                 {
-                    return View(hm);
+                    return View(hubModel);
                 }
             }
 
