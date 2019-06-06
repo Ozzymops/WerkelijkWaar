@@ -1,0 +1,53 @@
+-----[LOG ENTRY]-----
+[Game - HostRoom]
+6-6-2019 | 12:11: User JMuris (4) is trying to host a room.
+6-6-2019 | 12:11: (4) validated.
+6-6-2019 | 12:11: (4, NjsGVu) retrieved configuration with Id 1.
+6-6-2019 | 12:11: (4, NjsGVu) applied configuration.
+6-6-2019 | 12:11: (4, NjsGVu) room is open and ready.
+6-6-2019 | 12:11: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[Game - HostRoom]
+6-6-2019 | 12:12: User JMuris (4) is trying to host a room.
+6-6-2019 | 12:12: (4) validated.
+6-6-2019 | 12:12: (4, 3ecW18) retrieved configuration with Id 1.
+6-6-2019 | 12:12: (4, 3ecW18) applied configuration.
+6-6-2019 | 12:12: (4, 3ecW18) room is open and ready.
+6-6-2019 | 12:12: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[Game - JoinRoom]
+6-6-2019 | 12:12: User AAppel (5b134e2f-ee33-477d-95bd-2f8b555ac7b3) is trying to join room 3ecW18.
+-----[LOG ENTRY]-----
+[Game - JoinRoom]
+6-6-2019 | 12:12: User AAppel (5b134e2f-ee33-477d-95bd-2f8b555ac7b3) is trying to join room 3ecW18.
+-----[LOG ENTRY]-----
+[Game - JoinRoom]
+6-6-2019 | 12:12: User AAppel (5b134e2f-ee33-477d-95bd-2f8b555ac7b3) is trying to join room 3ecW18.
+-----[LOG ENTRY]-----
+[Game - JoinRoom]
+6-6-2019 | 12:12: User AAppel (5b134e2f-ee33-477d-95bd-2f8b555ac7b3) is trying to join room 3ecW18.
+-----[LOG ENTRY]-----
+[Game - JoinRoom]
+6-6-2019 | 12:12: User AAppel (5b134e2f-ee33-477d-95bd-2f8b555ac7b3) is trying to join room 3ecW18.
+-----[LOG ENTRY]-----
+[Game - JoinRoom]
+6-6-2019 | 12:12: User AAppel (5b134e2f-ee33-477d-95bd-2f8b555ac7b3) is trying to join room 3ecW18.
+-----[LOG ENTRY]-----
+[Game - JoinRoom]
+6-6-2019 | 12:12: User AAppel (5b134e2f-ee33-477d-95bd-2f8b555ac7b3) is trying to join room 3ecW18.
+-----[LOG ENTRY]-----
+[Game - JoinRoom]
+6-6-2019 | 12:12: User AAppel (5b134e2f-ee33-477d-95bd-2f8b555ac7b3) is trying to join room 3ecW18.
+-----[LOG ENTRY]-----
+[Game - JoinRoom]
+6-6-2019 | 12:12: User AAppel (5b134e2f-ee33-477d-95bd-2f8b555ac7b3) is trying to join room 3ecW18.
+-----[LOG ENTRY]-----
+[Game - JoinRoom]
+6-6-2019 | 12:12: User AAppel (5b134e2f-ee33-477d-95bd-2f8b555ac7b3) is trying to join room 3ecW18.
+-----[LOG ENTRY]-----
+[Game - JoinRoom]
+6-6-2019 | 12:12: User AAppel (5b134e2f-ee33-477d-95bd-2f8b555ac7b3) is trying to join room 3ecW18.

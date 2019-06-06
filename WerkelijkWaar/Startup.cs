@@ -18,19 +18,7 @@ namespace WerkelijkWaar
     {
         public Startup(IConfiguration configuration)
         {
-            Classes.Logger l = new Classes.Logger();
-            Stopwatch sw = new Stopwatch();
-
-            sw.Restart();
-            l.WriteToLog("[Startup]", "Starting server...", 0);
-            l.DebugToLog("[Startup]", sw.ElapsedMilliseconds.ToString() + "ms. Launching server", 0);
-
             Configuration = configuration;
-
-            l.WriteToLog("[Startup]", "Server is up and running!", 2);
-            l.DebugToLog("[Startup]", sw.ElapsedMilliseconds.ToString() + "ms. Server is up", 2);
-
-            sw.Stop();
         }
 
         public IConfiguration Configuration { get; }

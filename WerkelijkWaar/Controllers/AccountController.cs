@@ -511,7 +511,7 @@ namespace WerkelijkWaar.Controllers
                     }
                 }
 
-                return RedirectToAction("IndividualUsers", "Overview", new { id = adminModel.User.Id });
+                return RedirectToAction("IndividualUsers", "Overview", new { userId = adminModel.User.Id });
             }
 
             return RedirectToAction("Index", "Home");
@@ -521,8 +521,9 @@ namespace WerkelijkWaar.Controllers
         /// Delete a account belonging to a certain User ID
         /// </summary>
         /// <param name="userId">User ID</param>
+        /// <param name="selfDelete">Is this a admin action or a self-inflicted delete?</param>
         /// <returns>View</returns>
-        public IActionResult DeleteAccount(int userId)
+        public IActionResult DeleteAccount(int userId, bool selfDelete)
         {
             // check if logged in as the user it's trying to destroy
             if (!String.IsNullOrEmpty(HttpContext.Session.GetString("User")))
@@ -531,7 +532,7 @@ namespace WerkelijkWaar.Controllers
 
                 Classes.User tempUser = Newtonsoft.Json.JsonConvert.DeserializeObject<Classes.User>(HttpContext.Session.GetString("User"));
 
-                if (tempUser.Id == userId || tempUser.RoleId == 3)
+                if (tempUser.Id == userId || tempUser.RoleId == 2 || tempUser.RoleId == 3)
                 {
                     logger.Log("[AccountController - DeleteAccount]", "Deleting (" + userId + ")...", 1, 2, false);
 
@@ -545,7 +546,7 @@ namespace WerkelijkWaar.Controllers
                     {
                         logger.Log("[AccountController - DeleteAccount]", "Successfully deleted (" + userId + ").", 2, 2, false);
 
-                        if (tempUser.RoleId != 3)
+                        if (selfDelete)
                         {
                             HttpContext.Session.Remove("User");
                         }

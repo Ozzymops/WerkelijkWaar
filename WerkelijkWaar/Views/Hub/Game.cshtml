@@ -23,8 +23,10 @@
                     <input id="btn-connectLobby" type="button" class="form-button" style="margin-top: 10px;" value="Verbinden met lobby" />
                 </div>
                 <div>
-                    <p id="followerCount">Volgers: 0</p>
-                    <p id="moneyCount">Geld: €0.00-</p>
+                    <div id="personalScore" style="display: none;">
+                        <p id="followerCount">Volgers: 0</p>
+                        <p id="moneyCount">Geld: €0.00-</p>
+                    </div>
                     <div id="game-connected" style="display: none;">
                         <div style="display: flex; flex-direction: column;">
                             <div>
@@ -109,7 +111,7 @@
                         </div>
                         <span class="clockBar" style="display: none; margin-left: auto; margin-right: auto; width: 100vw; height: 50px; background-color: #f7c747; text-align: center;"></span>
                     </div>
-                    <div id="game-leaderboard">
+                    <div id="game-leaderboard" style="display: none;">
                         <ul id="leaderboard"></ul>
                         <input id="btn-leaveGameOnEnd" style="display: none;" class="form-button-orange" type="button" value="Afsluiten" />
                     </div>

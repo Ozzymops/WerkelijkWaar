@@ -10,7 +10,7 @@
             <form asp-controller="Account" asp-action="EditUser">
                 <div style="display: flex;">
                     <a asp-controller="Overview" asp-action="UserOverview" style="margin-left: 500px;"><input class="form-button" type="button" value="Terugkeren" style="margin-right: 0; width: 200px;" /></a>
-                    <a asp-controller="Account" asp-action="DeleteAccount" asp-route-id="@Model.User.Id"><input class="form-button" type="button" value="Verwijderen" style="background-color: red; padding: 10px; margin-right: 0; width: 200px;" /></a>
+                    <a asp-controller="Account" asp-action="DeleteAccount" asp-route-userId="@Model.User.Id", asp-route-selfDelete="false"><input class="form-button" type="button" value="Verwijderen" style="background-color: red; padding: 10px; margin-right: 0; width: 200px;" /></a>
                     <input class="form-button" type="submit" value="Opslaan" style="margin-right: 0; width: 200px;" />
                 </div>
                 <div style="display: flex; flex-direction: row; padding: 10px;">
@@ -32,7 +32,7 @@
                         <input asp-for="User.Name" value="@Model.User.Name" type="text" class="text-input" style="width: 75px; margin-left: 0px;" />
                         <input asp-for="User.Surname" value="@Model.User.Surname" type="text" class="text-input" style="width: 75px; margin-left: 0px; margin-top:17px;" />
                         <input asp-for="User.Username" value="@Model.User.Username" type="text" class="text-input" style="width: 75px; margin-left: 0px; margin-top:17px;" />
-                        @Html.DropDownListFor(model => model.User.RoleId, Model.RoleList, "Kies een rol", new { @class = "dropdown", @style = "margin-top: 17px;" })
+                        @Html.DropDownListFor(model => model.User.RoleId, Model.RoleList, "Kies een rol", new { @class = "dropdown", @style = "margin-top: 17px;", @selected = Model.User.RoleId })
                         @*@Html.DropDownListFor(model => model.School.Id, Model.SchoolList, "Kies een school", new { @class = "dropdown", @style = "margin-top: 17px;" })
                         @Html.DropDownListFor(model => model.Group.Id, Model.GroupList, "Kies een klas", new { @class = "dropdown", @style = "margin-top: 17px;" })*@
                         @if (!String.IsNullOrEmpty(Model.User.ImageSource))

@@ -122,7 +122,7 @@ namespace WerkelijkWaar
                                 {
                                     // Create task to leave room
                                     Task leaveTask = new Task(() => {
-                                        LeaveRoom(user.SocketId, room.RoomCode, true);
+                                        LeaveRoom(user.Id.ToString(), user.SocketId, room.RoomCode, true);
                                     });
 
                                     taskList.Add(leaveTask);
@@ -207,7 +207,7 @@ namespace WerkelijkWaar
                 logger.Log("[Game - HostRoom]", "(" + correctedUserId + ", " + newRoom.RoomCode + ") room is open and ready.", 2, 3, false);
 
                 await InvokeClientMethodToAllAsync("hostRoom", socketId, newRoom.RoomCode);
-                await RetrievePlayerList(newRoom.RoomCode, false);
+                await RetrievePlayerList(newRoom.RoomCode);
             }
             else
             {
@@ -260,7 +260,7 @@ namespace WerkelijkWaar
                                                                   ReadyToPlay = false, WroteStory = false, ChoseStory = false });
 
                                 await InvokeClientMethodToAllAsync("joinRoom", socketId, roomCode);
-                                await RetrievePlayerList(room.RoomCode, false);
+                                await RetrievePlayerList(room.RoomCode);
                                 await PowerupVisuals(room.RoomCode);
                             }
                             else
@@ -361,7 +361,7 @@ namespace WerkelijkWaar
                             room.Users.Remove(user);
                             room.ResetTimer();
                             await InvokeClientMethodToAllAsync("leaveRoom", socketId, kicked);
-                            await RetrievePlayerList(room.RoomCode, false);
+                            await RetrievePlayerList(room.RoomCode);
                         }
                     }
                 }
@@ -428,7 +428,7 @@ namespace WerkelijkWaar
                         logger.Log("[Game - StartGame]", "Preparations are complete. Game in room " + roomCode + " has started.", 2, 3, false);
 
                         await InvokeClientMethodToAllAsync("startGame", roomCode, room.CurrentGroup);
-                        await RetrievePlayerList(room.RoomCode, true);
+                        await RetrievePlayerList(room.RoomCode);
                     }
                 }
             }
@@ -465,7 +465,7 @@ namespace WerkelijkWaar
                         logger.Log("[Game - ReadyUpPlayer]", roomCode + " all players readied up.", 0, 3, false);
                         logger.Log("[Game - ReadyUpPlayer]", roomCode + " continuing game...", 2, 3, false);
 
-                        await GoToWritePhase(roomCode, room.RoomOwnerId, false);
+                        await GoToWritePhase(room.RoomOwnerId, room.RoomOwnerId, roomCode, false);
                     }
                 }
             }
@@ -517,7 +517,7 @@ namespace WerkelijkWaar
                         logger.Log("[Game - GoToWritePhase]", roomCode + " continuing to writing phase...", 2, 3, false);
 
                         await InvokeClientMethodToAllAsync("goToWritePhase", roomCode);
-                        await StartGameTimer(roomCode, room.Config.MaxWritingTime, room.RoomOwnerId);
+                        await StartGameTimer(room.RoomOwnerId, roomCode, room.Config.MaxWritingTime);
                         await RetrieveRootStory(roomCode);
                     }
                     else
@@ -580,7 +580,7 @@ namespace WerkelijkWaar
                                 await InvokeClientMethodToAllAsync("goToReadPhase", roomCode, room.RoomOwnerId, 0, 0);
 
                                 await PowerupVisuals(roomCode);
-                                await StartGameTimer(roomCode, room.Config.MaxReadingTime, room.RoomOwnerId);
+                                await StartGameTimer(room.RoomOwnerId, roomCode, room.Config.MaxReadingTime);
                                 await RetrieveWrittenStories(roomCode, room.CurrentGroup);
                             }
                             else
@@ -603,7 +603,7 @@ namespace WerkelijkWaar
                             await InvokeClientMethodToAllAsync("goToReadPhase", roomCode, room.RoomOwnerId, 0, 0);
 
                             await PowerupVisuals(roomCode);
-                            await StartGameTimer(roomCode, room.Config.MaxReadingTime, room.RoomOwnerId);
+                            await StartGameTimer(room.RoomOwnerId, roomCode, room.Config.MaxReadingTime);
                             await RetrieveWrittenStories(roomCode, room.CurrentGroup);
                         }
                     }
@@ -759,7 +759,7 @@ namespace WerkelijkWaar
 
                         logger.Log("[Game - UploadStory]", roomCode + " continuing to read phase.", 2, 3, false);
 
-                        await GoToReadPhase(roomCode, true);
+                        await GoToReadPhase(room.RoomOwnerId, roomCode, true);
                     }
                 }
             }
@@ -935,13 +935,13 @@ namespace WerkelijkWaar
 
                         room.NeededAnswers = 0;
 
-                        logger.Log("[Game - UploadAnswer]", roomCode + " (" + user.Id + " | " + socketId + ") has been parsed. Everybody answered, continuing to leaderboard.", 2, 3, false);
+                        logger.Log("[Game - UploadAnswer]", roomCode + "User has been parsed. Everybody answered, continuing to leaderboard.", 2, 3, false);
 
                         await GiveMoney(roomCode);
                     }
                     else
                     {
-                        logger.Log("[Game - UploadAnswer]", roomCode + " (" + user.Id + " | " + socketId + ") has been parsed.", 2, 3, false);
+                        logger.Log("[Game - UploadAnswer]", roomCode + "User has been parsed.", 2, 3, false);
                     }
                 }
             }

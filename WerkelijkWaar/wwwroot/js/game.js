@@ -80,6 +80,7 @@ $(document).ready(function () {
             // Hide irrelevant elements
             document.getElementById("game-connected").style.display = "none";
             document.getElementById("btn-leaveGameOnEnd").style.display = "block";
+            document.getElementById("personalScore").style.display = "none";
             $roomContent.val('');
 
             // Show relevant elements
@@ -774,6 +775,7 @@ $(document).ready(function () {
         document.getElementById("game-write").style.display = "block";
         document.getElementById("game-read").style.display = "none";
         document.getElementById("game-leaderboard").style.display = "none";
+        document.getElementById("personalScore").style.display = "block";
 
         $('#btn-sendStory').prop('disabled', false);
     }

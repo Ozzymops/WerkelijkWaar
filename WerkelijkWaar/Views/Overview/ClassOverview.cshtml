@@ -14,22 +14,22 @@
                     <ul style="border: 1px solid black; list-style-type: none;">
                         @if (Model.UserList != null && Model.UserList.Count != 0)
                         {
-                            int i = 0;
-                            foreach (WerkelijkWaar.Classes.User u in Model.UserList)
+                            int rank = 0;
+                            foreach (WerkelijkWaar.Classes.User user in Model.UserList)
                             {
-                                if (i < 5)
+                                if (rank < 5)
                                 {
-                                    i++;
-                                    if (!String.IsNullOrEmpty(u.ImageSource))
+                                    rank++;
+                                    if (!String.IsNullOrEmpty(user.ImageSource))
                                     {
                                         <li>
-                                            @i: <img src="~/content/image/avatars/@u.Id/@u.ImageSource" style="height: 33px; width: 33px;" /> @u.Name @u.Surname - @u.AverageScore.ToString("N1")
+                                            @rank: <img src="~/content/image/avatars/@user.Id/@user.ImageSource" style="height: 33px; width: 33px;" /> @user.Name @user.Surname - @user.AverageScore.ToString("N1")
                                         </li>
                                     }
                                     else
                                     {
                                         <li>
-                                            @i: <img src="~/content/image/Person.png" style="height: 33px; width: 33px;" /> @u.Name @u.Surname - @u.AverageScore.ToString("N1")
+                                            @rank: <img src="~/content/image/Person.png" style="height: 33px; width: 33px;" /> @user.Name @user.Surname - @user.AverageScore.ToString("N1")
                                         </li>
                                     }
                                 }
@@ -42,22 +42,22 @@
                     <ul style="border: 1px solid black; list-style-type: none;">
                         @if (Model.UserList != null && Model.UserList.Count != 0)
                         {
-                            int i = 0;
-                            foreach (WerkelijkWaar.Classes.User u in Model.UserList)
+                            int rank = 0;
+                            foreach (WerkelijkWaar.Classes.User user in Model.UserList)
                             {
-                                if (i < 5)
+                                if (rank < 5)
                                 {
-                                    i++;
-                                    if (!String.IsNullOrEmpty(u.ImageSource))
+                                    rank++;
+                                    if (!String.IsNullOrEmpty(user.ImageSource))
                                     {
                                         <li>
-                                            @i: <img src="~/content/image/avatars/@u.Id/@u.ImageSource" style="height: 33px; width: 33px;" /> @u.Name @u.Surname - @u.AverageScore.ToString("N1")
+                                            @rank: <img src="~/content/image/avatars/@user.Id/@user.ImageSource" style="height: 33px; width: 33px;" /> @user.Name @user.Surname - @user.AverageScore.ToString("N1")
                                         </li>
                                     }
                                     else
                                     {
                                         <li>
-                                            @i: <img src="~/content/image/Person.png" style="height: 33px; width: 33px;" /> @u.Name @u.Surname - @u.AverageScore.ToString("N1")
+                                            @rank: <img src="~/content/image/Person.png" style="height: 33px; width: 33px;" /> @user.Name @user.Surname - @user.AverageScore.ToString("N1")
                                         </li>
                                     }
                                 }
@@ -71,22 +71,22 @@
                 <ul style="border: 1px solid black; list-style-type: none;">
                     @if (Model.UserList != null && Model.UserList.Count != 0)
                     {
-                        int i = 0;
-                        foreach (WerkelijkWaar.Classes.User u in Model.UserList)
+                        int rank = 0;
+                        foreach (WerkelijkWaar.Classes.User user in Model.UserList)
                         {
-                            if (i < 5)
+                            if (rank < 5)
                             {
-                                i++;
-                                if (!String.IsNullOrEmpty(u.ImageSource))
+                                rank++;
+                                if (!String.IsNullOrEmpty(user.ImageSource))
                                 {
                                     <li>
-                                        @i: <img src="~/content/image/avatars/@u.Id/@u.ImageSource" style="height: 33px; width: 33px;" /> <a asp-controller="Overview" asp-action="ScoreOverview" asp-route-id="@u.Id" asp-route-rank="@i">@u.Name @u.Surname</a> - @u.AverageScore.ToString("N1")
+                                        @rank: <img src="~/content/image/avatars/@user.Id/@user.ImageSource" style="height: 33px; width: 33px;" /> <a asp-controller="Overview" asp-action="ScoreOverview" asp-route-userId="@user.Id" asp-route-rank="@rank">@user.Name @user.Surname</a> - @user.AverageScore.ToString("N1")
                                     </li>
                                 }
                                 else
                                 {
                                     <li>
-                                        @i: <img src="~/content/image/Person.png" style="height: 33px; width: 33px;" /> <a asp-controller="Overview" asp-action="ScoreOverview" asp-route-id="@u.Id" asp-route-rank="@i">@u.Name @u.Surname</a> - @u.AverageScore.ToString("N1")
+                                        @rank: <img src="~/content/image/Person.png" style="height: 33px; width: 33px;" /> <a asp-controller="Overview" asp-action="ScoreOverview" asp-route-userId="@user.Id" asp-route-rank="@rank">@user.Name @user.Surname</a> - @user.AverageScore.ToString("N1")
                                     </li>
                                 }
                             }

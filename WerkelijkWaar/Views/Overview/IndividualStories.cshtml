@@ -7,11 +7,21 @@
 <body>
     <div style="margin-top: 10px;">
         <div style="background-color: #f7c747; display: flex; flex-direction: column;">
-            <div style="display: flex;">
-                <a asp-controller="Overview" asp-action="StoryOverview" style="margin-left: 700px;"><input class="form-button" type="button" value="Terugkeren" style="margin-right: 0; width: 200px;" /></a>
-                <a asp-controller="Overview" asp-action="EditStoryStatus" asp-route-id="@Model.Story.Id" asp-route-status="-1"><input class="form-button" type="button" value="Weigeren" style="background-color: red; margin-right: 0; width: 200px;" /></a>
-                <a asp-controller="Overview" asp-action="EditStoryStatus" asp-route-id="@Model.Story.Id" asp-route-status="2"><input class="form-button" type="button" value="Goedkeuren" style="background-color: green; margin-right: 0; width: 200px;" /></a>
-            </div>
+
+            @if (Model.User.RoleId == 0 || Model.User.RoleId == 1)
+            {
+                <div>
+                    <a asp-controller="Overview" asp-action="ScoreOverview" asp-route-userId="@Model.User.Id"><input class="form-button" type="button" value="Terugkeren" style="margin-right: 0; width: 200px;" /></a>
+                </div>
+            }
+            else if (Model.User.RoleId == 2)
+            {
+                <div style="display: flex;">
+                    <a asp-controller="Overview" asp-action="StoryOverview" style="margin-left: 700px;"><input class="form-button" type="button" value="Terugkeren" style="margin-right: 0; width: 200px;" /></a>
+                    <a asp-controller="Overview" asp-action="EditStoryStatus" asp-route-storyId="@Model.Story.Id" asp-route-status="-1"><input class="form-button" type="button" value="Weigeren" style="background-color: red; margin-right: 0; width: 200px;" /></a>
+                    <a asp-controller="Overview" asp-action="EditStoryStatus" asp-route-storyId="@Model.Story.Id" asp-route-status="2"><input class="form-button" type="button" value="Goedkeuren" style="background-color: green; margin-right: 0; width: 200px;" /></a>
+                </div>
+            }
             <div style="padding: 10px;">
                 <p>@Model.Story.Title</p>
             </div>
