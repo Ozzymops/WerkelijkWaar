@@ -1,7 +1,6 @@
 ﻿// Switch sidebar images with its darker versions
 // console.log(document.title);
 var roleId = $('#hiddenRoleId').val();
-console.log("Role Id: " + roleId);
 
 // Student
 if (roleId == 0) {

@@ -1,751 +1,295 @@
-﻿// Start on load
+﻿// -----------------------------------------------------------
+// |                   Werkelijk Waar?                       |
+// -----------------------------------------------------------
+// | Ontwikkeld door Justin Muris, Feel2B: https://feel2b.tv |
+// |                        2019                             |
+// -----------------------------------------------------------
+
 $(document).ready(function () {
-    //#region Web sockets
-    var connection = new WebSocketManager.Connection("ws://localhost:50001/game");
+    // #region Variables
+    var mySocketId = "";
+    var userId = $('#userIdHolder').val().trim();
+    var username = $('#usernameHolder').val().trim();
+    var currentRoomCode = $('#roomCodeHolder').val().trim();
+    var roleId = $('#roleIdHolder').val().trim();
+    var storySource = $('#storySourceHolder').val().trim();
+    var myGroup = 0;
+    var inRoom = false;
+    var tutorialPage = 1;
+    var tickInterval = 0;
+    var timer = 0;
+    var currentTimer;
+    // #endregion
+
+    // #region WebSockets
+    var connection = new WebSocketManager.Connection('ws://localhost:50001/game');
     connection.enableLogging = false;
 
-    // On connect
+    // -- On connect: add connection to global list. Also clean current data with .trim()
     connection.connectionMethods.onConnected = () => {
-        // Add connection to global list
-        connection.invoke("AddConnection", connection.connectionId);
+        console.log("Connection established: your socket ID = " + connection.connectionId);
+        mySocketId = connection.connectionId;
+        connection.invoke('AddConnection', connection.connectionId);
     }
 
-    // On disconnect
-    connection.connectionMethods.onDisconnected = () => {
-        // blank
-    }
-    //#endregion
+    // -- Start
+    connection.start();
+    // #endregion
 
-    //#region Connection
-    // Ping to server to inform you're alive
-    connection.clientMethods["pingToServer"] = (socketId) => {
-        if (socketId == connection.connectionId) {
-            connection.invoke("AddPong", connection.connectionId);
+    // #region Connection
+    // -- Response to PingToServer: ping to server to inform you're not idle
+    connection.clientMethods['pingToServer'] = (socketId) => {
+        if (mySocketId == socketId) {
+            connection.invoke('AddPong', connection.connectionId);
         }
     }
-    //#endregion
+    // #endregion
 
-    //#region Communication
-    // Set status message
-    connection.clientMethods["setStateMessage"] = (socketId, message) => {
-        if (socketId == connection.connectionId) {
-            document.getElementById("statusMessage").innerHTML = message;
+    // #region Communication
+    // -- Response to SetStateMessage: change statusMessage <p> text
+    connection.clientMethods['setStateMessage'] = (socketId, message) => {
+        if (mySocketId == socketId) {
+            $('#statusMessage').html = message;
         }
     }
-    //#endregion
+    // #endregion
 
-    //#region Rooms
-    // Host a room
-    connection.clientMethods["hostRoom"] = (socketId, roomCode) => {
-        if (socketId == connection.connectionId) {
-            inRoom = true;
-            $roomContent.val(roomCode);
+    // #region Rooms
+    // -- Response to HostRoom
+    connection.clientMethods['hostRoom'] = (socketId, roomCode) => {
+        if (mySocketId == socketId) {
+            console.log("Loading lobby...");
 
-            // Hide irrelevant elements
-            document.getElementById("game-prep").style.display = "none";
-            hideNavigation();
-
-            // Show relevant elements
-            document.getElementById("game-connected").style.display = "block";
-            document.getElementById("gameCode").innerHTML = "Jouw spelcode is: " + roomCode;
+            HostRoom(roomCode);
         }
     }
 
-    // Join a room
-    connection.clientMethods["joinRoom"] = (socketId, roomCode) => {
-        if (socketId == connection.connectionId) {
-            inRoom = true;
-            $roomContent.val(roomCode);
+    // -- Response to JoinRoom
+    connection.clientMethods['joinRoom'] = (socketId, roomCode) => {
+        if (mySocketId == socketId) {
+            console.log("Loading lobby...");
 
-            document.getElementById("statusMessage").innerHTML = "Kamer met code '" + roomCode + "' ingegaan als '" + $userContent.val().trim() + "'.";
-
-            // Hide irrelevant elements
-            document.getElementById("game-prep").style.display = "none";
-            hideNavigation();
-
-            // Show relevant elements
-            document.getElementById("game-connected").style.display = "block";
+            JoinRoom(roomCode);
         }
     }
 
-    // Leave a room
-    connection.clientMethods["leaveRoom"] = (socketId, kicked) => {
-        if (socketId == connection.connectionId) {
-            inRoom = false;
+    // -- Response to LeaveRoom
+    connection.clientMethods['leaveRoom'] = (socketId, kicked) => {
+        if (mySocketId == socketId) {
+            console.log("Removed from lobby.");
 
-            if (kicked) {
-                document.getElementById("statusMessage").innerHTML = "Je bent door de eigenaar van de kamer verwijderd.";
-            }
-
-            // Hide irrelevant elements
-            document.getElementById("game-connected").style.display = "none";
-            document.getElementById("btn-leaveGameOnEnd").style.display = "block";
-            document.getElementById("personalScore").style.display = "none";
-            $roomContent.val('');
-
-            // Show relevant elements
-            document.getElementById("game-prep").style.display = "block";
-            document.getElementById("statusMessage").style.display = "block;";
-            showNavigation();
+            LeaveRoom(kicked);
         }
     }
 
-    // Retrieve player list
-    connection.clientMethods["retrievePlayerList"] = (roomCode, ownerId, playerList, withGroups) => {
-        if ($roomContent.val() == roomCode) {
-            var players = JSON.parse(playerList);
-
-            $('#playerList').empty();
-
-            for (var p in players) {
-                var tempString = players[p];
-                var tempArray = tempString.split(':|!');
-
-                if (withGroups) {
-                    $('#playerList').append('<li>G' + tempArray[2] + ". " + tempArray[0] + ", S" + tempArray[3] + '.</li>');
-                }
-                else {
-                    if (ownerId == connection.connectionId) {
-                        if (tempArray[1] == connection.connectionId) {
-                            $('#playerList').append('<li>' + tempArray[0] + '</li>');
-                        }
-                        else {
-                            var idString = "'" + tempString + "'";
-                            $('#playerList').append('<li><p>' + tempArray[0] + '<input class="form-button-orange" onClick="$.kickUser(' + idString + ')" type="button" value="Kick" style="width: 50px;" /></p></li>');
-                        }
-                    }
-                    else {
-                        $('#playerList').append('<li>' + tempArray[0] + '</li>');
-                    }
-                }
-            }
-
-            var playerCount = document.getElementById("playerList").getElementsByTagName("li").length;
-            document.getElementById("playerCount").innerHTML = playerCount + " spelers zijn verbonden.";
+    // -- Response to RetrievePlayerList
+    connection.clientMethods['retrievePlayerList'] = (ownerSocketId, roomCode, playerList) => {
+        if (currentRoomCode == roomCode) {
+            RetrievePlayerList(ownerSocketId, playerList);
         }
     }
-    //#endregion
+    // #endregion
 
-    //#region Game
-    // Start game with current lobby
-    connection.clientMethods["startGame"] = (roomCode, gameGroup) => {
-        if ($roomContent.val() == roomCode) {
-
-            myGroup = gameGroup;
-            console.log(myGroup + " " + gameGroup);
-
-            // Hide irrelevant elements
-            document.getElementById("game-connected").style.display = "none";
-
-            // Show relevant elements
-            document.getElementById("statusMessage").style.display = "none;";
-            document.getElementById("game-tutorial-1").style.display = "block";
-
-            // Debug
-            document.getElementById("game-tutorial-2").style.display = "none";
-            document.getElementById("game-tutorial-3").style.display = "none";
-            document.getElementById("game-write").style.display = "none";
-            document.getElementById("game-waiting").style.display = "none";
+    // #region Game
+    // -- Response to StartGame
+    connection.clientMethods['startGame'] = (roomCode, gameGroup) => {
+        if (currentRoomCode == roomCode) {
+            StartGame(gameGroup);
         }
     }
 
-    // Continue game from tutorial
-    connection.clientMethods["continueGame"] = (roomCode) => {
-        if ($roomContent.val() == roomCode) {
-            // Hide irrelevant elements
-            document.getElementById("game-tutorial-1").style.display = "none";
-            document.getElementById("game-tutorial-2").style.display = "none";         
-
-            // Show relevant elements
-            document.getElementById("game-write").style.display = "block";
-
-            // Countdown timer for writing
-            connection.invoke("StartGameTimer", roomCode, 60, connection.connectionId);
+    // -- Response to WritePhase
+    connection.clientMethods['writePhase'] = (roomCode) => {
+        if (currentRoomCode == roomCode) {
+            WritePhase();
         }
     }
 
-    connection.clientMethods["goToWritePhase"] = (roomCode) => {
-        if ($roomContent.val() == roomCode) {
-            startWriting();
-        }
-    }
-
-    connection.clientMethods["goToReadPhase"] = (roomCode, socketId, group, currentGroup) => {
-        if ($roomContent.val() == roomCode) {
-            if (connection.connectionId == socketId) {
-                startReading(group, currentGroup);            
+    // -- Response to ReadPhase
+    connection.clientMethods['readPhase'] = (roomCode, socketId, gameGroup, currentGroup) => {
+        if (currentRoomCode == roomCode) {
+            if (mySocketId == socketId) {
+                ReadPhase(gameGroup, currentGroup);
             }
         }
     }
 
-    connection.clientMethods["showLeaderboards"] = (roomCode, rank, endGame) => {
-        if ($roomContent.val() == roomCode) {
-            var ranking = JSON.parse(rank);
-
-            $('#leaderboard').empty();
-
-            for (var r in ranking) {
-                var tempString = ranking[r];
-                var tempArray = tempString.split(':|!');
-
-                $('#leaderboard').append('<li>'+ tempArray[0] + ". " + tempArray[1] + " - " + tempArray[2] + " volgers, " + tempArray[3] + ' euro</li>');
-            }
-
-            showLeaderboards();
-
-            if (endGame) {
-                document.getElementById("btn-leaveGameOnEnd").style.display = "block";
-            }
+    connection.clientMethods['startTimer'] = (roomCode, time) => {
+        if (currentRoomCode == roomCode) {
+            StartTimer(time);
         }
     }
 
-    // Start countdown timer
-    connection.clientMethods["startCountdownTimer"] = (roomCode, time) => {
-        if ($roomContent.val() == roomCode) {
-            startTimer(time);
+    connection.clientMethods['stopTimer'] = (roomCode) => {
+        if (currentRoomCode == roomCode) {
+            StopTimer();
         }
     }
+    // #endregion
 
-    // Stop countdown timer
-    connection.clientMethods["stopCountdownTimer"] = (roomCode) => {
-        if ($roomContent.val() == roomCode) {
-            stopTimer();
-        }
+    // #region Client Methods
+    function HideNavigationBars() {
+        $('#html').css('background-color', '#6ac2c4');
+        $('#body').css('background-color', '#6ac2c4');
+        $('#topBar').css('display', 'none');
+        $('#sideBar').css('display', 'none');
     }
 
-    // Retrieve root stories
-    connection.clientMethods["retrieveRootStory"] = (roomCode, socketId, story) => {
-        if ($roomContent.val() == roomCode) {
-            if (socketId == connection.connectionId) {
-                var rootStory = story;
-                var rootStoryContent = rootStory.split(':!|');
-
-                var rootStoryId = rootStoryContent[0];
-                var rootStoryTitle = rootStoryContent[1];
-                var rootStoryText = rootStoryContent[2];
-                console.log("RootStory: " + rootStoryId + ". " + rootStoryTitle + ": " + rootStoryText);
-
-                currentRootId = rootStoryId;
-
-                $('#storyTitle').html("Titel: " + rootStoryTitle);
-                $('#storyText').html(rootStoryText);
-            }
-        }
+    function ShowNavigationBars() {
+        $('#html').css('background-color', '#f5b91a');
+        $('#body').css('background-color', '#f5b91a');
+        $('#topBar').css('display', 'block');
+        $('#sideBar').css('display', 'block');
     }
 
-    // Show written stories
-    connection.clientMethods["showStories"] = (gameGroup, roomCode, stories) => {
-        if ($roomContent.val() == roomCode) {
-            if (gameGroup != myGroup) {
-                $('#storyList').empty();
-
-                var storyCount = 1;
-                var buttonCount = 0;
-                storyList = JSON.parse(stories);
-
-                for (var story in storyList) {
-                    if (storyCount <= 7) {
-                        var selectedStory = storyList[story];
-                        var selectedStoryContent = selectedStory.split(':!|');
-
-                        var storyId = selectedStoryContent[0];
-                        var storyTitle = selectedStoryContent[1];
-                        var storyText = selectedStoryContent[2];
-                        var storySpot = '#storySpot-' + storyCount;
-
-                        console.log("WrittenStory: " + storyId + ". " + storyTitle + ": " + storyText + " FOR spot " + storySpot);
-
-                        // $(storySpot).prop('value', storyTitle);
-                        var newInput = document.createElement("input");
-                        $(newInput).val(storyTitle);
-                        $(newInput).prop('id', buttonCount);
-                        $(newInput).prop('type', 'button');
-                        $(newInput).addClass('btn-swapStory');
-                        $('#storyList').append(newInput);
-                        newInput.addEventListener("click", function () {
-                            swapStory(this.id);
-                        });
-                        // $('#storyList').append('<input id="' + (storyCount-1) + '" class="btn-swapStory" type="button" value="' + storyTitle + '" />');
-
-                        console.log($(storySpot).val());
-
-                        if (storyCount == 1) {
-                            $('#readStoryTitle').html("Titel: " + storyTitle);
-                            $('#readStoryText').html(storyText);
-                        }
-
-                        if ($(storySpot).val() == undefined) {
-                            $(storySpot).prop('display', 'none');
-                        }
-
-                        storyCount++;
-                        buttonCount++;
-                    }
-                }
-            }
-            else {
-                // show wait screen
-            }
-        }
+    function HideAll() {
+        $('#statusMessage').css('display', 'none');
+        $('#game-prep').css('display', 'none');
+        $('#game-connected').css('display', 'none');
+        $('#game-tutorial-1').css('display', 'none');
+        $('#game-tutorial-2').css('display', 'none');
+        $('#game-tutorial-3').css('display', 'none');
+        $('#game-write').css('display', 'none');
+        $('#game-read').css('display', 'none');
+        $('#game-waiting').css('display', 'none');
+        $('#game-write').css('display', 'none');
+        $('#game-read').css('display', 'none');
+        $('#game-leaderboard').css('display', 'none');
     }
 
-    connection.clientMethods["returnWrongAnswers"] = (roomCode, socketId, stories) => {
-        if ($roomContent.val() == roomCode) {
-            if (connection.connectionId == socketId) {
-                $('#storyList').empty();
+    function HostRoom(newRoomCode) {
+        inRoom = true;
+        currentRoomCode = newRoomCode;
+        tutorialPage = 1;
 
-                var storyCount = 1;
-                var buttonCount = 0;
-                storyList = JSON.parse(stories);
+        HideNavigationBars();
+        HideAll();
 
-                for (var story in storyList) {
-                    if (storyCount <= 7) {
-                        var selectedStory = storyList[story];
-                        var selectedStoryContent = selectedStory.split(':!|');
-
-                        var storyId = selectedStoryContent[0];
-                        var storyTitle = selectedStoryContent[1];
-                        var storyText = selectedStoryContent[2];
-                        var storyWrong = selectedStoryContent[3];
-                        var storySpot = '#storySpot-' + storyCount;
-
-                        console.log("WrittenStory: " + storyId + ". " + storyTitle + ": " + storyText + " FOR spot " + storySpot);
-
-                        // $(storySpot).prop('value', storyTitle);
-                        var newInput = document.createElement("input");
-                        $(newInput).val(storyTitle);
-                        $(newInput).prop('id', buttonCount);
-                        $(newInput).prop('type', 'button');
-                        $(newInput).addClass('btn-swapStory');
-                        $('#storyList').append(newInput);
-
-                        if (storyWrong == '1') {
-                            $(newInput).css('text-decoration', 'line-through');
-                        }
-
-                        newInput.addEventListener("click", function () {
-                            swapStory(this.id);
-                        });
-
-                        console.log($(storySpot).val());
-
-                        if (storyCount == 1) {
-                            $('#readStoryTitle').html("Titel: " + storyTitle);
-                            $('#readStoryText').html(storyText);
-                        }
-
-                        if ($(storySpot).val() == undefined) {
-                            $(storySpot).prop('display', 'none');
-                        }
-
-                        storyCount++;
-                        buttonCount++;
-                    }
-                }
-            }
-            else {
-                // show wait screen
-            }
-        }
+        $('#game-connected').css('display', 'block');
+        $('#gameCode').html("Jouw spelcode is: " + currentRoomCode);
     }
 
-    connection.clientMethods["updatePowerups"] = (roomCode, socketId, powerup, newCash) => {
-        if ($roomContent.val() == roomCode) {
-            if (connection.connectionId == socketId) {
+    function JoinRoom(newRoomCode) {
+        inRoom = true;
+        currentRoomCode = newRoomCode;
+        tutorialPage = 1;
 
-                console.log("update powerup " + powerup);
+        HideNavigationBars();
+        HideAll();
 
-                if (powerup == 1) {
-                    answerCount = 2;
-                    document.getElementById("powerupFeedback").innerHTML = "Je kan nu twee antwoorden selecteren.";
-                }
-                else if (powerup == 2) {
-                    document.getElementById("powerupFeedback").innerHTML = "Jouw antwoorden tellen nu 2x mee.";      
-                }
-                else if (powerup == 3) {
-                    document.getElementById("powerupFeedback").innerHTML = "50% van de foute antwoorden zijn nu weggestreept.";               
-                }
-                else if (powerup == 4) {
-                    document.getElementById("powerupFeedback").innerHTML = "Je kan nu het aantal stemmen zien.";
-                }
-
-                currentMoney = newCash;
-                $('#moneyCount').html("Geld: €" + currentMoney + "-");
-
-                $('#btn-activatePowerup').css("display", "none");
-            }
-        }
+        $('#game-connected').css('display', 'block');
+        $('#statusMessage').css('display', 'block');
+        $('#statusMessage').html("Kamer met code " + currentRoomCode + " ingegaan als " + username);
     }
 
-    connection.clientMethods["powerupVisuals"] = (roomCode, allowed, cost1, cost2, cost3, cost4, cost5) => {
-        if ($roomContent.val() == roomCode) {
-            // powerupsAllowed = allowed;
-            if (!allowed) {
-                $('#btn-activatePowerup').css("display", "none");
-            }
-            else {
-                $('#btn-activatePowerup').css("display", "block");
-            }
-
-            // Text
-            $('#btn-activatePowerup-1').val("€" + cost1 + "-: Twee antwoorden kiezen");
-            $('#btn-activatePowerup-2').val("€" + cost2 + "-: Dubbele punten");
-            $('#btn-activatePowerup-3').val("€" + cost3 + "-: 50% wegstrepen");
-            $('#btn-activatePowerup-4').val("€" + cost4 + "-: Spieken");
-            $('#btn-activatePowerup-5').val("€" + cost5 + "-: Dubbele punten voor jouw verhaal");
-
-            // Colours
-            if (currentMoney < cost1) {
-                $('#btn-activatePowerup-1').css("background-color", "red");
-            }
-            else {
-                $('#btn-activatePowerup-1').css("background-color", "green");
-            }
-
-            if (currentMoney < cost1) {
-                $('#btn-activatePowerup-2').css("background-color", "red");
-            }
-            else {
-                $('#btn-activatePowerup-2').css("background-color", "green");
-            }
-
-            if (currentMoney < cost3) {
-                $('#btn-activatePowerup-3').css("background-color", "red");
-            }
-            else {
-                $('#btn-activatePowerup-3').css("background-color", "green");
-            }
-
-            if (currentMoney < cost4) {
-                $('#btn-activatePowerup-4').css("background-color", "red");
-            }
-            else {
-                $('#btn-activatePowerup-4').css("background-color", "green");
-            }
-
-            if (currentMoney < cost5) {
-                $('#btn-activatePowerup-5').css("background-color", "red");
-            }
-            else {
-                $('#btn-activatePowerup-5').css("background-color", "green");
-            }
-        }
-    }
-
-    connection.clientMethods["updateScore"] = (roomCode, socketId, money, followers) => {
-        if ($roomContent.val() == roomCode) {
-            if (connection.connectionId == socketId) {
-                currentMoney = money;
-                currentFollowers = followers;
-
-                $('#followerCount').html("Volgers: " + currentFollowers);
-                $('#moneyCount').html("Geld: €" + currentMoney + "-");
-            }
-        }
-    }
-
-    connection.clientMethods["endGame"] = (roomCode, rank) => {
-        if ($roomContent.val() == roomCode) {
-            console.log("Game ended.");
-
-            document.getElementById("game-tutorial-1").style.display = "none";
-            document.getElementById("game-tutorial-2").style.display = "none";
-            document.getElementById("game-tutorial-3").style.display = "none";
-            document.getElementById("game-waiting").style.display = "none";
-            document.getElementById("game-write").style.display = "none";
-            document.getElementById("game-read").style.display = "none";
-            document.getElementById("game-leaderboard").style.display = "block";
-            document.getElementById("game-end").style.display = "block";
-        }
-    }
-    //#endregion
-
-    //#region Functions
-    // Variables
-    var $userContent = $('#usernameInput');
-    var $roomContent = $('#roomInput');
-    var $roleContent = $('#roleId');
-    var $idContent = $('#idInput');
-    var tutorialState = 0;
-    var timer = 0;
-    var soundState = 0;
-    var currentTimer;
-    var currentRootId = 0;
-    var myGroup = 0;
-    var selectedAnswer = "";
-    var toSelect = 0;
-    var answerCount = 1;
-    var powerupsAllowed = true;
-    var currentMoney = 0.00;
-
-    // Host a room
-    $('#btn-openLobby').click(function () {
-        // Refresh connection
-        connection.invoke("AddConnection", connection.connectionId);
-
-        // Clean and validate
-        var user = $userContent.val().trim();
-        var id = $idContent.val().trim();
-
-        if (user.length != 0) {
-            connection.invoke("HostRoom", id, connection.connectionId, user);
-        }
-    });
-
-    // Join a room
-    $('#btn-connectLobby').click(function () {
-        // Refresh connection
-        connection.invoke("AddConnection", connection.connectionId);
-
-        // Clean and validate
-        var user = $userContent.val().trim();
-        var room = $('#codeInput').val().trim();
-
-        if (user.length != 0) {
-            if (room.length != 0) {
-                console.log("Connecting!");
-                connection.invoke("JoinRoom", connection.connectionId, $('#idInput').val(), user, room);
-            }
-        }
-    });
-
-    // Leave a room
-    $('#btn-leaveLobby').click(function () {
-        // Clean and validate
-        var room = $roomContent.val().trim();
-
-        if (room.length != 0) {
-            connection.invoke("LeaveRoom", connection.connectionId, room, false);
-
-            // Clear values
-            $roomContent.val('');
-        }
-    });
-
-    // Leave a room on game end
-    $('#btn-leaveGameOnEnd').click(function () {
-        // Clean and validate
-        var room = $roomContent.val().trim();
-
-        if (room.length != 0) {
-            connection.invoke("LeaveRoom", connection.connectionId, room, false);
-
-            // Clear values
-            $roomContent.val('');
-        }
-    });
-
-    // Start game with current lobby
-    $('#btn-startGame').click(function () {
-        // Clean and validate
-        var room = $roomContent.val().trim();
-
-        if (room.length != 0) {
-            connection.invoke("StartGame", connection.connectionId, room);
-        }
-    });
-
-    // Kick user from current lobby
-    $.kickUser = function (user) {
-        // Clean and validate
-        var room = $roomContent.val().trim();
-        var tempArray = user.split(":|!");
-
-        if (room.length != 0) {
-            connection.invoke("LeaveRoom", tempArray[1], room, true);
-        }
-    }
-
-    // Continue tutorial
-    $('.btn-nextTutorial').click(function () {
-        tutorialPage();
-    });
-
-    // Skip tutorial
-    $('.btn-skipTutorial').click(function () {
-        connection.invoke("SkipTutorial", $roomContent.val());
-    });
-
-    $('#btn-sendStory').click(function () {
-        sendStory();
-    });
-
-    $('#btn-shareStory').click(function () {
-        sendAnswer(); 
-    });
-
-    $('#btn-activatePowerup').click(function () {
-        if (document.getElementById("powerupBar").style.display == "none") {
-            document.getElementById("powerupBar").style.display = "block";
+    function LeaveRoom(kicked) {
+        if (kicked) {
+            $('#statusMessage').html("Je bent uit de kamer verwijderd door de eigenaar.");
         }
         else {
-            document.getElementById("powerupBar").style.display = "none";
+            $('#statusMessage').html("Je bent de kamer verlaten.");
         }
-    });
 
-    $('#btn-activatePowerup-1').click(function () {
-        console.log("powerup 1");
-        activatePowerup(1);
-    });
+        currentRoomCode = "";
 
-    $('#btn-activatePowerup-2').click(function () {
-        console.log("powerup 2");
-        activatePowerup(2);
-    });
+        ShowNavigationBars();
+        HideAll();
 
-    $('#btn-activatePowerup-3').click(function () {
-        console.log("powerup 3");
-        activatePowerup(3);
-    });
+        $('#game-prep').css('display', 'block');
+        $('#statusMessage').css('display', 'block');
+        $('#personalScore').css('display', 'none');
+    }
 
-    $('#btn-activatePowerup-4').click(function () {
-        console.log("powerup 4");
-        activatePowerup(4);
-    });
+    function RetrievePlayerList(ownerSocketId, playerList) {
+        $('#playerList').empty();
 
-    $('#btn-activatePowerup-5').click(function () {
-        console.log("powerup 5");
-        activatePowerup(5);
-    });
+        var nameList = JSON.parse(playerList);
 
-    $('#btn-nextRound').click(function () {
-        connection.invoke("GoToReadPhase", $roomContent.val(), false);
-    });
+        for (var name in nameList) {
+            var nameString = nameList[name].split(':|!');
 
-    // Start timer
-    function startTimer(duration) {
-        $('.clockBar').css('display', 'block');
-
-        clearInterval(currentTimer);
-
-        var maxSeconds = duration;
-        // timer = duration, seconds;
-        var seconds = maxSeconds;
-        timer = maxSeconds;
-
-        currentTimer = setInterval(function () {
-            clockMinutes = parseInt(timer / 60, 10);
-            clockSeconds = parseInt(timer % 60, 10);
-
-            clockMinutes = clockMinutes < 10 ? "0" + clockMinutes : clockMinutes;
-            clockSeconds = clockSeconds < 10 ? "0" + clockSeconds : clockSeconds;
-
-            seconds = timer;
-            $('.clockBar').html(clockMinutes + ':' + clockSeconds);
-            $('.clockBar').css('width', (seconds / maxSeconds * 100) + "vw")
-            // document.getElementById("clockBar").innerHTML = seconds;
-            // document.getElementById("clockBar").style.width = (seconds / maxSeconds * 100) + "vw";
-
-            if ($roleContent.val() == 1) {
-                if ((seconds / maxSeconds * 100) > 50 && soundState == 0) {
-                    document.getElementById("snd-timer-1").play();
-                    soundState = 5;
+            if (mySocketId == ownerSocketId) {
+                $('#playerList').append('<li>' + nameString[0] + '<input class="form-button-orange" onClick="$.kickUser(' + "'" + nameString[1] + "'" + ')" type="button" value="Kick" style="width: 50px;" />' + '</li>');
+            }
+            else {
+                if (mySocketId == nameString[1]) {
+                    $('#playerList').append('<li style="color: red;">' + nameString[0] + '</li>');
                 }
-                else if ((seconds / maxSeconds * 100) > (120 / maxSeconds * 100) && soundState == 0) {
-                    document.getElementById("snd-timer-1").play();
-                    soundState = 3;
-                }
-                else if ((seconds / maxSeconds * 100) > (30 / maxSeconds * 100) && soundState == 0) {
-                    document.getElementById("snd-timer-2").play();
-                    soundState = 3;
-                }
-                else if (soundState == 0) {
-                    document.getElementById("snd-timer-3").play();
-                    soundState = 1;
-                }
-
-                if (seconds == 120) {
-                    document.getElementById("snd-120seconds").play();
+                else {
+                    $('#playerList').append('<li>' + nameString[0] + '</li>');
                 }
             }
+        }
 
-            soundState--;
+        var playerCount = $('#playerList li').length;
+        $('#playerCount').html(playerCount + " spelers zijn verbonden.");
+    }
 
-            if (--timer < 0) {
-                soundState = -1;
-                timer = 0;
-                clearInterval(currentTimer);
-                connection.invoke("StopGameTimer", $roomContent.val(), connection.connectionId);
+    function StartGame(gameGroup) {
+        myGroup = gameGroup;
 
-                if ($roleContent.val() == 1) {
-                    document.getElementById("snd-timesup").play();
+        HideAll();
+
+        $('#game-tutorial-1').css('display', 'block');
+        $('#personalScore').css('display', 'block');
+    }
+
+    function NextTutorial() {
+        HideAll();
+
+        switch (tutorialPage) {
+            case 0:
+                $('#game-tutorial-1').css('display', 'block');
+                break;
+
+            case 1:
+                $('#game-tutorial-2').css('display', 'block');
+                break;
+
+            case 2:
+                $('#game-tutorial-3').css('display', 'block');
+                break;
+
+            case 3:
+                $('#game-waiting').css('display', 'block');
+                if (roleId != 1) {
+                    connection.invoke('ReadyUpPlayer', mySocketId, currentRoomCode);
                 }
-            }
+                break;
 
-        }, 1000); // 1000
-    }
-
-    // Stop timer
-    function stopTimer() {
-        $('.clockBar').css('display', 'none');
-
-        timer = 0;
-        clearInterval(currentTimer);
-    }
-
-    function hideNavigation() {
-        document.getElementById("html").style.backgroundColor = "#6ac2c4";
-        document.getElementById("body").style.backgroundColor = "#6ac2c4";
-        document.getElementById("topBar").style.display = "none";
-        document.getElementById("sideBar").style.display = "none";
-    }
-
-    function showNavigation() {
-        document.getElementById("html").style.backgroundColor = "#f5b91a";
-        document.getElementById("body").style.backgroundColor = "#f5b91a";
-        document.getElementById("topBar").style.display = "block";
-        document.getElementById("sideBar").style.display = "block";
-    }
-
-    function tutorialPage() {
-        console.log("current tutorial state: " + tutorialState);
-
-        tutorialState += 1;
-
-        // pg 2
-        if (tutorialState == 1) {
-            document.getElementById("game-tutorial-1").style.display = "none";
-            document.getElementById("game-tutorial-2").style.display = "block";
-            document.getElementById("game-tutorial-3").style.display = "none";
-            document.getElementById("game-waiting").style.display = "none";
+            default:
+                break;
         }
 
-        // pg 3
-        if (tutorialState == 2) {
-            document.getElementById("game-tutorial-1").style.display = "none";
-            document.getElementById("game-tutorial-2").style.display = "none";
-            document.getElementById("game-tutorial-3").style.display = "block";
-            document.getElementById("game-waiting").style.display = "none";
-        }
+        tutorialPage++;
+    }
 
-        // end
-        if (tutorialState == 3) {
-            document.getElementById("game-tutorial-1").style.display = "none";
-            document.getElementById("game-tutorial-2").style.display = "none";
-            document.getElementById("game-tutorial-3").style.display = "none";
-            document.getElementById("game-waiting").style.display = "block";
+    function SkipTutorial() {
+        tutorialPage = 3;
+        nextTutorial();
 
-            connection.invoke("ReadyUpPlayer", connection.connectionId, $roomContent.val());
+        if (roleId == 1) {
+            connection.invoke('SkipTutorial', currentRoomCode);
         }
     }
 
-    function startReading(group, currentGroup) {
-        document.getElementById("game-tutorial-1").style.display = "none";
-        document.getElementById("game-tutorial-2").style.display = "none";
-        document.getElementById("game-tutorial-3").style.display = "none";
-        document.getElementById("game-waiting").style.display = "none";
-        document.getElementById("game-write").style.display = "none";
-        document.getElementById("game-read").style.display = "block";
-        document.getElementById("game-leaderboard").style.display = "none";
+    function WritePhase() {
+        HideAll();
 
-        // writer turn
-        if (group == currentGroup) {
-            // no button
-            $('#turnString').css("display", "block");
-            $('#articleString').val("Artikelen");
-            $('#btn-shareStory').css("display", "none");
+        $('#game-write').css('display', 'block');
+    }
 
-            // power-ups
+    function ReadPhase(gameGroup, currentGroup) {
+        myGroup = gameGroup;
+
+        HideAll();
+
+        $('#game-read').css('display', 'block');
+
+        if (myGroup == currentGroup) {
+            $('#turnString').css('display', 'block');
+            $('#articleString').html('Artikelen:');
+            $('#btn-shareStory').css('display', 'none');
             $('#btn-activatePowerup-1').css("display", "none");
             $('#btn-activatePowerup-2').css("display", "none");
             $('#btn-activatePowerup-3').css("display", "none");
@@ -753,12 +297,9 @@ $(document).ready(function () {
             $('#btn-activatePowerup-5').css("display", "block");
         }
         else {
-            // button
-            $('#turnString').css("display", "none");
-            $('#articleString').val("Welk artikel deel je?");
-            $('#btn-shareStory').css("display", "block");
-
-            // power-ups
+            $('#turnString').css('display', 'none');
+            $('#articleString').html('Welk artikel deel je?');
+            $('#btn-shareStory').css('display', 'block');
             $('#btn-activatePowerup-1').css("display", "block");
             $('#btn-activatePowerup-2').css("display", "block");
             $('#btn-activatePowerup-3').css("display", "block");
@@ -767,84 +308,110 @@ $(document).ready(function () {
         }
     }
 
-    function startWriting() {
-        document.getElementById("game-tutorial-1").style.display = "none";
-        document.getElementById("game-tutorial-2").style.display = "none";
-        document.getElementById("game-tutorial-3").style.display = "none";
-        document.getElementById("game-waiting").style.display = "none";
-        document.getElementById("game-write").style.display = "block";
-        document.getElementById("game-read").style.display = "none";
-        document.getElementById("game-leaderboard").style.display = "none";
-        document.getElementById("personalScore").style.display = "block";
+    function StartTimer(time) {
+        $('.timer').css('display', 'block');
 
-        $('#btn-sendStory').prop('disabled', false);
+        tickInterval = 0;
+        clearInterval(currentTimer);
+
+        var maxSeconds = time;
+        var seconds = maxSeconds;
+        timer = maxSeconds;
+
+        currentTimer = setInterval(function () {
+            timerMinutes = parseInt(timer / 60, 10);
+            timerMinutes = timerMinutes < 10 ? "0" + timerMinutes : timerMinutes;
+
+            timerSeconds = parseInt(timer % 60, 10);
+            timerSeconds = timerSeconds < 10 ? "0" + timerSeconds : timerSeconds;
+
+            seconds = timer;
+
+            $('.timer').html(timerMinutes + ':' + clockSeconds);
+            $('.timer').css('width', (seconds / maxSeconds * 100) + 'vw');
+
+            if (roleId == 1) {
+                if ((seconds / maxSeconds * 100) > 50 && tickInterval == 0) {                               // halfway through
+                    $('#snd-timer-1').play();
+                    tickInterval = 5;
+                }
+                else if ((seconds / maxSeconds * 100) > (120 / maxSeconds * 100) && tickInterval == 0) {    // final two minutes
+                    $('#snd-timer-1').play();
+                    tickInterval = 2;
+                }
+                else if ((seconds / maxSeconds * 100) > (60 / maxSeconds * 100) && tickInterval == 0) {     // final minute
+                    $('#snd-timer-2').play();
+                    tickInterval = 2;
+                }
+                else if ((seconds / maxSeconds * 100) > (10 / maxSeconds * 100) && tickInterval == 0) {     // final ten seconds
+                    $('#snd-timer-3').play();
+                    tickInterval = 1;
+                }
+            }
+
+            tickInterval--;
+
+            if (--timer < 0) {
+                tickInterval = 0;
+                timer = 0;
+                clearInterval(currentTimer);
+                connection.invoke("StopGameTimer", userId, currentRoomCode);
+
+                if (roleId == 1) {
+                    $('#snd-timer-end').play();
+                }
+            }
+
+        }, 1000);
     }
 
-    function sendStory() {
-        $('#btn-sendStory').prop('disabled', true);
+    function StopTimer() {
+        $('.timer').css('display', 'none');
 
-        var $storySource = $('#storySource').val();
-        var $storyTitle = $('#writtenStoryTitle').val();
-        var $storyText = $('#writtenStoryText').val();
-
-        document.getElementById("write-busy").style.display = "none";
-        document.getElementById("write-finished").style.display = "block";
-
-        var story = $storySource + "_+_" + $storyTitle + "_+_" + $storyText;
-        connection.invoke("UploadStory", $roomContent.val(), connection.connectionId, story);
+        timer = 0;
+        clearInterval(currentTimer);
     }
+    // #endregion
 
-    function swapStory(storyNumber) {
-        toSelect = storyNumber;
+    // #region Buttons/Input
+    $('#btn-hostLobby').click(function () {
+        connection.invoke('AddConnection', connection.connectionId);
 
-        var selectedStoryContent = storyList[storyNumber].split(':!|');
+        if (username.length != 0) {
+            connection.invoke('HostRoom', userId, mySocketId, username);
+        }
+    });
 
-        var storyTitle = selectedStoryContent[1];
-        var storyText = selectedStoryContent[2];
+    $('#btn-joinLobby').click(function () {
+        connection.invoke('AddConnection', mySocketId);
 
-        $('#readStoryTitle').html(storyTitle);
-        $('#readStoryText').html(storyText);
-    }
+        currentRoomCode = $('#roomCodeInput').val().trim();
 
-    function sendAnswer() {
-        answerCount--;
+        if (username.length != 0 && currentRoomCode.length != 0) {
+            connection.invoke('JoinRoom', userId, mySocketId, username, currentRoomCode);
+        }
+    });
 
-        selectedAnswer += toSelect;
+    $('#btn-leaveLobby').click(function () {
+        connection.invoke('LeaveRoom', userId, mySocketId, currentRoomCode, false);
+    });
 
-        if (answerCount <= 0) {
-            $('#btn-shareStory').prop('disabled', true);
+    $('#btn-startGame').click(function () {
+        connection.invoke('StartGame', mySocketId, currentRoomCode);
+    });
 
-            document.getElementById("read-busy").style.display = "none";
-            document.getElementById("read-finished").style.display = "block";
+    $('.btn-continueTutorial').click(function () {
+        NextTutorial();
+    });
 
-            console.log("Answered with " + selectedAnswer);
-            connection.invoke("UploadAnswer", $roomContent.val(), connection.connectionId, selectedAnswer);
-            selectedAnswer = '';
+    $('.btn-skipTutorial').click(function () {
+        SkipTutorial();
+    });
+
+    $.kickUser = function (socketId) {
+        if (currentRoomCode.length != 0) {
+            connection.invoke("LeaveRoom", userId, socketId, currentRoomCode, true);
         }
     }
-
-    function activatePowerup(powerup) {
-        console.log("powerup yeet " + powerup);
-
-        document.getElementById("btn-activatePowerup").style.display = "block";
-        document.getElementById("powerupBar").style.display = "none";
-
-        connection.invoke("ActivatePowerup", $roomContent.val(), connection.connectionId, '' + powerup);
-    }
-
-    function showLeaderboards() {
-        document.getElementById("game-write").style.display = "none";
-        document.getElementById("game-read").style.display = "none";
-        document.getElementById("game-leaderboard").style.display = "block";
-
-        $('#btn-shareStory').prop('disabled', false);
-        document.getElementById("read-busy").style.display = "block";
-        document.getElementById("read-finished").style.display = "none";
-        document.getElementById("btn-activatePowerup").style.display = "block";
-        document.getElementById("powerupBar").style.display = "none";
-    }
-    //#endregion
-
-    // Start WebSocket connection
-    connection.start();
+    // #endregion
 });

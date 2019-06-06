@@ -438,3 +438,2082 @@ Error Number:201,State:4,Class:16
 6-6-2019 | 12:12: End.
 --------[END]--------
 
+-----[LOG ENTRY]-----
+[CheckLogin]
+6-6-2019 | 12:39: 0ms. Checking login for JMuris
+6-6-2019 | 12:39: 42ms. Found JMuris
+6-6-2019 | 12:39: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[RetrieveUser]
+6-6-2019 | 12:39: 0ms. Retrieving user 4
+6-6-2019 | 12:39: 6ms. Found user 4
+6-6-2019 | 12:39: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[CheckLogin]
+6-6-2019 | 12:39: 0ms. Checking login for 
+6-6-2019 | 12:39: 160ms. Exception:
+System.Data.SqlClient.SqlException (0x80131904): Procedure or function 'LogIn' expects parameter '@pUsername', which was not supplied.
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, SqlDataReader ds)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite, String method)
+   at System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, Boolean sendToPipe, Int32 timeout, Boolean asyncWrite, String methodName)
+   at System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   at WerkelijkWaar.Classes.DatabaseQueries.CheckLogin(String username, String password) in C:\Users\Justin Muris\source\repos\WerkelijkWaar\WerkelijkWaar\Classes\DatabaseQueries.cs:line 435
+ClientConnectionId:fb7d4371-b1e0-4d39-8644-b6c7c0fafb7f
+Error Number:201,State:4,Class:16
+6-6-2019 | 12:39: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[CheckLogin]
+6-6-2019 | 12:40: 0ms. Checking login for JMuris
+6-6-2019 | 12:40: 54ms. Found JMuris
+6-6-2019 | 12:40: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[RetrieveUser]
+6-6-2019 | 12:40: 0ms. Retrieving user 4
+6-6-2019 | 12:40: 5ms. Found user 4
+6-6-2019 | 12:40: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[CheckLogin]
+6-6-2019 | 12:40: 0ms. Checking login for 
+6-6-2019 | 12:40: 175ms. Exception:
+System.Data.SqlClient.SqlException (0x80131904): Procedure or function 'LogIn' expects parameter '@pUsername', which was not supplied.
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, SqlDataReader ds)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite, String method)
+   at System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, Boolean sendToPipe, Int32 timeout, Boolean asyncWrite, String methodName)
+   at System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   at WerkelijkWaar.Classes.DatabaseQueries.CheckLogin(String username, String password) in C:\Users\Justin Muris\source\repos\WerkelijkWaar\WerkelijkWaar\Classes\DatabaseQueries.cs:line 435
+ClientConnectionId:28cb5133-a414-49e5-bf5c-b97d41cb69db
+Error Number:201,State:4,Class:16
+6-6-2019 | 12:40: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[CheckLogin]
+6-6-2019 | 12:52: 0ms. Checking login for JMuris
+6-6-2019 | 12:52: 63ms. Found JMuris
+6-6-2019 | 12:52: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[RetrieveUser]
+6-6-2019 | 12:52: 0ms. Retrieving user 4
+6-6-2019 | 12:52: 93ms. Found user 4
+6-6-2019 | 12:52: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[CheckLogin]
+6-6-2019 | 12:52: 0ms. Checking login for 
+6-6-2019 | 12:52: 14ms. Exception:
+System.Data.SqlClient.SqlException (0x80131904): Procedure or function 'LogIn' expects parameter '@pUsername', which was not supplied.
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, SqlDataReader ds)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite, String method)
+   at System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, Boolean sendToPipe, Int32 timeout, Boolean asyncWrite, String methodName)
+   at System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   at WerkelijkWaar.Classes.DatabaseQueries.CheckLogin(String username, String password) in C:\Users\Justin Muris\source\repos\WerkelijkWaar\WerkelijkWaar\Classes\DatabaseQueries.cs:line 435
+ClientConnectionId:90e80a1b-1e60-457a-86a9-e57c86cd6385
+Error Number:201,State:4,Class:16
+6-6-2019 | 12:52: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[RetrieveUser]
+6-6-2019 | 13:01: 0ms. Retrieving user 4
+6-6-2019 | 13:01: 711ms. Found user 4
+6-6-2019 | 13:01: End.
+--------[END]--------
+
+6-6-2019 | 13:01: Generating random code...
+6-6-2019 | 13:01: Generated code is 5d69If. Room state is now Waiting.
+6-6-2019 | 13:01: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[RetrieveConfig]
+6-6-2019 | 13:01: 0ms. Attempting to retrieve config
+6-6-2019 | 13:01: 34ms. Got: 1 - 4
+6-6-2019 | 13:01: 48ms. Found config.
+6-6-2019 | 13:01: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[Room - IdleTimer]
+6-6-2019 | 13:02: IdleStrikes are 0.
+6-6-2019 | 13:02: Room 5d69If has died and is being removed.
+6-6-2019 | 13:02: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[CheckLogin]
+6-6-2019 | 13:08: 0ms. Checking login for AAppel
+6-6-2019 | 13:08: 19ms. Found AAppel
+6-6-2019 | 13:08: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[RetrieveUser]
+6-6-2019 | 13:08: 0ms. Retrieving user 5
+6-6-2019 | 13:08: 5ms. Found user 5
+6-6-2019 | 13:08: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[CheckLogin]
+6-6-2019 | 13:08: 0ms. Checking login for JMuris
+6-6-2019 | 13:08: 57ms. Found JMuris
+6-6-2019 | 13:08: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[RetrieveUser]
+6-6-2019 | 13:08: 0ms. Retrieving user 4
+6-6-2019 | 13:08: 13ms. Found user 4
+6-6-2019 | 13:08: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[RetrieveUser]
+6-6-2019 | 13:08: 0ms. Retrieving user 4
+6-6-2019 | 13:08: 169ms. Found user 4
+6-6-2019 | 13:08: End.
+--------[END]--------
+
+6-6-2019 | 13:08: Generating random code...
+6-6-2019 | 13:08: Generated code is 732oq3. Room state is now Waiting.
+6-6-2019 | 13:08: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[RetrieveConfig]
+6-6-2019 | 13:08: 0ms. Attempting to retrieve config
+6-6-2019 | 13:08: 14ms. Got: 1 - 4
+6-6-2019 | 13:08: 20ms. Found config.
+6-6-2019 | 13:08: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[Room - IdleTimer]
+6-6-2019 | 13:09: IdleStrikes are 0.
+6-6-2019 | 13:09: Room 732oq3 has died and is being removed.
+6-6-2019 | 13:09: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[CheckLogin]
+6-6-2019 | 13:12: 0ms. Checking login for JMuris
+6-6-2019 | 13:12: 52ms. Found JMuris
+6-6-2019 | 13:12: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[RetrieveUser]
+6-6-2019 | 13:12: 0ms. Retrieving user 4
+6-6-2019 | 13:12: 7ms. Found user 4
+6-6-2019 | 13:12: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[RetrieveUser]
+6-6-2019 | 13:12: 0ms. Retrieving user 4
+6-6-2019 | 13:12: 3ms. Found user 4
+6-6-2019 | 13:12: End.
+--------[END]--------
+
+6-6-2019 | 13:12: Generating random code...
+6-6-2019 | 13:12: Generated code is AT02aT. Room state is now Waiting.
+6-6-2019 | 13:12: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[RetrieveConfig]
+6-6-2019 | 13:12: 0ms. Attempting to retrieve config
+6-6-2019 | 13:12: 5ms. Got: 1 - 4
+6-6-2019 | 13:12: 9ms. Found config.
+6-6-2019 | 13:12: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[CheckLogin]
+6-6-2019 | 13:12: 0ms. Checking login for 
+6-6-2019 | 13:12: 234ms. Exception:
+System.Data.SqlClient.SqlException (0x80131904): Procedure or function 'LogIn' expects parameter '@pUsername', which was not supplied.
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, SqlDataReader ds)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite, String method)
+   at System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, Boolean sendToPipe, Int32 timeout, Boolean asyncWrite, String methodName)
+   at System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   at WerkelijkWaar.Classes.DatabaseQueries.CheckLogin(String username, String password) in C:\Users\Justin Muris\source\repos\WerkelijkWaar\WerkelijkWaar\Classes\DatabaseQueries.cs:line 435
+ClientConnectionId:53c77fde-2971-4fb7-9b8e-1a4a13fb41d2
+Error Number:201,State:4,Class:16
+6-6-2019 | 13:12: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[RetrieveUser]
+6-6-2019 | 13:12: 0ms. Retrieving user 4
+6-6-2019 | 13:12: 249ms. Found user 4
+6-6-2019 | 13:12: End.
+--------[END]--------
+
+6-6-2019 | 13:12: Generating random code...
+6-6-2019 | 13:12: Generated code is 0655Q2. Room state is now Waiting.
+6-6-2019 | 13:12: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[RetrieveConfig]
+6-6-2019 | 13:12: 0ms. Attempting to retrieve config
+6-6-2019 | 13:12: 22ms. Got: 1 - 4
+6-6-2019 | 13:12: 72ms. Found config.
+6-6-2019 | 13:12: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[Room - IdleTimer]
+6-6-2019 | 13:13: IdleStrikes are 0.
+6-6-2019 | 13:13: Room AT02aT has died and is being removed.
+6-6-2019 | 13:13: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[Room - IdleTimer]
+6-6-2019 | 13:13: IdleStrikes are 0.
+6-6-2019 | 13:13: Room 0655Q2 has died and is being removed.
+6-6-2019 | 13:13: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[RetrieveUser]
+6-6-2019 | 13:15: 0ms. Retrieving user 4
+6-6-2019 | 13:15: 10ms. Found user 4
+6-6-2019 | 13:15: End.
+--------[END]--------
+
+6-6-2019 | 13:15: Generating random code...
+6-6-2019 | 13:15: Generated code is 2dbOR2. Room state is now Waiting.
+6-6-2019 | 13:15: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[RetrieveConfig]
+6-6-2019 | 13:15: 0ms. Attempting to retrieve config
+6-6-2019 | 13:15: 5ms. Got: 1 - 4
+6-6-2019 | 13:15: 13ms. Found config.
+6-6-2019 | 13:15: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[CheckLogin]
+6-6-2019 | 13:15: 0ms. Checking login for AAppel
+6-6-2019 | 13:15: 61ms. Found AAppel
+6-6-2019 | 13:15: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[RetrieveUser]
+6-6-2019 | 13:15: 0ms. Retrieving user 5
+6-6-2019 | 13:15: 8ms. Found user 5
+6-6-2019 | 13:15: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[CheckLogin]
+6-6-2019 | 13:15: 0ms. Checking login for JMuris
+6-6-2019 | 13:15: 3ms. Found JMuris
+6-6-2019 | 13:15: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[RetrieveUser]
+6-6-2019 | 13:15: 0ms. Retrieving user 4
+6-6-2019 | 13:15: 3ms. Found user 4
+6-6-2019 | 13:15: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[RetrieveUser]
+6-6-2019 | 13:15: 0ms. Retrieving user 5
+6-6-2019 | 13:15: 2ms. Found user 5
+6-6-2019 | 13:15: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[CheckLogin]
+6-6-2019 | 13:15: 0ms. Checking login for 
+6-6-2019 | 13:15: 141ms. Exception:
+System.Data.SqlClient.SqlException (0x80131904): Procedure or function 'LogIn' expects parameter '@pUsername', which was not supplied.
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, SqlDataReader ds)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite, String method)
+   at System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, Boolean sendToPipe, Int32 timeout, Boolean asyncWrite, String methodName)
+   at System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   at WerkelijkWaar.Classes.DatabaseQueries.CheckLogin(String username, String password) in C:\Users\Justin Muris\source\repos\WerkelijkWaar\WerkelijkWaar\Classes\DatabaseQueries.cs:line 435
+ClientConnectionId:94a5417e-328c-4a2e-a58f-f8e6247b1276
+Error Number:201,State:4,Class:16
+6-6-2019 | 13:15: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[RetrieveUser]
+6-6-2019 | 13:15: 0ms. Retrieving user 5
+6-6-2019 | 13:15: 23ms. Found user 5
+6-6-2019 | 13:15: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[RetrieveUser]
+6-6-2019 | 13:15: 0ms. Retrieving user 5
+6-6-2019 | 13:15: 11ms. Found user 5
+6-6-2019 | 13:15: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[RetrieveUser]
+6-6-2019 | 13:15: 0ms. Retrieving user 5
+6-6-2019 | 13:15: 6ms. Found user 5
+6-6-2019 | 13:15: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[RetrieveUser]
+6-6-2019 | 13:15: 0ms. Retrieving user 5
+6-6-2019 | 13:15: 4ms. Found user 5
+6-6-2019 | 13:15: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[RetrieveUser]
+6-6-2019 | 13:15: 0ms. Retrieving user 5
+6-6-2019 | 13:15: 4ms. Found user 5
+6-6-2019 | 13:15: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[RetrieveUser]
+6-6-2019 | 13:15: 0ms. Retrieving user 5
+6-6-2019 | 13:15: 124ms. Found user 5
+6-6-2019 | 13:15: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[RetrieveUser]
+6-6-2019 | 13:15: 0ms. Retrieving user 5
+6-6-2019 | 13:15: 3ms. Found user 5
+6-6-2019 | 13:15: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[RetrieveUser]
+6-6-2019 | 13:15: 0ms. Retrieving user 5
+6-6-2019 | 13:15: 5ms. Found user 5
+6-6-2019 | 13:15: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[RetrieveUser]
+6-6-2019 | 13:16: 0ms. Retrieving user 4
+6-6-2019 | 13:16: 4ms. Found user 4
+6-6-2019 | 13:16: End.
+--------[END]--------
+
+6-6-2019 | 13:16: Generating random code...
+6-6-2019 | 13:16: Generated code is 3c385l. Room state is now Waiting.
+6-6-2019 | 13:16: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[RetrieveConfig]
+6-6-2019 | 13:16: 0ms. Attempting to retrieve config
+6-6-2019 | 13:16: 5ms. Got: 1 - 4
+6-6-2019 | 13:16: 11ms. Found config.
+6-6-2019 | 13:16: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[RetrieveUser]
+6-6-2019 | 13:16: 0ms. Retrieving user 5
+6-6-2019 | 13:16: 3ms. Found user 5
+6-6-2019 | 13:16: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[Room - IdleTimer]
+6-6-2019 | 13:20: IdleStrikes are 0.
+6-6-2019 | 13:20: Room 3c385l has died and is being removed.
+6-6-2019 | 13:20: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[CheckLogin]
+6-6-2019 | 13:30: 0ms. Checking login for JMuris
+6-6-2019 | 13:30: 42ms. Found JMuris
+6-6-2019 | 13:30: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[RetrieveUser]
+6-6-2019 | 13:30: 0ms. Retrieving user 4
+6-6-2019 | 13:30: 5ms. Found user 4
+6-6-2019 | 13:30: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[CheckLogin]
+6-6-2019 | 13:30: 0ms. Checking login for AAppel
+6-6-2019 | 13:30: 5ms. Found AAppel
+6-6-2019 | 13:30: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[RetrieveUser]
+6-6-2019 | 13:30: 0ms. Retrieving user 5
+6-6-2019 | 13:30: 4ms. Found user 5
+6-6-2019 | 13:30: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[RetrieveUser]
+6-6-2019 | 13:30: 0ms. Retrieving user 4
+6-6-2019 | 13:30: 3ms. Found user 4
+6-6-2019 | 13:30: End.
+--------[END]--------
+
+6-6-2019 | 13:30: Generating random code...
+6-6-2019 | 13:30: Generated code is 16Ocq0. Room state is now Waiting.
+6-6-2019 | 13:30: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[RetrieveConfig]
+6-6-2019 | 13:30: 0ms. Attempting to retrieve config
+6-6-2019 | 13:30: 6ms. Got: 1 - 4
+6-6-2019 | 13:30: 11ms. Found config.
+6-6-2019 | 13:30: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[RetrieveUser]
+6-6-2019 | 13:30: 0ms. Retrieving user 5
+6-6-2019 | 13:30: 6ms. Found user 5
+6-6-2019 | 13:30: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[CheckLogin]
+6-6-2019 | 13:30: 0ms. Checking login for 
+6-6-2019 | 13:30: 655ms. Exception:
+System.Data.SqlClient.SqlException (0x80131904): Procedure or function 'LogIn' expects parameter '@pUsername', which was not supplied.
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, SqlDataReader ds)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite, String method)
+   at System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, Boolean sendToPipe, Int32 timeout, Boolean asyncWrite, String methodName)
+   at System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   at WerkelijkWaar.Classes.DatabaseQueries.CheckLogin(String username, String password) in C:\Users\Justin Muris\source\repos\WerkelijkWaar\WerkelijkWaar\Classes\DatabaseQueries.cs:line 435
+ClientConnectionId:afc43cf1-893d-40fc-a094-6337bc7ce4d6
+Error Number:201,State:4,Class:16
+6-6-2019 | 13:30: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[CheckLogin]
+6-6-2019 | 13:31: 0ms. Checking login for JMuris
+6-6-2019 | 13:31: 7ms. Found JMuris
+6-6-2019 | 13:31: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[RetrieveUser]
+6-6-2019 | 13:31: 0ms. Retrieving user 4
+6-6-2019 | 13:31: 5ms. Found user 4
+6-6-2019 | 13:31: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[RetrieveUser]
+6-6-2019 | 13:31: 0ms. Retrieving user 4
+6-6-2019 | 13:31: 3ms. Found user 4
+6-6-2019 | 13:31: End.
+--------[END]--------
+
+6-6-2019 | 13:31: Generating random code...
+6-6-2019 | 13:31: Generated code is r6s1qt. Room state is now Waiting.
+6-6-2019 | 13:31: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[RetrieveConfig]
+6-6-2019 | 13:31: 0ms. Attempting to retrieve config
+6-6-2019 | 13:31: 4ms. Got: 1 - 4
+6-6-2019 | 13:31: 8ms. Found config.
+6-6-2019 | 13:31: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[RetrieveUser]
+6-6-2019 | 13:31: 0ms. Retrieving user 5
+6-6-2019 | 13:31: 2ms. Found user 5
+6-6-2019 | 13:31: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[CheckLogin]
+6-6-2019 | 13:32: 0ms. Checking login for JMuris
+6-6-2019 | 13:32: 15ms. Found JMuris
+6-6-2019 | 13:32: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[RetrieveUser]
+6-6-2019 | 13:32: 0ms. Retrieving user 4
+6-6-2019 | 13:32: 5ms. Found user 4
+6-6-2019 | 13:32: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[RetrieveUser]
+6-6-2019 | 13:32: 0ms. Retrieving user 4
+6-6-2019 | 13:32: 31ms. Found user 4
+6-6-2019 | 13:32: End.
+--------[END]--------
+
+6-6-2019 | 13:32: Generating random code...
+6-6-2019 | 13:32: Generated code is x1R6Z4. Room state is now Waiting.
+6-6-2019 | 13:32: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[RetrieveConfig]
+6-6-2019 | 13:32: 0ms. Attempting to retrieve config
+6-6-2019 | 13:32: 14ms. Got: 1 - 4
+6-6-2019 | 13:32: 18ms. Found config.
+6-6-2019 | 13:32: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[RetrieveUser]
+6-6-2019 | 13:32: 0ms. Retrieving user 4
+6-6-2019 | 13:32: 4ms. Found user 4
+6-6-2019 | 13:32: End.
+--------[END]--------
+
+6-6-2019 | 13:32: Generating random code...
+6-6-2019 | 13:32: Generated code is 094572. Room state is now Waiting.
+6-6-2019 | 13:32: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[RetrieveConfig]
+6-6-2019 | 13:32: 0ms. Attempting to retrieve config
+6-6-2019 | 13:32: 3ms. Got: 1 - 4
+6-6-2019 | 13:32: 6ms. Found config.
+6-6-2019 | 13:32: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[CheckLogin]
+6-6-2019 | 13:32: 0ms. Checking login for AAppel
+6-6-2019 | 13:32: 7ms. Found AAppel
+6-6-2019 | 13:32: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[RetrieveUser]
+6-6-2019 | 13:32: 0ms. Retrieving user 5
+6-6-2019 | 13:32: 7ms. Found user 5
+6-6-2019 | 13:32: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[RetrieveUser]
+6-6-2019 | 13:32: 0ms. Retrieving user 5
+6-6-2019 | 13:32: 6ms. Found user 5
+6-6-2019 | 13:32: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[CheckLogin]
+6-6-2019 | 13:32: 0ms. Checking login for 
+6-6-2019 | 13:32: 144ms. Exception:
+System.Data.SqlClient.SqlException (0x80131904): Procedure or function 'LogIn' expects parameter '@pUsername', which was not supplied.
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, SqlDataReader ds)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite, String method)
+   at System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, Boolean sendToPipe, Int32 timeout, Boolean asyncWrite, String methodName)
+   at System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   at WerkelijkWaar.Classes.DatabaseQueries.CheckLogin(String username, String password) in C:\Users\Justin Muris\source\repos\WerkelijkWaar\WerkelijkWaar\Classes\DatabaseQueries.cs:line 435
+ClientConnectionId:afc43cf1-893d-40fc-a094-6337bc7ce4d6
+Error Number:201,State:4,Class:16
+6-6-2019 | 13:32: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[CheckLogin]
+6-6-2019 | 13:33: 0ms. Checking login for JMuris
+6-6-2019 | 13:33: 43ms. Found JMuris
+6-6-2019 | 13:33: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[RetrieveUser]
+6-6-2019 | 13:33: 0ms. Retrieving user 4
+6-6-2019 | 13:33: 5ms. Found user 4
+6-6-2019 | 13:33: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[CheckLogin]
+6-6-2019 | 13:33: 0ms. Checking login for AAppel
+6-6-2019 | 13:33: 7ms. Found AAppel
+6-6-2019 | 13:33: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[RetrieveUser]
+6-6-2019 | 13:33: 0ms. Retrieving user 5
+6-6-2019 | 13:33: 3ms. Found user 5
+6-6-2019 | 13:33: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[RetrieveUser]
+6-6-2019 | 13:34: 0ms. Retrieving user 4
+6-6-2019 | 13:34: 16ms. Found user 4
+6-6-2019 | 13:34: End.
+--------[END]--------
+
+6-6-2019 | 13:34: Generating random code...
+6-6-2019 | 13:34: Generated code is 30e6d8. Room state is now Waiting.
+6-6-2019 | 13:34: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[RetrieveConfig]
+6-6-2019 | 13:34: 0ms. Attempting to retrieve config
+6-6-2019 | 13:34: 8ms. Got: 1 - 4
+6-6-2019 | 13:34: 12ms. Found config.
+6-6-2019 | 13:34: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[RetrieveUser]
+6-6-2019 | 13:34: 0ms. Retrieving user 5
+6-6-2019 | 13:34: 3ms. Found user 5
+6-6-2019 | 13:34: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[CheckLogin]
+6-6-2019 | 13:34: 0ms. Checking login for 
+6-6-2019 | 13:34: 103ms. Exception:
+System.Data.SqlClient.SqlException (0x80131904): Procedure or function 'LogIn' expects parameter '@pUsername', which was not supplied.
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, SqlDataReader ds)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite, String method)
+   at System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, Boolean sendToPipe, Int32 timeout, Boolean asyncWrite, String methodName)
+   at System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   at WerkelijkWaar.Classes.DatabaseQueries.CheckLogin(String username, String password) in C:\Users\Justin Muris\source\repos\WerkelijkWaar\WerkelijkWaar\Classes\DatabaseQueries.cs:line 435
+ClientConnectionId:068555ae-89e0-414e-b85a-ce8cdc15b92a
+Error Number:201,State:4,Class:16
+6-6-2019 | 13:34: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[RetrieveUser]
+6-6-2019 | 13:34: 0ms. Retrieving user 5
+6-6-2019 | 13:34: 10ms. Found user 5
+6-6-2019 | 13:34: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[CheckLogin]
+6-6-2019 | 13:35: 0ms. Checking login for 
+6-6-2019 | 13:35: 420ms. Exception:
+System.Data.SqlClient.SqlException (0x80131904): Procedure or function 'LogIn' expects parameter '@pUsername', which was not supplied.
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, SqlDataReader ds)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite, String method)
+   at System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, Boolean sendToPipe, Int32 timeout, Boolean asyncWrite, String methodName)
+   at System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   at WerkelijkWaar.Classes.DatabaseQueries.CheckLogin(String username, String password) in C:\Users\Justin Muris\source\repos\WerkelijkWaar\WerkelijkWaar\Classes\DatabaseQueries.cs:line 435
+ClientConnectionId:068555ae-89e0-414e-b85a-ce8cdc15b92a
+Error Number:201,State:4,Class:16
+6-6-2019 | 13:35: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[CheckLogin]
+6-6-2019 | 13:37: 0ms. Checking login for JMuris
+6-6-2019 | 13:37: 41ms. Found JMuris
+6-6-2019 | 13:37: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[RetrieveUser]
+6-6-2019 | 13:37: 0ms. Retrieving user 4
+6-6-2019 | 13:37: 4ms. Found user 4
+6-6-2019 | 13:37: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[CheckLogin]
+6-6-2019 | 13:37: 0ms. Checking login for AAppel
+6-6-2019 | 13:37: 3ms. Found AAppel
+6-6-2019 | 13:37: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[RetrieveUser]
+6-6-2019 | 13:37: 0ms. Retrieving user 5
+6-6-2019 | 13:37: 3ms. Found user 5
+6-6-2019 | 13:37: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[RetrieveUser]
+6-6-2019 | 13:37: 0ms. Retrieving user 4
+6-6-2019 | 13:37: 5ms. Found user 4
+6-6-2019 | 13:37: End.
+--------[END]--------
+
+6-6-2019 | 13:37: Generating random code...
+6-6-2019 | 13:37: Generated code is UtXyX7. Room state is now Waiting.
+6-6-2019 | 13:37: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[RetrieveConfig]
+6-6-2019 | 13:37: 0ms. Attempting to retrieve config
+6-6-2019 | 13:37: 4ms. Got: 1 - 4
+6-6-2019 | 13:37: 6ms. Found config.
+6-6-2019 | 13:37: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[RetrieveUser]
+6-6-2019 | 13:37: 0ms. Retrieving user 5
+6-6-2019 | 13:37: 3ms. Found user 5
+6-6-2019 | 13:37: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[RetrieveUser]
+6-6-2019 | 13:39: 0ms. Retrieving user 5
+6-6-2019 | 13:39: 6ms. Found user 5
+6-6-2019 | 13:39: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[CheckLogin]
+6-6-2019 | 13:39: 0ms. Checking login for JMuris
+6-6-2019 | 13:39: 6ms. Found JMuris
+6-6-2019 | 13:39: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[RetrieveUser]
+6-6-2019 | 13:39: 0ms. Retrieving user 4
+6-6-2019 | 13:39: 7ms. Found user 4
+6-6-2019 | 13:39: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[CheckLogin]
+6-6-2019 | 13:39: 0ms. Checking login for AAppel
+6-6-2019 | 13:39: 8ms. Found AAppel
+6-6-2019 | 13:39: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[RetrieveUser]
+6-6-2019 | 13:39: 0ms. Retrieving user 5
+6-6-2019 | 13:39: 10ms. Found user 5
+6-6-2019 | 13:39: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[RetrieveUser]
+6-6-2019 | 13:39: 0ms. Retrieving user 4
+6-6-2019 | 13:39: 10ms. Found user 4
+6-6-2019 | 13:39: End.
+--------[END]--------
+
+6-6-2019 | 13:39: Generating random code...
+6-6-2019 | 13:39: Generated code is q3J07w. Room state is now Waiting.
+6-6-2019 | 13:39: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[RetrieveConfig]
+6-6-2019 | 13:39: 0ms. Attempting to retrieve config
+6-6-2019 | 13:39: 13ms. Got: 1 - 4
+6-6-2019 | 13:39: 22ms. Found config.
+6-6-2019 | 13:39: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[RetrieveUser]
+6-6-2019 | 13:39: 0ms. Retrieving user 5
+6-6-2019 | 13:39: 2ms. Found user 5
+6-6-2019 | 13:39: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[RetrieveUser]
+6-6-2019 | 13:39: 0ms. Retrieving user 5
+6-6-2019 | 13:39: 3ms. Found user 5
+6-6-2019 | 13:39: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[RetrieveUser]
+6-6-2019 | 13:39: 0ms. Retrieving user 5
+6-6-2019 | 13:39: 3ms. Found user 5
+6-6-2019 | 13:39: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[CheckLogin]
+6-6-2019 | 13:39: 0ms. Checking login for 
+6-6-2019 | 13:39: 2054ms. Exception:
+System.Data.SqlClient.SqlException (0x80131904): Procedure or function 'LogIn' expects parameter '@pUsername', which was not supplied.
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, SqlDataReader ds)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite, String method)
+   at System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, Boolean sendToPipe, Int32 timeout, Boolean asyncWrite, String methodName)
+   at System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   at WerkelijkWaar.Classes.DatabaseQueries.CheckLogin(String username, String password) in C:\Users\Justin Muris\source\repos\WerkelijkWaar\WerkelijkWaar\Classes\DatabaseQueries.cs:line 435
+ClientConnectionId:da3230b9-679a-4251-a5c2-92634cc81deb
+Error Number:201,State:4,Class:16
+6-6-2019 | 13:39: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[CheckLogin]
+6-6-2019 | 13:40: 0ms. Checking login for JMuris
+6-6-2019 | 13:40: 3ms. Found JMuris
+6-6-2019 | 13:40: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[RetrieveUser]
+6-6-2019 | 13:40: 0ms. Retrieving user 4
+6-6-2019 | 13:40: 2ms. Found user 4
+6-6-2019 | 13:40: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[CheckLogin]
+6-6-2019 | 13:40: 0ms. Checking login for AAppel
+6-6-2019 | 13:40: 3ms. Found AAppel
+6-6-2019 | 13:40: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[RetrieveUser]
+6-6-2019 | 13:40: 0ms. Retrieving user 5
+6-6-2019 | 13:40: 4ms. Found user 5
+6-6-2019 | 13:40: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[RetrieveUser]
+6-6-2019 | 13:40: 0ms. Retrieving user 4
+6-6-2019 | 13:40: 8ms. Found user 4
+6-6-2019 | 13:40: End.
+--------[END]--------
+
+6-6-2019 | 13:40: Generating random code...
+6-6-2019 | 13:40: Generated code is bo0517. Room state is now Waiting.
+6-6-2019 | 13:40: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[RetrieveConfig]
+6-6-2019 | 13:40: 0ms. Attempting to retrieve config
+6-6-2019 | 13:40: 11ms. Got: 1 - 4
+6-6-2019 | 13:40: 15ms. Found config.
+6-6-2019 | 13:40: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[RetrieveUser]
+6-6-2019 | 13:40: 0ms. Retrieving user 5
+6-6-2019 | 13:40: 3ms. Found user 5
+6-6-2019 | 13:40: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[RetrieveUser]
+6-6-2019 | 13:40: 0ms. Retrieving user 5
+6-6-2019 | 13:40: 3ms. Found user 5
+6-6-2019 | 13:40: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[RetrieveUser]
+6-6-2019 | 13:40: 0ms. Retrieving user 5
+6-6-2019 | 13:40: 4ms. Found user 5
+6-6-2019 | 13:40: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[CheckLogin]
+6-6-2019 | 13:41: 0ms. Checking login for JMuris
+6-6-2019 | 13:41: 52ms. Found JMuris
+6-6-2019 | 13:41: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[RetrieveUser]
+6-6-2019 | 13:41: 0ms. Retrieving user 4
+6-6-2019 | 13:41: 7ms. Found user 4
+6-6-2019 | 13:41: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[CheckLogin]
+6-6-2019 | 13:41: 0ms. Checking login for AAppel
+6-6-2019 | 13:41: 7ms. Found AAppel
+6-6-2019 | 13:41: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[RetrieveUser]
+6-6-2019 | 13:41: 0ms. Retrieving user 5
+6-6-2019 | 13:41: 3ms. Found user 5
+6-6-2019 | 13:41: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[CheckLogin]
+6-6-2019 | 13:41: 0ms. Checking login for AAppel
+6-6-2019 | 13:41: 8ms. Found AAppel
+6-6-2019 | 13:41: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[RetrieveUser]
+6-6-2019 | 13:41: 0ms. Retrieving user 5
+6-6-2019 | 13:41: 19ms. Found user 5
+6-6-2019 | 13:41: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[RetrieveUser]
+6-6-2019 | 13:41: 0ms. Retrieving user 4
+6-6-2019 | 13:41: 3ms. Found user 4
+6-6-2019 | 13:41: End.
+--------[END]--------
+
+6-6-2019 | 13:41: Generating random code...
+6-6-2019 | 13:41: Generated code is 3wWHAq. Room state is now Waiting.
+6-6-2019 | 13:41: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[RetrieveConfig]
+6-6-2019 | 13:41: 0ms. Attempting to retrieve config
+6-6-2019 | 13:41: 8ms. Got: 1 - 4
+6-6-2019 | 13:41: 10ms. Found config.
+6-6-2019 | 13:41: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[RetrieveUser]
+6-6-2019 | 13:41: 0ms. Retrieving user 5
+6-6-2019 | 13:41: 3ms. Found user 5
+6-6-2019 | 13:41: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[RetrieveUser]
+6-6-2019 | 13:41: 0ms. Retrieving user 5
+6-6-2019 | 13:41: 2ms. Found user 5
+6-6-2019 | 13:41: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[CheckLogin]
+6-6-2019 | 13:50: 0ms. Checking login for JMuris
+6-6-2019 | 13:50: 111ms. Found JMuris
+6-6-2019 | 13:50: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[RetrieveUser]
+6-6-2019 | 13:50: 0ms. Retrieving user 4
+6-6-2019 | 13:50: 14ms. Found user 4
+6-6-2019 | 13:50: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[RetrieveUser]
+6-6-2019 | 13:50: 0ms. Retrieving user 4
+6-6-2019 | 13:50: 3ms. Found user 4
+6-6-2019 | 13:50: End.
+--------[END]--------
+
+6-6-2019 | 13:50: Generating random code...
+6-6-2019 | 13:50: Generated code is zj6118. Room state is now Waiting.
+6-6-2019 | 13:50: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[RetrieveConfig]
+6-6-2019 | 13:50: 0ms. Attempting to retrieve config
+6-6-2019 | 13:50: 5ms. Got: 1 - 4
+6-6-2019 | 13:50: 8ms. Found config.
+6-6-2019 | 13:50: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[CheckLogin]
+6-6-2019 | 13:50: 0ms. Checking login for AAppel
+6-6-2019 | 13:50: 4ms. Found AAppel
+6-6-2019 | 13:50: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[RetrieveUser]
+6-6-2019 | 13:50: 0ms. Retrieving user 5
+6-6-2019 | 13:50: 3ms. Found user 5
+6-6-2019 | 13:50: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[RetrieveUser]
+6-6-2019 | 13:50: 0ms. Retrieving user 5
+6-6-2019 | 13:50: 4ms. Found user 5
+6-6-2019 | 13:50: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[RetrieveUser]
+6-6-2019 | 13:51: 0ms. Retrieving user 5
+6-6-2019 | 13:51: 3ms. Found user 5
+6-6-2019 | 13:51: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[CheckLogin]
+6-6-2019 | 13:51: 0ms. Checking login for 
+6-6-2019 | 13:51: 540ms. Exception:
+System.Data.SqlClient.SqlException (0x80131904): Procedure or function 'LogIn' expects parameter '@pUsername', which was not supplied.
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, SqlDataReader ds)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite, String method)
+   at System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, Boolean sendToPipe, Int32 timeout, Boolean asyncWrite, String methodName)
+   at System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   at WerkelijkWaar.Classes.DatabaseQueries.CheckLogin(String username, String password) in C:\Users\Justin Muris\source\repos\WerkelijkWaar\WerkelijkWaar\Classes\DatabaseQueries.cs:line 435
+ClientConnectionId:28c5460f-5884-41f8-821b-d5dde901a1f0
+Error Number:201,State:4,Class:16
+6-6-2019 | 13:51: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[CheckLogin]
+6-6-2019 | 13:51: 0ms. Checking login for JMuris
+6-6-2019 | 13:51: 10ms. Found JMuris
+6-6-2019 | 13:51: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[RetrieveUser]
+6-6-2019 | 13:51: 0ms. Retrieving user 4
+6-6-2019 | 13:51: 4ms. Found user 4
+6-6-2019 | 13:51: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[CheckLogin]
+6-6-2019 | 13:51: 0ms. Checking login for AAppel
+6-6-2019 | 13:51: 9ms. Found AAppel
+6-6-2019 | 13:51: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[RetrieveUser]
+6-6-2019 | 13:51: 0ms. Retrieving user 5
+6-6-2019 | 13:51: 5ms. Found user 5
+6-6-2019 | 13:51: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[RetrieveUser]
+6-6-2019 | 13:51: 0ms. Retrieving user 4
+6-6-2019 | 13:51: 4ms. Found user 4
+6-6-2019 | 13:51: End.
+--------[END]--------
+
+6-6-2019 | 13:51: Generating random code...
+6-6-2019 | 13:51: Generated code is 5z2P87. Room state is now Waiting.
+6-6-2019 | 13:51: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[RetrieveConfig]
+6-6-2019 | 13:51: 0ms. Attempting to retrieve config
+6-6-2019 | 13:51: 6ms. Got: 1 - 4
+6-6-2019 | 13:51: 10ms. Found config.
+6-6-2019 | 13:51: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[RetrieveUser]
+6-6-2019 | 13:52: 0ms. Retrieving user 5
+6-6-2019 | 13:52: 3ms. Found user 5
+6-6-2019 | 13:52: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[Room - IdleTimer]
+6-6-2019 | 13:53: IdleStrikes are 0.
+6-6-2019 | 13:53: Room zj6118 has died and is being removed.
+6-6-2019 | 13:53: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[Room - IdleTimer]
+6-6-2019 | 13:54: IdleStrikes are 0.
+6-6-2019 | 13:54: Room 5z2P87 has died and is being removed.
+6-6-2019 | 13:54: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[CheckLogin]
+6-6-2019 | 14:04: 0ms. Checking login for JMuris
+6-6-2019 | 14:04: 42ms. Found JMuris
+6-6-2019 | 14:04: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[RetrieveUser]
+6-6-2019 | 14:04: 0ms. Retrieving user 4
+6-6-2019 | 14:04: 6ms. Found user 4
+6-6-2019 | 14:04: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[CheckLogin]
+6-6-2019 | 14:04: 0ms. Checking login for AAppel
+6-6-2019 | 14:04: 28ms. Found AAppel
+6-6-2019 | 14:04: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[RetrieveUser]
+6-6-2019 | 14:04: 0ms. Retrieving user 5
+6-6-2019 | 14:04: 32ms. Found user 5
+6-6-2019 | 14:04: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[RetrieveUser]
+6-6-2019 | 14:04: 0ms. Retrieving user 4
+6-6-2019 | 14:04: 102ms. Found user 4
+6-6-2019 | 14:04: End.
+--------[END]--------
+
+6-6-2019 | 14:04: Generating random code...
+6-6-2019 | 14:04: Generated code is 2WCRmx. Room state is now Waiting.
+6-6-2019 | 14:04: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[RetrieveConfig]
+6-6-2019 | 14:04: 0ms. Attempting to retrieve config
+6-6-2019 | 14:04: 13ms. Got: 1 - 4
+6-6-2019 | 14:04: 17ms. Found config.
+6-6-2019 | 14:04: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[RetrieveUser]
+6-6-2019 | 14:04: 0ms. Retrieving user 5
+6-6-2019 | 14:04: 6ms. Found user 5
+6-6-2019 | 14:04: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[RetrieveUser]
+6-6-2019 | 14:04: 0ms. Retrieving user 5
+6-6-2019 | 14:04: 3ms. Found user 5
+6-6-2019 | 14:04: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[RetrieveUser]
+6-6-2019 | 14:04: 0ms. Retrieving user 5
+6-6-2019 | 14:04: 3ms. Found user 5
+6-6-2019 | 14:04: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[RetrieveUser]
+6-6-2019 | 14:04: 0ms. Retrieving user 5
+6-6-2019 | 14:04: 5ms. Found user 5
+6-6-2019 | 14:04: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[RetrieveUser]
+6-6-2019 | 14:04: 0ms. Retrieving user 5
+6-6-2019 | 14:04: 3ms. Found user 5
+6-6-2019 | 14:04: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[RetrieveUser]
+6-6-2019 | 14:04: 0ms. Retrieving user 5
+6-6-2019 | 14:04: 3ms. Found user 5
+6-6-2019 | 14:04: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[Room - GamePreparation]
+6-6-2019 | 14:04: Room is being prepared for gameplay.
+6-6-2019 | 14:04: Room contains 6 players.
+6-6-2019 | 14:04: Room has enough players (6/3)
+6-6-2019 | 14:04: Shuffling user list...
+6-6-2019 | 14:04: Assigning players to groups...
+-----[LOG ENTRY]-----
+[RetrieveAllStories]
+6-6-2019 | 14:04: 0ms. Attempting to retrieve all stories.
+6-6-2019 | 14:04: 4ms. Got: 1 - Een root verhaal
+6-6-2019 | 14:04: 6ms. Got: 2 - Een verhaal
+6-6-2019 | 14:04: 8ms. Got: 4 - Een test verhaal
+6-6-2019 | 14:04: 10ms. Found 3 stories.
+6-6-2019 | 14:04: End.
+--------[END]--------
+
+6-6-2019 | 14:04: Assigning stories to groups...
+6-6-2019 | 14:04: Creating score objects for the players...
+6-6-2019 | 14:04: Room is prepared.
+6-6-2019 | 14:04: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[CheckLogin]
+6-6-2019 | 14:07: 0ms. Checking login for JMuris
+6-6-2019 | 14:07: 53ms. Found JMuris
+6-6-2019 | 14:07: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[RetrieveUser]
+6-6-2019 | 14:07: 0ms. Retrieving user 4
+6-6-2019 | 14:07: 5ms. Found user 4
+6-6-2019 | 14:07: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[CheckLogin]
+6-6-2019 | 14:07: 0ms. Checking login for AAppel
+6-6-2019 | 14:07: 3ms. Found AAppel
+6-6-2019 | 14:07: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[RetrieveUser]
+6-6-2019 | 14:07: 0ms. Retrieving user 5
+6-6-2019 | 14:07: 3ms. Found user 5
+6-6-2019 | 14:07: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[RetrieveUser]
+6-6-2019 | 14:07: 0ms. Retrieving user 4
+6-6-2019 | 14:07: 13ms. Found user 4
+6-6-2019 | 14:07: End.
+--------[END]--------
+
+6-6-2019 | 14:07: Generating random code...
+6-6-2019 | 14:07: Generated code is 2yQh26. Room state is now Waiting.
+6-6-2019 | 14:07: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[RetrieveConfig]
+6-6-2019 | 14:07: 0ms. Attempting to retrieve config
+6-6-2019 | 14:07: 10ms. Got: 1 - 4
+6-6-2019 | 14:07: 17ms. Found config.
+6-6-2019 | 14:07: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[RetrieveUser]
+6-6-2019 | 14:07: 0ms. Retrieving user 5
+6-6-2019 | 14:07: 2ms. Found user 5
+6-6-2019 | 14:07: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[RetrieveUser]
+6-6-2019 | 14:07: 0ms. Retrieving user 5
+6-6-2019 | 14:07: 3ms. Found user 5
+6-6-2019 | 14:07: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[RetrieveUser]
+6-6-2019 | 14:07: 0ms. Retrieving user 5
+6-6-2019 | 14:07: 3ms. Found user 5
+6-6-2019 | 14:07: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[RetrieveUser]
+6-6-2019 | 14:07: 0ms. Retrieving user 5
+6-6-2019 | 14:07: 4ms. Found user 5
+6-6-2019 | 14:07: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[RetrieveUser]
+6-6-2019 | 14:07: 0ms. Retrieving user 5
+6-6-2019 | 14:07: 2ms. Found user 5
+6-6-2019 | 14:07: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[RetrieveUser]
+6-6-2019 | 14:07: 0ms. Retrieving user 5
+6-6-2019 | 14:07: 9ms. Found user 5
+6-6-2019 | 14:07: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[Room - GamePreparation]
+6-6-2019 | 14:07: Room is being prepared for gameplay.
+6-6-2019 | 14:07: Room contains 6 players.
+6-6-2019 | 14:07: Room has enough players (6/3)
+6-6-2019 | 14:07: Shuffling user list...
+6-6-2019 | 14:07: Assigning players to groups...
+-----[LOG ENTRY]-----
+[RetrieveAllStories]
+6-6-2019 | 14:07: 0ms. Attempting to retrieve all stories.
+6-6-2019 | 14:07: 5ms. Got: 1 - Een root verhaal
+6-6-2019 | 14:07: 7ms. Got: 2 - Een verhaal
+6-6-2019 | 14:07: 9ms. Got: 4 - Een test verhaal
+6-6-2019 | 14:07: 11ms. Found 3 stories.
+6-6-2019 | 14:07: End.
+--------[END]--------
+
+6-6-2019 | 14:07: Assigning stories to groups...
+6-6-2019 | 14:07: Creating score objects for the players...
+6-6-2019 | 14:07: Room is prepared.
+6-6-2019 | 14:07: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[CheckLogin]
+6-6-2019 | 14:08: 0ms. Checking login for JMuris
+6-6-2019 | 14:08: 55ms. Found JMuris
+6-6-2019 | 14:08: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[RetrieveUser]
+6-6-2019 | 14:08: 0ms. Retrieving user 4
+6-6-2019 | 14:08: 6ms. Found user 4
+6-6-2019 | 14:08: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[CheckLogin]
+6-6-2019 | 14:08: 0ms. Checking login for AAppel
+6-6-2019 | 14:08: 19ms. Found AAppel
+6-6-2019 | 14:08: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[RetrieveUser]
+6-6-2019 | 14:08: 0ms. Retrieving user 5
+6-6-2019 | 14:08: 3ms. Found user 5
+6-6-2019 | 14:08: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[RetrieveUser]
+6-6-2019 | 14:08: 0ms. Retrieving user 4
+6-6-2019 | 14:08: 7ms. Found user 4
+6-6-2019 | 14:08: End.
+--------[END]--------
+
+6-6-2019 | 14:08: Generating random code...
+6-6-2019 | 14:08: Generated code is 6t21Nn. Room state is now Waiting.
+6-6-2019 | 14:08: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[RetrieveConfig]
+6-6-2019 | 14:08: 0ms. Attempting to retrieve config
+6-6-2019 | 14:08: 6ms. Got: 1 - 4
+6-6-2019 | 14:08: 12ms. Found config.
+6-6-2019 | 14:08: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[RetrieveUser]
+6-6-2019 | 14:08: 0ms. Retrieving user 5
+6-6-2019 | 14:08: 3ms. Found user 5
+6-6-2019 | 14:08: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[RetrieveUser]
+6-6-2019 | 14:08: 0ms. Retrieving user 5
+6-6-2019 | 14:08: 3ms. Found user 5
+6-6-2019 | 14:08: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[RetrieveUser]
+6-6-2019 | 14:09: 0ms. Retrieving user 5
+6-6-2019 | 14:09: 5ms. Found user 5
+6-6-2019 | 14:09: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[RetrieveUser]
+6-6-2019 | 14:09: 0ms. Retrieving user 5
+6-6-2019 | 14:09: 4ms. Found user 5
+6-6-2019 | 14:09: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[RetrieveUser]
+6-6-2019 | 14:09: 0ms. Retrieving user 5
+6-6-2019 | 14:09: 5ms. Found user 5
+6-6-2019 | 14:09: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[RetrieveUser]
+6-6-2019 | 14:09: 0ms. Retrieving user 5
+6-6-2019 | 14:09: 6ms. Found user 5
+6-6-2019 | 14:09: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[Room - GamePreparation]
+6-6-2019 | 14:09: Room is being prepared for gameplay.
+6-6-2019 | 14:09: Room contains 6 players.
+6-6-2019 | 14:09: Room has enough players (6/3)
+6-6-2019 | 14:09: Shuffling user list...
+6-6-2019 | 14:09: Assigning players to groups...
+-----[LOG ENTRY]-----
+[RetrieveAllStories]
+6-6-2019 | 14:09: 0ms. Attempting to retrieve all stories.
+6-6-2019 | 14:09: 4ms. Got: 1 - Een root verhaal
+6-6-2019 | 14:09: 6ms. Got: 2 - Een verhaal
+6-6-2019 | 14:09: 8ms. Got: 4 - Een test verhaal
+6-6-2019 | 14:09: 10ms. Found 3 stories.
+6-6-2019 | 14:09: End.
+--------[END]--------
+
+6-6-2019 | 14:09: Assigning stories to groups...
+6-6-2019 | 14:09: Creating score objects for the players...
+6-6-2019 | 14:09: Room is prepared.
+6-6-2019 | 14:09: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[CheckLogin]
+6-6-2019 | 15:43: 0ms. Checking login for JMuris
+6-6-2019 | 15:43: 50ms. Found JMuris
+6-6-2019 | 15:43: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[RetrieveUser]
+6-6-2019 | 15:43: 0ms. Retrieving user 4
+6-6-2019 | 15:43: 9ms. Found user 4
+6-6-2019 | 15:43: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[CheckLogin]
+6-6-2019 | 15:44: 0ms. Checking login for JMuris
+6-6-2019 | 15:44: 40ms. Found JMuris
+6-6-2019 | 15:44: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[RetrieveUser]
+6-6-2019 | 15:44: 0ms. Retrieving user 4
+6-6-2019 | 15:44: 4ms. Found user 4
+6-6-2019 | 15:44: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[CheckLogin]
+6-6-2019 | 15:44: 0ms. Checking login for AAppel
+6-6-2019 | 15:44: 4ms. Found AAppel
+6-6-2019 | 15:44: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[RetrieveUser]
+6-6-2019 | 15:44: 0ms. Retrieving user 5
+6-6-2019 | 15:44: 3ms. Found user 5
+6-6-2019 | 15:44: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[RetrieveUser]
+6-6-2019 | 15:44: 0ms. Retrieving user 4
+6-6-2019 | 15:44: 5ms. Found user 4
+6-6-2019 | 15:44: End.
+--------[END]--------
+
+6-6-2019 | 15:44: Generating random code...
+6-6-2019 | 15:44: Generated code is 6yGF1f. Room state is now Waiting.
+6-6-2019 | 15:44: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[RetrieveConfig]
+6-6-2019 | 15:44: 0ms. Attempting to retrieve config
+6-6-2019 | 15:44: 12ms. Got: 1 - 4
+6-6-2019 | 15:44: 19ms. Found config.
+6-6-2019 | 15:44: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[CheckLogin]
+6-6-2019 | 15:44: 0ms. Checking login for 
+6-6-2019 | 15:44: 129ms. Exception:
+System.Data.SqlClient.SqlException (0x80131904): Procedure or function 'LogIn' expects parameter '@pUsername', which was not supplied.
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, SqlDataReader ds)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite, String method)
+   at System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, Boolean sendToPipe, Int32 timeout, Boolean asyncWrite, String methodName)
+   at System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   at WerkelijkWaar.Classes.DatabaseQueries.CheckLogin(String username, String password) in C:\Users\Justin Muris\source\repos\WerkelijkWaar\WerkelijkWaar\Classes\DatabaseQueries.cs:line 435
+ClientConnectionId:b2515a08-4122-4205-bf9f-ca0ee2866cf7
+Error Number:201,State:4,Class:16
+6-6-2019 | 15:44: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[Room - IdleTimer]
+6-6-2019 | 15:45: IdleStrikes are 0.
+6-6-2019 | 15:45: Room 6yGF1f has died and is being removed.
+6-6-2019 | 15:45: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[CheckLogin]
+6-6-2019 | 15:45: 0ms. Checking login for JMuris
+6-6-2019 | 15:45: 68ms. Found JMuris
+6-6-2019 | 15:45: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[RetrieveUser]
+6-6-2019 | 15:45: 0ms. Retrieving user 4
+6-6-2019 | 15:45: 7ms. Found user 4
+6-6-2019 | 15:45: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[RetrieveUser]
+6-6-2019 | 15:45: 0ms. Retrieving user 4
+6-6-2019 | 15:45: 15ms. Found user 4
+6-6-2019 | 15:45: End.
+--------[END]--------
+
+6-6-2019 | 15:45: Generating random code...
+6-6-2019 | 15:45: Generated code is 4fa820. Room state is now Waiting.
+6-6-2019 | 15:45: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[RetrieveConfig]
+6-6-2019 | 15:45: 0ms. Attempting to retrieve config
+6-6-2019 | 15:45: 45ms. Got: 1 - 4
+6-6-2019 | 15:45: 93ms. Found config.
+6-6-2019 | 15:45: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[CheckLogin]
+6-6-2019 | 15:45: 0ms. Checking login for AAppel
+6-6-2019 | 15:45: 9ms. Found AAppel
+6-6-2019 | 15:45: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[RetrieveUser]
+6-6-2019 | 15:45: 0ms. Retrieving user 5
+6-6-2019 | 15:45: 2ms. Found user 5
+6-6-2019 | 15:45: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[CheckLogin]
+6-6-2019 | 15:46: 0ms. Checking login for 
+6-6-2019 | 15:46: 228ms. Exception:
+System.Data.SqlClient.SqlException (0x80131904): Procedure or function 'LogIn' expects parameter '@pUsername', which was not supplied.
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, SqlDataReader ds)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite, String method)
+   at System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, Boolean sendToPipe, Int32 timeout, Boolean asyncWrite, String methodName)
+   at System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   at WerkelijkWaar.Classes.DatabaseQueries.CheckLogin(String username, String password) in C:\Users\Justin Muris\source\repos\WerkelijkWaar\WerkelijkWaar\Classes\DatabaseQueries.cs:line 435
+ClientConnectionId:6a10f76f-d9b4-47e4-ad04-ad8f7cea10cb
+Error Number:201,State:4,Class:16
+6-6-2019 | 15:46: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[Room - IdleTimer]
+6-6-2019 | 15:46: IdleStrikes are 0.
+6-6-2019 | 15:46: Room 4fa820 has died and is being removed.
+6-6-2019 | 15:46: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[CheckLogin]
+6-6-2019 | 15:47: 0ms. Checking login for JMuris
+6-6-2019 | 15:47: 65ms. Found JMuris
+6-6-2019 | 15:47: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[RetrieveUser]
+6-6-2019 | 15:47: 0ms. Retrieving user 4
+6-6-2019 | 15:47: 8ms. Found user 4
+6-6-2019 | 15:47: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[CheckLogin]
+6-6-2019 | 15:47: 0ms. Checking login for AAppel
+6-6-2019 | 15:47: 13ms. Found AAppel
+6-6-2019 | 15:47: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[RetrieveUser]
+6-6-2019 | 15:47: 0ms. Retrieving user 5
+6-6-2019 | 15:47: 5ms. Found user 5
+6-6-2019 | 15:47: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[RetrieveUser]
+6-6-2019 | 15:48: 0ms. Retrieving user 4
+6-6-2019 | 15:48: 5ms. Found user 4
+6-6-2019 | 15:48: End.
+--------[END]--------
+
+6-6-2019 | 15:48: Generating random code...
+6-6-2019 | 15:48: Generated code is 4B54wK. Room state is now Waiting.
+6-6-2019 | 15:48: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[RetrieveConfig]
+6-6-2019 | 15:48: 0ms. Attempting to retrieve config
+6-6-2019 | 15:48: 16ms. Got: 1 - 4
+6-6-2019 | 15:48: 20ms. Found config.
+6-6-2019 | 15:48: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[RetrieveUser]
+6-6-2019 | 15:48: 0ms. Retrieving user 5
+6-6-2019 | 15:48: 3ms. Found user 5
+6-6-2019 | 15:48: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[RetrieveUser]
+6-6-2019 | 15:48: 0ms. Retrieving user 5
+6-6-2019 | 15:48: 3ms. Found user 5
+6-6-2019 | 15:48: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[RetrieveUser]
+6-6-2019 | 15:48: 0ms. Retrieving user 5
+6-6-2019 | 15:48: 3ms. Found user 5
+6-6-2019 | 15:48: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[RetrieveUser]
+6-6-2019 | 15:48: 0ms. Retrieving user 5
+6-6-2019 | 15:48: 6ms. Found user 5
+6-6-2019 | 15:48: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[RetrieveUser]
+6-6-2019 | 15:48: 0ms. Retrieving user 5
+6-6-2019 | 15:48: 8ms. Found user 5
+6-6-2019 | 15:48: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[RetrieveUser]
+6-6-2019 | 15:48: 0ms. Retrieving user 5
+6-6-2019 | 15:48: 3ms. Found user 5
+6-6-2019 | 15:48: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[Room - GamePreparation]
+6-6-2019 | 15:48: Room is being prepared for gameplay.
+6-6-2019 | 15:48: Room contains 6 players.
+6-6-2019 | 15:48: Room has enough players (6/3)
+6-6-2019 | 15:48: Shuffling user list...
+6-6-2019 | 15:48: Assigning players to groups...
+-----[LOG ENTRY]-----
+[RetrieveAllStories]
+6-6-2019 | 15:48: 0ms. Attempting to retrieve all stories.
+6-6-2019 | 15:48: 6ms. Got: 1 - Een root verhaal
+6-6-2019 | 15:48: 9ms. Got: 2 - Een verhaal
+6-6-2019 | 15:48: 14ms. Got: 4 - Een test verhaal
+6-6-2019 | 15:48: 17ms. Found 3 stories.
+6-6-2019 | 15:48: End.
+--------[END]--------
+
+6-6-2019 | 15:48: Assigning stories to groups...
+6-6-2019 | 15:48: Creating score objects for the players...
+6-6-2019 | 15:48: Room is prepared.
+6-6-2019 | 15:48: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[CheckLogin]
+6-6-2019 | 15:48: 0ms. Checking login for 
+6-6-2019 | 15:48: 167ms. Exception:
+System.Data.SqlClient.SqlException (0x80131904): Procedure or function 'LogIn' expects parameter '@pUsername', which was not supplied.
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, SqlDataReader ds)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite, String method)
+   at System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, Boolean sendToPipe, Int32 timeout, Boolean asyncWrite, String methodName)
+   at System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   at WerkelijkWaar.Classes.DatabaseQueries.CheckLogin(String username, String password) in C:\Users\Justin Muris\source\repos\WerkelijkWaar\WerkelijkWaar\Classes\DatabaseQueries.cs:line 435
+ClientConnectionId:eb4d1cb7-b8df-417b-8f14-dea7d7e92d02
+Error Number:201,State:4,Class:16
+6-6-2019 | 15:48: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[CheckLogin]
+6-6-2019 | 15:48: 0ms. Checking login for 
+6-6-2019 | 15:48: 306ms. Exception:
+System.Data.SqlClient.SqlException (0x80131904): Procedure or function 'LogIn' expects parameter '@pUsername', which was not supplied.
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, SqlDataReader ds)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite, String method)
+   at System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, Boolean sendToPipe, Int32 timeout, Boolean asyncWrite, String methodName)
+   at System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   at WerkelijkWaar.Classes.DatabaseQueries.CheckLogin(String username, String password) in C:\Users\Justin Muris\source\repos\WerkelijkWaar\WerkelijkWaar\Classes\DatabaseQueries.cs:line 435
+ClientConnectionId:eb4d1cb7-b8df-417b-8f14-dea7d7e92d02
+Error Number:201,State:4,Class:16
+6-6-2019 | 15:48: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[CheckLogin]
+6-6-2019 | 15:52: 0ms. Checking login for JMuris
+6-6-2019 | 15:52: 79ms. Found JMuris
+6-6-2019 | 15:52: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[RetrieveUser]
+6-6-2019 | 15:52: 0ms. Retrieving user 4
+6-6-2019 | 15:52: 16ms. Found user 4
+6-6-2019 | 15:52: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[CheckLogin]
+6-6-2019 | 15:52: 0ms. Checking login for AAppel
+6-6-2019 | 15:52: 4ms. Found AAppel
+6-6-2019 | 15:52: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[RetrieveUser]
+6-6-2019 | 15:52: 0ms. Retrieving user 5
+6-6-2019 | 15:52: 3ms. Found user 5
+6-6-2019 | 15:52: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[RetrieveUser]
+6-6-2019 | 15:52: 0ms. Retrieving user 4
+6-6-2019 | 15:52: 6ms. Found user 4
+6-6-2019 | 15:52: End.
+--------[END]--------
+
+6-6-2019 | 15:52: Generating random code...
+6-6-2019 | 15:52: Generated code is X373FC. Room state is now Waiting.
+6-6-2019 | 15:52: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[RetrieveConfig]
+6-6-2019 | 15:52: 0ms. Attempting to retrieve config
+6-6-2019 | 15:52: 7ms. Got: 1 - 4
+6-6-2019 | 15:52: 10ms. Found config.
+6-6-2019 | 15:52: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[RetrieveUser]
+6-6-2019 | 15:52: 0ms. Retrieving user 5
+6-6-2019 | 15:52: 3ms. Found user 5
+6-6-2019 | 15:52: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[RetrieveUser]
+6-6-2019 | 15:52: 0ms. Retrieving user 5
+6-6-2019 | 15:52: 4ms. Found user 5
+6-6-2019 | 15:52: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[RetrieveUser]
+6-6-2019 | 15:52: 0ms. Retrieving user 5
+6-6-2019 | 15:52: 6ms. Found user 5
+6-6-2019 | 15:52: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[RetrieveUser]
+6-6-2019 | 15:52: 0ms. Retrieving user 5
+6-6-2019 | 15:52: 3ms. Found user 5
+6-6-2019 | 15:52: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[RetrieveUser]
+6-6-2019 | 15:52: 0ms. Retrieving user 5
+6-6-2019 | 15:52: 3ms. Found user 5
+6-6-2019 | 15:52: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[RetrieveUser]
+6-6-2019 | 15:52: 0ms. Retrieving user 5
+6-6-2019 | 15:52: 4ms. Found user 5
+6-6-2019 | 15:52: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[Room - GamePreparation]
+6-6-2019 | 15:52: Room is being prepared for gameplay.
+6-6-2019 | 15:52: Room contains 6 players.
+6-6-2019 | 15:52: Room has enough players (6/3)
+6-6-2019 | 15:52: Shuffling user list...
+6-6-2019 | 15:52: Assigning players to groups...
+-----[LOG ENTRY]-----
+[RetrieveAllStories]
+6-6-2019 | 15:52: 0ms. Attempting to retrieve all stories.
+6-6-2019 | 15:52: 4ms. Got: 1 - Een root verhaal
+6-6-2019 | 15:52: 10ms. Got: 2 - Een verhaal
+6-6-2019 | 15:52: 13ms. Got: 4 - Een test verhaal
+6-6-2019 | 15:52: 15ms. Found 3 stories.
+6-6-2019 | 15:52: End.
+--------[END]--------
+
+6-6-2019 | 15:52: Assigning stories to groups...
+6-6-2019 | 15:52: Creating score objects for the players...
+6-6-2019 | 15:52: Room is prepared.
+6-6-2019 | 15:52: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[CheckLogin]
+6-6-2019 | 15:55: 0ms. Checking login for JMuris
+6-6-2019 | 15:55: 11ms. Found JMuris
+6-6-2019 | 15:55: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[RetrieveUser]
+6-6-2019 | 15:55: 0ms. Retrieving user 4
+6-6-2019 | 15:55: 5ms. Found user 4
+6-6-2019 | 15:55: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[CheckLogin]
+6-6-2019 | 15:55: 0ms. Checking login for AAppel
+6-6-2019 | 15:55: 4ms. Found AAppel
+6-6-2019 | 15:55: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[RetrieveUser]
+6-6-2019 | 15:55: 0ms. Retrieving user 5
+6-6-2019 | 15:55: 2ms. Found user 5
+6-6-2019 | 15:55: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[RetrieveUser]
+6-6-2019 | 15:55: 0ms. Retrieving user 4
+6-6-2019 | 15:55: 9ms. Found user 4
+6-6-2019 | 15:55: End.
+--------[END]--------
+
+6-6-2019 | 15:55: Generating random code...
+6-6-2019 | 15:55: Generated code is 926z3p. Room state is now Waiting.
+6-6-2019 | 15:55: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[RetrieveConfig]
+6-6-2019 | 15:55: 0ms. Attempting to retrieve config
+6-6-2019 | 15:55: 8ms. Got: 1 - 4
+6-6-2019 | 15:55: 12ms. Found config.
+6-6-2019 | 15:55: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[RetrieveUser]
+6-6-2019 | 15:55: 0ms. Retrieving user 5
+6-6-2019 | 15:55: 3ms. Found user 5
+6-6-2019 | 15:55: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[RetrieveUser]
+6-6-2019 | 15:55: 0ms. Retrieving user 5
+6-6-2019 | 15:55: 3ms. Found user 5
+6-6-2019 | 15:55: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[RetrieveUser]
+6-6-2019 | 15:56: 0ms. Retrieving user 5
+6-6-2019 | 15:56: 3ms. Found user 5
+6-6-2019 | 15:56: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[RetrieveUser]
+6-6-2019 | 15:56: 0ms. Retrieving user 5
+6-6-2019 | 15:56: 5ms. Found user 5
+6-6-2019 | 15:56: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[RetrieveUser]
+6-6-2019 | 15:56: 0ms. Retrieving user 5
+6-6-2019 | 15:56: 3ms. Found user 5
+6-6-2019 | 15:56: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[RetrieveUser]
+6-6-2019 | 15:56: 0ms. Retrieving user 5
+6-6-2019 | 15:56: 3ms. Found user 5
+6-6-2019 | 15:56: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[Room - GamePreparation]
+6-6-2019 | 15:56: Room is being prepared for gameplay.
+6-6-2019 | 15:56: Room contains 6 players.
+6-6-2019 | 15:56: Room has enough players (6/3)
+6-6-2019 | 15:56: Shuffling user list...
+6-6-2019 | 15:56: Assigning players to groups...
+-----[LOG ENTRY]-----
+[RetrieveAllStories]
+6-6-2019 | 15:56: 0ms. Attempting to retrieve all stories.
+6-6-2019 | 15:56: 4ms. Got: 1 - Een root verhaal
+6-6-2019 | 15:56: 8ms. Got: 2 - Een verhaal
+6-6-2019 | 15:56: 11ms. Got: 4 - Een test verhaal
+6-6-2019 | 15:56: 13ms. Found 3 stories.
+6-6-2019 | 15:56: End.
+--------[END]--------
+
+6-6-2019 | 15:56: Assigning stories to groups...
+6-6-2019 | 15:56: Creating score objects for the players...
+6-6-2019 | 15:56: Room is prepared.
+6-6-2019 | 15:56: End.
+--------[END]--------
+

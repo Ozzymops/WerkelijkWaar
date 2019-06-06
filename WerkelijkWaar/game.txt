@@ -1,53 +1,64 @@
 -----[LOG ENTRY]-----
 [Game - HostRoom]
-6-6-2019 | 12:11: User JMuris (4) is trying to host a room.
-6-6-2019 | 12:11: (4) validated.
-6-6-2019 | 12:11: (4, NjsGVu) retrieved configuration with Id 1.
-6-6-2019 | 12:11: (4, NjsGVu) applied configuration.
-6-6-2019 | 12:11: (4, NjsGVu) room is open and ready.
-6-6-2019 | 12:11: End.
---------[END]--------
-
------[LOG ENTRY]-----
-[Game - HostRoom]
-6-6-2019 | 12:12: User JMuris (4) is trying to host a room.
-6-6-2019 | 12:12: (4) validated.
-6-6-2019 | 12:12: (4, 3ecW18) retrieved configuration with Id 1.
-6-6-2019 | 12:12: (4, 3ecW18) applied configuration.
-6-6-2019 | 12:12: (4, 3ecW18) room is open and ready.
-6-6-2019 | 12:12: End.
+6-6-2019 | 15:55: User JMuris (4) is trying to host a room.
+6-6-2019 | 15:55: (4) validated.
+6-6-2019 | 15:55: (4, 926z3p) retrieved configuration with Id 1.
+6-6-2019 | 15:55: (4, 926z3p) applied configuration.
+6-6-2019 | 15:55: (4, 926z3p) room is open and ready.
+6-6-2019 | 15:55: End.
 --------[END]--------
 
 -----[LOG ENTRY]-----
 [Game - JoinRoom]
-6-6-2019 | 12:12: User AAppel (5b134e2f-ee33-477d-95bd-2f8b555ac7b3) is trying to join room 3ecW18.
+6-6-2019 | 15:55: User AAppel (5) is trying to join room 926z3p.
+6-6-2019 | 15:55: (5) validated.
+6-6-2019 | 15:55: (5) found room 926z3p.
+6-6-2019 | 15:55: (5) successfully joined room 926z3p.
 -----[LOG ENTRY]-----
 [Game - JoinRoom]
-6-6-2019 | 12:12: User AAppel (5b134e2f-ee33-477d-95bd-2f8b555ac7b3) is trying to join room 3ecW18.
+6-6-2019 | 15:55: User AAppel (5) is trying to join room 926z3p.
+6-6-2019 | 15:55: (5) validated.
+6-6-2019 | 15:55: (5) found room 926z3p.
+6-6-2019 | 15:55: (5) successfully joined room 926z3p.
 -----[LOG ENTRY]-----
 [Game - JoinRoom]
-6-6-2019 | 12:12: User AAppel (5b134e2f-ee33-477d-95bd-2f8b555ac7b3) is trying to join room 3ecW18.
+6-6-2019 | 15:56: User AAppel (5) is trying to join room 926z3p.
+6-6-2019 | 15:56: (5) validated.
+6-6-2019 | 15:56: (5) found room 926z3p.
+6-6-2019 | 15:56: (5) successfully joined room 926z3p.
 -----[LOG ENTRY]-----
 [Game - JoinRoom]
-6-6-2019 | 12:12: User AAppel (5b134e2f-ee33-477d-95bd-2f8b555ac7b3) is trying to join room 3ecW18.
+6-6-2019 | 15:56: User AAppel (5) is trying to join room 926z3p.
+6-6-2019 | 15:56: (5) validated.
+6-6-2019 | 15:56: (5) found room 926z3p.
+6-6-2019 | 15:56: (5) successfully joined room 926z3p.
 -----[LOG ENTRY]-----
 [Game - JoinRoom]
-6-6-2019 | 12:12: User AAppel (5b134e2f-ee33-477d-95bd-2f8b555ac7b3) is trying to join room 3ecW18.
+6-6-2019 | 15:56: User AAppel (5) is trying to join room 926z3p.
+6-6-2019 | 15:56: (5) validated.
+6-6-2019 | 15:56: (5) found room 926z3p.
+6-6-2019 | 15:56: (5) successfully joined room 926z3p.
 -----[LOG ENTRY]-----
 [Game - JoinRoom]
-6-6-2019 | 12:12: User AAppel (5b134e2f-ee33-477d-95bd-2f8b555ac7b3) is trying to join room 3ecW18.
+6-6-2019 | 15:56: User AAppel (5) is trying to join room 926z3p.
+6-6-2019 | 15:56: (5) validated.
+6-6-2019 | 15:56: (5) found room 926z3p.
+6-6-2019 | 15:56: (5) successfully joined room 926z3p.
 -----[LOG ENTRY]-----
-[Game - JoinRoom]
-6-6-2019 | 12:12: User AAppel (5b134e2f-ee33-477d-95bd-2f8b555ac7b3) is trying to join room 3ecW18.
+[Game - StartGame]
+6-6-2019 | 15:56: Starting game in room 926z3p...
+6-6-2019 | 15:56: Preparations are complete. Game in room 926z3p has started.
+6-6-2019 | 15:56: End.
+--------[END]--------
+
 -----[LOG ENTRY]-----
-[Game - JoinRoom]
-6-6-2019 | 12:12: User AAppel (5b134e2f-ee33-477d-95bd-2f8b555ac7b3) is trying to join room 3ecW18.
------[LOG ENTRY]-----
-[Game - JoinRoom]
-6-6-2019 | 12:12: User AAppel (5b134e2f-ee33-477d-95bd-2f8b555ac7b3) is trying to join room 3ecW18.
------[LOG ENTRY]-----
-[Game - JoinRoom]
-6-6-2019 | 12:12: User AAppel (5b134e2f-ee33-477d-95bd-2f8b555ac7b3) is trying to join room 3ecW18.
------[LOG ENTRY]-----
-[Game - JoinRoom]
-6-6-2019 | 12:12: User AAppel (5b134e2f-ee33-477d-95bd-2f8b555ac7b3) is trying to join room 3ecW18.
+[Game - ReadyUpPlayer]
+6-6-2019 | 15:56: 926z3p all players readied up.
+6-6-2019 | 15:56: 926z3p continuing game...
+6-6-2019 | 15:56: End.
+--------[END]--------
+
+6-6-2019 | 15:57: (5) left the room.
+6-6-2019 | 15:57: End.
+--------[END]--------
+
