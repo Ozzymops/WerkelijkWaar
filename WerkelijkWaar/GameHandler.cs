@@ -10,12 +10,25 @@ namespace WerkelijkWaar
 {
     public class GameHandler : WebSocketHandler
     {
-        private Classes.Logger l = new Classes.Logger();
+        private Classes.Logger logger = new Classes.Logger();
         private readonly GameManager _gameManager;
         private Classes.DatabaseQueries dq = new Classes.DatabaseQueries();
+
+        /// <summary>
+        /// Do a ping or a pong?
+        /// </summary>
         private bool PingOrPong = false;
+
+        /// <summary>
+        /// List of Pongs
+        /// </summary>
         private List<string> Pongs = new List<string>();
 
+        /// <summary>
+        /// CONSTRUCTOR: set up WebSocket stuff including the GameManager
+        /// </summary>
+        /// <param name="webSocketConnectionManager"></param>
+        /// <param name="gameManager"></param>
         public GameHandler(WebSocketConnectionManager webSocketConnectionManager, GameManager gameManager) : base(webSocketConnectionManager)
         {
             _gameManager = gameManager;
@@ -37,25 +50,24 @@ namespace WerkelijkWaar
         /// <summary>
         /// Add a connection to the connection list.
         /// </summary>
-        /// <param name="socketId"></param>
+        /// <param name="socketId">Unique User socket ID</param>
         public void AddConnection(string socketId)
         {
-            // Create a new connections object
             Classes.Connection newConnection = new Classes.Connection { SocketId = socketId, Pinged = true, Timeouts = 0 };
 
-            // Check if ID already exists in the list, to prevent spamming.
+            // Check if Connection already exists in the list, to prevent spamming
             bool exists = false;
 
-            foreach (Classes.Connection c in _gameManager.Connections)
+            foreach (Classes.Connection connection in _gameManager.Connections)
             {
-                if (c.SocketId == socketId)
+                if (connection.SocketId == socketId)
                 {
                     exists = true;
-                    c.Pinged = true;
+                    connection.Pinged = true;
                 }
             }
 
-            // If ID does not exist, create new ID.
+            // If Connection does not exist, create a new Connection
             if (!exists)
             {
                 _gameManager.Connections.Add(newConnection);
@@ -63,74 +75,73 @@ namespace WerkelijkWaar
         }
 
         /// <summary>
-        /// Check if existing connections are still alive and terminate connections that are not alive.
+        /// Check if existing connections are still alive. Terminate dead connections
         /// </summary>
-        /// <returns></returns>
+        /// <param name="sender">Sender</param>
+        /// <param name="e">ElapsedEventArgs</param>
         public async void PingPong(object sender, ElapsedEventArgs e)
         {
-            // Get current list of connections
             List<Classes.Connection> connectionList = _gameManager.Connections;
 
             // Ping
             if (PingOrPong)
             {
                 // 'Ping' each connection
-                foreach (Classes.Connection c in connectionList)
+                foreach (Classes.Connection connection in connectionList)
                 {
-                    await InvokeClientMethodToAllAsync("pingToServer", c.SocketId);
+                    await InvokeClientMethodToAllAsync("pingToServer", connection.SocketId);
                 }
             }
             // Pong
             else
             {
-                // Create tasklist for removals
                 List<Task> taskList = new List<Task>();
 
                 // Reset the timeouts of the current list
-                foreach (Classes.Connection c in connectionList)
+                foreach (Classes.Connection connection in connectionList)
                 {
                     // Check if connection was pinged
-                    if (c.Pinged)
+                    if (connection.Pinged)
                     {
-                        c.Timeouts = 0;
+                        connection.Timeouts = 0;
                     }
                     else
                     {
-                        c.Timeouts += 1;
+                        connection.Timeouts += 1;
                     }
 
                     // If timeouts exceeds maximum amount of timeouts, remove connection from list and kick socket ID from everything applicable
-                    if (c.Timeouts >= 3)
+                    if (connection.Timeouts >= 3)
                     {
                         // Remove connection from active rooms
-                        foreach (Classes.Room r in _gameManager.Rooms.ToList())
+                        foreach (Classes.Room room in _gameManager.Rooms)
                         {
-                            foreach (Classes.User u in r.Users.ToList())
+                            foreach (Classes.User user in room.Users)
                             {
-                                if (u.SocketId == c.SocketId)
+                                if (user.SocketId == connection.SocketId)
                                 {
                                     // Create task to leave room
-                                    var y = new Task(() => {
-                                        LeaveRoom(u.SocketId, r.RoomCode, true);
+                                    Task leaveTask = new Task(() => {
+                                        LeaveRoom(user.SocketId, room.RoomCode, true);
                                     });
 
-                                    taskList.Add(y);
-                                    y.Start();
+                                    taskList.Add(leaveTask);
+                                    leaveTask.Start();
                                 }
                             }
                         }
 
                         // Create task to remove self
-                        var t = new Task(() => {
-                            _gameManager.Connections.Remove(c);
+                        Task removalTask = new Task(() => {
+                            _gameManager.Connections.Remove(connection);
                         });
 
-                        taskList.Add(t);
-                        t.Start();
+                        taskList.Add(removalTask);
+                        removalTask.Start();
                     }
 
                     // Reset pings
-                    c.Pinged = false;
+                    connection.Pinged = false;
                 }
 
                 // Execute tasks
@@ -143,15 +154,14 @@ namespace WerkelijkWaar
         /// <summary>
         /// Add a pong to the list for PingPong.
         /// </summary>
-        /// <param name="socketId">Socket ID</param>
-        /// <returns></returns>
+        /// <param name="socketId">Unique User socket ID</param>
         public void AddPong(string socketId)
         {
-            foreach (Classes.Connection c in _gameManager.Connections)
+            foreach (Classes.Connection connection in _gameManager.Connections)
             {
-                if (c.SocketId == socketId)
+                if (connection.SocketId == socketId)
                 {
-                    c.Pinged = true;
+                    connection.Pinged = true;
                 }
             }
         }
@@ -159,111 +169,171 @@ namespace WerkelijkWaar
 
         #region Rooms
         /// <summary>
-        /// Open a room instance.
+        /// Publicly host a game room
         /// </summary>
-        /// <param name="socketId">Owner ID</param>
+        /// <param name="userId">Owner User ID</param>
+        /// <param name="socketId">Owner unique User socket ID</param>
         /// <param name="username">Owner username</param>
-        /// <returns></returns>
         public async Task HostRoom(string userId, string socketId, string username)
         {
-            l.DebugToLog("[Game]", "Creating new room.", 0);
+            logger.Log("[Game - HostRoom]", "User " + username + " (" + userId + ") is trying to host a room.", 0, 3, false);
 
-            Classes.Room Room = new Classes.Room();
+            int correctedUserId = Convert.ToInt32(userId);
 
-            Room.RoomOwnerId = socketId;
-            Room.RoomOwner = username;
-            Room.Teacher = dq.RetrieveUser(Convert.ToInt32(userId));
-            Room.Config = dq.RetrieveConfig(Convert.ToInt32(userId));
-            l.DebugToLog("[Game]", "Teacher: " + Room.Teacher.Username, 1);
-            l.DebugToLog("[Game]", "Config: " + Room.Config.Id, 2);
-            // Room.Users.Add(new Classes.User { SocketId = socketId, Username = username });
+            // Role validation
+            Classes.User host = dq.RetrieveUser(correctedUserId);
 
-            // Apply config to relevant parts
-            Room.MaxPlayers = Room.Config.MaxPlayers;
-
-            _gameManager.Rooms.Add(Room);
-
-            await InvokeClientMethodToAllAsync("hostRoom", socketId, Room.RoomCode);
-            await RetrievePlayerList(Room.RoomCode, false);
-        }
-
-        /// <summary>
-        /// Join a room instance.
-        /// </summary>
-        /// <param name="socketId">Client ID</param>
-        /// <param name="username">Client username</param>
-        /// <param name="roomCode">Room</param>
-        /// <returns></returns>
-        public async Task JoinRoom(string socketId, string userId, string username, string roomCode)
-        {
-            foreach (Classes.Room room in _gameManager.Rooms)
+            if (host.RoleId == 1)
             {
-                if (room.RoomCode == roomCode)
+                logger.Log("[Game - HostRoom]", "(" + correctedUserId + ") validated.", 1, 3, false);
+
+                Classes.Room newRoom = new Classes.Room
                 {
-                    if (room.Users.Count == room.MaxPlayers)
-                    {
-                        string message = "Kan niet meedoen met het spel - het gekozen spel is al vol (" + room.Users.Count + "/" + room.MaxPlayers + ").";
-                        await InvokeClientMethodToAllAsync("setStateMessage", socketId, message);
-                    }
-                    else
-                    {
-                        if (room.RoomState == Classes.Room.State.Waiting)
-                        {
-                            room.ResetTimer();
-                            room.Users.Add(new Classes.User { Id = Convert.ToInt32(userId), SocketId = socketId, Username = username, ReadyToPlay = false, WroteStory = false, ChoseStory = false });
-                            await InvokeClientMethodToAllAsync("joinRoom", socketId, roomCode);
-                            await RetrievePlayerList(room.RoomCode, false);
-                            await PowerupVisuals(room.RoomCode);
-                        }
-                        else
-                        {
-                            string message = "";
+                    RoomOwnerId = socketId,
+                    RoomOwner = username,
+                    Teacher = host,
+                    Config = dq.RetrieveConfig(correctedUserId)
+                };
 
-                            switch (room.RoomState)
-                            {
-                                case Classes.Room.State.Writing:
-                                    message = "Kan niet meedoen met het spel - het gekozen spel is al begonnen.";
-                                    break;
+                logger.Log("[Game - HostRoom]", "(" + correctedUserId + ", " + newRoom.RoomCode + ") retrieved configuration with Id " + newRoom.Config.Id + ".", 1, 3, false);
 
-                                case Classes.Room.State.Reading:
-                                    message = "Kan niet meedoen met het spel - het gekozen spel is al begonnen.";
-                                    break;
+                // Apply config
+                newRoom.MaxPlayers = newRoom.Config.MaxPlayers;
 
-                                case Classes.Room.State.Finished:
-                                    message = "Kan niet meedoen met het spel - het gekozen spel is al afgelopen.";
-                                    break;
+                logger.Log("[Game - HostRoom]", "(" + correctedUserId + ", " + newRoom.RoomCode + ") applied configuration.", 1, 3, false);
 
-                                case Classes.Room.State.Dead:
-                                    message = "Kan niet meedoen met het spel - de kamer is 'dood' en wordt binnenkort opgeruimd.";
-                                    break;
+                _gameManager.Rooms.Add(newRoom);
 
-                                default:
-                                    message = "Kan niet meedoen met het spel.";
-                                    break;
-                            }
+                logger.Log("[Game - HostRoom]", "(" + correctedUserId + ", " + newRoom.RoomCode + ") room is open and ready.", 2, 3, false);
 
-                            await InvokeClientMethodToAllAsync("setStateMessage", socketId, message);
-                        }
-                    }
-                }
+                await InvokeClientMethodToAllAsync("hostRoom", socketId, newRoom.RoomCode);
+                await RetrievePlayerList(newRoom.RoomCode, false);
+            }
+            else
+            {
+                logger.Log("[Game - HostRoom]", "(" + correctedUserId + ") tried to bypass security. Aborting...", 2, 3, false);
             }
         }
 
         /// <summary>
-        /// Leave a room instance.
+        /// Join a publicly hosted game room
         /// </summary>
-        /// <param name="socketId">Client ID</param>
-        /// <param name="roomCode">Room</param>
-        /// <returns></returns>
-        public async Task LeaveRoom(string socketId, string roomCode, bool kicked)
+        /// <param name="socketId">Client unique User socket ID</param>
+        /// <param name="userId">Client User ID</param>
+        /// <param name="username">Client username</param>
+        /// <param name="roomCode">Targeted Room code</param>
+        public async Task JoinRoom(string userId, string socketId, string username, string roomCode)
+        {
+            logger.Log("[Game - JoinRoom]", "User " + username + " (" + userId + ") is trying to join room " + roomCode + ".", 0, 3, false);
+
+            int correctedUserId = Convert.ToInt32(userId);
+
+            // Role validation
+            Classes.User client = dq.RetrieveUser(correctedUserId);
+
+            if (client.RoleId == 0)
+            {
+                logger.Log("[Game - JoinRoom]", "(" + correctedUserId + ") validated.", 1, 3, false);
+
+                foreach (Classes.Room room in _gameManager.Rooms)
+                {
+                    if (room.RoomCode == roomCode)
+                    {
+                        logger.Log("[Game - JoinRoom]", "(" + correctedUserId + ") found room " + roomCode + ".", 1, 3, false);
+
+                        if (room.Users.Count == room.MaxPlayers)
+                        {
+                            logger.Log("[Game - JoinRoom]", "(" + correctedUserId + ") targeted room " + roomCode + " is already at maximum capacity (" + room.Users.Count + "/" + room.MaxPlayers + ")", 1, 3, false);
+
+                            string message = "Kan niet meedoen met het spel - het gekozen spel is al vol (" + room.Users.Count + "/" + room.MaxPlayers + ").";
+                            await InvokeClientMethodToAllAsync("setStateMessage", socketId, message);
+                        }
+                        else
+                        {
+                            if (room.RoomState == Classes.Room.State.Waiting)
+                            {
+                                logger.Log("[Game - JoinRoom]", "(" + correctedUserId + ") successfully joined room " + roomCode + ".", 1, 3, false);
+
+                                room.ResetTimer();
+
+                                room.Users.Add(new Classes.User { Id = correctedUserId, SocketId = socketId, Username = username,
+                                                                  ReadyToPlay = false, WroteStory = false, ChoseStory = false });
+
+                                await InvokeClientMethodToAllAsync("joinRoom", socketId, roomCode);
+                                await RetrievePlayerList(room.RoomCode, false);
+                                await PowerupVisuals(room.RoomCode);
+                            }
+                            else
+                            {
+                                string message = "";
+
+                                switch (room.RoomState)
+                                {
+                                    case Classes.Room.State.Writing:
+                                        logger.Log("[Game - JoinRoom]", "(" + correctedUserId + ") cannot join room " + roomCode + " - game has already begun.", 2, 3, false);
+
+                                        message = "Kan niet meedoen met het spel - het gekozen spel is al begonnen.";
+                                        break;
+
+                                    case Classes.Room.State.Reading:
+                                        logger.Log("[Game - JoinRoom]", "(" + correctedUserId + ") cannot join room " + roomCode + " - game has already begun.", 2, 3, false);
+
+                                        message = "Kan niet meedoen met het spel - het gekozen spel is al begonnen.";
+                                        break;
+
+                                    case Classes.Room.State.Finished:
+                                        logger.Log("[Game - JoinRoom]", "(" + correctedUserId + ") cannot join room " + roomCode + " - game has already finished.", 2, 3, false);
+
+                                        message = "Kan niet meedoen met het spel - het gekozen spel is al afgelopen.";
+                                        break;
+
+                                    case Classes.Room.State.Dead:
+                                        logger.Log("[Game - JoinRoom]", "(" + correctedUserId + ") cannot join room " + roomCode + " - room is dead.", 2, 3, false);
+
+                                        message = "Kan niet meedoen met het spel - de kamer is 'dood' en wordt binnenkort opgeruimd.";
+                                        break;
+
+                                    default:
+                                        logger.Log("[Game - JoinRoom]", "(" + correctedUserId + ") cannot join room " + roomCode + ".", 2, 3, false);
+
+                                        message = "Kan niet meedoen met het spel.";
+                                        break;
+                                }
+
+                                await InvokeClientMethodToAllAsync("setStateMessage", socketId, message);
+                            }
+                        }
+                    }
+
+                    logger.Log("[Game - JoinRoom]", "(" + correctedUserId + ") targeted room " + roomCode + " does not exist. Aborting...", 2, 3, false);
+                }
+            }
+            else
+            {
+                logger.Log("[Game - JoinRoom]", "(" + correctedUserId + ") tried to bypass security. Aborting...", 2, 3, false);
+            }           
+        }
+
+        /// <summary>
+        /// Leave a game room
+        /// </summary>
+        /// <param name="userId">User ID</param>
+        /// <param name="socketId">Unique User socket ID</param>
+        /// <param name="roomCode">Targeted Room code</param>
+        /// <param name="kicked">Was the User kicked by the host?</param>
+        public async Task LeaveRoom(string userId, string socketId, string roomCode, bool kicked)
         {
             foreach (Classes.Room room in _gameManager.Rooms)
             {
                 if (room.RoomCode == roomCode)
                 {
+                    logger.Log("[Game - LeaveRoom]", "(" + userId + ") is leaving room " + roomCode + ".", 0, 3, false);
+
                     // If owner leaves...
                     if (socketId == room.RoomOwnerId)
                     {
+                        logger.Log("[Game - LeaveRoom]", "(" + userId + ") was the owner of room " + roomCode + ". Closing room...", 2, 3, false);
+
                         string message = "";
 
                         foreach (Classes.User user in room.Users)
@@ -286,6 +356,8 @@ namespace WerkelijkWaar
                     {
                         if (user.SocketId == socketId)
                         {
+                            logger.Log("[Game - LeaveRoom]", "(" + userId + ") left the room.", 2, 3, false);
+
                             room.Users.Remove(user);
                             room.ResetTimer();
                             await InvokeClientMethodToAllAsync("leaveRoom", socketId, kicked);
@@ -297,9 +369,10 @@ namespace WerkelijkWaar
         }
 
         /// <summary>
-        /// Check rooms for their states and handle accordingly.
+        /// Check room states and handle accordingly
         /// </summary>
-        /// <returns></returns>
+        /// <param name="sender">Sender</param>
+        /// <param name="e">ElapsedEventArgs</param>
         public async void CheckRoomStates(object sender, ElapsedEventArgs e)
         {
             List<Task> taskList = new List<Task>();
@@ -308,20 +381,24 @@ namespace WerkelijkWaar
             {
                 if (room.RoomState == Classes.Room.State.Dead)
                 {
-                    var t = new Task(() => {
+                    Task removalTask = new Task(() => {
                         foreach (Classes.User user in room.Users)
                         {
+                            logger.Log("[Game - CheckRoomStates]", "Room " + room.RoomCode + " was idle for too long. Kicking users...", 0, 3, false);
+
                             InvokeClientMethodToAllAsync("leaveRoom", user.SocketId);
 
                             string message = "Room has died. Reason: idle for too long.";
                             InvokeClientMethodToAllAsync("setStateMessage", user.SocketId, message);
                         }
 
+                        logger.Log("[Game - CheckRoomStates]", "Closed room " + room.RoomCode + ".", 2, 3, false);
+
                         _gameManager.Rooms.Remove(room);
                     });
 
-                    taskList.Add(t);
-                    t.Start();
+                    taskList.Add(removalTask);
+                    removalTask.Start();
                 }
             }
 
@@ -331,22 +408,25 @@ namespace WerkelijkWaar
 
         #region Game
         /// <summary>
-        /// Start a game with the current room.
+        /// Continue the game from the game lobby
         /// </summary>
-        /// <param name="socketId">User ID</param>
-        /// <param name="roomCode">Room</param>
-        /// <returns></returns>
+        /// <param name="socketId">Unique User socket ID</param>
+        /// <param name="roomCode">Targeted Room code</param>
         public async Task StartGame(string socketId, string roomCode)
         {
             foreach (Classes.Room room in _gameManager.Rooms)
             {
                 if (room.RoomCode == roomCode && room.RoomOwnerId == socketId)
                 {
+                    logger.Log("[Game - StartGame]", "Starting game in room " + roomCode + "...", 0, 3, false);
+
                     room.RoomState = Classes.Room.State.Writing;
                     room.CurrentStrikes = room.MaxProgressStrikes;
 
                     if (room.GamePreparation())
                     {
+                        logger.Log("[Game - StartGame]", "Preparations are complete. Game in room " + roomCode + " has started.", 2, 3, false);
+
                         await InvokeClientMethodToAllAsync("startGame", roomCode, room.CurrentGroup);
                         await RetrievePlayerList(room.RoomCode, true);
                     }
@@ -355,12 +435,10 @@ namespace WerkelijkWaar
         }
 
         /// <summary>
-        /// Wacht tot alle spelers gereed zijn om te spelen.
-        /// Start vervolgens het spel.
+        /// Check if all players are through the tutorial. If all players are through, start the writing phase
         /// </summary>
-        /// <param name="socketId"></param>
-        /// <param name="roomCode"></param>
-        /// <returns></returns>
+        /// <param name="socketId">Unique User socket ID</param>
+        /// <param name="roomCode">Targeted Room code</param>
         public async Task ReadyUpPlayer(string socketId, string roomCode)
         {
             foreach (Classes.Room room in _gameManager.Rooms)
@@ -384,188 +462,257 @@ namespace WerkelijkWaar
 
                     if (room.NumberOfReadyPlayers == room.Users.Count)
                     {
+                        logger.Log("[Game - ReadyUpPlayer]", roomCode + " all players readied up.", 0, 3, false);
+                        logger.Log("[Game - ReadyUpPlayer]", roomCode + " continuing game...", 2, 3, false);
+
                         await GoToWritePhase(roomCode, room.RoomOwnerId, false);
                     }
                 }
             }
         }
 
+        /// <summary>
+        /// Skip ReadyUpPlayer and just start the writing phase
+        /// </summary>
+        /// <param name="roomCode">Targeted Room code</param>
         public async Task SkipTutorial(string roomCode)
         {
             foreach (Classes.Room room in _gameManager.Rooms)
             {
                 if (room.RoomCode == roomCode)
                 {
+                    logger.Log("[Game - SkipTutorial]", roomCode + " tutorial will be skipped.", 0, 3, false);
+
                     foreach (Classes.User user in room.Users)
                     {
                         user.ReadyToPlay = true;
                     }
 
-                    await GoToWritePhase(roomCode, room.RoomOwnerId, false);
+                    logger.Log("[Game - SkipTutorial]", roomCode + " continuing game...", 2, 3, false);
+
+                    await GoToWritePhase(room.RoomOwnerId, room.RoomOwnerId, roomCode, false);
                 }
             }
         }
 
         /// <summary>
-        /// Ga naar de schrijffase van het spel.
+        /// Continue to the writing phase
         /// </summary>
-        /// <param name="roomCode"></param>
-        /// <param name="ownerId"></param>
-        /// <param name="reset"></param>
-        /// <returns></returns>
-        public async Task GoToWritePhase(string roomCode, string ownerId, bool reset)
+        /// <param name="userId">User ID</param>
+        /// <param name="ownerId">Room Owner ID</param>
+        /// <param name="roomCode">Targeted Room code</param>
+        /// <param name="reset">Did the game loop around?</param>
+        public async Task GoToWritePhase(string userId, string ownerId, string roomCode, bool reset)
         {
             foreach (Classes.Room room in _gameManager.Rooms)
             {
                 if (room.RoomCode == roomCode)
                 {
-                    room.RoomState = Classes.Room.State.Writing;
-
-                    await InvokeClientMethodToAllAsync("goToWritePhase", roomCode);
-                    await StartGameTimer(roomCode, room.Config.MaxWritingTime, room.RoomOwnerId);
-                    await RetrieveRootStory(roomCode);
-                }
-            }
-        }
-
-        /// <summary>
-        /// Ga naar de leesfase van het spel.
-        /// </summary>
-        /// <param name="roomCode"></param>
-        /// <param name="ownerId"></param>
-        /// <param name="reset"></param>
-        /// <returns></returns>
-        public async Task GoToReadPhase(string roomCode, bool start)
-        {
-            l.WriteToLog("[Game]", "Putting '" + roomCode + "' into read phase.", 0);
-            foreach (Classes.Room room in _gameManager.Rooms)
-            {
-                if (room.RoomCode == roomCode)
-                {
-                    room.RoomState = Classes.Room.State.Reading;
-
-                    room.CurrentGroup++;
-                    l.WriteToLog("[Game]", "Room '" + roomCode + "' has " + room.GroupCount + " groups.", 1);
-                    l.WriteToLog("[Game]", "Current group is '" + room.CurrentGroup + "' in room '" + roomCode + "'.", 1);
-
-                    int neededAnswers = 0;
-
-                    foreach (Classes.User user in room.Users)
+                    if (dq.RetrieveUser(Convert.ToInt32(userId)).RoleId == 1)
                     {
-                        if (user.GameGroup == room.CurrentGroup)
-                        {
-                            neededAnswers++;
-                        }
+                        logger.Log("[Game - GoToWritePhase]", "(" + userId + ") validated.", 0, 3, false);
+
+                        room.RoomState = Classes.Room.State.Writing;
+
+                        logger.Log("[Game - GoToWritePhase]", roomCode + " continuing to writing phase...", 2, 3, false);
+
+                        await InvokeClientMethodToAllAsync("goToWritePhase", roomCode);
+                        await StartGameTimer(roomCode, room.Config.MaxWritingTime, room.RoomOwnerId);
+                        await RetrieveRootStory(roomCode);
                     }
-
-                    room.NeededAnswers = neededAnswers;
-
-                    if (!start)
+                    else
                     {
-                        if (room.CurrentGroup <= room.GroupCount)
+                        logger.Log("[Game - GoToWritePhase]", "(" + userId + ") tried to bypass security. Aborting...", 2, 3, false);
+                    }
+                }
+            }
+        }
+
+        /// <summary>
+        /// Continue to the reading phase
+        /// </summary>
+        /// <param name="userId">User ID</param>
+        /// <param name="ownerId">Room Owner ID</param>
+        /// <param name="roomCode">Targeted Room code</param>
+        /// <param name="start">Is this the first (starting) round?</param>
+        public async Task GoToReadPhase(string userId, string roomCode, bool start)
+        {
+            foreach (Classes.Room room in _gameManager.Rooms)
+            {
+                if (room.RoomCode == roomCode)
+                {
+                    if (dq.RetrieveUser(Convert.ToInt32(userId)).RoleId == 1)
+                    {
+                        logger.Log("[Game - GoToReadPhase]", "(" + userId + ") validated.", 0, 3, false);
+
+                        room.RoomState = Classes.Room.State.Reading;
+
+                        room.CurrentGroup++;
+                        logger.Log("[Game - GoToReadPhase]", roomCode + " has " + room.GroupCount + " groups.", 1, 3, false);
+                        logger.Log("[Game - GoToReadPhase]", roomCode + " current group is " + room.CurrentGroup + ".", 1, 3, false);
+
+                        int neededAnswers = 0;
+
+                        foreach (Classes.User user in room.Users)
                         {
+                            if (user.GameGroup == room.CurrentGroup)
+                            {
+                                neededAnswers++;
+                            }
+                        }
+
+                        room.NeededAnswers = neededAnswers;
+
+                        logger.Log("[Game - GoToReadPhase]", roomCode + " next list of answers needs " + room.NeededAnswers + " answers.", 1, 3, false);
+
+                        if (!start)
+                        {
+                            if (room.CurrentGroup <= room.GroupCount)
+                            {
+                                logger.Log("[Game - GoToReadPhase]", roomCode + " next round.", 2, 3, false);
+
+                                foreach (Classes.User user in room.Users)
+                                {
+                                    await InvokeClientMethodToAllAsync("goToReadPhase", roomCode, user.SocketId, user.GameGroup, room.CurrentGroup);
+                                }
+
+                                // Host
+                                await InvokeClientMethodToAllAsync("goToReadPhase", roomCode, room.RoomOwnerId, 0, 0);
+
+                                await PowerupVisuals(roomCode);
+                                await StartGameTimer(roomCode, room.Config.MaxReadingTime, room.RoomOwnerId);
+                                await RetrieveWrittenStories(roomCode, room.CurrentGroup);
+                            }
+                            else
+                            {
+                                logger.Log("[Game - GoToReadPhase]", roomCode + " game ended. Showing final leaderboard.", 2, 3, false);
+
+                                await ShowLeaderboard(roomCode, true);
+                            }
+                        }
+                        else
+                        {
+                            logger.Log("[Game - GoToReadPhase]", roomCode + " first round.", 2, 3, false);
+
                             foreach (Classes.User user in room.Users)
                             {
-                                l.WriteToLog("[Game]", "goToReadPhase: " + roomCode + " - " + user.SocketId + ": " + user.GameGroup + "|" + room.CurrentGroup + ".", 1);
                                 await InvokeClientMethodToAllAsync("goToReadPhase", roomCode, user.SocketId, user.GameGroup, room.CurrentGroup);
                             }
 
                             // Host
-                            l.WriteToLog("[Game]", "goToReadPhase (host): " + roomCode + " - " + room.RoomOwnerId, 1);
                             await InvokeClientMethodToAllAsync("goToReadPhase", roomCode, room.RoomOwnerId, 0, 0);
 
                             await PowerupVisuals(roomCode);
                             await StartGameTimer(roomCode, room.Config.MaxReadingTime, room.RoomOwnerId);
                             await RetrieveWrittenStories(roomCode, room.CurrentGroup);
-
-                            l.WriteToLog("[Game]", "Game " + room.CurrentGroup + " of room '" + roomCode + "' started.", 2);
-                        }
-                        else
-                        {
-                            await ShowLeaderboard(roomCode, true);
                         }
                     }
                     else
                     {
-                        foreach (Classes.User user in room.Users)
-                        {
-                            l.WriteToLog("[Game]", "goToReadPhase: " + roomCode + " - " + user.SocketId + ": " + user.GameGroup + "|" + room.CurrentGroup + ".", 1);
-                            await InvokeClientMethodToAllAsync("goToReadPhase", roomCode, user.SocketId, user.GameGroup, room.CurrentGroup);
-                        }
+                        logger.Log("[Game - GoToReadPhase]", "(" + userId + ") tried to bypass security. Aborting...", 2, 3, false);
+                    }                  
+                }
+            }
+        }
 
-                        // Host
-                        l.WriteToLog("[Game]", "goToReadPhase (host): " + roomCode + " - " + room.RoomOwnerId, 1);
-                        await InvokeClientMethodToAllAsync("goToReadPhase", roomCode, room.RoomOwnerId, 0, 0);
+        /// <summary>
+        /// Start the ingame timer
+        /// </summary>
+        /// <param name="userId">User ID</param>
+        /// <param name="roomCode">Targeted Room code</param>
+        /// <param name="time"></param>
+        public async Task StartGameTimer(string userId, string roomCode, int time)
+        {
+            foreach (Classes.Room room in _gameManager.Rooms)
+            {
+                if (room.RoomCode == roomCode)
+                {
+                    logger.Log("[Game - StartGameTimer]", "(" + userId + ") wants to start a timer in " + roomCode + " for " + time + " seconds.", 0, 3, false);
 
-                        await PowerupVisuals(roomCode);
-                        await StartGameTimer(roomCode, room.Config.MaxReadingTime, room.RoomOwnerId);
-                        await RetrieveWrittenStories(roomCode, room.CurrentGroup);
+                    if (room.RoomOwnerId == userId && dq.RetrieveUser(Convert.ToInt32(userId)).RoleId == 1)
+                    {
+                        logger.Log("[Game - StartGameTimer]", "(" + userId + ") validated.", 1, 3, false);
 
-                        l.WriteToLog("[Game]", "First game of room '" + roomCode + "' started.", 2);
+                        room.RemainingTime = time;
+                        room.gameTimer.Start();
+
+                        logger.Log("[Game - StartGameTimer]", "(" + userId + ") timer started.", 2, 3, false);
+
+                        await InvokeClientMethodToAllAsync("startCountdownTimer", roomCode, time);
+                    }
+                    else
+                    {
+                        logger.Log("[Game - StartGameTimer]", "(" + userId + ") tried to bypass security. Aborting...", 2, 3, false);
+                    }                  
+                }
+            }
+        }
+
+        /// <summary>
+        /// Stop the ingame timer
+        /// </summary>
+        /// <param name="userId">User ID</param>
+        /// <param name="roomCode">Targeted Room code</param>
+        public async Task StopGameTimer(string userId, string roomCode)
+        {
+            foreach (Classes.Room room in _gameManager.Rooms)
+            {
+                if (room.RoomCode == roomCode)
+                {
+                    logger.Log("[Game - StopGameTimer]", "(" + userId + ") wants to stop a timer in " + roomCode + ".", 0, 3, false);
+
+                    if (room.RoomOwnerId == userId && dq.RetrieveUser(Convert.ToInt32(userId)).RoleId == 1)
+                    {
+                        logger.Log("[Game - StopGameTimer]", "(" + userId + ") validated.", 1, 3, false);
+
+                        room.RemainingTime = 0;
+                        room.gameTimer.Stop();
+
+                        logger.Log("[Game - StopGameTimer]", "(" + userId + ") timer stopped.", 2, 3, false);
+
+                        await InvokeClientMethodToAllAsync("stopCountdownTimer", roomCode);
+                    }
+                    else
+                    {
+                        logger.Log("[Game - StopGameTimer]", "(" + userId + ") tried to bypass security. Aborting...", 2, 3, false);
                     }
                 }
             }
         }
 
         /// <summary>
-        /// Start de game timer.
+        /// Retrieve stories with root = 1 (root stories)
         /// </summary>
-        /// <param name="roomCode"></param>
-        /// <param name="time"></param>
-        /// <param name="ownerId"></param>
-        /// <returns></returns>
-        public async Task StartGameTimer(string roomCode, int time, string ownerId)
-        {
-            foreach (Classes.Room room in _gameManager.Rooms)
-            {
-                if (room.RoomCode == roomCode && room.RoomOwnerId == ownerId)
-                {
-                    room.RemainingTime = time;
-                    room.gameTimer.Start();
-                    await InvokeClientMethodToAllAsync("startCountdownTimer", roomCode, time);
-                }
-            }
-        }
-
-        /// <summary>
-        /// Stop de game timer.
-        /// </summary>
-        /// <param name="roomCode"></param>
-        /// <param name="ownerId"></param>
-        /// <returns></returns>
-        public async Task StopGameTimer(string roomCode, string ownerId)
-        {
-            foreach (Classes.Room room in _gameManager.Rooms)
-            {
-                if (room.RoomCode == roomCode && room.RoomOwnerId == ownerId)
-                {
-                    room.RemainingTime = 0;
-                    room.gameTimer.Stop();
-                    await InvokeClientMethodToAllAsync("stopCountdownTimer", roomCode);
-                }
-            }
-        }
-
-        /// <summary>
-        /// Haal alle root verhalen op om later te verdelen.
-        /// </summary>
-        /// <param name="roomCode"></param>
+        /// <param name="roomCode">Targeted Room code</param>
         public async Task RetrieveRootStory(string roomCode)
         {
             foreach (Classes.Room room in _gameManager.Rooms)
             {
                 if (room.RoomCode == roomCode)
                 {
+                    logger.Log("[Game - RetrieveRootStory]", roomCode + " retrieving root stories...", 0, 3, false);
+
                     foreach (Classes.User user in room.Users)
                     {
                         string rootStory = room.RetrievedStories[user.GameGroup - 1].Id + ":!|" + room.RetrievedStories[user.GameGroup - 1].Title + ":!|" + room.RetrievedStories[user.GameGroup - 1].Description;
+
+                        logger.Log("[Game - RetrieveRootStory]", roomCode + " (" + user.Id + " | " + user.SocketId + ") got story " + rootStory, 1, 3, false);
+
                         await InvokeClientMethodToAllAsync("retrieveRootStory", roomCode, user.SocketId, rootStory);
                     }
+
+                    logger.Log("[Game - RetrieveRootStory]", "End", 2, 3, false);
                 }
             }
         }
 
-        public async Task UploadStory(string roomCode, string socketId, string story)
+        /// <summary>
+        /// Upload a story to the game room and database
+        /// </summary>
+        /// <param name="socketId">Unique User socket ID</param>
+        /// <param name="roomCode">Targeted Room code</param>
+        /// <param name="story">Story string</param>
+        public async Task UploadStory(string socketId, string roomCode, string story)
         {
             foreach (Classes.Room room in _gameManager.Rooms)
             {
@@ -577,6 +724,8 @@ namespace WerkelijkWaar
                     {
                         if (user.SocketId == socketId)
                         {
+                            logger.Log("[Game - UploadStory]", roomCode + " (" + user.Id + " | " + socketId + ") uploaded a story.", 0, 3, false);
+
                             user.WroteStory = true;
 
                             string[] tempStory = story.Split("_+_");
@@ -585,9 +734,11 @@ namespace WerkelijkWaar
 
                             if (!room.WrittenStories.Contains(newStory))
                             {
+                                logger.Log("[Game - UploadStory]", roomCode + " (" + user.Id + " | " + socketId + ") story is '" + newStory.Title + "', '" + newStory.Description + "'", 2, 3, false);
+
                                 newStory.Date = DateTime.Now;
                                 room.WrittenStories.Add(newStory);
-                                // dq.CreateStory(newStory);
+                                dq.CreateStory(newStory);
                             }
                         }
 
@@ -599,10 +750,14 @@ namespace WerkelijkWaar
 
                     if (usersThatWroteStories == room.Users.Count)
                     {
+                        logger.Log("[Game - UploadStory]", roomCode + " all users wrote their stories.", 0, 3, false);
+
                         foreach (Classes.User user in room.Users)
                         {
                             user.WroteStory = false;
                         }
+
+                        logger.Log("[Game - UploadStory]", roomCode + " continuing to read phase.", 2, 3, false);
 
                         await GoToReadPhase(roomCode, true);
                     }
@@ -610,7 +765,13 @@ namespace WerkelijkWaar
             }
         }
 
-        public async Task UploadAnswer(string roomCode, string socketId, string answer)
+        /// <summary>
+        /// Upload a score to the game room and database
+        /// </summary>
+        /// <param name="socketId">Unique User socket ID</param>
+        /// <param name="roomCode">Targeted Room code</param>
+        /// <param name="answer">Answer string</param>
+        public async Task UploadAnswer(string socketId, string roomCode, string answer)
         {
             foreach (Classes.Room room in _gameManager.Rooms)
             {
@@ -622,9 +783,11 @@ namespace WerkelijkWaar
                     {
                         if (user.SocketId == socketId)
                         {
+                            logger.Log("[Game - UploadAnswer]", roomCode + " (" + user.Id + " | " + socketId + ") uploaded a score.", 0, 3, false);
+
                             if (user.GameGroup == room.CurrentGroup)
                             {
-                                l.WriteToLog("[Game]", "Parsing score for user " + socketId, 0);
+                                logger.Log("[Game - UploadAnswer]", roomCode + " (" + user.Id + " | " + socketId + ") parsing score.", 1, 3, false);
 
                                 // Power-up 1 check
                                 if (user.PowerupOneActive)
@@ -633,7 +796,7 @@ namespace WerkelijkWaar
                                     int answerA = Convert.ToInt32(answer) / 10;  // first digit
                                     int answerB = Convert.ToInt32(answer) % 10;  // second digit
 
-                                    l.WriteToLog("[Game]", "Double power-up: A = " + answerA + ", B = " + answerB + " - from " + answer, 1);
+                                    logger.Log("[Game - UploadAnswer]", roomCode + " (" + user.Id + " | " + socketId + ") has double answer power-up: A = " + answerA + ", B = " + answerB + " - from " + answer + ".", 1, 3, false);
 
                                     // Get 'best' answer
                                     if (answerA == room.CorrectAnswer)
@@ -644,31 +807,32 @@ namespace WerkelijkWaar
                                     {
                                         answer = answerB.ToString();
                                     }
+                                    else
+                                    {
+                                        answer = answerA.ToString();
+                                    }
                                 }
 
                                 // Apply vote to story
                                 string storyFromAnswer = room.SentStories[Convert.ToInt32(answer)];
-                                l.WriteToLog("[Game]", "Selected story is " + storyFromAnswer, 1);
+                                string[] storyFromAnswerArray = storyFromAnswer.Split(":!|");
+                                logger.Log("[Game - UploadAnswer]", roomCode + " (" + user.Id + " | " + socketId + ") selected story is " + storyFromAnswer + ".", 1, 3, false);
 
                                 foreach (Classes.Score score in room.SelectedAnswers)
                                 {
                                     // User-made story
-                                    if (Convert.ToInt32(storyFromAnswer.Split(":!|")[3]) != 0)
+                                    if (storyFromAnswerArray[3] != 0.ToString())
                                     {
-                                        l.WriteToLog("[Game]", "Selected story is user-made: " + storyFromAnswer.Split(":!|")[3], 1);
+                                        logger.Log("[Game - UploadAnswer]", roomCode + " (" + user.Id + " | " + socketId + ") selected story is user-made: " + storyFromAnswerArray[3] + ".", 1, 3, false);
 
-                                        if (score.SocketId == storyFromAnswer.Split(":!|")[3])
+                                        if (score.SocketId == storyFromAnswerArray[3])
                                         {
-                                            l.WriteToLog("[Game]", "Added vote to score.", 1);
-
                                             score.AttainedVotes++;
 
                                             foreach (Classes.Story story in room.WrittenStories)
                                             {
-                                                if (story.SocketId == storyFromAnswer.Split(":!|")[3])
+                                                if (story.SocketId == storyFromAnswerArray[3])
                                                 {
-                                                    l.WriteToLog("[Game]", "Added vote to story.", 1);
-
                                                     story.Votes++;
                                                 }
                                             }
@@ -679,13 +843,11 @@ namespace WerkelijkWaar
                                     {
                                         foreach (Classes.Story story in room.RetrievedStories)
                                         {
-                                            if (story.OwnerId == Convert.ToInt32(storyFromAnswer.Split(":!|")[0]))
+                                            if (story.OwnerId.ToString() == storyFromAnswerArray[0])
                                             {
-                                                if (story.Title == storyFromAnswer.Split(":!|")[1])
+                                                if (story.Title == storyFromAnswerArray[1])
                                                 {
-                                                    l.WriteToLog("[Game]", "Selected story is root: " + storyFromAnswer.Split(":!|")[3], 1);
-
-                                                    l.WriteToLog("[Game]", "Added vote to story.", 1);
+                                                    logger.Log("[Game - UploadAnswer]", roomCode + " (" + user.Id + " | " + socketId + ") selected story is root: " + storyFromAnswerArray[3] + ".", 1, 3, false);
 
                                                     story.Votes++;
                                                 }
@@ -699,59 +861,51 @@ namespace WerkelijkWaar
                                 {
                                     if (score.SocketId == socketId)
                                     {
-                                        l.WriteToLog("[Game]", "Added answer to score.", 1);
-
                                         score.Answers += answer;
 
                                         // Answer is correct
                                         if (Convert.ToInt32(answer) == room.CorrectAnswer)
                                         {
-                                            l.WriteToLog("[Game]", "Answer was correct btw.", 1);
+                                            logger.Log("[Game - UploadAnswer]", roomCode + " (" + user.Id + " | " + socketId + ") answer was correct.", 1, 3, false);
 
                                             score.CorrectAnswers += '1';
 
+                                            int followerGain = room.Config.FollowerGain;
+
                                             if (user.PowerupOneActive)
                                             {
-                                                l.WriteToLog("[Game]", "Bad player gained " + (room.Config.FollowerGain / 2) + " followers.", 2);
-
-                                                score.FollowerAmount += (room.Config.FollowerGain / 2);
+                                                followerGain /= 2;
                                             }
                                             else if (user.PowerupTwoActive)
                                             {
-                                                l.WriteToLog("[Game]", "Absolute gamer gained " + (room.Config.FollowerGain * 2) + " followers.", 2);
-
-                                                score.FollowerAmount += (room.Config.FollowerGain * 2);
+                                                followerGain *= 2;
                                             }
-                                            else
-                                            {
-                                                l.WriteToLog("[Game]", "Player gained " + room.Config.FollowerGain + " followers.", 2);
 
-                                                score.FollowerAmount += room.Config.FollowerGain;
-                                            }
+                                            logger.Log("[Game - UploadAnswer]", roomCode + " (" + user.Id + " | " + socketId + ") gained " + followerGain + " followers.", 1, 3, false);
+
+                                            score.FollowerAmount += followerGain;
                                         }
                                         // Answer is false
                                         else
                                         {
                                             score.CorrectAnswers += '0';
 
+                                            logger.Log("[Game - UploadAnswer]", roomCode + " (" + user.Id + " | " + socketId + ") answer was false.", 1, 3, false);
+
+                                            int followerLoss = room.Config.FollowerLoss;
+
                                             if (user.PowerupOneActive)
                                             {
-                                                l.WriteToLog("[Game]", "Bad player lost " + (room.Config.FollowerGain / 2) + " followers.", 2);
-
-                                                score.FollowerAmount -= (room.Config.FollowerGain / 2);
+                                                followerLoss /= 2;
                                             }
                                             else if (user.PowerupTwoActive)
                                             {
-                                                l.WriteToLog("[Game]", "Absolute gamer lost " + (room.Config.FollowerGain * 2) + " followers.", 2);
-
-                                                score.FollowerAmount -= (room.Config.FollowerGain * 2);
+                                                followerLoss *= 2;
                                             }
-                                            else
-                                            {
-                                                l.WriteToLog("[Game]", "Player lost " + room.Config.FollowerGain + " followers.", 2);
 
-                                                score.FollowerAmount -= room.Config.FollowerGain;
-                                            }
+                                            logger.Log("[Game - UploadAnswer]", roomCode + " (" + user.Id + " | " + socketId + ") lost " + followerLoss + " followers.", 1, 3, false);
+
+                                            score.FollowerAmount -= followerLoss;
                                         }
 
                                         if (score.FollowerAmount <= 0)
@@ -780,12 +934,23 @@ namespace WerkelijkWaar
                         }
 
                         room.NeededAnswers = 0;
+
+                        logger.Log("[Game - UploadAnswer]", roomCode + " (" + user.Id + " | " + socketId + ") has been parsed. Everybody answered, continuing to leaderboard.", 2, 3, false);
+
                         await GiveMoney(roomCode);
+                    }
+                    else
+                    {
+                        logger.Log("[Game - UploadAnswer]", roomCode + " (" + user.Id + " | " + socketId + ") has been parsed.", 2, 3, false);
                     }
                 }
             }
         }
 
+        /// <summary>
+        /// Give all players money based off of their followers and votes
+        /// </summary>
+        /// <param name="roomCode">Targeted Room code</param>
         public async Task GiveMoney(string roomCode)
         {
             foreach (Classes.Room room in _gameManager.Rooms)
@@ -798,9 +963,10 @@ namespace WerkelijkWaar
                         {
                             if (user.SocketId == score.SocketId)
                             {
-                                l.WriteToLog("[GiveMoney]", "Player " + user.Username + " | " + user.SocketId + " is getting sum money", 0);
+                                logger.Log("[Game - UploadAnswer]", roomCode + " (" + user.Id + " | " + user.SocketId + ") acquired some cash.", 0, 3, false);
 
-                                score.CashAmount += 1.00 + (room.Config.CashPerFollower * score.FollowerAmount);
+                                int followerChange = 0;
+                                double cashGain = 1.00 + (room.Config.CashPerFollower * score.FollowerAmount);
 
                                 // Per vote
                                 bool doubleScore = false;
@@ -811,8 +977,6 @@ namespace WerkelijkWaar
                                     {
                                         if (story.PowerupActive)
                                         {
-                                            l.WriteToLog("[GiveMoney]", "Player " + user.Username + " | " + user.SocketId + " has the double score power-up", 1);
-
                                             doubleScore = true;
                                         }
                                     }                               
@@ -822,19 +986,15 @@ namespace WerkelijkWaar
                                 {
                                     if (score.RoundVotes > 0)
                                     {
-                                        l.WriteToLog("[GiveMoney]", "Player " + user.Username + " | " + user.SocketId + " has > 0 votes", 1);
-
                                         if (doubleScore)
                                         {
-                                            score.CashAmount += 10.00;
-                                            score.CashAmount += (room.Config.CashPerVote * score.RoundVotes) * 2;
-                                            score.FollowerAmount += 10 + ((room.Config.FollowerPerVote * score.RoundVotes) * 2);
+                                            cashGain += 10.00 + ((room.Config.CashPerVote * score.RoundVotes) * 2);
+                                            followerChange = 10 + ((room.Config.FollowerPerVote * score.RoundVotes) * 2);
                                         }
                                         else
                                         {
-                                            score.CashAmount += 5.00;
-                                            score.CashAmount += (room.Config.CashPerVote * score.RoundVotes);
-                                            score.FollowerAmount += 5 + (room.Config.FollowerPerVote * score.RoundVotes);
+                                            cashGain += 5.00 + (room.Config.CashPerVote * score.RoundVotes);
+                                            followerChange = 5 + (room.Config.FollowerPerVote * score.RoundVotes);
                                         }
 
                                         score.AttainedVotes += score.RoundVotes;
@@ -842,25 +1002,37 @@ namespace WerkelijkWaar
                                     }
                                     else
                                     {
-                                        l.WriteToLog("[GiveMoney]", "Player " + user.Username + " | " + user.SocketId + " has < 0 votes", 1);
-
                                         if (doubleScore)
                                         {
-                                            score.FollowerAmount -= room.Config.FollowerLoss * 2;
+                                            followerChange = -(room.Config.FollowerLoss * 2);
                                         }
                                         else
                                         {
-                                            score.FollowerAmount -= room.Config.FollowerLoss;
+                                            followerChange = -room.Config.FollowerLoss;
                                         }
                                     }
                                 }
-                                
+
+                                logger.Log("[Game - UploadAnswer]", roomCode + " (" + user.Id + " | " + user.SocketId + ") gained €" + cashGain + "-.", 1, 3, false);
+
+                                if (followerChange > 0)
+                                {
+                                    logger.Log("[Game - UploadAnswer]", roomCode + " (" + user.Id + " | " + user.SocketId + ") gained " + followerChange + " followers.", 1, 3, false);
+                                }
+                                else
+                                {
+                                    logger.Log("[Game - UploadAnswer]", roomCode + " (" + user.Id + " | " + user.SocketId + ") lost " + followerChange + " followers.", 1, 3, false);
+                                }
+
+                                score.CashAmount += cashGain;
+                                score.FollowerAmount += followerChange;
+
+                                logger.Log("[Game - UploadAnswer]", roomCode + " (" + user.Id + " | " + user.SocketId + ") now has €" + score.CashAmount + "- and " + score.FollowerAmount + " followers.", 2, 3, false);
+
                                 if (score.FollowerAmount <= 0)
                                 {
                                     score.FollowerAmount = 0;
                                 }
-
-                                l.WriteToLog("[GiveMoney]", "Player " + user.Username + " | " + user.SocketId + " now has " + score.FollowerAmount + " followers and €" + score.CashAmount + "- to his name.", 2);
 
                                 await InvokeClientMethodToAllAsync("updateScore", roomCode, user.SocketId, score.CashAmount, score.FollowerAmount);
                             }
@@ -873,6 +1045,11 @@ namespace WerkelijkWaar
             }
         }
 
+        /// <summary>
+        /// Open the leaderboard
+        /// </summary>
+        /// <param name="roomCode">Targeted Room code</param>
+        /// <param name="endGame">Final round?</param>
         public async Task ShowLeaderboard(string roomCode, bool endGame)
         {
             foreach (Classes.Room room in _gameManager.Rooms)
@@ -886,6 +1063,11 @@ namespace WerkelijkWaar
             }
         }
 
+        /// <summary>
+        /// Generate the leaderboards based off of given scores
+        /// </summary>
+        /// <param name="roomCode">Targeted Room code</param>
+        /// <returns>List of strings</returns>
         public List<string> GenerateLeaderboard(string roomCode)
         {
             foreach (Classes.Room room in _gameManager.Rooms)
@@ -919,6 +1101,11 @@ namespace WerkelijkWaar
             return null;
         }
 
+        /// <summary>
+        /// Retrieve user-made stories
+        /// </summary>
+        /// <param name="roomCode">Targeted Room code</param>
+        /// <param name="gameGroup">Current game group</param>
         public async Task RetrieveWrittenStories(string roomCode, int gameGroup)
         {
             List<string> storiesToSend = new List<string>();
@@ -927,21 +1114,25 @@ namespace WerkelijkWaar
             {
                 if (room.RoomCode == roomCode)
                 {
-                    l.WriteToLog("[Game]", "Retrieving written stories", 0);
+                    logger.Log("[Game - RetrieveWrittenStories]", roomCode + " retrieving written stories of group " + gameGroup + "...", 0, 3, false);
 
                     foreach (Classes.Story story in room.WrittenStories)
                     {
                         if (story.GameGroup == gameGroup)
                         {
-                            l.WriteToLog("[Game]", "Story " + story.Title + " socketId: " + story.SocketId, 1);
-
                             string toSend = story.OwnerId.ToString() + ":!|" + story.Title + ":!|" + story.Description + ":!|" + story.SocketId;
+
+                            logger.Log("[Game - RetrieveWrittenStories]", roomCode + " got written story " + toSend, 1, 3, false);
+
                             storiesToSend.Add(toSend);
                         }
                     }
 
                     Classes.Story rootStory = room.RetrievedStories[gameGroup-1];
                     string root = rootStory.OwnerId.ToString() + ":!|" + rootStory.Title + ":!|" + rootStory.Description + ":!|0";
+
+                    logger.Log("[Game - RetrieveWrittenStories]", roomCode + " got root story " + root, 1, 3, false);
+
                     storiesToSend.Add(root);
 
                     // Shuffle story list
@@ -959,14 +1150,12 @@ namespace WerkelijkWaar
                     }
 
                     // Plant correct answer
-                    l.WriteToLog("[Game]", "Planting correct answer...", 1);
-
                     int storyCount = 0;
                     foreach (string storyString in storiesToSend)
                     {
                         if (storyString == root)
                         {
-                            l.WriteToLog("[Game]", "Correct answer is " + storyCount + " with story string '" + storyString + "'.", 1);
+                            logger.Log("[Game - RetrieveWrittenStories]", roomCode + " correct answer is " + storyCount + ".", 2, 3, false);
                             room.CorrectAnswer = storyCount;
                         }
 
@@ -980,10 +1169,14 @@ namespace WerkelijkWaar
             await InvokeClientMethodToAllAsync("showStories", gameGroup, roomCode, Newtonsoft.Json.JsonConvert.SerializeObject(storiesToSend));
         }
 
-        public async Task ActivatePowerup(string roomCode, string socketId, string powerup)
+        /// <summary>
+        /// Activate a power-up in exchange for some cash
+        /// </summary>
+        /// <param name="socketId">Unique User socket ID</param>
+        /// <param name="roomCode">Targeted Room code</param>
+        /// <param name="powerup">Selected power-up</param>
+        public async Task ActivatePowerup(string socketId, string roomCode, string powerup)
         {
-            l.WriteToLog("[Game]", "Activate power-up by " + socketId, 0);
-
             foreach (Classes.Room room in _gameManager.Rooms)
             {
                 if (room.RoomCode == roomCode)
@@ -998,10 +1191,7 @@ namespace WerkelijkWaar
                                 {
                                     if (score.SocketId == socketId)
                                     {
-                                        l.WriteToLog("[Game]", "User " + user.Username + " bought a power-up.", 1);
-
-                                        //  && score.CashAmount >= (0.00 * room.Config.PowerupsCostMult)
-                                        // score.CashAmount -= (0.00 * room.Config.PowerupsCostMult);
+                                        logger.Log("[Game - RetrieveWrittenStories]", roomCode + "(" + user.Id + " | " + user.SocketId + ") bought power-up " + powerup + ".", 0, 3, false);
 
                                         if (powerup == "1" && score.CashAmount >= (20.00 * room.Config.PowerupsCostMult))
                                         {
@@ -1009,7 +1199,7 @@ namespace WerkelijkWaar
 
                                             user.PowerupOneActive = true;
 
-                                            l.WriteToLog("[Game]", "Chosen power-up is 'choose two answers for 50% value'.", 2);
+                                            logger.Log("[Game - RetrieveWrittenStories]", roomCode + "(" + user.Id + " | " + user.SocketId + ") got power-up " + powerup + " for €" + (20.00 * room.Config.PowerupsCostMult) + ",-.", 2, 3, false);
 
                                             await InvokeClientMethodToAllAsync("updatePowerups", roomCode, socketId, 1, score.CashAmount);
                                         }
@@ -1019,7 +1209,7 @@ namespace WerkelijkWaar
 
                                             user.PowerupTwoActive = true;
 
-                                            l.WriteToLog("[Game]", "Chosen power-up is 'answers count for 200% value'.", 2);
+                                            logger.Log("[Game - RetrieveWrittenStories]", roomCode + "(" + user.Id + " | " + user.SocketId + ") got power-up " + powerup + " for €" + (25.00 * room.Config.PowerupsCostMult) + ",-.", 2, 3, false);
 
                                             await InvokeClientMethodToAllAsync("updatePowerups", roomCode, socketId, 2, score.CashAmount);
                                         }
@@ -1029,7 +1219,7 @@ namespace WerkelijkWaar
 
                                             user.PowerupThreeActive = true;
 
-                                            l.WriteToLog("[Game]", "Chosen power-up is 'cross out 50% of the wrong answers'.", 2);
+                                            logger.Log("[Game - RetrieveWrittenStories]", roomCode + "(" + user.Id + " | " + user.SocketId + ") got power-up " + powerup + " for €" + (10.00 * room.Config.PowerupsCostMult) + ",-.", 2, 3, false);
 
                                             await InvokeClientMethodToAllAsync("updatePowerups", roomCode, socketId, 3, score.CashAmount);
                                             await ReturnWrongAnswers(roomCode, socketId);
@@ -1040,7 +1230,7 @@ namespace WerkelijkWaar
 
                                             user.PowerupFourActive = true;
 
-                                            l.WriteToLog("[Game]", "Chosen power-up is 'show the amount of answers on each story'.", 2);
+                                            logger.Log("[Game - RetrieveWrittenStories]", roomCode + "(" + user.Id + " | " + user.SocketId + ") got power-up " + powerup + " for €" + (15.00 * room.Config.PowerupsCostMult) + ",-.", 2, 3, false);
 
                                             await InvokeClientMethodToAllAsync("updatePowerups", roomCode, socketId, 4, score.CashAmount);
                                         }
@@ -1054,7 +1244,7 @@ namespace WerkelijkWaar
                                                 {
                                                     story.PowerupActive = true;
 
-                                                    l.WriteToLog("[Game]", "Chosen power-up is 'written story counts for 200% value when chosen'. Applied to '" + story.Title + "'", 2);
+                                                    logger.Log("[Game - RetrieveWrittenStories]", roomCode + "(" + user.Id + " | " + user.SocketId + ") got power-up " + powerup + " for €" + (15.00 * room.Config.PowerupsCostMult) + ",-.", 2, 3, false);
                                                 }
                                             }
 
@@ -1062,7 +1252,7 @@ namespace WerkelijkWaar
                                         }
                                         else
                                         {
-                                            l.WriteToLog("[Game]", "Sike, no power-up after all. Gottem.", 2);
+                                            logger.Log("[Game - RetrieveWrittenStories]", roomCode + "(" + user.Id + " | " + user.SocketId + ") got no power-up (wrong number, broke).", 2, 3, false);
 
                                             await InvokeClientMethodToAllAsync("updatePowerups", roomCode, socketId, 0, score.CashAmount);
                                         }
@@ -1072,16 +1262,19 @@ namespace WerkelijkWaar
                         }
                     }    
                     else
-                    { 
-                        l.WriteToLog("[Game]", "Sike, no power-up after all. Gottem.", 2);
-
+                    {
                         await InvokeClientMethodToAllAsync("updatePowerups", roomCode, socketId, 0);
                     }
                 }
             }
         }
 
-        public async Task ReturnWrongAnswers(string roomCode, string socketId)
+        /// <summary>
+        /// Power-up 3 - return wrong answers to strike through
+        /// </summary>
+        /// <param name="socketId">Unique User socket ID</param>
+        /// <param name="roomCode">Targeted Room code</param>
+        public async Task ReturnWrongAnswers(string socketId, string roomCode)
         {
             foreach (Classes.Room room in _gameManager.Rooms)
             {
@@ -1091,8 +1284,6 @@ namespace WerkelijkWaar
                     {
                         if (user.SocketId == socketId)
                         {
-                            l.WriteToLog("[Game]", "Power-up 3 for user " + socketId + ". Correct answer is " + room.CorrectAnswer, 0);
-
                             Random rng = new Random();
                             List<string> newList = room.SentStories;
 
@@ -1107,8 +1298,6 @@ namespace WerkelijkWaar
                                 {
                                     maxStrikes--;
                                     newList[chosenStory] += ":!|1";
-
-                                    l.WriteToLog("[Game]", "Story " + chosenStory + " got flagged as wrong answer.", 1);
                                 }
                             }
 
@@ -1118,8 +1307,6 @@ namespace WerkelijkWaar
                                 if (!newList[i].Contains(":!|1"))
                                 {
                                     newList[i] += ":!|0";
-
-                                    l.WriteToLog("[Game]", "Story " + i + " got flagged as possibly correct answer.", 1);
                                 }
                             }
 
@@ -1133,11 +1320,10 @@ namespace WerkelijkWaar
 
         #region Visual
         /// <summary>
-        /// Retrieve connected users inside of the current room.
+        /// Retrieve the list of players currently connected to the game room
         /// </summary>
-        /// <param name="roomCode">Room</param>
-        /// <returns></returns>
-        public async Task RetrievePlayerList(string roomCode, bool withGroup)
+        /// <param name="roomCode">Targeted Room code</param>
+        public async Task RetrievePlayerList(string roomCode)
         {
             string ownerId = "";
             Classes.Room.State roomState = Classes.Room.State.Waiting;
@@ -1153,13 +1339,7 @@ namespace WerkelijkWaar
                     {
                         string tempString = "";
 
-                        // if (withGroup)
                         if (room.RoomState == Classes.Room.State.Writing || room.RoomState == Classes.Room.State.Reading)
-                        {
-                            roomState = room.RoomState;
-                            tempString = user.Username + ":|!" + user.SocketId + ":|!" + user.GameGroup + ":|!" + room.RetrievedStories[user.GameGroup - 1].Title;
-                        }
-                        else
                         {
                             tempString = user.Username + ":|!" + user.SocketId;
                         }
@@ -1171,14 +1351,18 @@ namespace WerkelijkWaar
 
             if (roomState == Classes.Room.State.Writing || roomState == Classes.Room.State.Reading)
             {
-                await InvokeClientMethodToAllAsync("retrievePlayerList", roomCode, ownerId, Newtonsoft.Json.JsonConvert.SerializeObject(UsernameList), true);
+                await InvokeClientMethodToAllAsync("retrievePlayerList", roomCode, ownerId, Newtonsoft.Json.JsonConvert.SerializeObject(UsernameList));
             }
             else
             {
-                await InvokeClientMethodToAllAsync("retrievePlayerList", roomCode, ownerId, Newtonsoft.Json.JsonConvert.SerializeObject(UsernameList), false);
+                await InvokeClientMethodToAllAsync("retrievePlayerList", roomCode, ownerId, Newtonsoft.Json.JsonConvert.SerializeObject(UsernameList));
             }
         }
 
+        /// <summary>
+        /// Update the power-up button strings and colour based on their cost
+        /// </summary>
+        /// <param name="roomCode">Targeted Room code</param>
         public async Task PowerupVisuals(string roomCode)
         {
             foreach (Classes.Room room in _gameManager.Rooms)
