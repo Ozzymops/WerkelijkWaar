@@ -1,64 +1,389 @@
 -----[LOG ENTRY]-----
 [Game - HostRoom]
-6-6-2019 | 15:55: User JMuris (4) is trying to host a room.
-6-6-2019 | 15:55: (4) validated.
-6-6-2019 | 15:55: (4, 926z3p) retrieved configuration with Id 1.
-6-6-2019 | 15:55: (4, 926z3p) applied configuration.
-6-6-2019 | 15:55: (4, 926z3p) room is open and ready.
-6-6-2019 | 15:55: End.
+7-6-2019 | 13:46: User JMuris (4) is trying to host a room.
+7-6-2019 | 13:46: (4) validated.
+7-6-2019 | 13:46: (4, upBX7m) retrieved configuration with Id 0.
+7-6-2019 | 13:46: (4, upBX7m) applied configuration.
+7-6-2019 | 13:46: (4, upBX7m) room is open and ready.
+7-6-2019 | 13:46: End.
 --------[END]--------
 
 -----[LOG ENTRY]-----
 [Game - JoinRoom]
-6-6-2019 | 15:55: User AAppel (5) is trying to join room 926z3p.
-6-6-2019 | 15:55: (5) validated.
-6-6-2019 | 15:55: (5) found room 926z3p.
-6-6-2019 | 15:55: (5) successfully joined room 926z3p.
+7-6-2019 | 13:46: User AAppel (5) is trying to join room upBX7m.
+7-6-2019 | 13:46: (5) validated.
+7-6-2019 | 13:46: (5) found room upBX7m.
+7-6-2019 | 13:46: (5) successfully joined room upBX7m.
+7-6-2019 | 13:46: End.
+--------[END]--------
+
 -----[LOG ENTRY]-----
 [Game - JoinRoom]
-6-6-2019 | 15:55: User AAppel (5) is trying to join room 926z3p.
-6-6-2019 | 15:55: (5) validated.
-6-6-2019 | 15:55: (5) found room 926z3p.
-6-6-2019 | 15:55: (5) successfully joined room 926z3p.
------[LOG ENTRY]-----
-[Game - JoinRoom]
-6-6-2019 | 15:56: User AAppel (5) is trying to join room 926z3p.
-6-6-2019 | 15:56: (5) validated.
-6-6-2019 | 15:56: (5) found room 926z3p.
-6-6-2019 | 15:56: (5) successfully joined room 926z3p.
------[LOG ENTRY]-----
-[Game - JoinRoom]
-6-6-2019 | 15:56: User AAppel (5) is trying to join room 926z3p.
-6-6-2019 | 15:56: (5) validated.
-6-6-2019 | 15:56: (5) found room 926z3p.
-6-6-2019 | 15:56: (5) successfully joined room 926z3p.
------[LOG ENTRY]-----
-[Game - JoinRoom]
-6-6-2019 | 15:56: User AAppel (5) is trying to join room 926z3p.
-6-6-2019 | 15:56: (5) validated.
-6-6-2019 | 15:56: (5) found room 926z3p.
-6-6-2019 | 15:56: (5) successfully joined room 926z3p.
------[LOG ENTRY]-----
-[Game - JoinRoom]
-6-6-2019 | 15:56: User AAppel (5) is trying to join room 926z3p.
-6-6-2019 | 15:56: (5) validated.
-6-6-2019 | 15:56: (5) found room 926z3p.
-6-6-2019 | 15:56: (5) successfully joined room 926z3p.
+7-6-2019 | 13:46: User AAppel (5) is trying to join room upBX7m.
+7-6-2019 | 13:46: (5) validated.
+7-6-2019 | 13:46: (5) found room upBX7m.
+7-6-2019 | 13:46: (5) successfully joined room upBX7m.
+7-6-2019 | 13:46: End.
+--------[END]--------
+
 -----[LOG ENTRY]-----
 [Game - StartGame]
-6-6-2019 | 15:56: Starting game in room 926z3p...
-6-6-2019 | 15:56: Preparations are complete. Game in room 926z3p has started.
-6-6-2019 | 15:56: End.
+7-6-2019 | 13:46: Starting game in room upBX7m...
+7-6-2019 | 13:46: Preparations are complete. Game in room upBX7m has started.
+7-6-2019 | 13:46: End.
 --------[END]--------
 
 -----[LOG ENTRY]-----
 [Game - ReadyUpPlayer]
-6-6-2019 | 15:56: 926z3p all players readied up.
-6-6-2019 | 15:56: 926z3p continuing game...
-6-6-2019 | 15:56: End.
+7-6-2019 | 13:46: upBX7m all players readied up.
+7-6-2019 | 13:46: upBX7m continuing game...
+7-6-2019 | 13:46: End.
 --------[END]--------
 
-6-6-2019 | 15:57: (5) left the room.
-6-6-2019 | 15:57: End.
+-----[LOG ENTRY]-----
+[Game - GoToWritePhase]
+7-6-2019 | 13:46: upBX7m trying to go to writing phase...
+7-6-2019 | 13:46: upBX7m continuing to writing phase...
+7-6-2019 | 13:46: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[Game - StartGameTimer]
+7-6-2019 | 13:46: (adbeeb83-097f-47af-8c8b-36506c132c82) wants to start a timer in upBX7m for 300 seconds.
+7-6-2019 | 13:46: (adbeeb83-097f-47af-8c8b-36506c132c82) validated.
+7-6-2019 | 13:46: (adbeeb83-097f-47af-8c8b-36506c132c82) timer started.
+7-6-2019 | 13:46: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[Game - RetrieveRootStory]
+7-6-2019 | 13:46: upBX7m retrieving root stories...
+7-6-2019 | 13:46: upBX7m (5 | 1d69c382-af61-4f0d-9446-974a1e14ea35) got story 1:!|Een root verhaal:!|Straight outta RSS feed
+7-6-2019 | 13:46: upBX7m (5 | 57417f97-fa32-4fde-96eb-f9ca52fba406) got story 3:!|Nog een verhaal:!|bla bla bla Ipsum Lorem
+7-6-2019 | 13:46: End
+7-6-2019 | 13:46: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[Game - HostRoom]
+7-6-2019 | 13:47: User JMuris (4) is trying to host a room.
+7-6-2019 | 13:47: (4) validated.
+7-6-2019 | 13:47: (4, TbjuMd) retrieved configuration with Id 0.
+7-6-2019 | 13:47: (4, TbjuMd) applied configuration.
+7-6-2019 | 13:47: (4, TbjuMd) room is open and ready.
+7-6-2019 | 13:47: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[Game - JoinRoom]
+7-6-2019 | 13:47: User AAppel (5) is trying to join room TbjuMd.
+7-6-2019 | 13:47: (5) validated.
+7-6-2019 | 13:47: (5) found room TbjuMd.
+7-6-2019 | 13:47: (5) successfully joined room TbjuMd.
+7-6-2019 | 13:47: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[Game - JoinRoom]
+7-6-2019 | 13:47: User AAppel (5) is trying to join room TbjuMd.
+7-6-2019 | 13:47: (5) validated.
+7-6-2019 | 13:47: (5) found room TbjuMd.
+7-6-2019 | 13:47: (5) successfully joined room TbjuMd.
+7-6-2019 | 13:47: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[Game - StartGame]
+7-6-2019 | 13:47: Starting game in room TbjuMd...
+7-6-2019 | 13:47: Preparations are complete. Game in room TbjuMd has started.
+7-6-2019 | 13:47: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[Game - ReadyUpPlayer]
+7-6-2019 | 13:47: TbjuMd all players readied up.
+7-6-2019 | 13:47: TbjuMd continuing game...
+7-6-2019 | 13:47: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[Game - GoToWritePhase]
+7-6-2019 | 13:47: TbjuMd trying to go to writing phase...
+7-6-2019 | 13:47: TbjuMd continuing to writing phase...
+7-6-2019 | 13:47: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[Game - StartGameTimer]
+7-6-2019 | 13:47: (4aae0110-dffc-470a-b490-88fd75a52f58) wants to start a timer in TbjuMd for 300 seconds.
+7-6-2019 | 13:47: (4aae0110-dffc-470a-b490-88fd75a52f58) validated.
+7-6-2019 | 13:47: (4aae0110-dffc-470a-b490-88fd75a52f58) timer started.
+7-6-2019 | 13:47: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[Game - RetrieveRootStory]
+7-6-2019 | 13:47: TbjuMd retrieving root stories...
+7-6-2019 | 13:47: TbjuMd (5 | a98b71d2-2a51-48eb-83eb-a68b0a92e015) got story 4:!|Verhaalke:!|123456789
+7-6-2019 | 13:47: TbjuMd (5 | a185b790-ecb0-404a-8990-930b9f8020ae) got story 5:!|Ook een verhaalke:!|987654321
+7-6-2019 | 13:47: End
+7-6-2019 | 13:47: End.
+--------[END]--------
+
+7-6-2019 | 13:47: (5) left the room.
+7-6-2019 | 13:47: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[Game - UploadStory]
+7-6-2019 | 13:48: TbjuMd (5 | a185b790-ecb0-404a-8990-930b9f8020ae) uploaded a story.
+7-6-2019 | 13:48: TbjuMd (5 | a185b790-ecb0-404a-8990-930b9f8020ae) story is 'V2', '123456'
+7-6-2019 | 13:48: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[Game - UploadStory]
+7-6-2019 | 13:48: TbjuMd (5 | a98b71d2-2a51-48eb-83eb-a68b0a92e015) uploaded a story.
+7-6-2019 | 13:48: TbjuMd (5 | a98b71d2-2a51-48eb-83eb-a68b0a92e015) story is 'V1', '123'
+7-6-2019 | 13:48: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[Game - UploadStory]
+7-6-2019 | 13:48: TbjuMd all users wrote their stories.
+7-6-2019 | 13:48: TbjuMd continuing to read phase.
+7-6-2019 | 13:48: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[Game - HostRoom]
+7-6-2019 | 13:49: User JMuris (4) is trying to host a room.
+7-6-2019 | 13:49: (4) validated.
+7-6-2019 | 13:49: (4, Jg9725) retrieved configuration with Id 0.
+7-6-2019 | 13:49: (4, Jg9725) applied configuration.
+7-6-2019 | 13:49: (4, Jg9725) room is open and ready.
+7-6-2019 | 13:49: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[Game - JoinRoom]
+7-6-2019 | 13:49: User AAppel (5) is trying to join room Jg9725.
+7-6-2019 | 13:49: (5) validated.
+7-6-2019 | 13:49: (5) found room Jg9725.
+7-6-2019 | 13:49: (5) successfully joined room Jg9725.
+7-6-2019 | 13:49: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[Game - JoinRoom]
+7-6-2019 | 13:49: User AAppel (5) is trying to join room Jg9725.
+7-6-2019 | 13:49: (5) validated.
+7-6-2019 | 13:49: (5) found room Jg9725.
+7-6-2019 | 13:49: (5) successfully joined room Jg9725.
+7-6-2019 | 13:49: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[Game - StartGame]
+7-6-2019 | 13:49: Starting game in room Jg9725...
+7-6-2019 | 13:49: Preparations are complete. Game in room Jg9725 has started.
+7-6-2019 | 13:49: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[Game - ReadyUpPlayer]
+7-6-2019 | 13:50: Jg9725 all players readied up.
+7-6-2019 | 13:50: Jg9725 continuing game...
+7-6-2019 | 13:50: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[Game - GoToWritePhase]
+7-6-2019 | 13:50: Jg9725 trying to go to writing phase...
+7-6-2019 | 13:50: Jg9725 continuing to writing phase...
+7-6-2019 | 13:50: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[Game - StartGameTimer]
+7-6-2019 | 13:50: (61abb9eb-a792-4e44-b6b7-9fc031c0ef48) wants to start a timer in Jg9725 for 300 seconds.
+7-6-2019 | 13:50: (61abb9eb-a792-4e44-b6b7-9fc031c0ef48) validated.
+7-6-2019 | 13:50: (61abb9eb-a792-4e44-b6b7-9fc031c0ef48) timer started.
+7-6-2019 | 13:50: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[Game - RetrieveRootStory]
+7-6-2019 | 13:50: Jg9725 retrieving root stories...
+7-6-2019 | 13:50: Jg9725 (5 | ce152ca0-683a-4ee8-95af-e997ec69a8d6) got story 3:!|Nog een verhaal:!|bla bla bla Ipsum Lorem
+7-6-2019 | 13:50: Jg9725 (5 | 8ef43e15-0233-4e60-a8ef-6d63ee0455ea) got story 2:!|Een verhaal:!|Lorem Ipsum bla bla bla
+7-6-2019 | 13:50: End
+7-6-2019 | 13:50: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[Game - UploadStory]
+7-6-2019 | 13:50: Jg9725 (5 | 8ef43e15-0233-4e60-a8ef-6d63ee0455ea) uploaded a story.
+7-6-2019 | 13:50: Jg9725 (5 | 8ef43e15-0233-4e60-a8ef-6d63ee0455ea) story is 'V2', '321321321'
+7-6-2019 | 13:50: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[Game - UploadStory]
+7-6-2019 | 13:50: Jg9725 (5 | ce152ca0-683a-4ee8-95af-e997ec69a8d6) uploaded a story.
+7-6-2019 | 13:50: Jg9725 (5 | ce152ca0-683a-4ee8-95af-e997ec69a8d6) story is 'V3', '6543634643'
+7-6-2019 | 13:50: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[Game - UploadStory]
+7-6-2019 | 13:50: Jg9725 all users wrote their stories.
+7-6-2019 | 13:50: Jg9725 continuing to read phase.
+7-6-2019 | 13:50: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[Game - GoToReadPhase]
+7-6-2019 | 13:50: (4) validated.
+7-6-2019 | 13:50: Jg9725 has 2 groups.
+7-6-2019 | 13:50: Jg9725 current group is 1.
+7-6-2019 | 13:50: Jg9725 next list of answers needs 1 answers.
+7-6-2019 | 13:50: Jg9725 first round.
+7-6-2019 | 13:50: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[Game - StartGameTimer]
+7-6-2019 | 13:50: (61abb9eb-a792-4e44-b6b7-9fc031c0ef48) wants to start a timer in Jg9725 for 900 seconds.
+7-6-2019 | 13:50: (61abb9eb-a792-4e44-b6b7-9fc031c0ef48) validated.
+7-6-2019 | 13:50: (61abb9eb-a792-4e44-b6b7-9fc031c0ef48) timer started.
+7-6-2019 | 13:50: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[Game - RetrieveWrittenStories]
+7-6-2019 | 13:50: Jg9725 retrieving written stories of group 1...
+7-6-2019 | 13:50: Jg9725 got written story 5:!|V3:!|6543634643:!|ce152ca0-683a-4ee8-95af-e997ec69a8d6
+7-6-2019 | 13:50: Jg9725 got root story 6:!|Nog een verhaal:!|bla bla bla Ipsum Lorem:!|0
+7-6-2019 | 13:50: Jg9725 correct answer is 0.
+7-6-2019 | 13:50: End.
+--------[END]--------
+
+7-6-2019 | 13:51: (5) left the room.
+7-6-2019 | 13:51: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[Game - HostRoom]
+7-6-2019 | 13:52: User JMuris (4) is trying to host a room.
+7-6-2019 | 13:52: (4) validated.
+7-6-2019 | 13:52: (4, Au39Q7) retrieved configuration with Id 0.
+7-6-2019 | 13:52: (4, Au39Q7) applied configuration.
+7-6-2019 | 13:52: (4, Au39Q7) room is open and ready.
+7-6-2019 | 13:52: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[Game - JoinRoom]
+7-6-2019 | 13:52: User AAppel (5) is trying to join room Au39Q7.
+7-6-2019 | 13:52: (5) validated.
+7-6-2019 | 13:52: (5) found room Au39Q7.
+7-6-2019 | 13:52: (5) successfully joined room Au39Q7.
+7-6-2019 | 13:52: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[Game - JoinRoom]
+7-6-2019 | 13:52: User AAppel (5) is trying to join room Au39Q7.
+7-6-2019 | 13:52: (5) validated.
+7-6-2019 | 13:52: (5) found room Au39Q7.
+7-6-2019 | 13:52: (5) successfully joined room Au39Q7.
+7-6-2019 | 13:52: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[Game - StartGame]
+7-6-2019 | 13:53: Starting game in room Au39Q7...
+7-6-2019 | 13:53: Preparations are complete. Game in room Au39Q7 has started.
+7-6-2019 | 13:53: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[Game - ReadyUpPlayer]
+7-6-2019 | 13:53: Au39Q7 all players readied up.
+7-6-2019 | 13:53: Au39Q7 continuing game...
+7-6-2019 | 13:53: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[Game - GoToWritePhase]
+7-6-2019 | 13:53: Au39Q7 trying to go to writing phase...
+7-6-2019 | 13:53: Au39Q7 continuing to writing phase...
+7-6-2019 | 13:53: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[Game - StartGameTimer]
+7-6-2019 | 13:53: (67a92f7d-dff8-4615-9d5f-b848812ccfaa) wants to start a timer in Au39Q7 for 300 seconds.
+7-6-2019 | 13:53: (67a92f7d-dff8-4615-9d5f-b848812ccfaa) validated.
+7-6-2019 | 13:53: (67a92f7d-dff8-4615-9d5f-b848812ccfaa) timer started.
+7-6-2019 | 13:53: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[Game - RetrieveRootStory]
+7-6-2019 | 13:53: Au39Q7 retrieving root stories...
+7-6-2019 | 13:53: Au39Q7 (5 | 0d672fd0-cbac-402b-93e9-c3f9e657fcb7) got story 5:!|Ook een verhaalke:!|987654321
+7-6-2019 | 13:53: Au39Q7 (5 | 232e3142-96f1-477a-bee2-789aeec6c7e8) got story 9:!|V3:!|6543634643
+7-6-2019 | 13:53: End
+7-6-2019 | 13:53: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[Game - UploadStory]
+7-6-2019 | 13:53: Au39Q7 (5 | 232e3142-96f1-477a-bee2-789aeec6c7e8) uploaded a story.
+7-6-2019 | 13:53: Au39Q7 (5 | 232e3142-96f1-477a-bee2-789aeec6c7e8) story is 'ABC', 'ABC'
+7-6-2019 | 13:53: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[Game - UploadStory]
+7-6-2019 | 13:53: Au39Q7 (5 | 0d672fd0-cbac-402b-93e9-c3f9e657fcb7) uploaded a story.
+7-6-2019 | 13:53: Au39Q7 (5 | 0d672fd0-cbac-402b-93e9-c3f9e657fcb7) story is 'DEF', 'DEF'
+7-6-2019 | 13:53: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[Game - UploadStory]
+7-6-2019 | 13:53: Au39Q7 all users wrote their stories.
+7-6-2019 | 13:53: Au39Q7 continuing to read phase.
+7-6-2019 | 13:53: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[Game - GoToReadPhase]
+7-6-2019 | 13:53: (4) validated.
+7-6-2019 | 13:53: Au39Q7 has 2 groups.
+7-6-2019 | 13:53: Au39Q7 current group is 1.
+7-6-2019 | 13:53: Au39Q7 next list of answers needs 1 answers.
+7-6-2019 | 13:53: Au39Q7 first round.
+7-6-2019 | 13:53: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[Game - StartGameTimer]
+7-6-2019 | 13:53: (67a92f7d-dff8-4615-9d5f-b848812ccfaa) wants to start a timer in Au39Q7 for 900 seconds.
+7-6-2019 | 13:53: (67a92f7d-dff8-4615-9d5f-b848812ccfaa) validated.
+7-6-2019 | 13:53: (67a92f7d-dff8-4615-9d5f-b848812ccfaa) timer started.
+7-6-2019 | 13:53: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[Game - RetrieveWrittenStories]
+7-6-2019 | 13:53: Au39Q7 retrieving written stories of group 1...
+7-6-2019 | 13:53: Au39Q7 got written story 5:!|DEF:!|DEF:!|0d672fd0-cbac-402b-93e9-c3f9e657fcb7
+7-6-2019 | 13:53: Au39Q7 got root story 5:!|Ook een verhaalke:!|987654321:!|0
+7-6-2019 | 13:53: Au39Q7 correct answer is 0.
+7-6-2019 | 13:53: End.
 --------[END]--------
 

@@ -12,10 +12,35 @@
             <input id="usernameHolder" type="hidden" value="@Model.User.Username" />
             <input id="roomCodeHolder" type="hidden" value="" />
             <input id="roleIdHolder" type="hidden" value="@Model.User.RoleId" />
-            <input id="storySourceHolder" type="hidden" value="0" />
             @if (Model.User.RoleId == 0)
             {
-                <!-- Student -->
+                <!-- #region Student -->
+                <div class="layout top-bar" id="persistentHeader" style="background-color: #6ac2c4; display: none; width: 100vw; margin-top: -10px; margin-bottom: 33px;">
+                    <div class="layout top-bar-container" style="display: flex; flex-direction: row; justify-content: flex-start;">
+                        <div id="profilePicture">
+                            @if (!String.IsNullOrEmpty(Model.User.ImageSource))
+                            {
+                                <img class="layout top-bar-profile" src="~/content/image/avatars/@Model.User.Id/@Model.User.ImageSource" alt="Jij!" title="Jij!" />
+                            }
+                            else
+                            {
+                                <img class="layout top-bar-profile" src="~/content/image/Person_disabled.png" alt="Jij!" title="Jij!" />
+                            }
+                        </div>
+                        <div>
+                            <h2 class="subtitle" style="margin-top: 35px; margin-left: 10px;">@Model.User.Username</h2>
+                        </div>
+                        <div id="personalScore" style="display: flex; flex-direction: row; justify-content: space-around">
+                            <div style="display: flex; margin-left: 100px;">
+                                <img class="layout top-bar-profile" style="height: 75px; width: 75px; margin-top: 12px;" src="~/content/image/People.png" title="Volgers" alt="Volgers" />
+                                <h2 class="subtitle" style="padding-left: 10px; margin-top: 35px;" id="followerCount">0</h2>
+                            </div>
+                            <div>
+                                <h2 class="subtitle" style="margin-left: 1400px; margin-top: 35px;" id="moneyCount">€0.00-</h2>
+                            </div>
+                        </div>
+                    </div>
+                </div>
                 <div id="game-prep">
                     <p id="statusMessage"></p>
                     <h2 class="subtitle">Speel mee! Vul de spelcode op het bord in:</h2>
@@ -23,10 +48,7 @@
                     <input id="btn-joinLobby" type="button" class="form-button" style="margin-top: 10px;" value="Verbinden met lobby" />
                 </div>
                 <div>
-                    <div id="personalScore" style="display: none;">
-                        <p id="followerCount">Volgers: 0</p>
-                        <p id="moneyCount">Geld: €0.00-</p>
-                    </div>
+                    <!-- #region Prep -->
                     <div id="game-connected" style="display: none;">
                         <div style="display: flex; flex-direction: column;">
                             <div>
@@ -60,21 +82,23 @@
                     <div id="game-waiting" style="display: none; width: 100vw; text-align: center;">
                         <p class="before-input">Wachten op spelers...</p>
                     </div>
+                    <!-- #endregion -->
+                    <!-- #region Write -->
                     <div id="game-write" style="display: none; width: 100vw;">
                         <div id="write-busy">
                             <div style="display: flex; flex-direction: column;">
                                 <div style="display: flex; flex-direction: row; justify-content: center;">
-                                    <div style="border: 1px solid black; width: 25%;">
-                                        <p id="storyTitle" style="text-align: center;">Titel</p>
+                                    <div style="background-color: #6ac2c4; width: 33%; height: 600px; margin-right: 15px;">
+                                        <p id="storyTitle" style="text-align: center; color: white;">Titel</p>
                                         <p id="storyText" style="text-align: center;">Verhaal</p>
                                     </div>
-                                    <div style="display: flex; flex-direction: column;">
-                                        <input id="writtenStoryTitle" class="text-input" placeholder="Titel" />
-                                        <textarea id="writtenStoryText" class="text-input" style="width: 400px; height: 400px;" placeholder="Verhaal"></textarea>
+                                    <div style="background-color: #6ac2c4; display: flex; flex-direction: column; width: 33%; height: 600px; margin-left: 15px; padding: 10px;">
+                                        <input id="writtenStoryTitle" type="text" class="text-input" placeholder="Titel" style="background-color: #27a5a8; color: white; width: 100%; margin-bottom: 20px;" />
+                                        <textarea id="writtenStoryText" class="text-input" style="background-color: #27a5a8; width: 100%; height: 100%; color: black;" placeholder="Verhaal"></textarea>
                                     </div>
                                 </div>
                                 <div>
-                                    <input id="btn-sendStory" class="form-button-orange" type="button" value="Verhaal insturen" />
+                                    <input id="btn-uploadStory" class="form-button-orange" style="margin-right: 310px; margin-top: 20px; width: 150px;" type="button" value="Deel" />
                                 </div>
                             </div>
                         </div>
@@ -83,6 +107,8 @@
                         </div>
                         <span class="timer" style="display: none; margin-left: auto; margin-right: auto; width: 100vw; height: 50px; background-color: #f7c747; text-align: center;"></span>
                     </div>
+                    <!-- #endregion -->
+                    <!-- #region Read -->
                     <div id="game-read" style="display: none; width: 100vw;">
                         <div id="read-busy">
                             <div style="display: flex; flex-direction: row;">
@@ -94,7 +120,7 @@
                                 <div>
                                     <p id="readStoryTitle"></p>
                                     <text id="readStoryText"></text>
-                                    <input id="btn-shareStory" class="form-button-orange" type="button" value="Delen" />
+                                    <input id="btn-uploadAnswer" class="form-button-orange" type="button" value="Delen" />
                                     <input id="btn-activatePowerup" class="form-button-orange" type="button" value="Hulplijn" />
                                 </div>
                                 <div id="powerupBar" style="display: none;">
@@ -114,11 +140,13 @@
                         </div>
                         <span class="timer" style="display: none; margin-left: auto; margin-right: auto; width: 100vw; height: 50px; background-color: #f7c747; text-align: center;"></span>
                     </div>
+                    <!-- #endregion -->
                     <div id="game-leaderboard" style="display: none;">
                         <ul id="leaderboard"></ul>
                         <input id="btn-leaveGameOnEnd" style="display: none;" class="form-button-orange" type="button" value="Afsluiten" />
                     </div>
-                </div>               
+                </div>
+                <!-- #endregion -->
             }
             @if (Model.User.RoleId == 1)
             {
@@ -167,18 +195,18 @@
                     </div>
                 </div>
                 <div id="game-tutorial-3" style="display: none; width: 100vw; text-align: center;">
-                    <p>Kijk nu naar je eigen scherm en volg de instructies.</p>
+                    <h2 class="subtitle">Kijk nu naar je eigen scherm en volg de instructies.</h2>
                     <div style="display: flex; margin-left: 350px; margin-right: 350px;">
                         <input class="btn-continueTutorial" type="button" value="Volgende" />
                         <input class="btn-skipTutorial" type="button" value="Overslaan" />
                     </div>
                 </div>
                 <div id="game-waiting" style="display: none; width: 100vw; text-align: center;">
-                    <p>Wachten op spelers...</p>
+                    <h2 class="subtitle">Wachten op spelers...</h2>
                     <input class="btn-skipTutorial" type="button" value="Overslaan" />
                 </div>
                 <div id="game-write" style="display: none; width: 100vw;">
-                    <p>Wachten op verhalen...</p>
+                    <h2 class="subtitle">Wachten op verhalen...</h2>
                     <span class="timer" style="display: none; margin-left: auto; margin-right: auto; width: 100vw; height: 50px; background-color: #f7c747; text-align: center;"></span>
                 </div>
                 <div id="game-read" style="display: none; width: 100vw;">

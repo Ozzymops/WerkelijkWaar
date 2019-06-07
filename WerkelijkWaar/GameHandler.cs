@@ -252,7 +252,7 @@ namespace WerkelijkWaar
                         {
                             if (room.RoomState == Classes.Room.State.Waiting)
                             {
-                                logger.Log("[Game - JoinRoom]", "(" + correctedUserId + ") successfully joined room " + roomCode + ".", 1, 3, false);
+                                logger.Log("[Game - JoinRoom]", "(" + correctedUserId + ") successfully joined room " + roomCode + ".", 2, 3, false);
 
                                 room.ResetTimer();
 
@@ -482,7 +482,7 @@ namespace WerkelijkWaar
                         logger.Log("[Game - ReadyUpPlayer]", roomCode + " all players readied up.", 0, 3, false);
                         logger.Log("[Game - ReadyUpPlayer]", roomCode + " continuing game...", 2, 3, false);
 
-                        await GoToWritePhase(room.RoomOwnerId, room.RoomOwnerId, roomCode, false);
+                        await GoToWritePhase(room.RoomOwnerId, roomCode, false);
                     }
                 }
             }
@@ -507,7 +507,7 @@ namespace WerkelijkWaar
 
                     logger.Log("[Game - SkipTutorial]", roomCode + " continuing game...", 2, 3, false);
 
-                    await GoToWritePhase(room.RoomOwnerId, room.RoomOwnerId, roomCode, false);
+                    await GoToWritePhase(room.RoomOwnerId, roomCode, false);
                 }
             }
         }
@@ -519,27 +519,23 @@ namespace WerkelijkWaar
         /// <param name="ownerId">Room Owner ID</param>
         /// <param name="roomCode">Targeted Room code</param>
         /// <param name="reset">Did the game loop around?</param>
-        public async Task GoToWritePhase(string userId, string ownerId, string roomCode, bool reset)
+        public async Task GoToWritePhase(string ownerId, string roomCode, bool reset)
         {
             foreach (Classes.Room room in _gameManager.Rooms)
             {
                 if (room.RoomCode == roomCode)
                 {
-                    if (dq.RetrieveUser(Convert.ToInt32(userId)).RoleId == 1)
+                    if (room.RoomOwnerId == ownerId)
                     {
-                        logger.Log("[Game - GoToWritePhase]", "(" + userId + ") validated.", 0, 3, false);
+                        logger.Log("[Game - GoToWritePhase]", roomCode + " trying to go to writing phase...", 0, 3, false);
 
                         room.RoomState = Classes.Room.State.Writing;
 
                         logger.Log("[Game - GoToWritePhase]", roomCode + " continuing to writing phase...", 2, 3, false);
 
                         await InvokeClientMethodToAllAsync("writePhase", roomCode);
-                        await StartGameTimer(room.RoomOwnerId, roomCode, room.Config.MaxWritingTime);
-                        // await RetrieveRootStory(roomCode);
-                    }
-                    else
-                    {
-                        logger.Log("[Game - GoToWritePhase]", "(" + userId + ") tried to bypass security. Aborting...", 2, 3, false);
+                        await StartGameTimer(room.RoomOwnerId, roomCode, 300); // room.Config.MaxWritingTime
+                        await RetrieveRootStory(roomCode);
                     }
                 }
             }
@@ -549,16 +545,15 @@ namespace WerkelijkWaar
         /// Continue to the reading phase
         /// </summary>
         /// <param name="userId">User ID</param>
-        /// <param name="ownerId">Room Owner ID</param>
         /// <param name="roomCode">Targeted Room code</param>
         /// <param name="start">Is this the first (starting) round?</param>
-        public async Task GoToReadPhase(string userId, string roomCode, bool start)
+        public async Task GoToReadPhase(int userId, string roomCode, bool start)
         {
             foreach (Classes.Room room in _gameManager.Rooms)
             {
                 if (room.RoomCode == roomCode)
                 {
-                    if (dq.RetrieveUser(Convert.ToInt32(userId)).RoleId == 1)
+                    if (dq.RetrieveUser(userId).RoleId == 1)
                     {
                         logger.Log("[Game - GoToReadPhase]", "(" + userId + ") validated.", 0, 3, false);
 
@@ -646,7 +641,7 @@ namespace WerkelijkWaar
                 {
                     logger.Log("[Game - StartGameTimer]", "(" + userId + ") wants to start a timer in " + roomCode + " for " + time + " seconds.", 0, 3, false);
 
-                    if (room.RoomOwnerId == userId && dq.RetrieveUser(Convert.ToInt32(userId)).RoleId == 1)
+                    if (room.RoomOwnerId == userId && dq.RetrieveUser(Convert.ToInt32(room.Teacher.Id)).RoleId == 1)
                     {
                         logger.Log("[Game - StartGameTimer]", "(" + userId + ") validated.", 1, 3, false);
 
@@ -678,7 +673,7 @@ namespace WerkelijkWaar
                 {
                     logger.Log("[Game - StopGameTimer]", "(" + userId + ") wants to stop a timer in " + roomCode + ".", 0, 3, false);
 
-                    if (room.RoomOwnerId == userId && dq.RetrieveUser(Convert.ToInt32(userId)).RoleId == 1)
+                    if (room.RoomOwnerId == userId)
                     {
                         logger.Log("[Game - StopGameTimer]", "(" + userId + ") validated.", 1, 3, false);
 
@@ -776,7 +771,7 @@ namespace WerkelijkWaar
 
                         logger.Log("[Game - UploadStory]", roomCode + " continuing to read phase.", 2, 3, false);
 
-                        await GoToReadPhase(room.RoomOwnerId, roomCode, true);
+                        await GoToReadPhase(room.Teacher.Id, roomCode, true);
                     }
                 }
             }

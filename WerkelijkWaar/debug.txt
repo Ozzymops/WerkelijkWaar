@@ -2517,3 +2517,2207 @@ Error Number:201,State:4,Class:16
 6-6-2019 | 15:56: End.
 --------[END]--------
 
+-----[LOG ENTRY]-----
+[CheckLogin]
+7-6-2019 | 11:48: 0ms. Checking login for JMuris
+7-6-2019 | 11:48: 44ms. Found JMuris
+7-6-2019 | 11:48: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[RetrieveUser]
+7-6-2019 | 11:48: 0ms. Retrieving user 4
+7-6-2019 | 11:48: 3ms. Found user 4
+7-6-2019 | 11:48: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[CheckLogin]
+7-6-2019 | 11:49: 0ms. Checking login for AAppel
+7-6-2019 | 11:49: 2ms. Found AAppel
+7-6-2019 | 11:49: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[RetrieveUser]
+7-6-2019 | 11:49: 0ms. Retrieving user 5
+7-6-2019 | 11:49: 1ms. Found user 5
+7-6-2019 | 11:49: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[RetrieveUser]
+7-6-2019 | 11:49: 0ms. Retrieving user 4
+7-6-2019 | 11:49: 1ms. Found user 4
+7-6-2019 | 11:49: End.
+--------[END]--------
+
+7-6-2019 | 11:49: Generating random code...
+7-6-2019 | 11:49: Generated code is 3uKhG4. Room state is now Waiting.
+7-6-2019 | 11:49: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[RetrieveConfig]
+7-6-2019 | 11:49: 0ms. Attempting to retrieve config
+7-6-2019 | 11:49: 2ms. Could not find a config.
+7-6-2019 | 11:49: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[RetrieveUser]
+7-6-2019 | 11:49: 0ms. Retrieving user 5
+7-6-2019 | 11:49: 1ms. Found user 5
+7-6-2019 | 11:49: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[RetrieveUser]
+7-6-2019 | 11:49: 0ms. Retrieving user 5
+7-6-2019 | 11:49: 1ms. Found user 5
+7-6-2019 | 11:49: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[RetrieveUser]
+7-6-2019 | 11:49: 0ms. Retrieving user 5
+7-6-2019 | 11:49: 1ms. Found user 5
+7-6-2019 | 11:49: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[RetrieveUser]
+7-6-2019 | 11:49: 0ms. Retrieving user 5
+7-6-2019 | 11:49: 1ms. Found user 5
+7-6-2019 | 11:49: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[RetrieveUser]
+7-6-2019 | 11:49: 0ms. Retrieving user 5
+7-6-2019 | 11:49: 1ms. Found user 5
+7-6-2019 | 11:49: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[RetrieveUser]
+7-6-2019 | 11:49: 0ms. Retrieving user 5
+7-6-2019 | 11:49: 1ms. Found user 5
+7-6-2019 | 11:49: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[Room - GamePreparation]
+7-6-2019 | 11:49: Room is being prepared for gameplay.
+7-6-2019 | 11:49: Room contains 6 players.
+7-6-2019 | 11:49: Room has enough players (6/3)
+7-6-2019 | 11:49: Shuffling user list...
+7-6-2019 | 11:49: Assigning players to groups...
+-----[LOG ENTRY]-----
+[RetrieveAllStories]
+7-6-2019 | 11:49: 0ms. Attempting to retrieve all stories.
+7-6-2019 | 11:49: 4ms. Got: 1 - Een root verhaal
+7-6-2019 | 11:49: 6ms. Got: 2 - Een verhaal
+7-6-2019 | 11:49: 7ms. Got: 3 - Nog een verhaal
+7-6-2019 | 11:49: 9ms. Found 3 stories.
+7-6-2019 | 11:49: End.
+--------[END]--------
+
+7-6-2019 | 11:49: Assigning stories to groups...
+7-6-2019 | 11:49: Creating score objects for the players...
+7-6-2019 | 11:49: Room is prepared.
+7-6-2019 | 11:49: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[CheckLogin]
+7-6-2019 | 11:55: 0ms. Checking login for JMuris
+7-6-2019 | 11:55: 27ms. Found JMuris
+7-6-2019 | 11:55: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[RetrieveUser]
+7-6-2019 | 11:55: 0ms. Retrieving user 4
+7-6-2019 | 11:55: 3ms. Found user 4
+7-6-2019 | 11:55: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[CheckLogin]
+7-6-2019 | 11:55: 0ms. Checking login for AAppel
+7-6-2019 | 11:55: 2ms. Found AAppel
+7-6-2019 | 11:55: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[RetrieveUser]
+7-6-2019 | 11:55: 0ms. Retrieving user 5
+7-6-2019 | 11:55: 1ms. Found user 5
+7-6-2019 | 11:55: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[RetrieveUser]
+7-6-2019 | 11:55: 0ms. Retrieving user 4
+7-6-2019 | 11:55: 1ms. Found user 4
+7-6-2019 | 11:55: End.
+--------[END]--------
+
+7-6-2019 | 11:55: Generating random code...
+7-6-2019 | 11:55: Generated code is 2qt5i0. Room state is now Waiting.
+7-6-2019 | 11:55: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[RetrieveConfig]
+7-6-2019 | 11:55: 0ms. Attempting to retrieve config
+7-6-2019 | 11:55: 2ms. Could not find a config.
+7-6-2019 | 11:55: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[RetrieveUser]
+7-6-2019 | 11:55: 0ms. Retrieving user 5
+7-6-2019 | 11:55: 2ms. Found user 5
+7-6-2019 | 11:55: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[RetrieveUser]
+7-6-2019 | 11:55: 0ms. Retrieving user 5
+7-6-2019 | 11:55: 2ms. Found user 5
+7-6-2019 | 11:55: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[RetrieveUser]
+7-6-2019 | 11:56: 0ms. Retrieving user 5
+7-6-2019 | 11:56: 1ms. Found user 5
+7-6-2019 | 11:56: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[RetrieveUser]
+7-6-2019 | 11:56: 0ms. Retrieving user 5
+7-6-2019 | 11:56: 1ms. Found user 5
+7-6-2019 | 11:56: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[RetrieveUser]
+7-6-2019 | 11:56: 0ms. Retrieving user 5
+7-6-2019 | 11:56: 1ms. Found user 5
+7-6-2019 | 11:56: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[RetrieveUser]
+7-6-2019 | 11:56: 0ms. Retrieving user 5
+7-6-2019 | 11:56: 1ms. Found user 5
+7-6-2019 | 11:56: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[Room - GamePreparation]
+7-6-2019 | 11:56: Room is being prepared for gameplay.
+7-6-2019 | 11:56: Room contains 6 players.
+7-6-2019 | 11:56: Room has enough players (6/3)
+7-6-2019 | 11:56: Shuffling user list...
+7-6-2019 | 11:56: Assigning players to groups...
+-----[LOG ENTRY]-----
+[RetrieveAllStories]
+7-6-2019 | 11:56: 0ms. Attempting to retrieve all stories.
+7-6-2019 | 11:56: 3ms. Got: 1 - Een root verhaal
+7-6-2019 | 11:56: 4ms. Got: 2 - Een verhaal
+7-6-2019 | 11:56: 6ms. Got: 3 - Nog een verhaal
+7-6-2019 | 11:56: 7ms. Found 3 stories.
+7-6-2019 | 11:56: End.
+--------[END]--------
+
+7-6-2019 | 11:56: Assigning stories to groups...
+7-6-2019 | 11:56: Creating score objects for the players...
+7-6-2019 | 11:56: Room is prepared.
+7-6-2019 | 11:56: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[CheckLogin]
+7-6-2019 | 12:01: 0ms. Checking login for JMuris
+7-6-2019 | 12:01: 32ms. Found JMuris
+7-6-2019 | 12:01: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[RetrieveUser]
+7-6-2019 | 12:01: 0ms. Retrieving user 4
+7-6-2019 | 12:01: 3ms. Found user 4
+7-6-2019 | 12:01: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[CheckLogin]
+7-6-2019 | 12:01: 0ms. Checking login for AAppel
+7-6-2019 | 12:01: 2ms. Found AAppel
+7-6-2019 | 12:01: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[RetrieveUser]
+7-6-2019 | 12:01: 0ms. Retrieving user 5
+7-6-2019 | 12:01: 1ms. Found user 5
+7-6-2019 | 12:01: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[RetrieveUser]
+7-6-2019 | 12:01: 0ms. Retrieving user 4
+7-6-2019 | 12:01: 2ms. Found user 4
+7-6-2019 | 12:01: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[CheckLogin]
+7-6-2019 | 12:01: 0ms. Checking login for JMuris
+7-6-2019 | 12:01: 24ms. Found JMuris
+7-6-2019 | 12:01: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[RetrieveUser]
+7-6-2019 | 12:01: 0ms. Retrieving user 4
+7-6-2019 | 12:01: 2ms. Found user 4
+7-6-2019 | 12:01: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[CheckLogin]
+7-6-2019 | 12:01: 0ms. Checking login for AAppel
+7-6-2019 | 12:01: 2ms. Found AAppel
+7-6-2019 | 12:01: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[RetrieveUser]
+7-6-2019 | 12:01: 0ms. Retrieving user 5
+7-6-2019 | 12:01: 1ms. Found user 5
+7-6-2019 | 12:01: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[RetrieveUser]
+7-6-2019 | 12:01: 0ms. Retrieving user 4
+7-6-2019 | 12:01: 1ms. Found user 4
+7-6-2019 | 12:01: End.
+--------[END]--------
+
+7-6-2019 | 12:01: Generating random code...
+7-6-2019 | 12:01: Generated code is 036Q5F. Room state is now Waiting.
+7-6-2019 | 12:01: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[RetrieveConfig]
+7-6-2019 | 12:01: 0ms. Attempting to retrieve config
+7-6-2019 | 12:01: 2ms. Could not find a config.
+7-6-2019 | 12:01: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[RetrieveUser]
+7-6-2019 | 12:01: 0ms. Retrieving user 5
+7-6-2019 | 12:01: 1ms. Found user 5
+7-6-2019 | 12:01: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[RetrieveUser]
+7-6-2019 | 12:02: 0ms. Retrieving user 5
+7-6-2019 | 12:02: 3ms. Found user 5
+7-6-2019 | 12:02: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[RetrieveUser]
+7-6-2019 | 12:02: 0ms. Retrieving user 5
+7-6-2019 | 12:02: 2ms. Found user 5
+7-6-2019 | 12:02: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[RetrieveUser]
+7-6-2019 | 12:02: 0ms. Retrieving user 5
+7-6-2019 | 12:02: 2ms. Found user 5
+7-6-2019 | 12:02: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[RetrieveUser]
+7-6-2019 | 12:02: 0ms. Retrieving user 5
+7-6-2019 | 12:02: 1ms. Found user 5
+7-6-2019 | 12:02: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[RetrieveUser]
+7-6-2019 | 12:02: 0ms. Retrieving user 5
+7-6-2019 | 12:02: 1ms. Found user 5
+7-6-2019 | 12:02: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[Room - GamePreparation]
+7-6-2019 | 12:03: Room is being prepared for gameplay.
+7-6-2019 | 12:03: Room contains 6 players.
+7-6-2019 | 12:03: Room has enough players (6/3)
+7-6-2019 | 12:03: Shuffling user list...
+7-6-2019 | 12:03: Assigning players to groups...
+-----[LOG ENTRY]-----
+[RetrieveAllStories]
+7-6-2019 | 12:03: 0ms. Attempting to retrieve all stories.
+7-6-2019 | 12:03: 3ms. Got: 1 - Een root verhaal
+7-6-2019 | 12:03: 4ms. Got: 2 - Een verhaal
+7-6-2019 | 12:03: 6ms. Got: 3 - Nog een verhaal
+7-6-2019 | 12:03: 7ms. Found 3 stories.
+7-6-2019 | 12:03: End.
+--------[END]--------
+
+7-6-2019 | 12:03: Assigning stories to groups...
+7-6-2019 | 12:03: Creating score objects for the players...
+7-6-2019 | 12:03: Room is prepared.
+7-6-2019 | 12:03: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[CheckLogin]
+7-6-2019 | 12:05: 0ms. Checking login for JMuris
+7-6-2019 | 12:05: 27ms. Found JMuris
+7-6-2019 | 12:05: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[RetrieveUser]
+7-6-2019 | 12:05: 0ms. Retrieving user 4
+7-6-2019 | 12:05: 3ms. Found user 4
+7-6-2019 | 12:05: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[CheckLogin]
+7-6-2019 | 12:05: 0ms. Checking login for AAppel
+7-6-2019 | 12:05: 2ms. Found AAppel
+7-6-2019 | 12:05: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[RetrieveUser]
+7-6-2019 | 12:05: 0ms. Retrieving user 5
+7-6-2019 | 12:05: 1ms. Found user 5
+7-6-2019 | 12:05: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[RetrieveUser]
+7-6-2019 | 12:05: 0ms. Retrieving user 4
+7-6-2019 | 12:05: 1ms. Found user 4
+7-6-2019 | 12:05: End.
+--------[END]--------
+
+7-6-2019 | 12:05: Generating random code...
+7-6-2019 | 12:05: Generated code is Cj638C. Room state is now Waiting.
+7-6-2019 | 12:05: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[RetrieveConfig]
+7-6-2019 | 12:05: 0ms. Attempting to retrieve config
+7-6-2019 | 12:05: 2ms. Could not find a config.
+7-6-2019 | 12:05: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[RetrieveUser]
+7-6-2019 | 12:06: 0ms. Retrieving user 5
+7-6-2019 | 12:06: 1ms. Found user 5
+7-6-2019 | 12:06: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[RetrieveUser]
+7-6-2019 | 12:06: 0ms. Retrieving user 5
+7-6-2019 | 12:06: 1ms. Found user 5
+7-6-2019 | 12:06: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[RetrieveUser]
+7-6-2019 | 12:06: 0ms. Retrieving user 5
+7-6-2019 | 12:06: 1ms. Found user 5
+7-6-2019 | 12:06: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[RetrieveUser]
+7-6-2019 | 12:06: 0ms. Retrieving user 5
+7-6-2019 | 12:06: 1ms. Found user 5
+7-6-2019 | 12:06: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[RetrieveUser]
+7-6-2019 | 12:06: 0ms. Retrieving user 5
+7-6-2019 | 12:06: 2ms. Found user 5
+7-6-2019 | 12:06: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[RetrieveUser]
+7-6-2019 | 12:06: 0ms. Retrieving user 5
+7-6-2019 | 12:06: 1ms. Found user 5
+7-6-2019 | 12:06: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[Room - GamePreparation]
+7-6-2019 | 12:06: Room is being prepared for gameplay.
+7-6-2019 | 12:06: Room contains 6 players.
+7-6-2019 | 12:06: Room has enough players (6/3)
+7-6-2019 | 12:06: Shuffling user list...
+7-6-2019 | 12:06: Assigning players to groups...
+-----[LOG ENTRY]-----
+[RetrieveAllStories]
+7-6-2019 | 12:06: 0ms. Attempting to retrieve all stories.
+7-6-2019 | 12:06: 2ms. Got: 1 - Een root verhaal
+7-6-2019 | 12:06: 4ms. Got: 2 - Een verhaal
+7-6-2019 | 12:06: 6ms. Got: 3 - Nog een verhaal
+7-6-2019 | 12:06: 7ms. Found 3 stories.
+7-6-2019 | 12:06: End.
+--------[END]--------
+
+7-6-2019 | 12:06: Assigning stories to groups...
+7-6-2019 | 12:06: Creating score objects for the players...
+7-6-2019 | 12:06: Room is prepared.
+7-6-2019 | 12:06: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[CheckLogin]
+7-6-2019 | 12:10: 0ms. Checking login for JMuris
+7-6-2019 | 12:10: 28ms. Found JMuris
+7-6-2019 | 12:10: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[RetrieveUser]
+7-6-2019 | 12:10: 0ms. Retrieving user 4
+7-6-2019 | 12:10: 3ms. Found user 4
+7-6-2019 | 12:10: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[CheckLogin]
+7-6-2019 | 12:10: 0ms. Checking login for AAppel
+7-6-2019 | 12:10: 2ms. Found AAppel
+7-6-2019 | 12:10: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[RetrieveUser]
+7-6-2019 | 12:10: 0ms. Retrieving user 5
+7-6-2019 | 12:10: 1ms. Found user 5
+7-6-2019 | 12:10: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[RetrieveUser]
+7-6-2019 | 12:10: 0ms. Retrieving user 4
+7-6-2019 | 12:10: 2ms. Found user 4
+7-6-2019 | 12:10: End.
+--------[END]--------
+
+7-6-2019 | 12:10: Generating random code...
+7-6-2019 | 12:10: Generated code is prwHHF. Room state is now Waiting.
+7-6-2019 | 12:10: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[RetrieveConfig]
+7-6-2019 | 12:10: 0ms. Attempting to retrieve config
+7-6-2019 | 12:10: 3ms. Could not find a config.
+7-6-2019 | 12:10: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[RetrieveUser]
+7-6-2019 | 12:10: 0ms. Retrieving user 5
+7-6-2019 | 12:10: 1ms. Found user 5
+7-6-2019 | 12:10: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[RetrieveUser]
+7-6-2019 | 12:10: 0ms. Retrieving user 5
+7-6-2019 | 12:10: 3ms. Found user 5
+7-6-2019 | 12:10: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[RetrieveUser]
+7-6-2019 | 12:12: 0ms. Retrieving user 5
+7-6-2019 | 12:12: 4ms. Found user 5
+7-6-2019 | 12:12: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[RetrieveUser]
+7-6-2019 | 12:12: 0ms. Retrieving user 5
+7-6-2019 | 12:12: 2ms. Found user 5
+7-6-2019 | 12:12: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[RetrieveUser]
+7-6-2019 | 12:14: 0ms. Retrieving user 5
+7-6-2019 | 12:14: 6ms. Found user 5
+7-6-2019 | 12:14: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[RetrieveUser]
+7-6-2019 | 12:14: 0ms. Retrieving user 5
+7-6-2019 | 12:14: 2ms. Found user 5
+7-6-2019 | 12:14: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[RetrieveUser]
+7-6-2019 | 12:14: 0ms. Retrieving user 5
+7-6-2019 | 12:14: 1ms. Found user 5
+7-6-2019 | 12:14: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[RetrieveUser]
+7-6-2019 | 12:15: 0ms. Retrieving user 5
+7-6-2019 | 12:15: 2ms. Found user 5
+7-6-2019 | 12:15: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[RetrieveUser]
+7-6-2019 | 12:15: 0ms. Retrieving user 5
+7-6-2019 | 12:15: 2ms. Found user 5
+7-6-2019 | 12:15: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[EditUserAvatar]
+7-6-2019 | 12:16: 0ms. Trying to write to user 5's avatar.
+7-6-2019 | 12:16: 4ms. Edited user with id 5
+7-6-2019 | 12:16: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[RetrieveUser]
+7-6-2019 | 12:16: 0ms. Retrieving user 5
+7-6-2019 | 12:16: 2ms. Found user 5
+7-6-2019 | 12:16: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[RetrieveUser]
+7-6-2019 | 12:17: 0ms. Retrieving user 5
+7-6-2019 | 12:17: 1ms. Found user 5
+7-6-2019 | 12:17: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[RetrieveUser]
+7-6-2019 | 12:17: 0ms. Retrieving user 5
+7-6-2019 | 12:17: 3ms. Found user 5
+7-6-2019 | 12:17: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[RetrieveUser]
+7-6-2019 | 12:18: 0ms. Retrieving user 5
+7-6-2019 | 12:18: 1ms. Found user 5
+7-6-2019 | 12:18: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[RetrieveUser]
+7-6-2019 | 12:19: 0ms. Retrieving user 5
+7-6-2019 | 12:19: 3ms. Found user 5
+7-6-2019 | 12:19: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[RetrieveUser]
+7-6-2019 | 12:19: 0ms. Retrieving user 5
+7-6-2019 | 12:19: 2ms. Found user 5
+7-6-2019 | 12:19: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[RetrieveUser]
+7-6-2019 | 12:19: 0ms. Retrieving user 5
+7-6-2019 | 12:19: 1ms. Found user 5
+7-6-2019 | 12:19: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[CheckLogin]
+7-6-2019 | 12:20: 0ms. Checking login for JMuris
+7-6-2019 | 12:20: 27ms. Found JMuris
+7-6-2019 | 12:20: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[RetrieveUser]
+7-6-2019 | 12:20: 0ms. Retrieving user 4
+7-6-2019 | 12:20: 3ms. Found user 4
+7-6-2019 | 12:20: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[CheckLogin]
+7-6-2019 | 12:20: 0ms. Checking login for AAppel
+7-6-2019 | 12:20: 2ms. Found AAppel
+7-6-2019 | 12:20: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[RetrieveUser]
+7-6-2019 | 12:20: 0ms. Retrieving user 5
+7-6-2019 | 12:20: 1ms. Found user 5
+7-6-2019 | 12:20: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[RetrieveUser]
+7-6-2019 | 12:20: 0ms. Retrieving user 4
+7-6-2019 | 12:20: 1ms. Found user 4
+7-6-2019 | 12:20: End.
+--------[END]--------
+
+7-6-2019 | 12:20: Generating random code...
+7-6-2019 | 12:20: Generated code is Ek9s35. Room state is now Waiting.
+7-6-2019 | 12:20: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[RetrieveConfig]
+7-6-2019 | 12:20: 0ms. Attempting to retrieve config
+7-6-2019 | 12:20: 2ms. Could not find a config.
+7-6-2019 | 12:20: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[RetrieveUser]
+7-6-2019 | 12:20: 0ms. Retrieving user 5
+7-6-2019 | 12:20: 2ms. Found user 5
+7-6-2019 | 12:20: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[RetrieveUser]
+7-6-2019 | 12:20: 0ms. Retrieving user 5
+7-6-2019 | 12:20: 1ms. Found user 5
+7-6-2019 | 12:20: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[RetrieveUser]
+7-6-2019 | 12:21: 0ms. Retrieving user 5
+7-6-2019 | 12:21: 1ms. Found user 5
+7-6-2019 | 12:21: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[RetrieveUser]
+7-6-2019 | 12:21: 0ms. Retrieving user 5
+7-6-2019 | 12:21: 1ms. Found user 5
+7-6-2019 | 12:21: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[RetrieveUser]
+7-6-2019 | 12:21: 0ms. Retrieving user 5
+7-6-2019 | 12:21: 1ms. Found user 5
+7-6-2019 | 12:21: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[RetrieveUser]
+7-6-2019 | 12:21: 0ms. Retrieving user 5
+7-6-2019 | 12:21: 1ms. Found user 5
+7-6-2019 | 12:21: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[Room - GamePreparation]
+7-6-2019 | 12:21: Room is being prepared for gameplay.
+7-6-2019 | 12:21: Room contains 6 players.
+7-6-2019 | 12:21: Room has enough players (6/3)
+7-6-2019 | 12:21: Shuffling user list...
+7-6-2019 | 12:21: Assigning players to groups...
+-----[LOG ENTRY]-----
+[RetrieveAllStories]
+7-6-2019 | 12:21: 0ms. Attempting to retrieve all stories.
+7-6-2019 | 12:21: 3ms. Got: 1 - Een root verhaal
+7-6-2019 | 12:21: 5ms. Got: 2 - Een verhaal
+7-6-2019 | 12:21: 7ms. Got: 3 - Nog een verhaal
+7-6-2019 | 12:21: 9ms. Found 3 stories.
+7-6-2019 | 12:21: End.
+--------[END]--------
+
+7-6-2019 | 12:21: Assigning stories to groups...
+7-6-2019 | 12:21: Creating score objects for the players...
+7-6-2019 | 12:21: Room is prepared.
+7-6-2019 | 12:21: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[CheckLogin]
+7-6-2019 | 12:59: 0ms. Checking login for JMuris
+7-6-2019 | 12:59: 29ms. Found JMuris
+7-6-2019 | 12:59: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[RetrieveUser]
+7-6-2019 | 12:59: 0ms. Retrieving user 4
+7-6-2019 | 12:59: 3ms. Found user 4
+7-6-2019 | 12:59: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[CheckLogin]
+7-6-2019 | 12:59: 0ms. Checking login for AAppel
+7-6-2019 | 12:59: 2ms. Found AAppel
+7-6-2019 | 12:59: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[RetrieveUser]
+7-6-2019 | 12:59: 0ms. Retrieving user 5
+7-6-2019 | 12:59: 1ms. Found user 5
+7-6-2019 | 12:59: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[RetrieveUser]
+7-6-2019 | 12:59: 0ms. Retrieving user 4
+7-6-2019 | 12:59: 1ms. Found user 4
+7-6-2019 | 12:59: End.
+--------[END]--------
+
+7-6-2019 | 12:59: Generating random code...
+7-6-2019 | 12:59: Generated code is 94x943. Room state is now Waiting.
+7-6-2019 | 12:59: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[RetrieveConfig]
+7-6-2019 | 12:59: 0ms. Attempting to retrieve config
+7-6-2019 | 12:59: 3ms. Could not find a config.
+7-6-2019 | 12:59: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[RetrieveUser]
+7-6-2019 | 12:59: 0ms. Retrieving user 5
+7-6-2019 | 12:59: 1ms. Found user 5
+7-6-2019 | 12:59: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[RetrieveUser]
+7-6-2019 | 12:59: 0ms. Retrieving user 5
+7-6-2019 | 12:59: 1ms. Found user 5
+7-6-2019 | 12:59: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[RetrieveUser]
+7-6-2019 | 12:59: 0ms. Retrieving user 5
+7-6-2019 | 12:59: 1ms. Found user 5
+7-6-2019 | 12:59: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[Room - GamePreparation]
+7-6-2019 | 13:00: Room is being prepared for gameplay.
+7-6-2019 | 13:00: Room contains 3 players.
+7-6-2019 | 13:00: Room does not have enough players (3/3)
+7-6-2019 | 13:00: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[Room - GamePreparation]
+7-6-2019 | 13:00: Room is being prepared for gameplay.
+7-6-2019 | 13:00: Room contains 3 players.
+7-6-2019 | 13:00: Room does not have enough players (3/3)
+7-6-2019 | 13:00: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[Room - GamePreparation]
+7-6-2019 | 13:00: Room is being prepared for gameplay.
+7-6-2019 | 13:00: Room contains 3 players.
+7-6-2019 | 13:00: Room does not have enough players (3/3)
+7-6-2019 | 13:00: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[Room - GamePreparation]
+7-6-2019 | 13:00: Room is being prepared for gameplay.
+7-6-2019 | 13:00: Room contains 3 players.
+7-6-2019 | 13:00: Room does not have enough players (3/3)
+7-6-2019 | 13:00: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[CheckLogin]
+7-6-2019 | 13:00: 0ms. Checking login for JMuris
+7-6-2019 | 13:00: 26ms. Found JMuris
+7-6-2019 | 13:00: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[RetrieveUser]
+7-6-2019 | 13:00: 0ms. Retrieving user 4
+7-6-2019 | 13:00: 3ms. Found user 4
+7-6-2019 | 13:00: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[CheckLogin]
+7-6-2019 | 13:00: 0ms. Checking login for AAppel
+7-6-2019 | 13:00: 2ms. Found AAppel
+7-6-2019 | 13:00: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[RetrieveUser]
+7-6-2019 | 13:00: 0ms. Retrieving user 5
+7-6-2019 | 13:00: 1ms. Found user 5
+7-6-2019 | 13:00: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[RetrieveUser]
+7-6-2019 | 13:00: 0ms. Retrieving user 4
+7-6-2019 | 13:00: 1ms. Found user 4
+7-6-2019 | 13:00: End.
+--------[END]--------
+
+7-6-2019 | 13:00: Generating random code...
+7-6-2019 | 13:00: Generated code is 14B33n. Room state is now Waiting.
+7-6-2019 | 13:00: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[RetrieveConfig]
+7-6-2019 | 13:00: 0ms. Attempting to retrieve config
+7-6-2019 | 13:00: 2ms. Could not find a config.
+7-6-2019 | 13:00: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[RetrieveUser]
+7-6-2019 | 13:00: 0ms. Retrieving user 5
+7-6-2019 | 13:00: 1ms. Found user 5
+7-6-2019 | 13:00: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[RetrieveUser]
+7-6-2019 | 13:00: 0ms. Retrieving user 5
+7-6-2019 | 13:00: 1ms. Found user 5
+7-6-2019 | 13:00: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[Room - GamePreparation]
+7-6-2019 | 13:00: Room is being prepared for gameplay.
+7-6-2019 | 13:00: Room contains 2 players.
+7-6-2019 | 13:00: Room has enough players (2/1)
+7-6-2019 | 13:00: Shuffling user list...
+7-6-2019 | 13:00: Assigning players to groups...
+-----[LOG ENTRY]-----
+[RetrieveAllStories]
+7-6-2019 | 13:00: 0ms. Attempting to retrieve all stories.
+7-6-2019 | 13:00: 2ms. Got: 1 - Een root verhaal
+7-6-2019 | 13:00: 4ms. Got: 2 - Een verhaal
+7-6-2019 | 13:00: 5ms. Got: 3 - Nog een verhaal
+7-6-2019 | 13:00: 6ms. Found 3 stories.
+7-6-2019 | 13:00: End.
+--------[END]--------
+
+7-6-2019 | 13:00: Assigning stories to groups...
+7-6-2019 | 13:00: Creating score objects for the players...
+7-6-2019 | 13:00: Room is prepared.
+7-6-2019 | 13:00: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[CheckLogin]
+7-6-2019 | 13:04: 0ms. Checking login for JMuris
+7-6-2019 | 13:04: 5ms. Found JMuris
+7-6-2019 | 13:04: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[RetrieveUser]
+7-6-2019 | 13:04: 0ms. Retrieving user 4
+7-6-2019 | 13:04: 2ms. Found user 4
+7-6-2019 | 13:04: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[RetrieveUser]
+7-6-2019 | 13:04: 0ms. Retrieving user 4
+7-6-2019 | 13:04: 2ms. Found user 4
+7-6-2019 | 13:04: End.
+--------[END]--------
+
+7-6-2019 | 13:04: Generating random code...
+7-6-2019 | 13:04: Generated code is N5qsC3. Room state is now Waiting.
+7-6-2019 | 13:04: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[RetrieveConfig]
+7-6-2019 | 13:04: 0ms. Attempting to retrieve config
+7-6-2019 | 13:04: 2ms. Could not find a config.
+7-6-2019 | 13:04: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[RetrieveUser]
+7-6-2019 | 13:04: 0ms. Retrieving user 5
+7-6-2019 | 13:04: 1ms. Found user 5
+7-6-2019 | 13:04: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[RetrieveUser]
+7-6-2019 | 13:04: 0ms. Retrieving user 5
+7-6-2019 | 13:04: 2ms. Found user 5
+7-6-2019 | 13:04: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[Room - GamePreparation]
+7-6-2019 | 13:04: Room is being prepared for gameplay.
+7-6-2019 | 13:04: Room contains 2 players.
+7-6-2019 | 13:04: Room has enough players (2/1)
+7-6-2019 | 13:04: Shuffling user list...
+7-6-2019 | 13:04: Assigning players to groups...
+-----[LOG ENTRY]-----
+[RetrieveAllStories]
+7-6-2019 | 13:04: 0ms. Attempting to retrieve all stories.
+7-6-2019 | 13:04: 10ms. Got: 1 - Een root verhaal
+7-6-2019 | 13:04: 11ms. Got: 2 - Een verhaal
+7-6-2019 | 13:04: 13ms. Got: 3 - Nog een verhaal
+7-6-2019 | 13:04: 14ms. Found 3 stories.
+7-6-2019 | 13:04: End.
+--------[END]--------
+
+7-6-2019 | 13:04: Assigning stories to groups...
+7-6-2019 | 13:04: Creating score objects for the players...
+7-6-2019 | 13:04: Room is prepared.
+7-6-2019 | 13:04: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[CheckLogin]
+7-6-2019 | 13:05: 0ms. Checking login for AAppel
+7-6-2019 | 13:05: 6ms. Found AAppel
+7-6-2019 | 13:05: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[RetrieveUser]
+7-6-2019 | 13:05: 0ms. Retrieving user 5
+7-6-2019 | 13:05: 2ms. Found user 5
+7-6-2019 | 13:05: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[RetrieveUser]
+7-6-2019 | 13:05: 0ms. Retrieving user 4
+7-6-2019 | 13:05: 2ms. Found user 4
+7-6-2019 | 13:05: End.
+--------[END]--------
+
+7-6-2019 | 13:05: Generating random code...
+7-6-2019 | 13:05: Generated code is 88u48Q. Room state is now Waiting.
+7-6-2019 | 13:05: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[RetrieveConfig]
+7-6-2019 | 13:05: 0ms. Attempting to retrieve config
+7-6-2019 | 13:05: 2ms. Could not find a config.
+7-6-2019 | 13:05: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[RetrieveUser]
+7-6-2019 | 13:05: 0ms. Retrieving user 5
+7-6-2019 | 13:05: 1ms. Found user 5
+7-6-2019 | 13:05: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[RetrieveUser]
+7-6-2019 | 13:05: 0ms. Retrieving user 5
+7-6-2019 | 13:05: 2ms. Found user 5
+7-6-2019 | 13:05: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[Room - GamePreparation]
+7-6-2019 | 13:06: Room is being prepared for gameplay.
+7-6-2019 | 13:06: Room contains 2 players.
+7-6-2019 | 13:06: Room has enough players (2/1)
+7-6-2019 | 13:06: Shuffling user list...
+7-6-2019 | 13:06: Assigning players to groups...
+-----[LOG ENTRY]-----
+[RetrieveAllStories]
+7-6-2019 | 13:06: 0ms. Attempting to retrieve all stories.
+7-6-2019 | 13:06: 2ms. Got: 1 - Een root verhaal
+7-6-2019 | 13:06: 4ms. Got: 2 - Een verhaal
+7-6-2019 | 13:06: 5ms. Got: 3 - Nog een verhaal
+7-6-2019 | 13:06: 6ms. Found 3 stories.
+7-6-2019 | 13:06: End.
+--------[END]--------
+
+7-6-2019 | 13:06: Assigning stories to groups...
+7-6-2019 | 13:06: Creating score objects for the players...
+7-6-2019 | 13:06: Room is prepared.
+7-6-2019 | 13:06: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[CheckLogin]
+7-6-2019 | 13:06: 0ms. Checking login for JMuris
+7-6-2019 | 13:06: 4ms. Found JMuris
+7-6-2019 | 13:06: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[RetrieveUser]
+7-6-2019 | 13:06: 0ms. Retrieving user 4
+7-6-2019 | 13:06: 2ms. Found user 4
+7-6-2019 | 13:06: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[CheckLogin]
+7-6-2019 | 13:06: 0ms. Checking login for AAppel
+7-6-2019 | 13:06: 1ms. Found AAppel
+7-6-2019 | 13:06: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[RetrieveUser]
+7-6-2019 | 13:06: 0ms. Retrieving user 5
+7-6-2019 | 13:06: 1ms. Found user 5
+7-6-2019 | 13:06: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[RetrieveUser]
+7-6-2019 | 13:07: 0ms. Retrieving user 4
+7-6-2019 | 13:07: 1ms. Found user 4
+7-6-2019 | 13:07: End.
+--------[END]--------
+
+7-6-2019 | 13:07: Generating random code...
+7-6-2019 | 13:07: Generated code is c91D7Y. Room state is now Waiting.
+7-6-2019 | 13:07: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[RetrieveConfig]
+7-6-2019 | 13:07: 0ms. Attempting to retrieve config
+7-6-2019 | 13:07: 2ms. Could not find a config.
+7-6-2019 | 13:07: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[RetrieveUser]
+7-6-2019 | 13:07: 0ms. Retrieving user 5
+7-6-2019 | 13:07: 1ms. Found user 5
+7-6-2019 | 13:07: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[RetrieveUser]
+7-6-2019 | 13:07: 0ms. Retrieving user 5
+7-6-2019 | 13:07: 1ms. Found user 5
+7-6-2019 | 13:07: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[Room - GamePreparation]
+7-6-2019 | 13:07: Room is being prepared for gameplay.
+7-6-2019 | 13:07: Room contains 2 players.
+7-6-2019 | 13:07: Room has enough players (2/1)
+7-6-2019 | 13:07: Shuffling user list...
+7-6-2019 | 13:07: Assigning players to groups...
+-----[LOG ENTRY]-----
+[RetrieveAllStories]
+7-6-2019 | 13:07: 0ms. Attempting to retrieve all stories.
+7-6-2019 | 13:07: 2ms. Got: 1 - Een root verhaal
+7-6-2019 | 13:07: 3ms. Got: 2 - Een verhaal
+7-6-2019 | 13:07: 5ms. Got: 3 - Nog een verhaal
+7-6-2019 | 13:07: 6ms. Found 3 stories.
+7-6-2019 | 13:07: End.
+--------[END]--------
+
+7-6-2019 | 13:07: Assigning stories to groups...
+7-6-2019 | 13:07: Creating score objects for the players...
+7-6-2019 | 13:07: Room is prepared.
+7-6-2019 | 13:07: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[CheckLogin]
+7-6-2019 | 13:11: 0ms. Checking login for JMuris
+7-6-2019 | 13:11: 30ms. Found JMuris
+7-6-2019 | 13:11: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[RetrieveUser]
+7-6-2019 | 13:11: 0ms. Retrieving user 4
+7-6-2019 | 13:11: 3ms. Found user 4
+7-6-2019 | 13:11: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[CheckLogin]
+7-6-2019 | 13:11: 0ms. Checking login for AAppel
+7-6-2019 | 13:11: 2ms. Found AAppel
+7-6-2019 | 13:11: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[RetrieveUser]
+7-6-2019 | 13:11: 0ms. Retrieving user 5
+7-6-2019 | 13:11: 2ms. Found user 5
+7-6-2019 | 13:11: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[RetrieveUser]
+7-6-2019 | 13:11: 0ms. Retrieving user 4
+7-6-2019 | 13:11: 1ms. Found user 4
+7-6-2019 | 13:11: End.
+--------[END]--------
+
+7-6-2019 | 13:11: Generating random code...
+7-6-2019 | 13:11: Generated code is l97k06. Room state is now Waiting.
+7-6-2019 | 13:11: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[RetrieveConfig]
+7-6-2019 | 13:11: 0ms. Attempting to retrieve config
+7-6-2019 | 13:11: 2ms. Could not find a config.
+7-6-2019 | 13:11: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[RetrieveUser]
+7-6-2019 | 13:12: 0ms. Retrieving user 5
+7-6-2019 | 13:12: 1ms. Found user 5
+7-6-2019 | 13:12: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[RetrieveUser]
+7-6-2019 | 13:12: 0ms. Retrieving user 5
+7-6-2019 | 13:12: 1ms. Found user 5
+7-6-2019 | 13:12: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[Room - GamePreparation]
+7-6-2019 | 13:12: Room is being prepared for gameplay.
+7-6-2019 | 13:12: Room contains 2 players.
+7-6-2019 | 13:12: Room has enough players (2/1)
+7-6-2019 | 13:12: Shuffling user list...
+7-6-2019 | 13:12: Assigning players to groups...
+-----[LOG ENTRY]-----
+[RetrieveAllStories]
+7-6-2019 | 13:12: 0ms. Attempting to retrieve all stories.
+7-6-2019 | 13:12: 3ms. Got: 1 - Een root verhaal
+7-6-2019 | 13:12: 4ms. Got: 2 - Een verhaal
+7-6-2019 | 13:12: 6ms. Got: 3 - Nog een verhaal
+7-6-2019 | 13:12: 8ms. Found 3 stories.
+7-6-2019 | 13:12: End.
+--------[END]--------
+
+7-6-2019 | 13:12: Assigning stories to groups...
+7-6-2019 | 13:12: Creating score objects for the players...
+7-6-2019 | 13:12: Room is prepared.
+7-6-2019 | 13:12: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[CheckLogin]
+7-6-2019 | 13:13: 0ms. Checking login for JMuris
+7-6-2019 | 13:13: 7ms. Found JMuris
+7-6-2019 | 13:13: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[RetrieveUser]
+7-6-2019 | 13:13: 0ms. Retrieving user 4
+7-6-2019 | 13:13: 2ms. Found user 4
+7-6-2019 | 13:13: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[RetrieveUser]
+7-6-2019 | 13:13: 0ms. Retrieving user 4
+7-6-2019 | 13:13: 2ms. Found user 4
+7-6-2019 | 13:13: End.
+--------[END]--------
+
+7-6-2019 | 13:13: Generating random code...
+7-6-2019 | 13:13: Generated code is 5qab3R. Room state is now Waiting.
+7-6-2019 | 13:13: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[RetrieveConfig]
+7-6-2019 | 13:13: 0ms. Attempting to retrieve config
+7-6-2019 | 13:13: 2ms. Could not find a config.
+7-6-2019 | 13:13: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[RetrieveUser]
+7-6-2019 | 13:13: 0ms. Retrieving user 5
+7-6-2019 | 13:13: 1ms. Found user 5
+7-6-2019 | 13:13: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[RetrieveUser]
+7-6-2019 | 13:13: 0ms. Retrieving user 5
+7-6-2019 | 13:13: 1ms. Found user 5
+7-6-2019 | 13:13: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[Room - GamePreparation]
+7-6-2019 | 13:13: Room is being prepared for gameplay.
+7-6-2019 | 13:13: Room contains 2 players.
+7-6-2019 | 13:13: Room has enough players (2/1)
+7-6-2019 | 13:13: Shuffling user list...
+7-6-2019 | 13:13: Assigning players to groups...
+-----[LOG ENTRY]-----
+[RetrieveAllStories]
+7-6-2019 | 13:13: 0ms. Attempting to retrieve all stories.
+7-6-2019 | 13:13: 2ms. Got: 1 - Een root verhaal
+7-6-2019 | 13:13: 3ms. Got: 2 - Een verhaal
+7-6-2019 | 13:13: 5ms. Got: 3 - Nog een verhaal
+7-6-2019 | 13:13: 6ms. Found 3 stories.
+7-6-2019 | 13:13: End.
+--------[END]--------
+
+7-6-2019 | 13:13: Assigning stories to groups...
+7-6-2019 | 13:13: Creating score objects for the players...
+7-6-2019 | 13:13: Room is prepared.
+7-6-2019 | 13:13: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[CheckLogin]
+7-6-2019 | 13:32: 0ms. Checking login for JMuris
+7-6-2019 | 13:32: 29ms. Found JMuris
+7-6-2019 | 13:32: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[RetrieveUser]
+7-6-2019 | 13:32: 0ms. Retrieving user 4
+7-6-2019 | 13:32: 3ms. Found user 4
+7-6-2019 | 13:32: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[CheckLogin]
+7-6-2019 | 13:32: 0ms. Checking login for AAppel
+7-6-2019 | 13:32: 2ms. Found AAppel
+7-6-2019 | 13:32: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[RetrieveUser]
+7-6-2019 | 13:32: 0ms. Retrieving user 5
+7-6-2019 | 13:32: 2ms. Found user 5
+7-6-2019 | 13:32: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[CheckLogin]
+7-6-2019 | 13:32: 0ms. Checking login for JMuris
+7-6-2019 | 13:32: 1ms. Found JMuris
+7-6-2019 | 13:32: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[RetrieveUser]
+7-6-2019 | 13:32: 0ms. Retrieving user 4
+7-6-2019 | 13:32: 1ms. Found user 4
+7-6-2019 | 13:32: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[RetrieveUser]
+7-6-2019 | 13:33: 0ms. Retrieving user 4
+7-6-2019 | 13:33: 2ms. Found user 4
+7-6-2019 | 13:33: End.
+--------[END]--------
+
+7-6-2019 | 13:33: Generating random code...
+7-6-2019 | 13:33: Generated code is 3F55MU. Room state is now Waiting.
+7-6-2019 | 13:33: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[RetrieveConfig]
+7-6-2019 | 13:33: 0ms. Attempting to retrieve config
+7-6-2019 | 13:33: 2ms. Could not find a config.
+7-6-2019 | 13:33: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[RetrieveUser]
+7-6-2019 | 13:33: 0ms. Retrieving user 5
+7-6-2019 | 13:33: 1ms. Found user 5
+7-6-2019 | 13:33: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[RetrieveUser]
+7-6-2019 | 13:33: 0ms. Retrieving user 5
+7-6-2019 | 13:33: 2ms. Found user 5
+7-6-2019 | 13:33: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[Room - GamePreparation]
+7-6-2019 | 13:33: Room is being prepared for gameplay.
+7-6-2019 | 13:33: Room contains 2 players.
+7-6-2019 | 13:33: Room has enough players (2/1)
+7-6-2019 | 13:33: Shuffling user list...
+7-6-2019 | 13:33: Assigning players to groups...
+-----[LOG ENTRY]-----
+[RetrieveAllStories]
+7-6-2019 | 13:33: 0ms. Attempting to retrieve all stories.
+7-6-2019 | 13:33: 2ms. Got: 1 - Een root verhaal
+7-6-2019 | 13:33: 4ms. Got: 2 - Een verhaal
+7-6-2019 | 13:33: 6ms. Got: 3 - Nog een verhaal
+7-6-2019 | 13:33: 7ms. Found 3 stories.
+7-6-2019 | 13:33: End.
+--------[END]--------
+
+7-6-2019 | 13:33: Assigning stories to groups...
+7-6-2019 | 13:33: Creating score objects for the players...
+7-6-2019 | 13:33: Room is prepared.
+7-6-2019 | 13:33: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[CreateStory]
+7-6-2019 | 13:33: 0ms. Trying to create story for user 5
+7-6-2019 | 13:33: 1ms. Values are: - Owner Id: 5;
+- Root: False;
+- Title: Verhaalke;
+- Description: 123456789;
+- Status: 2;
+- Source: 0;
+- Date: 7-6-2019 13:33:18
+7-6-2019 | 13:33: 7ms. Story for 5 successfully added.
+7-6-2019 | 13:33: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[CreateStory]
+7-6-2019 | 13:33: 0ms. Trying to create story for user 5
+7-6-2019 | 13:33: 1ms. Values are: - Owner Id: 5;
+- Root: False;
+- Title: Ook een verhaalke;
+- Description: 987654321;
+- Status: 2;
+- Source: 0;
+- Date: 7-6-2019 13:33:27
+7-6-2019 | 13:33: 4ms. Story for 5 successfully added.
+7-6-2019 | 13:33: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[CheckLogin]
+7-6-2019 | 13:35: 0ms. Checking login for JMuris
+7-6-2019 | 13:35: 27ms. Found JMuris
+7-6-2019 | 13:35: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[RetrieveUser]
+7-6-2019 | 13:35: 0ms. Retrieving user 4
+7-6-2019 | 13:35: 4ms. Found user 4
+7-6-2019 | 13:35: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[CheckLogin]
+7-6-2019 | 13:35: 0ms. Checking login for AAppel
+7-6-2019 | 13:35: 1ms. Found AAppel
+7-6-2019 | 13:35: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[RetrieveUser]
+7-6-2019 | 13:35: 0ms. Retrieving user 5
+7-6-2019 | 13:35: 2ms. Found user 5
+7-6-2019 | 13:35: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[RetrieveUser]
+7-6-2019 | 13:35: 0ms. Retrieving user 4
+7-6-2019 | 13:35: 2ms. Found user 4
+7-6-2019 | 13:35: End.
+--------[END]--------
+
+7-6-2019 | 13:35: Generating random code...
+7-6-2019 | 13:35: Generated code is J38Jx5. Room state is now Waiting.
+7-6-2019 | 13:35: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[RetrieveConfig]
+7-6-2019 | 13:35: 0ms. Attempting to retrieve config
+7-6-2019 | 13:35: 2ms. Could not find a config.
+7-6-2019 | 13:35: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[RetrieveUser]
+7-6-2019 | 13:35: 0ms. Retrieving user 5
+7-6-2019 | 13:35: 1ms. Found user 5
+7-6-2019 | 13:35: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[RetrieveUser]
+7-6-2019 | 13:35: 0ms. Retrieving user 5
+7-6-2019 | 13:35: 1ms. Found user 5
+7-6-2019 | 13:35: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[Room - GamePreparation]
+7-6-2019 | 13:35: Room is being prepared for gameplay.
+7-6-2019 | 13:35: Room contains 2 players.
+7-6-2019 | 13:35: Room has enough players (2/1)
+7-6-2019 | 13:35: Shuffling user list...
+7-6-2019 | 13:35: Assigning players to groups...
+-----[LOG ENTRY]-----
+[RetrieveAllStories]
+7-6-2019 | 13:35: 0ms. Attempting to retrieve all stories.
+7-6-2019 | 13:35: 2ms. Got: 1 - Een root verhaal
+7-6-2019 | 13:35: 4ms. Got: 2 - Een verhaal
+7-6-2019 | 13:35: 5ms. Got: 3 - Nog een verhaal
+7-6-2019 | 13:35: 6ms. Got: 4 - Verhaalke
+7-6-2019 | 13:35: 8ms. Got: 5 - Ook een verhaalke
+7-6-2019 | 13:35: 9ms. Found 5 stories.
+7-6-2019 | 13:35: End.
+--------[END]--------
+
+7-6-2019 | 13:35: Assigning stories to groups...
+7-6-2019 | 13:35: Creating score objects for the players...
+7-6-2019 | 13:35: Room is prepared.
+7-6-2019 | 13:35: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[RetrieveUser]
+7-6-2019 | 13:35: 0ms. Retrieving user 4
+7-6-2019 | 13:35: 1ms. Found user 4
+7-6-2019 | 13:35: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[CheckLogin]
+7-6-2019 | 13:36: 0ms. Checking login for JMuris
+7-6-2019 | 13:36: 31ms. Found JMuris
+7-6-2019 | 13:36: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[RetrieveUser]
+7-6-2019 | 13:36: 0ms. Retrieving user 4
+7-6-2019 | 13:36: 3ms. Found user 4
+7-6-2019 | 13:36: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[CheckLogin]
+7-6-2019 | 13:36: 0ms. Checking login for AAppel
+7-6-2019 | 13:36: 1ms. Found AAppel
+7-6-2019 | 13:36: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[RetrieveUser]
+7-6-2019 | 13:36: 0ms. Retrieving user 5
+7-6-2019 | 13:36: 1ms. Found user 5
+7-6-2019 | 13:36: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[RetrieveUser]
+7-6-2019 | 13:36: 0ms. Retrieving user 4
+7-6-2019 | 13:36: 1ms. Found user 4
+7-6-2019 | 13:36: End.
+--------[END]--------
+
+7-6-2019 | 13:36: Generating random code...
+7-6-2019 | 13:36: Generated code is 01192G. Room state is now Waiting.
+7-6-2019 | 13:36: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[RetrieveConfig]
+7-6-2019 | 13:36: 0ms. Attempting to retrieve config
+7-6-2019 | 13:36: 2ms. Could not find a config.
+7-6-2019 | 13:36: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[RetrieveUser]
+7-6-2019 | 13:36: 0ms. Retrieving user 5
+7-6-2019 | 13:36: 1ms. Found user 5
+7-6-2019 | 13:36: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[RetrieveUser]
+7-6-2019 | 13:36: 0ms. Retrieving user 5
+7-6-2019 | 13:36: 1ms. Found user 5
+7-6-2019 | 13:36: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[Room - GamePreparation]
+7-6-2019 | 13:37: Room is being prepared for gameplay.
+7-6-2019 | 13:37: Room contains 2 players.
+7-6-2019 | 13:37: Room has enough players (2/1)
+7-6-2019 | 13:37: Shuffling user list...
+7-6-2019 | 13:37: Assigning players to groups...
+-----[LOG ENTRY]-----
+[RetrieveAllStories]
+7-6-2019 | 13:37: 0ms. Attempting to retrieve all stories.
+7-6-2019 | 13:37: 3ms. Got: 1 - Een root verhaal
+7-6-2019 | 13:37: 4ms. Got: 2 - Een verhaal
+7-6-2019 | 13:37: 6ms. Got: 3 - Nog een verhaal
+7-6-2019 | 13:37: 7ms. Got: 4 - Verhaalke
+7-6-2019 | 13:37: 9ms. Got: 5 - Ook een verhaalke
+7-6-2019 | 13:37: 10ms. Found 5 stories.
+7-6-2019 | 13:37: End.
+--------[END]--------
+
+7-6-2019 | 13:37: Assigning stories to groups...
+7-6-2019 | 13:37: Creating score objects for the players...
+7-6-2019 | 13:37: Room is prepared.
+7-6-2019 | 13:37: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[RetrieveUser]
+7-6-2019 | 13:37: 0ms. Retrieving user 4
+7-6-2019 | 13:37: 1ms. Found user 4
+7-6-2019 | 13:37: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[CheckLogin]
+7-6-2019 | 13:38: 0ms. Checking login for JMuris
+7-6-2019 | 13:38: 27ms. Found JMuris
+7-6-2019 | 13:38: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[RetrieveUser]
+7-6-2019 | 13:38: 0ms. Retrieving user 4
+7-6-2019 | 13:38: 3ms. Found user 4
+7-6-2019 | 13:38: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[CheckLogin]
+7-6-2019 | 13:38: 0ms. Checking login for AAppel
+7-6-2019 | 13:38: 2ms. Found AAppel
+7-6-2019 | 13:38: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[RetrieveUser]
+7-6-2019 | 13:38: 0ms. Retrieving user 5
+7-6-2019 | 13:38: 1ms. Found user 5
+7-6-2019 | 13:38: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[RetrieveUser]
+7-6-2019 | 13:38: 0ms. Retrieving user 4
+7-6-2019 | 13:38: 2ms. Found user 4
+7-6-2019 | 13:38: End.
+--------[END]--------
+
+7-6-2019 | 13:38: Generating random code...
+7-6-2019 | 13:38: Generated code is RC7CPE. Room state is now Waiting.
+7-6-2019 | 13:38: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[RetrieveConfig]
+7-6-2019 | 13:38: 0ms. Attempting to retrieve config
+7-6-2019 | 13:38: 2ms. Could not find a config.
+7-6-2019 | 13:38: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[RetrieveUser]
+7-6-2019 | 13:38: 0ms. Retrieving user 5
+7-6-2019 | 13:38: 1ms. Found user 5
+7-6-2019 | 13:38: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[RetrieveUser]
+7-6-2019 | 13:38: 0ms. Retrieving user 5
+7-6-2019 | 13:38: 1ms. Found user 5
+7-6-2019 | 13:38: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[Room - GamePreparation]
+7-6-2019 | 13:38: Room is being prepared for gameplay.
+7-6-2019 | 13:38: Room contains 2 players.
+7-6-2019 | 13:38: Room has enough players (2/1)
+7-6-2019 | 13:38: Shuffling user list...
+7-6-2019 | 13:38: Assigning players to groups...
+-----[LOG ENTRY]-----
+[RetrieveAllStories]
+7-6-2019 | 13:38: 0ms. Attempting to retrieve all stories.
+7-6-2019 | 13:38: 2ms. Got: 1 - Een root verhaal
+7-6-2019 | 13:38: 4ms. Got: 2 - Een verhaal
+7-6-2019 | 13:38: 6ms. Got: 3 - Nog een verhaal
+7-6-2019 | 13:38: 7ms. Got: 4 - Verhaalke
+7-6-2019 | 13:38: 8ms. Got: 5 - Ook een verhaalke
+7-6-2019 | 13:38: 10ms. Found 5 stories.
+7-6-2019 | 13:38: End.
+--------[END]--------
+
+7-6-2019 | 13:38: Assigning stories to groups...
+7-6-2019 | 13:38: Creating score objects for the players...
+7-6-2019 | 13:38: Room is prepared.
+7-6-2019 | 13:38: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[RetrieveUser]
+7-6-2019 | 13:38: 0ms. Retrieving user 4
+7-6-2019 | 13:38: 1ms. Found user 4
+7-6-2019 | 13:38: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[CheckLogin]
+7-6-2019 | 13:46: 0ms. Checking login for JMuris
+7-6-2019 | 13:46: 7ms. Found JMuris
+7-6-2019 | 13:46: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[RetrieveUser]
+7-6-2019 | 13:46: 0ms. Retrieving user 4
+7-6-2019 | 13:46: 2ms. Found user 4
+7-6-2019 | 13:46: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[CheckLogin]
+7-6-2019 | 13:46: 0ms. Checking login for AAppel
+7-6-2019 | 13:46: 1ms. Found AAppel
+7-6-2019 | 13:46: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[RetrieveUser]
+7-6-2019 | 13:46: 0ms. Retrieving user 5
+7-6-2019 | 13:46: 1ms. Found user 5
+7-6-2019 | 13:46: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[RetrieveUser]
+7-6-2019 | 13:46: 0ms. Retrieving user 4
+7-6-2019 | 13:46: 2ms. Found user 4
+7-6-2019 | 13:46: End.
+--------[END]--------
+
+7-6-2019 | 13:46: Generating random code...
+7-6-2019 | 13:46: Generated code is upBX7m. Room state is now Waiting.
+7-6-2019 | 13:46: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[RetrieveConfig]
+7-6-2019 | 13:46: 0ms. Attempting to retrieve config
+7-6-2019 | 13:46: 2ms. Could not find a config.
+7-6-2019 | 13:46: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[RetrieveUser]
+7-6-2019 | 13:46: 0ms. Retrieving user 5
+7-6-2019 | 13:46: 2ms. Found user 5
+7-6-2019 | 13:46: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[RetrieveUser]
+7-6-2019 | 13:46: 0ms. Retrieving user 5
+7-6-2019 | 13:46: 2ms. Found user 5
+7-6-2019 | 13:46: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[Room - GamePreparation]
+7-6-2019 | 13:46: Room is being prepared for gameplay.
+7-6-2019 | 13:46: Room contains 2 players.
+7-6-2019 | 13:46: Room has enough players (2/1)
+7-6-2019 | 13:46: Shuffling user list...
+7-6-2019 | 13:46: Assigning players to groups...
+-----[LOG ENTRY]-----
+[RetrieveAllStories]
+7-6-2019 | 13:46: 0ms. Attempting to retrieve all stories.
+7-6-2019 | 13:46: 2ms. Got: 1 - Een root verhaal
+7-6-2019 | 13:46: 3ms. Got: 2 - Een verhaal
+7-6-2019 | 13:46: 5ms. Got: 3 - Nog een verhaal
+7-6-2019 | 13:46: 6ms. Got: 4 - Verhaalke
+7-6-2019 | 13:46: 8ms. Got: 5 - Ook een verhaalke
+7-6-2019 | 13:46: 9ms. Found 5 stories.
+7-6-2019 | 13:46: End.
+--------[END]--------
+
+7-6-2019 | 13:46: Assigning stories to groups...
+7-6-2019 | 13:46: Creating score objects for the players...
+7-6-2019 | 13:46: Room is prepared.
+7-6-2019 | 13:46: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[RetrieveUser]
+7-6-2019 | 13:46: 0ms. Retrieving user 4
+7-6-2019 | 13:46: 1ms. Found user 4
+7-6-2019 | 13:46: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[CheckLogin]
+7-6-2019 | 13:47: 0ms. Checking login for JMuris
+7-6-2019 | 13:47: 5ms. Found JMuris
+7-6-2019 | 13:47: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[RetrieveUser]
+7-6-2019 | 13:47: 0ms. Retrieving user 4
+7-6-2019 | 13:47: 2ms. Found user 4
+7-6-2019 | 13:47: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[RetrieveUser]
+7-6-2019 | 13:47: 0ms. Retrieving user 4
+7-6-2019 | 13:47: 3ms. Found user 4
+7-6-2019 | 13:47: End.
+--------[END]--------
+
+7-6-2019 | 13:47: Generating random code...
+7-6-2019 | 13:47: Generated code is TbjuMd. Room state is now Waiting.
+7-6-2019 | 13:47: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[RetrieveConfig]
+7-6-2019 | 13:47: 0ms. Attempting to retrieve config
+7-6-2019 | 13:47: 2ms. Could not find a config.
+7-6-2019 | 13:47: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[RetrieveUser]
+7-6-2019 | 13:47: 0ms. Retrieving user 5
+7-6-2019 | 13:47: 1ms. Found user 5
+7-6-2019 | 13:47: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[RetrieveUser]
+7-6-2019 | 13:47: 0ms. Retrieving user 5
+7-6-2019 | 13:47: 1ms. Found user 5
+7-6-2019 | 13:47: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[Room - GamePreparation]
+7-6-2019 | 13:47: Room is being prepared for gameplay.
+7-6-2019 | 13:47: Room contains 2 players.
+7-6-2019 | 13:47: Room has enough players (2/1)
+7-6-2019 | 13:47: Shuffling user list...
+7-6-2019 | 13:47: Assigning players to groups...
+-----[LOG ENTRY]-----
+[RetrieveAllStories]
+7-6-2019 | 13:47: 0ms. Attempting to retrieve all stories.
+7-6-2019 | 13:47: 2ms. Got: 1 - Een root verhaal
+7-6-2019 | 13:47: 3ms. Got: 2 - Een verhaal
+7-6-2019 | 13:47: 5ms. Got: 3 - Nog een verhaal
+7-6-2019 | 13:47: 6ms. Got: 4 - Verhaalke
+7-6-2019 | 13:47: 7ms. Got: 5 - Ook een verhaalke
+7-6-2019 | 13:47: 8ms. Found 5 stories.
+7-6-2019 | 13:47: End.
+--------[END]--------
+
+7-6-2019 | 13:47: Assigning stories to groups...
+7-6-2019 | 13:47: Creating score objects for the players...
+7-6-2019 | 13:47: Room is prepared.
+7-6-2019 | 13:47: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[RetrieveUser]
+7-6-2019 | 13:47: 0ms. Retrieving user 4
+7-6-2019 | 13:47: 2ms. Found user 4
+7-6-2019 | 13:47: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[CreateStory]
+7-6-2019 | 13:48: 0ms. Trying to create story for user 5
+7-6-2019 | 13:48: 1ms. Values are: - Owner Id: 5;
+- Root: False;
+- Title: V2;
+- Description: 123456;
+- Status: 2;
+- Source: 5;
+- Date: 7-6-2019 13:48:09
+7-6-2019 | 13:48: 5ms. Story for 5 successfully added.
+7-6-2019 | 13:48: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[CreateStory]
+7-6-2019 | 13:48: 0ms. Trying to create story for user 5
+7-6-2019 | 13:48: 1ms. Values are: - Owner Id: 5;
+- Root: False;
+- Title: V1;
+- Description: 123;
+- Status: 2;
+- Source: 4;
+- Date: 7-6-2019 13:48:10
+7-6-2019 | 13:48: 5ms. Story for 5 successfully added.
+7-6-2019 | 13:48: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[CheckLogin]
+7-6-2019 | 13:49: 0ms. Checking login for JMuris
+7-6-2019 | 13:49: 30ms. Found JMuris
+7-6-2019 | 13:49: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[RetrieveUser]
+7-6-2019 | 13:49: 0ms. Retrieving user 4
+7-6-2019 | 13:49: 3ms. Found user 4
+7-6-2019 | 13:49: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[CheckLogin]
+7-6-2019 | 13:49: 0ms. Checking login for AAppel
+7-6-2019 | 13:49: 2ms. Found AAppel
+7-6-2019 | 13:49: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[RetrieveUser]
+7-6-2019 | 13:49: 0ms. Retrieving user 5
+7-6-2019 | 13:49: 2ms. Found user 5
+7-6-2019 | 13:49: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[RetrieveUser]
+7-6-2019 | 13:49: 0ms. Retrieving user 4
+7-6-2019 | 13:49: 2ms. Found user 4
+7-6-2019 | 13:49: End.
+--------[END]--------
+
+7-6-2019 | 13:49: Generating random code...
+7-6-2019 | 13:49: Generated code is Jg9725. Room state is now Waiting.
+7-6-2019 | 13:49: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[RetrieveConfig]
+7-6-2019 | 13:49: 0ms. Attempting to retrieve config
+7-6-2019 | 13:49: 3ms. Could not find a config.
+7-6-2019 | 13:49: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[RetrieveUser]
+7-6-2019 | 13:49: 0ms. Retrieving user 5
+7-6-2019 | 13:49: 1ms. Found user 5
+7-6-2019 | 13:49: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[RetrieveUser]
+7-6-2019 | 13:49: 0ms. Retrieving user 5
+7-6-2019 | 13:49: 1ms. Found user 5
+7-6-2019 | 13:49: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[Room - GamePreparation]
+7-6-2019 | 13:49: Room is being prepared for gameplay.
+7-6-2019 | 13:49: Room contains 2 players.
+7-6-2019 | 13:49: Room has enough players (2/1)
+7-6-2019 | 13:49: Shuffling user list...
+7-6-2019 | 13:49: Assigning players to groups...
+-----[LOG ENTRY]-----
+[RetrieveAllStories]
+7-6-2019 | 13:49: 0ms. Attempting to retrieve all stories.
+7-6-2019 | 13:49: 3ms. Got: 1 - Een root verhaal
+7-6-2019 | 13:49: 5ms. Got: 2 - Een verhaal
+7-6-2019 | 13:49: 6ms. Got: 3 - Nog een verhaal
+7-6-2019 | 13:49: 8ms. Got: 4 - Verhaalke
+7-6-2019 | 13:49: 9ms. Got: 5 - Ook een verhaalke
+7-6-2019 | 13:49: 11ms. Got: 6 - V2
+7-6-2019 | 13:49: 12ms. Got: 7 - V1
+7-6-2019 | 13:49: 13ms. Found 7 stories.
+7-6-2019 | 13:49: End.
+--------[END]--------
+
+7-6-2019 | 13:49: Assigning stories to groups...
+7-6-2019 | 13:49: Creating score objects for the players...
+7-6-2019 | 13:49: Room is prepared.
+7-6-2019 | 13:49: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[RetrieveUser]
+7-6-2019 | 13:50: 0ms. Retrieving user 4
+7-6-2019 | 13:50: 2ms. Found user 4
+7-6-2019 | 13:50: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[CreateStory]
+7-6-2019 | 13:50: 0ms. Trying to create story for user 5
+7-6-2019 | 13:50: 1ms. Values are: - Owner Id: 5;
+- Root: False;
+- Title: V2;
+- Description: 321321321;
+- Status: 2;
+- Source: 2;
+- Date: 7-6-2019 13:50:06
+7-6-2019 | 13:50: 5ms. Story for 5 successfully added.
+7-6-2019 | 13:50: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[CreateStory]
+7-6-2019 | 13:50: 0ms. Trying to create story for user 5
+7-6-2019 | 13:50: 1ms. Values are: - Owner Id: 5;
+- Root: False;
+- Title: V3;
+- Description: 6543634643;
+- Status: 2;
+- Source: 3;
+- Date: 7-6-2019 13:50:09
+7-6-2019 | 13:50: 4ms. Story for 5 successfully added.
+7-6-2019 | 13:50: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[RetrieveUser]
+7-6-2019 | 13:50: 0ms. Retrieving user 4
+7-6-2019 | 13:50: 2ms. Found user 4
+7-6-2019 | 13:50: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[RetrieveUser]
+7-6-2019 | 13:50: 0ms. Retrieving user 4
+7-6-2019 | 13:50: 2ms. Found user 4
+7-6-2019 | 13:50: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[CheckLogin]
+7-6-2019 | 13:52: 0ms. Checking login for JMuris
+7-6-2019 | 13:52: 30ms. Found JMuris
+7-6-2019 | 13:52: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[RetrieveUser]
+7-6-2019 | 13:52: 0ms. Retrieving user 4
+7-6-2019 | 13:52: 3ms. Found user 4
+7-6-2019 | 13:52: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[CheckLogin]
+7-6-2019 | 13:52: 0ms. Checking login for AAppel
+7-6-2019 | 13:52: 5ms. Found AAppel
+7-6-2019 | 13:52: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[RetrieveUser]
+7-6-2019 | 13:52: 0ms. Retrieving user 5
+7-6-2019 | 13:52: 2ms. Found user 5
+7-6-2019 | 13:52: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[RetrieveUser]
+7-6-2019 | 13:52: 0ms. Retrieving user 4
+7-6-2019 | 13:52: 2ms. Found user 4
+7-6-2019 | 13:52: End.
+--------[END]--------
+
+7-6-2019 | 13:52: Generating random code...
+7-6-2019 | 13:52: Generated code is Au39Q7. Room state is now Waiting.
+7-6-2019 | 13:52: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[RetrieveConfig]
+7-6-2019 | 13:52: 0ms. Attempting to retrieve config
+7-6-2019 | 13:52: 2ms. Could not find a config.
+7-6-2019 | 13:52: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[RetrieveUser]
+7-6-2019 | 13:52: 0ms. Retrieving user 5
+7-6-2019 | 13:52: 3ms. Found user 5
+7-6-2019 | 13:52: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[RetrieveUser]
+7-6-2019 | 13:52: 0ms. Retrieving user 5
+7-6-2019 | 13:52: 1ms. Found user 5
+7-6-2019 | 13:52: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[Room - GamePreparation]
+7-6-2019 | 13:53: Room is being prepared for gameplay.
+7-6-2019 | 13:53: Room contains 2 players.
+7-6-2019 | 13:53: Room has enough players (2/1)
+7-6-2019 | 13:53: Shuffling user list...
+7-6-2019 | 13:53: Assigning players to groups...
+-----[LOG ENTRY]-----
+[RetrieveAllStories]
+7-6-2019 | 13:53: 0ms. Attempting to retrieve all stories.
+7-6-2019 | 13:53: 2ms. Got: 1 - Een root verhaal
+7-6-2019 | 13:53: 4ms. Got: 2 - Een verhaal
+7-6-2019 | 13:53: 6ms. Got: 3 - Nog een verhaal
+7-6-2019 | 13:53: 7ms. Got: 4 - Verhaalke
+7-6-2019 | 13:53: 8ms. Got: 5 - Ook een verhaalke
+7-6-2019 | 13:53: 10ms. Got: 6 - V2
+7-6-2019 | 13:53: 11ms. Got: 7 - V1
+7-6-2019 | 13:53: 12ms. Got: 8 - V2
+7-6-2019 | 13:53: 13ms. Got: 9 - V3
+7-6-2019 | 13:53: 15ms. Found 9 stories.
+7-6-2019 | 13:53: End.
+--------[END]--------
+
+7-6-2019 | 13:53: Assigning stories to groups...
+7-6-2019 | 13:53: Creating score objects for the players...
+7-6-2019 | 13:53: Room is prepared.
+7-6-2019 | 13:53: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[RetrieveUser]
+7-6-2019 | 13:53: 0ms. Retrieving user 4
+7-6-2019 | 13:53: 2ms. Found user 4
+7-6-2019 | 13:53: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[CreateStory]
+7-6-2019 | 13:53: 0ms. Trying to create story for user 5
+7-6-2019 | 13:53: 1ms. Values are: - Owner Id: 5;
+- Root: False;
+- Title: ABC;
+- Description: ABC;
+- Status: 2;
+- Source: 9;
+- Date: 7-6-2019 13:53:09
+7-6-2019 | 13:53: 5ms. Story for 5 successfully added.
+7-6-2019 | 13:53: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[CreateStory]
+7-6-2019 | 13:53: 0ms. Trying to create story for user 5
+7-6-2019 | 13:53: 1ms. Values are: - Owner Id: 5;
+- Root: False;
+- Title: DEF;
+- Description: DEF;
+- Status: 2;
+- Source: 5;
+- Date: 7-6-2019 13:53:13
+7-6-2019 | 13:53: 3ms. Story for 5 successfully added.
+7-6-2019 | 13:53: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[RetrieveUser]
+7-6-2019 | 13:53: 0ms. Retrieving user 4
+7-6-2019 | 13:53: 2ms. Found user 4
+7-6-2019 | 13:53: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[RetrieveUser]
+7-6-2019 | 13:53: 0ms. Retrieving user 4
+7-6-2019 | 13:53: 2ms. Found user 4
+7-6-2019 | 13:53: End.
+--------[END]--------
+

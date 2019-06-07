@@ -12,13 +12,16 @@ $(document).ready(function () {
     var username = $('#usernameHolder').val().trim();
     var currentRoomCode = $('#roomCodeHolder').val().trim();
     var roleId = $('#roleIdHolder').val().trim();
-    var storySource = $('#storySourceHolder').val().trim();
-    var myGroup = 0;
-    var inRoom = false;
+    var storySource = 0;
     var tutorialPage = 1;
     var tickInterval = 0;
     var timer = 0;
     var currentTimer;
+    var inRoom = false;
+
+    var myGroup = 0;
+    var myCash = 0.00;
+    var myFollowers = 0;
     // #endregion
 
     // #region WebSockets
@@ -105,6 +108,15 @@ $(document).ready(function () {
         }
     }
 
+    // -- Response to RetrieveRootStory
+    connection.clientMethods['retrieveRootStory'] = (roomCode, socketId, rootStory) => {
+        if (currentRoomCode == roomCode) {
+            if (mySocketId == socketId) {
+                RetrieveRootStory(rootStory);
+            }
+        }
+    }
+
     // -- Response to ReadPhase
     connection.clientMethods['readPhase'] = (roomCode, socketId, gameGroup, currentGroup) => {
         if (currentRoomCode == roomCode) {
@@ -114,12 +126,14 @@ $(document).ready(function () {
         }
     }
 
+    // -- Response to StartTimer
     connection.clientMethods['startTimer'] = (roomCode, time) => {
         if (currentRoomCode == roomCode) {
             StartTimer(time);
         }
     }
 
+    // -- Response to StopTimer
     connection.clientMethods['stopTimer'] = (roomCode) => {
         if (currentRoomCode == roomCode) {
             StopTimer();
@@ -129,10 +143,11 @@ $(document).ready(function () {
 
     // #region Client Methods
     function HideNavigationBars() {
-        $('#html').css('background-color', '#6ac2c4');
-        $('#body').css('background-color', '#6ac2c4');
+        $('#html').css('background-color', '#7b6ea4');
+        $('#body').css('background-color', '#7b6ea4');
         $('#topBar').css('display', 'none');
         $('#sideBar').css('display', 'none');
+        $('#persistentHeader').css('display', 'block');
     }
 
     function ShowNavigationBars() {
@@ -140,6 +155,7 @@ $(document).ready(function () {
         $('#body').css('background-color', '#f5b91a');
         $('#topBar').css('display', 'block');
         $('#sideBar').css('display', 'block');
+        $('#persistentHeader').css('display', 'none');
     }
 
     function HideAll() {
@@ -153,7 +169,12 @@ $(document).ready(function () {
         $('#game-read').css('display', 'none');
         $('#game-waiting').css('display', 'none');
         $('#game-write').css('display', 'none');
+        $('#write-busy').css('display', 'none');
+        $('#write-finished').css('display', 'none');
         $('#game-read').css('display', 'none');
+        $('#read-busy').css('display', 'none');
+        $('#read-finished').css('display', 'none');
+        $('#read-notallowed').css('display', 'none');
         $('#game-leaderboard').css('display', 'none');
     }
 
@@ -197,7 +218,6 @@ $(document).ready(function () {
 
         $('#game-prep').css('display', 'block');
         $('#statusMessage').css('display', 'block');
-        $('#personalScore').css('display', 'none');
     }
 
     function RetrievePlayerList(ownerSocketId, playerList) {
@@ -231,7 +251,6 @@ $(document).ready(function () {
         HideAll();
 
         $('#game-tutorial-1').css('display', 'block');
-        $('#personalScore').css('display', 'block');
     }
 
     function NextTutorial() {
@@ -266,7 +285,7 @@ $(document).ready(function () {
 
     function SkipTutorial() {
         tutorialPage = 3;
-        nextTutorial();
+        NextTutorial();
 
         if (roleId == 1) {
             connection.invoke('SkipTutorial', currentRoomCode);
@@ -277,19 +296,21 @@ $(document).ready(function () {
         HideAll();
 
         $('#game-write').css('display', 'block');
+        $('#write-busy').css('display', 'block');
     }
 
     function ReadPhase(gameGroup, currentGroup) {
-        myGroup = gameGroup;
-
         HideAll();
 
+        myGroup = gameGroup;
+
         $('#game-read').css('display', 'block');
+        $('#read-busy').css('display', 'block');
 
         if (myGroup == currentGroup) {
             $('#turnString').css('display', 'block');
             $('#articleString').html('Artikelen:');
-            $('#btn-shareStory').css('display', 'none');
+            $('#btn-uploadAnswer').css('display', 'none');
             $('#btn-activatePowerup-1').css("display", "none");
             $('#btn-activatePowerup-2').css("display", "none");
             $('#btn-activatePowerup-3').css("display", "none");
@@ -299,7 +320,7 @@ $(document).ready(function () {
         else {
             $('#turnString').css('display', 'none');
             $('#articleString').html('Welk artikel deel je?');
-            $('#btn-shareStory').css('display', 'block');
+            $('#btn-uploadAnswer').css('display', 'block');
             $('#btn-activatePowerup-1').css("display", "block");
             $('#btn-activatePowerup-2').css("display", "block");
             $('#btn-activatePowerup-3').css("display", "block");
@@ -327,24 +348,28 @@ $(document).ready(function () {
 
             seconds = timer;
 
-            $('.timer').html(timerMinutes + ':' + clockSeconds);
+            $('.timer').html(timerMinutes + ':' + timerSeconds);
             $('.timer').css('width', (seconds / maxSeconds * 100) + 'vw');
 
             if (roleId == 1) {
-                if ((seconds / maxSeconds * 100) > 50 && tickInterval == 0) {                               // halfway through
-                    $('#snd-timer-1').play();
+                if ((seconds / maxSeconds * 100) > 50 && tickInterval == 0) {                               // above 50%
+                    document.getElementById('snd-timer-1').play();
                     tickInterval = 5;
                 }
-                else if ((seconds / maxSeconds * 100) > (120 / maxSeconds * 100) && tickInterval == 0) {    // final two minutes
-                    $('#snd-timer-1').play();
+                else if ((seconds / maxSeconds * 100) > (120 / maxSeconds * 100) && tickInterval == 0) {    // above 120 seconds
+                    document.getElementById('snd-timer-1').play();
                     tickInterval = 2;
                 }
-                else if ((seconds / maxSeconds * 100) > (60 / maxSeconds * 100) && tickInterval == 0) {     // final minute
-                    $('#snd-timer-2').play();
+                else if ((seconds / maxSeconds * 100) > (60 / maxSeconds * 100) && tickInterval == 0) {     // above 60 seconds
+                    document.getElementById('snd-timer-2').play();
                     tickInterval = 2;
                 }
-                else if ((seconds / maxSeconds * 100) > (10 / maxSeconds * 100) && tickInterval == 0) {     // final ten seconds
-                    $('#snd-timer-3').play();
+                else if ((seconds / maxSeconds * 100) > (10 / maxSeconds * 100) && tickInterval == 0) {     // above 10 seconds
+                    document.getElementById('snd-timer-2').play();
+                    tickInterval = 1;
+                }
+                else if ((seconds / maxSeconds * 100) < (10 / maxSeconds * 100) && tickInterval == 0) {     // final ten seconds
+                    document.getElementById('snd-timer-3').play();
                     tickInterval = 1;
                 }
             }
@@ -370,6 +395,38 @@ $(document).ready(function () {
 
         timer = 0;
         clearInterval(currentTimer);
+    }
+
+    function RetrieveRootStory(rootStory) {
+        var storyContent = rootStory.split(':!|');
+
+        storySource = storyContent[0];
+
+        $('#storyTitle').html(storyContent[1]);
+        $('#storyText').html(storyContent[2]);
+    }
+
+    function SwapStory(storyNumber) {
+
+    }
+
+    function UploadStory() {
+        HideAll();
+
+        $('#game-write').css('display', 'block');
+        $('#write-finished').css('display', 'block');
+
+        var story = storySource + "_+_" + $('#writtenStoryTitle').val().trim() + "_+_" + $('#writtenStoryText').val().trim();
+        connection.invoke('UploadStory', mySocketId, currentRoomCode, story)
+    }
+
+    function UploadAnswer() {
+
+    }
+
+    function UpdateScore(followers, cash) {
+        $('#followerCount').html(followers);
+        $('#moneyCount').html("€" + cash + "-");
     }
     // #endregion
 
@@ -406,6 +463,14 @@ $(document).ready(function () {
 
     $('.btn-skipTutorial').click(function () {
         SkipTutorial();
+    });
+
+    $('#btn-uploadStory').click(function () {
+        UploadStory();
+    });
+
+    $('#btn-uploadAnswer').click(function () {
+        UploadAnswer();
     });
 
     $.kickUser = function (socketId) {

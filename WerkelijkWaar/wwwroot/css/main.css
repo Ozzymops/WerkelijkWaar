@@ -130,7 +130,7 @@ input[type=button].form-button-orange, input[type=submit].form-button-orange {
     height: 40px;
 }
 
-input[type=button].btn-swapStory, input[type=button].btn-nextTutorial, input[type=button].btn-skipTutorial {
+input[type=button].btn-swapStory, input[type=button].btn-continueTutorial, input[type=button].btn-skipTutorial {
     display: block;
     margin-left: auto;
     margin-right: auto;
@@ -174,7 +174,7 @@ input[type=button].form-button-orange:hover, input[type=submit].form-button-oran
     height: 40px;
 }
 
-input[type=button].btn-swapStory:hover, input[type=button].btn-nextTutorial:hover, input[type=button].btn-skipTutorial:hover {
+input[type=button].btn-swapStory:hover, input[type=button].btn-continueTutorial:hover, input[type=button].btn-skipTutorial:hover {
     display: block;
     margin-left: auto;
     margin-right: auto;
@@ -405,6 +405,10 @@ img.landing.mascot-bigright {
 /* #endregion */
 
 /* #region Game */
+p.game.on-purple {
+    color: white;
+}
+
 /* #region Docent */
 div.game.docent.container {
     display: flex;
