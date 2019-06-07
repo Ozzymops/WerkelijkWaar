@@ -534,7 +534,7 @@ namespace WerkelijkWaar
                         logger.Log("[Game - GoToWritePhase]", roomCode + " continuing to writing phase...", 2, 3, false);
 
                         await InvokeClientMethodToAllAsync("writePhase", roomCode);
-                        await StartGameTimer(room.RoomOwnerId, roomCode, 300); // room.Config.MaxWritingTime
+                        await StartGameTimer(room.RoomOwnerId, roomCode, 120); // room.Config.MaxWritingTime
                         await RetrieveRootStory(roomCode);
                     }
                 }
@@ -750,7 +750,7 @@ namespace WerkelijkWaar
 
                                 newStory.Date = DateTime.Now;
                                 room.WrittenStories.Add(newStory);
-                                dq.CreateStory(newStory);
+                                // dq.CreateStory(newStory);
                             }
                         }
 
@@ -1178,7 +1178,7 @@ namespace WerkelijkWaar
                 room.SentStories = storiesToSend;
             }
 
-            await InvokeClientMethodToAllAsync("showStories", gameGroup, roomCode, Newtonsoft.Json.JsonConvert.SerializeObject(storiesToSend));
+            await InvokeClientMethodToAllAsync("retrieveWrittenStories", roomCode, Newtonsoft.Json.JsonConvert.SerializeObject(storiesToSend));
         }
 
         /// <summary>

@@ -22,6 +22,10 @@ $(document).ready(function () {
     var myGroup = 0;
     var myCash = 0.00;
     var myFollowers = 0;
+    var selectedStory = 0;
+    var maxAnswers = 1;
+    var selectedAnswer = '';
+    var currentStoryList;
     // #endregion
 
     // #region WebSockets
@@ -117,6 +121,13 @@ $(document).ready(function () {
         }
     }
 
+    // -- Response to RetrieveWrittenStories
+    connection.clientMethods['retrieveWrittenStories'] = (roomCode, stories) => {
+        if (currentRoomCode == roomCode) {
+            RetrieveWrittenStories(stories);
+        }
+    }
+
     // -- Response to ReadPhase
     connection.clientMethods['readPhase'] = (roomCode, socketId, gameGroup, currentGroup) => {
         if (currentRoomCode == roomCode) {
@@ -174,7 +185,6 @@ $(document).ready(function () {
         $('#game-read').css('display', 'none');
         $('#read-busy').css('display', 'none');
         $('#read-finished').css('display', 'none');
-        $('#read-notallowed').css('display', 'none');
         $('#game-leaderboard').css('display', 'none');
     }
 
@@ -330,7 +340,10 @@ $(document).ready(function () {
     }
 
     function StartTimer(time) {
-        $('.timer').css('display', 'block');
+        $('.timerClock').css('display', 'block');
+        $('.timerClock').css('color', 'black');
+        $('.timerBar').css('display', 'block');
+        $('.timerBar').css('color', 'black');
 
         tickInterval = 0;
         clearInterval(currentTimer);
@@ -348,29 +361,45 @@ $(document).ready(function () {
 
             seconds = timer;
 
-            $('.timer').html(timerMinutes + ':' + timerSeconds);
-            $('.timer').css('width', (seconds / maxSeconds * 100) + 'vw');
+            $('.timerClock').html(timerMinutes + ':' + timerSeconds);
+            $('.timerBar').css('width', (seconds / maxSeconds * 100) + 'vw');
 
             if (roleId == 1) {
-                if ((seconds / maxSeconds * 100) > 50 && tickInterval == 0) {                               // above 50%
-                    document.getElementById('snd-timer-1').play();
-                    tickInterval = 5;
+                if (tickInterval == 0) {
+                    if ((seconds / maxSeconds * 100) > 75) {                // > 75%
+                        document.getElementById('snd-timer-1').play();
+                        tickInterval = 5;
+                    }
+                    else if ((seconds / maxSeconds * 100) > 50) {           // > 50%
+                        document.getElementById('snd-timer-1').play();
+                        tickInterval = 3;
+                    }
+                    else if ((seconds / maxSeconds * 100) > 25) {           // > 25%
+                        document.getElementById('snd-timer-2').play();
+                        tickInterval = 2;
+                    }
+                    else if (seconds > 10) {           // > 10%
+                        document.getElementById('snd-timer-2').play();
+                        tickInterval = 1;
+                    }
+                    else if (seconds <= 10) {                               // final ten seconds
+                        document.getElementById('snd-timer-3').play();
+                        tickInterval = 1;
+                    }
                 }
-                else if ((seconds / maxSeconds * 100) > (120 / maxSeconds * 100) && tickInterval == 0) {    // above 120 seconds
-                    document.getElementById('snd-timer-1').play();
-                    tickInterval = 2;
+            }
+
+            if (seconds <= 10) {                                            // final ten seconds
+                document.getElementById('snd-timer-3').play();
+                tickInterval = 1;
+
+                if (seconds % 2 == 0) {
+                    $('.timerClock').css('color', 'red');
+                    $('.timerBar').css('background-color', '#f7c747');
                 }
-                else if ((seconds / maxSeconds * 100) > (60 / maxSeconds * 100) && tickInterval == 0) {     // above 60 seconds
-                    document.getElementById('snd-timer-2').play();
-                    tickInterval = 2;
-                }
-                else if ((seconds / maxSeconds * 100) > (10 / maxSeconds * 100) && tickInterval == 0) {     // above 10 seconds
-                    document.getElementById('snd-timer-2').play();
-                    tickInterval = 1;
-                }
-                else if ((seconds / maxSeconds * 100) < (10 / maxSeconds * 100) && tickInterval == 0) {     // final ten seconds
-                    document.getElementById('snd-timer-3').play();
-                    tickInterval = 1;
+                else {
+                    $('.timerClock').css('color', 'black');
+                    $('.timerBar').css('background-color', '#f7c747');
                 }
             }
 
@@ -380,10 +409,10 @@ $(document).ready(function () {
                 tickInterval = 0;
                 timer = 0;
                 clearInterval(currentTimer);
-                connection.invoke("StopGameTimer", userId, currentRoomCode);
 
                 if (roleId == 1) {
-                    $('#snd-timer-end').play();
+                    document.getElementById('snd-timer-end').play();
+                    connection.invoke("StopGameTimer", userId, currentRoomCode);
                 }
             }
 
@@ -391,6 +420,7 @@ $(document).ready(function () {
     }
 
     function StopTimer() {
+        $('.timer').css('display', 'none');
         $('.timer').css('display', 'none');
 
         timer = 0;
@@ -406,8 +436,51 @@ $(document).ready(function () {
         $('#storyText').html(storyContent[2]);
     }
 
-    function SwapStory(storyNumber) {
+    function RetrieveWrittenStories(stories) {
+        $('#storyList').empty();
 
+        currentStoryList = JSON.parse(stories);
+
+        var firstStory = true;
+        var indexCount = 0;
+
+        for (var story in currentStoryList) {
+            console.log(currentStoryList[story]);
+            var storyContent = currentStoryList[story].split(':!|');
+
+            // Create button and append to list
+            var button = document.createElement('input');
+            $(button).addClass('btn-swapStory');
+            $(button).prop('id', indexCount);
+            $(button).prop('type', 'button');
+            $(button).val(storyContent[1]);
+
+            $('#storyList').append(button);
+
+            button.addEventListener('click', function () {
+                SwapStory(this.id);
+            });
+
+            if (firstStory) {
+                firstStory = false;
+
+                selectedStory = 0;
+
+                $('#readStoryTitle').html(storyContent[1]);
+                $('#readStoryText').html(storyContent[2]);
+            }
+
+            indexCount++;
+        }
+    }
+
+    function SwapStory(storyNumber) {
+        selectedStory = storyNumber;
+
+        var storyContent = currentStoryList[storyNumber].split(':!|');
+
+        $('#readStoryTitle').html(storyContent[1]);
+        $('#readStoryText').html(storyContent[2]);
     }
 
     function UploadStory() {
@@ -421,12 +494,30 @@ $(document).ready(function () {
     }
 
     function UploadAnswer() {
+        maxAnswers--;
 
+        selectedAnswer += selectedStory;
+
+        if (maxAnswers == 0) {
+            HideAll();
+
+            $('#game-read').css('display', 'block');
+            $('#read-finished').css('display', 'block');
+
+            connection.invoke('UploadAnswer', mySocketId, currentRoomCode, selectedAnswer);
+
+            maxAnswers = 1;
+            selectedAnswer = '';
+        }
     }
 
     function UpdateScore(followers, cash) {
         $('#followerCount').html(followers);
         $('#moneyCount').html("€" + cash + "-");
+    }
+
+    function UpdatePowerups(costs) {
+
     }
     // #endregion
 
