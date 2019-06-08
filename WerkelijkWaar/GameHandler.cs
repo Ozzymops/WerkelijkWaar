@@ -547,13 +547,13 @@ namespace WerkelijkWaar
         /// <param name="userId">User ID</param>
         /// <param name="roomCode">Targeted Room code</param>
         /// <param name="start">Is this the first (starting) round?</param>
-        public async Task GoToReadPhase(int userId, string roomCode, bool start)
+        public async Task GoToReadPhase(string userId, string roomCode, bool start)
         {
             foreach (Classes.Room room in _gameManager.Rooms)
             {
                 if (room.RoomCode == roomCode)
                 {
-                    if (dq.RetrieveUser(userId).RoleId == 1)
+                    if (dq.RetrieveUser(Convert.ToInt32(userId)).RoleId == 1)
                     {
                         logger.Log("[Game - GoToReadPhase]", "(" + userId + ") validated.", 0, 3, false);
 
@@ -599,7 +599,7 @@ namespace WerkelijkWaar
                             {
                                 logger.Log("[Game - GoToReadPhase]", roomCode + " game ended. Showing final leaderboard.", 2, 3, false);
 
-                                await ShowLeaderboard(roomCode, true);
+                                await GiveMoney(roomCode, true);
                             }
                         }
                         else
@@ -764,6 +764,8 @@ namespace WerkelijkWaar
                     {
                         logger.Log("[Game - UploadStory]", roomCode + " all users wrote their stories.", 0, 3, false);
 
+                        await StopGameTimer(room.RoomOwnerId, room.RoomCode);
+
                         foreach (Classes.User user in room.Users)
                         {
                             user.WroteStory = false;
@@ -771,7 +773,7 @@ namespace WerkelijkWaar
 
                         logger.Log("[Game - UploadStory]", roomCode + " continuing to read phase.", 2, 3, false);
 
-                        await GoToReadPhase(room.Teacher.Id, roomCode, true);
+                        await GoToReadPhase(room.Teacher.Id.ToString(), roomCode, true);
                     }
                 }
             }
@@ -795,9 +797,9 @@ namespace WerkelijkWaar
                     {
                         if (user.SocketId == socketId)
                         {
-                            logger.Log("[Game - UploadAnswer]", roomCode + " (" + user.Id + " | " + socketId + ") uploaded a score.", 0, 3, false);
+                            logger.Log("[Game - UploadAnswer]", roomCode + " (" + user.Id + " | " + socketId + ") uploaded a score: " + answer, 0, 3, false);
 
-                            if (user.GameGroup == room.CurrentGroup)
+                            if (user.GameGroup != room.CurrentGroup)
                             {
                                 logger.Log("[Game - UploadAnswer]", roomCode + " (" + user.Id + " | " + socketId + ") parsing score.", 1, 3, false);
 
@@ -840,6 +842,7 @@ namespace WerkelijkWaar
                                         if (score.SocketId == storyFromAnswerArray[3])
                                         {
                                             score.AttainedVotes++;
+                                            score.LastResult = true;
 
                                             foreach (Classes.Story story in room.WrittenStories)
                                             {
@@ -881,6 +884,7 @@ namespace WerkelijkWaar
                                             logger.Log("[Game - UploadAnswer]", roomCode + " (" + user.Id + " | " + socketId + ") answer was correct.", 1, 3, false);
 
                                             score.CorrectAnswers += '1';
+                                            score.LastResult = true;
 
                                             int followerGain = room.Config.FollowerGain;
 
@@ -901,6 +905,7 @@ namespace WerkelijkWaar
                                         else
                                         {
                                             score.CorrectAnswers += '0';
+                                            score.LastResult = false;
 
                                             logger.Log("[Game - UploadAnswer]", roomCode + " (" + user.Id + " | " + socketId + ") answer was false.", 1, 3, false);
 
@@ -947,13 +952,14 @@ namespace WerkelijkWaar
 
                         room.NeededAnswers = 0;
 
-                        logger.Log("[Game - UploadAnswer]", roomCode + "User has been parsed. Everybody answered, continuing to leaderboard.", 2, 3, false);
+                        logger.Log("[Game - UploadAnswer]", roomCode + " User has been parsed. Everybody answered, continuing to leaderboard.", 2, 3, false);
 
-                        await GiveMoney(roomCode);
+                        await StopGameTimer(room.RoomOwnerId, room.RoomCode);
+                        await GiveMoney(roomCode, false);
                     }
                     else
                     {
-                        logger.Log("[Game - UploadAnswer]", roomCode + "User has been parsed.", 2, 3, false);
+                        logger.Log("[Game - UploadAnswer]", roomCode + " User has been parsed.", 2, 3, false);
                     }
                 }
             }
@@ -963,7 +969,7 @@ namespace WerkelijkWaar
         /// Give all players money based off of their followers and votes
         /// </summary>
         /// <param name="roomCode">Targeted Room code</param>
-        public async Task GiveMoney(string roomCode)
+        public async Task GiveMoney(string roomCode, bool endGame)
         {
             foreach (Classes.Room room in _gameManager.Rooms)
             {
@@ -1039,29 +1045,30 @@ namespace WerkelijkWaar
                                 score.CashAmount += cashGain;
                                 score.FollowerAmount += followerChange;
 
-                                logger.Log("[Game - UploadAnswer]", roomCode + " (" + user.Id + " | " + user.SocketId + ") now has €" + score.CashAmount + "- and " + score.FollowerAmount + " followers.", 2, 3, false);
-
                                 if (score.FollowerAmount <= 0)
                                 {
                                     score.FollowerAmount = 0;
                                 }
 
-                                await InvokeClientMethodToAllAsync("updateScore", roomCode, user.SocketId, score.CashAmount, score.FollowerAmount);
+                                score.ActualScore = Convert.ToInt32(score.FollowerAmount) * Convert.ToInt32(score.CashAmount);
+
+                                logger.Log("[Game - UploadAnswer]", roomCode + " (" + user.Id + " | " + user.SocketId + ") now has €" + score.CashAmount + "- and " + score.FollowerAmount + " followers.", 2, 3, false);
+
+                                List<string> rankList = GenerateLeaderboard(roomCode);
+                                await InvokeClientMethodToAllAsync("updateScore", roomCode, user.SocketId, score.LastResult, score.CashAmount, score.FollowerAmount, Newtonsoft.Json.JsonConvert.SerializeObject(rankList), endGame);
                             }
                         }
                     }
 
                     await PowerupVisuals(roomCode);
-                    await ShowLeaderboard(roomCode, false);
                 }
             }
         }
 
         /// <summary>
-        /// Open the leaderboard
+        /// Generate the leaderboards based off of given scores
         /// </summary>
         /// <param name="roomCode">Targeted Room code</param>
-        /// <param name="endGame">Final round?</param>
         public async Task ShowLeaderboard(string roomCode, bool endGame)
         {
             foreach (Classes.Room room in _gameManager.Rooms)
@@ -1070,7 +1077,7 @@ namespace WerkelijkWaar
                 {
                     List<string> rankList = GenerateLeaderboard(roomCode);
 
-                    await InvokeClientMethodToAllAsync("showLeaderboards", roomCode, Newtonsoft.Json.JsonConvert.SerializeObject(rankList), endGame);
+                    await InvokeClientMethodToAllAsync("showLeaderboard", roomCode, Newtonsoft.Json.JsonConvert.SerializeObject(rankList), endGame);
                 }
             }
         }
@@ -1090,7 +1097,7 @@ namespace WerkelijkWaar
                     List<Classes.Score> scoreList = room.SelectedAnswers;
 
                     // Sort scorelist
-                    scoreList = scoreList.OrderByDescending(o => o.CashAmount).ToList();
+                    scoreList = scoreList.OrderByDescending(o => o.ActualScore).ToList();
 
                     // Sort by rank
                     foreach (Classes.Score rankedScore in scoreList)
@@ -1100,7 +1107,7 @@ namespace WerkelijkWaar
                             if (user.SocketId == rankedScore.SocketId)
                             {
                                 int rank = scoreList.IndexOf(rankedScore);
-                                string rankString = (rank + 1) + ":|!" + user.Username + ":|!" + rankedScore.FollowerAmount + ":|!" + rankedScore.CashAmount;
+                                string rankString = (rank + 1) + ":|!" + user.SocketId + ":|!" + user.Username + ":|!" + rankedScore.FollowerAmount + ":|!" + rankedScore.CashAmount;
                                 rankList.Add(rankString);
                             }
                         }

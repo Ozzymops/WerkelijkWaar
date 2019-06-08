@@ -1749,3 +1749,990 @@
 7-6-2019 | 15:56: End.
 --------[END]--------
 
+-----[LOG ENTRY]-----
+[AccountController - Login]
+8-6-2019 | 10:28: (4) JMuris validated. Navigating to...
+8-6-2019 | 10:28: Teacher hub.
+8-6-2019 | 10:28: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[AccountController - Logout]
+8-6-2019 | 10:28: User validated.
+8-6-2019 | 10:28: (4)JMuris logged out.
+8-6-2019 | 10:28: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[AccountController - Login]
+8-6-2019 | 10:28: (5) AAppel validated. Navigating to...
+8-6-2019 | 10:28: Student hub.
+8-6-2019 | 10:28: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[AccountController - Login]
+8-6-2019 | 10:30: (4) JMuris validated. Navigating to...
+8-6-2019 | 10:30: Teacher hub.
+8-6-2019 | 10:30: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[AccountController - Logout]
+8-6-2019 | 10:30: User validated.
+8-6-2019 | 10:30: (4)JMuris logged out.
+8-6-2019 | 10:30: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[AccountController - Login]
+8-6-2019 | 10:30: (5) AAppel validated. Navigating to...
+8-6-2019 | 10:30: Student hub.
+8-6-2019 | 10:30: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[AccountController - Logout]
+8-6-2019 | 10:32: User validated.
+8-6-2019 | 10:32: (5)AAppel logged out.
+8-6-2019 | 10:32: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[AccountController - Login]
+8-6-2019 | 10:32: (4) JMuris validated. Navigating to...
+8-6-2019 | 10:32: Teacher hub.
+8-6-2019 | 10:32: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[AccountController - Logout]
+8-6-2019 | 10:35: User validated.
+8-6-2019 | 10:35: (4)JMuris logged out.
+8-6-2019 | 10:35: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[AccountController - Login]
+8-6-2019 | 10:35: (4) JMuris validated. Navigating to...
+8-6-2019 | 10:35: Teacher hub.
+8-6-2019 | 10:35: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[AccountController - Logout]
+8-6-2019 | 10:35: User validated.
+8-6-2019 | 10:35: (4)JMuris logged out.
+8-6-2019 | 10:35: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[AccountController - Login]
+8-6-2019 | 10:35: (5) AAppel validated. Navigating to...
+8-6-2019 | 10:35: Student hub.
+8-6-2019 | 10:35: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[AccountController - Login]
+8-6-2019 | 11:00: (4) JMuris validated. Navigating to...
+8-6-2019 | 11:00: Teacher hub.
+8-6-2019 | 11:00: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[AccountController - Logout]
+8-6-2019 | 11:00: User validated.
+8-6-2019 | 11:00: (4)JMuris logged out.
+8-6-2019 | 11:00: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[AccountController - Login]
+8-6-2019 | 11:00: (5) AAppel validated. Navigating to...
+8-6-2019 | 11:00: Student hub.
+8-6-2019 | 11:00: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[AccountController - Logout]
+8-6-2019 | 11:01: User validated.
+8-6-2019 | 11:01: (5)AAppel logged out.
+8-6-2019 | 11:01: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[AccountController - Login]
+8-6-2019 | 11:01: (4) JMuris validated. Navigating to...
+8-6-2019 | 11:01: Teacher hub.
+8-6-2019 | 11:01: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[AccountController - Logout]
+8-6-2019 | 11:01: User validated.
+8-6-2019 | 11:01: (4)JMuris logged out.
+8-6-2019 | 11:01: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[AccountController - Login]
+8-6-2019 | 11:01: (5) AAppel validated. Navigating to...
+8-6-2019 | 11:01: Student hub.
+8-6-2019 | 11:01: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[AccountController - Login]
+8-6-2019 | 11:02: (4) JMuris validated. Navigating to...
+8-6-2019 | 11:02: Teacher hub.
+8-6-2019 | 11:02: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[AccountController - Logout]
+8-6-2019 | 11:02: User validated.
+8-6-2019 | 11:02: (4)JMuris logged out.
+8-6-2019 | 11:02: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[AccountController - Login]
+8-6-2019 | 11:02: (5) AAppel validated. Navigating to...
+8-6-2019 | 11:02: Student hub.
+8-6-2019 | 11:02: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[AccountController - Login]
+8-6-2019 | 11:11: (4) JMuris validated. Navigating to...
+8-6-2019 | 11:11: Teacher hub.
+8-6-2019 | 11:11: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[AccountController - Logout]
+8-6-2019 | 11:11: User validated.
+8-6-2019 | 11:11: (4)JMuris logged out.
+8-6-2019 | 11:11: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[AccountController - Login]
+8-6-2019 | 11:11: (5) AAppel validated. Navigating to...
+8-6-2019 | 11:11: Student hub.
+8-6-2019 | 11:11: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[AccountController - Logout]
+8-6-2019 | 11:12: User validated.
+8-6-2019 | 11:12: (5)AAppel logged out.
+8-6-2019 | 11:12: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[AccountController - Login]
+8-6-2019 | 11:12: (4) JMuris validated. Navigating to...
+8-6-2019 | 11:12: Teacher hub.
+8-6-2019 | 11:12: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[AccountController - Logout]
+8-6-2019 | 11:12: User validated.
+8-6-2019 | 11:12: (4)JMuris logged out.
+8-6-2019 | 11:12: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[AccountController - Login]
+8-6-2019 | 11:12: (5) AAppel validated. Navigating to...
+8-6-2019 | 11:12: Student hub.
+8-6-2019 | 11:12: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[AccountController - Login]
+8-6-2019 | 11:14: (4) JMuris validated. Navigating to...
+8-6-2019 | 11:14: Teacher hub.
+8-6-2019 | 11:14: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[AccountController - Logout]
+8-6-2019 | 11:14: User validated.
+8-6-2019 | 11:14: (4)JMuris logged out.
+8-6-2019 | 11:14: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[AccountController - Login]
+8-6-2019 | 11:14: (5) AAppel validated. Navigating to...
+8-6-2019 | 11:14: Student hub.
+8-6-2019 | 11:14: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[AccountController - Login]
+8-6-2019 | 11:40: (4) JMuris validated. Navigating to...
+8-6-2019 | 11:40: Teacher hub.
+8-6-2019 | 11:40: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[AccountController - Logout]
+8-6-2019 | 11:40: User validated.
+8-6-2019 | 11:40: (4)JMuris logged out.
+8-6-2019 | 11:40: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[AccountController - Login]
+8-6-2019 | 11:40: (5) AAppel validated. Navigating to...
+8-6-2019 | 11:40: Student hub.
+8-6-2019 | 11:40: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[AccountController - Login]
+8-6-2019 | 11:50: (4) JMuris validated. Navigating to...
+8-6-2019 | 11:50: Teacher hub.
+8-6-2019 | 11:50: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[AccountController - Logout]
+8-6-2019 | 11:50: User validated.
+8-6-2019 | 11:50: (4)JMuris logged out.
+8-6-2019 | 11:50: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[AccountController - Login]
+8-6-2019 | 11:50: (5) AAppel validated. Navigating to...
+8-6-2019 | 11:50: Student hub.
+8-6-2019 | 11:50: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[AccountController - Login]
+8-6-2019 | 11:53: (4) JMuris validated. Navigating to...
+8-6-2019 | 11:53: Teacher hub.
+8-6-2019 | 11:53: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[AccountController - Logout]
+8-6-2019 | 11:53: User validated.
+8-6-2019 | 11:53: (4)JMuris logged out.
+8-6-2019 | 11:53: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[AccountController - Login]
+8-6-2019 | 11:53: (5) AAppel validated. Navigating to...
+8-6-2019 | 11:53: Student hub.
+8-6-2019 | 11:53: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[AccountController - Login]
+8-6-2019 | 11:56: (4) JMuris validated. Navigating to...
+8-6-2019 | 11:56: Teacher hub.
+8-6-2019 | 11:56: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[AccountController - Logout]
+8-6-2019 | 11:57: User validated.
+8-6-2019 | 11:57: (4)JMuris logged out.
+8-6-2019 | 11:57: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[AccountController - Login]
+8-6-2019 | 11:57: (5) AAppel validated. Navigating to...
+8-6-2019 | 11:57: Student hub.
+8-6-2019 | 11:57: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[AccountController - Login]
+8-6-2019 | 11:59: (4) JMuris validated. Navigating to...
+8-6-2019 | 11:59: Teacher hub.
+8-6-2019 | 11:59: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[AccountController - Logout]
+8-6-2019 | 11:59: User validated.
+8-6-2019 | 11:59: (4)JMuris logged out.
+8-6-2019 | 11:59: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[AccountController - Login]
+8-6-2019 | 12:00: (5) AAppel validated. Navigating to...
+8-6-2019 | 12:00: Student hub.
+8-6-2019 | 12:00: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[AccountController - Logout]
+8-6-2019 | 12:05: User validated.
+8-6-2019 | 12:05: (5)AAppel logged out.
+8-6-2019 | 12:05: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[AccountController - Login]
+8-6-2019 | 12:05: (4) JMuris validated. Navigating to...
+8-6-2019 | 12:05: Teacher hub.
+8-6-2019 | 12:05: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[AccountController - Login]
+8-6-2019 | 12:12: (4) JMuris validated. Navigating to...
+8-6-2019 | 12:12: Teacher hub.
+8-6-2019 | 12:12: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[AccountController - Logout]
+8-6-2019 | 12:12: User validated.
+8-6-2019 | 12:12: (4)JMuris logged out.
+8-6-2019 | 12:12: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[AccountController - Login]
+8-6-2019 | 12:12: (5) AAppel validated. Navigating to...
+8-6-2019 | 12:12: Student hub.
+8-6-2019 | 12:12: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[AccountController - Logout]
+8-6-2019 | 12:14: User validated.
+8-6-2019 | 12:14: (5)AAppel logged out.
+8-6-2019 | 12:14: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[AccountController - Login]
+8-6-2019 | 12:14: (4) JMuris validated. Navigating to...
+8-6-2019 | 12:14: Teacher hub.
+8-6-2019 | 12:14: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[AccountController - Login]
+8-6-2019 | 12:19: (4) JMuris validated. Navigating to...
+8-6-2019 | 12:19: Teacher hub.
+8-6-2019 | 12:19: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[AccountController - Logout]
+8-6-2019 | 12:19: User validated.
+8-6-2019 | 12:19: (4)JMuris logged out.
+8-6-2019 | 12:19: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[AccountController - Login]
+8-6-2019 | 12:19: (5) AAppel validated. Navigating to...
+8-6-2019 | 12:19: Student hub.
+8-6-2019 | 12:19: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[AccountController - Login]
+8-6-2019 | 12:20: (4) JMuris validated. Navigating to...
+8-6-2019 | 12:20: Teacher hub.
+8-6-2019 | 12:20: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[AccountController - Logout]
+8-6-2019 | 12:20: User validated.
+8-6-2019 | 12:20: (4)JMuris logged out.
+8-6-2019 | 12:20: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[AccountController - Login]
+8-6-2019 | 12:20: (5) AAppel validated. Navigating to...
+8-6-2019 | 12:20: Student hub.
+8-6-2019 | 12:20: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[AccountController - Login]
+8-6-2019 | 12:21: (4) JMuris validated. Navigating to...
+8-6-2019 | 12:21: Teacher hub.
+8-6-2019 | 12:21: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[AccountController - Logout]
+8-6-2019 | 12:21: User validated.
+8-6-2019 | 12:21: (4)JMuris logged out.
+8-6-2019 | 12:21: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[AccountController - Login]
+8-6-2019 | 12:21: (5) AAppel validated. Navigating to...
+8-6-2019 | 12:21: Student hub.
+8-6-2019 | 12:21: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[AccountController - Login]
+8-6-2019 | 12:23: (4) JMuris validated. Navigating to...
+8-6-2019 | 12:23: Teacher hub.
+8-6-2019 | 12:23: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[AccountController - Logout]
+8-6-2019 | 12:23: User validated.
+8-6-2019 | 12:23: (4)JMuris logged out.
+8-6-2019 | 12:23: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[AccountController - Login]
+8-6-2019 | 12:23: (5) AAppel validated. Navigating to...
+8-6-2019 | 12:23: Student hub.
+8-6-2019 | 12:23: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[AccountController - Logout]
+8-6-2019 | 12:24: User validated.
+8-6-2019 | 12:24: (5)AAppel logged out.
+8-6-2019 | 12:24: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[AccountController - Login]
+8-6-2019 | 12:24: (4) JMuris validated. Navigating to...
+8-6-2019 | 12:24: Teacher hub.
+8-6-2019 | 12:24: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[AccountController - Login]
+8-6-2019 | 12:31: (4) JMuris validated. Navigating to...
+8-6-2019 | 12:31: Teacher hub.
+8-6-2019 | 12:31: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[AccountController - Logout]
+8-6-2019 | 12:31: User validated.
+8-6-2019 | 12:31: (4)JMuris logged out.
+8-6-2019 | 12:31: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[AccountController - Login]
+8-6-2019 | 12:31: (5) AAppel validated. Navigating to...
+8-6-2019 | 12:31: Student hub.
+8-6-2019 | 12:31: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[AccountController - Login]
+8-6-2019 | 12:32: (4) JMuris validated. Navigating to...
+8-6-2019 | 12:32: Teacher hub.
+8-6-2019 | 12:32: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[AccountController - Logout]
+8-6-2019 | 12:32: User validated.
+8-6-2019 | 12:32: (4)JMuris logged out.
+8-6-2019 | 12:32: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[AccountController - Login]
+8-6-2019 | 12:32: (5) AAppel validated. Navigating to...
+8-6-2019 | 12:32: Student hub.
+8-6-2019 | 12:32: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[AccountController - Login]
+8-6-2019 | 12:34: (4) JMuris validated. Navigating to...
+8-6-2019 | 12:34: Teacher hub.
+8-6-2019 | 12:34: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[AccountController - Logout]
+8-6-2019 | 12:34: User validated.
+8-6-2019 | 12:34: (4)JMuris logged out.
+8-6-2019 | 12:34: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[AccountController - Login]
+8-6-2019 | 12:34: (5) AAppel validated. Navigating to...
+8-6-2019 | 12:34: Student hub.
+8-6-2019 | 12:34: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[AccountController - Login]
+8-6-2019 | 12:42: (4) JMuris validated. Navigating to...
+8-6-2019 | 12:42: Teacher hub.
+8-6-2019 | 12:42: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[AccountController - Logout]
+8-6-2019 | 12:42: User validated.
+8-6-2019 | 12:42: (4)JMuris logged out.
+8-6-2019 | 12:42: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[AccountController - Login]
+8-6-2019 | 12:42: (5) AAppel validated. Navigating to...
+8-6-2019 | 12:42: Student hub.
+8-6-2019 | 12:42: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[AccountController - Login]
+8-6-2019 | 12:44: (4) JMuris validated. Navigating to...
+8-6-2019 | 12:44: Teacher hub.
+8-6-2019 | 12:44: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[AccountController - Logout]
+8-6-2019 | 12:44: User validated.
+8-6-2019 | 12:44: (4)JMuris logged out.
+8-6-2019 | 12:44: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[AccountController - Login]
+8-6-2019 | 12:44: (5) AAppel validated. Navigating to...
+8-6-2019 | 12:44: Student hub.
+8-6-2019 | 12:44: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[AccountController - Login]
+8-6-2019 | 12:47: (4) JMuris validated. Navigating to...
+8-6-2019 | 12:47: Teacher hub.
+8-6-2019 | 12:47: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[AccountController - Logout]
+8-6-2019 | 12:47: User validated.
+8-6-2019 | 12:47: (4)JMuris logged out.
+8-6-2019 | 12:47: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[AccountController - Login]
+8-6-2019 | 12:47: (5) AAppel validated. Navigating to...
+8-6-2019 | 12:47: Student hub.
+8-6-2019 | 12:47: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[AccountController - Login]
+8-6-2019 | 12:48: (4) JMuris validated. Navigating to...
+8-6-2019 | 12:48: Teacher hub.
+8-6-2019 | 12:48: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[AccountController - Logout]
+8-6-2019 | 12:48: User validated.
+8-6-2019 | 12:48: (4)JMuris logged out.
+8-6-2019 | 12:48: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[AccountController - Login]
+8-6-2019 | 12:48: (5) AAppel validated. Navigating to...
+8-6-2019 | 12:48: Student hub.
+8-6-2019 | 12:48: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[AccountController - Login]
+8-6-2019 | 12:49: (4) JMuris validated. Navigating to...
+8-6-2019 | 12:49: Teacher hub.
+8-6-2019 | 12:49: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[AccountController - Logout]
+8-6-2019 | 12:49: User validated.
+8-6-2019 | 12:49: (4)JMuris logged out.
+8-6-2019 | 12:49: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[AccountController - Login]
+8-6-2019 | 12:49: (5) AAppel validated. Navigating to...
+8-6-2019 | 12:49: Student hub.
+8-6-2019 | 12:49: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[AccountController - Login]
+8-6-2019 | 12:50: (4) JMuris validated. Navigating to...
+8-6-2019 | 12:50: Teacher hub.
+8-6-2019 | 12:50: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[AccountController - Logout]
+8-6-2019 | 12:50: User validated.
+8-6-2019 | 12:50: (4)JMuris logged out.
+8-6-2019 | 12:50: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[AccountController - Login]
+8-6-2019 | 12:50: (5) AAppel validated. Navigating to...
+8-6-2019 | 12:50: Student hub.
+8-6-2019 | 12:50: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[AccountController - Login]
+8-6-2019 | 12:58: (4) JMuris validated. Navigating to...
+8-6-2019 | 12:58: Teacher hub.
+8-6-2019 | 12:58: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[AccountController - Logout]
+8-6-2019 | 12:58: User validated.
+8-6-2019 | 12:58: (4)JMuris logged out.
+8-6-2019 | 12:58: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[AccountController - Login]
+8-6-2019 | 12:58: (5) AAppel validated. Navigating to...
+8-6-2019 | 12:58: Student hub.
+8-6-2019 | 12:58: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[AccountController - Login]
+8-6-2019 | 12:59: (4) JMuris validated. Navigating to...
+8-6-2019 | 12:59: Teacher hub.
+8-6-2019 | 12:59: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[AccountController - Logout]
+8-6-2019 | 12:59: User validated.
+8-6-2019 | 12:59: (4)JMuris logged out.
+8-6-2019 | 12:59: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[AccountController - Login]
+8-6-2019 | 12:59: (5) AAppel validated. Navigating to...
+8-6-2019 | 12:59: Student hub.
+8-6-2019 | 12:59: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[AccountController - Login]
+8-6-2019 | 13:00: (5) AAppel validated. Navigating to...
+8-6-2019 | 13:00: Student hub.
+8-6-2019 | 13:00: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[AccountController - Logout]
+8-6-2019 | 13:00: User validated.
+8-6-2019 | 13:00: (5)AAppel logged out.
+8-6-2019 | 13:00: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[AccountController - Login]
+8-6-2019 | 13:00: (4) JMuris validated. Navigating to...
+8-6-2019 | 13:00: Teacher hub.
+8-6-2019 | 13:00: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[AccountController - Login]
+8-6-2019 | 13:06: (4) JMuris validated. Navigating to...
+8-6-2019 | 13:06: Teacher hub.
+8-6-2019 | 13:06: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[AccountController - Logout]
+8-6-2019 | 13:06: User validated.
+8-6-2019 | 13:06: (4)JMuris logged out.
+8-6-2019 | 13:06: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[AccountController - Login]
+8-6-2019 | 13:07: (5) AAppel validated. Navigating to...
+8-6-2019 | 13:07: Student hub.
+8-6-2019 | 13:07: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[AccountController - Login]
+8-6-2019 | 13:08: (4) JMuris validated. Navigating to...
+8-6-2019 | 13:08: Teacher hub.
+8-6-2019 | 13:08: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[AccountController - Logout]
+8-6-2019 | 13:09: User validated.
+8-6-2019 | 13:09: (4)JMuris logged out.
+8-6-2019 | 13:09: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[AccountController - Login]
+8-6-2019 | 13:09: (5) AAppel validated. Navigating to...
+8-6-2019 | 13:09: Student hub.
+8-6-2019 | 13:09: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[AccountController - Login]
+8-6-2019 | 13:09: (4) JMuris validated. Navigating to...
+8-6-2019 | 13:09: Teacher hub.
+8-6-2019 | 13:09: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[AccountController - Logout]
+8-6-2019 | 13:09: User validated.
+8-6-2019 | 13:09: (4)JMuris logged out.
+8-6-2019 | 13:09: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[AccountController - Login]
+8-6-2019 | 13:09: (5) AAppel validated. Navigating to...
+8-6-2019 | 13:09: Student hub.
+8-6-2019 | 13:09: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[AccountController - Login]
+8-6-2019 | 13:10: (4) JMuris validated. Navigating to...
+8-6-2019 | 13:10: Teacher hub.
+8-6-2019 | 13:10: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[AccountController - Logout]
+8-6-2019 | 13:10: User validated.
+8-6-2019 | 13:10: (4)JMuris logged out.
+8-6-2019 | 13:10: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[AccountController - Login]
+8-6-2019 | 13:10: (5) AAppel validated. Navigating to...
+8-6-2019 | 13:10: Student hub.
+8-6-2019 | 13:10: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[AccountController - Login]
+8-6-2019 | 13:11: (4) JMuris validated. Navigating to...
+8-6-2019 | 13:11: Teacher hub.
+8-6-2019 | 13:11: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[AccountController - Logout]
+8-6-2019 | 13:11: User validated.
+8-6-2019 | 13:11: (4)JMuris logged out.
+8-6-2019 | 13:11: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[AccountController - Login]
+8-6-2019 | 13:11: (5) AAppel validated. Navigating to...
+8-6-2019 | 13:11: Student hub.
+8-6-2019 | 13:11: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[AccountController - Login]
+8-6-2019 | 13:12: (4) JMuris validated. Navigating to...
+8-6-2019 | 13:12: Teacher hub.
+8-6-2019 | 13:12: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[AccountController - Logout]
+8-6-2019 | 13:12: User validated.
+8-6-2019 | 13:12: (4)JMuris logged out.
+8-6-2019 | 13:12: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[AccountController - Login]
+8-6-2019 | 13:12: (5) AAppel validated. Navigating to...
+8-6-2019 | 13:12: Student hub.
+8-6-2019 | 13:12: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[AccountController - Login]
+8-6-2019 | 13:13: (4) JMuris validated. Navigating to...
+8-6-2019 | 13:13: Teacher hub.
+8-6-2019 | 13:13: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[AccountController - Logout]
+8-6-2019 | 13:13: User validated.
+8-6-2019 | 13:13: (4)JMuris logged out.
+8-6-2019 | 13:13: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[AccountController - Login]
+8-6-2019 | 13:13: (5) AAppel validated. Navigating to...
+8-6-2019 | 13:13: Student hub.
+8-6-2019 | 13:13: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[AccountController - Login]
+8-6-2019 | 13:15: (4) JMuris validated. Navigating to...
+8-6-2019 | 13:15: Teacher hub.
+8-6-2019 | 13:15: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[AccountController - Logout]
+8-6-2019 | 13:15: User validated.
+8-6-2019 | 13:15: (4)JMuris logged out.
+8-6-2019 | 13:15: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[AccountController - Login]
+8-6-2019 | 13:15: (5) AAppel validated. Navigating to...
+8-6-2019 | 13:15: Student hub.
+8-6-2019 | 13:15: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[AccountController - Login]
+8-6-2019 | 13:17: (4) JMuris validated. Navigating to...
+8-6-2019 | 13:17: Teacher hub.
+8-6-2019 | 13:17: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[AccountController - Logout]
+8-6-2019 | 13:17: User validated.
+8-6-2019 | 13:17: (4)JMuris logged out.
+8-6-2019 | 13:17: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[AccountController - Login]
+8-6-2019 | 13:17: (5) AAppel validated. Navigating to...
+8-6-2019 | 13:17: Student hub.
+8-6-2019 | 13:17: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[AccountController - Login]
+8-6-2019 | 13:20: (4) JMuris validated. Navigating to...
+8-6-2019 | 13:20: Teacher hub.
+8-6-2019 | 13:20: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[AccountController - Logout]
+8-6-2019 | 13:20: User validated.
+8-6-2019 | 13:20: (4)JMuris logged out.
+8-6-2019 | 13:20: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[AccountController - Login]
+8-6-2019 | 13:20: (5) AAppel validated. Navigating to...
+8-6-2019 | 13:20: Student hub.
+8-6-2019 | 13:20: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[AccountController - Login]
+8-6-2019 | 13:21: (5) AAppel validated. Navigating to...
+8-6-2019 | 13:21: Student hub.
+8-6-2019 | 13:21: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[AccountController - Login]
+8-6-2019 | 13:21: (4) JMuris validated. Navigating to...
+8-6-2019 | 13:21: Teacher hub.
+8-6-2019 | 13:21: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[AccountController - Logout]
+8-6-2019 | 13:21: User validated.
+8-6-2019 | 13:21: (4)JMuris logged out.
+8-6-2019 | 13:21: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[AccountController - Login]
+8-6-2019 | 13:21: (5) AAppel validated. Navigating to...
+8-6-2019 | 13:21: Student hub.
+8-6-2019 | 13:21: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[AccountController - Login]
+8-6-2019 | 13:30: (4) JMuris validated. Navigating to...
+8-6-2019 | 13:30: Teacher hub.
+8-6-2019 | 13:30: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[AccountController - Logout]
+8-6-2019 | 13:30: User validated.
+8-6-2019 | 13:30: (4)JMuris logged out.
+8-6-2019 | 13:30: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[AccountController - Login]
+8-6-2019 | 13:30: (5) AAppel validated. Navigating to...
+8-6-2019 | 13:30: Student hub.
+8-6-2019 | 13:30: End.
+--------[END]--------
+

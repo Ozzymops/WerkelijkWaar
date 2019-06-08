@@ -52,8 +52,8 @@
                     <div id="game-connected" style="display: none;">
                         <div style="display: flex; flex-direction: column;">
                             <div>
-                                <ul id="playerList" style="border: 1px solid black; list-style-type: none; text-align: center; padding: 0;"></ul>
-                                <p id="playerCount" class="before-input">x spelers zijn verbonden.</p>
+                                <ul id="playerList" style="border: 1px solid black; border-radius: 25px; list-style-type: none; text-align: center; padding: 0; margin-left: auto; margin-right: auto; width: 20%;"></ul>
+                                <p id="playerCount" class="before-input">0 spelers zijn verbonden.</p>
                                 <input id="btn-leaveLobby" type="button" class="form-button-orange" style="margin-top: 10px;" value="Lobby verlaten" />
                             </div>
                         </div>
@@ -62,7 +62,7 @@
                         <p class="before-input">Je wilt graag een nieuwe telefoon, maar je hebt nog niet genoeg geld gespaard om er een te kunnen kopen.</p>
                         <p class="before-input">Je hebt gehoord dat mensen bakken met geld verdienen door het verspreiden van nepnieuws.<br />Hoe moeilijk kan het zijn om zelf nep berichten te verspreiden?</p>
                         <p class="before-input">Schrijf zelf nep berichten en verdien genoeg om een nieuwe telefoon te kopen.</p>
-                        <input class="btn-continueTutorial" type="button" value="Volgende" />
+                        <input class="btn-continueTutorial" style="margin-bottom: 10px;" type="button" value="Volgende" />
                         <input class="btn-skipTutorial" type="button" value="Overslaan" />
                     </div>
                     <div id="game-tutorial-2" style="display: none; width: 100vw; text-align: center;">
@@ -71,12 +71,12 @@
                         <p class="before-input">Daarnaast moet je er wel voor zorgen dat je zelf de juiste berichten deelt.</p>
                         <p class="before-input">Deel je een vals bericht, dan kost je dat volgers</p>
                         <p class="before-input">[foto's]</p>
-                        <input class="btn-continueTutorial" type="button" value="Volgende" />
+                        <input class="btn-continueTutorial" style="margin-bottom: 10px;" type="button" value="Volgende" />
                         <input class="btn-skipTutorial" type="button" value="Overslaan" />
                     </div>
                     <div id="game-tutorial-3" style="display: none; width: 100vw; text-align: center;">
                         <p class="before-input">Maak van het originele artikel een eigen nep bericht.<br />Bedenk zelf ook een titel die nieuwsgierigheid wekt.</p>
-                        <input class="btn-continueTutorial" type="button" value="Aan de slag" />
+                        <input class="btn-continueTutorial" style="margin-bottom: 10px;" type="button" value="Aan de slag" />
                         <input class="btn-skipTutorial" type="button" value="Overslaan" />
                     </div>
                     <div id="game-waiting" style="display: none; width: 100vw; text-align: center;">
@@ -98,7 +98,7 @@
                                     </div>
                                 </div>
                                 <div>
-                                    <input id="btn-uploadStory" class="form-button-orange" style="margin-right: 310px; margin-top: 20px; width: 150px;" type="button" value="Deel" />
+                                    <input id="btn-uploadStory" class="form-button-orange" style="margin-right: 310px; margin-top: 20px; margin-bottom: 10px; width: 150px;" type="button" value="Deel" />
                                 </div>
                             </div>
                         </div>
@@ -145,8 +145,36 @@
                         <h2 class="timerClock" style="transition: color 1s; transition-timing-function: linear; color: black; margin-top: -43px; font-size: 24px; text-align: center; font-weight: 400;">00:00</h2>
                     </div>
                     <!-- #endregion -->
+                    <div id="game-results" style="display: none;">
+                        <h2 class="subtitle" style="color: white;" id="resultString"></h2>
+                    </div>
                     <div id="game-leaderboard" style="display: none;">
-                        <ul id="leaderboard"></ul>
+                        <div style="display: flex; flex-direction: column; align-items: center;">
+                            <div>
+                                @if (!String.IsNullOrEmpty(Model.User.ImageSource))
+                                {
+                                    <img class="layout top-bar-profile" style="width: 300px; height: 300px; margin-top: 50px;" src="~/content/image/avatars/@Model.User.Id/@Model.User.ImageSource" alt="Jij!" title="Jij!" />
+                                }
+                                else
+                                {
+                                    <img class="layout top-bar-profile" style="width: 300px; height: 300px; margin-top: 50px;" src="~/content/image/Person_disabled.png" alt="Jij!" title="Jij!" />
+                                }
+                            </div>
+                            <div>
+                                <img class="layout top-bar-profile" style="height: 75px; width: 75px; margin-top: 10px; margin-left: -60px;" src="~/content/image/People.png" title="Volgers" alt="Volgers" />
+                                <h2 class="subtitle" style="padding-left: 10px; margin-top: -50px; margin-right: -20px;" id="leaderboard-followers">0</h2>
+                            </div>
+                            <div style="display: flex; justify-content: center; align-items: center; background-color: #7b6ea4; width: 100px; height: 100px; margin-top: -120px; margin-left: 300px;">
+                                <h2 class="subtitle" style="color: white;" id="leaderboard-money">€0.00-</h2>
+                            </div>
+                            <h2 id="rankString" style="z-index: 0; margin-top: -100px; margin-left: -700px; color: white;"></h2>
+                            <div id="leaderboard-final" style="display: none;">
+                                <img style="z-index: -1; width: 90vw; height: 70vh; margin-top: -380px;" src="~/content/image/Confetti.png" />
+                                <h2 class="subtitle" style="z-index: 0; color: white; margin-top: -380px; margin-left: -700px;">Score vandaag</h2>
+                            </div>
+                        </div>                  
+                    </div>
+                    <div id="game-end" style="display: none" ;>
                         <input id="btn-leaveGameOnEnd" style="display: none;" class="form-button-orange" type="button" value="Afsluiten" />
                     </div>
                 </div>
@@ -172,8 +200,9 @@
                 <div id="game-connected" style="display: none;">
                     <div style="display: flex; flex-direction: column;">
                         <h2 id="gameCode" class="subtitle">Jouw spelcode is:</h2>
-                        <ul id="playerList" style="display: flex; justify-content: space-around; border: 1px solid black; list-style-type: none; padding: 0; text-align: center;"></ul>
-                        <p id="playerCount" class="before-input">x spelers zijn verbonden.</p>
+                        @*<ul id="playerList" style="display: flex; justify-content: space-around; border: 1px solid black; list-style-type: none; padding: 0; text-align: center;"></ul>*@
+                        <ul id="playerList" style="display: flex; justify-content: space-around; border: 1px solid black; border-radius: 25px; list-style-type: none; text-align: center; padding: 0; margin-left: auto; margin-right: auto; width: 20vw;"></ul>
+                        <p id="playerCount" class="before-input">0 spelers zijn verbonden.</p>
                         <input id="btn-startGame" type="button" class="form-button-orange" style="margin-top: 10px;" value="Starten met huidige lobby" />
                         <input id="btn-leaveLobby" type="button" class="form-button-orange" style="margin-top: 10px;" value="Lobby sluiten" />
                     </div>
@@ -182,10 +211,8 @@
                     <p>Je wilt graag een nieuwe telefoon, maar je hebt nog niet genoeg geld gespaard om er een te kunnen kopen.</p>
                     <p>Je hebt gehoord dat mensen bakken met geld verdienen door het verspreiden van nepnieuws.<br />Hoe moeilijk kan het zijn om zelf nep berichten te verspreiden?</p>
                     <p>Schrijf zelf nep berichten en verdien genoeg om een nieuwe telefoon te kopen.</p>
-                    <div style="display: flex; margin-left: 350px; margin-right: 350px;">
-                        <input class="btn-continueTutorial" type="button" value="Volgende" />
-                        <input class="btn-skipTutorial" type="button" value="Overslaan" />
-                    </div>
+                    <input class="btn-continueTutorial" style="margin-bottom: 10px;" type="button" value="Volgende" />
+                    <input class="btn-skipTutorial" type="button" value="Overslaan" />
                 </div>
                 <div id="game-tutorial-2" style="display: none; width: 100vw; text-align: center;">
                     <p>Om geld te verdienen heb je volgers nodig.</p>
@@ -193,17 +220,13 @@
                     <p>Daarnaast moet je er wel voor zorgen dat je zelf de juiste berichten deelt.</p>
                     <p>Deel je een vals bericht, dan kost je dat volgers</p>
                     <p>[foto's]</p>
-                    <div style="display: flex; margin-left: 350px; margin-right: 350px;">
-                        <input class="btn-continueTutorial" type="button" value="Volgende" />
-                        <input class="btn-skipTutorial" type="button" value="Overslaan" />
-                    </div>
+                    <input class="btn-continueTutorial" style="margin-bottom: 10px;" type="button" value="Volgende" />
+                    <input class="btn-skipTutorial" type="button" value="Overslaan" />
                 </div>
                 <div id="game-tutorial-3" style="display: none; width: 100vw; text-align: center;">
                     <h2 class="subtitle">Kijk nu naar je eigen scherm en volg de instructies.</h2>
-                    <div style="display: flex; margin-left: 350px; margin-right: 350px;">
-                        <input class="btn-continueTutorial" type="button" value="Volgende" />
-                        <input class="btn-skipTutorial" type="button" value="Overslaan" />
-                    </div>
+                    <input class="btn-continueTutorial" style="margin-bottom: 10px;" type="button" value="Volgende" />
+                    <input class="btn-skipTutorial" type="button" value="Overslaan" />
                 </div>
                 <div id="game-waiting" style="display: none; width: 100vw; text-align: center;">
                     <h2 class="subtitle">Wachten op spelers...</h2>
@@ -221,9 +244,14 @@
                     <span class="timerBar" style="transition: width 1s, background-color 1s; transition-timing-function: linear; display: none; border-radius: 25px; margin-left: auto; margin-right: auto; width: 100vw; height: 50px; background-color: #f7c747; text-align: center;"></span>
                     <h2 class="timerClock" style="transition: color 1s; transition-timing-function: linear; color: black; margin-top: -43px; font-size: 24px; text-align: center; font-weight: 400;">00:00</h2>
                 </div>
+                <div id="game-results" style="display: none;">
+                    <div style="display: flex; flex-direction: row;">
+                        <ul id="leaderboard-left"></ul>
+                        <ul id="leaderboard-right"></ul>
+                    </div>
+                </div>
                 <div id="game-leaderboard" style="display: none;">
-                    <ul id="leaderboard"></ul>
-                    <input id="btn-nextRound" type="button" value="Volgende ronde" />
+
                 </div>
             }
             @if (Model.User.RoleId == 2)

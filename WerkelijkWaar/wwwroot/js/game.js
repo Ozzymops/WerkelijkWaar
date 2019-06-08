@@ -150,6 +150,15 @@ $(document).ready(function () {
             StopTimer();
         }
     }
+
+    // -- Response to UpdateScore
+    connection.clientMethods['updateScore'] = (roomCode, socketId, result, cash, followers, ranking, end) => {
+        if (currentRoomCode == roomCode) {
+            if (mySocketId == socketId || roleId == 1) {
+                UpdateScore(result, cash, followers, ranking, end);
+            }
+        }
+    }
     // #endregion
 
     // #region Client Methods
@@ -185,7 +194,9 @@ $(document).ready(function () {
         $('#game-read').css('display', 'none');
         $('#read-busy').css('display', 'none');
         $('#read-finished').css('display', 'none');
+        $('#game-results').css('display', 'none');
         $('#game-leaderboard').css('display', 'none');
+        $('#leaderboard-final').css('display', 'none');
     }
 
     function HostRoom(newRoomCode) {
@@ -445,7 +456,6 @@ $(document).ready(function () {
         var indexCount = 0;
 
         for (var story in currentStoryList) {
-            console.log(currentStoryList[story]);
             var storyContent = currentStoryList[story].split(':!|');
 
             // Create button and append to list
@@ -453,6 +463,7 @@ $(document).ready(function () {
             $(button).addClass('btn-swapStory');
             $(button).prop('id', indexCount);
             $(button).prop('type', 'button');
+            $(button).css('margin-bottom', '10px')
             $(button).val(storyContent[1]);
 
             $('#storyList').append(button);
@@ -511,9 +522,111 @@ $(document).ready(function () {
         }
     }
 
-    function UpdateScore(followers, cash) {
-        $('#followerCount').html(followers);
-        $('#moneyCount').html("€" + cash + "-");
+    function UpdateScore(result, cash, followers, ranking, end) {
+        HideAll();
+
+        StopTimer();
+
+        $('#game-results').css('display', 'block');
+
+        if (roleId == 1) {
+            // Big leaderboard
+            $('#leaderboard-left').empty();
+            $('#leaderboard-right').empty();
+
+            var rankList = JSON.parse(ranking);
+            var processedRank = 0;
+
+            for (var rank in rankList) {
+                var rankContent = rankList[rank].split(':|!');
+
+                processedRank++;
+
+                if (processedRank <= 10) {
+                    if (processedRank <= 5) {
+                        $('#leaderboard-left').append('<li><p style="color: white;">' + rankContent[0] + '. ' + rankContent[2] + ' - ' + rankContent[3] + ' volgers, €' + rankContent[4] + '-</p></li>')
+                    }
+                    else {
+                        $('#leaderboard-right').append('<li><p style="color: white;">' + rankContent[0] + '. ' + rankContent[2] + ' - ' + rankContent[3] + ' volgers, €' + rankContent[4] + '-</p></li>')
+                    }
+                }
+            }
+        }
+        else {
+            var followerDelta = Math.abs(myFollowers - followers);
+            var cashDelta = Math.abs(myCash - cash);
+
+            myFollowers = followers;
+            myCash = cash;
+
+            $('#followerCount').html(myFollowers);
+            $('#moneyCount').html("€" + myCash + "-");
+
+            // Correct
+            if (result) {
+                $('#html').css('background-color', 'green');
+                $('#body').css('background-color', 'green');
+                $('#resultString').html('Geweldig!\nJe krijgt deze ronde ' + followerDelta + ' volgers en €' + cashDelta + '- erbij.');
+            }
+            // Incorrect
+            else {
+                $('#html').css('background-color', 'red');
+                $('#body').css('background-color', 'red');
+                $('#resultString').html('Jammer...\nJe verliest deze ronde ' + followerDelta + ' volgers.');
+            }
+        }
+       
+        setTimeout(function () { ShowLeaderboard(ranking, end); }, 5000)
+    }
+
+    function ShowLeaderboard(ranking, end) {
+        HideAll();
+
+        $('#html').css('background-color', '#f5b91a');
+        $('#body').css('background-color', '#f5b91a');
+
+        var rankList = JSON.parse(ranking);
+
+        $('#game-leaderboard').css('display', 'block');
+
+        if (roleId == 1) {
+            var rankList = JSON.parse(ranking);
+
+            for (var rank in rankList) {
+                var rankContent = rankList[rank].split(':|!');
+            }
+        }
+        else {
+            // Only you on screen
+            $('#leaderboard-followers').html(myFollowers);
+            $('#leaderboard-money').html('€' + myCash + '-');
+
+            for (var rank in rankList) {
+                var rankContent = rankList[rank].split(':|!');
+
+                if (mySocketId == rankContent[1]) {
+                    $('#rankString').html('Jij bent nummer ' + rankContent[0]);
+                }
+            }
+        }
+
+        if (end) {
+            // Show confetti
+            $('#leaderboard-final').css('display', 'block');
+            // end game button
+        }
+        else {
+            setTimeout(ResetColours, 5000);
+        }       
+    }
+
+    function ResetColours() {
+        $('#html').css('background-color', '#7b6ea4');
+        $('#body').css('background-color', '#7b6ea4');
+
+        if (roleId == 1) {
+            connection.invoke('GoToReadPhase', userId, currentRoomCode, false);
+        }
     }
 
     function UpdatePowerups(costs) {

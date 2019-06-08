@@ -25,12 +25,12 @@ namespace WerkelijkWaar.Classes
         /// <summary>
         /// Amount of acquired followers
         /// </summary>
-        public int FollowerAmount { get; set; }
+        public int FollowerAmount { get; set; } = 50;
 
         /// <summary>
         /// Amount of acquired cash
         /// </summary>
-        public double CashAmount { get; set; }
+        public double CashAmount { get; set; } = 50.00;
 
         /// <summary>
         /// Amount of attained votes
@@ -51,6 +51,16 @@ namespace WerkelijkWaar.Classes
         /// Submitted answers that are correct
         /// </summary>
         public string CorrectAnswers { get; set; }
+
+        /// <summary>
+        /// Last submitted result, correct or false?
+        /// </summary>
+        public bool LastResult { get; set; } = false;
+
+        /// <summary>
+        /// Generated score based on FollowerAmount and CashAmount
+        /// </summary>
+        public int ActualScore { get; set; }
 
         /// <summary>
         /// Date of upload
