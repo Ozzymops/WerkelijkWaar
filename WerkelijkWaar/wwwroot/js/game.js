@@ -152,10 +152,10 @@ $(document).ready(function () {
     }
 
     // -- Response to UpdateScore
-    connection.clientMethods['updateScore'] = (roomCode, socketId, result, cash, followers, ranking, end) => {
+    connection.clientMethods['updateScore'] = (roomCode, socketId, result, cash, followers, ranking, end, allowed) => {
         if (currentRoomCode == roomCode) {
             if (mySocketId == socketId || roleId == 1) {
-                UpdateScore(result, cash, followers, ranking, end);
+                UpdateScore(socketId, result, cash, followers, ranking, end, allowed);
             }
         }
     }
@@ -197,6 +197,7 @@ $(document).ready(function () {
         $('#game-results').css('display', 'none');
         $('#game-leaderboard').css('display', 'none');
         $('#leaderboard-final').css('display', 'none');
+        $('#game-end').css('display', 'none');
     }
 
     function HostRoom(newRoomCode) {
@@ -238,6 +239,7 @@ $(document).ready(function () {
         HideAll();
 
         $('#game-prep').css('display', 'block');
+        $('#cornerMascot').css('display', 'block');
         $('#statusMessage').css('display', 'block');
     }
 
@@ -454,6 +456,7 @@ $(document).ready(function () {
 
         var firstStory = true;
         var indexCount = 0;
+        selectedStory = 0;
 
         for (var story in currentStoryList) {
             var storyContent = currentStoryList[story].split(':!|');
@@ -474,8 +477,6 @@ $(document).ready(function () {
 
             if (firstStory) {
                 firstStory = false;
-
-                selectedStory = 0;
 
                 $('#readStoryTitle').html(storyContent[1]);
                 $('#readStoryText').html(storyContent[2]);
@@ -501,7 +502,7 @@ $(document).ready(function () {
         $('#write-finished').css('display', 'block');
 
         var story = storySource + "_+_" + $('#writtenStoryTitle').val().trim() + "_+_" + $('#writtenStoryText').val().trim();
-        connection.invoke('UploadStory', mySocketId, currentRoomCode, story)
+        connection.invoke('UploadStory', mySocketId, currentRoomCode, story);
     }
 
     function UploadAnswer() {
@@ -522,7 +523,7 @@ $(document).ready(function () {
         }
     }
 
-    function UpdateScore(result, cash, followers, ranking, end) {
+    function UpdateScore(socketId, result, cash, followers, ranking, end, allowed) {
         HideAll();
 
         StopTimer();
@@ -575,11 +576,13 @@ $(document).ready(function () {
                 $('#resultString').html('Jammer...\nJe verliest deze ronde ' + followerDelta + ' volgers.');
             }
         }
-       
-        setTimeout(function () { ShowLeaderboard(ranking, end); }, 5000)
+
+        if (allowed || roleId == 0) {
+            setTimeout(function () { ShowLeaderboard(socketId, ranking, end); }, 5000);
+        }
     }
 
-    function ShowLeaderboard(ranking, end) {
+    function ShowLeaderboard(socketId, ranking, end) {
         HideAll();
 
         $('#html').css('background-color', '#f5b91a');
@@ -614,13 +617,14 @@ $(document).ready(function () {
             // Show confetti
             $('#leaderboard-final').css('display', 'block');
             // end game button
+            setTimeout(EndGame, 10000);
         }
         else {
-            setTimeout(ResetColours, 5000);
+            setTimeout(function () { ResetColours(socketId); }, 5000);
         }       
     }
 
-    function ResetColours() {
+    function ResetColours(socketId) {
         $('#html').css('background-color', '#7b6ea4');
         $('#body').css('background-color', '#7b6ea4');
 
@@ -631,6 +635,13 @@ $(document).ready(function () {
 
     function UpdatePowerups(costs) {
 
+    }
+
+    function EndGame() {
+        HideAll();
+
+        $('#game-end').css('display', 'block');
+        $('#cornerMascot').css('display', 'none');
     }
     // #endregion
 
@@ -657,6 +668,10 @@ $(document).ready(function () {
         connection.invoke('LeaveRoom', userId, mySocketId, currentRoomCode, false);
     });
 
+    $('#btn-leaveGameOnEnd').click(function () {
+        connection.invoke('LeaveRoom', userId, mySocketId, currentRoomCode, false);
+    });
+
     $('#btn-startGame').click(function () {
         connection.invoke('StartGame', mySocketId, currentRoomCode);
     });
@@ -675,6 +690,10 @@ $(document).ready(function () {
 
     $('#btn-uploadAnswer').click(function () {
         UploadAnswer();
+    });
+
+    $('#testButton').click(function () {
+        connection.invoke('GoToReadPhase', userId, currentRoomCode, false);
     });
 
     $.kickUser = function (socketId) {

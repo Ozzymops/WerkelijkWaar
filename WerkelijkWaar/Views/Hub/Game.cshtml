@@ -6,7 +6,7 @@
 
 <body id="body">
     <div class="flex-center" style="flex-direction: column; margin-top: 10px;">
-        <img class="landing mascot-lowerright" src="~/content/image/Squirrel.png" />
+        <img id="cornerMascot" class="landing mascot-lowerright" src="~/content/image/Squirrel.png" />
         <div id="game">
             <input id="userIdHolder" type="hidden" value="@Model.User.Id" />
             <input id="usernameHolder" type="hidden" value="@Model.User.Username" />
@@ -172,10 +172,12 @@
                                 <img style="z-index: -1; width: 90vw; height: 70vh; margin-top: -380px;" src="~/content/image/Confetti.png" />
                                 <h2 class="subtitle" style="z-index: 0; color: white; margin-top: -380px; margin-left: -700px;">Score vandaag</h2>
                             </div>
-                        </div>                  
+                        </div>
                     </div>
                     <div id="game-end" style="display: none" ;>
-                        <input id="btn-leaveGameOnEnd" style="display: none;" class="form-button-orange" type="button" value="Afsluiten" />
+                        <img src="~/content/image/Squirrel.png" style="width: 25%; margin-left: 500px;" />
+                        <h2 class="subtitle" style="color: white; margin-top: -400px; margin-left: 300px;">Bedankt voor het spelen!</h2>
+                        <input id="btn-leaveGameOnEnd" class="form-button-orange" style="margin-top: 400px;" type="button" value="Afsluiten" />
                     </div>
                 </div>
                 <!-- #endregion -->
@@ -251,7 +253,12 @@
                     </div>
                 </div>
                 <div id="game-leaderboard" style="display: none;">
-
+                    w.i.p.
+                </div>
+                <div id="game-end" style="display: none" ;>
+                    <img src="~/content/image/Squirrel.png" style="width: 40%; margin-left: 100px;" />
+                    <h2 class="subtitle" style="color: white; margin-top: -400px; margin-left: 300px;">Bedankt voor het spelen!</h2>
+                    <input id="btn-leaveGameOnEnd" style="margin-top: 400px;" class="form-button-orange" type="button" value="Afsluiten" />
                 </div>
             }
             @if (Model.User.RoleId == 2)

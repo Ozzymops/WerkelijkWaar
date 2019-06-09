@@ -135,6 +135,11 @@ namespace WerkelijkWaar.Classes
         public int CorrectAnswer = 0;
 
         /// <summary>
+        /// Is it the final round?
+        /// </summary>
+        public bool FinalRound { get; set; } = false;
+
+        /// <summary>
         /// Needed amount of answers to progress
         /// </summary>
         public int NeededAnswers { get; set; }
