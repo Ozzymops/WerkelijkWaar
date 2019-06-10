@@ -41,27 +41,35 @@ namespace WerkelijkWaar.Controllers
             // Check if logged in
             if (!String.IsNullOrEmpty(HttpContext.Session.GetString("User")))
             {
-                Classes.User tempUser = Newtonsoft.Json.JsonConvert.DeserializeObject<Classes.User>(HttpContext.Session.GetString("User"));
+                try
+                {
+                    Classes.User tempUser = Newtonsoft.Json.JsonConvert.DeserializeObject<Classes.User>(HttpContext.Session.GetString("User"));
 
-                logger.Log("[AccountController - Login]", "(" + tempUser.Id + ") " + tempUser.Username + " validated. Navigating to...", 0, 2, false);
+                    logger.Log("[AccountController - Login]", "(" + tempUser.Id + ") " + tempUser.Username + " validated. Navigating to...", 0, 2, false);
 
-                // Student hub
-                if (tempUser.RoleId == 0)
-                {
-                    logger.Log("[AccountController - Login]", "Student hub.", 2, 2, false);
-                    return RedirectToAction("Game", "Hub");
+                    // Student hub
+                    if (tempUser.RoleId == 0)
+                    {
+                        logger.Log("[AccountController - Login]", "Student hub.", 2, 2, false);
+                        return RedirectToAction("Game", "Hub");
+                    }
+                    // Teacher hub
+                    else if (tempUser.RoleId == 1)
+                    {
+                        logger.Log("[AccountController - Login]", "Teacher hub.", 2, 2, false);
+                        return RedirectToAction("Game", "Hub");
+                    }
+                    // Admin hub
+                    else if (tempUser.RoleId == 2 || tempUser.RoleId == 3)
+                    {
+                        logger.Log("[AccountController - Login]", "Admin hub.", 2, 2, false);
+                        return RedirectToAction("Log", "Hub");
+                    }
                 }
-                // Teacher hub
-                else if (tempUser.RoleId == 1)
+                catch (Exception exception)
                 {
-                    logger.Log("[AccountController - Login]", "Teacher hub.", 2, 2, false);
-                    return RedirectToAction("Game", "Hub");
-                }
-                // Admin hub
-                else if (tempUser.RoleId == 2 || tempUser.RoleId == 3)
-                {
-                    logger.Log("[AccountController - Login]", "Admin hub.", 2, 2, false);
-                    return RedirectToAction("Log", "Hub");
+                    logger.Log("[AccountController - Login]", "Something went wrong:\n" + exception, 2, 2, false);
+                    return RedirectToAction("Index", "Home");
                 }
             }
 
@@ -75,14 +83,21 @@ namespace WerkelijkWaar.Controllers
         /// <returns>View</returns>
         public IActionResult LoginUser(LoginModel loginModel)
         {
-            int userId = dq.CheckLogin(loginModel.Username, loginModel.Password);
-
-            if (userId != 0)
+            try
             {
-                Classes.User tempUser = dq.RetrieveUser(userId);
-                HttpContext.Session.SetString("User", Newtonsoft.Json.JsonConvert.SerializeObject(tempUser));
+                int userId = dq.CheckLogin(loginModel.Username, loginModel.Password);
 
-                return RedirectToAction("Login", "Account");
+                if (userId != 0)
+                {
+                    Classes.User tempUser = dq.RetrieveUser(userId);
+                    HttpContext.Session.SetString("User", Newtonsoft.Json.JsonConvert.SerializeObject(tempUser));
+
+                    return RedirectToAction("Login", "Account");
+                }
+            }
+            catch (Exception exception)
+            {
+                logger.Log("[AccountController - Login]", "Something went wrong:\n" + exception, 2, 2, false);
             }
 
             return RedirectToAction("Index", "Home");
@@ -97,69 +112,76 @@ namespace WerkelijkWaar.Controllers
         [ValidateAntiForgeryToken]
         public IActionResult RegisterUser(RegisterModel registerModel)
         {
-            // Check if already exists
-            if (dq.CheckLogin(registerModel.Username, registerModel.Password) != 0)
+            try
             {
-                logger.Log("[AccountController - RegisterUser]", "User already exists.", 0, 2, false);
-
-                LoginModel loginModel = new LoginModel();
-                loginModel.Username = registerModel.Username;
-                loginModel.Password = registerModel.Password;
-                loginModel.Status = "De gegeven combinatie bestaat al. Log a.u.b. in.";
-                return RedirectToAction("Index", "Home", loginModel);
-            }
-
-            // Check content
-            if (registerModel != null)
-            {
-                logger.Log("[AccountController - RegisterUser]", "User does not yet exist.", 0, 2, false);
-
-                bool valid = false;
-                var reg = new Regex("[^a-zA-Z0-9_.]");
-
-                // Input validation
-                if (!reg.IsMatch(registerModel.Name))
+                // Check if already exists
+                if (dq.CheckLogin(registerModel.Username, registerModel.Password) != 0)
                 {
-                    if (!reg.IsMatch(registerModel.Surname))
+                    logger.Log("[AccountController - RegisterUser]", "User already exists.", 0, 2, false);
+
+                    LoginModel loginModel = new LoginModel();
+                    loginModel.Username = registerModel.Username;
+                    loginModel.Password = registerModel.Password;
+                    loginModel.Status = "De gegeven combinatie bestaat al. Log a.u.b. in.";
+                    return RedirectToAction("Index", "Home", loginModel);
+                }
+
+                // Check content
+                if (registerModel != null)
+                {
+                    logger.Log("[AccountController - RegisterUser]", "User does not yet exist.", 0, 2, false);
+
+                    bool valid = false;
+                    var reg = new Regex("[^a-zA-Z0-9_.]");
+
+                    // Input validation
+                    if (!reg.IsMatch(registerModel.Name))
                     {
-                        if (registerModel.RoleId.GetType() == typeof(int))
+                        if (!reg.IsMatch(registerModel.Surname))
                         {
-                            if (registerModel.Group.GetType() == typeof(int))
+                            if (registerModel.RoleId.GetType() == typeof(int))
                             {
-                                if (registerModel.PrivacyCheck)
+                                if (registerModel.Group.GetType() == typeof(int))
                                 {
-                                    valid = true;
+                                    if (registerModel.PrivacyCheck)
+                                    {
+                                        valid = true;
+                                    }
                                 }
                             }
                         }
-                    }
 
-                    if (valid)
-                    {
-                        logger.Log("[AccountController - RegisterUser]", "User content is validated.", 2, 2, false);
-
-                        // Register and login
-                        bool status = (dq.RegisterUser(new Classes.User
+                        if (valid)
                         {
-                            Name = registerModel.Name,
-                            Surname = registerModel.Surname,
-                            Username = registerModel.Username,
-                            Password = registerModel.Password,
-                            RoleId = 0,
-                            Group = Convert.ToInt32(registerModel.Group)
-                        }));
+                            logger.Log("[AccountController - RegisterUser]", "User content is validated.", 2, 2, false);
 
-                        if (status)
-                        {
-                            int userId = dq.CheckLogin(registerModel.Username, registerModel.Password);
-                            HttpContext.Session.SetString("User", Newtonsoft.Json.JsonConvert.SerializeObject(dq.RetrieveUser(userId)));
+                            // Register and login
+                            bool status = (dq.RegisterUser(new Classes.User
+                            {
+                                Name = registerModel.Name,
+                                Surname = registerModel.Surname,
+                                Username = registerModel.Username,
+                                Password = registerModel.Password,
+                                RoleId = 0,
+                                Group = Convert.ToInt32(registerModel.Group)
+                            }));
 
-                            return RedirectToAction("AccountView", "Account");
-                        }                   
+                            if (status)
+                            {
+                                int userId = dq.CheckLogin(registerModel.Username, registerModel.Password);
+                                HttpContext.Session.SetString("User", Newtonsoft.Json.JsonConvert.SerializeObject(dq.RetrieveUser(userId)));
+
+                                return RedirectToAction("AccountView", "Account");
+                            }
+                        }
+
+                        logger.Log("[AccountController - RegisterUser]", "User content is not validated.", 2, 2, false);
                     }
-
-                    logger.Log("[AccountController - RegisterUser]", "User content is not validated.", 2, 2, false);
                 }
+            }
+            catch (Exception exception)
+            {
+                logger.Log("[AccountController - RegisterUser]", "Something went wrong:\n" + exception, 2, 2, false);
             }
 
             return RedirectToAction("Register", "Account");
@@ -199,14 +221,21 @@ namespace WerkelijkWaar.Controllers
             // check if logged in
             if (!String.IsNullOrEmpty(HttpContext.Session.GetString("User")))
             {
-                Classes.User tempUser = Newtonsoft.Json.JsonConvert.DeserializeObject<Classes.User>(HttpContext.Session.GetString("User"));
-                logger.Log("[AccountController - AccountView]", "User validated.", 0, 2, false);
+                try
+                {
+                    Classes.User tempUser = Newtonsoft.Json.JsonConvert.DeserializeObject<Classes.User>(HttpContext.Session.GetString("User"));
+                    logger.Log("[AccountController - AccountView]", "User validated.", 0, 2, false);
 
-                AccountViewModel accountViewModel = new AccountViewModel();
-                accountViewModel.User = Newtonsoft.Json.JsonConvert.DeserializeObject<Classes.User>(HttpContext.Session.GetString("User"));
+                    AccountViewModel accountViewModel = new AccountViewModel();
+                    accountViewModel.User = Newtonsoft.Json.JsonConvert.DeserializeObject<Classes.User>(HttpContext.Session.GetString("User"));
 
-                logger.Log("[AccountController - AccountView]", "(" + tempUser.Id + ")" + tempUser.Username + " opening AccountView.", 2, 2, false);
-                return View(accountViewModel);
+                    logger.Log("[AccountController - AccountView]", "(" + tempUser.Id + ")" + tempUser.Username + " opening AccountView.", 2, 2, false);
+                    return View(accountViewModel);
+                }
+                catch (Exception exception)
+                {
+                    logger.Log("[AccountController - AccountView]", "Something went wrong:\n" + exception, 2, 2, false);
+                }
             }
 
             return RedirectToAction("Index", "Home");
@@ -222,43 +251,50 @@ namespace WerkelijkWaar.Controllers
             // check if logged in
             if (!String.IsNullOrEmpty(HttpContext.Session.GetString("User")))
             {
-                logger.Log("[AccountController - EditName]", "User validated.", 0, 2, false);
-
-                accountViewModel.User.Id = Newtonsoft.Json.JsonConvert.DeserializeObject<Classes.User>(HttpContext.Session.GetString("User")).Id;
-
-                if (String.IsNullOrEmpty(accountViewModel.User.Name) || String.IsNullOrEmpty(accountViewModel.User.Surname) || String.IsNullOrEmpty(accountViewModel.User.Username))
+                try
                 {
-                    logger.Log("[AccountController - EditName]", "Parameters aren't valid. Aborting...", 2, 2, false);
+                    logger.Log("[AccountController - EditName]", "User validated.", 0, 2, false);
 
-                    accountViewModel.StatusString = "Vul a.u.b. de velden correct in.";
-                    accountViewModel.StatusLocation = 0;
-                }
-                else
-                {
-                    logger.Log("[AccountController - EditName]", "Parameters are valid. Updating...", 1, 2, false);
+                    accountViewModel.User.Id = Newtonsoft.Json.JsonConvert.DeserializeObject<Classes.User>(HttpContext.Session.GetString("User")).Id;
 
-                    bool edited = dq.EditUserNames(accountViewModel.User);
-
-                    if (edited)
+                    if (String.IsNullOrEmpty(accountViewModel.User.Name) || String.IsNullOrEmpty(accountViewModel.User.Surname) || String.IsNullOrEmpty(accountViewModel.User.Username))
                     {
-                        logger.Log("[AccountController - EditName]", "(" + accountViewModel.User.Id + ")'s Name(s) have been successfully updated.", 2, 2, false);
+                        logger.Log("[AccountController - EditName]", "Parameters aren't valid. Aborting...", 2, 2, false);
 
-                        accountViewModel.StatusString = "Succes.";
+                        accountViewModel.StatusString = "Vul a.u.b. de velden correct in.";
                         accountViewModel.StatusLocation = 0;
-
-                        Classes.User tempUser = dq.RetrieveUser(Newtonsoft.Json.JsonConvert.DeserializeObject<Classes.User>(HttpContext.Session.GetString("User")).Id);
-                        HttpContext.Session.SetString("User", Newtonsoft.Json.JsonConvert.SerializeObject(tempUser));
                     }
                     else
                     {
-                        logger.Log("[AccountController - EditName]", "Something went wrong.", 2, 2, false);
+                        logger.Log("[AccountController - EditName]", "Parameters are valid. Updating...", 1, 2, false);
 
-                        accountViewModel.StatusString = "Er is iets mis gegaan. Probeer het opnieuw.";
-                        accountViewModel.StatusLocation = 0;
+                        bool edited = dq.EditUserNames(accountViewModel.User);
+
+                        if (edited)
+                        {
+                            logger.Log("[AccountController - EditName]", "(" + accountViewModel.User.Id + ")'s Name(s) have been successfully updated.", 2, 2, false);
+
+                            accountViewModel.StatusString = "Succes.";
+                            accountViewModel.StatusLocation = 0;
+
+                            Classes.User tempUser = dq.RetrieveUser(Newtonsoft.Json.JsonConvert.DeserializeObject<Classes.User>(HttpContext.Session.GetString("User")).Id);
+                            HttpContext.Session.SetString("User", Newtonsoft.Json.JsonConvert.SerializeObject(tempUser));
+                        }
+                        else
+                        {
+                            logger.Log("[AccountController - EditName]", "Something went wrong.", 2, 2, false);
+
+                            accountViewModel.StatusString = "Er is iets mis gegaan. Probeer het opnieuw.";
+                            accountViewModel.StatusLocation = 0;
+                        }
                     }
-                }
 
-                return View("AccountView", accountViewModel);
+                    return View("AccountView", accountViewModel);
+                }
+                catch (Exception exception)
+                {
+                    logger.Log("[AccountController - EditName]", "Something went wrong:\n" + exception, 2, 2, false);
+                }
             }
 
             return RedirectToAction("Index", "Home");
@@ -274,48 +310,58 @@ namespace WerkelijkWaar.Controllers
             // check if logged in
             if (!String.IsNullOrEmpty(HttpContext.Session.GetString("User")))
             {
-                logger.Log("[AccountController - EditPassword]", "User validated.", 0, 2, false);
-
-                accountViewModel.User = Newtonsoft.Json.JsonConvert.DeserializeObject<Classes.User>(HttpContext.Session.GetString("User"));
-
-                if (String.IsNullOrEmpty(accountViewModel.NewPassword) || String.IsNullOrEmpty(accountViewModel.NewPasswordConfirmation) || String.IsNullOrEmpty(accountViewModel.OldPassword))
+                try
                 {
-                    logger.Log("[AccountController - EditPassword]", "Parameters aren't valid. Aborting...", 2, 2, false);
+                    logger.Log("[AccountController - EditPassword]", "User validated.", 0, 2, false);
 
-                    accountViewModel.StatusString = "Vul a.u.b. de velden correct in.";
-                    accountViewModel.StatusLocation = 1;
-                }
-                else
-                {
-                    // check if passwords match
-                    if (accountViewModel.NewPassword == accountViewModel.NewPasswordConfirmation)
+                    accountViewModel.User = Newtonsoft.Json.JsonConvert.DeserializeObject<Classes.User>(HttpContext.Session.GetString("User"));
+
+                    if (String.IsNullOrEmpty(accountViewModel.NewPassword) || String.IsNullOrEmpty(accountViewModel.NewPasswordConfirmation) || String.IsNullOrEmpty(accountViewModel.OldPassword))
                     {
-                        logger.Log("[AccountController - EditPassword]", "Parameters are valid. Updating...", 1, 2, false);
+                        logger.Log("[AccountController - EditPassword]", "Parameters aren't valid. Aborting...", 2, 2, false);
 
-                        int userId = dq.CheckLogin(accountViewModel.User.Username, accountViewModel.OldPassword);
-
-                        if (userId != 0)
+                        accountViewModel.StatusString = "Vul a.u.b. de velden correct in.";
+                        accountViewModel.StatusLocation = 1;
+                    }
+                    else
+                    {
+                        // check if passwords match
+                        if (accountViewModel.NewPassword == accountViewModel.NewPasswordConfirmation)
                         {
-                            accountViewModel.User.Id = userId;
-                            accountViewModel.User.Password = accountViewModel.NewPassword;
+                            logger.Log("[AccountController - EditPassword]", "Parameters are valid. Updating...", 1, 2, false);
 
-                            bool edited = dq.EditPassword(accountViewModel.User);
+                            int userId = dq.CheckLogin(accountViewModel.User.Username, accountViewModel.OldPassword);
 
-                            if (edited)
+                            if (userId != 0)
                             {
-                                logger.Log("[AccountController - EditPassword]", "(" + accountViewModel.User.Id + ")'s Password has been successfully updated.", 2, 2, false);
+                                accountViewModel.User.Id = userId;
+                                accountViewModel.User.Password = accountViewModel.NewPassword;
 
-                                accountViewModel.StatusString = "Succes.";
-                                accountViewModel.StatusLocation = 1;
+                                bool edited = dq.EditPassword(accountViewModel.User);
 
-                                Classes.User tempUser = dq.RetrieveUser(Newtonsoft.Json.JsonConvert.DeserializeObject<Classes.User>(HttpContext.Session.GetString("User")).Id);
-                                HttpContext.Session.SetString("User", Newtonsoft.Json.JsonConvert.SerializeObject(tempUser));
+                                if (edited)
+                                {
+                                    logger.Log("[AccountController - EditPassword]", "(" + accountViewModel.User.Id + ")'s Password has been successfully updated.", 2, 2, false);
+
+                                    accountViewModel.StatusString = "Succes.";
+                                    accountViewModel.StatusLocation = 1;
+
+                                    Classes.User tempUser = dq.RetrieveUser(Newtonsoft.Json.JsonConvert.DeserializeObject<Classes.User>(HttpContext.Session.GetString("User")).Id);
+                                    HttpContext.Session.SetString("User", Newtonsoft.Json.JsonConvert.SerializeObject(tempUser));
+                                }
+                                else
+                                {
+                                    logger.Log("[AccountController - EditPassword]", "Something went wrong.", 2, 2, false);
+
+                                    accountViewModel.StatusString = "Er is iets mis gegaan. Probeer het opnieuw.";
+                                    accountViewModel.StatusLocation = 1;
+                                }
                             }
                             else
                             {
-                                logger.Log("[AccountController - EditPassword]", "Something went wrong.", 2, 2, false);
+                                logger.Log("[AccountController - EditPassword]", "Parameters aren't valid. Aborting...", 2, 2, false);
 
-                                accountViewModel.StatusString = "Er is iets mis gegaan. Probeer het opnieuw.";
+                                accountViewModel.StatusString = "Vul a.u.b. uw oude wachtwoord correct in.";
                                 accountViewModel.StatusLocation = 1;
                             }
                         }
@@ -323,20 +369,17 @@ namespace WerkelijkWaar.Controllers
                         {
                             logger.Log("[AccountController - EditPassword]", "Parameters aren't valid. Aborting...", 2, 2, false);
 
-                            accountViewModel.StatusString = "Vul a.u.b. uw oude wachtwoord correct in.";
+                            accountViewModel.StatusString = "Het nieuwe wachtwoord komt niet overeen met de bevestigingswachtwoord.";
                             accountViewModel.StatusLocation = 1;
                         }
                     }
-                    else
-                    {
-                        logger.Log("[AccountController - EditPassword]", "Parameters aren't valid. Aborting...", 2, 2, false);
 
-                        accountViewModel.StatusString = "Het nieuwe wachtwoord komt niet overeen met de bevestigingswachtwoord.";
-                        accountViewModel.StatusLocation = 1;
-                    }
+                    return View("AccountView", accountViewModel);
                 }
-
-                return View("AccountView", accountViewModel);
+                catch (Exception exception)
+                {
+                    logger.Log("[AccountController - EditPassword]", "Something went wrong:\n" + exception, 2, 2, false);
+                }
             }
 
             return RedirectToAction("Index", "Home");
@@ -352,64 +395,71 @@ namespace WerkelijkWaar.Controllers
             // check if logged in
             if (!String.IsNullOrEmpty(HttpContext.Session.GetString("User")))
             {
-                logger.Log("[AccountController - EditAvatar]", "User validated.", 0, 2, false);
-
-                accountViewModel.User = Newtonsoft.Json.JsonConvert.DeserializeObject<Classes.User>(HttpContext.Session.GetString("User"));
-
-                string fileType = Path.GetFileName(accountViewModel.UploadedAvatar.FileName);
-                string fileName = "";
-
-                // check filetype
-                if (fileType.EndsWith(".jpg"))
+                try
                 {
-                    fileName = "avatar_" + accountViewModel.User.Id.ToString() + ".jpg";
-                }
-                else if (fileType.EndsWith(".png"))
-                {
-                    fileName = "avatar_" + accountViewModel.User.Id.ToString() + ".png";
-                }
-                else
-                {
-                    logger.Log("[AccountController - EditAvatar]", "Parameters aren't valid. Aborting...", 2, 2, false);
+                    logger.Log("[AccountController - EditAvatar]", "User validated.", 0, 2, false);
 
-                    accountViewModel.StatusString = "Upload a.u.b. een .jpg of .png bestand.";
-                    accountViewModel.StatusLocation = 2;
+                    accountViewModel.User = Newtonsoft.Json.JsonConvert.DeserializeObject<Classes.User>(HttpContext.Session.GetString("User"));
+
+                    string fileType = Path.GetFileName(accountViewModel.UploadedAvatar.FileName);
+                    string fileName = "";
+
+                    // check filetype
+                    if (fileType.EndsWith(".jpg"))
+                    {
+                        fileName = "avatar_" + accountViewModel.User.Id.ToString() + ".jpg";
+                    }
+                    else if (fileType.EndsWith(".png"))
+                    {
+                        fileName = "avatar_" + accountViewModel.User.Id.ToString() + ".png";
+                    }
+                    else
+                    {
+                        logger.Log("[AccountController - EditAvatar]", "Parameters aren't valid. Aborting...", 2, 2, false);
+
+                        accountViewModel.StatusString = "Upload a.u.b. een .jpg of .png bestand.";
+                        accountViewModel.StatusLocation = 2;
+
+                        return View("AccountView", accountViewModel);
+                    }
+
+                    logger.Log("[AccountController - EditAvatar]", "Parameters are valid. Updating...", 1, 2, false);
+
+                    // pathing
+                    string loc = Path.Combine(hostingEnvironment.WebRootPath, "content\\image\\avatars\\" + accountViewModel.User.Id);
+                    string path = Path.Combine(loc, fileName);
+                    Directory.CreateDirectory(loc);
+
+                    // move image
+                    accountViewModel.UploadedAvatar.CopyTo(new FileStream(path, FileMode.Create));
+
+                    // Sla het pad op in de database bij de nieuwe gebruiker.
+                    bool result = dq.EditUserAvatar(accountViewModel.User.Id, fileName);
+
+                    if (result)
+                    {
+                        logger.Log("[AccountController - EditAvatar]", "(" + accountViewModel.User.Id + ")'s Avatar has been successfully updated.", 2, 2, false);
+
+                        accountViewModel.StatusString = "Succes.";
+                        accountViewModel.StatusLocation = 2;
+
+                        Classes.User tempUser = dq.RetrieveUser(Newtonsoft.Json.JsonConvert.DeserializeObject<Classes.User>(HttpContext.Session.GetString("User")).Id);
+                        HttpContext.Session.SetString("User", Newtonsoft.Json.JsonConvert.SerializeObject(tempUser));
+                    }
+                    else
+                    {
+                        logger.Log("[AccountController - EditAvatar]", "Something went wrong.", 2, 2, false);
+
+                        accountViewModel.StatusString = "Er is iets mis gegaan. Probeer het a.u.b. opnieuw.";
+                        accountViewModel.StatusLocation = 2;
+                    }
 
                     return View("AccountView", accountViewModel);
                 }
-
-                logger.Log("[AccountController - EditAvatar]", "Parameters are valid. Updating...", 1, 2, false);
-
-                // pathing
-                string loc = Path.Combine(hostingEnvironment.WebRootPath, "content\\image\\avatars\\" + accountViewModel.User.Id);
-                string path = Path.Combine(loc, fileName);
-                Directory.CreateDirectory(loc);
-
-                // move image
-                accountViewModel.UploadedAvatar.CopyTo(new FileStream(path, FileMode.Create));
-
-                // Sla het pad op in de database bij de nieuwe gebruiker.
-                bool result = dq.EditUserAvatar(accountViewModel.User.Id, fileName);
-
-                if (result)
+                catch (Exception exception)
                 {
-                    logger.Log("[AccountController - EditAvatar]", "(" + accountViewModel.User.Id + ")'s Avatar has been successfully updated.", 2, 2, false);
-
-                    accountViewModel.StatusString = "Succes.";
-                    accountViewModel.StatusLocation = 2;
-
-                    Classes.User tempUser = dq.RetrieveUser(Newtonsoft.Json.JsonConvert.DeserializeObject<Classes.User>(HttpContext.Session.GetString("User")).Id);
-                    HttpContext.Session.SetString("User", Newtonsoft.Json.JsonConvert.SerializeObject(tempUser));
+                    logger.Log("[AccountController - EditAvatar]", "Something went wrong:\n" + exception, 2, 2, false);
                 }
-                else
-                {
-                    logger.Log("[AccountController - EditAvatar]", "Something went wrong.", 2, 2, false);
-
-                    accountViewModel.StatusString = "Er is iets mis gegaan. Probeer het a.u.b. opnieuw.";
-                    accountViewModel.StatusLocation = 2;
-                }
-
-                return View("AccountView", accountViewModel);
             }
 
             return RedirectToAction("Index", "Home");
@@ -425,76 +475,85 @@ namespace WerkelijkWaar.Controllers
             // check if logged in
             if (!String.IsNullOrEmpty(HttpContext.Session.GetString("User")))
             {
-                logger.Log("[AccountController - EditUser]", "User validated.", 0, 2, false);
-
-                if (String.IsNullOrEmpty(adminModel.User.Name) || String.IsNullOrEmpty(adminModel.User.Surname) || String.IsNullOrEmpty(adminModel.User.Username))
+                try
                 {
-                    logger.Log("[AccountController - EditUser]", "Parameters aren't valid. Aborting...", 2, 2, false);
+                    logger.Log("[AccountController - EditUser]", "User validated.", 0, 2, false);
 
-                    adminModel.StatusString = "Vul a.u.b. de velden correct in.";
-                }
-                else
-                {
-                    logger.Log("[AccountController - EditUser]", "Parameters are valid. Updating...", 1, 2, false);
-
-                    bool editedNames = dq.EditUserNames(adminModel.User);
-
-                    if (editedNames)
+                    if (String.IsNullOrEmpty(adminModel.User.Name) || String.IsNullOrEmpty(adminModel.User.Surname) || String.IsNullOrEmpty(adminModel.User.Username))
                     {
-                        logger.Log("[AccountController - EditUser]", "(" + adminModel.User.Id + ")'s Name(s) have been successfully updated.", 1, 2, false);
+                        logger.Log("[AccountController - EditUser]", "Parameters aren't valid. Aborting...", 2, 2, false);
 
-                        bool editedNumbers = true;
+                        adminModel.StatusString = "Vul a.u.b. de velden correct in.";
+                    }
+                    else
+                    {
+                        logger.Log("[AccountController - EditUser]", "Parameters are valid. Updating...", 1, 2, false);
 
-                        if (editedNumbers)
+                        bool editedNames = dq.EditUserNames(adminModel.User);
+
+                        if (editedNames)
                         {
-                            logger.Log("[AccountController - EditUser]", "(" + adminModel.User.Id + ")'s Role ID and/or Group ID has been successfully updated.", 1, 2, false);
+                            logger.Log("[AccountController - EditUser]", "(" + adminModel.User.Id + ")'s Name(s) have been successfully updated.", 1, 2, false);
 
-                            if (adminModel.UploadedAvatar != null)
+                            bool editedNumbers = true;
+
+                            if (editedNumbers)
                             {
-                                string fileType = Path.GetFileName(adminModel.UploadedAvatar.FileName);
-                                string fileName = "";
+                                logger.Log("[AccountController - EditUser]", "(" + adminModel.User.Id + ")'s Role ID and/or Group ID has been successfully updated.", 1, 2, false);
 
-                                // check filetype
-                                if (fileType.EndsWith(".jpg"))
+                                if (adminModel.UploadedAvatar != null)
                                 {
-                                    fileName = "avatar_" + adminModel.User.Id.ToString() + ".jpg";
+                                    string fileType = Path.GetFileName(adminModel.UploadedAvatar.FileName);
+                                    string fileName = "";
+
+                                    // check filetype
+                                    if (fileType.EndsWith(".jpg"))
+                                    {
+                                        fileName = "avatar_" + adminModel.User.Id.ToString() + ".jpg";
+                                    }
+                                    else if (fileType.EndsWith(".png"))
+                                    {
+                                        fileName = "avatar_" + adminModel.User.Id.ToString() + ".png";
+                                    }
+                                    else
+                                    {
+                                        adminModel.StatusString = "Upload a.u.b. een .jpg of .png bestand.";
+
+                                        return RedirectToAction("IndividualUsers", "Overview", adminModel);
+                                    }
+
+                                    // pathing
+                                    string loc = Path.Combine(hostingEnvironment.WebRootPath, "content\\image\\avatars\\" + adminModel.User.Id);
+                                    string path = Path.Combine(loc, fileName);
+                                    Directory.CreateDirectory(loc);
+
+                                    // move image
+                                    adminModel.UploadedAvatar.CopyTo(new FileStream(path, FileMode.Create));
+
+                                    bool editedAvatar = dq.EditUserAvatar(adminModel.User.Id, fileName);
+
+                                    if (editedAvatar)
+                                    {
+                                        logger.Log("[AccountController - EditUser]", "(" + adminModel.User.Id + ")'s Avatar has been successfully updated.", 2, 2, false);
+
+                                        adminModel.StatusString = "Succes.";
+                                    }
+                                    else
+                                    {
+                                        logger.Log("[AccountController - EditUser]", "Something went wrong.", 2, 2, false);
+
+                                        adminModel.StatusString = "Er is iets mis gegaan. Probeer het opnieuw.";
+                                    }
                                 }
-                                else if (fileType.EndsWith(".png"))
-                                {
-                                    fileName = "avatar_" + adminModel.User.Id.ToString() + ".png";
-                                }
-                                else
-                                {
-                                    adminModel.StatusString = "Upload a.u.b. een .jpg of .png bestand.";
 
-                                    return RedirectToAction("IndividualUsers", "Overview", adminModel);
-                                }
-
-                                // pathing
-                                string loc = Path.Combine(hostingEnvironment.WebRootPath, "content\\image\\avatars\\" + adminModel.User.Id);
-                                string path = Path.Combine(loc, fileName);
-                                Directory.CreateDirectory(loc);
-
-                                // move image
-                                adminModel.UploadedAvatar.CopyTo(new FileStream(path, FileMode.Create));
-
-                                bool editedAvatar = dq.EditUserAvatar(adminModel.User.Id, fileName);
-
-                                if (editedAvatar)
-                                {
-                                    logger.Log("[AccountController - EditUser]", "(" + adminModel.User.Id + ")'s Avatar has been successfully updated.", 2, 2, false);
-
-                                    adminModel.StatusString = "Succes.";
-                                }
-                                else
-                                {
-                                    logger.Log("[AccountController - EditUser]", "Something went wrong.", 2, 2, false);
-
-                                    adminModel.StatusString = "Er is iets mis gegaan. Probeer het opnieuw.";
-                                }
+                                adminModel.StatusString = "Succes.";
                             }
+                            else
+                            {
+                                logger.Log("[AccountController - EditUser]", "Something went wrong.", 2, 2, false);
 
-                            adminModel.StatusString = "Succes."; 
+                                adminModel.StatusString = "Er is iets mis gegaan. Probeer het opnieuw.";
+                            }
                         }
                         else
                         {
@@ -503,15 +562,13 @@ namespace WerkelijkWaar.Controllers
                             adminModel.StatusString = "Er is iets mis gegaan. Probeer het opnieuw.";
                         }
                     }
-                    else
-                    {
-                        logger.Log("[AccountController - EditUser]", "Something went wrong.", 2, 2, false);
 
-                        adminModel.StatusString = "Er is iets mis gegaan. Probeer het opnieuw.";
-                    }
+                    return RedirectToAction("IndividualUsers", "Overview", new { userId = adminModel.User.Id });
                 }
-
-                return RedirectToAction("IndividualUsers", "Overview", new { userId = adminModel.User.Id });
+                catch (Exception exception)
+                {
+                    logger.Log("[AccountController - EditUser]", "Something went wrong:\n" + exception, 2, 2, false);
+                }                
             }
 
             return RedirectToAction("Index", "Home");
@@ -528,38 +585,45 @@ namespace WerkelijkWaar.Controllers
             // check if logged in as the user it's trying to destroy
             if (!String.IsNullOrEmpty(HttpContext.Session.GetString("User")))
             {
-                logger.Log("[AccountController - DeleteAccount]", "User validated.", 0, 2, false);
-
-                Classes.User tempUser = Newtonsoft.Json.JsonConvert.DeserializeObject<Classes.User>(HttpContext.Session.GetString("User"));
-
-                if (tempUser.Id == userId || tempUser.RoleId == 2 || tempUser.RoleId == 3)
+                try
                 {
-                    logger.Log("[AccountController - DeleteAccount]", "Deleting (" + userId + ")...", 1, 2, false);
+                    logger.Log("[AccountController - DeleteAccount]", "User validated.", 0, 2, false);
 
-                    bool deletedStories = dq.DeleteStoriesOfUser(userId);
-                    bool deletedScores = dq.DeleteScoresOfUser(userId);
-                    bool deletedConfig = dq.DeleteConfig(userId);
+                    Classes.User tempUser = Newtonsoft.Json.JsonConvert.DeserializeObject<Classes.User>(HttpContext.Session.GetString("User"));
 
-                    bool deleted = dq.DeleteUser(userId);
-
-                    if (deleted)
+                    if (tempUser.Id == userId || tempUser.RoleId == 2 || tempUser.RoleId == 3)
                     {
-                        logger.Log("[AccountController - DeleteAccount]", "Successfully deleted (" + userId + ").", 2, 2, false);
+                        logger.Log("[AccountController - DeleteAccount]", "Deleting (" + userId + ")...", 1, 2, false);
 
-                        if (selfDelete)
+                        bool deletedStories = dq.DeleteStoriesOfUser(userId);
+                        bool deletedScores = dq.DeleteScoresOfUser(userId);
+                        bool deletedConfig = dq.DeleteConfig(userId);
+
+                        bool deleted = dq.DeleteUser(userId);
+
+                        if (deleted)
                         {
-                            HttpContext.Session.Remove("User");
+                            logger.Log("[AccountController - DeleteAccount]", "Successfully deleted (" + userId + ").", 2, 2, false);
+
+                            if (selfDelete)
+                            {
+                                HttpContext.Session.Remove("User");
+                            }
+                            else
+                            {
+                                return RedirectToAction("UserOverview", "Overview");
+                            }
                         }
                         else
                         {
-                            return RedirectToAction("UserOverview", "Overview");
+                            logger.Log("[AccountController - DeleteAccount]", "Something went wrong.", 2, 2, false);
                         }
                     }
-                    else
-                    {
-                        logger.Log("[AccountController - DeleteAccount]", "Something went wrong.", 2, 2, false);
-                    }
                 }
+                catch (Exception exception)
+                {
+                    logger.Log("[AccountController - DeleteAccount]", "Something went wrong:\n" + exception, 2, 2, false);
+                }                
             }
 
             return RedirectToAction("Index", "Home");

@@ -24,10 +24,17 @@ namespace WerkelijkWaar.Controllers
             // login check
             if (!String.IsNullOrEmpty(HttpContext.Session.GetString("User")))
             {
-                HubModel hubModel = new HubModel();
-                hubModel.User = Newtonsoft.Json.JsonConvert.DeserializeObject<Classes.User>(HttpContext.Session.GetString("User"));
+                try
+                {
+                    HubModel hubModel = new HubModel();
+                    hubModel.User = Newtonsoft.Json.JsonConvert.DeserializeObject<Classes.User>(HttpContext.Session.GetString("User"));
 
-                return View(hubModel);
+                    return View(hubModel);
+                }
+                catch (Exception exception)
+                {
+                    logger.Log("[HubController - Game]", "Something went wrong:\n" + exception, 2, 2, false);
+                }
             }
 
             return RedirectToAction("Index", "Home");
@@ -43,12 +50,19 @@ namespace WerkelijkWaar.Controllers
             // login check
             if (!String.IsNullOrEmpty(HttpContext.Session.GetString("User")))
             {
-                ConfigModel configModel = new ConfigModel();
-                configModel.StatusString = StatusString;
-                configModel.Teacher = Newtonsoft.Json.JsonConvert.DeserializeObject<Classes.User>(HttpContext.Session.GetString("User"));
-                configModel.Config = dq.RetrieveConfig(configModel.Teacher.Id);
+                try
+                {
+                    ConfigModel configModel = new ConfigModel();
+                    configModel.StatusString = StatusString;
+                    configModel.Teacher = Newtonsoft.Json.JsonConvert.DeserializeObject<Classes.User>(HttpContext.Session.GetString("User"));
+                    configModel.Config = dq.RetrieveConfig(configModel.Teacher.Id);
 
-                return View(configModel);
+                    return View(configModel);
+                }
+                catch (Exception exception)
+                {
+                    logger.Log("[HubController - GameConfig]", "Something went wrong:\n" + exception, 2, 2, false);
+                }
             }
 
             return RedirectToAction("Index", "Home");
@@ -63,28 +77,35 @@ namespace WerkelijkWaar.Controllers
             // login check
             if (!String.IsNullOrEmpty(HttpContext.Session.GetString("User")))
             {
-                AdminModel adminModel = new AdminModel();
-                adminModel.User = Newtonsoft.Json.JsonConvert.DeserializeObject<Classes.User>(HttpContext.Session.GetString("User"));
-
-                if (adminModel.User.RoleId == 2)
+                try
                 {
-                    adminModel.Group = dq.RetrieveGroup(adminModel.User.Group);
-                    adminModel.School = dq.RetrieveSchool(adminModel.Group.SchoolId);
-                }
-                else if (adminModel.User.RoleId == 3)
-                {
-                    List<Classes.School> tempSchoolList = dq.RetrieveSchools();
-                    List<Classes.School> schoolList = new List<Classes.School>();
+                    AdminModel adminModel = new AdminModel();
+                    adminModel.User = Newtonsoft.Json.JsonConvert.DeserializeObject<Classes.User>(HttpContext.Session.GetString("User"));
 
-                    foreach (Classes.School school in tempSchoolList)
+                    if (adminModel.User.RoleId == 2)
                     {
-                        schoolList.Add(new Classes.School { Id = school.Id, SchoolName = school.SchoolName });
+                        adminModel.Group = dq.RetrieveGroup(adminModel.User.Group);
+                        adminModel.School = dq.RetrieveSchool(adminModel.Group.SchoolId);
+                    }
+                    else if (adminModel.User.RoleId == 3)
+                    {
+                        List<Classes.School> tempSchoolList = dq.RetrieveSchools();
+                        List<Classes.School> schoolList = new List<Classes.School>();
+
+                        foreach (Classes.School school in tempSchoolList)
+                        {
+                            schoolList.Add(new Classes.School { Id = school.Id, SchoolName = school.SchoolName });
+                        }
+
+                        adminModel.SchoolList = new SelectList(schoolList, "Id", "SchoolName");
                     }
 
-                    adminModel.SchoolList = new SelectList(schoolList, "Id", "SchoolName");
+                    return View(adminModel);
                 }
-
-                return View(adminModel);
+                catch (Exception exception)
+                {
+                    logger.Log("[HubController - Log]", "Something went wrong:\n" + exception, 2, 2, false);
+                }          
             }
 
             return RedirectToAction("Index", "Home");
@@ -99,12 +120,19 @@ namespace WerkelijkWaar.Controllers
             // login check
             if (!String.IsNullOrEmpty(HttpContext.Session.GetString("User")))
             {
-                HubModel hubModel = new HubModel();
-                hubModel.User = Newtonsoft.Json.JsonConvert.DeserializeObject<Classes.User>(HttpContext.Session.GetString("User"));
-
-                if (hubModel.User.RoleId == 3)
+                try
                 {
-                    return View(hubModel);
+                    HubModel hubModel = new HubModel();
+                    hubModel.User = Newtonsoft.Json.JsonConvert.DeserializeObject<Classes.User>(HttpContext.Session.GetString("User"));
+
+                    if (hubModel.User.RoleId == 3)
+                    {
+                        return View(hubModel);
+                    }
+                }
+                catch (Exception exception)
+                {
+                    logger.Log("[HubController - ServerConfig]", "Something went wrong:\n" + exception, 2, 2, false);
                 }
             }
 

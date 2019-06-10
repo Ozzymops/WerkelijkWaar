@@ -11,6 +11,9 @@ namespace WerkelijkWaar.Controllers
 {
     public class HomeController : Controller
     {
+        // Standard classes
+        Classes.Logger logger = new Classes.Logger();
+
         /// <summary>
         /// Navigate to Index
         /// </summary>
@@ -18,15 +21,24 @@ namespace WerkelijkWaar.Controllers
         /// <returns>View</returns>
         public IActionResult Index(LoginModel loginModel)
         {
-            if (loginModel == null)
+            try
             {
-                loginModel = new LoginModel();
-            }
+                if (loginModel == null)
+                {
+                    loginModel = new LoginModel();
+                }
 
-            // login check
-            if (!String.IsNullOrEmpty(HttpContext.Session.GetString("User")))
+                // login check
+                if (!String.IsNullOrEmpty(HttpContext.Session.GetString("User")))
+                {
+                    return RedirectToAction("Login", "Account");
+                }
+
+            }
+            catch (Exception exception)
             {
-                return RedirectToAction("Login", "Account");
+                logger.Log("[HomeController - Index]", "Something went wrong:\n" + exception, 2, 2, false);
+                loginModel.Status = "Er is iets mis gegaan.";
             }
 
             return View(loginModel);

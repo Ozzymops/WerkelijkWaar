@@ -30,55 +30,66 @@ namespace WerkelijkWaar.Models
         /// </summary>
         public void GenerateAverage()
         {
-            if (UserList != null && UserList.Count != 0)
+            try
             {
-                // Individual
-                foreach (Classes.User user in UserList)
+                logger.Log("[HubModel - GenerateAverage]", "Calculating AverageScore...", 0, 2, false);
+
+                if (UserList != null && UserList.Count != 0)
                 {
-                    List<Classes.Score> listOfScores = dq.RetrieveScoresOfUser(user.Id);
-
-                    if (listOfScores != null && listOfScores.Count != 0)
+                    // Individual
+                    foreach (Classes.User user in UserList)
                     {
-                        decimal correctAnswers = 0;
-                        decimal totalLengthOfAnswers = 0;
+                        List<Classes.Score> listOfScores = dq.RetrieveScoresOfUser(user.Id);
 
-                        foreach (Classes.Score score in listOfScores)
+                        if (listOfScores != null && listOfScores.Count != 0)
                         {
-                            if (score.GameType == 1)
+                            decimal correctAnswers = 0;
+                            decimal totalLengthOfAnswers = 0;
+
+                            foreach (Classes.Score score in listOfScores)
                             {
-                                char[] digits = score.Answers.ToCharArray();
-
-                                foreach (char digit in digits)
+                                if (score.GameType == 1)
                                 {
-                                    if (digit == '1')
-                                    {
-                                        correctAnswers += 1;
-                                    }
+                                    char[] digits = score.Answers.ToCharArray();
 
-                                    totalLengthOfAnswers += 1;
+                                    foreach (char digit in digits)
+                                    {
+                                        if (digit == '1')
+                                        {
+                                            correctAnswers += 1;
+                                        }
+
+                                        totalLengthOfAnswers += 1;
+                                    }
                                 }
                             }
+
+                            double tempAverage = (double)((correctAnswers / totalLengthOfAnswers) * 10);
+                            user.AverageScore = tempAverage;
                         }
-
-                        double tempAverage = (double)((correctAnswers / totalLengthOfAnswers) * 10);
-                        user.AverageScore = tempAverage;
+                        else
+                        {
+                            user.AverageScore = 0.0;
+                        }
                     }
-                    else
+
+                    // Class
+                    double totalAverage = 0.0;
+
+                    foreach (Classes.User u in UserList)
                     {
-                        user.AverageScore = 0.0;
+                        totalAverage += u.AverageScore;
                     }
+
+                    AverageScore = (totalAverage / UserList.Count);
+                    logger.Log("[HubModel - GenerateAverage]", "AverageScore is " + AverageScore, 2, 2, false);
                 }
-
-                // Class
-                double totalAverage = 0.0;
-
-                foreach (Classes.User u in UserList)
-                {
-                    totalAverage += u.AverageScore;
-                }
-
-                AverageScore = (totalAverage / UserList.Count);
             }
+            catch (Exception exception)
+            {
+                logger.Log("[HubModel - GenerateAverage]", "Something went wrong:\n" + exception, 2, 2, false);
+                AverageScore = 0;
+            }          
         }
     }
 }

@@ -37,37 +37,48 @@ namespace WerkelijkWaar.Models
         /// </summary>
         public void GenerateAverage()
         {
+            Classes.Logger logger = new Classes.Logger();
             Classes.DatabaseQueries dq = new Classes.DatabaseQueries();
 
-            if (Scores != null && Scores.Count != 0)
+            try
             {
-                decimal correctAnswers = 0;
-                decimal totalLengthOfAnswers = 0;
+                logger.Log("[HubModel - GenerateAverage]", "Calculating AverageScore...", 0, 2, false);
 
-                foreach (Classes.Score score in Scores)
+                if (Scores != null && Scores.Count != 0)
                 {
-                    if (score.GameType == 1)
+                    decimal correctAnswers = 0;
+                    decimal totalLengthOfAnswers = 0;
+
+                    foreach (Classes.Score score in Scores)
                     {
-                        char[] digits = score.Answers.ToCharArray();
-
-                        foreach (char digit in digits)
+                        if (score.GameType == 1)
                         {
-                            if (digit == '1')
-                            {
-                                correctAnswers++;
-                            }
+                            char[] digits = score.Answers.ToCharArray();
 
-                            totalLengthOfAnswers++;
+                            foreach (char digit in digits)
+                            {
+                                if (digit == '1')
+                                {
+                                    correctAnswers++;
+                                }
+
+                                totalLengthOfAnswers++;
+                            }
                         }
                     }
-                }
 
-                User.AverageScore = (double)((correctAnswers / totalLengthOfAnswers) * 10);
+                    User.AverageScore = (double)((correctAnswers / totalLengthOfAnswers) * 10);
+                }
+                else
+                {
+                    User.AverageScore = 0.0;
+                }
             }
-            else
+            catch (Exception exception)
             {
+                logger.Log("[ScoreOverviewModel - GenerateAverage]", "Something went wrong:\n" + exception, 2, 2, false);
                 User.AverageScore = 0.0;
-            }
+            }           
         }            
     }
 }

@@ -252,116 +252,123 @@ namespace WerkelijkWaar.Classes
         {
             logger.Log("[Room - GamePreparation]", "Room is being prepared for gameplay.", 0, 1, false);
 
-            int playerCount = Users.Count();
-
-            logger.Log("[Room - GamePreparation]", "Room contains " + playerCount + " players.", 1, 1, false);
-
-            // Enough players?
-            if (playerCount >= (MinPlayers*2))
+            try
             {
-                logger.Log("[Room - GamePreparation]", "Room has enough players (" + playerCount + "/" + MinPlayers + ")", 1, 1, false);
+                int playerCount = Users.Count();
 
-                // Shuffle user list
-                Random rng = new Random();
-                List<User> shuffledUsers = Users;
+                logger.Log("[Room - GamePreparation]", "Room contains " + playerCount + " players.", 1, 1, false);
 
-                logger.Log("[Room - GamePreparation]", "Shuffling user list...", 1, 1, false);
-
-                int playersToProcess = playerCount;
-                while (playersToProcess > 1)
+                // Enough players?
+                if (playerCount >= (MinPlayers * 2))
                 {
-                    playersToProcess--;
-                    int userIndex = rng.Next(playersToProcess + 1);
-                    User selectedUser = shuffledUsers[userIndex];
-                    shuffledUsers[userIndex] = shuffledUsers[playersToProcess];
-                    shuffledUsers[playersToProcess] = selectedUser;
-                }
+                    logger.Log("[Room - GamePreparation]", "Room has enough players (" + playerCount + "/" + MinPlayers + ")", 1, 1, false);
 
-                logger.Log("[Room - GamePreparation]", "Assigning players to groups...", 1, 1, false);
+                    // Shuffle user list
+                    Random rng = new Random();
+                    List<User> shuffledUsers = Users;
 
-                // Assign players to groups
-                int currentGroup = 1;
-                int maxPlayersInGroup = MinPlayers;
-                int unevenPlayers = 0;
+                    logger.Log("[Room - GamePreparation]", "Shuffling user list...", 1, 1, false);
 
-                // Groups of six
-                if (shuffledUsers.Count % MinPlayers == 0)
-                {
-                    unevenPlayers = 0;
-                }
-                // Groups of x
-                else if (shuffledUsers.Count % MinPlayers >= 1)
-                {
-                    unevenPlayers = (shuffledUsers.Count % MinPlayers);
-                }
-
-                foreach (User user in shuffledUsers)
-                {
-                    // One extra player per group
-                    if (unevenPlayers == 1)
+                    int playersToProcess = playerCount;
+                    while (playersToProcess > 1)
                     {
-                        maxPlayersInGroup += unevenPlayers;
-                        unevenPlayers--;
-                    }
-                    // x extra players per group
-                    else if (unevenPlayers >= 2)
-                    {
-                        maxPlayersInGroup += 1;
-                        unevenPlayers -= 1;
+                        playersToProcess--;
+                        int userIndex = rng.Next(playersToProcess + 1);
+                        User selectedUser = shuffledUsers[userIndex];
+                        shuffledUsers[userIndex] = shuffledUsers[playersToProcess];
+                        shuffledUsers[playersToProcess] = selectedUser;
                     }
 
-                    user.GameGroup = currentGroup;
-                    maxPlayersInGroup--;
+                    logger.Log("[Room - GamePreparation]", "Assigning players to groups...", 1, 1, false);
 
-                    if (maxPlayersInGroup <= 0)
+                    // Assign players to groups
+                    int currentGroup = 1;
+                    int maxPlayersInGroup = MinPlayers;
+                    int unevenPlayers = 0;
+
+                    // Groups of six
+                    if (shuffledUsers.Count % MinPlayers == 0)
                     {
-                        currentGroup++;
-                        maxPlayersInGroup = MinPlayers;
+                        unevenPlayers = 0;
+                    }
+                    // Groups of x
+                    else if (shuffledUsers.Count % MinPlayers >= 1)
+                    {
+                        unevenPlayers = (shuffledUsers.Count % MinPlayers);
                     }
 
-                    GroupCount = (currentGroup - 1);
+                    foreach (User user in shuffledUsers)
+                    {
+                        // One extra player per group
+                        if (unevenPlayers == 1)
+                        {
+                            maxPlayersInGroup += unevenPlayers;
+                            unevenPlayers--;
+                        }
+                        // x extra players per group
+                        else if (unevenPlayers >= 2)
+                        {
+                            maxPlayersInGroup += 1;
+                            unevenPlayers -= 1;
+                        }
+
+                        user.GameGroup = currentGroup;
+                        maxPlayersInGroup--;
+
+                        if (maxPlayersInGroup <= 0)
+                        {
+                            currentGroup++;
+                            maxPlayersInGroup = MinPlayers;
+                        }
+
+                        GroupCount = (currentGroup - 1);
+                    }
+
+                    // Assign stories to groups
+                    List<Story> shuffledStories = dq.RetrieveAllStories();
+
+                    logger.Log("[Room - GamePreparation]", "Assigning stories to groups...", 1, 1, false);
+
+                    // Shuffle stories
+                    int storiesToProcess = shuffledStories.Count;
+                    while (storiesToProcess > 1)
+                    {
+                        storiesToProcess--;
+                        int storyIndex = rng.Next(storiesToProcess + 1);
+                        Story selectedStory = shuffledStories[storyIndex];
+                        shuffledStories[storyIndex] = shuffledStories[storiesToProcess];
+                        shuffledStories[storiesToProcess] = selectedStory;
+                    }
+
+                    for (int group = 1; group < currentGroup; group++)
+                    {
+                        RetrievedStories.Add(shuffledStories[group - 1]);
+                    }
+
+                    logger.Log("[Room - GamePreparation]", "Creating score objects for the players...", 1, 1, false);
+
+                    // Create empty Score list
+                    foreach (User user in Users)
+                    {
+                        Score tempScore = new Score { OwnerId = user.Id, SocketId = user.SocketId, Answers = "", AttainedVotes = 0, CashAmount = 0.00, CorrectAnswers = "", GameType = 0, FollowerAmount = 0, Date = DateTime.Now };
+                        SelectedAnswers.Add(tempScore);
+                    }
+
+                    logger.Log("[Room - GamePreparation]", "Room is prepared.", 2, 1, false);
+
+                    return true;
                 }
-
-                // Assign stories to groups
-                List<Story> shuffledStories = dq.RetrieveAllStories();
-
-                logger.Log("[Room - GamePreparation]", "Assigning stories to groups...", 1, 1, false);
-
-                // Shuffle stories
-                int storiesToProcess = shuffledStories.Count;
-                while (storiesToProcess > 1)
+                else
                 {
-                    storiesToProcess--;
-                    int storyIndex = rng.Next(storiesToProcess + 1);
-                    Story selectedStory = shuffledStories[storyIndex];
-                    shuffledStories[storyIndex] = shuffledStories[storiesToProcess];
-                    shuffledStories[storiesToProcess] = selectedStory;
+                    logger.Log("[Room - GamePreparation]", "Room does not have enough players (" + playerCount + "/" + MinPlayers + ")", 2, 1, false);
+
+                    return false;
                 }
-
-                for (int group = 1; group < currentGroup; group++)
-                {
-                    RetrievedStories.Add(shuffledStories[group - 1]);
-                }
-
-                logger.Log("[Room - GamePreparation]", "Creating score objects for the players...", 1, 1, false);
-
-                // Create empty Score list
-                foreach (User user in Users)
-                {
-                    Score tempScore = new Score { OwnerId = user.Id, SocketId = user.SocketId, Answers = "", AttainedVotes = 0, CashAmount = 0.00, CorrectAnswers = "", GameType = 0, FollowerAmount = 0, Date = DateTime.Now };
-                    SelectedAnswers.Add(tempScore);
-                }
-
-                logger.Log("[Room - GamePreparation]", "Room is prepared.", 2, 1, false);
-
-                return true;
             }
-            else
+            catch (Exception exception)
             {
-                logger.Log("[Room - GamePreparation]", "Room does not have enough players (" + playerCount + "/" + MinPlayers + ")", 2, 1, false);
-
-                return false;
-            }
+                logger.Log("[Room - GamePreparation]", "Something went wrong:\n" + exception, 2, 1, false);
+            }           
         }
 
         /// <summary>

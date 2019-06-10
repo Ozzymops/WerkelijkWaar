@@ -24,40 +24,47 @@ namespace WerkelijkWaar.Controllers
             // login check
             if (!String.IsNullOrEmpty(HttpContext.Session.GetString("User")))
             {
-                logger.Log("[ConfigController - CreateConfig]", "User validated.", 0, 2, false);
-
-                configModel.Teacher = Newtonsoft.Json.JsonConvert.DeserializeObject<Classes.User>(HttpContext.Session.GetString("User"));
-
-                bool success = false;
-                string response = "";
-
-                if (dq.RetrieveConfig(configModel.Teacher.Id) == null || configModel.Config.Id == 0)
+                try
                 {
-                    logger.Log("[ConfigController - CreateConfig]", "Configuration of (" + configModel.Teacher.Id + ") does not exist yet. Creating...", 1, 2, false);
+                    logger.Log("[ConfigController - CreateConfig]", "User validated.", 0, 2, false);
 
-                    success = dq.CreateConfig(configModel.Config);
+                    configModel.Teacher = Newtonsoft.Json.JsonConvert.DeserializeObject<Classes.User>(HttpContext.Session.GetString("User"));
+
+                    bool success = false;
+                    string response = "";
+
+                    if (dq.RetrieveConfig(configModel.Teacher.Id) == null || configModel.Config.Id == 0)
+                    {
+                        logger.Log("[ConfigController - CreateConfig]", "Configuration of (" + configModel.Teacher.Id + ") does not exist yet. Creating...", 1, 2, false);
+
+                        success = dq.CreateConfig(configModel.Config);
+                    }
+                    else
+                    {
+                        logger.Log("[ConfigController - CreateConfig]", "Configuration of (" + configModel.Teacher.Id + ") already exists. Updating...", 1, 2, false);
+
+                        success = dq.UpdateConfig(configModel.Config);
+                    }
+
+                    if (success)
+                    {
+                        logger.Log("[ConfigController - CreateConfig]", "Created/updated (" + configModel.Teacher.Id + ")'s configuration.", 2, 2, false);
+
+                        response = "Succes.";
+                    }
+                    else
+                    {
+                        logger.Log("[ConfigController - CreateConfig]", "Something went wrong.", 2, 2, false);
+
+                        response = "Er is iets mis gegaan.";
+                    }
+
+                    return RedirectToAction("GameConfig", "Hub", response);
                 }
-                else
+                catch (Exception exception)
                 {
-                    logger.Log("[ConfigController - CreateConfig]", "Configuration of (" + configModel.Teacher.Id + ") already exists. Updating...", 1, 2, false);
-
-                    success = dq.UpdateConfig(configModel.Config);
-                }
-
-                if (success)
-                {
-                    logger.Log("[ConfigController - CreateConfig]", "Created/updated (" + configModel.Teacher.Id + ")'s configuration.", 2, 2, false);
-
-                    response = "Succes.";
-                }
-                else
-                {
-                    logger.Log("[ConfigController - CreateConfig]", "Something went wrong.", 2, 2, false);
-
-                    response = "Er is iets mis gegaan.";
-                }
-
-                return RedirectToAction("GameConfig", "Hub", response);
+                    logger.Log("[ConfigController - CreateConfig]", "Something went wrong:\n" + exception, 2, 2, false);
+                }              
             }
 
             return RedirectToAction("Index", "Home");
