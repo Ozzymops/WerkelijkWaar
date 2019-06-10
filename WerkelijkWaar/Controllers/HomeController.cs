@@ -50,7 +50,7 @@ namespace WerkelijkWaar.Controllers
         /// <returns>View</returns>
         public IActionResult GoToRegister()
         {
-            return RedirectToAction("Register", "Account");
+            return RedirectToAction("Register", "Account", null);
         }
 
         /// <summary>

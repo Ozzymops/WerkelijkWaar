@@ -15,6 +15,10 @@
 <body>
     <div class="flex-center" style="flex-direction: column; margin-top: 10px;">
         <h2 class="subtitle">Registreren</h2>
+        @if (!String.IsNullOrEmpty(Model.StatusString))
+        {
+            <p class="before-input" style="color: red;">@Model.StatusString</p>
+        }
         <form asp-action="RegisterUser" asp-controller="Account">
             <input asp-for="RoleId" value="0" type="hidden" />
             <div>

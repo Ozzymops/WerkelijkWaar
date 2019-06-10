@@ -303,18 +303,21 @@ namespace WerkelijkWaar.Controllers
 
                     if (tempUser.RoleId == 1)
                     {
-                        individualModel.Score.CashAmount = Convert.ToDouble(individualModel.ScoreCashString);
-
-                        string answerString = "";
-
-                        foreach (string s in individualModel.ScoreAnswerArray)
+                        if (!String.IsNullOrEmpty(individualModel.Score.Answers))
                         {
-                            answerString += s + " ";
-                        }
+                            individualModel.Score.CashAmount = Convert.ToDouble(individualModel.ScoreCashString);
 
-                        individualModel.Score.Answers = answerString;
-                        individualModel.Score.GameType = individualModel.GameTypeIndex;
-                        bool results = dq.CreateScore(individualModel.Score);
+                            string answerString = "";
+
+                            foreach (string s in individualModel.ScoreAnswerArray)
+                            {
+                                answerString += s + " ";
+                            }
+
+                            individualModel.Score.Answers = answerString;
+                            individualModel.Score.GameType = individualModel.GameTypeIndex;
+                            bool results = dq.CreateScore(individualModel.Score);
+                        }                        
                     }
 
                     return RedirectToAction("ScoreOverview", "Overview", new { scoreId = individualModel.Score.OwnerId, rank = 0 });

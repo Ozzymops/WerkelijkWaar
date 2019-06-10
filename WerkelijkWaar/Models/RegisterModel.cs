@@ -9,6 +9,11 @@ namespace WerkelijkWaar.Models
     public class RegisterModel
     {
         /// <summary>
+        /// Status string
+        /// </summary>
+        public string StatusString { get; set; }
+
+        /// <summary>
         /// Role ID
         /// </summary>
         [Required]

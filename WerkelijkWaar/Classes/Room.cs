@@ -368,7 +368,9 @@ namespace WerkelijkWaar.Classes
             catch (Exception exception)
             {
                 logger.Log("[Room - GamePreparation]", "Something went wrong:\n" + exception, 2, 1, false);
-            }           
+            }
+
+            return false;
         }
 
         /// <summary>
