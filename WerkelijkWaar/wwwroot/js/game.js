@@ -18,6 +18,7 @@ $(document).ready(function () {
     var timer = 0;
     var currentTimer;
     var inRoom = false;
+    var powerupDrawer = false;
 
     var myGroup = 0;
     var myCash = 0.00;
@@ -26,6 +27,7 @@ $(document).ready(function () {
     var maxAnswers = 1;
     var selectedAnswer = '';
     var currentStoryList;
+    var currentGroup = '';
     // #endregion
 
     // #region WebSockets
@@ -129,10 +131,10 @@ $(document).ready(function () {
     }
 
     // -- Response to ReadPhase
-    connection.clientMethods['readPhase'] = (roomCode, socketId, gameGroup, currentGroup) => {
+    connection.clientMethods['readPhase'] = (roomCode, socketId, gameGroup, thisGroup) => {
         if (currentRoomCode == roomCode) {
             if (mySocketId == socketId) {
-                ReadPhase(gameGroup, currentGroup);
+                ReadPhase(gameGroup, thisGroup);
             }
         }
     }
@@ -322,10 +324,11 @@ $(document).ready(function () {
         $('#write-busy').css('display', 'block');
     }
 
-    function ReadPhase(gameGroup, currentGroup) {
+    function ReadPhase(gameGroup, thisGroup) {
         HideAll();
 
         myGroup = gameGroup;
+        currentGroup = thisGroup;
 
         $('#game-read').css('display', 'block');
         $('#read-busy').css('display', 'block');
@@ -633,7 +636,80 @@ $(document).ready(function () {
         }
     }
 
+    function ShowPowerups() {
+        powerupDrawer = !powerupDrawer;
+
+        console.log(powerupDrawer);
+
+        if (powerupDrawer) {
+            $('#movingDrawer').css('margin-left', '1400px');
+        }
+        else {
+            $('#movingDrawer').css('margin-left', '2000px');
+        }
+    }
+
     function UpdatePowerups(costs) {
+        var costList = JSON.parse(costs);
+
+        $('btn-activatePowerup-1').html('Twee antwoorden kiezen (€' + costs[0] + '-)');
+        $('btn-activatePowerup-2').html('Dubbele punten (€' + costs[1] + '-)');
+        $('btn-activatePowerup-3').html('50% wegstrepen (€' + costs[2] + '-)');
+        $('btn-activatePowerup-4').html('Spieken (€' + costs[3] + '-)');
+        $('btn-activatePowerup-5').html('Dubbele punten voor jouw verhaal (€' + costs[4] + '-)');
+
+        if (myGroup == currentGroup) {
+            $('btn-activatePowerup-1').css('display', 'none');
+            $('btn-activatePowerup-2').css('display', 'none');
+            $('btn-activatePowerup-3').css('display', 'none');
+            $('btn-activatePowerup-4').css('display', 'none');
+            $('btn-activatePowerup-5').css('display', 'block');
+        }
+        else {
+            $('btn-activatePowerup-1').css('display', 'block');
+            $('btn-activatePowerup-2').css('display', 'block');
+            $('btn-activatePowerup-3').css('display', 'block');
+            $('btn-activatePowerup-4').css('display', 'block');
+            $('btn-activatePowerup-5').css('display', 'none');
+        }
+
+        if (currentMoney < costList[0]) {
+            $('btn-activatePowerup-1').css('background-color', 'red');
+        }
+        else {
+            $('btn-activatePowerup-1').css('background-color', 'green');
+        }
+
+        if (currentMoney < costList[1]) {
+            $('btn-activatePowerup-2').css('background-color', 'red');
+        }
+        else {
+            $('btn-activatePowerup-2').css('background-color', 'green');
+        }
+
+        if (currentMoney < costList[2]) {
+            $('btn-activatePowerup-3').css('background-color', 'red');
+        }
+        else {
+            $('btn-activatePowerup-3').css('background-color', 'green');
+        }
+
+        if (currentMoney < costList[3]) {
+            $('btn-activatePowerup-4').css('background-color', 'red');
+        }
+        else {
+            $('btn-activatePowerup-4').css('background-color', 'green');
+        }
+
+        if (currentMoney < costList[4]) {
+            $('btn-activatePowerup-5').css('background-color', 'red');
+        }
+        else {
+            $('btn-activatePowerup-5').css('background-color', 'green');
+        }
+    }
+
+    function PurchasePowerup(powerup) {
 
     }
 
@@ -692,8 +768,12 @@ $(document).ready(function () {
         UploadAnswer();
     });
 
-    $('#testButton').click(function () {
-        connection.invoke('GoToReadPhase', userId, currentRoomCode, false);
+    $('#btn-openPowerupDrawer').click(function () {
+        ShowPowerups();
+    });
+
+    $('#btn-activatePowerup-1').click(function () {
+
     });
 
     $.kickUser = function (socketId) {

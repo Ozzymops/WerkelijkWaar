@@ -110,7 +110,7 @@
                     </div>
                     <!-- #endregion -->
                     <!-- #region Read -->
-                    <div id="game-read" style="display: none; width: 100vw;">
+                    <div id="game-read" style="display: none; width: 100vw; height: 80vh; overflow: hidden;">
                         <div id="read-busy">
                             <div style="display: flex; flex-direction: column;">
                                 <div style="display: flex; flex-direction: row; justify-content: center;">
@@ -125,15 +125,17 @@
                                     </div>
                                 </div>
                                 <div>
-                                    <input id="btn-uploadAnswer" class="form-button-orange" style="margin-right: 310px; margin-top: 20px; width: 150px;" type="button" value="Deel" />
-                                    <input id="btn-activatePowerup" class="form-button-orange" style="margin-right: 310px; margin-top: 20px; width: 150px;" type="button" value="Hulplijn" />
-                                    <div id="powerupBar" style="display: none;">
+                                    <input id="btn-uploadAnswer" class="form-button-orange" style="margin-right: 500px; margin-top: 20px; width: 150px;" type="button" value="Deel" />
+                                    <input id="btn-openPowerupDrawer" class="form-button-orange" style="margin-right: 310px; margin-top: -40px; width: 150px;" type="button" value="Hulplijn" />
+                                </div>
+                                <div id="powerupDrawer" style="display: block;">
+                                    <div id="movingDrawer" style="transition: margin-left 0.5s; transition-timing-function: linear; background-color: #ee860d; padding: 5px; width: 500px; height: 300px; border-radius: 25px; margin-top: -550px; margin-left: 2000px;">
                                         <p id="powerupFeedback"></p>
-                                        <input id="btn-activatePowerup-1" class="form-button-orange" type="button" value="Twee antwoorden kiezen" />
-                                        <input id="btn-activatePowerup-2" class="form-button-orange" type="button" value="Dubbele punten" />
-                                        <input id="btn-activatePowerup-3" class="form-button-orange" type="button" value="50% wegstrepen" />
-                                        <input id="btn-activatePowerup-4" class="form-button-orange" type="button" value="Spieken" />
-                                        <input id="btn-activatePowerup-5" class="form-button-orange" type="button" value="Dubbele punten voor jouw verhaal" style="display: none;" />
+                                        <input id="btn-activatePowerup-1" class="form-button-orange" style="border: 1px solid rgba(189, 101, 0, 1);" type="button" value="Twee antwoorden kiezen" />
+                                        <input id="btn-activatePowerup-2" class="form-button-orange" style="border: 1px solid rgba(189, 101, 0, 1);" type="button" value="Dubbele punten" />
+                                        <input id="btn-activatePowerup-3" class="form-button-orange" style="border: 1px solid rgba(189, 101, 0, 1);" type="button" value="50% wegstrepen" />
+                                        <input id="btn-activatePowerup-4" class="form-button-orange" style="border: 1px solid rgba(189, 101, 0, 1);" type="button" value="Spieken" />
+                                        <input id="btn-activatePowerup-5" class="form-button-orange" style="display: none; border: 1px solid rgba(189, 101, 0, 1);" type="button" value="Dubbele punten voor jouw verhaal" />
                                     </div>
                                 </div>
                             </div>
@@ -141,7 +143,7 @@
                         <div id="read-finished" style="display: none;">
                             <h2 class="subtitle" id="randomFinishString" style="color: white;">Was dat het juiste antwoord? We zullen zien!</h2>
                         </div>
-                        <span class="timerBar" style="transition: width 1s, background-color 1s; transition-timing-function: linear; display: none; border-radius: 25px; margin-left: auto; margin-right: auto; width: 100vw; height: 50px; background-color: #f7c747; text-align: center;"></span>
+                        <span class="timerBar" style="margin-top: 10px; transition: width 1s, background-color 1s; transition-timing-function: linear; display: none; border-radius: 25px; margin-left: auto; margin-right: auto; width: 100vw; height: 50px; background-color: #f7c747; text-align: center;"></span>
                         <h2 class="timerClock" style="transition: color 1s; transition-timing-function: linear; color: black; margin-top: -43px; font-size: 24px; text-align: center; font-weight: 400;">00:00</h2>
                     </div>
                     <!-- #endregion -->

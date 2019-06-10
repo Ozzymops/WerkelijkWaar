@@ -3310,3 +3310,991 @@
 9-6-2019 | 12:27: End.
 --------[END]--------
 
+-----[LOG ENTRY]-----
+[Game - HostRoom]
+10-6-2019 | 11:52: User JMuris (4) is trying to host a room.
+10-6-2019 | 11:52: (4) validated.
+10-6-2019 | 11:52: (4, 97aq7N) retrieved configuration with Id 0.
+10-6-2019 | 11:52: (4, 97aq7N) applied configuration.
+10-6-2019 | 11:52: (4, 97aq7N) room is open and ready.
+10-6-2019 | 11:52: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[Game - JoinRoom]
+10-6-2019 | 11:52: User AAppel (5) is trying to join room 97aq7N.
+10-6-2019 | 11:52: (5) validated.
+10-6-2019 | 11:52: (5) found room 97aq7N.
+10-6-2019 | 11:52: (5) successfully joined room 97aq7N.
+10-6-2019 | 11:52: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[Game - JoinRoom]
+10-6-2019 | 11:52: User AAppel (5) is trying to join room 97aq7N.
+10-6-2019 | 11:52: (5) validated.
+10-6-2019 | 11:52: (5) found room 97aq7N.
+10-6-2019 | 11:52: (5) successfully joined room 97aq7N.
+10-6-2019 | 11:52: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[Game - StartGame]
+10-6-2019 | 11:52: Starting game in room 97aq7N...
+10-6-2019 | 11:52: Preparations are complete. Game in room 97aq7N has started.
+10-6-2019 | 11:52: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[Game - SkipTutorial]
+10-6-2019 | 11:52: 97aq7N tutorial will be skipped.
+10-6-2019 | 11:52: 97aq7N continuing game...
+10-6-2019 | 11:52: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[Game - GoToWritePhase]
+10-6-2019 | 11:52: 97aq7N trying to go to writing phase...
+10-6-2019 | 11:52: 97aq7N continuing to writing phase...
+10-6-2019 | 11:52: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[Game - StartGameTimer]
+10-6-2019 | 11:52: (039b520d-526c-4b86-90d4-7ad2cdc35c00) wants to start a timer in 97aq7N for 120 seconds.
+10-6-2019 | 11:52: (039b520d-526c-4b86-90d4-7ad2cdc35c00) validated.
+10-6-2019 | 11:52: (039b520d-526c-4b86-90d4-7ad2cdc35c00) timer started.
+10-6-2019 | 11:52: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[Game - RetrieveRootStory]
+10-6-2019 | 11:52: 97aq7N retrieving root stories...
+10-6-2019 | 11:52: 97aq7N (5 | 97f557f0-dfd4-4cf0-93f8-f7e87c82fdd9) got story 27:!|Maecenas Orci:!|Maecenas orci tortor, semper sit amet ipsum sed, tincidunt varius est. Sed interdum vitae diam vel volutpat. Aenean eu ligula auctor sem cursus fermentum non in felis. Curabitur a maximus tortor, non accumsan justo. Ut facilisis gravida magna, sed ultricies massa dignissim et. Cras a ex justo. Morbi eleifend finibus dui. Duis consequat odio vel blandit maximus. Mauris interdum vulputate eros, nec vestibulum mauris pretium in. Proin a magna ut odio feugiat pharetra. Morbi feugiat leo nunc, sit amet convallis erat pulvinar in. Aenean vel sollicitudin eros.
+10-6-2019 | 11:52: 97aq7N (5 | 9e43d62a-56c9-4dec-9ce9-40c22bef05bd) got story 26:!|Lorem Ipsum:!|Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi consequat pretium arcu, at accumsan erat ultricies ac. Etiam pretium scelerisque lacus, eget mollis lorem eleifend ac. Vestibulum vel justo at tellus dapibus maximus nec vel mi. Mauris sollicitudin tellus vitae odio accumsan, id commodo tellus imperdiet. Pellentesque velit augue, bibendum vitae imperdiet quis, pretium nec velit. Duis arcu metus, accumsan nec euismod tristique, placerat quis ante. Etiam condimentum dui quis neque fringilla, sit amet feugiat risus volutpat. In ac euismod ex, at suscipit arcu. Curabitur sed odio sed sapien gravida volutpat id eu magna. Curabitur id erat in felis hendrerit tempor. Mauris pharetra congue sem nec molestie. Nunc pellentesque, nisl et pellentesque finibus, nunc justo dapibus nunc, sed malesuada dolor arcu vel lorem. Aenean id aliquam nunc.
+10-6-2019 | 11:52: End
+10-6-2019 | 11:52: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[Game - UploadStory]
+10-6-2019 | 11:52: 97aq7N (5 | 9e43d62a-56c9-4dec-9ce9-40c22bef05bd) uploaded a story.
+10-6-2019 | 11:52: 97aq7N (5 | 9e43d62a-56c9-4dec-9ce9-40c22bef05bd) story is 'LI', 'li'
+10-6-2019 | 11:52: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[Game - UploadStory]
+10-6-2019 | 11:53: 97aq7N (5 | 97f557f0-dfd4-4cf0-93f8-f7e87c82fdd9) uploaded a story.
+10-6-2019 | 11:53: 97aq7N (5 | 97f557f0-dfd4-4cf0-93f8-f7e87c82fdd9) story is 'MO', 'mo'
+10-6-2019 | 11:53: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[Game - UploadStory]
+10-6-2019 | 11:53: 97aq7N all users wrote their stories.
+-----[LOG ENTRY]-----
+[Game - StopGameTimer]
+10-6-2019 | 11:53: (039b520d-526c-4b86-90d4-7ad2cdc35c00) wants to stop a timer in 97aq7N.
+10-6-2019 | 11:53: (039b520d-526c-4b86-90d4-7ad2cdc35c00) validated.
+10-6-2019 | 11:53: (039b520d-526c-4b86-90d4-7ad2cdc35c00) timer stopped.
+10-6-2019 | 11:53: End.
+--------[END]--------
+
+10-6-2019 | 11:53: 97aq7N continuing to read phase.
+10-6-2019 | 11:53: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[Game - GoToReadPhase]
+10-6-2019 | 11:53: (4) validated.
+10-6-2019 | 11:53: 97aq7N has 2 groups.
+10-6-2019 | 11:53: 97aq7N current group is 1.
+10-6-2019 | 11:53: 97aq7N next list of answers needs 1 answers.
+10-6-2019 | 11:53: 97aq7N first round.
+10-6-2019 | 11:53: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[Game - StartGameTimer]
+10-6-2019 | 11:53: (039b520d-526c-4b86-90d4-7ad2cdc35c00) wants to start a timer in 97aq7N for 900 seconds.
+10-6-2019 | 11:53: (039b520d-526c-4b86-90d4-7ad2cdc35c00) validated.
+10-6-2019 | 11:53: (039b520d-526c-4b86-90d4-7ad2cdc35c00) timer started.
+10-6-2019 | 11:53: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[Game - RetrieveWrittenStories]
+10-6-2019 | 11:53: 97aq7N retrieving written stories of group 1...
+10-6-2019 | 11:53: 97aq7N got written story 5:!|MO:!|mo:!|97f557f0-dfd4-4cf0-93f8-f7e87c82fdd9
+10-6-2019 | 11:53: 97aq7N got root story 1:!|Maecenas Orci:!|Maecenas orci tortor, semper sit amet ipsum sed, tincidunt varius est. Sed interdum vitae diam vel volutpat. Aenean eu ligula auctor sem cursus fermentum non in felis. Curabitur a maximus tortor, non accumsan justo. Ut facilisis gravida magna, sed ultricies massa dignissim et. Cras a ex justo. Morbi eleifend finibus dui. Duis consequat odio vel blandit maximus. Mauris interdum vulputate eros, nec vestibulum mauris pretium in. Proin a magna ut odio feugiat pharetra. Morbi feugiat leo nunc, sit amet convallis erat pulvinar in. Aenean vel sollicitudin eros.:!|0
+10-6-2019 | 11:53: 97aq7N correct answer is 1.
+10-6-2019 | 11:53: End.
+--------[END]--------
+
+10-6-2019 | 11:54: (5) left the room.
+10-6-2019 | 11:54: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[Game - HostRoom]
+10-6-2019 | 11:54: User JMuris (4) is trying to host a room.
+10-6-2019 | 11:54: (4) validated.
+10-6-2019 | 11:54: (4, Tlu3b4) retrieved configuration with Id 0.
+10-6-2019 | 11:54: (4, Tlu3b4) applied configuration.
+10-6-2019 | 11:54: (4, Tlu3b4) room is open and ready.
+10-6-2019 | 11:54: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[Game - JoinRoom]
+10-6-2019 | 11:54: User AAppel (5) is trying to join room Tlu3b4.
+10-6-2019 | 11:54: (5) validated.
+10-6-2019 | 11:54: (5) found room Tlu3b4.
+10-6-2019 | 11:54: (5) successfully joined room Tlu3b4.
+10-6-2019 | 11:54: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[Game - JoinRoom]
+10-6-2019 | 11:54: User AAppel (5) is trying to join room Tlu3b4.
+10-6-2019 | 11:54: (5) validated.
+10-6-2019 | 11:54: (5) found room Tlu3b4.
+10-6-2019 | 11:54: (5) successfully joined room Tlu3b4.
+10-6-2019 | 11:54: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[Game - StartGame]
+10-6-2019 | 11:54: Starting game in room Tlu3b4...
+10-6-2019 | 11:54: Preparations are complete. Game in room Tlu3b4 has started.
+10-6-2019 | 11:54: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[Game - SkipTutorial]
+10-6-2019 | 11:54: Tlu3b4 tutorial will be skipped.
+10-6-2019 | 11:54: Tlu3b4 continuing game...
+10-6-2019 | 11:54: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[Game - GoToWritePhase]
+10-6-2019 | 11:54: Tlu3b4 trying to go to writing phase...
+10-6-2019 | 11:54: Tlu3b4 continuing to writing phase...
+10-6-2019 | 11:54: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[Game - StartGameTimer]
+10-6-2019 | 11:54: (a0c1b7cb-bde3-4d05-a7c7-5a3eefd300f9) wants to start a timer in Tlu3b4 for 120 seconds.
+10-6-2019 | 11:54: (a0c1b7cb-bde3-4d05-a7c7-5a3eefd300f9) validated.
+10-6-2019 | 11:54: (a0c1b7cb-bde3-4d05-a7c7-5a3eefd300f9) timer started.
+10-6-2019 | 11:54: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[Game - RetrieveRootStory]
+10-6-2019 | 11:54: Tlu3b4 retrieving root stories...
+10-6-2019 | 11:54: Tlu3b4 (5 | 6fd947f7-018f-4745-8369-69541028b2bf) got story 27:!|Maecenas Orci:!|Maecenas orci tortor, semper sit amet ipsum sed, tincidunt varius est. Sed interdum vitae diam vel volutpat. Aenean eu ligula auctor sem cursus fermentum non in felis. Curabitur a maximus tortor, non accumsan justo. Ut facilisis gravida magna, sed ultricies massa dignissim et. Cras a ex justo. Morbi eleifend finibus dui. Duis consequat odio vel blandit maximus. Mauris interdum vulputate eros, nec vestibulum mauris pretium in. Proin a magna ut odio feugiat pharetra. Morbi feugiat leo nunc, sit amet convallis erat pulvinar in. Aenean vel sollicitudin eros.
+10-6-2019 | 11:54: Tlu3b4 (5 | a47eb609-457a-44d4-8e3b-552663bb523d) got story 28:!|Cras Rhoncus:!|Cras rhoncus feugiat dui a mattis. Donec viverra quis sapien in porttitor. Nam faucibus quis mauris et dictum. Nulla quis nulla pretium, eleifend quam a, molestie velit. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Nam varius nisi et nulla consequat tincidunt. Donec facilisis scelerisque metus mollis bibendum. Cras vulputate imperdiet consectetur.
+10-6-2019 | 11:54: End
+10-6-2019 | 11:54: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[Game - UploadStory]
+10-6-2019 | 11:54: Tlu3b4 (5 | a47eb609-457a-44d4-8e3b-552663bb523d) uploaded a story.
+10-6-2019 | 11:54: Tlu3b4 (5 | a47eb609-457a-44d4-8e3b-552663bb523d) story is 'CR', 'cr'
+10-6-2019 | 11:54: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[Game - UploadStory]
+10-6-2019 | 11:54: Tlu3b4 (5 | 6fd947f7-018f-4745-8369-69541028b2bf) uploaded a story.
+10-6-2019 | 11:54: Tlu3b4 (5 | 6fd947f7-018f-4745-8369-69541028b2bf) story is 'MO', 'mo'
+10-6-2019 | 11:54: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[Game - UploadStory]
+10-6-2019 | 11:54: Tlu3b4 all users wrote their stories.
+-----[LOG ENTRY]-----
+[Game - StopGameTimer]
+10-6-2019 | 11:54: (a0c1b7cb-bde3-4d05-a7c7-5a3eefd300f9) wants to stop a timer in Tlu3b4.
+10-6-2019 | 11:54: (a0c1b7cb-bde3-4d05-a7c7-5a3eefd300f9) validated.
+10-6-2019 | 11:54: (a0c1b7cb-bde3-4d05-a7c7-5a3eefd300f9) timer stopped.
+10-6-2019 | 11:54: End.
+--------[END]--------
+
+10-6-2019 | 11:54: Tlu3b4 continuing to read phase.
+10-6-2019 | 11:54: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[Game - GoToReadPhase]
+10-6-2019 | 11:54: (4) validated.
+10-6-2019 | 11:54: Tlu3b4 has 2 groups.
+10-6-2019 | 11:54: Tlu3b4 current group is 1.
+10-6-2019 | 11:54: Tlu3b4 next list of answers needs 1 answers.
+10-6-2019 | 11:54: Tlu3b4 first round.
+10-6-2019 | 11:54: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[Game - StartGameTimer]
+10-6-2019 | 11:54: (a0c1b7cb-bde3-4d05-a7c7-5a3eefd300f9) wants to start a timer in Tlu3b4 for 900 seconds.
+10-6-2019 | 11:54: (a0c1b7cb-bde3-4d05-a7c7-5a3eefd300f9) validated.
+10-6-2019 | 11:54: (a0c1b7cb-bde3-4d05-a7c7-5a3eefd300f9) timer started.
+10-6-2019 | 11:54: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[Game - RetrieveWrittenStories]
+10-6-2019 | 11:54: Tlu3b4 retrieving written stories of group 1...
+10-6-2019 | 11:54: Tlu3b4 got written story 5:!|MO:!|mo:!|6fd947f7-018f-4745-8369-69541028b2bf
+10-6-2019 | 11:54: Tlu3b4 got root story 1:!|Maecenas Orci:!|Maecenas orci tortor, semper sit amet ipsum sed, tincidunt varius est. Sed interdum vitae diam vel volutpat. Aenean eu ligula auctor sem cursus fermentum non in felis. Curabitur a maximus tortor, non accumsan justo. Ut facilisis gravida magna, sed ultricies massa dignissim et. Cras a ex justo. Morbi eleifend finibus dui. Duis consequat odio vel blandit maximus. Mauris interdum vulputate eros, nec vestibulum mauris pretium in. Proin a magna ut odio feugiat pharetra. Morbi feugiat leo nunc, sit amet convallis erat pulvinar in. Aenean vel sollicitudin eros.:!|0
+10-6-2019 | 11:54: Tlu3b4 correct answer is 1.
+10-6-2019 | 11:54: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[Game - HostRoom]
+10-6-2019 | 12:02: User JMuris (4) is trying to host a room.
+10-6-2019 | 12:02: (4) validated.
+10-6-2019 | 12:02: (4, 8k9975) retrieved configuration with Id 0.
+10-6-2019 | 12:02: (4, 8k9975) applied configuration.
+10-6-2019 | 12:02: (4, 8k9975) room is open and ready.
+10-6-2019 | 12:02: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[Game - JoinRoom]
+10-6-2019 | 12:02: User AAppel (5) is trying to join room 8k9975.
+10-6-2019 | 12:02: (5) validated.
+10-6-2019 | 12:02: (5) found room 8k9975.
+10-6-2019 | 12:02: (5) successfully joined room 8k9975.
+10-6-2019 | 12:02: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[Game - JoinRoom]
+10-6-2019 | 12:02: User AAppel (5) is trying to join room 8k9975.
+10-6-2019 | 12:02: (5) validated.
+10-6-2019 | 12:02: (5) found room 8k9975.
+10-6-2019 | 12:02: (5) successfully joined room 8k9975.
+10-6-2019 | 12:02: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[Game - StartGame]
+10-6-2019 | 12:02: Starting game in room 8k9975...
+10-6-2019 | 12:02: Preparations are complete. Game in room 8k9975 has started.
+10-6-2019 | 12:02: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[Game - SkipTutorial]
+10-6-2019 | 12:02: 8k9975 tutorial will be skipped.
+10-6-2019 | 12:02: 8k9975 continuing game...
+10-6-2019 | 12:02: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[Game - GoToWritePhase]
+10-6-2019 | 12:02: 8k9975 trying to go to writing phase...
+10-6-2019 | 12:02: 8k9975 continuing to writing phase...
+10-6-2019 | 12:02: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[Game - StartGameTimer]
+10-6-2019 | 12:02: (7d004e6d-9e22-4d59-bb20-11b9bc92d21e) wants to start a timer in 8k9975 for 120 seconds.
+10-6-2019 | 12:02: (7d004e6d-9e22-4d59-bb20-11b9bc92d21e) validated.
+10-6-2019 | 12:02: (7d004e6d-9e22-4d59-bb20-11b9bc92d21e) timer started.
+10-6-2019 | 12:02: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[Game - RetrieveRootStory]
+10-6-2019 | 12:02: 8k9975 retrieving root stories...
+10-6-2019 | 12:02: 8k9975 (5 | 44efb80b-5648-4711-a77f-6f85d4e7c91c) got story 30:!|Suspendisse lacinia:!|Suspendisse lacinia, nibh nec feugiat facilisis, eros massa faucibus mauris, et ullamcorper purus nibh eget justo. Nunc malesuada elit ligula, a porttitor dolor mattis ac. Ut in pellentesque velit. Etiam vitae ante facilisis, mattis purus id, consequat lectus. Donec rutrum velit ex, eget fringilla ante sodales eu. Quisque ut bibendum arcu. Cras diam arcu, feugiat ac posuere vitae, ultricies eget magna. Proin dui sapien, fermentum id lorem a, tincidunt luctus nisi. Pellentesque mauris risus, feugiat ut rutrum in, ultrices sed dolor.
+10-6-2019 | 12:02: 8k9975 (5 | 334d7dbe-dde5-436a-b382-e6339e26658f) got story 28:!|Cras Rhoncus:!|Cras rhoncus feugiat dui a mattis. Donec viverra quis sapien in porttitor. Nam faucibus quis mauris et dictum. Nulla quis nulla pretium, eleifend quam a, molestie velit. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Nam varius nisi et nulla consequat tincidunt. Donec facilisis scelerisque metus mollis bibendum. Cras vulputate imperdiet consectetur.
+10-6-2019 | 12:02: End
+10-6-2019 | 12:02: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[Game - UploadStory]
+10-6-2019 | 12:02: 8k9975 (5 | 334d7dbe-dde5-436a-b382-e6339e26658f) uploaded a story.
+10-6-2019 | 12:02: 8k9975 (5 | 334d7dbe-dde5-436a-b382-e6339e26658f) story is 'CR', 'cr'
+10-6-2019 | 12:02: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[Game - UploadStory]
+10-6-2019 | 12:02: 8k9975 (5 | 44efb80b-5648-4711-a77f-6f85d4e7c91c) uploaded a story.
+10-6-2019 | 12:02: 8k9975 (5 | 44efb80b-5648-4711-a77f-6f85d4e7c91c) story is 'SL', 'sl'
+10-6-2019 | 12:02: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[Game - UploadStory]
+10-6-2019 | 12:02: 8k9975 all users wrote their stories.
+-----[LOG ENTRY]-----
+[Game - StopGameTimer]
+10-6-2019 | 12:02: (7d004e6d-9e22-4d59-bb20-11b9bc92d21e) wants to stop a timer in 8k9975.
+10-6-2019 | 12:02: (7d004e6d-9e22-4d59-bb20-11b9bc92d21e) validated.
+10-6-2019 | 12:02: (7d004e6d-9e22-4d59-bb20-11b9bc92d21e) timer stopped.
+10-6-2019 | 12:02: End.
+--------[END]--------
+
+10-6-2019 | 12:02: 8k9975 continuing to read phase.
+10-6-2019 | 12:02: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[Game - GoToReadPhase]
+10-6-2019 | 12:02: (4) validated.
+10-6-2019 | 12:02: 8k9975 has 2 groups.
+10-6-2019 | 12:02: 8k9975 current group is 1.
+10-6-2019 | 12:02: 8k9975 next list of answers needs 1 answers.
+10-6-2019 | 12:02: 8k9975 first round.
+10-6-2019 | 12:02: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[Game - StartGameTimer]
+10-6-2019 | 12:02: (7d004e6d-9e22-4d59-bb20-11b9bc92d21e) wants to start a timer in 8k9975 for 900 seconds.
+10-6-2019 | 12:02: (7d004e6d-9e22-4d59-bb20-11b9bc92d21e) validated.
+10-6-2019 | 12:02: (7d004e6d-9e22-4d59-bb20-11b9bc92d21e) timer started.
+10-6-2019 | 12:02: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[Game - RetrieveWrittenStories]
+10-6-2019 | 12:02: 8k9975 retrieving written stories of group 1...
+10-6-2019 | 12:02: 8k9975 got written story 5:!|SL:!|sl:!|44efb80b-5648-4711-a77f-6f85d4e7c91c
+10-6-2019 | 12:02: 8k9975 got root story 1:!|Suspendisse lacinia:!|Suspendisse lacinia, nibh nec feugiat facilisis, eros massa faucibus mauris, et ullamcorper purus nibh eget justo. Nunc malesuada elit ligula, a porttitor dolor mattis ac. Ut in pellentesque velit. Etiam vitae ante facilisis, mattis purus id, consequat lectus. Donec rutrum velit ex, eget fringilla ante sodales eu. Quisque ut bibendum arcu. Cras diam arcu, feugiat ac posuere vitae, ultricies eget magna. Proin dui sapien, fermentum id lorem a, tincidunt luctus nisi. Pellentesque mauris risus, feugiat ut rutrum in, ultrices sed dolor.:!|0
+10-6-2019 | 12:02: 8k9975 correct answer is 1.
+10-6-2019 | 12:02: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[Game - HostRoom]
+10-6-2019 | 12:04: User JMuris (4) is trying to host a room.
+10-6-2019 | 12:04: (4) validated.
+10-6-2019 | 12:04: (4, Z006q3) retrieved configuration with Id 0.
+10-6-2019 | 12:04: (4, Z006q3) applied configuration.
+10-6-2019 | 12:04: (4, Z006q3) room is open and ready.
+10-6-2019 | 12:04: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[Game - JoinRoom]
+10-6-2019 | 12:04: User AAppel (5) is trying to join room Z006q3.
+10-6-2019 | 12:04: (5) validated.
+10-6-2019 | 12:04: (5) found room Z006q3.
+10-6-2019 | 12:04: (5) successfully joined room Z006q3.
+10-6-2019 | 12:04: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[Game - JoinRoom]
+10-6-2019 | 12:04: User AAppel (5) is trying to join room Z006q3.
+10-6-2019 | 12:04: (5) validated.
+10-6-2019 | 12:04: (5) found room Z006q3.
+10-6-2019 | 12:04: (5) successfully joined room Z006q3.
+10-6-2019 | 12:04: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[Game - StartGame]
+10-6-2019 | 12:04: Starting game in room Z006q3...
+10-6-2019 | 12:04: Preparations are complete. Game in room Z006q3 has started.
+10-6-2019 | 12:04: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[Game - SkipTutorial]
+10-6-2019 | 12:04: Z006q3 tutorial will be skipped.
+10-6-2019 | 12:04: Z006q3 continuing game...
+10-6-2019 | 12:04: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[Game - GoToWritePhase]
+10-6-2019 | 12:04: Z006q3 trying to go to writing phase...
+10-6-2019 | 12:04: Z006q3 continuing to writing phase...
+10-6-2019 | 12:04: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[Game - StartGameTimer]
+10-6-2019 | 12:04: (46764037-51fb-4bf9-baf7-d3e1f0fb7750) wants to start a timer in Z006q3 for 120 seconds.
+10-6-2019 | 12:04: (46764037-51fb-4bf9-baf7-d3e1f0fb7750) validated.
+10-6-2019 | 12:04: (46764037-51fb-4bf9-baf7-d3e1f0fb7750) timer started.
+10-6-2019 | 12:04: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[Game - RetrieveRootStory]
+10-6-2019 | 12:04: Z006q3 retrieving root stories...
+10-6-2019 | 12:04: Z006q3 (5 | 4e63663e-8e0c-4caf-ac0b-c51f4d80088b) got story 27:!|Maecenas Orci:!|Maecenas orci tortor, semper sit amet ipsum sed, tincidunt varius est. Sed interdum vitae diam vel volutpat. Aenean eu ligula auctor sem cursus fermentum non in felis. Curabitur a maximus tortor, non accumsan justo. Ut facilisis gravida magna, sed ultricies massa dignissim et. Cras a ex justo. Morbi eleifend finibus dui. Duis consequat odio vel blandit maximus. Mauris interdum vulputate eros, nec vestibulum mauris pretium in. Proin a magna ut odio feugiat pharetra. Morbi feugiat leo nunc, sit amet convallis erat pulvinar in. Aenean vel sollicitudin eros.
+10-6-2019 | 12:04: Z006q3 (5 | 810e0853-5ee6-45ae-a5ca-0b1d4eb8e36d) got story 26:!|Lorem Ipsum:!|Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi consequat pretium arcu, at accumsan erat ultricies ac. Etiam pretium scelerisque lacus, eget mollis lorem eleifend ac. Vestibulum vel justo at tellus dapibus maximus nec vel mi. Mauris sollicitudin tellus vitae odio accumsan, id commodo tellus imperdiet. Pellentesque velit augue, bibendum vitae imperdiet quis, pretium nec velit. Duis arcu metus, accumsan nec euismod tristique, placerat quis ante. Etiam condimentum dui quis neque fringilla, sit amet feugiat risus volutpat. In ac euismod ex, at suscipit arcu. Curabitur sed odio sed sapien gravida volutpat id eu magna. Curabitur id erat in felis hendrerit tempor. Mauris pharetra congue sem nec molestie. Nunc pellentesque, nisl et pellentesque finibus, nunc justo dapibus nunc, sed malesuada dolor arcu vel lorem. Aenean id aliquam nunc.
+10-6-2019 | 12:04: End
+10-6-2019 | 12:04: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[Game - UploadStory]
+10-6-2019 | 12:04: Z006q3 (5 | 4e63663e-8e0c-4caf-ac0b-c51f4d80088b) uploaded a story.
+10-6-2019 | 12:04: Z006q3 (5 | 4e63663e-8e0c-4caf-ac0b-c51f4d80088b) story is 'MO', 'mo'
+10-6-2019 | 12:04: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[Game - UploadStory]
+10-6-2019 | 12:04: Z006q3 (5 | 810e0853-5ee6-45ae-a5ca-0b1d4eb8e36d) uploaded a story.
+10-6-2019 | 12:04: Z006q3 (5 | 810e0853-5ee6-45ae-a5ca-0b1d4eb8e36d) story is 'LI', 'li'
+10-6-2019 | 12:04: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[Game - UploadStory]
+10-6-2019 | 12:04: Z006q3 all users wrote their stories.
+-----[LOG ENTRY]-----
+[Game - StopGameTimer]
+10-6-2019 | 12:04: (46764037-51fb-4bf9-baf7-d3e1f0fb7750) wants to stop a timer in Z006q3.
+10-6-2019 | 12:04: (46764037-51fb-4bf9-baf7-d3e1f0fb7750) validated.
+10-6-2019 | 12:04: (46764037-51fb-4bf9-baf7-d3e1f0fb7750) timer stopped.
+10-6-2019 | 12:04: End.
+--------[END]--------
+
+10-6-2019 | 12:04: Z006q3 continuing to read phase.
+10-6-2019 | 12:04: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[Game - GoToReadPhase]
+10-6-2019 | 12:04: (4) validated.
+10-6-2019 | 12:04: Z006q3 has 2 groups.
+10-6-2019 | 12:04: Z006q3 current group is 1.
+10-6-2019 | 12:04: Z006q3 next list of answers needs 1 answers.
+10-6-2019 | 12:04: Z006q3 first round.
+10-6-2019 | 12:04: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[Game - StartGameTimer]
+10-6-2019 | 12:04: (46764037-51fb-4bf9-baf7-d3e1f0fb7750) wants to start a timer in Z006q3 for 900 seconds.
+10-6-2019 | 12:04: (46764037-51fb-4bf9-baf7-d3e1f0fb7750) validated.
+10-6-2019 | 12:04: (46764037-51fb-4bf9-baf7-d3e1f0fb7750) timer started.
+10-6-2019 | 12:04: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[Game - RetrieveWrittenStories]
+10-6-2019 | 12:04: Z006q3 retrieving written stories of group 1...
+10-6-2019 | 12:04: Z006q3 got written story 5:!|MO:!|mo:!|4e63663e-8e0c-4caf-ac0b-c51f4d80088b
+10-6-2019 | 12:04: Z006q3 got root story 1:!|Maecenas Orci:!|Maecenas orci tortor, semper sit amet ipsum sed, tincidunt varius est. Sed interdum vitae diam vel volutpat. Aenean eu ligula auctor sem cursus fermentum non in felis. Curabitur a maximus tortor, non accumsan justo. Ut facilisis gravida magna, sed ultricies massa dignissim et. Cras a ex justo. Morbi eleifend finibus dui. Duis consequat odio vel blandit maximus. Mauris interdum vulputate eros, nec vestibulum mauris pretium in. Proin a magna ut odio feugiat pharetra. Morbi feugiat leo nunc, sit amet convallis erat pulvinar in. Aenean vel sollicitudin eros.:!|0
+10-6-2019 | 12:04: Z006q3 correct answer is 0.
+10-6-2019 | 12:04: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[Game - HostRoom]
+10-6-2019 | 12:07: User JMuris (4) is trying to host a room.
+10-6-2019 | 12:07: (4) validated.
+10-6-2019 | 12:07: (4, Az256x) retrieved configuration with Id 0.
+10-6-2019 | 12:07: (4, Az256x) applied configuration.
+10-6-2019 | 12:07: (4, Az256x) room is open and ready.
+10-6-2019 | 12:07: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[Game - JoinRoom]
+10-6-2019 | 12:07: User AAppel (5) is trying to join room Az256x.
+10-6-2019 | 12:07: (5) validated.
+10-6-2019 | 12:07: (5) found room Az256x.
+10-6-2019 | 12:07: (5) successfully joined room Az256x.
+10-6-2019 | 12:07: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[Game - JoinRoom]
+10-6-2019 | 12:07: User AAppel (5) is trying to join room Az256x.
+10-6-2019 | 12:07: (5) validated.
+10-6-2019 | 12:07: (5) found room Az256x.
+10-6-2019 | 12:07: (5) successfully joined room Az256x.
+10-6-2019 | 12:07: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[Game - StartGame]
+10-6-2019 | 12:07: Starting game in room Az256x...
+10-6-2019 | 12:07: Preparations are complete. Game in room Az256x has started.
+10-6-2019 | 12:07: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[Game - SkipTutorial]
+10-6-2019 | 12:07: Az256x tutorial will be skipped.
+10-6-2019 | 12:07: Az256x continuing game...
+10-6-2019 | 12:07: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[Game - GoToWritePhase]
+10-6-2019 | 12:07: Az256x trying to go to writing phase...
+10-6-2019 | 12:07: Az256x continuing to writing phase...
+10-6-2019 | 12:07: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[Game - StartGameTimer]
+10-6-2019 | 12:07: (99fa0370-8b9d-4b2c-9809-e7f74e9de930) wants to start a timer in Az256x for 120 seconds.
+10-6-2019 | 12:07: (99fa0370-8b9d-4b2c-9809-e7f74e9de930) validated.
+10-6-2019 | 12:07: (99fa0370-8b9d-4b2c-9809-e7f74e9de930) timer started.
+10-6-2019 | 12:07: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[Game - RetrieveRootStory]
+10-6-2019 | 12:07: Az256x retrieving root stories...
+10-6-2019 | 12:07: Az256x (5 | e6f84b68-6103-44e6-b689-aa4a1de5b031) got story 27:!|Maecenas Orci:!|Maecenas orci tortor, semper sit amet ipsum sed, tincidunt varius est. Sed interdum vitae diam vel volutpat. Aenean eu ligula auctor sem cursus fermentum non in felis. Curabitur a maximus tortor, non accumsan justo. Ut facilisis gravida magna, sed ultricies massa dignissim et. Cras a ex justo. Morbi eleifend finibus dui. Duis consequat odio vel blandit maximus. Mauris interdum vulputate eros, nec vestibulum mauris pretium in. Proin a magna ut odio feugiat pharetra. Morbi feugiat leo nunc, sit amet convallis erat pulvinar in. Aenean vel sollicitudin eros.
+10-6-2019 | 12:07: Az256x (5 | 634b8fec-983f-49c4-b768-4efccab15991) got story 28:!|Cras Rhoncus:!|Cras rhoncus feugiat dui a mattis. Donec viverra quis sapien in porttitor. Nam faucibus quis mauris et dictum. Nulla quis nulla pretium, eleifend quam a, molestie velit. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Nam varius nisi et nulla consequat tincidunt. Donec facilisis scelerisque metus mollis bibendum. Cras vulputate imperdiet consectetur.
+10-6-2019 | 12:07: End
+10-6-2019 | 12:07: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[Game - UploadStory]
+10-6-2019 | 12:07: Az256x (5 | e6f84b68-6103-44e6-b689-aa4a1de5b031) uploaded a story.
+10-6-2019 | 12:07: Az256x (5 | e6f84b68-6103-44e6-b689-aa4a1de5b031) story is 'MO', 'mo'
+10-6-2019 | 12:07: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[Game - UploadStory]
+10-6-2019 | 12:07: Az256x (5 | 634b8fec-983f-49c4-b768-4efccab15991) uploaded a story.
+10-6-2019 | 12:07: Az256x (5 | 634b8fec-983f-49c4-b768-4efccab15991) story is 'CR', 'cr'
+10-6-2019 | 12:07: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[Game - UploadStory]
+10-6-2019 | 12:07: Az256x all users wrote their stories.
+-----[LOG ENTRY]-----
+[Game - StopGameTimer]
+10-6-2019 | 12:07: (99fa0370-8b9d-4b2c-9809-e7f74e9de930) wants to stop a timer in Az256x.
+10-6-2019 | 12:07: (99fa0370-8b9d-4b2c-9809-e7f74e9de930) validated.
+10-6-2019 | 12:07: (99fa0370-8b9d-4b2c-9809-e7f74e9de930) timer stopped.
+10-6-2019 | 12:07: End.
+--------[END]--------
+
+10-6-2019 | 12:07: Az256x continuing to read phase.
+10-6-2019 | 12:07: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[Game - GoToReadPhase]
+10-6-2019 | 12:07: (4) validated.
+10-6-2019 | 12:07: Az256x has 2 groups.
+10-6-2019 | 12:07: Az256x current group is 1.
+10-6-2019 | 12:07: Az256x next list of answers needs 1 answers.
+10-6-2019 | 12:07: Az256x first round.
+10-6-2019 | 12:07: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[Game - StartGameTimer]
+10-6-2019 | 12:07: (99fa0370-8b9d-4b2c-9809-e7f74e9de930) wants to start a timer in Az256x for 900 seconds.
+10-6-2019 | 12:07: (99fa0370-8b9d-4b2c-9809-e7f74e9de930) validated.
+10-6-2019 | 12:07: (99fa0370-8b9d-4b2c-9809-e7f74e9de930) timer started.
+10-6-2019 | 12:07: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[Game - RetrieveWrittenStories]
+10-6-2019 | 12:07: Az256x retrieving written stories of group 1...
+10-6-2019 | 12:07: Az256x got written story 5:!|MO:!|mo:!|e6f84b68-6103-44e6-b689-aa4a1de5b031
+10-6-2019 | 12:07: Az256x got root story 1:!|Maecenas Orci:!|Maecenas orci tortor, semper sit amet ipsum sed, tincidunt varius est. Sed interdum vitae diam vel volutpat. Aenean eu ligula auctor sem cursus fermentum non in felis. Curabitur a maximus tortor, non accumsan justo. Ut facilisis gravida magna, sed ultricies massa dignissim et. Cras a ex justo. Morbi eleifend finibus dui. Duis consequat odio vel blandit maximus. Mauris interdum vulputate eros, nec vestibulum mauris pretium in. Proin a magna ut odio feugiat pharetra. Morbi feugiat leo nunc, sit amet convallis erat pulvinar in. Aenean vel sollicitudin eros.:!|0
+10-6-2019 | 12:07: Az256x correct answer is 0.
+10-6-2019 | 12:07: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[Game - HostRoom]
+10-6-2019 | 12:08: User JMuris (4) is trying to host a room.
+10-6-2019 | 12:08: (4) validated.
+10-6-2019 | 12:08: (4, v1H9U4) retrieved configuration with Id 0.
+10-6-2019 | 12:08: (4, v1H9U4) applied configuration.
+10-6-2019 | 12:08: (4, v1H9U4) room is open and ready.
+10-6-2019 | 12:08: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[Game - JoinRoom]
+10-6-2019 | 12:08: User AAppel (5) is trying to join room v1H9U4.
+10-6-2019 | 12:08: (5) validated.
+10-6-2019 | 12:08: (5) found room v1H9U4.
+10-6-2019 | 12:08: (5) successfully joined room v1H9U4.
+10-6-2019 | 12:08: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[Game - JoinRoom]
+10-6-2019 | 12:08: User AAppel (5) is trying to join room v1H9U4.
+10-6-2019 | 12:08: (5) validated.
+10-6-2019 | 12:08: (5) found room v1H9U4.
+10-6-2019 | 12:08: (5) successfully joined room v1H9U4.
+10-6-2019 | 12:08: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[Game - StartGame]
+10-6-2019 | 12:08: Starting game in room v1H9U4...
+10-6-2019 | 12:08: Preparations are complete. Game in room v1H9U4 has started.
+10-6-2019 | 12:08: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[Game - SkipTutorial]
+10-6-2019 | 12:08: v1H9U4 tutorial will be skipped.
+10-6-2019 | 12:08: v1H9U4 continuing game...
+10-6-2019 | 12:08: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[Game - GoToWritePhase]
+10-6-2019 | 12:08: v1H9U4 trying to go to writing phase...
+10-6-2019 | 12:08: v1H9U4 continuing to writing phase...
+10-6-2019 | 12:08: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[Game - StartGameTimer]
+10-6-2019 | 12:08: (2dfc5834-7770-4cd6-a8d5-b79669db1f97) wants to start a timer in v1H9U4 for 120 seconds.
+10-6-2019 | 12:08: (2dfc5834-7770-4cd6-a8d5-b79669db1f97) validated.
+10-6-2019 | 12:08: (2dfc5834-7770-4cd6-a8d5-b79669db1f97) timer started.
+10-6-2019 | 12:08: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[Game - RetrieveRootStory]
+10-6-2019 | 12:08: v1H9U4 retrieving root stories...
+10-6-2019 | 12:08: v1H9U4 (5 | 2cb4e550-74ce-4cb8-a934-0a1bef1d5ab8) got story 28:!|Cras Rhoncus:!|Cras rhoncus feugiat dui a mattis. Donec viverra quis sapien in porttitor. Nam faucibus quis mauris et dictum. Nulla quis nulla pretium, eleifend quam a, molestie velit. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Nam varius nisi et nulla consequat tincidunt. Donec facilisis scelerisque metus mollis bibendum. Cras vulputate imperdiet consectetur.
+10-6-2019 | 12:08: v1H9U4 (5 | ddd6f845-30cf-4c1c-8bf3-4d04812f0745) got story 30:!|Suspendisse lacinia:!|Suspendisse lacinia, nibh nec feugiat facilisis, eros massa faucibus mauris, et ullamcorper purus nibh eget justo. Nunc malesuada elit ligula, a porttitor dolor mattis ac. Ut in pellentesque velit. Etiam vitae ante facilisis, mattis purus id, consequat lectus. Donec rutrum velit ex, eget fringilla ante sodales eu. Quisque ut bibendum arcu. Cras diam arcu, feugiat ac posuere vitae, ultricies eget magna. Proin dui sapien, fermentum id lorem a, tincidunt luctus nisi. Pellentesque mauris risus, feugiat ut rutrum in, ultrices sed dolor.
+10-6-2019 | 12:08: End
+10-6-2019 | 12:08: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[Game - UploadStory]
+10-6-2019 | 12:09: v1H9U4 (5 | ddd6f845-30cf-4c1c-8bf3-4d04812f0745) uploaded a story.
+10-6-2019 | 12:09: v1H9U4 (5 | ddd6f845-30cf-4c1c-8bf3-4d04812f0745) story is 'SL', 'sl'
+10-6-2019 | 12:09: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[Game - UploadStory]
+10-6-2019 | 12:09: v1H9U4 (5 | 2cb4e550-74ce-4cb8-a934-0a1bef1d5ab8) uploaded a story.
+10-6-2019 | 12:09: v1H9U4 (5 | 2cb4e550-74ce-4cb8-a934-0a1bef1d5ab8) story is 'CR', 'cr'
+10-6-2019 | 12:09: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[Game - UploadStory]
+10-6-2019 | 12:09: v1H9U4 all users wrote their stories.
+-----[LOG ENTRY]-----
+[Game - StopGameTimer]
+10-6-2019 | 12:09: (2dfc5834-7770-4cd6-a8d5-b79669db1f97) wants to stop a timer in v1H9U4.
+10-6-2019 | 12:09: (2dfc5834-7770-4cd6-a8d5-b79669db1f97) validated.
+10-6-2019 | 12:09: (2dfc5834-7770-4cd6-a8d5-b79669db1f97) timer stopped.
+10-6-2019 | 12:09: End.
+--------[END]--------
+
+10-6-2019 | 12:09: v1H9U4 continuing to read phase.
+10-6-2019 | 12:09: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[Game - GoToReadPhase]
+10-6-2019 | 12:09: (4) validated.
+10-6-2019 | 12:09: v1H9U4 has 2 groups.
+10-6-2019 | 12:09: v1H9U4 current group is 1.
+10-6-2019 | 12:09: v1H9U4 next list of answers needs 1 answers.
+10-6-2019 | 12:09: v1H9U4 first round.
+10-6-2019 | 12:09: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[Game - StartGameTimer]
+10-6-2019 | 12:09: (2dfc5834-7770-4cd6-a8d5-b79669db1f97) wants to start a timer in v1H9U4 for 900 seconds.
+10-6-2019 | 12:09: (2dfc5834-7770-4cd6-a8d5-b79669db1f97) validated.
+10-6-2019 | 12:09: (2dfc5834-7770-4cd6-a8d5-b79669db1f97) timer started.
+10-6-2019 | 12:09: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[Game - RetrieveWrittenStories]
+10-6-2019 | 12:09: v1H9U4 retrieving written stories of group 1...
+10-6-2019 | 12:09: v1H9U4 got written story 5:!|CR:!|cr:!|2cb4e550-74ce-4cb8-a934-0a1bef1d5ab8
+10-6-2019 | 12:09: v1H9U4 got root story 1:!|Cras Rhoncus:!|Cras rhoncus feugiat dui a mattis. Donec viverra quis sapien in porttitor. Nam faucibus quis mauris et dictum. Nulla quis nulla pretium, eleifend quam a, molestie velit. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Nam varius nisi et nulla consequat tincidunt. Donec facilisis scelerisque metus mollis bibendum. Cras vulputate imperdiet consectetur.:!|0
+10-6-2019 | 12:09: v1H9U4 correct answer is 0.
+10-6-2019 | 12:09: End.
+--------[END]--------
+
+10-6-2019 | 12:09: (5) left the room.
+10-6-2019 | 12:09: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[Game - HostRoom]
+10-6-2019 | 12:14: User JMuris (4) is trying to host a room.
+10-6-2019 | 12:14: (4) validated.
+10-6-2019 | 12:14: (4, V5hN0R) retrieved configuration with Id 0.
+10-6-2019 | 12:14: (4, V5hN0R) applied configuration.
+10-6-2019 | 12:14: (4, V5hN0R) room is open and ready.
+10-6-2019 | 12:14: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[Game - JoinRoom]
+10-6-2019 | 12:14: User AAppel (5) is trying to join room V5hN0R.
+10-6-2019 | 12:14: (5) validated.
+10-6-2019 | 12:14: (5) found room V5hN0R.
+10-6-2019 | 12:14: (5) successfully joined room V5hN0R.
+10-6-2019 | 12:14: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[Game - JoinRoom]
+10-6-2019 | 12:14: User AAppel (5) is trying to join room V5hN0R.
+10-6-2019 | 12:14: (5) validated.
+10-6-2019 | 12:14: (5) found room V5hN0R.
+10-6-2019 | 12:14: (5) successfully joined room V5hN0R.
+10-6-2019 | 12:14: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[Game - StartGame]
+10-6-2019 | 12:14: Starting game in room V5hN0R...
+10-6-2019 | 12:14: Preparations are complete. Game in room V5hN0R has started.
+10-6-2019 | 12:14: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[Game - SkipTutorial]
+10-6-2019 | 12:14: V5hN0R tutorial will be skipped.
+10-6-2019 | 12:14: V5hN0R continuing game...
+10-6-2019 | 12:14: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[Game - GoToWritePhase]
+10-6-2019 | 12:14: V5hN0R trying to go to writing phase...
+10-6-2019 | 12:14: V5hN0R continuing to writing phase...
+10-6-2019 | 12:14: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[Game - StartGameTimer]
+10-6-2019 | 12:14: (40f6aad1-2118-40a3-9bf6-d8c15a034214) wants to start a timer in V5hN0R for 120 seconds.
+10-6-2019 | 12:14: (40f6aad1-2118-40a3-9bf6-d8c15a034214) validated.
+10-6-2019 | 12:14: (40f6aad1-2118-40a3-9bf6-d8c15a034214) timer started.
+10-6-2019 | 12:14: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[Game - RetrieveRootStory]
+10-6-2019 | 12:14: V5hN0R retrieving root stories...
+10-6-2019 | 12:14: V5hN0R (5 | c52d56f0-9f3c-4cfe-b78d-3b021711e47e) got story 28:!|Cras Rhoncus:!|Cras rhoncus feugiat dui a mattis. Donec viverra quis sapien in porttitor. Nam faucibus quis mauris et dictum. Nulla quis nulla pretium, eleifend quam a, molestie velit. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Nam varius nisi et nulla consequat tincidunt. Donec facilisis scelerisque metus mollis bibendum. Cras vulputate imperdiet consectetur.
+10-6-2019 | 12:14: V5hN0R (5 | a093d3cb-a4b2-4ccc-9617-11fdfaa08ee2) got story 29:!|Aliquam Et Rhoncus:!|Aliquam et rhoncus sapien. Quisque pretium, enim non luctus facilisis, sapien urna placerat augue, a rhoncus nibh diam vel orci. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Aenean sed turpis gravida, scelerisque neque eu, porta neque. Curabitur volutpat justo quam, ut malesuada erat posuere in. Maecenas scelerisque facilisis dolor, ut iaculis purus dignissim at. Aliquam tristique sit amet leo et tempor. Quisque dolor purus, tincidunt vel porttitor vel, pulvinar a lorem. Fusce laoreet leo eu commodo lacinia. Sed non arcu ac leo dapibus posuere malesuada in dui. Mauris lacinia arcu in blandit venenatis. Sed metus leo, consectetur suscipit nulla non, laoreet pulvinar diam. Donec vel neque sed ligula blandit convallis. Aliquam quis vulputate augue. Integer at dolor ipsum. Vivamus a imperdiet felis.
+10-6-2019 | 12:14: End
+10-6-2019 | 12:14: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[Game - UploadStory]
+10-6-2019 | 12:14: V5hN0R (5 | c52d56f0-9f3c-4cfe-b78d-3b021711e47e) uploaded a story.
+10-6-2019 | 12:14: V5hN0R (5 | c52d56f0-9f3c-4cfe-b78d-3b021711e47e) story is 'CR', 'cr'
+10-6-2019 | 12:14: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[Game - UploadStory]
+10-6-2019 | 12:14: V5hN0R (5 | a093d3cb-a4b2-4ccc-9617-11fdfaa08ee2) uploaded a story.
+10-6-2019 | 12:14: V5hN0R (5 | a093d3cb-a4b2-4ccc-9617-11fdfaa08ee2) story is 'AER', 'aer'
+10-6-2019 | 12:14: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[Game - UploadStory]
+10-6-2019 | 12:14: V5hN0R all users wrote their stories.
+-----[LOG ENTRY]-----
+[Game - StopGameTimer]
+10-6-2019 | 12:14: (40f6aad1-2118-40a3-9bf6-d8c15a034214) wants to stop a timer in V5hN0R.
+10-6-2019 | 12:14: (40f6aad1-2118-40a3-9bf6-d8c15a034214) validated.
+10-6-2019 | 12:14: (40f6aad1-2118-40a3-9bf6-d8c15a034214) timer stopped.
+10-6-2019 | 12:14: End.
+--------[END]--------
+
+10-6-2019 | 12:14: V5hN0R continuing to read phase.
+10-6-2019 | 12:14: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[Game - GoToReadPhase]
+10-6-2019 | 12:14: (4) validated.
+10-6-2019 | 12:14: V5hN0R has 2 groups.
+10-6-2019 | 12:14: V5hN0R current group is 1.
+10-6-2019 | 12:14: V5hN0R next list of answers needs 1 answers.
+10-6-2019 | 12:14: V5hN0R first round.
+10-6-2019 | 12:14: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[Game - StartGameTimer]
+10-6-2019 | 12:14: (40f6aad1-2118-40a3-9bf6-d8c15a034214) wants to start a timer in V5hN0R for 900 seconds.
+10-6-2019 | 12:14: (40f6aad1-2118-40a3-9bf6-d8c15a034214) validated.
+10-6-2019 | 12:14: (40f6aad1-2118-40a3-9bf6-d8c15a034214) timer started.
+10-6-2019 | 12:14: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[Game - RetrieveWrittenStories]
+10-6-2019 | 12:14: V5hN0R retrieving written stories of group 1...
+10-6-2019 | 12:14: V5hN0R got written story 5:!|CR:!|cr:!|c52d56f0-9f3c-4cfe-b78d-3b021711e47e
+10-6-2019 | 12:14: V5hN0R got root story 1:!|Cras Rhoncus:!|Cras rhoncus feugiat dui a mattis. Donec viverra quis sapien in porttitor. Nam faucibus quis mauris et dictum. Nulla quis nulla pretium, eleifend quam a, molestie velit. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Nam varius nisi et nulla consequat tincidunt. Donec facilisis scelerisque metus mollis bibendum. Cras vulputate imperdiet consectetur.:!|0
+10-6-2019 | 12:14: V5hN0R correct answer is 1.
+10-6-2019 | 12:14: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[Game - HostRoom]
+10-6-2019 | 12:17: User JMuris (4) is trying to host a room.
+10-6-2019 | 12:17: (4) validated.
+10-6-2019 | 12:17: (4, 09d5fE) retrieved configuration with Id 0.
+10-6-2019 | 12:17: (4, 09d5fE) applied configuration.
+10-6-2019 | 12:17: (4, 09d5fE) room is open and ready.
+10-6-2019 | 12:17: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[Game - JoinRoom]
+10-6-2019 | 12:17: User AAppel (5) is trying to join room 09d5fE.
+10-6-2019 | 12:17: (5) validated.
+10-6-2019 | 12:17: (5) found room 09d5fE.
+10-6-2019 | 12:17: (5) successfully joined room 09d5fE.
+10-6-2019 | 12:17: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[Game - JoinRoom]
+10-6-2019 | 12:17: User AAppel (5) is trying to join room 09d5fE.
+10-6-2019 | 12:17: (5) validated.
+10-6-2019 | 12:17: (5) found room 09d5fE.
+10-6-2019 | 12:17: (5) successfully joined room 09d5fE.
+10-6-2019 | 12:17: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[Game - StartGame]
+10-6-2019 | 12:17: Starting game in room 09d5fE...
+10-6-2019 | 12:17: Preparations are complete. Game in room 09d5fE has started.
+10-6-2019 | 12:17: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[Game - SkipTutorial]
+10-6-2019 | 12:17: 09d5fE tutorial will be skipped.
+10-6-2019 | 12:17: 09d5fE continuing game...
+10-6-2019 | 12:17: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[Game - GoToWritePhase]
+10-6-2019 | 12:17: 09d5fE trying to go to writing phase...
+10-6-2019 | 12:17: 09d5fE continuing to writing phase...
+10-6-2019 | 12:17: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[Game - StartGameTimer]
+10-6-2019 | 12:17: (9c45872c-a47b-4558-ab78-e8dd637c01d4) wants to start a timer in 09d5fE for 120 seconds.
+10-6-2019 | 12:17: (9c45872c-a47b-4558-ab78-e8dd637c01d4) validated.
+10-6-2019 | 12:17: (9c45872c-a47b-4558-ab78-e8dd637c01d4) timer started.
+10-6-2019 | 12:17: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[Game - RetrieveRootStory]
+10-6-2019 | 12:17: 09d5fE retrieving root stories...
+10-6-2019 | 12:17: 09d5fE (5 | bb4e766e-b438-4fe9-904b-2909e407ed6b) got story 27:!|Maecenas Orci:!|Maecenas orci tortor, semper sit amet ipsum sed, tincidunt varius est. Sed interdum vitae diam vel volutpat. Aenean eu ligula auctor sem cursus fermentum non in felis. Curabitur a maximus tortor, non accumsan justo. Ut facilisis gravida magna, sed ultricies massa dignissim et. Cras a ex justo. Morbi eleifend finibus dui. Duis consequat odio vel blandit maximus. Mauris interdum vulputate eros, nec vestibulum mauris pretium in. Proin a magna ut odio feugiat pharetra. Morbi feugiat leo nunc, sit amet convallis erat pulvinar in. Aenean vel sollicitudin eros.
+10-6-2019 | 12:17: 09d5fE (5 | 0922f0bd-a7f5-47e5-a6e9-9e5f68401130) got story 28:!|Cras Rhoncus:!|Cras rhoncus feugiat dui a mattis. Donec viverra quis sapien in porttitor. Nam faucibus quis mauris et dictum. Nulla quis nulla pretium, eleifend quam a, molestie velit. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Nam varius nisi et nulla consequat tincidunt. Donec facilisis scelerisque metus mollis bibendum. Cras vulputate imperdiet consectetur.
+10-6-2019 | 12:17: End
+10-6-2019 | 12:17: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[Game - UploadStory]
+10-6-2019 | 12:17: 09d5fE (5 | bb4e766e-b438-4fe9-904b-2909e407ed6b) uploaded a story.
+10-6-2019 | 12:17: 09d5fE (5 | bb4e766e-b438-4fe9-904b-2909e407ed6b) story is 'MO', 'mo'
+10-6-2019 | 12:17: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[Game - UploadStory]
+10-6-2019 | 12:17: 09d5fE (5 | 0922f0bd-a7f5-47e5-a6e9-9e5f68401130) uploaded a story.
+10-6-2019 | 12:17: 09d5fE (5 | 0922f0bd-a7f5-47e5-a6e9-9e5f68401130) story is 'CR', 'cr'
+10-6-2019 | 12:17: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[Game - UploadStory]
+10-6-2019 | 12:17: 09d5fE all users wrote their stories.
+-----[LOG ENTRY]-----
+[Game - StopGameTimer]
+10-6-2019 | 12:17: (9c45872c-a47b-4558-ab78-e8dd637c01d4) wants to stop a timer in 09d5fE.
+10-6-2019 | 12:17: (9c45872c-a47b-4558-ab78-e8dd637c01d4) validated.
+10-6-2019 | 12:17: (9c45872c-a47b-4558-ab78-e8dd637c01d4) timer stopped.
+10-6-2019 | 12:17: End.
+--------[END]--------
+
+10-6-2019 | 12:17: 09d5fE continuing to read phase.
+10-6-2019 | 12:17: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[Game - GoToReadPhase]
+10-6-2019 | 12:17: (4) validated.
+10-6-2019 | 12:17: 09d5fE has 2 groups.
+10-6-2019 | 12:17: 09d5fE current group is 1.
+10-6-2019 | 12:17: 09d5fE next list of answers needs 1 answers.
+10-6-2019 | 12:17: 09d5fE first round.
+10-6-2019 | 12:17: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[Game - StartGameTimer]
+10-6-2019 | 12:17: (9c45872c-a47b-4558-ab78-e8dd637c01d4) wants to start a timer in 09d5fE for 900 seconds.
+10-6-2019 | 12:17: (9c45872c-a47b-4558-ab78-e8dd637c01d4) validated.
+10-6-2019 | 12:17: (9c45872c-a47b-4558-ab78-e8dd637c01d4) timer started.
+10-6-2019 | 12:17: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[Game - RetrieveWrittenStories]
+10-6-2019 | 12:17: 09d5fE retrieving written stories of group 1...
+10-6-2019 | 12:17: 09d5fE got written story 5:!|MO:!|mo:!|bb4e766e-b438-4fe9-904b-2909e407ed6b
+10-6-2019 | 12:17: 09d5fE got root story 1:!|Maecenas Orci:!|Maecenas orci tortor, semper sit amet ipsum sed, tincidunt varius est. Sed interdum vitae diam vel volutpat. Aenean eu ligula auctor sem cursus fermentum non in felis. Curabitur a maximus tortor, non accumsan justo. Ut facilisis gravida magna, sed ultricies massa dignissim et. Cras a ex justo. Morbi eleifend finibus dui. Duis consequat odio vel blandit maximus. Mauris interdum vulputate eros, nec vestibulum mauris pretium in. Proin a magna ut odio feugiat pharetra. Morbi feugiat leo nunc, sit amet convallis erat pulvinar in. Aenean vel sollicitudin eros.:!|0
+10-6-2019 | 12:17: 09d5fE correct answer is 0.
+10-6-2019 | 12:17: End.
+--------[END]--------
+
+10-6-2019 | 12:17: (5) left the room.
+10-6-2019 | 12:17: End.
+--------[END]--------
+
