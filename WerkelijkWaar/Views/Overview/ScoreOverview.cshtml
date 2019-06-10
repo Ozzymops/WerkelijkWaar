@@ -26,32 +26,46 @@
             <div>
                 <h2 class="subtitle" style="text-align: left;">Verhalen</h2>
                 <ul style="border: 1px solid black; list-style-type: none; padding: 0">
-                    @foreach (WerkelijkWaar.Classes.Story story in Model.Stories)
+                    @if (Model.Stories != null && Model.Stories.Count != 0)
                     {
-                        storyInt++;
+                        @foreach (WerkelijkWaar.Classes.Story story in Model.Stories)
+                        {
+                            storyInt++;
+                            <li style="padding: 2px;">
+                                @storyInt. <a asp-controller="Overview" asp-action="IndividualStories" asp-route-userId="@Model.User.Id" asp-route-rank="0" asp-route-storyId="@story.Id" id="storyButton" value="@story.Id">@story.Title</a> - x%
+                            </li>
+                        }
                         <li style="padding: 2px;">
-                            @storyInt. <a asp-controller="Overview" asp-action="IndividualStories" asp-route-userId="@Model.User.Id" asp-route-rank="0" asp-route-storyId="@story.Id" id="storyButton" value="@story.Id">@story.Title</a> - x%
+                            <input asp-controller="" asp-action="" class="form-button" type="button" value="Meer tonen..." />
                         </li>
                     }
-                    <li style="padding: 2px;">
-                        <input asp-controller="" asp-action="" class="form-button" type="button" value="Meer tonen..." />
-                    </li>
+                    else
+                    {
+                        <li>Geen verhalen beschikbaar.</li>
+                    }
                 </ul>
             </div>
             <!-- Scores -->
             <div>
                 <h2 class="subtitle" style="text-align: left;">Scores</h2>
                 <ul style="border: 1px solid black; list-style-type: none; padding: 0;">
-                    @foreach (WerkelijkWaar.Classes.Score score in Model.Scores)
+                    @if (Model.Scores != null && Model.Scores.Count != 0)
                     {
-                        scoreInt++;
+                        @foreach (WerkelijkWaar.Classes.Score score in Model.Scores)
+                        {
+                            scoreInt++;
+                            <li style="padding: 2px;">
+                                @scoreInt. <a asp-controller="Overview" asp-action="IndividualScores" asp-route-userId="@Model.User.Id" asp-route-rank="0" asp-route-scoreId="@score.Id" id="scoreButton" value="@score.Id">Sessie op @score.Date.ToShortDateString()</a> - x%
+                            </li>
+                        }
                         <li style="padding: 2px;">
-                            @scoreInt. <a asp-controller="Overview" asp-action="IndividualScores" asp-route-userId="@Model.User.Id" asp-route-rank="0" asp-route-scoreId="@score.Id" id="scoreButton" value="@score.Id">Sessie op @score.Date.ToShortDateString()</a> - x%
+                            <input asp-controller="" asp-action="" class="form-button" type="button" value="Meer tonen..." />
                         </li>
                     }
-                    <li style="padding: 2px;">
-                        <input asp-controller="" asp-action="" class="form-button" type="button" value="Meer tonen..." />
-                    </li>
+                    else
+                    {
+                        <li>Geen scores beschikbaar.</li>
+                    }
                     @if (Model.Viewer.RoleId == 1)
                     {
                         <li style="padding: 2px;">

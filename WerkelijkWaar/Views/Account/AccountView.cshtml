@@ -110,5 +110,8 @@
                 </div>
             </div>
         </div>
+        <div style="margin-right: -750px; margin-top: -100px;">
+            <a asp-controller="Account" asp-action="DeleteAccount" asp-route-userId="@Model.User.Id" asp-route-selfDelete="true"><input class="form-button" type="button" value="Account verwijderen (nog geen confirmatie!!!)" style="background-color: red; color: white; width: 400px;" /></a>
+        </div>
     </div>
 </body>

@@ -1,0 +1,107 @@
+-----[LOG ENTRY]-----
+[AccountController - Login]
+10-6-2019 | 13:18: (4) JMuris validated. Navigating to...
+10-6-2019 | 13:18: Teacher hub.
+10-6-2019 | 13:18: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[HubModel - GenerateAverage]
+10-6-2019 | 13:19: Calculating AverageScore...
+10-6-2019 | 13:19: AverageScore is 6,36734693877551
+10-6-2019 | 13:19: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[HubModel - GenerateAverage]
+10-6-2019 | 13:19: Calculating AverageScore...
+-----[LOG ENTRY]-----
+[AccountController - Login]
+10-6-2019 | 13:21: (4) JMuris validated. Navigating to...
+10-6-2019 | 13:21: Teacher hub.
+10-6-2019 | 13:21: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[HubModel - GenerateAverage]
+10-6-2019 | 13:21: Calculating AverageScore...
+10-6-2019 | 13:21: AverageScore is 6,36734693877551
+10-6-2019 | 13:21: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[HubModel - GenerateAverage]
+10-6-2019 | 13:21: Calculating AverageScore...
+-----[LOG ENTRY]-----
+[HubModel - GenerateAverage]
+10-6-2019 | 13:21: Calculating AverageScore...
+10-6-2019 | 13:21: AverageScore is 6,36734693877551
+10-6-2019 | 13:21: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[HubModel - GenerateAverage]
+10-6-2019 | 13:21: Calculating AverageScore...
+-----[LOG ENTRY]-----
+[HubModel - GenerateAverage]
+10-6-2019 | 13:21: Calculating AverageScore...
+10-6-2019 | 13:21: AverageScore is 6,36734693877551
+10-6-2019 | 13:21: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[HubModel - GenerateAverage]
+10-6-2019 | 13:21: Calculating AverageScore...
+-----[LOG ENTRY]-----
+[HubModel - GenerateAverage]
+10-6-2019 | 13:21: Calculating AverageScore...
+-----[LOG ENTRY]-----
+[HubModel - GenerateAverage]
+10-6-2019 | 13:22: Calculating AverageScore...
+10-6-2019 | 13:22: AverageScore is 6,36734693877551
+10-6-2019 | 13:22: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[AccountController - AccountView]
+10-6-2019 | 13:22: User validated.
+10-6-2019 | 13:22: (4)JMuris opening AccountView.
+10-6-2019 | 13:22: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[AccountController - RegisterUser]
+10-6-2019 | 13:25: User does not yet exist.
+10-6-2019 | 13:25: User content is validated.
+10-6-2019 | 13:25: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[AccountController - AccountView]
+10-6-2019 | 13:25: User validated.
+10-6-2019 | 13:25: (11)Abcdcba opening AccountView.
+10-6-2019 | 13:25: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[AccountController - Login]
+10-6-2019 | 13:27: (11) Abcdcba validated. Navigating to...
+10-6-2019 | 13:27: Student hub.
+10-6-2019 | 13:27: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[AccountController - AccountView]
+10-6-2019 | 13:27: User validated.
+10-6-2019 | 13:27: (11)Abcdcba opening AccountView.
+10-6-2019 | 13:27: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[AccountController - DeleteAccount]
+10-6-2019 | 13:27: User validated.
+10-6-2019 | 13:27: Deleting (11)...
+10-6-2019 | 13:27: Successfully deleted (11).
+10-6-2019 | 13:27: End.
+--------[END]--------
+

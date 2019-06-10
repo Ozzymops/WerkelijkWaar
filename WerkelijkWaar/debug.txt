@@ -1,0 +1,400 @@
+-----[LOG ENTRY]-----
+[CheckLogin]
+10-6-2019 | 13:18: 0ms. Checking login for JMuris
+10-6-2019 | 13:18: 29ms. Found JMuris
+10-6-2019 | 13:18: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[RetrieveUser]
+10-6-2019 | 13:18: 0ms. Retrieving user 4
+10-6-2019 | 13:18: 2ms. Found user 4
+10-6-2019 | 13:18: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[RetrieveConfig]
+10-6-2019 | 13:18: 0ms. Attempting to retrieve config
+10-6-2019 | 13:18: 2ms. Could not find a config.
+10-6-2019 | 13:18: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[RetrieveUserListByGroup]
+10-6-2019 | 13:19: 0ms. Retrieving users from group 2
+10-6-2019 | 13:19: 5ms. Got: 5 - AAppel
+10-6-2019 | 13:19: 6ms. Got: 6 - BBatsbak
+10-6-2019 | 13:19: 7ms. Found 2users
+10-6-2019 | 13:19: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[RetrieveScoresOfUser]
+10-6-2019 | 13:19: 0ms. Retrieving scores of user 5
+10-6-2019 | 13:19: Got: 1
+10-6-2019 | 13:19: Got: 2
+10-6-2019 | 13:19: Got: 3
+10-6-2019 | 13:19: 8ms. Found 3 scores from user 5
+10-6-2019 | 13:19: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[RetrieveScoresOfUser]
+10-6-2019 | 13:19: 0ms. Retrieving scores of user 6
+10-6-2019 | 13:19: Got: 4
+10-6-2019 | 13:19: Got: 5
+10-6-2019 | 13:19: Got: 6
+10-6-2019 | 13:19: 4ms. Found 3 scores from user 6
+10-6-2019 | 13:19: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[RetrieveUser]
+10-6-2019 | 13:19: 0ms. Retrieving user 5
+10-6-2019 | 13:19: 1ms. Found user 5
+10-6-2019 | 13:19: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[RetrieveStoriesOfUser]
+10-6-2019 | 13:19: 0ms. Attempting to retrieve stories of user 5
+10-6-2019 | 13:19: 3ms. Could not find any stories of user 5
+10-6-2019 | 13:19: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[RetrieveScoresOfUser]
+10-6-2019 | 13:19: 0ms. Retrieving scores of user 5
+10-6-2019 | 13:19: Got: 1
+10-6-2019 | 13:19: Got: 2
+10-6-2019 | 13:19: Got: 3
+10-6-2019 | 13:19: 5ms. Found 3 scores from user 5
+10-6-2019 | 13:19: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[CheckLogin]
+10-6-2019 | 13:21: 0ms. Checking login for JMuris
+10-6-2019 | 13:21: 29ms. Found JMuris
+10-6-2019 | 13:21: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[RetrieveUser]
+10-6-2019 | 13:21: 0ms. Retrieving user 4
+10-6-2019 | 13:21: 2ms. Found user 4
+10-6-2019 | 13:21: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[RetrieveUserListByGroup]
+10-6-2019 | 13:21: 0ms. Retrieving users from group 2
+10-6-2019 | 13:21: 2ms. Got: 5 - AAppel
+10-6-2019 | 13:21: 3ms. Got: 6 - BBatsbak
+10-6-2019 | 13:21: 4ms. Found 2users
+10-6-2019 | 13:21: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[RetrieveScoresOfUser]
+10-6-2019 | 13:21: 0ms. Retrieving scores of user 5
+10-6-2019 | 13:21: Got: 1
+10-6-2019 | 13:21: Got: 2
+10-6-2019 | 13:21: Got: 3
+10-6-2019 | 13:21: 5ms. Found 3 scores from user 5
+10-6-2019 | 13:21: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[RetrieveScoresOfUser]
+10-6-2019 | 13:21: 0ms. Retrieving scores of user 6
+10-6-2019 | 13:21: Got: 4
+10-6-2019 | 13:21: Got: 5
+10-6-2019 | 13:21: Got: 6
+10-6-2019 | 13:21: 4ms. Found 3 scores from user 6
+10-6-2019 | 13:21: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[RetrieveUser]
+10-6-2019 | 13:21: 0ms. Retrieving user 5
+10-6-2019 | 13:21: 1ms. Found user 5
+10-6-2019 | 13:21: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[RetrieveStoriesOfUser]
+10-6-2019 | 13:21: 0ms. Attempting to retrieve stories of user 5
+10-6-2019 | 13:21: 2ms. Could not find any stories of user 5
+10-6-2019 | 13:21: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[RetrieveScoresOfUser]
+10-6-2019 | 13:21: 0ms. Retrieving scores of user 5
+10-6-2019 | 13:21: Got: 1
+10-6-2019 | 13:21: Got: 2
+10-6-2019 | 13:21: Got: 3
+10-6-2019 | 13:21: 4ms. Found 3 scores from user 5
+10-6-2019 | 13:21: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[RetrieveUserListByGroup]
+10-6-2019 | 13:21: 0ms. Retrieving users from group 2
+10-6-2019 | 13:21: 1ms. Got: 5 - AAppel
+10-6-2019 | 13:21: 2ms. Got: 6 - BBatsbak
+10-6-2019 | 13:21: 4ms. Found 2users
+10-6-2019 | 13:21: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[RetrieveScoresOfUser]
+10-6-2019 | 13:21: 0ms. Retrieving scores of user 5
+10-6-2019 | 13:21: Got: 1
+10-6-2019 | 13:21: Got: 2
+10-6-2019 | 13:21: Got: 3
+10-6-2019 | 13:21: 10ms. Found 3 scores from user 5
+10-6-2019 | 13:21: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[RetrieveScoresOfUser]
+10-6-2019 | 13:21: 0ms. Retrieving scores of user 6
+10-6-2019 | 13:21: Got: 4
+10-6-2019 | 13:21: Got: 5
+10-6-2019 | 13:21: Got: 6
+10-6-2019 | 13:21: 5ms. Found 3 scores from user 6
+10-6-2019 | 13:21: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[RetrieveUser]
+10-6-2019 | 13:21: 0ms. Retrieving user 6
+10-6-2019 | 13:21: 1ms. Found user 6
+10-6-2019 | 13:21: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[RetrieveStoriesOfUser]
+10-6-2019 | 13:21: 0ms. Attempting to retrieve stories of user 6
+10-6-2019 | 13:21: 1ms. Could not find any stories of user 6
+10-6-2019 | 13:21: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[RetrieveScoresOfUser]
+10-6-2019 | 13:21: 0ms. Retrieving scores of user 6
+10-6-2019 | 13:21: Got: 4
+10-6-2019 | 13:21: Got: 5
+10-6-2019 | 13:21: Got: 6
+10-6-2019 | 13:21: 4ms. Found 3 scores from user 6
+10-6-2019 | 13:21: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[RetrieveUserListByGroup]
+10-6-2019 | 13:21: 0ms. Retrieving users from group 2
+10-6-2019 | 13:21: 3ms. Got: 5 - AAppel
+10-6-2019 | 13:21: 5ms. Got: 6 - BBatsbak
+10-6-2019 | 13:21: 6ms. Found 2users
+10-6-2019 | 13:21: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[RetrieveScoresOfUser]
+10-6-2019 | 13:21: 0ms. Retrieving scores of user 5
+10-6-2019 | 13:21: Got: 1
+10-6-2019 | 13:21: Got: 2
+10-6-2019 | 13:21: Got: 3
+10-6-2019 | 13:21: 6ms. Found 3 scores from user 5
+10-6-2019 | 13:21: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[RetrieveScoresOfUser]
+10-6-2019 | 13:21: 0ms. Retrieving scores of user 6
+10-6-2019 | 13:21: Got: 4
+10-6-2019 | 13:21: Got: 5
+10-6-2019 | 13:21: Got: 6
+10-6-2019 | 13:21: 5ms. Found 3 scores from user 6
+10-6-2019 | 13:21: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[RetrieveUser]
+10-6-2019 | 13:21: 0ms. Retrieving user 5
+10-6-2019 | 13:21: 2ms. Found user 5
+10-6-2019 | 13:21: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[RetrieveStoriesOfUser]
+10-6-2019 | 13:21: 0ms. Attempting to retrieve stories of user 5
+10-6-2019 | 13:21: 2ms. Could not find any stories of user 5
+10-6-2019 | 13:21: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[RetrieveScoresOfUser]
+10-6-2019 | 13:21: 0ms. Retrieving scores of user 5
+10-6-2019 | 13:21: Got: 1
+10-6-2019 | 13:21: Got: 2
+10-6-2019 | 13:21: Got: 3
+10-6-2019 | 13:21: 5ms. Found 3 scores from user 5
+10-6-2019 | 13:21: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[RetrieveUser]
+10-6-2019 | 13:21: 0ms. Retrieving user 5
+10-6-2019 | 13:21: 1ms. Found user 5
+10-6-2019 | 13:21: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[RetrieveScore]
+10-6-2019 | 13:21: 0ms. Attempting to retrieve score with id 1
+10-6-2019 | 13:21: 1ms. Found score with id 1
+-----[LOG ENTRY]-----
+[RetrieveUser]
+10-6-2019 | 13:21: 0ms. Retrieving user 5
+10-6-2019 | 13:21: 1ms. Found user 5
+10-6-2019 | 13:21: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[RetrieveStoriesOfUser]
+10-6-2019 | 13:21: 0ms. Attempting to retrieve stories of user 5
+10-6-2019 | 13:21: 1ms. Could not find any stories of user 5
+10-6-2019 | 13:21: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[RetrieveScoresOfUser]
+10-6-2019 | 13:21: 0ms. Retrieving scores of user 5
+10-6-2019 | 13:21: Got: 1
+10-6-2019 | 13:21: Got: 2
+10-6-2019 | 13:21: Got: 3
+10-6-2019 | 13:21: 4ms. Found 3 scores from user 5
+10-6-2019 | 13:21: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[RetrieveUserListByGroup]
+10-6-2019 | 13:22: 0ms. Retrieving users from group 2
+10-6-2019 | 13:22: 2ms. Got: 5 - AAppel
+10-6-2019 | 13:22: 3ms. Got: 6 - BBatsbak
+10-6-2019 | 13:22: 4ms. Found 2users
+10-6-2019 | 13:22: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[RetrieveScoresOfUser]
+10-6-2019 | 13:22: 0ms. Retrieving scores of user 5
+10-6-2019 | 13:22: Got: 1
+10-6-2019 | 13:22: Got: 2
+10-6-2019 | 13:22: Got: 3
+10-6-2019 | 13:22: 5ms. Found 3 scores from user 5
+10-6-2019 | 13:22: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[RetrieveScoresOfUser]
+10-6-2019 | 13:22: 0ms. Retrieving scores of user 6
+10-6-2019 | 13:22: Got: 4
+10-6-2019 | 13:22: Got: 5
+10-6-2019 | 13:22: Got: 6
+10-6-2019 | 13:22: 5ms. Found 3 scores from user 6
+10-6-2019 | 13:22: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[CheckLogin]
+10-6-2019 | 13:24: 0ms. Checking login for BitsieBatsie
+10-6-2019 | 13:24: 26ms. Did not find BitsieBatsie
+10-6-2019 | 13:24: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[CheckLogin]
+10-6-2019 | 13:25: 0ms. Checking login for Abcdcba
+10-6-2019 | 13:25: 5ms. Did not find Abcdcba
+10-6-2019 | 13:25: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[RegisterUser]
+10-6-2019 | 13:25: 0ms. Trying to register user Abcdcba
+10-6-2019 | 13:25: 1ms. Values are: - Role Id: 0;
+- Group Id: 1;
+- Name: Abcdef;
+- Surname: Fedcba;
+- Username: Abcdcba
+10-6-2019 | 13:25: 5ms. User Abcdcba succesfully registered.
+10-6-2019 | 13:25: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[CheckLogin]
+10-6-2019 | 13:25: 6ms. Checking login for Abcdcba
+10-6-2019 | 13:25: 8ms. Found Abcdcba
+10-6-2019 | 13:25: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[RetrieveUser]
+10-6-2019 | 13:25: 0ms. Retrieving user 11
+10-6-2019 | 13:25: 2ms. Found user 11
+10-6-2019 | 13:25: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[CheckLogin]
+10-6-2019 | 13:27: 0ms. Checking login for Abcdcba
+10-6-2019 | 13:27: 26ms. Found Abcdcba
+10-6-2019 | 13:27: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[RetrieveUser]
+10-6-2019 | 13:27: 0ms. Retrieving user 11
+10-6-2019 | 13:27: 3ms. Found user 11
+10-6-2019 | 13:27: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[DeleteStoriesOfUser]
+10-6-2019 | 13:27: 0ms. Deleting story with ownerId 11
+10-6-2019 | 13:27: 3ms. Could not find story with ownerId 11
+10-6-2019 | 13:27: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[DeleteScoresOfUser]
+10-6-2019 | 13:27: 0ms. Deleting score with ownerId 11
+10-6-2019 | 13:27: 2ms. Could not find score with ownerId 11
+10-6-2019 | 13:27: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[DeleteConfig]
+10-6-2019 | 13:27: 0ms. Deleting config of 11
+10-6-2019 | 13:27: 2ms. Could not find config with ownerId 11
+10-6-2019 | 13:27: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[DeleteUser]
+10-6-2019 | 13:27: 0ms. Deleting user 11
+10-6-2019 | 13:27: 4ms. Deleted user with id 11
+10-6-2019 | 13:27: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[CheckLogin]
+10-6-2019 | 13:27: 0ms. Checking login for Abcdcba
+10-6-2019 | 13:27: 1ms. Did not find Abcdcba
+10-6-2019 | 13:27: End.
+--------[END]--------
+
