@@ -534,7 +534,7 @@ namespace WerkelijkWaar
                         logger.Log("[Game - GoToWritePhase]", roomCode + " continuing to writing phase...", 2, 3, false);
 
                         await InvokeClientMethodToAllAsync("writePhase", roomCode);
-                        await StartGameTimer(room.RoomOwnerId, roomCode, 120); // room.Config.MaxWritingTime
+                        await StartGameTimer(room.RoomOwnerId, roomCode, room.Config.MaxWritingTime);
                         await RetrieveRootStory(roomCode);
                     }
                 }

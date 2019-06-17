@@ -356,10 +356,10 @@ $(document).ready(function () {
     }
 
     function StartTimer(time) {
-        $('.timerClock').css('display', 'block');
-        $('.timerClock').css('color', 'black');
-        $('.timerBar').css('display', 'block');
-        $('.timerBar').css('color', 'black');
+        $('.game.timer-clock').css('display', 'block');
+        $('.game.timer-clock').css('color', 'black');
+        $('.game.timer-bar').css('display', 'block');
+        $('.game.timer-bar').css('color', '#f7c747');
 
         tickInterval = 0;
         clearInterval(currentTimer);
@@ -367,6 +367,10 @@ $(document).ready(function () {
         var maxSeconds = time;
         var seconds = maxSeconds;
         timer = maxSeconds;
+
+        if (roleId == 1) {
+            document.getElementById('snd-start').play();
+        }
 
         currentTimer = setInterval(function () {
             timerMinutes = parseInt(timer / 60, 10);
@@ -377,8 +381,8 @@ $(document).ready(function () {
 
             seconds = timer;
 
-            $('.timerClock').html(timerMinutes + ':' + timerSeconds);
-            $('.timerBar').css('width', (seconds / maxSeconds * 100) + 'vw');
+            $('.game.timer-clock').html(timerMinutes + ':' + timerSeconds);
+            $('.game.timer-bar').css('width', (seconds / maxSeconds * 100) + 'vw');
 
             if (roleId == 1) {
                 if (tickInterval == 0) {
@@ -387,35 +391,28 @@ $(document).ready(function () {
                         tickInterval = 5;
                     }
                     else if ((seconds / maxSeconds * 100) > 50) {           // > 50%
-                        document.getElementById('snd-timer-1').play();
+                        document.getElementById('snd-timer-2').play();
                         tickInterval = 3;
                     }
-                    else if ((seconds / maxSeconds * 100) > 25) {           // > 25%
-                        document.getElementById('snd-timer-2').play();
-                        tickInterval = 2;
-                    }
-                    else if (seconds > 10) {           // > 10%
-                        document.getElementById('snd-timer-2').play();
+                    else if (seconds > 30) {                                // > 30 seconds
+                        document.getElementById('snd-timer-3').play();
                         tickInterval = 1;
                     }
-                    else if (seconds <= 10) {                               // final ten seconds
-                        document.getElementById('snd-timer-3').play();
+                    else if (seconds <= 30) {                               // final 30 seconds
+                        document.getElementById('snd-timer-4').play();
                         tickInterval = 1;
                     }
                 }
             }
 
-            if (seconds <= 10) {                                            // final ten seconds
-                document.getElementById('snd-timer-3').play();
-                tickInterval = 1;
-
+            if (seconds <= 30) {
                 if (seconds % 2 == 0) {
-                    $('.timerClock').css('color', 'red');
-                    $('.timerBar').css('background-color', '#f7c747');
+                    $('.game.timer-clock').css('color', 'red');
+                    $('.game.timer-bar').css('background-color', '#f7c747');
                 }
                 else {
-                    $('.timerClock').css('color', 'black');
-                    $('.timerBar').css('background-color', '#f7c747');
+                    $('.game.timer-clock').css('color', 'black');
+                    $('.game.timer-bar').css('background-color', 'red');
                 }
             }
 
@@ -427,7 +424,7 @@ $(document).ready(function () {
                 clearInterval(currentTimer);
 
                 if (roleId == 1) {
-                    document.getElementById('snd-timer-end').play();
+                    document.getElementById('snd-end').play();
                     connection.invoke("StopGameTimer", userId, currentRoomCode);
                 }
             }

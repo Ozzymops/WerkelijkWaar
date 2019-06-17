@@ -409,6 +409,287 @@ p.game.on-purple {
     color: white;
 }
 
+/* #region Timer */
+span.game.timer-bar {
+    transition: width 1s, background-color 0.5s;
+    transition-timing-function: linear;
+    border-radius: 25px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: -55px;
+    width: 100vw;
+    height: 50px;
+    background-color: #f7c747;
+    text-align: center;
+}
+
+h2.game.timer-clock {
+    transition: color 0.5s;
+    transition-timing-function: linear;
+    color: black;
+    margin-top: -43px;
+    font-size: 24px;
+    text-align: center;
+    font-weight: 400;
+}
+/* #endregion*/
+
+/* #region Tutorial */
+div.game.game-tutorial {
+    width: 100vw;
+    text-align: center;
+}
+
+div.game.game-tutorial div {
+    height: 75vh;
+    padding-top: 25vh;
+}
+
+div.game.game-tutorial.student-div {
+    height: 50vh;
+    padding-top: 10vh;
+}
+
+div.game.game-tutorial p {
+    color: white;
+    font-size: 24px;
+}
+/* #endregion */
+/* #region Write */
+div.game.game-write {
+    width: 100vw;   
+}
+
+div.game.game-write.column-holder {
+    display: flex;
+    flex-direction: column;
+}
+
+div.game.game-write.row-holder {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+div.game.game-write.story-column {
+    background-color: #6ac2c4;
+    width: 33%;
+    height: 600px;
+    margin-right: 15px;
+}
+
+input[type=button].game.game-write.submit-button {
+    display: block;
+    background-color: #ee860d;
+    border: none;
+    color: white;
+    width: 150px;
+    height: 40px;
+    margin-left: 75.3vw;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+input[type=button].game.game-write.submit-button:hover {
+    display: block;
+    background-color: #ff8900;
+    border: none;
+    color: white;
+    width: 150px;
+    height: 40px;
+    margin-left: 75.3vw;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+div.game.game-write.story-column p {
+    text-align: center;
+    color: white;
+    font-size: 16px;
+}
+
+div.game.game-write.write-column {
+    background-color: #6ac2c4;
+    display: flex;
+    flex-direction: column;
+    width: 33%;
+    height: 600px;
+    margin-left: 15px;
+    padding: 10px;
+}
+
+.game.game-write.write-column input[type=text] {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #27a5a8;
+    border: none;
+    color: white;
+    width: 100%;
+    height: 33px;
+    margin-bottom: 20px;
+}
+
+.game.game-write.write-column input[type=text]:focus {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #3ea8ad;
+    border: none;
+    color: white;
+    width: 100%;
+    height: 33px;
+    margin-bottom: 20px;
+}
+
+.game.game-write.write-column textarea {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #27a5a8;
+    border: none;
+    color: black;
+    width: 100%;
+    height: 100%;
+}
+
+.game.game-write.write-column textarea:focus {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #3ea8ad;
+    border: none;
+    color: black;
+    width: 100%;
+    height: 100%;
+}
+
+p.game.game-write.after-sending {
+    text-align: center;
+    color: white;
+    font-size: 24px;
+    margin-bottom: 25vh;
+}
+/* #endregion */
+/* #region Read */
+div.game.game-read {
+    width: 100vw;
+    height: 76vh;
+    overflow: hidden;
+}
+
+div.game.game-read.column-holder {
+    display: flex;
+    flex-direction: column;
+}
+
+div.game.game-read.row-holder {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+div.game.game-read.list-column {
+    background-color: #6ac2c4;
+    width: 33%;
+    height: 600px;
+    margin-right: 15px;
+}
+
+div.game.game-read.story-column {
+    background-color: #6ac2c4;
+    display: flex;
+    flex-direction: column;
+    width: 33%;
+    height: 600px;
+    margin-left: 15px;
+    padding: 10px;
+}
+
+div.game.game-read.list-column p {
+    color: white;
+    text-align: center;
+}
+
+div.game.game-read.story-column p {
+    background-color: #27a5a8;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+input[type=button].game.game-read.submit-button {
+    display: block;
+    background-color: #ee860d;
+    border: none;
+    color: white;
+    width: 150px;
+    height: 40px;
+    margin-left: 65vw;
+    margin-bottom: -60px;
+}
+
+input[type=button].game.game-read.submit-button:hover {
+    display: block;
+    background-color: #ff8900;
+    border: none;
+    color: white;
+    width: 150px;
+    height: 40px;
+    margin-left: 65vw;
+    margin-bottom: -60px;
+}
+
+input[type=button].game.game-read.drawer-button {
+    display: block;
+    background-color: #ee860d;
+    border: none;
+    color: white;
+    width: 150px;
+    height: 40px;
+    margin-left: 75.3vw;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+input[type=button].game.game-read.drawer-button:hover {
+    display: block;
+    background-color: #ff8900;
+    border: none;
+    color: white;
+    width: 150px;
+    height: 40px;
+    margin-left: 75.3vw;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+input[type=button].game.game-read.powerup-button {
+    display: block;
+    background-color: #ee860d;
+    border: none;
+    color: white;
+    width: 150px;
+    height: 40px;
+    margin-left: 75.3vw;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    border: 1px solid rgba(189, 101, 0, 1);
+}
+
+input[type=button].game.game-read.powerup-button:hover {
+    display: block;
+    background-color: #ff8900;
+    border: none;
+    color: white;
+    width: 150px;
+    height: 40px;
+    margin-left: 75.3vw;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    border: 1px solid rgba(189, 101, 0, 1);
+}
+/* #endregion */
+
 /* #region Docent */
 div.game.docent.container {
     display: flex;

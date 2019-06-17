@@ -36,7 +36,7 @@
                                 <h2 class="subtitle" style="padding-left: 10px; margin-top: 35px;" id="followerCount">0</h2>
                             </div>
                             <div>
-                                <h2 class="subtitle" style="margin-left: 1400px; margin-top: 35px;" id="moneyCount">€0.00-</h2>
+                                <h2 class="subtitle" style="margin-left: 66vw; margin-top: 35px;" id="moneyCount">€0.00-</h2>
                             </div>
                         </div>
                     </div>
@@ -58,84 +58,94 @@
                             </div>
                         </div>
                     </div>
-                    <div id="game-tutorial-1" style="display: none; width: 100vw; text-align: center;">
-                        <p class="before-input">Je wilt graag een nieuwe telefoon, maar je hebt nog niet genoeg geld gespaard om er een te kunnen kopen.</p>
-                        <p class="before-input">Je hebt gehoord dat mensen bakken met geld verdienen door het verspreiden van nepnieuws.<br />Hoe moeilijk kan het zijn om zelf nep berichten te verspreiden?</p>
-                        <p class="before-input">Schrijf zelf nep berichten en verdien genoeg om een nieuwe telefoon te kopen.</p>
+                    <div id="game-tutorial-1" class="game game-tutorial" style="display: none;">
+                        <div class="game game-tutorial student-div">
+                            <p>Je wilt graag een nieuwe telefoon, maar je hebt nog niet genoeg geld gespaard om er een te kunnen kopen.</p>
+                            <p>Je hebt gehoord dat mensen bakken met geld verdienen door het verspreiden van nepnieuws.<br />Hoe moeilijk kan het zijn om zelf nep berichten te verspreiden?</p>
+                            <p>Schrijf zelf nep berichten en verdien genoeg om een nieuwe telefoon te kopen.</p>
+                        </div>
                         <input class="btn-continueTutorial" style="margin-bottom: 10px;" type="button" value="Volgende" />
                         <input class="btn-skipTutorial" type="button" value="Overslaan" />
                     </div>
-                    <div id="game-tutorial-2" style="display: none; width: 100vw; text-align: center;">
-                        <p class="before-input">Om geld te verdienen heb je volgers nodig.</p>
-                        <p class="before-input">Zorg er dus voor dat lezers het door jou geschreven bericht delen.</p>
-                        <p class="before-input">Daarnaast moet je er wel voor zorgen dat je zelf de juiste berichten deelt.</p>
-                        <p class="before-input">Deel je een vals bericht, dan kost je dat volgers</p>
-                        <p class="before-input">[foto's]</p>
+                    <div id="game-tutorial-2" class="game game-tutorial" style="display: none;">
+                        <div class="game game-tutorial student-div">
+                            <p>Om geld te verdienen heb je volgers nodig.</p>
+                            <p>Zorg er dus voor dat lezers het door jou geschreven bericht delen.</p>
+                            <p>Daarnaast moet je er wel voor zorgen dat je zelf de juiste berichten deelt.</p>
+                            <p>Deel je een vals bericht, dan kost je dat volgers</p>
+                            <p>[foto's]</p>
+                        </div>
                         <input class="btn-continueTutorial" style="margin-bottom: 10px;" type="button" value="Volgende" />
                         <input class="btn-skipTutorial" type="button" value="Overslaan" />
                     </div>
-                    <div id="game-tutorial-3" style="display: none; width: 100vw; text-align: center;">
-                        <p class="before-input">Maak van het originele artikel een eigen nep bericht.<br />Bedenk zelf ook een titel die nieuwsgierigheid wekt.</p>
+                    <div id="game-tutorial-3" class="game game-tutorial" style="display: none;">
+                        <div class="game game-tutorial student-div">
+                            <p>Maak van het originele artikel een eigen nep bericht.<br />Bedenk zelf ook een titel die nieuwsgierigheid wekt.</p>
+                        </div>
                         <input class="btn-continueTutorial" style="margin-bottom: 10px;" type="button" value="Aan de slag" />
                         <input class="btn-skipTutorial" type="button" value="Overslaan" />
                     </div>
-                    <div id="game-waiting" style="display: none; width: 100vw; text-align: center;">
-                        <p class="before-input">Wachten op spelers...</p>
+                    <div id="game-waiting" class="game game-tutorial" style="display: none;">
+                        <div class="game game-tutorial student-div">
+                            <p>Wachten op spelers...</p>
+                        </div>
                     </div>
                     <!-- #endregion -->
                     <!-- #region Write -->
-                    <div id="game-write" style="display: none; width: 100vw;">
+                    <div id="game-write" class="game game-write" style="display: none;">
                         <div id="write-busy">
-                            <div style="display: flex; flex-direction: column;">
-                                <div style="display: flex; flex-direction: row; justify-content: center;">
-                                    <div style="background-color: #6ac2c4; width: 33%; height: 600px; margin-right: 15px;">
-                                        <p id="storyTitle" style="text-align: center; color: white;">Titel</p>
-                                        <p id="storyText" style="text-align: center; padding: 10px;">Verhaal</p>
+                            <div class="game game-write column-holder">
+                                <div class="game game-write row-holder">
+                                    <div class="game game-write story-column">
+                                        <p id="storyTitle">Titel</p>
+                                        <p id="storyText" style="color: black; padding: 10px;">Verhaal</p>
                                     </div>
-                                    <div style="background-color: #6ac2c4; display: flex; flex-direction: column; width: 33%; height: 600px; margin-left: 15px; padding: 10px;">
-                                        <input id="writtenStoryTitle" type="text" class="text-input" placeholder="Titel" style="background-color: #27a5a8; color: white; width: 100%; margin-bottom: 20px;" />
-                                        <textarea id="writtenStoryText" class="text-input" style="background-color: #27a5a8; width: 100%; height: 100%; color: black;" placeholder="Verhaal"></textarea>
+                                    <div class="game game-write write-column">
+                                        <input id="writtenStoryTitle" type="text" placeholder="Titel"/>
+                                        <textarea id="writtenStoryText" placeholder="Verhaal"></textarea>
                                     </div>
                                 </div>
                                 <div>
-                                    <input id="btn-uploadStory" class="form-button-orange" style="margin-right: 310px; margin-top: 20px; margin-bottom: 10px; width: 150px;" type="button" value="Deel" />
+                                    <input id="btn-uploadStory" class="game game-write submit-button" type="button" value="Deel" />
                                 </div>
                             </div>
                         </div>
                         <div id="write-finished" style="display: none;">
-                            <p class="before-input">Verhaal ingezonden! Wachten op de rest...</p>
+                            <p class="game game-write after-sending">Verhaal ingezonden! Wachten op de rest...</p>
                         </div>
-                        <span class="timerBar" style="transition: width 1s, background-color 1s; transition-timing-function: linear; display: none; border-radius: 25px; margin-left: auto; margin-right: auto; width: 100vw; height: 50px; background-color: #f7c747; text-align: center;"></span>
-                        <h2 class="timerClock" style="transition: color 1s; transition-timing-function: linear; color: black; margin-top: -43px; font-size: 24px; text-align: center; font-weight: 400;">00:00</h2>
+                        <div>
+                            <span class="game timer-bar"></span>
+                            <h2 class="game timer-clock">00:00</h2>
+                        </div>
                     </div>
                     <!-- #endregion -->
                     <!-- #region Read -->
-                    <div id="game-read" style="display: none; width: 100vw; height: 80vh; overflow: hidden;">
+                    <div id="game-read" class="game game-read" style="display: none;">
                         <div id="read-busy">
-                            <div style="display: flex; flex-direction: column;">
-                                <div style="display: flex; flex-direction: row; justify-content: center;">
-                                    <div style="background-color: #6ac2c4; width: 33%; height: 600px; margin-right: 15px;">
-                                        <h2 class="subtitle" id="turnString" style="display: none; color: white; text-align: center;">Jouw verhaal is aan de beurt. Je mag verhalen lezen maar niet delen.</h2>
-                                        <h2 class="subtitle" id="articleString" style="color: white; text-align: center;">Welk artikel deel je?</h2>
+                            <div class="game game-read column-holder">
+                                <div class="game game-read row-holder">
+                                    <div class="game game-read list-column">
+                                        <p id="turnString" style="display: none;">Jouw verhaal is aan de beurt. Je mag verhalen lezen maar niet delen.</p>
+                                        <p id="articleString">Welk artikel deel je?</p>
                                         <div id="storyList"></div>
                                     </div>
-                                    <div style="background-color: #6ac2c4; display: flex; flex-direction: column; width: 33%; height: 600px; margin-left: 15px; padding: 10px;">
-                                        <p id="readStoryTitle" style="background-color: #27a5a8; color: white; width: 100%; margin-bottom: 20px;"></p>
-                                        <p id="readStoryText" class="text-input" align="left" style="background-color: #27a5a8; width: 100%; height: 100%; color: black; padding: 10px;"></p>
+                                    <div class="game game-read story-column">
+                                        <p id="readStoryTitle" style="color: white;"></p>
+                                        <p id="readStoryText" class="text-input" align="left" style="height: 100%;"></p>
                                     </div>
                                 </div>
                                 <div>
-                                    <input id="btn-uploadAnswer" class="form-button-orange" style="margin-right: 500px; margin-top: 20px; width: 150px;" type="button" value="Deel" />
-                                    <input id="btn-openPowerupDrawer" class="form-button-orange" style="margin-right: 310px; margin-top: -40px; width: 150px;" type="button" value="Hulplijn" />
+                                    <input id="btn-uploadAnswer" class="game game-read submit-button" type="button" value="Deel" />
+                                    <input id="btn-openPowerupDrawer" class="game game-read drawer-button" type="button" value="Hulplijn" />
                                 </div>
                                 <div id="powerupDrawer" style="display: block;">
                                     <div id="movingDrawer" style="transition: margin-left 0.5s; transition-timing-function: linear; background-color: #ee860d; padding: 5px; width: 500px; height: 300px; border-radius: 25px; margin-top: -550px; margin-left: 2000px;">
                                         <p id="powerupFeedback"></p>
-                                        <input id="btn-activatePowerup-1" class="form-button-orange" style="border: 1px solid rgba(189, 101, 0, 1);" type="button" value="Twee antwoorden kiezen" />
-                                        <input id="btn-activatePowerup-2" class="form-button-orange" style="border: 1px solid rgba(189, 101, 0, 1);" type="button" value="Dubbele punten" />
-                                        <input id="btn-activatePowerup-3" class="form-button-orange" style="border: 1px solid rgba(189, 101, 0, 1);" type="button" value="50% wegstrepen" />
-                                        <input id="btn-activatePowerup-4" class="form-button-orange" style="border: 1px solid rgba(189, 101, 0, 1);" type="button" value="Spieken" />
-                                        <input id="btn-activatePowerup-5" class="form-button-orange" style="display: none; border: 1px solid rgba(189, 101, 0, 1);" type="button" value="Dubbele punten voor jouw verhaal" />
+                                        <input id="btn-activatePowerup-1" class="game game-read powerup-button" type="button" value="Twee antwoorden kiezen" />
+                                        <input id="btn-activatePowerup-2" class="game game-read powerup-button" type="button" value="Dubbele punten" />
+                                        <input id="btn-activatePowerup-3" class="game game-read powerup-button" type="button" value="50% wegstrepen" />
+                                        <input id="btn-activatePowerup-4" class="game game-read powerup-button" type="button" value="Spieken" />
+                                        <input id="btn-activatePowerup-5" class="game game-read powerup-button" style="display: none;" type="button" value="Dubbele punten voor jouw verhaal" />
                                     </div>
                                 </div>
                             </div>
@@ -143,8 +153,10 @@
                         <div id="read-finished" style="display: none;">
                             <h2 class="subtitle" id="randomFinishString" style="color: white;">Was dat het juiste antwoord? We zullen zien!</h2>
                         </div>
-                        <span class="timerBar" style="margin-top: 10px; transition: width 1s, background-color 1s; transition-timing-function: linear; display: none; border-radius: 25px; margin-left: auto; margin-right: auto; width: 100vw; height: 50px; background-color: #f7c747; text-align: center;"></span>
-                        <h2 class="timerClock" style="transition: color 1s; transition-timing-function: linear; color: black; margin-top: -43px; font-size: 24px; text-align: center; font-weight: 400;">00:00</h2>
+                        <div>
+                            <span class="game timer-bar"></span>
+                            <h2 class="game timer-clock">00:00</h2>
+                        </div>
                     </div>
                     <!-- #endregion -->
                     <div id="game-results" style="display: none;">
@@ -188,13 +200,12 @@
             {
                 <!-- Docent -->
                 <!-- !Geluiden! -->
-                <audio id="snd-timer-1" src="~/content/audio/Timer1.wav"></audio>
-                <audio id="snd-timer-2" src="~/content/audio/Timer2.wav"></audio>
-                <audio id="snd-timer-3" src="~/content/audio/Timer3.wav"></audio>
-                <audio id="snd-timesup" src="~/content/audio/TimesUp.wav"></audio>
-                <audio id="snd-correct" src="~/content/audio/Correct.wav"></audio>
-                <audio id="snd-wrong" src="~/content/audio/Wrong.wav"></audio>
-                <audio id="snd-120seconds" src="~/content/audio/120seconds.mp3"></audio>
+                <audio id="snd-timer-1" src="~/content/audio/Timer-1.wav"></audio>
+                <audio id="snd-timer-2" src="~/content/audio/Timer-2.wav"></audio>
+                <audio id="snd-timer-3" src="~/content/audio/Timer-3.wav"></audio>
+                <audio id="snd-timer-4" src="~/content/audio/Timer-4.wav"></audio>
+                <audio id="snd-end" src="~/content/audio/GameEnd.wav"></audio>
+                <audio id="snd-start" src="~/content/audio/GameStart.wav"></audio>
                 <!-- !Eind geluiden! -->
                 <div id="game-prep">
                     <p id="statusMessage"></p>
@@ -211,33 +222,41 @@
                         <input id="btn-leaveLobby" type="button" class="form-button-orange" style="margin-top: 10px;" value="Lobby sluiten" />
                     </div>
                 </div>
-                <div id="game-tutorial-1" style="display: none; width: 100vw; text-align: center;">
-                    <p>Je wilt graag een nieuwe telefoon, maar je hebt nog niet genoeg geld gespaard om er een te kunnen kopen.</p>
-                    <p>Je hebt gehoord dat mensen bakken met geld verdienen door het verspreiden van nepnieuws.<br />Hoe moeilijk kan het zijn om zelf nep berichten te verspreiden?</p>
-                    <p>Schrijf zelf nep berichten en verdien genoeg om een nieuwe telefoon te kopen.</p>
+                <div id="game-tutorial-1" class="game game-tutorial" style="display: none;">
+                    <div>
+                        <p>Je wilt graag een nieuwe telefoon, maar je hebt nog niet genoeg geld gespaard om er een te kunnen kopen.</p>
+                        <p>Je hebt gehoord dat mensen bakken met geld verdienen door het verspreiden van nepnieuws.<br />Hoe moeilijk kan het zijn om zelf nep berichten te verspreiden?</p>
+                        <p>Schrijf zelf nep berichten en verdien genoeg om een nieuwe telefoon te kopen.</p>
+                    </div>
                     <input class="btn-continueTutorial" style="margin-bottom: 10px;" type="button" value="Volgende" />
                     <input class="btn-skipTutorial" type="button" value="Overslaan" />
                 </div>
-                <div id="game-tutorial-2" style="display: none; width: 100vw; text-align: center;">
-                    <p>Om geld te verdienen heb je volgers nodig.</p>
-                    <p>Zorg er dus voor dat lezers het door jou geschreven bericht delen.</p>
-                    <p>Daarnaast moet je er wel voor zorgen dat je zelf de juiste berichten deelt.</p>
-                    <p>Deel je een vals bericht, dan kost je dat volgers</p>
-                    <p>[foto's]</p>
+                <div id="game-tutorial-2" class="game game-tutorial" style="display: none;">
+                    <div>
+                        <p>Om geld te verdienen heb je volgers nodig.</p>
+                        <p>Zorg er dus voor dat lezers het door jou geschreven bericht delen.</p>
+                        <p>Daarnaast moet je er wel voor zorgen dat je zelf de juiste berichten deelt.</p>
+                        <p>Deel je een vals bericht, dan kost je dat volgers</p>
+                        <p>[foto's]</p>
+                    </div>
                     <input class="btn-continueTutorial" style="margin-bottom: 10px;" type="button" value="Volgende" />
                     <input class="btn-skipTutorial" type="button" value="Overslaan" />
                 </div>
-                <div id="game-tutorial-3" style="display: none; width: 100vw; text-align: center;">
-                    <h2 class="subtitle">Kijk nu naar je eigen scherm en volg de instructies.</h2>
+                <div id="game-tutorial-3" class="game game-tutorial" style="display: none;">
+                    <div>
+                        <p>Kijk nu naar je eigen scherm en volg de instructies.</p>
+                    </div>
                     <input class="btn-continueTutorial" style="margin-bottom: 10px;" type="button" value="Volgende" />
                     <input class="btn-skipTutorial" type="button" value="Overslaan" />
                 </div>
-                <div id="game-waiting" style="display: none; width: 100vw; text-align: center;">
-                    <h2 class="subtitle">Wachten op spelers...</h2>
+                <div id="game-waiting" class="game game-tutorial" style="display: none;">
+                    <div>
+                        <p>Wachten op spelers...</p>
+                    </div>
                     <input class="btn-skipTutorial" type="button" value="Overslaan" />
                 </div>
                 <div id="game-write" style="display: none; width: 100vw;">
-                    <h2 class="subtitle">Wachten op verhalen...</h2>
+                    <h2>Wachten op verhalen...</h2>
                     <span class="timerBar" style="transition: width 1s, background-color 1s; transition-timing-function: linear; display: none; border-radius: 25px; margin-left: auto; margin-right: auto; width: 100vw; height: 50px; background-color: #f7c747; text-align: center;"></span>
                     <h2 class="timerClock" style="transition: color 1s; transition-timing-function: linear; color: black; margin-top: -43px; font-size: 24px; text-align: center; font-weight: 400;">00:00</h2>
                 </div>
