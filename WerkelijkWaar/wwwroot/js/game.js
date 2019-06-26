@@ -161,10 +161,10 @@ $(document).ready(function () {
     }
 
     // -- Response to UpdateScore
-    connection.clientMethods['updateScore'] = (roomCode, socketId, result, cash, followers, ranking, end, allowed) => {
+    connection.clientMethods['updateScore'] = (roomCode, socketId, result, cash, followers, followerChange, cashGain, ranking, end, allowed) => {
         if (currentRoomCode == roomCode) {
             if (mySocketId == socketId || roleId == 1) {
-                UpdateScore(socketId, result, cash, followers, ranking, end, allowed);
+                UpdateScore(socketId, result, cash, followers, followerChange, cashGain, ranking, end, allowed);
             }
         }
     }
@@ -374,6 +374,8 @@ $(document).ready(function () {
         $('.game.timer-clock').css('color', 'black');
         $('.game.timer-bar').css('display', 'block');
         $('.game.timer-bar').css('color', '#f7c747');
+        $('#waitingForStories').css('color', 'black');
+        $('#waitingForAnswers').css('color', 'black');
 
         tickInterval = 0;
         clearInterval(currentTimer);
@@ -423,10 +425,20 @@ $(document).ready(function () {
                 if (seconds % 2 == 0) {
                     $('.game.timer-clock').css('color', 'red');
                     $('.game.timer-bar').css('background-color', '#f7c747');
+
+                    if (roleId == 1) {
+                        $('#waitingForStories').css('color', 'red');
+                        $('#waitingForAnswers').css('color', 'red');
+                    }
                 }
                 else {
                     $('.game.timer-clock').css('color', 'black');
                     $('.game.timer-bar').css('background-color', 'red');
+
+                    if (roleId == 1) {
+                        $('#waitingForStories').css('color', 'black');
+                        $('#waitingForAnswers').css('color', 'black');
+                    }
                 }
             }
 
@@ -537,7 +549,7 @@ $(document).ready(function () {
         }
     }
 
-    function UpdateScore(socketId, result, cash, followers, ranking, end, allowed) {
+    function UpdateScore(socketId, result, cash, followers, followerChange, cashGain, ranking, end, allowed) {
         HideAll();
 
         StopTimer();
@@ -568,8 +580,8 @@ $(document).ready(function () {
             }
         }
         else {
-            var followerDelta = Math.abs(myFollowers - followers);
-            var cashDelta = Math.abs(myCash - cash);
+            //var followerDelta = Math.abs(followers - myFollowers);
+            //var cashDelta = Math.abs(cash - myCash);
 
             myFollowers = followers;
             myCash = cash;
@@ -581,13 +593,13 @@ $(document).ready(function () {
             if (result) {
                 $('#html').css('background-color', 'green');
                 $('#body').css('background-color', 'green');
-                $('#resultString').html('Geweldig!\nJe krijgt deze ronde ' + followerDelta + ' volgers en €' + cashDelta + '- erbij.');
+                $('#resultString').html('Geweldig!\nJe krijgt deze ronde ' + followerChange + ' volgers en €' + cashGain + '- erbij.');
             }
             // Incorrect
             else {
                 $('#html').css('background-color', 'red');
                 $('#body').css('background-color', 'red');
-                $('#resultString').html('Jammer...\nJe verliest deze ronde ' + followerDelta + ' volgers.');
+                $('#resultString').html('Jammer...\nJe verliest deze ronde ' + followerChange + ' volgers en krijgt €' + cashGain + 'erbij.');
             }
         }
 

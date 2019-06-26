@@ -261,12 +261,41 @@
                     <input class="btn-skipTutorial" type="button" value="Overslaan" />
                 </div>
                 <div id="game-tutorial-2" class="game game-tutorial" style="display: none;">
-                    <div>
+                    <div style="margin-top: -100px; margin-bottom: 100px;">
                         <p>Om geld te verdienen heb je volgers nodig.</p>
                         <p>Zorg er dus voor dat lezers het door jou geschreven bericht delen.</p>
                         <p>Daarnaast moet je er wel voor zorgen dat je zelf de juiste berichten deelt.</p>
                         <p>Deel je een vals bericht, dan kost je dat volgers</p>
-                        <p>[foto's]</p>
+                        <div style="margin-top: -250px;">
+                            <div class="game game-tutorial triple-image">
+                                <div style="margin-right: 5vh;">
+                                    <p>Jouw bericht wordt gedeeld.</p>
+                                    <div style="display: flex; flex-direction: row; justify-content: center; margin-top: -233px;">
+                                        <img src="~/content/image/Person.png" style="height: 50px;" />
+                                        <p style="font-size: 20px;" id="followersGainedPerVoteString">+x per stem*</p>
+                                    </div>
+                                    <p style="margin-top: -400px;">*wordt pas op het einde toegevoegd aan de ranking.</p>
+                                </div>
+                                <div style="margin-left: 5vh; margin-right: 5vh;">
+                                    <p>Je deelt het juiste verhaal.</p>
+                                    <div style="display: flex; flex-direction: row; justify-content: center; margin-top: -233px;">
+                                        <img src="~/content/image/Person.png" style="height: 50px;" />
+                                        <p style="font-size: 20px;" id="followersGainedForRightAnswerString">+x</p>
+                                    </div>
+                                </div>
+                                <div style="margin-left: 5vh;">
+                                    <p>Je deelt een nep verhaal<br />of niemand deelt jouw verhaal.</p>
+                                    <div style="display: flex; flex-direction: row; justify-content: center; margin-top: -233px;">
+                                        <img src="~/content/image/Person.png" style="height: 50px;" />
+                                        <p style="font-size: 20px;" id="followersLostForWrongAnswerString">-x</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div style="height: 20px; display: flex; flex-direction: row; justify-content: center; margin-top: -445px;">
+                                <p id="moneyGainedPerFollowerString">= €x,xx-</p>
+                                <img src="~/content/image/Person.png" style="height: 50px;" />
+                            </div>
+                        </div>
                     </div>
                     <input class="btn-continueTutorial" style="margin-bottom: 10px;" type="button" value="Volgende" />
                     <input class="btn-skipTutorial" type="button" value="Overslaan" />
@@ -280,21 +309,22 @@
                 </div>
                 <div id="game-waiting" class="game game-tutorial" style="display: none;">
                     <div>
-                        <p>Wachten op spelers...</p>
+                        <p style="text-align: center;">Wachten op spelers...</p>
                     </div>
                     <input class="btn-skipTutorial" type="button" value="Overslaan" />
                 </div>
                 <div id="game-write" style="display: none; width: 100vw;">
-                    <h2>Wachten op verhalen...</h2>
-                    <span class="timerBar" style="transition: width 1s, background-color 1s; transition-timing-function: linear; display: none; border-radius: 25px; margin-left: auto; margin-right: auto; width: 100vw; height: 50px; background-color: #f7c747; text-align: center;"></span>
-                    <h2 class="timerClock" style="transition: color 1s; transition-timing-function: linear; color: black; margin-top: -43px; font-size: 24px; text-align: center; font-weight: 400;">00:00</h2>
+                    <h2 id="waitingForStories" style="text-align: center; margin-top: 30vh;">Wachten op verhalen...</h2>
+                    <span class="game timer-bar" style="height: 100px; margin-top: -5vh; border-radius: 50px;"></span>
+                    <h2 class="game timer-clock">00:00</h2>
                 </div>
                 <div id="game-read" style="display: none; width: 100vw;">
                     <div style="display: flex; flex-direction: column;">
                         <div id="storyList"></div>
                     </div>
-                    <span class="timerBar" style="transition: width 1s, background-color 1s; transition-timing-function: linear; display: none; border-radius: 25px; margin-left: auto; margin-right: auto; width: 100vw; height: 50px; background-color: #f7c747; text-align: center;"></span>
-                    <h2 class="timerClock" style="transition: color 1s; transition-timing-function: linear; color: black; margin-top: -43px; font-size: 24px; text-align: center; font-weight: 400;">00:00</h2>
+                    <h2 id="waitingForAnswers" style="text-align: center; margin-top: 30vh;">Wachten op antwoorden...</h2>
+                    <span class="game timer-bar" style="height: 100px; border-radius: 50px;"></span>
+                    <h2 class="game timer-clock">00:00</h2>
                 </div>
                 <div id="game-results" style="display: none;">
                     <div style="display: flex; flex-direction: row;">

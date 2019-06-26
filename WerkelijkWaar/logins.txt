@@ -502,3 +502,175 @@
 26-6-2019 | 12:32: End.
 --------[END]--------
 
+-----[LOG ENTRY]-----
+[AccountController - Login]
+26-6-2019 | 14:15: (4) Docent validated. Navigating to...
+26-6-2019 | 14:15: Teacher hub.
+26-6-2019 | 14:15: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[AccountController - Logout]
+26-6-2019 | 14:15: User validated.
+26-6-2019 | 14:15: (4)Docent logged out.
+26-6-2019 | 14:15: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[AccountController - Login]
+26-6-2019 | 14:15: (5) AAppel validated. Navigating to...
+26-6-2019 | 14:15: Student hub.
+26-6-2019 | 14:15: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[AccountController - Login]
+26-6-2019 | 14:20: (4) Docent validated. Navigating to...
+26-6-2019 | 14:20: Teacher hub.
+26-6-2019 | 14:20: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[AccountController - Logout]
+26-6-2019 | 14:20: User validated.
+26-6-2019 | 14:20: (4)Docent logged out.
+26-6-2019 | 14:20: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[AccountController - Login]
+26-6-2019 | 14:20: (5) AAppel validated. Navigating to...
+26-6-2019 | 14:20: Student hub.
+26-6-2019 | 14:20: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[HubModel - GenerateAverage]
+26-6-2019 | 14:21: Calculating AverageScore...
+-----[LOG ENTRY]-----
+[AccountController - Logout]
+26-6-2019 | 14:21: User validated.
+26-6-2019 | 14:21: (5)AAppel logged out.
+26-6-2019 | 14:21: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[AccountController - Login]
+26-6-2019 | 14:21: (4) Docent validated. Navigating to...
+26-6-2019 | 14:21: Teacher hub.
+26-6-2019 | 14:21: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[ConfigController - CreateConfig]
+26-6-2019 | 14:21: User validated.
+26-6-2019 | 14:21: Configuration of (4) does not exist yet. Creating...
+26-6-2019 | 14:21: Created/updated (4)'s configuration.
+26-6-2019 | 14:21: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[AccountController - Login]
+26-6-2019 | 14:24: (4) Docent validated. Navigating to...
+26-6-2019 | 14:24: Teacher hub.
+26-6-2019 | 14:24: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[AccountController - Logout]
+26-6-2019 | 14:25: User validated.
+26-6-2019 | 14:25: (4)Docent logged out.
+26-6-2019 | 14:25: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[AccountController - Login]
+26-6-2019 | 14:25: (5) AAppel validated. Navigating to...
+26-6-2019 | 14:25: Student hub.
+26-6-2019 | 14:25: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[AccountController - Login]
+26-6-2019 | 14:26: (4) Docent validated. Navigating to...
+26-6-2019 | 14:26: Teacher hub.
+26-6-2019 | 14:26: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[AccountController - Logout]
+26-6-2019 | 14:26: User validated.
+26-6-2019 | 14:26: (4)Docent logged out.
+26-6-2019 | 14:26: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[AccountController - Login]
+26-6-2019 | 14:26: (5) AAppel validated. Navigating to...
+26-6-2019 | 14:26: Student hub.
+26-6-2019 | 14:26: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[AccountController - Login]
+26-6-2019 | 14:31: (4) Docent validated. Navigating to...
+26-6-2019 | 14:31: Teacher hub.
+26-6-2019 | 14:31: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[AccountController - Logout]
+26-6-2019 | 14:31: User validated.
+26-6-2019 | 14:31: (4)Docent logged out.
+26-6-2019 | 14:31: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[AccountController - Login]
+26-6-2019 | 14:31: (5) AAppel validated. Navigating to...
+26-6-2019 | 14:31: Student hub.
+26-6-2019 | 14:31: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[AccountController - Login]
+26-6-2019 | 14:33: (4) Docent validated. Navigating to...
+26-6-2019 | 14:33: Teacher hub.
+26-6-2019 | 14:33: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[AccountController - Logout]
+26-6-2019 | 14:33: User validated.
+26-6-2019 | 14:33: (4)Docent logged out.
+26-6-2019 | 14:33: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[AccountController - Login]
+26-6-2019 | 14:33: (5) AAppel validated. Navigating to...
+26-6-2019 | 14:33: Student hub.
+26-6-2019 | 14:33: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[AccountController - Login]
+26-6-2019 | 14:36: (4) Docent validated. Navigating to...
+26-6-2019 | 14:36: Teacher hub.
+26-6-2019 | 14:36: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[AccountController - Logout]
+26-6-2019 | 14:36: User validated.
+26-6-2019 | 14:36: (4)Docent logged out.
+26-6-2019 | 14:36: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[AccountController - Login]
+26-6-2019 | 14:36: (5) AAppel validated. Navigating to...
+26-6-2019 | 14:36: Student hub.
+26-6-2019 | 14:36: End.
+--------[END]--------
+

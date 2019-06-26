@@ -1084,11 +1084,12 @@ namespace WerkelijkWaar
                                 logger.Log("[Game - UploadAnswer]", roomCode + " (" + user.Id + " | " + user.SocketId + ") now has €" + score.CashAmount + "- and " + score.FollowerAmount + " followers.", 2, 3, false);
 
                                 List<string> rankList = GenerateLeaderboard(roomCode);
-                                await InvokeClientMethodToAllAsync("updateScore", roomCode, user.SocketId, score.LastResult, score.CashAmount, score.FollowerAmount, Newtonsoft.Json.JsonConvert.SerializeObject(rankList), endGame, false);
+
+                                await InvokeClientMethodToAllAsync("updateScore", roomCode, user.SocketId, score.LastResult, score.CashAmount, score.FollowerAmount, followerChange, cashGain, Newtonsoft.Json.JsonConvert.SerializeObject(rankList), endGame, false);
 
                                 if (user.Equals(lastUser))
                                 {
-                                    await InvokeClientMethodToAllAsync("updateScore", roomCode, user.SocketId, score.LastResult, score.CashAmount, score.FollowerAmount, Newtonsoft.Json.JsonConvert.SerializeObject(rankList), endGame, true);
+                                    await InvokeClientMethodToAllAsync("updateScore", roomCode, user.SocketId, score.LastResult, score.CashAmount, score.FollowerAmount, followerChange, cashGain, Newtonsoft.Json.JsonConvert.SerializeObject(rankList), endGame, true);
                                 }
                             }
                         }
