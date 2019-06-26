@@ -68,12 +68,41 @@
                         <input class="btn-skipTutorial" type="button" value="Overslaan" />
                     </div>
                     <div id="game-tutorial-2" class="game game-tutorial" style="display: none;">
-                        <div class="game game-tutorial student-div">
+                        <div class="game game-tutorial student-div" style="margin-top: -100px; margin-bottom: 100px;">
                             <p>Om geld te verdienen heb je volgers nodig.</p>
                             <p>Zorg er dus voor dat lezers het door jou geschreven bericht delen.</p>
                             <p>Daarnaast moet je er wel voor zorgen dat je zelf de juiste berichten deelt.</p>
                             <p>Deel je een vals bericht, dan kost je dat volgers</p>
-                            <p>[foto's]</p>
+                            <div style="margin-top: -250px;">
+                                <div class="game game-tutorial triple-image">
+                                    <div style="margin-right: 5vh;">
+                                        <p>Jouw bericht wordt gedeeld.</p>
+                                        <div style="display: flex; flex-direction: row; justify-content: center; margin-top: -233px;">
+                                            <img src="~/content/image/Person.png" style="height: 50px;" />
+                                            <p style="font-size: 20px;" id="followersGainedPerVoteString">+x per stem*</p>
+                                        </div>
+                                        <p style="margin-top: -400px;">*wordt pas op het einde toegevoegd aan de ranking.</p>
+                                    </div>
+                                    <div style="margin-left: 5vh; margin-right: 5vh;">
+                                        <p>Je deelt het juiste verhaal.</p>
+                                        <div style="display: flex; flex-direction: row; justify-content: center; margin-top: -233px;">
+                                            <img src="~/content/image/Person.png" style="height: 50px;" />
+                                            <p style="font-size: 20px;" id="followersGainedForRightAnswerString">+x</p>
+                                        </div>
+                                    </div>
+                                    <div style="margin-left: 5vh;">
+                                        <p>Je deelt een nep verhaal<br />of niemand deelt jouw verhaal.</p>
+                                        <div style="display: flex; flex-direction: row; justify-content: center; margin-top: -233px;">
+                                            <img src="~/content/image/Person.png" style="height: 50px;" />
+                                            <p style="font-size: 20px;" id="followersLostForWrongAnswerString">-x</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div style="height: 20px; display: flex; flex-direction: row; justify-content: center; margin-top: -445px;">
+                                    <p id="moneyGainedPerFollowerString">= €x,xx-</p>
+                                    <img src="~/content/image/Person.png" style="height: 50px;" />
+                                </div>
+                            </div>
                         </div>
                         <input class="btn-continueTutorial" style="margin-bottom: 10px;" type="button" value="Volgende" />
                         <input class="btn-skipTutorial" type="button" value="Overslaan" />

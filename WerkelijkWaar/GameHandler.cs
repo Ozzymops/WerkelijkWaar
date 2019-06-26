@@ -261,6 +261,7 @@ namespace WerkelijkWaar
 
                                 await InvokeClientMethodToAllAsync("joinRoom", socketId, roomCode);
                                 await RetrievePlayerList(room.RoomCode);
+                                await InvokeClientMethodToAllAsync("retrieveConfigurationDataForTutorial", roomCode, room.Config.FollowerGain, room.Config.FollowerPerVote, room.Config.FollowerLoss, room.Config.CashPerFollower);
                                 await PowerupVisuals(room.RoomCode);
                             }
                             else

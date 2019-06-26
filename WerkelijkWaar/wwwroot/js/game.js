@@ -31,7 +31,7 @@ $(document).ready(function () {
     // #endregion
 
     // #region WebSockets
-    var connection = new WebSocketManager.Connection('ws://localhost:50001/game');
+    var connection = new WebSocketManager.Connection('wss://localhost:44357/game');
     connection.enableLogging = false;
 
     // -- On connect: add connection to global list. Also clean current data with .trim()
@@ -79,6 +79,13 @@ $(document).ready(function () {
             console.log("Loading lobby...");
 
             JoinRoom(roomCode);
+        }
+    }
+
+    // -- Response to RetrieveConfigurationDataForTutorial
+    connection.clientMethods['retrieveConfigurationDataForTutorial'] = (roomCode, followersPerAnswer, followersPerVote, followersLost, moneyPerFollower) => {
+        if (currentRoomCode == roomCode) {
+            RetrieveConfigurationDataForTutorial(followersPerAnswer, followersPerVote, followersLost, moneyPerFollower);
         }
     }
 
@@ -245,6 +252,13 @@ $(document).ready(function () {
         $('#statusMessage').css('display', 'block');
     }
 
+    function RetrieveConfigurationDataForTutorial(followersGainedForRightAnswer, followersGainedPerVote, followersLostForWrongAnswer, moneyGainedPerFollower) {
+        $('#followersGainedForRightAnswerString').html('+' + followersGainedForRightAnswer);
+        $('#followersGainedPerVoteString').html('+' + followersGainedPerVote + ' per stem.');
+        $('#followersLostForWrongAnswerString').html('-' + followersLostForWrongAnswer);
+        $('#moneyGainedPerFollowerString').html('= €' + moneyGainedPerFollower + '-');
+    }
+
     function RetrievePlayerList(ownerSocketId, playerList) {
         $('#playerList').empty();
 
@@ -254,7 +268,7 @@ $(document).ready(function () {
             var nameString = nameList[name].split(':|!');
 
             if (mySocketId == ownerSocketId) {
-                $('#playerList').append('<li>' + nameString[0] + '<input class="form-button-orange" onClick="$.kickUser(' + "'" + nameString[1] + "'" + ')" type="button" value="Kick" style="width: 50px;" />' + '</li>');
+                $('#playerList').append('<li>' + nameString[0] + '<input class="form-button-orange" onClick="$.kickUser(' + "'" + nameString[1] + "'" + ')" type="button" value="Kick" style="width: 50px; height: 30px;" />' + '</li>');
             }
             else {
                 if (mySocketId == nameString[1]) {
