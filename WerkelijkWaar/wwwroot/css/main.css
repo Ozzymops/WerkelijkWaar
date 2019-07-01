@@ -1,32 +1,130 @@
-﻿/* #region Default */
+﻿/* #region Reset */
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    /*font: inherit;*/
+    vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+
+body {
+    line-height: 1;
+}
+
+ol, ul {
+    list-style: none;
+}
+
+blockquote, q {
+    quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content: '';
+    content: none;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+/* #endregion */
+
 html, body {
     background-color: #f5b91a;
 }
 
-html.light, body.light {
-    background-color: #f7c747;
-}
-
-html.dark, body.dark {
-    background-color: #ee860d;
-}
-
-html.blue, body.blue {
-    background-color: #6ac2c4;
-}
-
-html.darkblue, body.darkblue {
-    background-color: #7b6ea4;
-}
-/* #endregion */
-
-/* #region Shared */
-div.flex-center {
+/********** div **********/
+div.flex-row {
     display: flex;
+    flex-direction: row;
+}
+
+div.flex-column {
+    display: flex;
+    flex-direction: column;
+}
+
+div.flex-centered {
+    display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
 }
 
+div.landing.text-bubble {
+    position: absolute;
+    width: 275px;
+    height: 100px;
+    right: 170px;
+    bottom: 285px;
+    background-color: white;
+    border-radius: 25px;
+}
+
+div.info.big-bubble {
+    width: 1000px;
+    height: 500px;
+    background-color: white;
+    border-radius: 25px;
+    margin: 0 0 0 -50%;
+}
+
+div.layout.status-bar {
+    width: 100%;
+    height: 100px;
+    background-color: #ee860d;
+}
+
+div.layout.status-bar.container {
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+div.layout.status-bar.container.profile-container {
+    width: 400px;
+}
+
+div.layout.status-bar.container.logout-container {
+    width: 200px;
+    height: 100px;
+}
+
+div.layout.nav-bar {
+    width: 100px;
+    height: 88.5vh;
+    float: left;
+    background-color: #ee860d;
+}
+
+/********** h1 **********/
 h1.big-title {
     color: white;
     font-size: 42px;
@@ -34,680 +132,240 @@ h1.big-title {
     font-weight: bold;
 }
 
+h1.info.big-number {
+    color: black;
+    font-size: 24px;
+    text-align: center;
+    font-weight: bold;
+    margin: 0 0 0 20px;
+}
+
+/********** h2 **********/
 h2.subtitle {
     color: black;
     font-size: 24px;
     text-align: center;
-    font-weight: 400;
 }
 
+/********** h3 **********/
 h3.small-text {
     color: black;
     font-size: 12px;
     text-align: center;
 }
 
+/********** p **********/
 p.before-input {
     color: black;
     font-size: 12px;
     text-align: center;
 }
 
-input[type=text].text-input, input[type=password].text-input, input[type=number].number-input, input[type=file].text-input {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    background-color: #2db6bc;
-    border: none;
-    color: white;
-    width: 300px;
-    height: 33px;
-}
-
-input[type=text].text-input:focus, input[type=password].text-input:focus, input[type=number].number-input:focus, input[type=file].text-input:focus {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    background-color: #58c5ca;
-    border: none;
-    color: white;
-    width: 300px;
-    height: 33px;
-}
-
-input[type=text].text-input-thin, input[type=password].text-input-thin, input[type=number].number-input-thin {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    background-color: #2db6bc;
-    border: none;
-    color: white;
-    width: 150px;
-    height: 20px;
-}
-
-input[type=text].text-input-thin:focus, input[type=password].text-input-thin:focus, input[type=number].number-input-thin:focus {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    background-color: #58c5ca;
-    border: none;
-    color: white;
-    width: 150px;
-    height: 20px;
-}
-
-input[type=button].form-button, input[type=submit].form-button {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    background-color: #2db6bc;
-    border: none;
-    color: white;
-    width: 300px;
-    height: 40px;
-}
-
-input[type=button].form-button-disabled, input[type=submit].form-button-disabled {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    background-color: gray;
-    border: none;
+p.landing.text-bubble {
     color: black;
-    width: 300px;
-    height: 40px;
+    font-size: 12px;
+    text-align: center;
+    margin: 5px 0 0 0;
 }
 
-input[type=button].form-button-orange, input[type=submit].form-button-orange {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    background-color: #ee860d;
-    border: none;
-    color: white;
-    width: 300px;
-    height: 40px;
-}
-
-input[type=button].btn-swapStory, input[type=button].btn-continueTutorial, input[type=button].btn-skipTutorial {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    background-color: #ee860d;
-    border: none;
-    color: white;
-    width: 300px;
-    height: 40px;
-}
-
-input[type=button].form-button:hover, input[type=submit].form-button:hover {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    background-color: #58c5ca;
-    border: none;
-    color: white;
-    width: 300px;
-    height: 40px;
-}
-
-input[type=button].form-button-disabled:hover, input[type=submit].form-button-disabled:hover {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    background-color: lightgray;
-    border: none;
+p.info.text-line {
     color: black;
-    width: 300px;
-    height: 40px;
+    margin: 20px 0 0 0;
+    text-align: center;
 }
 
-input[type=button].form-button-orange:hover, input[type=submit].form-button-orange:hover {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    background-color: #ff8900;
-    border: none;
-    color: white;
-    width: 300px;
-    height: 40px;
+p.info.text-line.indent {
+    margin: 5px 0 0 10px;
+    text-align: left;
 }
 
-input[type=button].btn-swapStory:hover, input[type=button].btn-continueTutorial:hover, input[type=button].btn-skipTutorial:hover {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    background-color: #ff8900;
-    border: none;
-    color: white;
-    width: 300px;
-    height: 40px;
+p.info.text-line.final {
+    margin: 30px 0 0 0;
+    text-align: center;
 }
 
-input[type=checkbox].form-checkbox {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    background-color: #2db6bc;
-    border: none;
-    color: white;
-    width: 33px;
-    height: 33px;
-}
-
-input[type=checkbox].form-checkbox:hover {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    background-color: #58c5ca;
-    border: none;
-    color: white;
-    width: 33px;
-    height: 33px;
-}
-
-input[type=date] {
-    display: block;
-    background-color: #2db6bc;
-    color: white;
-    border: none;
-    width: 150px;
-    height: 33px;
-}
-
-input[type=date]:hover, input[type=date]:focus {
-    display: block;
-    background-color: #58c5ca;
-    color: white;
-    border: none;
-    width: 150px;
-    height: 33px;
-}
-
-.dropdown {
-    display: block;
-    background-color: #2db6bc;
-    color: white;
-    border: none;
-    width: 150px;
-    height: 33px;
-}
-
-.dropdown:hover, .dropdown:focus {
-    display: block;
-    background-color: #2db6bc;
-    color: white;
-    border: none;
-    width: 150px;
-    height: 33px;
-}
-
-textarea {
-    display: block;
-    background-color: #2db6bc;
-    color: white;
-    border: none;
-    width: 750px;
-    height: 250px;
-}
-
-textarea:hover, textarea:focus {
-    display: block;
-    background-color: #2db6bc;
-    color: white;
-    border: none;
-    width: 750px;
-    height: 250px;
-}
-/* #endregion */
-
-/* #region Layout */
-div.layout.top-bar {
-    width: 100%;
-    height: 100px;
-    background-color: #ee860d;
-}
-
-div.layout.top-bar-container {
-    display: flex;
-    flex-direction: row;
-    width: 100%;
-    justify-content: space-between;
-}
-
-div.layout.top-bar-profile {
-    display: flex;
-    flex-direction: row;
-    width: 400px;
-}
-
-div.layout.top-bar-logout {
-    display: flex;
-    flex-direction: row;
-    width: 200px;
-    height: 100px;
-}
-
-div.layout.side-bar {
-    float: left;
-    height: 100vh;
-    width: 100px;
-    background-color: #ee860d;
-}
-
-p.layout.top-bar-profile {
+p.layout.status-bar.container.profile-container.string-profile {
     color: white;
     font-size: 16px;
     text-align: center;
-    margin-left: 10px;
+    margin: 25px 0 0 10px;
 }
 
-p.layout.top-bar-logout {
-    font-size: 20px;
-    margin-top: 30px;
+p.layout.status-bar.container.logout-container.string-logout {
     color: white;
+    font-size: 20px;
     text-align: center;
     vertical-align: central;
+    margin: 30px 0 0 0;
 }
 
-p.layout.side-bar-actions {
+p.layout.nav-bar.string-actions {
     color: white;
     font-size: 24px;
     text-align: center;
 }
 
-img.layout.top-bar-profile {
+/********** img **********/
+img.mascot.low-right {
+    position: absolute;
+    height: 33%;
+    right: 0;
+    bottom: 0;
+}
+
+img.mascot.big-right {
+    position: absolute;
+    height: 66%;
+    right: 10%;
+    bottom: 15%;
+}
+
+img.img-profile-100x100 {
     width: 100px;
     height: 100px;
 }
 
-img.layout.top-bar-logout {
+img.layout.status-bar.container.logout-container.img-logout {
     height: 100px;
     width: 100px;
     padding: 20px;
 }
 
-img.layout.side-bar-item {
+img.layout.nav-bar.img-item {
     height: 50px;
     width: 50px;
-    margin-top: 10px;
-    margin-left: 25px;
+    margin: 10px 0px 0px 25px;
 }
 
-input[type=submit].layout.top-bar-profile {
+/********** input **********/
+input[type=text].text-input, input[type=password].text-input, input[type=number].number-input {
     display: block;
-    width: 100px;
+    width: 300px;
+    height: 33px;
+    color: white;
+    background-color: #2db6bc;
+    margin: 0px auto 0px auto;
+    border: none;
+}
+
+input[type=text].text-input:focus, input[type=password].text-input:focus, input[type=number].number-input:focus {
+    background-color: #58c5ca;
+}
+
+input[type=text].text-input.thin, input[type=password].text-input.thin, input[type=number].number-input.thin {
+    width: 150px;
+    height: 20px;
+    background-color: #2db6bc;
+}
+
+input[type=text].text-input.thin:focus, input[type=password].text-input.thin:focus, input[type=number].number-input.thin:focus {
+    background-color: #58c5ca;
+}
+
+input[type=button].form-button, input[type=submit].form-button {
+    display: block;
+    width: 300px;
+    height: 40px;
+    color: white;
+    background-color: #2db6bc;
+    margin: 0px auto 0px auto;
+    border: none;
+}
+
+input[type=button].form-button.orange, input[type=submit].form-button.orange {
+    background-color: #ee860d;
+}
+
+input[type=button].form-button.brown, input[type=submit].form-button.brown {
     background-color: #6b3a00;
-    border: none;
-    color: white;
-    margin-left: 10px;
 }
 
-/* #endregion*/
+input[type=submit].landing.text-bubble {
+    display: block;
+    width: 200px;
+    height: 40px;
+    color: black;
+    background-color: lightgray;
+    margin: 10px auto 0 auto;
+    text-align: center;
+}
 
-/* #region Landing */
-div.landing.bubble-space {
-    position: absolute;
+input[type=button].form-button:hover, input[type=submit].form-button:hover {
+    background-color: #58c5ca;
+}
+
+input[type=button].form-button.orange:hover, input[type=submit].form-button.orange:hover {
+    background-color: #ff8900;
+}
+
+input[type=button].form-button.brown:hover, input[type=submit].form-button.brown:hover {
+    background-color: #89510f;
+}
+
+input[type=button].form-button.disabled, input[type=submit].form-button.disabled {
+    color: black;
+    background-color: gray;
+}
+
+input[type=button].form-button.disabled:hover, input[type=submit].form-button.disabled:hover {
+    background-color: lightgray;
+}
+
+input[type=submit].landing.text-bubble:hover {
     background-color: white;
-    width: 275px;
-    height: 100px;
-    right: 170px;
-    bottom: 285px;
-    border-radius: 25px;
 }
 
-img.landing.mascot-lowerright {
-    height: 33%;
-    position: absolute;
-    right: 0;
-    bottom: 0;
-}
-
-p.landing.text-balloon {
-    color: black;
-    font-size: 12px;
-    text-align: center;
-    margin-top: 5px;
-}
-
-input[type=submit].landing.button-balloon {
+input[type=checkbox].form-checkbox {
     display: block;
-    margin-left: auto;
-    margin-right: auto;
-    text-align: center;
-}
-/* #endregion */
-
-/* #region GameInfo */
-h1.big-number {
-    color: black;
-    font-size: 24px;
-    text-align: center;
-    font-weight: bold;
-    margin-left: 20px;
-}
-
-div.gameinfo.big-bubble {
-    background-color: white;
-    height: 500px;
-    width: 1000px;
-    border-radius: 25px;
-    margin-left: -50%;
-}
-
-img.landing.mascot-bigright {
-    height: 66%;
-    position: absolute;
-    right: 10%;
-    bottom: 15%;
-}
-/* #endregion */
-
-/* #region Game */
-p.game.on-purple {
-    color: white;
-}
-
-/* #region Timer */
-span.game.timer-bar {
-    transition: width 1s, background-color 0.5s;
-    transition-timing-function: linear;
-    border-radius: 25px;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: -55px;
-    width: 100vw;
-    height: 50px;
-    background-color: #f7c747;
-    text-align: center;
-}
-
-h2.game.timer-clock {
-    transition: color 0.5s;
-    transition-timing-function: linear;
-    color: black;
-    margin-top: -43px;
-    font-size: 24px;
-    text-align: center;
-    font-weight: 400;
-}
-/* #endregion*/
-
-/* #region Tutorial */
-div.game.game-tutorial {
-    width: 100vw;
-    text-align: center;
-}
-
-div.game.game-tutorial div {
-    height: 75vh;
-    padding-top: 25vh;
-}
-
-div.game.game-tutorial.student-div {
-    height: 50vh;
-    padding-top: 10vh;
-}
-
-div.game.game-tutorial p {
-    color: white;
-    font-size: 24px;
-}
-/* #endregion */
-/* #region Write */
-div.game.game-write {
-    width: 100vw;   
-}
-
-div.game.game-write.column-holder {
-    display: flex;
-    flex-direction: column;
-}
-
-div.game.game-write.row-holder {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-}
-
-div.game.game-write.story-column {
-    background-color: #6ac2c4;
-    width: 33%;
-    height: 600px;
-    margin-right: 15px;
-}
-
-input[type=button].game.game-write.submit-button {
-    display: block;
-    background-color: #ee860d;
-    border: none;
-    color: white;
-    width: 150px;
-    height: 40px;
-    margin-left: 75.3vw;
-    margin-top: 20px;
-    margin-bottom: 10px;
-}
-
-input[type=button].game.game-write.submit-button:hover {
-    display: block;
-    background-color: #ff8900;
-    border: none;
-    color: white;
-    width: 150px;
-    height: 40px;
-    margin-left: 75.3vw;
-    margin-top: 20px;
-    margin-bottom: 10px;
-}
-
-div.game.game-write.story-column p {
-    text-align: center;
-    color: white;
-    font-size: 16px;
-}
-
-div.game.game-write.write-column {
-    background-color: #6ac2c4;
-    display: flex;
-    flex-direction: column;
-    width: 33%;
-    height: 600px;
-    margin-left: 15px;
-    padding: 10px;
-}
-
-.game.game-write.write-column input[type=text] {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    background-color: #27a5a8;
-    border: none;
-    color: white;
-    width: 100%;
+    width: 33px;
     height: 33px;
-    margin-bottom: 20px;
+    color: white;
+    background-color: #2db6bc;
+    margin: 0px auto 0px auto;
+    border: none;
 }
 
-.game.game-write.write-column input[type=text]:focus {
+input[type=checkbox].form-checkbox:hover {
+    background-color: #58c5ca;
+}
+
+input[type=date].form-date {
     display: block;
-    margin-left: auto;
-    margin-right: auto;
-    background-color: #3ea8ad;
-    border: none;
-    color: white;
-    width: 100%;
+    width: 150px;
     height: 33px;
-    margin-bottom: 20px;
-}
-
-.game.game-write.write-column textarea {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    background-color: #27a5a8;
-    border: none;
-    color: black;
-    width: 100%;
-    height: 100%;
-}
-
-.game.game-write.write-column textarea:focus {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    background-color: #3ea8ad;
-    border: none;
-    color: black;
-    width: 100%;
-    height: 100%;
-}
-
-p.game.game-write.after-sending {
-    text-align: center;
     color: white;
-    font-size: 24px;
-    margin-bottom: 25vh;
-}
-/* #endregion */
-/* #region Read */
-div.game.game-read {
-    width: 100vw;
-    height: 76vh;
-    overflow: hidden;
-}
-
-div.game.game-read.column-holder {
-    display: flex;
-    flex-direction: column;
-}
-
-div.game.game-read.row-holder {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-}
-
-div.game.game-read.list-column {
-    background-color: #6ac2c4;
-    width: 33%;
-    height: 600px;
-    margin-right: 15px;
-}
-
-div.game.game-read.story-column {
-    background-color: #6ac2c4;
-    display: flex;
-    flex-direction: column;
-    width: 33%;
-    height: 600px;
-    margin-left: 15px;
-    padding: 10px;
-}
-
-div.game.game-read.list-column p {
-    color: white;
-    text-align: center;
-}
-
-div.game.game-read.story-column p {
-    background-color: #27a5a8;
-    width: 100%;
-    margin-bottom: 20px;
-}
-
-input[type=button].game.game-read.submit-button {
-    display: block;
-    background-color: #ee860d;
+    background-color: #2db6bc;
     border: none;
+}
+
+input[type=date].form-date:hover {
+    background-color: #58c5ca;
+}
+
+/********** textarea **********/
+textarea.form-story {
+    display: block;
+    width: 750px;
+    height: 250px;
     color: white;
+    background-color: #2db6bc;
+    border: none;
+}
+
+textarea.form-story:hover, textarea.form-story:focus {
+    background-color: #58c5ca;
+}
+
+/********** classes **********/
+.form-dropdown {
+    display: block;
     width: 150px;
-    height: 40px;
-    margin-left: 65vw;
-    margin-bottom: -60px;
-}
-
-input[type=button].game.game-read.submit-button:hover {
-    display: block;
-    background-color: #ff8900;
-    border: none;
+    height: 33px;
     color: white;
-    width: 150px;
-    height: 40px;
-    margin-left: 65vw;
-    margin-bottom: -60px;
-}
-
-input[type=button].game.game-read.drawer-button {
-    display: block;
-    background-color: #ee860d;
+    background-color: #2db6bc;
     border: none;
-    color: white;
-    width: 150px;
-    height: 40px;
-    margin-left: 75.3vw;
-    margin-top: 20px;
-    margin-bottom: 10px;
 }
 
-input[type=button].game.game-read.drawer-button:hover {
-    display: block;
-    background-color: #ff8900;
-    border: none;
-    color: white;
-    width: 150px;
-    height: 40px;
-    margin-left: 75.3vw;
-    margin-top: 20px;
-    margin-bottom: 10px;
+.form-dropdown:hover {
+    background-color: #58c5ca;
 }
-
-input[type=button].game.game-read.powerup-button {
-    display: block;
-    background-color: #ee860d;
-    border: none;
-    color: white;
-    width: 150px;
-    height: 40px;
-    margin-left: 75.3vw;
-    margin-top: 20px;
-    margin-bottom: 10px;
-    border: 1px solid rgba(189, 101, 0, 1);
-}
-
-input[type=button].game.game-read.powerup-button:hover {
-    display: block;
-    background-color: #ff8900;
-    border: none;
-    color: white;
-    width: 150px;
-    height: 40px;
-    margin-left: 75.3vw;
-    margin-top: 20px;
-    margin-bottom: 10px;
-    border: 1px solid rgba(189, 101, 0, 1);
-}
-/* #endregion */
-
-/* #region Docent */
-div.game.docent.container {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-around;
-}
-
-div.game.docent.side-part {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-div.game.docent.center-part {
-    display: flex;
-    flex-direction: column;
-}
-
-/* #endregion */
-/* #endregion */

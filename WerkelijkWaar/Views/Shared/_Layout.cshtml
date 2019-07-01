@@ -38,33 +38,33 @@
 <body>
     <header>
         <!-- Top -->
-        <div id="topBar" class="layout top-bar">
+        <div id="topBar" class="layout status-bar">
             @if (sessionExists)
             {
-            <div class="layout top-bar-container">
-                <div class="layout top-bar-profile">
-                    @if (!String.IsNullOrEmpty(user.ImageSource))
-                    {
-                        <img class="layout top-bar-profile" src="~/content/image/avatars/@user.Id/@user.ImageSource" alt="Profielfoto" title="Profielfoto" />
-                    }
-                    else
-                    {
-                        <img class="layout top-bar-profile" src="~/content/image/Follower.png" alt="Profielfoto niet gevonden" title="Profielfoto niet gevonden" />
-                    }
-                    <div>
-                        <p class="layout top-bar-profile" style="margin-top: 25px;">Welkom, @user.Name!</p>
-                        <form style="margin-top: -10px;">
-                            <input asp-controller="Account" asp-action="AccountView" class="layout top-bar-profile" type="submit" value="Account" />
-                        </form>
+                <div class="container">
+                    <div class="profile-container">
+                        @if (!String.IsNullOrEmpty(user.ImageSource))
+                        {
+                            <img class="layout top-bar-profile" src="~/content/image/avatars/@user.Id/@user.ImageSource" alt="Profielfoto" title="Profielfoto" />
+                        }
+                        else
+                        {
+                            <img class="layout top-bar-profile" src="~/content/image/Follower.png" alt="Profielfoto niet gevonden" title="Profielfoto niet gevonden" />
+                        }
+                        <div>
+                            <p class="layout top-bar-profile" style="margin-top: 25px;">Welkom, @user.Name!</p>
+                            <form style="margin-top: -10px;">
+                                <input asp-controller="Account" asp-action="AccountView" class="layout top-bar-profile" type="submit" value="Account" />
+                            </form>
+                        </div>
+                    </div>
+                    <div class="layout top-bar-logout">
+                        <p class="layout top-bar-logout">Uitloggen</p>
+                        <a asp-controller="Account" asp-action="Logout">
+                            <img class="layout top-bar-logout" src="~/content/image/Logout.png" alt="Logout" title="Logout" />
+                        </a>
                     </div>
                 </div>
-                <div class="layout top-bar-logout">
-                    <p class="layout top-bar-logout">Uitloggen</p>
-                    <a asp-controller="Account" asp-action="Logout">
-                        <img class="layout top-bar-logout" src="~/content/image/Logout.png" alt="Logout" title="Logout" />
-                    </a>
-                </div>
-            </div>
             }
         </div>
     </header>
