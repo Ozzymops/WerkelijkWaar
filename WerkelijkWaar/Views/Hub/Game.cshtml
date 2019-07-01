@@ -6,7 +6,7 @@
 
 <body id="body">
     <div class="flex-center" style="flex-direction: column; margin-top: 10px;">
-        <img id="cornerMascot" class="mascot low-right" src="~/content/image/Squirrel.png" />
+        <img id="cornerMascot" class="landing mascot-lowerright" src="~/content/image/Squirrel.png" />
         <div id="game">
             <input id="userIdHolder" type="hidden" value="@Model.User.Id" />
             <input id="usernameHolder" type="hidden" value="@Model.User.Username" />
@@ -101,7 +101,7 @@
                                         <p id="storyText" style="color: black; padding: 10px;">Verhaal</p>
                                     </div>
                                     <div class="game game-write write-column">
-                                        <input id="writtenStoryTitle" type="text" placeholder="Titel" />
+                                        <input id="writtenStoryTitle" type="text" placeholder="Titel"/>
                                         <textarea id="writtenStoryText" placeholder="Verhaal"></textarea>
                                     </div>
                                 </div>

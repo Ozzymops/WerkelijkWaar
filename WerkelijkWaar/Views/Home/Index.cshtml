@@ -5,7 +5,7 @@
 @model LoginModel
 
 <body>
-    <div class="flex-centered" style="margin-top: 10px;">
+    <div class="flex-center" style="flex-direction: column; margin-top: 10px;">
         <h1 class="big-title">Werkelijk Waar?</h1>
         <h2 class="subtitle">Houd anderen voor de gek, maar<br />probeer zelf de waarheid te vinden:<br />weet jij het meest geloofwaardige<br />nepnieuws te schrijven?</h2>
         <br />
@@ -17,7 +17,7 @@
         }
         <form asp-action="LoginUser" asp-controller="Account">
             <div>
-                <p class="before-input" style="margin-bottom: 10px;">Gebruikersnaam:</p>
+                <p class="before-input">Gebruikersnaam:</p>
                 @if (!String.IsNullOrEmpty(Model.Username))
                 {
                     <input asp-for="Username" type="text" class="text-input" value="@Model.Username" />
@@ -28,7 +28,7 @@
                 }
             </div>
             <div style="margin-top: 10px;">
-                <p class="before-input" style="margin-bottom: 10px;">Wachtwoord:</p>
+                <p class="before-input">Wachtwoord:</p>
                 @if (!String.IsNullOrEmpty(Model.Password))
                 {
                     <input asp-for="Password" type="password" class="text-input" value="@Model.Password" />
@@ -38,15 +38,15 @@
                     <input asp-for="Password" type="password" class="text-input" />
                 }
             </div>
-            <input type="submit" value="Aanmelden" class="form-button" style="width: 300px; margin-top: 20px;" />
+        <input type="submit" value="Aanmelden" class="form-button" style="width: 300px; margin-top: 20px;" />
         </form>
     </div>
     <div>
-        <img src="~/content/image/Squirrel.png" class="mascot low-right" />
-        <div class="landing text-bubble">
-            <p class="landing text-bubble">Leuk dat je er bent!<br />Weet je al hoe 'Werkelijk Waar' werkt?</p>
+        <img src="~/content/image/Squirrel.png" class="landing mascot-lowerright" />
+        <div class="landing bubble-space">
+            <p class="landing text-balloon">Leuk dat je er bent!<br />Weet je al hoe 'Werkelijk Waar' werkt?</p>
             <form>
-                <input asp-controller="Home" asp-action="GameInfo" type="submit" class="landing text-bubble" value="Hoe speel ik het spel?" />
+                <input asp-controller="Home" asp-action="GameInfo" type="submit" class="landing button-balloon" value="Hoe speel ik het spel?" />
             </form>
         </div>
     </div>
