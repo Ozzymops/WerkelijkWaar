@@ -168,6 +168,13 @@ $(document).ready(function () {
             }
         }
     }
+
+    // -- Response to PowerupVisuals
+    connection.clientMethods['powerupVisuals'] = (roomCode, powerupsAllowed, powerupsCosts) => {
+        if (currentRoomCode == roomCode) {
+            UpdatePowerups(powerupsAllowed, powerupsCosts);
+        }
+    }
     // #endregion
 
     // #region Client Methods
@@ -207,6 +214,13 @@ $(document).ready(function () {
         $('#game-leaderboard').css('display', 'none');
         $('#leaderboard-final').css('display', 'none');
         $('#game-end').css('display', 'none');
+
+        // reset power-ups
+        $('#btn-activatePowerup-1').css("display", "block");
+        $('#btn-activatePowerup-2').css("display", "block");
+        $('#btn-activatePowerup-3').css("display", "block");
+        $('#btn-activatePowerup-4').css("display", "block");
+        $('#btn-activatePowerup-5').css("display", "block");
     }
 
     function HostRoom(newRoomCode) {
@@ -580,9 +594,6 @@ $(document).ready(function () {
             }
         }
         else {
-            //var followerDelta = Math.abs(followers - myFollowers);
-            //var cashDelta = Math.abs(cash - myCash);
-
             myFollowers = followers;
             myCash = cash;
 
@@ -672,63 +683,57 @@ $(document).ready(function () {
         }
     }
 
-    function UpdatePowerups(costs) {
-        var costList = JSON.parse(costs);
+    function UpdatePowerups(powerupsAllowed, powerupsCosts) {
+        if (powerupsAllowed) {
+            var costList = JSON.parse(powerupsCosts);
 
-        $('btn-activatePowerup-1').html('Twee antwoorden kiezen (€' + costs[0] + '-)');
-        $('btn-activatePowerup-2').html('Dubbele punten (€' + costs[1] + '-)');
-        $('btn-activatePowerup-3').html('50% wegstrepen (€' + costs[2] + '-)');
-        $('btn-activatePowerup-4').html('Spieken (€' + costs[3] + '-)');
-        $('btn-activatePowerup-5').html('Dubbele punten voor jouw verhaal (€' + costs[4] + '-)');
+            $('#movingDrawer').css('display', 'block');
+            $('#btn-openPowerupDrawer').css('visibility', 'visible');
 
-        if (myGroup == currentGroup) {
-            $('btn-activatePowerup-1').css('display', 'none');
-            $('btn-activatePowerup-2').css('display', 'none');
-            $('btn-activatePowerup-3').css('display', 'none');
-            $('btn-activatePowerup-4').css('display', 'none');
-            $('btn-activatePowerup-5').css('display', 'block');
+            $('#btn-activatePowerup-1').val('Twee antwoorden kiezen (€' + costList[0] + '-)');
+            $('#btn-activatePowerup-2').val('Dubbele punten (€' + costList[1] + '-)');
+            $('#btn-activatePowerup-3').val('50% wegstrepen (€' + costList[2] + '-)');
+            $('#btn-activatePowerup-4').val('Spieken (€' + costList[3] + '-)');
+            $('#btn-activatePowerup-5').val('Dubbele punten voor jouw verhaal (€' + costList[4] + '-)');
+
+            if (myCash < costList[0]) {
+                $('#btn-activatePowerup-1').css('background-color', 'red');
+            }
+            else {
+                $('#btn-activatePowerup-1').css('background-color', 'green');
+            }
+
+            if (myCash < costList[1]) {
+                $('#btn-activatePowerup-2').css('background-color', 'red');
+            }
+            else {
+                $('#btn-activatePowerup-2').css('background-color', 'green');
+            }
+
+            if (myCash < costList[2]) {
+                $('#btn-activatePowerup-3').css('background-color', 'red');
+            }
+            else {
+                $('#btn-activatePowerup-3').css('background-color', 'green');
+            }
+
+            if (myCash < costList[3]) {
+                $('#btn-activatePowerup-4').css('background-color', 'red');
+            }
+            else {
+                $('#btn-activatePowerup-4').css('background-color', 'green');
+            }
+
+            if (myCash < costList[4]) {
+                $('#btn-activatePowerup-5').css('background-color', 'red');
+            }
+            else {
+                $('#btn-activatePowerup-5').css('background-color', 'green');
+            }
         }
         else {
-            $('btn-activatePowerup-1').css('display', 'block');
-            $('btn-activatePowerup-2').css('display', 'block');
-            $('btn-activatePowerup-3').css('display', 'block');
-            $('btn-activatePowerup-4').css('display', 'block');
-            $('btn-activatePowerup-5').css('display', 'none');
-        }
-
-        if (currentMoney < costList[0]) {
-            $('btn-activatePowerup-1').css('background-color', 'red');
-        }
-        else {
-            $('btn-activatePowerup-1').css('background-color', 'green');
-        }
-
-        if (currentMoney < costList[1]) {
-            $('btn-activatePowerup-2').css('background-color', 'red');
-        }
-        else {
-            $('btn-activatePowerup-2').css('background-color', 'green');
-        }
-
-        if (currentMoney < costList[2]) {
-            $('btn-activatePowerup-3').css('background-color', 'red');
-        }
-        else {
-            $('btn-activatePowerup-3').css('background-color', 'green');
-        }
-
-        if (currentMoney < costList[3]) {
-            $('btn-activatePowerup-4').css('background-color', 'red');
-        }
-        else {
-            $('btn-activatePowerup-4').css('background-color', 'green');
-        }
-
-        if (currentMoney < costList[4]) {
-            $('btn-activatePowerup-5').css('background-color', 'red');
-        }
-        else {
-            $('btn-activatePowerup-5').css('background-color', 'green');
+            $('#movingDrawer').css('display', 'none');
+            $('#btn-openPowerupDrawer').css('visibility', 'hidden');
         }
     }
 

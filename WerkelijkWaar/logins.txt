@@ -800,3 +800,346 @@
 1-7-2019 | 11:06: End.
 --------[END]--------
 
+-----[LOG ENTRY]-----
+[AccountController - Login]
+1-7-2019 | 13:04: (4) JMuris validated. Navigating to...
+1-7-2019 | 13:04: Teacher hub.
+1-7-2019 | 13:04: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[ConfigController - CreateConfig]
+1-7-2019 | 13:04: User validated.
+1-7-2019 | 13:04: Configuration of (4) already exists. Updating...
+1-7-2019 | 13:04: Created/updated (4)'s configuration.
+1-7-2019 | 13:04: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[AccountController - Logout]
+1-7-2019 | 13:05: User validated.
+1-7-2019 | 13:05: (4)JMuris logged out.
+1-7-2019 | 13:05: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[AccountController - Login]
+1-7-2019 | 13:05: (5) AAppel validated. Navigating to...
+1-7-2019 | 13:05: Student hub.
+1-7-2019 | 13:05: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[ConfigController - CreateConfig]
+1-7-2019 | 13:06: User validated.
+1-7-2019 | 13:06: Configuration of (5) does not exist yet. Creating...
+1-7-2019 | 13:06: Created/updated (5)'s configuration.
+1-7-2019 | 13:06: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[AccountController - Logout]
+1-7-2019 | 13:06: User validated.
+1-7-2019 | 13:06: (5)AAppel logged out.
+1-7-2019 | 13:06: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[AccountController - Login]
+1-7-2019 | 13:06: (4) JMuris validated. Navigating to...
+1-7-2019 | 13:06: Teacher hub.
+1-7-2019 | 13:06: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[ConfigController - CreateConfig]
+1-7-2019 | 13:06: User validated.
+1-7-2019 | 13:06: Configuration of (4) already exists. Updating...
+1-7-2019 | 13:06: Created/updated (4)'s configuration.
+1-7-2019 | 13:06: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[AccountController - Login]
+1-7-2019 | 13:08: (4) JMuris validated. Navigating to...
+1-7-2019 | 13:08: Teacher hub.
+1-7-2019 | 13:08: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[ConfigController - CreateConfig]
+1-7-2019 | 13:08: User validated.
+1-7-2019 | 13:08: Configuration of (4) already exists. Updating...
+1-7-2019 | 13:08: Created/updated (4)'s configuration.
+1-7-2019 | 13:08: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[AccountController - Logout]
+1-7-2019 | 13:08: User validated.
+1-7-2019 | 13:08: (4)JMuris logged out.
+1-7-2019 | 13:08: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[AccountController - Login]
+1-7-2019 | 13:08: (5) AAppel validated. Navigating to...
+1-7-2019 | 13:08: Student hub.
+1-7-2019 | 13:08: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[AccountController - Logout]
+1-7-2019 | 13:09: User validated.
+1-7-2019 | 13:09: (5)AAppel logged out.
+1-7-2019 | 13:09: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[AccountController - Login]
+1-7-2019 | 13:09: (4) JMuris validated. Navigating to...
+1-7-2019 | 13:09: Teacher hub.
+1-7-2019 | 13:09: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[ConfigController - CreateConfig]
+1-7-2019 | 13:09: User validated.
+1-7-2019 | 13:09: Configuration of (4) already exists. Updating...
+1-7-2019 | 13:09: Created/updated (4)'s configuration.
+1-7-2019 | 13:09: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[ConfigController - CreateConfig]
+1-7-2019 | 13:10: User validated.
+1-7-2019 | 13:10: Configuration of (4) already exists. Updating...
+1-7-2019 | 13:10: Created/updated (4)'s configuration.
+1-7-2019 | 13:10: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[AccountController - Logout]
+1-7-2019 | 13:10: User validated.
+1-7-2019 | 13:10: (4)JMuris logged out.
+1-7-2019 | 13:10: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[AccountController - Login]
+1-7-2019 | 13:10: (5) AAppel validated. Navigating to...
+1-7-2019 | 13:10: Student hub.
+1-7-2019 | 13:10: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[AccountController - Logout]
+1-7-2019 | 13:10: User validated.
+1-7-2019 | 13:10: (5)AAppel logged out.
+1-7-2019 | 13:10: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[AccountController - Login]
+1-7-2019 | 13:10: (4) JMuris validated. Navigating to...
+1-7-2019 | 13:10: Teacher hub.
+1-7-2019 | 13:10: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[ConfigController - CreateConfig]
+1-7-2019 | 13:11: User validated.
+1-7-2019 | 13:11: Configuration of (4) already exists. Updating...
+1-7-2019 | 13:11: Created/updated (4)'s configuration.
+1-7-2019 | 13:11: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[AccountController - Logout]
+1-7-2019 | 13:11: User validated.
+1-7-2019 | 13:11: (4)JMuris logged out.
+1-7-2019 | 13:11: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[AccountController - Login]
+1-7-2019 | 13:11: (5) AAppel validated. Navigating to...
+1-7-2019 | 13:11: Student hub.
+1-7-2019 | 13:11: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[AccountController - Login]
+1-7-2019 | 13:13: (4) JMuris validated. Navigating to...
+1-7-2019 | 13:13: Teacher hub.
+1-7-2019 | 13:13: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[AccountController - Logout]
+1-7-2019 | 13:13: User validated.
+1-7-2019 | 13:13: (4)JMuris logged out.
+1-7-2019 | 13:13: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[AccountController - Login]
+1-7-2019 | 13:13: (5) AAppel validated. Navigating to...
+1-7-2019 | 13:13: Student hub.
+1-7-2019 | 13:13: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[ConfigController - CreateConfig]
+1-7-2019 | 13:16: User validated.
+1-7-2019 | 13:16: Configuration of (5) does not exist yet. Creating...
+1-7-2019 | 13:16: Created/updated (5)'s configuration.
+1-7-2019 | 13:16: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[AccountController - Logout]
+1-7-2019 | 13:17: User validated.
+1-7-2019 | 13:17: (5)AAppel logged out.
+1-7-2019 | 13:17: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[AccountController - Login]
+1-7-2019 | 13:17: (4) JMuris validated. Navigating to...
+1-7-2019 | 13:17: Teacher hub.
+1-7-2019 | 13:17: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[ConfigController - CreateConfig]
+1-7-2019 | 13:17: User validated.
+1-7-2019 | 13:17: Configuration of (4) already exists. Updating...
+1-7-2019 | 13:17: Created/updated (4)'s configuration.
+1-7-2019 | 13:17: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[ConfigController - CreateConfig]
+1-7-2019 | 13:17: User validated.
+1-7-2019 | 13:17: Configuration of (4) already exists. Updating...
+1-7-2019 | 13:17: Created/updated (4)'s configuration.
+1-7-2019 | 13:17: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[AccountController - Logout]
+1-7-2019 | 13:17: User validated.
+1-7-2019 | 13:17: (4)JMuris logged out.
+1-7-2019 | 13:17: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[AccountController - Login]
+1-7-2019 | 13:17: (5) AAppel validated. Navigating to...
+1-7-2019 | 13:17: Student hub.
+1-7-2019 | 13:17: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[AccountController - Login]
+1-7-2019 | 13:22: (4) JMuris validated. Navigating to...
+1-7-2019 | 13:22: Teacher hub.
+1-7-2019 | 13:22: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[AccountController - Logout]
+1-7-2019 | 13:22: User validated.
+1-7-2019 | 13:22: (4)JMuris logged out.
+1-7-2019 | 13:22: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[AccountController - Login]
+1-7-2019 | 13:22: (5) AAppel validated. Navigating to...
+1-7-2019 | 13:22: Student hub.
+1-7-2019 | 13:22: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[AccountController - Logout]
+1-7-2019 | 13:22: User validated.
+1-7-2019 | 13:22: (5)AAppel logged out.
+1-7-2019 | 13:22: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[AccountController - Login]
+1-7-2019 | 13:22: (4) JMuris validated. Navigating to...
+1-7-2019 | 13:22: Teacher hub.
+1-7-2019 | 13:22: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[ConfigController - CreateConfig]
+1-7-2019 | 13:22: User validated.
+1-7-2019 | 13:22: Configuration of (4) already exists. Updating...
+1-7-2019 | 13:22: Created/updated (4)'s configuration.
+1-7-2019 | 13:22: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[AccountController - Login]
+1-7-2019 | 13:26: (4) JMuris validated. Navigating to...
+1-7-2019 | 13:26: Teacher hub.
+1-7-2019 | 13:26: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[AccountController - Logout]
+1-7-2019 | 13:26: User validated.
+1-7-2019 | 13:26: (4)JMuris logged out.
+1-7-2019 | 13:26: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[AccountController - Login]
+1-7-2019 | 13:26: (5) AAppel validated. Navigating to...
+1-7-2019 | 13:26: Student hub.
+1-7-2019 | 13:26: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[AccountController - Logout]
+1-7-2019 | 13:28: User validated.
+1-7-2019 | 13:28: (5)AAppel logged out.
+1-7-2019 | 13:28: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[AccountController - Login]
+1-7-2019 | 13:28: (4) JMuris validated. Navigating to...
+1-7-2019 | 13:28: Teacher hub.
+1-7-2019 | 13:28: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[ConfigController - CreateConfig]
+1-7-2019 | 13:31: User validated.
+1-7-2019 | 13:31: Configuration of (4) already exists. Updating...
+1-7-2019 | 13:31: Created/updated (4)'s configuration.
+1-7-2019 | 13:31: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[ConfigController - CreateConfig]
+1-7-2019 | 13:31: User validated.
+1-7-2019 | 13:31: Configuration of (4) already exists. Updating...
+1-7-2019 | 13:31: Created/updated (4)'s configuration.
+1-7-2019 | 13:31: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[ConfigController - CreateConfig]
+1-7-2019 | 13:31: User validated.
+1-7-2019 | 13:31: Configuration of (4) already exists. Updating...
+1-7-2019 | 13:31: Created/updated (4)'s configuration.
+1-7-2019 | 13:31: End.
+--------[END]--------
+

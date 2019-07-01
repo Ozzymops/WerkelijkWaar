@@ -1055,12 +1055,14 @@ namespace WerkelijkWaar
                                         {
                                             // flat increase of money + increase of money based on votes
                                             cashDelta += 10.00 + ((room.Config.CashPerVote * score.RoundVotes) * 2);
-                                            followerDelta += ((room.Config.FollowerGain * 2) + ((room.Config.FollowerPerVote * score.RoundVotes) * 2));
+                                            // followerDelta += ((room.Config.FollowerGain * 2) + ((room.Config.FollowerPerVote * score.RoundVotes) * 2));
+                                            followerDelta += (room.Config.FollowerPerVote * score.RoundVotes) * 2;
                                         }
                                         else
                                         {
                                             cashDelta += 5.00 + (room.Config.CashPerVote * score.RoundVotes);
-                                            followerDelta += (room.Config.FollowerGain + (room.Config.FollowerPerVote * score.RoundVotes));
+                                            // followerDelta += (room.Config.FollowerGain + (room.Config.FollowerPerVote * score.RoundVotes));
+                                            followerDelta += (room.Config.FollowerPerVote * score.RoundVotes);
                                         }
 
                                         score.AttainedVotes += score.RoundVotes;
@@ -1433,14 +1435,8 @@ namespace WerkelijkWaar
             {
                 if (room.RoomCode == roomCode)
                 {
-                    if (room.Config.PowerupsAllowed)
-                    {
-                        await InvokeClientMethodToAllAsync("powerupVisuals", roomCode, room.Config.PowerupsAllowed, 20.00 * room.Config.PowerupsCostMult, 25.00 * room.Config.PowerupsCostMult, 10.00 * room.Config.PowerupsCostMult, 15.00 * room.Config.PowerupsCostMult, 15.00 * room.Config.PowerupsCostMult);
-                    }
-                    else
-                    {
-                        await InvokeClientMethodToAllAsync("powerupVisuals", roomCode, false, 0, 0, 0, 0, 0);
-                    }
+                    double[] costArray = { 20.00 * room.Config.PowerupsCostMult, 25.00 * room.Config.PowerupsCostMult, 10.00 * room.Config.PowerupsCostMult, 15.00 * room.Config.PowerupsCostMult, 15.00 * room.Config.PowerupsCostMult };
+                    await InvokeClientMethodToAllAsync("powerupVisuals", roomCode, room.Config.PowerupsAllowed, Newtonsoft.Json.JsonConvert.SerializeObject(costArray));
                 }
             }
         }

@@ -679,26 +679,18 @@ input[type=button].game.game-read.drawer-button:hover {
 input[type=button].game.game-read.powerup-button {
     display: block;
     background-color: #ee860d;
-    border: none;
+    border: 1px solid rgba(189, 101, 0, 1);
     color: white;
-    width: 150px;
+    width: 300px;
     height: 40px;
-    margin-left: 75.3vw;
+    margin-left: 10px;
     margin-top: 20px;
     margin-bottom: 10px;
-    border: 1px solid rgba(189, 101, 0, 1);
 }
 
 input[type=button].game.game-read.powerup-button:hover {
-    display: block;
     background-color: #ff8900;
-    border: none;
     color: white;
-    width: 150px;
-    height: 40px;
-    margin-left: 75.3vw;
-    margin-top: 20px;
-    margin-bottom: 10px;
     border: 1px solid rgba(189, 101, 0, 1);
 }
 /* #endregion */
