@@ -35,7 +35,12 @@ namespace WerkelijkWaar.Classes
         /// <summary>
         /// Amount of acquired cash
         /// </summary>
-        public double CashAmount { get; set; } = 50.00;
+        public double CashAmount { get; set; }
+
+        /// <summary>
+        /// Amount of acquired / lost cash in one round. Temporary variable
+        /// </summary>
+        public double CashDelta { get; set; }
 
         /// <summary>
         /// Amount of attained votes

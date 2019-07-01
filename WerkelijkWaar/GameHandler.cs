@@ -858,8 +858,9 @@ namespace WerkelijkWaar
 
                                 foreach (Classes.Score score in room.SelectedAnswers)
                                 {
-                                    // Reset follower delta
+                                    // Reset deltas
                                     score.FollowerDelta = 0;
+                                    score.CashDelta = 0;
 
                                     // User-made story
                                     if (storyFromAnswerArray[3] != 0.ToString())
@@ -930,8 +931,8 @@ namespace WerkelijkWaar
 
                                             logger.Log("[Game - UploadAnswer]", roomCode + " (" + user.Id + " | " + socketId + ") gained " + followerGain + " followers.", 1, 3, false);
 
-                                            score.FollowerAmount += followerGain;
                                             score.FollowerDelta = followerGain;
+                                            score.CashDelta = 5.00;
                                         }
                                         // Answer is false
                                         else
@@ -954,7 +955,6 @@ namespace WerkelijkWaar
 
                                             logger.Log("[Game - UploadAnswer]", roomCode + " (" + user.Id + " | " + socketId + ") lost " + followerLoss + " followers.", 1, 3, false);
 
-                                            score.FollowerAmount -= followerLoss;
                                             score.FollowerDelta = -followerLoss;
                                         }
 
@@ -1022,88 +1022,84 @@ namespace WerkelijkWaar
                                 logger.Log("[Game - GiveMoney]", roomCode + " (" + user.Id + " | " + user.SocketId + ") acquired some cash.", 0, 3, false);
 
                                 int followerDelta = score.FollowerDelta;
-                                double cashDelta = 0;
+                                double cashDelta = score.CashDelta;
 
+                                // cash calc.
                                 if (score.FollowerAmount > 0)
                                 {
-                                    cashDelta = room.Config.CashPerFollower * score.FollowerAmount;
-                                }
-                                else
-                                {
-                                    cashDelta = 1.00;
+                                    cashDelta += (room.Config.CashPerFollower * score.FollowerAmount);
                                 }
 
-                                // Per vote
-                                bool doubleScore = false;
 
+                                // follower calc.
+                                bool doubleVoteScore = false;                          
                                 foreach (Classes.Story story in room.WrittenStories)
                                 {
                                     if (user.SocketId == story.SocketId)
                                     {
                                         if (story.PowerupActive)
                                         {
-                                            doubleScore = true;
+                                            doubleVoteScore = true;
                                         }
-                                    }                               
+                                    }
                                 }
 
+                                // follower calc.: indiv. votes
                                 if (user.GameGroup == room.CurrentGroup)
                                 {
                                     if (score.RoundVotes > 0)
                                     {
-                                        if (doubleScore)
+                                        if (doubleVoteScore)
                                         {
-                                            // flat increase of money + increase of money based on votes
-                                            cashDelta += 10.00 + ((room.Config.CashPerVote * score.RoundVotes) * 2);
-                                            // followerDelta += ((room.Config.FollowerGain * 2) + ((room.Config.FollowerPerVote * score.RoundVotes) * 2));
                                             followerDelta += (room.Config.FollowerPerVote * score.RoundVotes) * 2;
+                                            cashDelta += 10.00 + (room.Config.CashPerVote * score.RoundVotes) * 2;
                                         }
                                         else
                                         {
-                                            cashDelta += 5.00 + (room.Config.CashPerVote * score.RoundVotes);
-                                            // followerDelta += (room.Config.FollowerGain + (room.Config.FollowerPerVote * score.RoundVotes));
                                             followerDelta += (room.Config.FollowerPerVote * score.RoundVotes);
+                                            cashDelta += 5.00 + (room.Config.CashPerVote * score.RoundVotes);
                                         }
 
-                                        score.AttainedVotes += score.RoundVotes;
-                                        score.RoundVotes = 0;
+                                        logger.Log("[Game - GiveMoney]", roomCode + " (" + user.Id + " | " + user.SocketId + ") gained " + score.RoundVotes + " votes.", 1, 3, false);
                                     }
                                     else
                                     {
-                                        if (doubleScore)
+                                        if (doubleVoteScore)
                                         {
-                                            followerDelta -= (room.Config.FollowerLoss * 2);
+                                            followerDelta -= room.Config.FollowerLoss * 2;
                                         }
                                         else
                                         {
                                             followerDelta -= room.Config.FollowerLoss;
                                         }
                                     }
+
+                                    score.AttainedVotes += score.RoundVotes;
+                                    score.RoundVotes = 0;
                                 }
 
-                                logger.Log("[Game - UploadAnswer]", roomCode + " (" + user.Id + " | " + user.SocketId + ") gained €" + cashDelta + "-.", 1, 3, false);
+                                // apply followers
+                                logger.Log("[Game - GiveMoney]", roomCode + " (" + user.Id + " | " + user.SocketId + ") follower delta: " + followerDelta, 1, 3, false);
 
-                                if (followerDelta > 0)
-                                {
-                                    logger.Log("[Game - UploadAnswer]", roomCode + " (" + user.Id + " | " + user.SocketId + ") gained " + followerDelta + " followers.", 1, 3, false);
-                                }
-                                else
-                                {
-                                    logger.Log("[Game - UploadAnswer]", roomCode + " (" + user.Id + " | " + user.SocketId + ") lost " + followerDelta + " followers.", 1, 3, false);
-                                }
-
-                                // apply deltas
-                                score.CashAmount += cashDelta;
                                 score.FollowerAmount += followerDelta;
 
                                 if (score.FollowerAmount <= 0)
                                 {
+                                    logger.Log("[Game - GiveMoney]", roomCode + " (" + user.Id + " | " + user.SocketId + ") followers below 0, gained some pity cash.", 1, 3, false);
+
                                     score.FollowerAmount = 0;
+                                    cashDelta = 1.00;
                                 }
 
+                                // apply cash
+                                logger.Log("[Game - GiveMoney]", roomCode + " (" + user.Id + " | " + user.SocketId + ") cash delta: " + cashDelta, 1, 3, false);
+
+                                score.CashAmount += cashDelta;
+
+                                // actual score calc.
                                 score.ActualScore = Convert.ToInt32(score.FollowerAmount) * Convert.ToInt32(score.CashAmount);
 
-                                logger.Log("[Game - UploadAnswer]", roomCode + " (" + user.Id + " | " + user.SocketId + ") now has €" + score.CashAmount + "- and " + score.FollowerAmount + " followers.", 2, 3, false);
+                                logger.Log("[Game - GiveMoney]", roomCode + " (" + user.Id + " | " + user.SocketId + ") now has €" + score.CashAmount + "- and " + score.FollowerAmount + " followers.", 2, 3, false);
 
                                 List<string> rankList = GenerateLeaderboard(roomCode);
 

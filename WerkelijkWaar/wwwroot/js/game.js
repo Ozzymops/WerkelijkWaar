@@ -261,6 +261,10 @@ $(document).ready(function () {
         ShowNavigationBars();
         HideAll();
 
+        // Reset stats
+        myFollowers = 0;
+        myCash = 0;
+
         $('#game-prep').css('display', 'block');
         $('#cornerMascot').css('display', 'block');
         $('#statusMessage').css('display', 'block');
@@ -347,6 +351,13 @@ $(document).ready(function () {
 
     function WritePhase() {
         HideAll();
+
+        // Reset writing fields
+        $('#writtenStoryTitle').val('');
+        $('#writtenStoryText').val('');
+
+        // Reset power-up drawer
+        powerupDrawer = false;
 
         $('#game-write').css('display', 'block');
         $('#write-busy').css('display', 'block');
