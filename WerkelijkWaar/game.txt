@@ -1,756 +1,471 @@
 -----[LOG ENTRY]-----
 [Game - HostRoom]
-26-6-2019 | 14:31: User Docent (4) is trying to host a room.
-26-6-2019 | 14:31: (4) validated.
-26-6-2019 | 14:31: (4, 0536Ee) retrieved configuration with Id 1.
-26-6-2019 | 14:31: (4, 0536Ee) applied configuration.
-26-6-2019 | 14:31: (4, 0536Ee) room is open and ready.
-26-6-2019 | 14:31: End.
+1-7-2019 | 10:57: User JMuris (4) is trying to host a room.
+1-7-2019 | 10:57: (4) validated.
+1-7-2019 | 10:57: (4, U3nwTH) retrieved configuration with Id 1.
+1-7-2019 | 10:57: (4, U3nwTH) applied configuration.
+1-7-2019 | 10:57: (4, U3nwTH) room is open and ready.
+1-7-2019 | 10:57: End.
 --------[END]--------
 
 -----[LOG ENTRY]-----
 [Game - JoinRoom]
-26-6-2019 | 14:31: User AAppel (5) is trying to join room 0536Ee.
-26-6-2019 | 14:31: (5) validated.
-26-6-2019 | 14:31: (5) found room 0536Ee.
-26-6-2019 | 14:31: (5) successfully joined room 0536Ee.
-26-6-2019 | 14:31: End.
+1-7-2019 | 10:57: User AAppel (5) is trying to join room U3nwTH.
+1-7-2019 | 10:57: (5) validated.
+1-7-2019 | 10:57: (5) found room U3nwTH.
+1-7-2019 | 10:57: (5) successfully joined room U3nwTH.
+1-7-2019 | 10:57: End.
 --------[END]--------
 
 -----[LOG ENTRY]-----
 [Game - JoinRoom]
-26-6-2019 | 14:31: User AAppel (5) is trying to join room 0536Ee.
-26-6-2019 | 14:31: (5) validated.
-26-6-2019 | 14:31: (5) found room 0536Ee.
-26-6-2019 | 14:31: (5) successfully joined room 0536Ee.
-26-6-2019 | 14:31: End.
+1-7-2019 | 10:57: User AAppel (5) is trying to join room U3nwTH.
+1-7-2019 | 10:57: (5) validated.
+1-7-2019 | 10:57: (5) found room U3nwTH.
+1-7-2019 | 10:57: (5) successfully joined room U3nwTH.
+1-7-2019 | 10:57: End.
 --------[END]--------
 
 -----[LOG ENTRY]-----
 [Game - StartGame]
-26-6-2019 | 14:31: Starting game in room 0536Ee...
-26-6-2019 | 14:31: Preparations are complete. Game in room 0536Ee has started.
-26-6-2019 | 14:31: End.
+1-7-2019 | 10:57: Starting game in room U3nwTH...
+1-7-2019 | 10:57: Preparations are complete. Game in room U3nwTH has started.
+1-7-2019 | 10:57: End.
 --------[END]--------
 
 -----[LOG ENTRY]-----
 [Game - SkipTutorial]
-26-6-2019 | 14:31: 0536Ee tutorial will be skipped.
-26-6-2019 | 14:31: 0536Ee continuing game...
-26-6-2019 | 14:31: End.
+1-7-2019 | 10:57: U3nwTH tutorial will be skipped.
+1-7-2019 | 10:57: U3nwTH continuing game...
+1-7-2019 | 10:57: End.
 --------[END]--------
 
 -----[LOG ENTRY]-----
 [Game - GoToWritePhase]
-26-6-2019 | 14:31: 0536Ee trying to go to writing phase...
-26-6-2019 | 14:31: 0536Ee continuing to writing phase...
-26-6-2019 | 14:31: End.
+1-7-2019 | 10:57: U3nwTH trying to go to writing phase...
+1-7-2019 | 10:57: U3nwTH continuing to writing phase...
+1-7-2019 | 10:57: End.
 --------[END]--------
 
 -----[LOG ENTRY]-----
 [Game - StartGameTimer]
-26-6-2019 | 14:31: (0ac37738-6bb4-4005-9a17-0bd2f5ae13cc) wants to start a timer in 0536Ee for 120 seconds.
-26-6-2019 | 14:31: (0ac37738-6bb4-4005-9a17-0bd2f5ae13cc) validated.
-26-6-2019 | 14:31: (0ac37738-6bb4-4005-9a17-0bd2f5ae13cc) timer started.
-26-6-2019 | 14:31: End.
+1-7-2019 | 10:57: (37299e6b-86ce-4b2f-9474-30ffa77bc4fc) wants to start a timer in U3nwTH for 120 seconds.
+1-7-2019 | 10:57: (37299e6b-86ce-4b2f-9474-30ffa77bc4fc) validated.
+1-7-2019 | 10:57: (37299e6b-86ce-4b2f-9474-30ffa77bc4fc) timer started.
+1-7-2019 | 10:57: End.
 --------[END]--------
 
 -----[LOG ENTRY]-----
 [Game - RetrieveRootStory]
-26-6-2019 | 14:31: 0536Ee retrieving root stories...
-26-6-2019 | 14:31: 0536Ee (5 | 08485d99-da91-47fb-b0e5-c0f2bea14031) got story 1:!|Een root verhaal:!|Straight outta RSS feed
-26-6-2019 | 14:31: 0536Ee (5 | 1d4ed256-7c87-44b5-aa0c-bd72ed3ae97d) got story 2:!|Een verhaal:!|Lorem Ipsum bla bla bla
-26-6-2019 | 14:31: End
-26-6-2019 | 14:31: End.
+1-7-2019 | 10:57: U3nwTH retrieving root stories...
+1-7-2019 | 10:57: U3nwTH (5 | 57fb5efd-b2a0-4e12-bf81-6ddb37ad2726) got story 4:!|Een test verhaal:!|Test 1
+1-7-2019 | 10:57: U3nwTH (5 | f3844a48-0c04-48f8-8452-f4d5db3437f6) got story 2:!|Een verhaal:!|Lorem Ipsum bla bla bla
+1-7-2019 | 10:57: End
+1-7-2019 | 10:57: End.
 --------[END]--------
 
 -----[LOG ENTRY]-----
 [Game - UploadStory]
-26-6-2019 | 14:32: 0536Ee (5 | 08485d99-da91-47fb-b0e5-c0f2bea14031) uploaded a story.
-26-6-2019 | 14:32: 0536Ee (5 | 08485d99-da91-47fb-b0e5-c0f2bea14031) story is 'a', 'a'
-26-6-2019 | 14:32: End.
+1-7-2019 | 10:57: U3nwTH (5 | f3844a48-0c04-48f8-8452-f4d5db3437f6) uploaded a story.
+1-7-2019 | 10:57: U3nwTH (5 | f3844a48-0c04-48f8-8452-f4d5db3437f6) story is 'ev', 'ev'
+1-7-2019 | 10:57: End.
 --------[END]--------
 
 -----[LOG ENTRY]-----
 [Game - UploadStory]
-26-6-2019 | 14:32: 0536Ee (5 | 1d4ed256-7c87-44b5-aa0c-bd72ed3ae97d) uploaded a story.
-26-6-2019 | 14:32: 0536Ee (5 | 1d4ed256-7c87-44b5-aa0c-bd72ed3ae97d) story is 'b', 'b'
-26-6-2019 | 14:32: End.
+1-7-2019 | 10:57: U3nwTH (5 | 57fb5efd-b2a0-4e12-bf81-6ddb37ad2726) uploaded a story.
+1-7-2019 | 10:57: U3nwTH (5 | 57fb5efd-b2a0-4e12-bf81-6ddb37ad2726) story is 'etv', 'etv'
+1-7-2019 | 10:57: End.
 --------[END]--------
 
 -----[LOG ENTRY]-----
 [Game - UploadStory]
-26-6-2019 | 14:32: 0536Ee all users wrote their stories.
+1-7-2019 | 10:57: U3nwTH all users wrote their stories.
 -----[LOG ENTRY]-----
 [Game - StopGameTimer]
-26-6-2019 | 14:32: (0ac37738-6bb4-4005-9a17-0bd2f5ae13cc) wants to stop a timer in 0536Ee.
-26-6-2019 | 14:32: (0ac37738-6bb4-4005-9a17-0bd2f5ae13cc) validated.
-26-6-2019 | 14:32: (0ac37738-6bb4-4005-9a17-0bd2f5ae13cc) timer stopped.
-26-6-2019 | 14:32: End.
+1-7-2019 | 10:57: (37299e6b-86ce-4b2f-9474-30ffa77bc4fc) wants to stop a timer in U3nwTH.
+1-7-2019 | 10:57: (37299e6b-86ce-4b2f-9474-30ffa77bc4fc) validated.
+1-7-2019 | 10:57: (37299e6b-86ce-4b2f-9474-30ffa77bc4fc) timer stopped.
+1-7-2019 | 10:57: End.
 --------[END]--------
 
-26-6-2019 | 14:32: 0536Ee continuing to read phase.
-26-6-2019 | 14:32: End.
+1-7-2019 | 10:57: U3nwTH continuing to read phase.
+1-7-2019 | 10:57: End.
 --------[END]--------
 
 -----[LOG ENTRY]-----
 [Game - GoToReadPhase]
-26-6-2019 | 14:32: (4) validated.
-26-6-2019 | 14:32: 0536Ee has 2 groups.
-26-6-2019 | 14:32: 0536Ee current group is 1.
-26-6-2019 | 14:32: 0536Ee next list of answers needs 1 answers.
-26-6-2019 | 14:32: 0536Ee first round.
-26-6-2019 | 14:32: End.
+1-7-2019 | 10:57: (4) validated.
+1-7-2019 | 10:57: U3nwTH has 2 groups.
+1-7-2019 | 10:57: U3nwTH current group is 1.
+1-7-2019 | 10:57: U3nwTH next list of answers needs 1 answers.
+1-7-2019 | 10:57: U3nwTH first round.
+1-7-2019 | 10:57: End.
 --------[END]--------
 
 -----[LOG ENTRY]-----
 [Game - StartGameTimer]
-26-6-2019 | 14:32: (0ac37738-6bb4-4005-9a17-0bd2f5ae13cc) wants to start a timer in 0536Ee for 120 seconds.
-26-6-2019 | 14:32: (0ac37738-6bb4-4005-9a17-0bd2f5ae13cc) validated.
-26-6-2019 | 14:32: (0ac37738-6bb4-4005-9a17-0bd2f5ae13cc) timer started.
-26-6-2019 | 14:32: End.
+1-7-2019 | 10:57: (37299e6b-86ce-4b2f-9474-30ffa77bc4fc) wants to start a timer in U3nwTH for 300 seconds.
+1-7-2019 | 10:57: (37299e6b-86ce-4b2f-9474-30ffa77bc4fc) validated.
+1-7-2019 | 10:57: (37299e6b-86ce-4b2f-9474-30ffa77bc4fc) timer started.
+1-7-2019 | 10:57: End.
 --------[END]--------
 
 -----[LOG ENTRY]-----
 [Game - RetrieveWrittenStories]
-26-6-2019 | 14:32: 0536Ee retrieving written stories of group 1...
-26-6-2019 | 14:32: 0536Ee got written story 5:!|a:!|a:!|08485d99-da91-47fb-b0e5-c0f2bea14031
-26-6-2019 | 14:32: 0536Ee got root story 1:!|Een root verhaal:!|Straight outta RSS feed:!|0
-26-6-2019 | 14:32: 0536Ee correct answer is 0.
-26-6-2019 | 14:32: End.
+1-7-2019 | 10:57: U3nwTH retrieving written stories of group 1...
+1-7-2019 | 10:57: U3nwTH got written story 5:!|etv:!|etv:!|57fb5efd-b2a0-4e12-bf81-6ddb37ad2726
+1-7-2019 | 10:57: U3nwTH got root story 1:!|Een test verhaal:!|Test 1:!|0
+1-7-2019 | 10:57: U3nwTH correct answer is 0.
+1-7-2019 | 10:57: End.
 --------[END]--------
 
 -----[LOG ENTRY]-----
 [Game - UploadAnswer]
-26-6-2019 | 14:32: 0536Ee (5 | 1d4ed256-7c87-44b5-aa0c-bd72ed3ae97d) uploaded a score: 0
-26-6-2019 | 14:32: 0536Ee (5 | 1d4ed256-7c87-44b5-aa0c-bd72ed3ae97d) parsing score.
-26-6-2019 | 14:32: 0536Ee (5 | 1d4ed256-7c87-44b5-aa0c-bd72ed3ae97d) selected story is 1:!|Een root verhaal:!|Straight outta RSS feed:!|0.
-26-6-2019 | 14:32: 0536Ee (5 | 1d4ed256-7c87-44b5-aa0c-bd72ed3ae97d) selected story is root: 0.
-26-6-2019 | 14:32: 0536Ee (5 | 1d4ed256-7c87-44b5-aa0c-bd72ed3ae97d) selected story is root: 0.
-26-6-2019 | 14:32: 0536Ee (5 | 1d4ed256-7c87-44b5-aa0c-bd72ed3ae97d) answer was correct.
-26-6-2019 | 14:32: 0536Ee (5 | 1d4ed256-7c87-44b5-aa0c-bd72ed3ae97d) gained 5 followers.
-26-6-2019 | 14:32: 0536Ee User has been parsed. Everybody answered, continuing to leaderboard.
-26-6-2019 | 14:32: End.
+1-7-2019 | 10:57: U3nwTH (5 | f3844a48-0c04-48f8-8452-f4d5db3437f6) uploaded a score: 1
+1-7-2019 | 10:57: U3nwTH (5 | f3844a48-0c04-48f8-8452-f4d5db3437f6) parsing score.
+1-7-2019 | 10:57: U3nwTH (5 | f3844a48-0c04-48f8-8452-f4d5db3437f6) selected story is 5:!|etv:!|etv:!|57fb5efd-b2a0-4e12-bf81-6ddb37ad2726.
+1-7-2019 | 10:57: U3nwTH (5 | f3844a48-0c04-48f8-8452-f4d5db3437f6) selected story is user-made: 57fb5efd-b2a0-4e12-bf81-6ddb37ad2726.
+1-7-2019 | 10:57: U3nwTH (5 | f3844a48-0c04-48f8-8452-f4d5db3437f6) score votes: 1.
+1-7-2019 | 10:57: U3nwTH (5 | f3844a48-0c04-48f8-8452-f4d5db3437f6) story votes: 1.
+1-7-2019 | 10:57: U3nwTH (5 | f3844a48-0c04-48f8-8452-f4d5db3437f6) selected story is user-made: 57fb5efd-b2a0-4e12-bf81-6ddb37ad2726.
+1-7-2019 | 10:57: U3nwTH (5 | f3844a48-0c04-48f8-8452-f4d5db3437f6) answer was false.
+1-7-2019 | 10:57: U3nwTH (5 | f3844a48-0c04-48f8-8452-f4d5db3437f6) lost 5 followers.
+1-7-2019 | 10:57: U3nwTH User has been parsed. Everybody answered, continuing to leaderboard.
+1-7-2019 | 10:57: End.
 --------[END]--------
 
 -----[LOG ENTRY]-----
 [Game - StopGameTimer]
-26-6-2019 | 14:32: (0ac37738-6bb4-4005-9a17-0bd2f5ae13cc) wants to stop a timer in 0536Ee.
-26-6-2019 | 14:32: (0ac37738-6bb4-4005-9a17-0bd2f5ae13cc) validated.
-26-6-2019 | 14:32: (0ac37738-6bb4-4005-9a17-0bd2f5ae13cc) timer stopped.
-26-6-2019 | 14:32: End.
+1-7-2019 | 10:57: (37299e6b-86ce-4b2f-9474-30ffa77bc4fc) wants to stop a timer in U3nwTH.
+1-7-2019 | 10:57: (37299e6b-86ce-4b2f-9474-30ffa77bc4fc) validated.
+1-7-2019 | 10:57: (37299e6b-86ce-4b2f-9474-30ffa77bc4fc) timer stopped.
+1-7-2019 | 10:57: End.
 --------[END]--------
 
 -----[LOG ENTRY]-----
 [Game - UploadAnswer]
-26-6-2019 | 14:32: 0536Ee (5 | 08485d99-da91-47fb-b0e5-c0f2bea14031) acquired some cash.
-26-6-2019 | 14:32: 0536Ee (5 | 08485d99-da91-47fb-b0e5-c0f2bea14031) gained €1-.
-26-6-2019 | 14:32: 0536Ee (5 | 08485d99-da91-47fb-b0e5-c0f2bea14031) lost -5 followers.
-26-6-2019 | 14:32: 0536Ee (5 | 08485d99-da91-47fb-b0e5-c0f2bea14031) now has €1- and 0 followers.
-26-6-2019 | 14:32: End.
+1-7-2019 | 10:57: U3nwTH (5 | 57fb5efd-b2a0-4e12-bf81-6ddb37ad2726) acquired some cash.
+1-7-2019 | 10:57: U3nwTH (5 | 57fb5efd-b2a0-4e12-bf81-6ddb37ad2726) gained €1-.
+1-7-2019 | 10:57: U3nwTH (5 | 57fb5efd-b2a0-4e12-bf81-6ddb37ad2726) lost -5 followers.
+1-7-2019 | 10:57: U3nwTH (5 | 57fb5efd-b2a0-4e12-bf81-6ddb37ad2726) now has €1- and 0 followers.
+1-7-2019 | 10:57: End.
 --------[END]--------
 
 -----[LOG ENTRY]-----
 [Game - UploadAnswer]
-26-6-2019 | 14:32: 0536Ee (5 | 1d4ed256-7c87-44b5-aa0c-bd72ed3ae97d) acquired some cash.
-26-6-2019 | 14:32: 0536Ee (5 | 1d4ed256-7c87-44b5-aa0c-bd72ed3ae97d) gained €6-.
-26-6-2019 | 14:32: 0536Ee (5 | 1d4ed256-7c87-44b5-aa0c-bd72ed3ae97d) lost 0 followers.
-26-6-2019 | 14:32: 0536Ee (5 | 1d4ed256-7c87-44b5-aa0c-bd72ed3ae97d) now has €6- and 5 followers.
-26-6-2019 | 14:32: End.
+1-7-2019 | 10:57: U3nwTH (5 | f3844a48-0c04-48f8-8452-f4d5db3437f6) acquired some cash.
+1-7-2019 | 10:57: U3nwTH (5 | f3844a48-0c04-48f8-8452-f4d5db3437f6) gained €1-.
+1-7-2019 | 10:57: U3nwTH (5 | f3844a48-0c04-48f8-8452-f4d5db3437f6) lost 0 followers.
+1-7-2019 | 10:57: U3nwTH (5 | f3844a48-0c04-48f8-8452-f4d5db3437f6) now has €1- and 0 followers.
+1-7-2019 | 10:57: End.
 --------[END]--------
 
 -----[LOG ENTRY]-----
 [Game - GoToReadPhase]
-26-6-2019 | 14:32: (4) validated.
-26-6-2019 | 14:32: 0536Ee has 2 groups.
-26-6-2019 | 14:32: 0536Ee current group is 2.
-26-6-2019 | 14:32: 0536Ee next list of answers needs 1 answers.
-26-6-2019 | 14:32: 0536Ee final round.
-26-6-2019 | 14:32: End.
+1-7-2019 | 10:57: (4) validated.
+1-7-2019 | 10:57: U3nwTH has 2 groups.
+1-7-2019 | 10:57: U3nwTH current group is 2.
+1-7-2019 | 10:57: U3nwTH next list of answers needs 1 answers.
+1-7-2019 | 10:57: U3nwTH final round.
+1-7-2019 | 10:57: End.
 --------[END]--------
 
 -----[LOG ENTRY]-----
 [Game - StartGameTimer]
-26-6-2019 | 14:32: (0ac37738-6bb4-4005-9a17-0bd2f5ae13cc) wants to start a timer in 0536Ee for 120 seconds.
-26-6-2019 | 14:32: (0ac37738-6bb4-4005-9a17-0bd2f5ae13cc) validated.
-26-6-2019 | 14:32: (0ac37738-6bb4-4005-9a17-0bd2f5ae13cc) timer started.
-26-6-2019 | 14:32: End.
+1-7-2019 | 10:57: (37299e6b-86ce-4b2f-9474-30ffa77bc4fc) wants to start a timer in U3nwTH for 300 seconds.
+1-7-2019 | 10:57: (37299e6b-86ce-4b2f-9474-30ffa77bc4fc) validated.
+1-7-2019 | 10:57: (37299e6b-86ce-4b2f-9474-30ffa77bc4fc) timer started.
+1-7-2019 | 10:57: End.
 --------[END]--------
 
 -----[LOG ENTRY]-----
 [Game - RetrieveWrittenStories]
-26-6-2019 | 14:32: 0536Ee retrieving written stories of group 2...
-26-6-2019 | 14:32: 0536Ee got written story 5:!|b:!|b:!|1d4ed256-7c87-44b5-aa0c-bd72ed3ae97d
-26-6-2019 | 14:32: 0536Ee got root story 5:!|Een verhaal:!|Lorem Ipsum bla bla bla:!|0
-26-6-2019 | 14:32: 0536Ee correct answer is 1.
-26-6-2019 | 14:32: End.
+1-7-2019 | 10:57: U3nwTH retrieving written stories of group 2...
+1-7-2019 | 10:57: U3nwTH got written story 5:!|ev:!|ev:!|f3844a48-0c04-48f8-8452-f4d5db3437f6
+1-7-2019 | 10:57: U3nwTH got root story 5:!|Een verhaal:!|Lorem Ipsum bla bla bla:!|0
+1-7-2019 | 10:57: U3nwTH correct answer is 1.
+1-7-2019 | 10:57: End.
 --------[END]--------
 
-26-6-2019 | 14:33: (5) left the room.
-26-6-2019 | 14:33: End.
+-----[LOG ENTRY]-----
+[Game - UploadAnswer]
+1-7-2019 | 10:57: U3nwTH (5 | 57fb5efd-b2a0-4e12-bf81-6ddb37ad2726) uploaded a score: 0
+1-7-2019 | 10:57: U3nwTH (5 | 57fb5efd-b2a0-4e12-bf81-6ddb37ad2726) parsing score.
+1-7-2019 | 10:57: U3nwTH (5 | 57fb5efd-b2a0-4e12-bf81-6ddb37ad2726) selected story is 5:!|ev:!|ev:!|f3844a48-0c04-48f8-8452-f4d5db3437f6.
+1-7-2019 | 10:57: U3nwTH (5 | 57fb5efd-b2a0-4e12-bf81-6ddb37ad2726) selected story is user-made: f3844a48-0c04-48f8-8452-f4d5db3437f6.
+1-7-2019 | 10:57: U3nwTH (5 | 57fb5efd-b2a0-4e12-bf81-6ddb37ad2726) selected story is user-made: f3844a48-0c04-48f8-8452-f4d5db3437f6.
+1-7-2019 | 10:57: U3nwTH (5 | 57fb5efd-b2a0-4e12-bf81-6ddb37ad2726) score votes: 1.
+1-7-2019 | 10:57: U3nwTH (5 | 57fb5efd-b2a0-4e12-bf81-6ddb37ad2726) story votes: 1.
+1-7-2019 | 10:57: U3nwTH (5 | 57fb5efd-b2a0-4e12-bf81-6ddb37ad2726) answer was false.
+1-7-2019 | 10:57: U3nwTH (5 | 57fb5efd-b2a0-4e12-bf81-6ddb37ad2726) lost 5 followers.
+1-7-2019 | 10:57: U3nwTH User has been parsed. Everybody answered, continuing to leaderboard.
+1-7-2019 | 10:57: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[Game - StopGameTimer]
+1-7-2019 | 10:57: (37299e6b-86ce-4b2f-9474-30ffa77bc4fc) wants to stop a timer in U3nwTH.
+1-7-2019 | 10:57: (37299e6b-86ce-4b2f-9474-30ffa77bc4fc) validated.
+1-7-2019 | 10:57: (37299e6b-86ce-4b2f-9474-30ffa77bc4fc) timer stopped.
+1-7-2019 | 10:57: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[Game - UploadAnswer]
+1-7-2019 | 10:57: U3nwTH (5 | 57fb5efd-b2a0-4e12-bf81-6ddb37ad2726) acquired some cash.
+1-7-2019 | 10:57: U3nwTH (5 | 57fb5efd-b2a0-4e12-bf81-6ddb37ad2726) gained €1-.
+1-7-2019 | 10:57: U3nwTH (5 | 57fb5efd-b2a0-4e12-bf81-6ddb37ad2726) lost 0 followers.
+1-7-2019 | 10:57: U3nwTH (5 | 57fb5efd-b2a0-4e12-bf81-6ddb37ad2726) now has €2- and 0 followers.
+1-7-2019 | 10:57: End.
+--------[END]--------
+
+-----[LOG ENTRY]-----
+[Game - UploadAnswer]
+1-7-2019 | 10:57: U3nwTH (5 | f3844a48-0c04-48f8-8452-f4d5db3437f6) acquired some cash.
+1-7-2019 | 10:57: U3nwTH (5 | f3844a48-0c04-48f8-8452-f4d5db3437f6) gained €1-.
+1-7-2019 | 10:57: U3nwTH (5 | f3844a48-0c04-48f8-8452-f4d5db3437f6) lost -5 followers.
+1-7-2019 | 10:57: U3nwTH (5 | f3844a48-0c04-48f8-8452-f4d5db3437f6) now has €2- and 0 followers.
+1-7-2019 | 10:57: End.
 --------[END]--------
 
 -----[LOG ENTRY]-----
 [Game - HostRoom]
-26-6-2019 | 14:33: User Docent (4) is trying to host a room.
-26-6-2019 | 14:33: (4) validated.
-26-6-2019 | 14:33: (4, 0218g4) retrieved configuration with Id 1.
-26-6-2019 | 14:33: (4, 0218g4) applied configuration.
-26-6-2019 | 14:33: (4, 0218g4) room is open and ready.
-26-6-2019 | 14:33: End.
+1-7-2019 | 11:06: User JMuris (4) is trying to host a room.
+1-7-2019 | 11:06: (4) validated.
+1-7-2019 | 11:06: (4, NqU47c) retrieved configuration with Id 1.
+1-7-2019 | 11:06: (4, NqU47c) applied configuration.
+1-7-2019 | 11:06: (4, NqU47c) room is open and ready.
+1-7-2019 | 11:06: End.
 --------[END]--------
 
 -----[LOG ENTRY]-----
 [Game - JoinRoom]
-26-6-2019 | 14:33: User AAppel (5) is trying to join room 0218g4.
-26-6-2019 | 14:33: (5) validated.
-26-6-2019 | 14:33: (5) found room 0218g4.
-26-6-2019 | 14:33: (5) successfully joined room 0218g4.
-26-6-2019 | 14:33: End.
+1-7-2019 | 11:07: User AAppel (5) is trying to join room NqU47c.
+1-7-2019 | 11:07: (5) validated.
+1-7-2019 | 11:07: (5) found room NqU47c.
+1-7-2019 | 11:07: (5) successfully joined room NqU47c.
+1-7-2019 | 11:07: End.
 --------[END]--------
 
 -----[LOG ENTRY]-----
 [Game - JoinRoom]
-26-6-2019 | 14:33: User AAppel (5) is trying to join room 0218g4.
-26-6-2019 | 14:33: (5) validated.
-26-6-2019 | 14:33: (5) found room 0218g4.
-26-6-2019 | 14:33: (5) successfully joined room 0218g4.
-26-6-2019 | 14:33: End.
+1-7-2019 | 11:07: User AAppel (5) is trying to join room NqU47c.
+1-7-2019 | 11:07: (5) validated.
+1-7-2019 | 11:07: (5) found room NqU47c.
+1-7-2019 | 11:07: (5) successfully joined room NqU47c.
+1-7-2019 | 11:07: End.
 --------[END]--------
 
 -----[LOG ENTRY]-----
 [Game - StartGame]
-26-6-2019 | 14:33: Starting game in room 0218g4...
-26-6-2019 | 14:33: Preparations are complete. Game in room 0218g4 has started.
-26-6-2019 | 14:33: End.
+1-7-2019 | 11:07: Starting game in room NqU47c...
+1-7-2019 | 11:07: Preparations are complete. Game in room NqU47c has started.
+1-7-2019 | 11:07: End.
 --------[END]--------
 
 -----[LOG ENTRY]-----
 [Game - SkipTutorial]
-26-6-2019 | 14:33: 0218g4 tutorial will be skipped.
-26-6-2019 | 14:33: 0218g4 continuing game...
-26-6-2019 | 14:33: End.
+1-7-2019 | 11:07: NqU47c tutorial will be skipped.
+1-7-2019 | 11:07: NqU47c continuing game...
+1-7-2019 | 11:07: End.
 --------[END]--------
 
 -----[LOG ENTRY]-----
 [Game - GoToWritePhase]
-26-6-2019 | 14:33: 0218g4 trying to go to writing phase...
-26-6-2019 | 14:33: 0218g4 continuing to writing phase...
-26-6-2019 | 14:33: End.
+1-7-2019 | 11:07: NqU47c trying to go to writing phase...
+1-7-2019 | 11:07: NqU47c continuing to writing phase...
+1-7-2019 | 11:07: End.
 --------[END]--------
 
 -----[LOG ENTRY]-----
 [Game - StartGameTimer]
-26-6-2019 | 14:33: (9beb5a3a-95ef-4c59-9153-4b7c715cce7c) wants to start a timer in 0218g4 for 120 seconds.
-26-6-2019 | 14:33: (9beb5a3a-95ef-4c59-9153-4b7c715cce7c) validated.
-26-6-2019 | 14:33: (9beb5a3a-95ef-4c59-9153-4b7c715cce7c) timer started.
-26-6-2019 | 14:33: End.
+1-7-2019 | 11:07: (3d3e5aeb-a3aa-40da-8fce-007aedf9ead6) wants to start a timer in NqU47c for 120 seconds.
+1-7-2019 | 11:07: (3d3e5aeb-a3aa-40da-8fce-007aedf9ead6) validated.
+1-7-2019 | 11:07: (3d3e5aeb-a3aa-40da-8fce-007aedf9ead6) timer started.
+1-7-2019 | 11:07: End.
 --------[END]--------
 
 -----[LOG ENTRY]-----
 [Game - RetrieveRootStory]
-26-6-2019 | 14:33: 0218g4 retrieving root stories...
-26-6-2019 | 14:33: 0218g4 (5 | 7669398a-44e0-4ec0-a898-880613b0dca6) got story 3:!|Nog een verhaal:!|bla bla bla Ipsum Lorem
-26-6-2019 | 14:33: 0218g4 (5 | d2190e39-9ffd-4e56-b223-77a921810a8a) got story 1:!|Een root verhaal:!|Straight outta RSS feed
-26-6-2019 | 14:33: End
-26-6-2019 | 14:33: End.
+1-7-2019 | 11:07: NqU47c retrieving root stories...
+1-7-2019 | 11:07: NqU47c (5 | e4b268f1-26fa-48dc-991e-e12ef7642f54) got story 4:!|Een test verhaal:!|Test 1
+1-7-2019 | 11:07: NqU47c (5 | dd91ce96-ddd8-4143-8944-5d190469b1dd) got story 1:!|Een root verhaal:!|Straight outta RSS feed
+1-7-2019 | 11:07: End
+1-7-2019 | 11:07: End.
 --------[END]--------
 
 -----[LOG ENTRY]-----
 [Game - UploadStory]
-26-6-2019 | 14:33: 0218g4 (5 | d2190e39-9ffd-4e56-b223-77a921810a8a) uploaded a story.
-26-6-2019 | 14:33: 0218g4 (5 | d2190e39-9ffd-4e56-b223-77a921810a8a) story is 'a', 'a'
-26-6-2019 | 14:33: End.
+1-7-2019 | 11:07: NqU47c (5 | dd91ce96-ddd8-4143-8944-5d190469b1dd) uploaded a story.
+1-7-2019 | 11:07: NqU47c (5 | dd91ce96-ddd8-4143-8944-5d190469b1dd) story is 'erv', 'erv'
+1-7-2019 | 11:07: End.
 --------[END]--------
 
 -----[LOG ENTRY]-----
 [Game - UploadStory]
-26-6-2019 | 14:33: 0218g4 (5 | 7669398a-44e0-4ec0-a898-880613b0dca6) uploaded a story.
-26-6-2019 | 14:33: 0218g4 (5 | 7669398a-44e0-4ec0-a898-880613b0dca6) story is 'b', 'b'
-26-6-2019 | 14:33: End.
+1-7-2019 | 11:07: NqU47c (5 | e4b268f1-26fa-48dc-991e-e12ef7642f54) uploaded a story.
+1-7-2019 | 11:07: NqU47c (5 | e4b268f1-26fa-48dc-991e-e12ef7642f54) story is 'etv', 'etv'
+1-7-2019 | 11:07: End.
 --------[END]--------
 
 -----[LOG ENTRY]-----
 [Game - UploadStory]
-26-6-2019 | 14:33: 0218g4 all users wrote their stories.
+1-7-2019 | 11:07: NqU47c all users wrote their stories.
 -----[LOG ENTRY]-----
 [Game - StopGameTimer]
-26-6-2019 | 14:33: (9beb5a3a-95ef-4c59-9153-4b7c715cce7c) wants to stop a timer in 0218g4.
-26-6-2019 | 14:33: (9beb5a3a-95ef-4c59-9153-4b7c715cce7c) validated.
-26-6-2019 | 14:33: (9beb5a3a-95ef-4c59-9153-4b7c715cce7c) timer stopped.
-26-6-2019 | 14:33: End.
+1-7-2019 | 11:07: (3d3e5aeb-a3aa-40da-8fce-007aedf9ead6) wants to stop a timer in NqU47c.
+1-7-2019 | 11:07: (3d3e5aeb-a3aa-40da-8fce-007aedf9ead6) validated.
+1-7-2019 | 11:07: (3d3e5aeb-a3aa-40da-8fce-007aedf9ead6) timer stopped.
+1-7-2019 | 11:07: End.
 --------[END]--------
 
-26-6-2019 | 14:33: 0218g4 continuing to read phase.
-26-6-2019 | 14:33: End.
+1-7-2019 | 11:07: NqU47c continuing to read phase.
+1-7-2019 | 11:07: End.
 --------[END]--------
 
 -----[LOG ENTRY]-----
 [Game - GoToReadPhase]
-26-6-2019 | 14:33: (4) validated.
-26-6-2019 | 14:33: 0218g4 has 2 groups.
-26-6-2019 | 14:33: 0218g4 current group is 1.
-26-6-2019 | 14:33: 0218g4 next list of answers needs 1 answers.
-26-6-2019 | 14:33: 0218g4 first round.
-26-6-2019 | 14:33: End.
+1-7-2019 | 11:07: (4) validated.
+1-7-2019 | 11:07: NqU47c has 2 groups.
+1-7-2019 | 11:07: NqU47c current group is 1.
+1-7-2019 | 11:07: NqU47c next list of answers needs 1 answers.
+1-7-2019 | 11:07: NqU47c first round.
+1-7-2019 | 11:07: End.
 --------[END]--------
 
 -----[LOG ENTRY]-----
 [Game - StartGameTimer]
-26-6-2019 | 14:33: (9beb5a3a-95ef-4c59-9153-4b7c715cce7c) wants to start a timer in 0218g4 for 120 seconds.
-26-6-2019 | 14:33: (9beb5a3a-95ef-4c59-9153-4b7c715cce7c) validated.
-26-6-2019 | 14:33: (9beb5a3a-95ef-4c59-9153-4b7c715cce7c) timer started.
-26-6-2019 | 14:33: End.
+1-7-2019 | 11:07: (3d3e5aeb-a3aa-40da-8fce-007aedf9ead6) wants to start a timer in NqU47c for 300 seconds.
+1-7-2019 | 11:07: (3d3e5aeb-a3aa-40da-8fce-007aedf9ead6) validated.
+1-7-2019 | 11:07: (3d3e5aeb-a3aa-40da-8fce-007aedf9ead6) timer started.
+1-7-2019 | 11:07: End.
 --------[END]--------
 
 -----[LOG ENTRY]-----
 [Game - RetrieveWrittenStories]
-26-6-2019 | 14:33: 0218g4 retrieving written stories of group 1...
-26-6-2019 | 14:33: 0218g4 got written story 5:!|b:!|b:!|7669398a-44e0-4ec0-a898-880613b0dca6
-26-6-2019 | 14:33: 0218g4 got root story 6:!|Nog een verhaal:!|bla bla bla Ipsum Lorem:!|0
-26-6-2019 | 14:33: 0218g4 correct answer is 0.
-26-6-2019 | 14:33: End.
+1-7-2019 | 11:07: NqU47c retrieving written stories of group 1...
+1-7-2019 | 11:07: NqU47c got written story 5:!|etv:!|etv:!|e4b268f1-26fa-48dc-991e-e12ef7642f54
+1-7-2019 | 11:07: NqU47c got root story 1:!|Een test verhaal:!|Test 1:!|0
+1-7-2019 | 11:07: NqU47c correct answer is 1.
+1-7-2019 | 11:07: End.
 --------[END]--------
 
 -----[LOG ENTRY]-----
 [Game - UploadAnswer]
-26-6-2019 | 14:33: 0218g4 (5 | d2190e39-9ffd-4e56-b223-77a921810a8a) uploaded a score: 1
-26-6-2019 | 14:33: 0218g4 (5 | d2190e39-9ffd-4e56-b223-77a921810a8a) parsing score.
-26-6-2019 | 14:33: 0218g4 (5 | d2190e39-9ffd-4e56-b223-77a921810a8a) selected story is 5:!|b:!|b:!|7669398a-44e0-4ec0-a898-880613b0dca6.
-26-6-2019 | 14:33: 0218g4 (5 | d2190e39-9ffd-4e56-b223-77a921810a8a) selected story is user-made: 7669398a-44e0-4ec0-a898-880613b0dca6.
-26-6-2019 | 14:33: 0218g4 (5 | d2190e39-9ffd-4e56-b223-77a921810a8a) selected story is user-made: 7669398a-44e0-4ec0-a898-880613b0dca6.
-26-6-2019 | 14:33: 0218g4 (5 | d2190e39-9ffd-4e56-b223-77a921810a8a) answer was false.
-26-6-2019 | 14:33: 0218g4 (5 | d2190e39-9ffd-4e56-b223-77a921810a8a) lost 5 followers.
-26-6-2019 | 14:33: 0218g4 User has been parsed. Everybody answered, continuing to leaderboard.
-26-6-2019 | 14:33: End.
+1-7-2019 | 11:07: NqU47c (5 | dd91ce96-ddd8-4143-8944-5d190469b1dd) uploaded a score: 0
+1-7-2019 | 11:07: NqU47c (5 | dd91ce96-ddd8-4143-8944-5d190469b1dd) parsing score.
+1-7-2019 | 11:07: NqU47c (5 | dd91ce96-ddd8-4143-8944-5d190469b1dd) selected story is 5:!|etv:!|etv:!|e4b268f1-26fa-48dc-991e-e12ef7642f54.
+1-7-2019 | 11:07: NqU47c (5 | dd91ce96-ddd8-4143-8944-5d190469b1dd) selected story is user-made: e4b268f1-26fa-48dc-991e-e12ef7642f54.
+1-7-2019 | 11:07: NqU47c (5 | dd91ce96-ddd8-4143-8944-5d190469b1dd) score votes: 1.
+1-7-2019 | 11:07: NqU47c (5 | dd91ce96-ddd8-4143-8944-5d190469b1dd) story votes: 1.
+1-7-2019 | 11:07: NqU47c (5 | dd91ce96-ddd8-4143-8944-5d190469b1dd) selected story is user-made: e4b268f1-26fa-48dc-991e-e12ef7642f54.
+1-7-2019 | 11:07: NqU47c (5 | dd91ce96-ddd8-4143-8944-5d190469b1dd) answer was false.
+1-7-2019 | 11:07: NqU47c (5 | dd91ce96-ddd8-4143-8944-5d190469b1dd) lost 5 followers.
+1-7-2019 | 11:07: NqU47c User has been parsed. Everybody answered, continuing to leaderboard.
+1-7-2019 | 11:07: End.
 --------[END]--------
 
 -----[LOG ENTRY]-----
 [Game - StopGameTimer]
-26-6-2019 | 14:33: (9beb5a3a-95ef-4c59-9153-4b7c715cce7c) wants to stop a timer in 0218g4.
-26-6-2019 | 14:33: (9beb5a3a-95ef-4c59-9153-4b7c715cce7c) validated.
-26-6-2019 | 14:33: (9beb5a3a-95ef-4c59-9153-4b7c715cce7c) timer stopped.
-26-6-2019 | 14:33: End.
+1-7-2019 | 11:07: (3d3e5aeb-a3aa-40da-8fce-007aedf9ead6) wants to stop a timer in NqU47c.
+1-7-2019 | 11:07: (3d3e5aeb-a3aa-40da-8fce-007aedf9ead6) validated.
+1-7-2019 | 11:07: (3d3e5aeb-a3aa-40da-8fce-007aedf9ead6) timer stopped.
+1-7-2019 | 11:07: End.
 --------[END]--------
 
 -----[LOG ENTRY]-----
-[Game - UploadAnswer]
-26-6-2019 | 14:33: 0218g4 (5 | 7669398a-44e0-4ec0-a898-880613b0dca6) acquired some cash.
-26-6-2019 | 14:33: 0218g4 (5 | 7669398a-44e0-4ec0-a898-880613b0dca6) gained €1-.
-26-6-2019 | 14:33: 0218g4 (5 | 7669398a-44e0-4ec0-a898-880613b0dca6) lost -5 followers.
-26-6-2019 | 14:33: 0218g4 (5 | 7669398a-44e0-4ec0-a898-880613b0dca6) now has €1- and 0 followers.
-26-6-2019 | 14:33: End.
+[Game - GiveMoney]
+1-7-2019 | 11:07: NqU47c (5 | e4b268f1-26fa-48dc-991e-e12ef7642f54) acquired some cash.
+1-7-2019 | 11:07: NqU47c (5 | e4b268f1-26fa-48dc-991e-e12ef7642f54) gained €31-.
+1-7-2019 | 11:07: NqU47c (5 | e4b268f1-26fa-48dc-991e-e12ef7642f54) gained 10 followers.
+1-7-2019 | 11:07: NqU47c (5 | e4b268f1-26fa-48dc-991e-e12ef7642f54) now has €31- and 10 followers.
+1-7-2019 | 11:07: End.
 --------[END]--------
 
 -----[LOG ENTRY]-----
-[Game - UploadAnswer]
-26-6-2019 | 14:33: 0218g4 (5 | d2190e39-9ffd-4e56-b223-77a921810a8a) acquired some cash.
-26-6-2019 | 14:33: 0218g4 (5 | d2190e39-9ffd-4e56-b223-77a921810a8a) gained €1-.
-26-6-2019 | 14:33: 0218g4 (5 | d2190e39-9ffd-4e56-b223-77a921810a8a) lost 0 followers.
-26-6-2019 | 14:33: 0218g4 (5 | d2190e39-9ffd-4e56-b223-77a921810a8a) now has €1- and 0 followers.
-26-6-2019 | 14:33: End.
+[Game - GiveMoney]
+1-7-2019 | 11:07: NqU47c (5 | dd91ce96-ddd8-4143-8944-5d190469b1dd) acquired some cash.
+1-7-2019 | 11:07: NqU47c (5 | dd91ce96-ddd8-4143-8944-5d190469b1dd) gained €1-.
+1-7-2019 | 11:07: NqU47c (5 | dd91ce96-ddd8-4143-8944-5d190469b1dd) lost -5 followers.
+1-7-2019 | 11:07: NqU47c (5 | dd91ce96-ddd8-4143-8944-5d190469b1dd) now has €1- and 0 followers.
+1-7-2019 | 11:07: End.
 --------[END]--------
 
 -----[LOG ENTRY]-----
 [Game - GoToReadPhase]
-26-6-2019 | 14:34: (4) validated.
-26-6-2019 | 14:34: 0218g4 has 2 groups.
-26-6-2019 | 14:34: 0218g4 current group is 2.
-26-6-2019 | 14:34: 0218g4 next list of answers needs 1 answers.
-26-6-2019 | 14:34: 0218g4 final round.
-26-6-2019 | 14:34: End.
+1-7-2019 | 11:07: (4) validated.
+1-7-2019 | 11:07: NqU47c has 2 groups.
+1-7-2019 | 11:07: NqU47c current group is 2.
+1-7-2019 | 11:07: NqU47c next list of answers needs 1 answers.
+1-7-2019 | 11:07: NqU47c final round.
+1-7-2019 | 11:07: End.
 --------[END]--------
 
 -----[LOG ENTRY]-----
 [Game - StartGameTimer]
-26-6-2019 | 14:34: (9beb5a3a-95ef-4c59-9153-4b7c715cce7c) wants to start a timer in 0218g4 for 120 seconds.
-26-6-2019 | 14:34: (9beb5a3a-95ef-4c59-9153-4b7c715cce7c) validated.
-26-6-2019 | 14:34: (9beb5a3a-95ef-4c59-9153-4b7c715cce7c) timer started.
-26-6-2019 | 14:34: End.
+1-7-2019 | 11:07: (3d3e5aeb-a3aa-40da-8fce-007aedf9ead6) wants to start a timer in NqU47c for 300 seconds.
+1-7-2019 | 11:07: (3d3e5aeb-a3aa-40da-8fce-007aedf9ead6) validated.
+1-7-2019 | 11:07: (3d3e5aeb-a3aa-40da-8fce-007aedf9ead6) timer started.
+1-7-2019 | 11:07: End.
 --------[END]--------
 
 -----[LOG ENTRY]-----
 [Game - RetrieveWrittenStories]
-26-6-2019 | 14:34: 0218g4 retrieving written stories of group 2...
-26-6-2019 | 14:34: 0218g4 got written story 5:!|a:!|a:!|d2190e39-9ffd-4e56-b223-77a921810a8a
-26-6-2019 | 14:34: 0218g4 got root story 1:!|Een root verhaal:!|Straight outta RSS feed:!|0
-26-6-2019 | 14:34: 0218g4 correct answer is 1.
-26-6-2019 | 14:34: End.
+1-7-2019 | 11:07: NqU47c retrieving written stories of group 2...
+1-7-2019 | 11:07: NqU47c got written story 5:!|erv:!|erv:!|dd91ce96-ddd8-4143-8944-5d190469b1dd
+1-7-2019 | 11:07: NqU47c got root story 1:!|Een root verhaal:!|Straight outta RSS feed:!|0
+1-7-2019 | 11:07: NqU47c correct answer is 0.
+1-7-2019 | 11:07: End.
 --------[END]--------
 
 -----[LOG ENTRY]-----
 [Game - UploadAnswer]
-26-6-2019 | 14:34: 0218g4 (5 | 7669398a-44e0-4ec0-a898-880613b0dca6) uploaded a score: 1
-26-6-2019 | 14:34: 0218g4 (5 | 7669398a-44e0-4ec0-a898-880613b0dca6) parsing score.
-26-6-2019 | 14:34: 0218g4 (5 | 7669398a-44e0-4ec0-a898-880613b0dca6) selected story is 1:!|Een root verhaal:!|Straight outta RSS feed:!|0.
-26-6-2019 | 14:34: 0218g4 (5 | 7669398a-44e0-4ec0-a898-880613b0dca6) selected story is root: 0.
-26-6-2019 | 14:34: 0218g4 (5 | 7669398a-44e0-4ec0-a898-880613b0dca6) selected story is root: 0.
-26-6-2019 | 14:34: 0218g4 (5 | 7669398a-44e0-4ec0-a898-880613b0dca6) answer was correct.
-26-6-2019 | 14:34: 0218g4 (5 | 7669398a-44e0-4ec0-a898-880613b0dca6) gained 5 followers.
-26-6-2019 | 14:34: 0218g4 User has been parsed. Everybody answered, continuing to leaderboard.
-26-6-2019 | 14:34: End.
+1-7-2019 | 11:07: NqU47c (5 | e4b268f1-26fa-48dc-991e-e12ef7642f54) uploaded a score: 0
+1-7-2019 | 11:07: NqU47c (5 | e4b268f1-26fa-48dc-991e-e12ef7642f54) parsing score.
+1-7-2019 | 11:07: NqU47c (5 | e4b268f1-26fa-48dc-991e-e12ef7642f54) selected story is 1:!|Een root verhaal:!|Straight outta RSS feed:!|0.
+1-7-2019 | 11:07: NqU47c (5 | e4b268f1-26fa-48dc-991e-e12ef7642f54) selected story is root: 0.
+1-7-2019 | 11:07: NqU47c (5 | e4b268f1-26fa-48dc-991e-e12ef7642f54) selected story is root: 0.
+1-7-2019 | 11:07: NqU47c (5 | e4b268f1-26fa-48dc-991e-e12ef7642f54) answer was correct.
+1-7-2019 | 11:07: NqU47c (5 | e4b268f1-26fa-48dc-991e-e12ef7642f54) gained 5 followers.
+1-7-2019 | 11:07: NqU47c User has been parsed. Everybody answered, continuing to leaderboard.
+1-7-2019 | 11:07: End.
 --------[END]--------
 
 -----[LOG ENTRY]-----
 [Game - StopGameTimer]
-26-6-2019 | 14:34: (9beb5a3a-95ef-4c59-9153-4b7c715cce7c) wants to stop a timer in 0218g4.
-26-6-2019 | 14:34: (9beb5a3a-95ef-4c59-9153-4b7c715cce7c) validated.
-26-6-2019 | 14:34: (9beb5a3a-95ef-4c59-9153-4b7c715cce7c) timer stopped.
-26-6-2019 | 14:34: End.
+1-7-2019 | 11:07: (3d3e5aeb-a3aa-40da-8fce-007aedf9ead6) wants to stop a timer in NqU47c.
+1-7-2019 | 11:07: (3d3e5aeb-a3aa-40da-8fce-007aedf9ead6) validated.
+1-7-2019 | 11:07: (3d3e5aeb-a3aa-40da-8fce-007aedf9ead6) timer stopped.
+1-7-2019 | 11:07: End.
 --------[END]--------
 
 -----[LOG ENTRY]-----
-[Game - UploadAnswer]
-26-6-2019 | 14:34: 0218g4 (5 | 7669398a-44e0-4ec0-a898-880613b0dca6) acquired some cash.
-26-6-2019 | 14:34: 0218g4 (5 | 7669398a-44e0-4ec0-a898-880613b0dca6) gained €6-.
-26-6-2019 | 14:34: 0218g4 (5 | 7669398a-44e0-4ec0-a898-880613b0dca6) lost 0 followers.
-26-6-2019 | 14:34: 0218g4 (5 | 7669398a-44e0-4ec0-a898-880613b0dca6) now has €7- and 5 followers.
-26-6-2019 | 14:34: End.
+[Game - GiveMoney]
+1-7-2019 | 11:07: NqU47c (5 | e4b268f1-26fa-48dc-991e-e12ef7642f54) acquired some cash.
+1-7-2019 | 11:07: NqU47c (5 | e4b268f1-26fa-48dc-991e-e12ef7642f54) gained €750-.
+1-7-2019 | 11:07: NqU47c (5 | e4b268f1-26fa-48dc-991e-e12ef7642f54) gained 5 followers.
+1-7-2019 | 11:07: NqU47c (5 | e4b268f1-26fa-48dc-991e-e12ef7642f54) now has €781- and 20 followers.
+1-7-2019 | 11:07: End.
 --------[END]--------
 
 -----[LOG ENTRY]-----
-[Game - UploadAnswer]
-26-6-2019 | 14:34: 0218g4 (5 | d2190e39-9ffd-4e56-b223-77a921810a8a) acquired some cash.
-26-6-2019 | 14:34: 0218g4 (5 | d2190e39-9ffd-4e56-b223-77a921810a8a) gained €1-.
-26-6-2019 | 14:34: 0218g4 (5 | d2190e39-9ffd-4e56-b223-77a921810a8a) lost -5 followers.
-26-6-2019 | 14:34: 0218g4 (5 | d2190e39-9ffd-4e56-b223-77a921810a8a) now has €2- and 0 followers.
-26-6-2019 | 14:34: End.
+[Game - GiveMoney]
+1-7-2019 | 11:07: NqU47c (5 | dd91ce96-ddd8-4143-8944-5d190469b1dd) acquired some cash.
+1-7-2019 | 11:07: NqU47c (5 | dd91ce96-ddd8-4143-8944-5d190469b1dd) gained €1-.
+1-7-2019 | 11:07: NqU47c (5 | dd91ce96-ddd8-4143-8944-5d190469b1dd) lost -5 followers.
+1-7-2019 | 11:07: NqU47c (5 | dd91ce96-ddd8-4143-8944-5d190469b1dd) now has €2- and 0 followers.
+1-7-2019 | 11:07: End.
+--------[END]--------
+
+1-7-2019 | 11:07: (5) left the room.
+1-7-2019 | 11:07: End.
 --------[END]--------
 
 -----[LOG ENTRY]-----
 [Game - LeaveRoom]
-26-6-2019 | 14:34: (4) is leaving room 0218g4.
-26-6-2019 | 14:34: (4) was the owner of room 0218g4. Closing room...
-26-6-2019 | 14:34: End.
---------[END]--------
-
------[LOG ENTRY]-----
-[Game - HostRoom]
-26-6-2019 | 14:34: User Docent (4) is trying to host a room.
-26-6-2019 | 14:34: (4) validated.
-26-6-2019 | 14:34: (4, Q9Gm5H) retrieved configuration with Id 1.
-26-6-2019 | 14:34: (4, Q9Gm5H) applied configuration.
-26-6-2019 | 14:34: (4, Q9Gm5H) room is open and ready.
-26-6-2019 | 14:34: End.
---------[END]--------
-
------[LOG ENTRY]-----
-[Game - JoinRoom]
-26-6-2019 | 14:34: User AAppel (5) is trying to join room Q9Gm5H.
-26-6-2019 | 14:34: (5) validated.
-26-6-2019 | 14:34: (5) found room Q9Gm5H.
-26-6-2019 | 14:34: (5) successfully joined room Q9Gm5H.
-26-6-2019 | 14:34: End.
---------[END]--------
-
------[LOG ENTRY]-----
-[Game - JoinRoom]
-26-6-2019 | 14:34: User AAppel (5) is trying to join room Q9Gm5H.
-26-6-2019 | 14:34: (5) validated.
-26-6-2019 | 14:34: (5) found room Q9Gm5H.
-26-6-2019 | 14:34: (5) successfully joined room Q9Gm5H.
-26-6-2019 | 14:34: End.
---------[END]--------
-
------[LOG ENTRY]-----
-[Game - StartGame]
-26-6-2019 | 14:34: Starting game in room Q9Gm5H...
-26-6-2019 | 14:34: Preparations are complete. Game in room Q9Gm5H has started.
-26-6-2019 | 14:34: End.
---------[END]--------
-
------[LOG ENTRY]-----
-[Game - SkipTutorial]
-26-6-2019 | 14:34: Q9Gm5H tutorial will be skipped.
-26-6-2019 | 14:34: Q9Gm5H continuing game...
-26-6-2019 | 14:34: End.
---------[END]--------
-
------[LOG ENTRY]-----
-[Game - GoToWritePhase]
-26-6-2019 | 14:34: Q9Gm5H trying to go to writing phase...
-26-6-2019 | 14:34: Q9Gm5H continuing to writing phase...
-26-6-2019 | 14:34: End.
---------[END]--------
-
------[LOG ENTRY]-----
-[Game - StartGameTimer]
-26-6-2019 | 14:34: (9beb5a3a-95ef-4c59-9153-4b7c715cce7c) wants to start a timer in Q9Gm5H for 120 seconds.
-26-6-2019 | 14:34: (9beb5a3a-95ef-4c59-9153-4b7c715cce7c) validated.
-26-6-2019 | 14:34: (9beb5a3a-95ef-4c59-9153-4b7c715cce7c) timer started.
-26-6-2019 | 14:34: End.
---------[END]--------
-
------[LOG ENTRY]-----
-[Game - RetrieveRootStory]
-26-6-2019 | 14:34: Q9Gm5H retrieving root stories...
-26-6-2019 | 14:34: Q9Gm5H (5 | 64e988f8-fd2e-4fe8-995f-bb2fa17031b9) got story 1:!|Een root verhaal:!|Straight outta RSS feed
-26-6-2019 | 14:34: Q9Gm5H (5 | 212ecf03-388c-4a2f-92ac-9a274381a283) got story 2:!|Een verhaal:!|Lorem Ipsum bla bla bla
-26-6-2019 | 14:34: End
-26-6-2019 | 14:34: End.
---------[END]--------
-
------[LOG ENTRY]-----
-[Game - UploadStory]
-26-6-2019 | 14:34: Q9Gm5H (5 | 64e988f8-fd2e-4fe8-995f-bb2fa17031b9) uploaded a story.
-26-6-2019 | 14:34: Q9Gm5H (5 | 64e988f8-fd2e-4fe8-995f-bb2fa17031b9) story is 'a', 'a'
-26-6-2019 | 14:34: End.
---------[END]--------
-
------[LOG ENTRY]-----
-[Game - UploadStory]
-26-6-2019 | 14:34: Q9Gm5H (5 | 212ecf03-388c-4a2f-92ac-9a274381a283) uploaded a story.
-26-6-2019 | 14:34: Q9Gm5H (5 | 212ecf03-388c-4a2f-92ac-9a274381a283) story is 'b', 'b'
-26-6-2019 | 14:34: End.
---------[END]--------
-
------[LOG ENTRY]-----
-[Game - UploadStory]
-26-6-2019 | 14:34: Q9Gm5H all users wrote their stories.
------[LOG ENTRY]-----
-[Game - StopGameTimer]
-26-6-2019 | 14:34: (9beb5a3a-95ef-4c59-9153-4b7c715cce7c) wants to stop a timer in Q9Gm5H.
-26-6-2019 | 14:34: (9beb5a3a-95ef-4c59-9153-4b7c715cce7c) validated.
-26-6-2019 | 14:34: (9beb5a3a-95ef-4c59-9153-4b7c715cce7c) timer stopped.
-26-6-2019 | 14:34: End.
---------[END]--------
-
-26-6-2019 | 14:34: Q9Gm5H continuing to read phase.
-26-6-2019 | 14:34: End.
---------[END]--------
-
------[LOG ENTRY]-----
-[Game - GoToReadPhase]
-26-6-2019 | 14:34: (4) validated.
-26-6-2019 | 14:34: Q9Gm5H has 2 groups.
-26-6-2019 | 14:34: Q9Gm5H current group is 1.
-26-6-2019 | 14:34: Q9Gm5H next list of answers needs 1 answers.
-26-6-2019 | 14:34: Q9Gm5H first round.
-26-6-2019 | 14:34: End.
---------[END]--------
-
------[LOG ENTRY]-----
-[Game - StartGameTimer]
-26-6-2019 | 14:34: (9beb5a3a-95ef-4c59-9153-4b7c715cce7c) wants to start a timer in Q9Gm5H for 120 seconds.
-26-6-2019 | 14:34: (9beb5a3a-95ef-4c59-9153-4b7c715cce7c) validated.
-26-6-2019 | 14:34: (9beb5a3a-95ef-4c59-9153-4b7c715cce7c) timer started.
-26-6-2019 | 14:34: End.
---------[END]--------
-
------[LOG ENTRY]-----
-[Game - RetrieveWrittenStories]
-26-6-2019 | 14:34: Q9Gm5H retrieving written stories of group 1...
-26-6-2019 | 14:34: Q9Gm5H got written story 5:!|a:!|a:!|64e988f8-fd2e-4fe8-995f-bb2fa17031b9
-26-6-2019 | 14:34: Q9Gm5H got root story 1:!|Een root verhaal:!|Straight outta RSS feed:!|0
-26-6-2019 | 14:34: Q9Gm5H correct answer is 1.
-26-6-2019 | 14:34: End.
---------[END]--------
-
------[LOG ENTRY]-----
-[Game - UploadAnswer]
-26-6-2019 | 14:34: Q9Gm5H (5 | 212ecf03-388c-4a2f-92ac-9a274381a283) uploaded a score: 1
-26-6-2019 | 14:34: Q9Gm5H (5 | 212ecf03-388c-4a2f-92ac-9a274381a283) parsing score.
-26-6-2019 | 14:34: Q9Gm5H (5 | 212ecf03-388c-4a2f-92ac-9a274381a283) selected story is 1:!|Een root verhaal:!|Straight outta RSS feed:!|0.
-26-6-2019 | 14:34: Q9Gm5H (5 | 212ecf03-388c-4a2f-92ac-9a274381a283) selected story is root: 0.
-26-6-2019 | 14:34: Q9Gm5H (5 | 212ecf03-388c-4a2f-92ac-9a274381a283) selected story is root: 0.
-26-6-2019 | 14:34: Q9Gm5H (5 | 212ecf03-388c-4a2f-92ac-9a274381a283) answer was correct.
-26-6-2019 | 14:34: Q9Gm5H (5 | 212ecf03-388c-4a2f-92ac-9a274381a283) gained 5 followers.
-26-6-2019 | 14:34: Q9Gm5H User has been parsed. Everybody answered, continuing to leaderboard.
-26-6-2019 | 14:34: End.
---------[END]--------
-
------[LOG ENTRY]-----
-[Game - StopGameTimer]
-26-6-2019 | 14:34: (9beb5a3a-95ef-4c59-9153-4b7c715cce7c) wants to stop a timer in Q9Gm5H.
-26-6-2019 | 14:34: (9beb5a3a-95ef-4c59-9153-4b7c715cce7c) validated.
-26-6-2019 | 14:34: (9beb5a3a-95ef-4c59-9153-4b7c715cce7c) timer stopped.
-26-6-2019 | 14:34: End.
---------[END]--------
-
------[LOG ENTRY]-----
-[Game - UploadAnswer]
-26-6-2019 | 14:34: Q9Gm5H (5 | 64e988f8-fd2e-4fe8-995f-bb2fa17031b9) acquired some cash.
-26-6-2019 | 14:34: Q9Gm5H (5 | 64e988f8-fd2e-4fe8-995f-bb2fa17031b9) gained €1-.
-26-6-2019 | 14:34: Q9Gm5H (5 | 64e988f8-fd2e-4fe8-995f-bb2fa17031b9) lost -5 followers.
-26-6-2019 | 14:34: Q9Gm5H (5 | 64e988f8-fd2e-4fe8-995f-bb2fa17031b9) now has €1- and 0 followers.
-26-6-2019 | 14:34: End.
---------[END]--------
-
------[LOG ENTRY]-----
-[Game - UploadAnswer]
-26-6-2019 | 14:34: Q9Gm5H (5 | 212ecf03-388c-4a2f-92ac-9a274381a283) acquired some cash.
-26-6-2019 | 14:34: Q9Gm5H (5 | 212ecf03-388c-4a2f-92ac-9a274381a283) gained €6-.
-26-6-2019 | 14:34: Q9Gm5H (5 | 212ecf03-388c-4a2f-92ac-9a274381a283) lost 0 followers.
-26-6-2019 | 14:34: Q9Gm5H (5 | 212ecf03-388c-4a2f-92ac-9a274381a283) now has €6- and 5 followers.
-26-6-2019 | 14:34: End.
---------[END]--------
-
-26-6-2019 | 14:35: (5) left the room.
-26-6-2019 | 14:35: End.
---------[END]--------
-
------[LOG ENTRY]-----
-[Game - HostRoom]
-26-6-2019 | 14:36: User Docent (4) is trying to host a room.
-26-6-2019 | 14:36: (4) validated.
-26-6-2019 | 14:36: (4, ky49H0) retrieved configuration with Id 1.
-26-6-2019 | 14:36: (4, ky49H0) applied configuration.
-26-6-2019 | 14:36: (4, ky49H0) room is open and ready.
-26-6-2019 | 14:36: End.
---------[END]--------
-
------[LOG ENTRY]-----
-[Game - JoinRoom]
-26-6-2019 | 14:36: User AAppel (5) is trying to join room ky49H0.
-26-6-2019 | 14:36: (5) validated.
-26-6-2019 | 14:36: (5) found room ky49H0.
-26-6-2019 | 14:36: (5) successfully joined room ky49H0.
-26-6-2019 | 14:36: End.
---------[END]--------
-
------[LOG ENTRY]-----
-[Game - JoinRoom]
-26-6-2019 | 14:36: User AAppel (5) is trying to join room ky49H0.
-26-6-2019 | 14:36: (5) validated.
-26-6-2019 | 14:36: (5) found room ky49H0.
-26-6-2019 | 14:36: (5) successfully joined room ky49H0.
-26-6-2019 | 14:36: End.
---------[END]--------
-
------[LOG ENTRY]-----
-[Game - StartGame]
-26-6-2019 | 14:36: Starting game in room ky49H0...
-26-6-2019 | 14:36: Preparations are complete. Game in room ky49H0 has started.
-26-6-2019 | 14:36: End.
---------[END]--------
-
------[LOG ENTRY]-----
-[Game - SkipTutorial]
-26-6-2019 | 14:36: ky49H0 tutorial will be skipped.
-26-6-2019 | 14:36: ky49H0 continuing game...
-26-6-2019 | 14:36: End.
---------[END]--------
-
------[LOG ENTRY]-----
-[Game - GoToWritePhase]
-26-6-2019 | 14:36: ky49H0 trying to go to writing phase...
-26-6-2019 | 14:36: ky49H0 continuing to writing phase...
-26-6-2019 | 14:36: End.
---------[END]--------
-
------[LOG ENTRY]-----
-[Game - StartGameTimer]
-26-6-2019 | 14:36: (93f70159-c998-4df5-a769-b51c5d1c15ca) wants to start a timer in ky49H0 for 120 seconds.
-26-6-2019 | 14:36: (93f70159-c998-4df5-a769-b51c5d1c15ca) validated.
-26-6-2019 | 14:36: (93f70159-c998-4df5-a769-b51c5d1c15ca) timer started.
-26-6-2019 | 14:36: End.
---------[END]--------
-
------[LOG ENTRY]-----
-[Game - RetrieveRootStory]
-26-6-2019 | 14:36: ky49H0 retrieving root stories...
-26-6-2019 | 14:36: ky49H0 (5 | dd450070-188d-49e0-8972-a9244781ea4c) got story 3:!|Nog een verhaal:!|bla bla bla Ipsum Lorem
-26-6-2019 | 14:36: ky49H0 (5 | c88c1eea-0437-46e7-8b46-909768ddea42) got story 1:!|Een root verhaal:!|Straight outta RSS feed
-26-6-2019 | 14:36: End
-26-6-2019 | 14:36: End.
---------[END]--------
-
------[LOG ENTRY]-----
-[Game - UploadStory]
-26-6-2019 | 14:37: ky49H0 (5 | dd450070-188d-49e0-8972-a9244781ea4c) uploaded a story.
-26-6-2019 | 14:37: ky49H0 (5 | dd450070-188d-49e0-8972-a9244781ea4c) story is 'a', 'a'
-26-6-2019 | 14:37: End.
---------[END]--------
-
------[LOG ENTRY]-----
-[Game - UploadStory]
-26-6-2019 | 14:37: ky49H0 (5 | c88c1eea-0437-46e7-8b46-909768ddea42) uploaded a story.
-26-6-2019 | 14:37: ky49H0 (5 | c88c1eea-0437-46e7-8b46-909768ddea42) story is 'b', 'b'
-26-6-2019 | 14:37: End.
---------[END]--------
-
------[LOG ENTRY]-----
-[Game - UploadStory]
-26-6-2019 | 14:37: ky49H0 all users wrote their stories.
------[LOG ENTRY]-----
-[Game - StopGameTimer]
-26-6-2019 | 14:37: (93f70159-c998-4df5-a769-b51c5d1c15ca) wants to stop a timer in ky49H0.
-26-6-2019 | 14:37: (93f70159-c998-4df5-a769-b51c5d1c15ca) validated.
-26-6-2019 | 14:37: (93f70159-c998-4df5-a769-b51c5d1c15ca) timer stopped.
-26-6-2019 | 14:37: End.
---------[END]--------
-
-26-6-2019 | 14:37: ky49H0 continuing to read phase.
-26-6-2019 | 14:37: End.
---------[END]--------
-
------[LOG ENTRY]-----
-[Game - GoToReadPhase]
-26-6-2019 | 14:37: (4) validated.
-26-6-2019 | 14:37: ky49H0 has 2 groups.
-26-6-2019 | 14:37: ky49H0 current group is 1.
-26-6-2019 | 14:37: ky49H0 next list of answers needs 1 answers.
-26-6-2019 | 14:37: ky49H0 first round.
-26-6-2019 | 14:37: End.
---------[END]--------
-
------[LOG ENTRY]-----
-[Game - StartGameTimer]
-26-6-2019 | 14:37: (93f70159-c998-4df5-a769-b51c5d1c15ca) wants to start a timer in ky49H0 for 120 seconds.
-26-6-2019 | 14:37: (93f70159-c998-4df5-a769-b51c5d1c15ca) validated.
-26-6-2019 | 14:37: (93f70159-c998-4df5-a769-b51c5d1c15ca) timer started.
-26-6-2019 | 14:37: End.
---------[END]--------
-
------[LOG ENTRY]-----
-[Game - RetrieveWrittenStories]
-26-6-2019 | 14:37: ky49H0 retrieving written stories of group 1...
-26-6-2019 | 14:37: ky49H0 got written story 5:!|a:!|a:!|dd450070-188d-49e0-8972-a9244781ea4c
-26-6-2019 | 14:37: ky49H0 got root story 6:!|Nog een verhaal:!|bla bla bla Ipsum Lorem:!|0
-26-6-2019 | 14:37: ky49H0 correct answer is 1.
-26-6-2019 | 14:37: End.
---------[END]--------
-
------[LOG ENTRY]-----
-[Game - UploadAnswer]
-26-6-2019 | 14:37: ky49H0 (5 | c88c1eea-0437-46e7-8b46-909768ddea42) uploaded a score: 1
-26-6-2019 | 14:37: ky49H0 (5 | c88c1eea-0437-46e7-8b46-909768ddea42) parsing score.
-26-6-2019 | 14:37: ky49H0 (5 | c88c1eea-0437-46e7-8b46-909768ddea42) selected story is 6:!|Nog een verhaal:!|bla bla bla Ipsum Lorem:!|0.
-26-6-2019 | 14:37: ky49H0 (5 | c88c1eea-0437-46e7-8b46-909768ddea42) selected story is root: 0.
-26-6-2019 | 14:37: ky49H0 (5 | c88c1eea-0437-46e7-8b46-909768ddea42) selected story is root: 0.
-26-6-2019 | 14:37: ky49H0 (5 | c88c1eea-0437-46e7-8b46-909768ddea42) answer was correct.
-26-6-2019 | 14:37: ky49H0 (5 | c88c1eea-0437-46e7-8b46-909768ddea42) gained 5 followers.
-26-6-2019 | 14:37: ky49H0 User has been parsed. Everybody answered, continuing to leaderboard.
-26-6-2019 | 14:37: End.
---------[END]--------
-
------[LOG ENTRY]-----
-[Game - StopGameTimer]
-26-6-2019 | 14:37: (93f70159-c998-4df5-a769-b51c5d1c15ca) wants to stop a timer in ky49H0.
-26-6-2019 | 14:37: (93f70159-c998-4df5-a769-b51c5d1c15ca) validated.
-26-6-2019 | 14:37: (93f70159-c998-4df5-a769-b51c5d1c15ca) timer stopped.
-26-6-2019 | 14:37: End.
---------[END]--------
-
------[LOG ENTRY]-----
-[Game - UploadAnswer]
-26-6-2019 | 14:37: ky49H0 (5 | dd450070-188d-49e0-8972-a9244781ea4c) acquired some cash.
-26-6-2019 | 14:37: ky49H0 (5 | dd450070-188d-49e0-8972-a9244781ea4c) gained €1-.
-26-6-2019 | 14:37: ky49H0 (5 | dd450070-188d-49e0-8972-a9244781ea4c) lost -5 followers.
-26-6-2019 | 14:37: ky49H0 (5 | dd450070-188d-49e0-8972-a9244781ea4c) now has €1- and 0 followers.
-26-6-2019 | 14:37: End.
---------[END]--------
-
------[LOG ENTRY]-----
-[Game - UploadAnswer]
-26-6-2019 | 14:37: ky49H0 (5 | c88c1eea-0437-46e7-8b46-909768ddea42) acquired some cash.
-26-6-2019 | 14:37: ky49H0 (5 | c88c1eea-0437-46e7-8b46-909768ddea42) gained €6-.
-26-6-2019 | 14:37: ky49H0 (5 | c88c1eea-0437-46e7-8b46-909768ddea42) lost 0 followers.
-26-6-2019 | 14:37: ky49H0 (5 | c88c1eea-0437-46e7-8b46-909768ddea42) now has €6- and 5 followers.
-26-6-2019 | 14:37: End.
---------[END]--------
-
-26-6-2019 | 14:37: (5) left the room.
-26-6-2019 | 14:37: End.
+1-7-2019 | 11:07: (4) is leaving room NqU47c.
+1-7-2019 | 11:07: (4) was the owner of room NqU47c. Closing room...
+1-7-2019 | 11:07: End.
 --------[END]--------
 

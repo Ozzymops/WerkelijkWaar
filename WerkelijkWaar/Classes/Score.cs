@@ -28,6 +28,11 @@ namespace WerkelijkWaar.Classes
         public int FollowerAmount { get; set; } = 50;
 
         /// <summary>
+        /// Amount of acquired / lost followers in one round. Temporary variable
+        /// </summary>
+        public int FollowerDelta { get; set; }
+
+        /// <summary>
         /// Amount of acquired cash
         /// </summary>
         public double CashAmount { get; set; } = 50.00;

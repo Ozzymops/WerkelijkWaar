@@ -593,13 +593,13 @@ $(document).ready(function () {
             if (result) {
                 $('#html').css('background-color', 'green');
                 $('#body').css('background-color', 'green');
-                $('#resultString').html('Geweldig!\nJe krijgt deze ronde ' + followerChange + ' volgers en €' + cashGain + '- erbij.');
+                $('#resultString').html('Geweldig!\nJe krijgt deze ronde ' + followerChange + ' volgers en €' + cashGain + '- erbij.\nJe hebt nu ' + myFollowers + ' volgers en €' + myCash + ',-');
             }
             // Incorrect
             else {
                 $('#html').css('background-color', 'red');
                 $('#body').css('background-color', 'red');
-                $('#resultString').html('Jammer...\nJe verliest deze ronde ' + followerChange + ' volgers en krijgt €' + cashGain + 'erbij.');
+                $('#resultString').html('Jammer...\nJe verliest deze ronde ' + followerChange + ' volgers en krijgt €' + cashGain + ' erbij.\nJe hebt nu ' + myFollowers + ' volgers en €' + myCash + ',-');
             }
         }
 
