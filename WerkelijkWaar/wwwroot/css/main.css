@@ -450,14 +450,27 @@ div.game.game-tutorial.student-div {
     padding-top: 10vh;
 }
 
+div.game.game-tutorial.triple-image {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin: -35vh 0 0 -6vh;
+}
+
 div.game.game-tutorial p {
     color: white;
     font-size: 24px;
 }
+
+div.game.game-tutorial.triple-image p {
+    color: white;
+    font-size: 12px;
+}
 /* #endregion */
 /* #region Write */
 div.game.game-write {
-    width: 100vw;   
+    width: 100vw;
 }
 
 div.game.game-write.column-holder {
