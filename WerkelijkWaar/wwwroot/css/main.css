@@ -691,7 +691,7 @@ input[type=button].game.game-read.powerup-button {
 input[type=button].game.game-read.powerup-button:hover {
     background-color: #ff8900;
     color: white;
-    border: 1px solid rgba(189, 101, 0, 1);
+    border: 1px solid white;
 }
 /* #endregion */
 

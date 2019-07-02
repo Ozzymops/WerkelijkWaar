@@ -1259,84 +1259,85 @@ namespace WerkelijkWaar
                         {
                             if (user.SocketId == socketId)
                             {
+                                logger.Log("[Game - ActivatePowerup]", roomCode + " (" + user.Id + " | " + user.SocketId + ") activated a powerup.", 1, 3, false);
+
                                 foreach (Classes.Score score in room.SelectedAnswers)
                                 {
                                     if (score.SocketId == socketId)
                                     {
-                                        logger.Log("[Game - RetrieveWrittenStories]", roomCode + "(" + user.Id + " | " + user.SocketId + ") bought power-up " + powerup + ".", 0, 3, false);
+                                        int powerupNum = Convert.ToInt32(powerup);
 
-                                        if (powerup == "1" && score.CashAmount >= (20.00 * room.Config.PowerupsCostMult))
+                                        logger.Log("[Game - ActivatePowerup]", roomCode + " (" + user.Id + " | " + user.SocketId + ") selected powerup is " + powerupNum + ".", 1, 3, false);
+
+                                        if (powerupNum == 1 && score.CashAmount >= (20.00 * room.Config.PowerupsCostMult))
                                         {
-                                            // Choose two answers for 50% value - €20,00-
-
+                                            // Select two answers for 50% value
                                             user.PowerupOneActive = true;
 
-                                            logger.Log("[Game - RetrieveWrittenStories]", roomCode + "(" + user.Id + " | " + user.SocketId + ") got power-up " + powerup + " for €" + (20.00 * room.Config.PowerupsCostMult) + ",-.", 2, 3, false);
+                                            score.CashAmount -= (20.00 * room.Config.PowerupsCostMult);
 
-                                            await InvokeClientMethodToAllAsync("updatePowerups", roomCode, socketId, 1, score.CashAmount);
+                                            logger.Log("[Game - ActivatePowerup]", roomCode + " (" + user.Id + " | " + user.SocketId + ") " + powerupNum + " activated for €" + 20.00 * room.Config.PowerupsCostMult + ".", 2, 3, false);
                                         }
-                                        else if (powerup == "2" && score.CashAmount >= (25.00 * room.Config.PowerupsCostMult))
+                                        else if (powerupNum == 2 && score.CashAmount >= (25.00 * room.Config.PowerupsCostMult))
                                         {
-                                            // Answers count for 200% value, positively and negatively - €25,00-
-
+                                            // Answers count for 200% value
                                             user.PowerupTwoActive = true;
 
-                                            logger.Log("[Game - RetrieveWrittenStories]", roomCode + "(" + user.Id + " | " + user.SocketId + ") got power-up " + powerup + " for €" + (25.00 * room.Config.PowerupsCostMult) + ",-.", 2, 3, false);
+                                            score.CashAmount -= (25.00 * room.Config.PowerupsCostMult);
 
-                                            await InvokeClientMethodToAllAsync("updatePowerups", roomCode, socketId, 2, score.CashAmount);
+                                            logger.Log("[Game - ActivatePowerup]", roomCode + " (" + user.Id + " | " + user.SocketId + ")" + powerupNum + " activated for €" + 25.00 * room.Config.PowerupsCostMult + ".", 2, 3, false);
                                         }
-                                        else if (powerup == "3" && score.CashAmount >= (10.00 * room.Config.PowerupsCostMult))
+                                        else if (powerupNum == 3 && score.CashAmount >= (10.00 * room.Config.PowerupsCostMult))
                                         {
-                                            // Cross out 50% of the wrong answers - €10,00-
-
+                                            // Cross out 50% of wrong answers
                                             user.PowerupThreeActive = true;
 
-                                            logger.Log("[Game - RetrieveWrittenStories]", roomCode + "(" + user.Id + " | " + user.SocketId + ") got power-up " + powerup + " for €" + (10.00 * room.Config.PowerupsCostMult) + ",-.", 2, 3, false);
+                                            score.CashAmount -= (10.00 * room.Config.PowerupsCostMult);
 
-                                            await InvokeClientMethodToAllAsync("updatePowerups", roomCode, socketId, 3, score.CashAmount);
-                                            await ReturnWrongAnswers(roomCode, socketId);
+                                            logger.Log("[Game - ActivatePowerup]", roomCode + " (" + user.Id + " | " + user.SocketId + ")" + powerupNum + " activated for €" + 10.00 * room.Config.PowerupsCostMult + ".", 1, 3, false);
+
+                                            await CrossOutWrongAnswers(socketId, roomCode);
                                         }
-                                        else if (powerup == "4" && score.CashAmount >= (15.00 * room.Config.PowerupsCostMult))
+                                        else if (powerupNum == 4 && score.CashAmount >= (15.00 * room.Config.PowerupsCostMult))
                                         {
-                                            // Show the amount of answers on each story - €15,00-
-
+                                            // Show amount of votes
                                             user.PowerupFourActive = true;
 
-                                            logger.Log("[Game - RetrieveWrittenStories]", roomCode + "(" + user.Id + " | " + user.SocketId + ") got power-up " + powerup + " for €" + (15.00 * room.Config.PowerupsCostMult) + ",-.", 2, 3, false);
+                                            score.CashAmount -= (15.00 * room.Config.PowerupsCostMult);
 
-                                            await InvokeClientMethodToAllAsync("updatePowerups", roomCode, socketId, 4, score.CashAmount);
+                                            logger.Log("[Game - ActivatePowerup]", roomCode + " (" + user.Id + " | " + user.SocketId + ")" + powerupNum + " activated for €" + 15.00 * room.Config.PowerupsCostMult + ".", 1, 3, false);
+
+                                            await ReturnAnswerCount(socketId, roomCode);
                                         }
-                                        else if (powerup == "5" && score.CashAmount >= (15.00 * room.Config.PowerupsCostMult))
+                                        else if (powerupNum == 5 && score.CashAmount >= (15.00 * room.Config.PowerupsCostMult))
                                         {
-                                            // Your story counts for 200% value when chosen - €15,00-
-
+                                            // Recieved votes count for 200% value
                                             foreach (Classes.Story story in room.WrittenStories)
                                             {
                                                 if (story.SocketId == user.SocketId)
                                                 {
                                                     story.PowerupActive = true;
-
-                                                    logger.Log("[Game - RetrieveWrittenStories]", roomCode + "(" + user.Id + " | " + user.SocketId + ") got power-up " + powerup + " for €" + (15.00 * room.Config.PowerupsCostMult) + ",-.", 2, 3, false);
                                                 }
                                             }
 
-                                            await InvokeClientMethodToAllAsync("updatePowerups", roomCode, socketId, 5, score.CashAmount);
+                                            score.CashAmount -= (15.00 * room.Config.PowerupsCostMult);
+
+                                            logger.Log("[Game - ActivatePowerup]", roomCode + " (" + user.Id + " | " + user.SocketId + ")" + powerupNum + " activated for €" + 15.00 * room.Config.PowerupsCostMult + ".", 2, 3, false);
                                         }
                                         else
                                         {
-                                            logger.Log("[Game - RetrieveWrittenStories]", roomCode + "(" + user.Id + " | " + user.SocketId + ") got no power-up (wrong number, broke).", 2, 3, false);
+                                            powerupNum = 0;
 
-                                            await InvokeClientMethodToAllAsync("updatePowerups", roomCode, socketId, 0, score.CashAmount);
+                                            logger.Log("[Game - ActivatePowerup]", roomCode + " (" + user.Id + " | " + user.SocketId + ") too poor or invalid powerup.", 2, 3, false);
                                         }
+
+                                        await InvokeClientMethodToAllAsync("activatePowerup", socketId, roomCode, powerupNum, score.CashAmount);
                                     }
                                 }
                             }
                         }
-                    }    
-                    else
-                    {
-                        await InvokeClientMethodToAllAsync("updatePowerups", roomCode, socketId, 0);
                     }
+                    await PowerupVisuals(roomCode);                    
                 }
             }
         }
@@ -1346,7 +1347,7 @@ namespace WerkelijkWaar
         /// </summary>
         /// <param name="socketId">Unique User socket ID</param>
         /// <param name="roomCode">Targeted Room code</param>
-        public async Task ReturnWrongAnswers(string socketId, string roomCode)
+        public async Task CrossOutWrongAnswers(string socketId, string roomCode)
         {
             foreach (Classes.Room room in _gameManager.Rooms)
             {
@@ -1356,37 +1357,66 @@ namespace WerkelijkWaar
                     {
                         if (user.SocketId == socketId)
                         {
-                            Random rng = new Random();
-                            List<string> newList = room.SentStories;
+                            // get answer list
+                            List<string> sentStories = room.SentStories;
+                            logger.Log("[Game - ActivatePowerup]", roomCode + " (" + user.Id + " | " + user.SocketId + ") stories:", 1, 3, false);
 
-                            int maxStrikes = newList.Count / 2;
-
-                            // Set flags
-                            while (maxStrikes > 0)
+                            foreach(string story in sentStories)
                             {
-                                int chosenStory = rng.Next(newList.Count);
+                                logger.Log("[Game - ActivatePowerup]", roomCode + " (" + user.Id + " | " + user.SocketId + ") " + story, 1, 3, false);
+                            }
 
-                                if (chosenStory != room.CorrectAnswer)
+                            // get amount
+                            int crosses = sentStories.Count / 2;
+
+                            logger.Log("[Game - ActivatePowerup]", roomCode + " (" + user.Id + " | " + user.SocketId + ") crosses: " + crosses, 1, 3, false);
+
+                            // select random stories to strike through
+                            int attempts = 10;
+                            List<int> crossedStories = new List<int>();
+
+                            while (crosses > 0)
+                            {
+                                Random rand = new Random();
+
+                                int selected = rand.Next(0, sentStories.Count);
+
+                                if (selected != room.CorrectAnswer && !crossedStories.Contains(selected))
                                 {
-                                    maxStrikes--;
-                                    newList[chosenStory] += ":!|1";
+                                    crossedStories.Add(selected);
+                                    attempts = 10;
+                                    crosses--;
+                                }
+                                else
+                                {
+                                    attempts--;
+                                }
+
+                                if (attempts <= 0)
+                                {
+                                    break;
                                 }
                             }
 
-                            // Get rest
-                            for (int i = newList.Count; i > 0; i--)
+                            logger.Log("[Game - ActivatePowerup]", roomCode + " (" + user.Id + " | " + user.SocketId + ") correct answer: " + room.CorrectAnswer + ". crossed stories:", 1, 3, false);
+
+                            foreach (int storyNum in crossedStories)
                             {
-                                if (!newList[i].Contains(":!|1"))
-                                {
-                                    newList[i] += ":!|0";
-                                }
+                                logger.Log("[Game - ActivatePowerup]", roomCode + " (" + user.Id + " | " + user.SocketId + ") " + storyNum, 1, 3, false);
                             }
 
-                            await InvokeClientMethodToAllAsync("returnWrongAnswers", roomCode, socketId, Newtonsoft.Json.JsonConvert.SerializeObject(newList));
+                            logger.Log("[Game - ActivatePowerup]", roomCode + " (" + user.Id + " | " + user.SocketId + ") done.", 2, 3, false);
+
+                            await InvokeClientMethodToAllAsync("crossOutWrongAnswers", socketId, roomCode, Newtonsoft.Json.JsonConvert.SerializeObject(crossedStories));
                         }
                     }
                 }
             }
+        }
+
+        public async Task ReturnAnswerCount(string socketId, string roomCode)
+        {
+            
         }
         #endregion
 

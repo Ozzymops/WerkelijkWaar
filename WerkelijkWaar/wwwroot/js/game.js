@@ -175,6 +175,24 @@ $(document).ready(function () {
             UpdatePowerups(powerupsAllowed, powerupsCosts);
         }
     }
+
+    // -- Response to ActivatePowerup
+    connection.clientMethods['activatePowerup'] = (socketId, roomCode, powerup, cash) => {
+        if (currentRoomCode == roomCode) {
+            if (mySocketId == socketId) {
+                ActivatePowerup(powerup, cash);
+            }
+        }
+    }
+
+    // -- Response to CrossOutWrongAnswers
+    connection.clientMethods['crossOutWrongAnswers'] = (socketId, roomCode, answers) => {
+        if (currentRoomCode == roomCode) {
+            if (mySocketId == socketId) {
+                CrossOutWrongAnswers(answers);
+            }
+        }
+    }
     // #endregion
 
     // #region Client Methods
@@ -475,7 +493,6 @@ $(document).ready(function () {
                 clearInterval(currentTimer);
 
                 if (roleId == 1) {
-                    document.getElementById('snd-end').play();
                     connection.invoke("StopGameTimer", userId, currentRoomCode);
                 }
             }
@@ -585,6 +602,8 @@ $(document).ready(function () {
             // Big leaderboard
             $('#leaderboard-left').empty();
             $('#leaderboard-right').empty();
+
+            document.getElementById('snd-end').play();
 
             var rankList = JSON.parse(ranking);
             var processedRank = 0;
@@ -748,8 +767,24 @@ $(document).ready(function () {
         }
     }
 
-    function PurchasePowerup(powerup) {
+    function ActivatePowerup(powerup, cash) {
+        myCash = cash;
 
+        powerupDrawer = false;
+        $('#btn-openPowerupDrawer').css('visibility', 'hidden');
+    }
+
+    function CrossOutWrongAnswers(answers) {
+        var stories = document.getElementById('storyList').getElementsByTagName('input');      
+        var answerList = JSON.parse(answers);
+
+        console.log("answer list: " + answerList);
+        console.log("answer 1: " + answerList[0] + ". answer 2: " + answerList[1]);
+
+        for (var answer in answerList) {
+            console.log(answerList[answer]);
+            $(stories[answerList[answer]]).css('text-decoration', 'line-through');
+        }
     }
 
     function EndGame() {
@@ -812,12 +847,37 @@ $(document).ready(function () {
     });
 
     $('#btn-activatePowerup-1').click(function () {
+        if (currentRoomCode.length != 0) {
+            connection.invoke("ActivatePowerup", mySocketId, currentRoomCode, 1)
+        }
+    });
 
+    $('#btn-activatePowerup-2').click(function () {
+        if (currentRoomCode.length != 0) {
+            connection.invoke("ActivatePowerup", mySocketId, currentRoomCode, 2)
+        }
+    });
+
+    $('#btn-activatePowerup-3').click(function () {
+        console.log('3');
+        connection.invoke('ActivatePowerup', mySocketId, currentRoomCode, '3');
+    });
+
+    $('#btn-activatePowerup-4').click(function () {
+        if (currentRoomCode.length != 0) {
+            connection.invoke("ActivatePowerup", mySocketId, currentRoomCode, 4)
+        }
+    });
+
+    $('#btn-activatePowerup-5').click(function () {
+        if (currentRoomCode.length != 0) {
+            connection.invoke("ActivatePowerup", mySocketId, currentRoomCode, 5)
+        }
     });
 
     $.kickUser = function (socketId) {
         if (currentRoomCode.length != 0) {
-            connection.invoke("LeaveRoom", userId, socketId, currentRoomCode, true);
+            connection.invoke("LeaveRoom", userId, mySocketId, currentRoomCode, true);
         }
     }
     // #endregion

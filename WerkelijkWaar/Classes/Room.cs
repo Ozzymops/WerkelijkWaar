@@ -107,7 +107,7 @@ namespace WerkelijkWaar.Classes
         /// <summary>
         /// Minimum amount of players needed to start the game. 3 by default
         /// </summary>
-        public int MinPlayers = 1;
+        public int MinPlayers = 3;
 
         /// <summary>
         /// Remaining amount of seconds for current game phase
