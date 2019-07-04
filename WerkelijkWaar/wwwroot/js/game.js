@@ -31,7 +31,7 @@ $(document).ready(function () {
     // #endregion
 
     // #region WebSockets
-    var connection = new WebSocketManager.Connection('wss://localhost:44357/game');
+    var connection = new WebSocketManager.Connection('wss://10.0.0.51:44357/game');
     connection.enableLogging = false;
 
     // -- On connect: add connection to global list. Also clean current data with .trim()
