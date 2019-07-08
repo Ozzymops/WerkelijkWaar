@@ -16,9 +16,21 @@ namespace WerkelijkWaar
 {
     public class Startup
     {
+        /// <summary>
+        /// Returns information about the hosting environment - used to get the server path for uploading avatars
+        /// </summary>
+        private readonly IHostingEnvironment hostingEnvironment;
+
         public Startup(IConfiguration configuration)
         {
             Configuration = configuration;
+
+            Classes.Logger logger = new Classes.Logger();
+
+            // create logs-folder
+            string path = System.IO.Path.GetDirectoryName(System.Reflection.Assembly.GetExecutingAssembly().Location);
+            path += @"\Logs";
+            System.IO.Directory.CreateDirectory(path);
         }
 
         public IConfiguration Configuration { get; }

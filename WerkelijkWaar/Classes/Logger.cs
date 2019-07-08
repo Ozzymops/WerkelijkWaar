@@ -25,27 +25,29 @@ namespace WerkelijkWaar.Classes
         /// <param name="console">Write to console also?</param>
         public void Log(string origin, string message, int state, int file, bool console)
         {
+            // Get path
+            string path = Path.GetDirectoryName(System.Reflection.Assembly.GetExecutingAssembly().Location);
+            path += @"\Logs\";
+
             // Log to console
             if (console)
             {
                 if (state == 0)
                 {
                     // Open
-                    Debug.WriteLine("---[CONSOLE ENTRY]---");
-                    Debug.WriteLine(origin);
-                    Debug.WriteLine(DateTime.Now.ToShortDateString() + " | " + DateTime.Now.ToShortTimeString() + ": " + message);
+                    Debug.WriteLine("--------------------------");
+                    Debug.WriteLine(DateTime.Now.ToShortDateString() + " | " + DateTime.Now.ToShortTimeString() + " '" + origin +  "' : " + message);
                 }
                 else if (state == 1)
                 {
                     // Content
-                    Debug.WriteLine(DateTime.Now.ToShortDateString() + " | " + DateTime.Now.ToShortTimeString() + ": " + message);
+                    Debug.WriteLine(DateTime.Now.ToShortDateString() + " | " + DateTime.Now.ToShortTimeString() + " '" + origin + "' : " + message);
                 }
                 else if (state == 2)
                 {
                     // Close
-                    Debug.WriteLine(DateTime.Now.ToShortDateString() + " | " + DateTime.Now.ToShortTimeString() + ": " + message);
-                    Debug.WriteLine(DateTime.Now.ToShortDateString() + " | " + DateTime.Now.ToShortTimeString() + ": End.");
-                    Debug.WriteLine("--------[END]--------\n");
+                    Debug.WriteLine(DateTime.Now.ToShortDateString() + " | " + DateTime.Now.ToShortTimeString() + " '" + origin + "' : " + message);
+                    Debug.WriteLine("--------------------------\n");
                 }
             }
 
@@ -74,26 +76,24 @@ namespace WerkelijkWaar.Classes
             }
 
             // Write to file
-            using (StreamWriter w = File.AppendText(fileName))
+            using (StreamWriter w = File.AppendText(path + fileName))
             {
                 if (state == 0)
                 {
                     // Open
-                    w.WriteLine("-----[LOG ENTRY]-----");
-                    w.WriteLine(origin);
-                    w.WriteLine(DateTime.Now.ToShortDateString() + " | " + DateTime.Now.ToShortTimeString() + ": " + message);
+                    w.WriteLine("--------------------------");
+                    w.WriteLine(DateTime.Now.ToLongDateString() + " | " + DateTime.Now.ToLongTimeString() + " '" + origin + "' : " + message);
                 }
                 else if (state == 1)
                 {
                     // Content
-                    w.WriteLine(DateTime.Now.ToShortDateString() + " | " + DateTime.Now.ToShortTimeString() + ": " + message);
+                    w.WriteLine(DateTime.Now.ToLongDateString() + " | " + DateTime.Now.ToLongTimeString() + " '" + origin + "' : " + message);
                 }
                 else if (state == 2)
                 {
                     // Close
-                    w.WriteLine(DateTime.Now.ToShortDateString() + " | " + DateTime.Now.ToShortTimeString() + ": " + message);
-                    w.WriteLine(DateTime.Now.ToShortDateString() + " | " + DateTime.Now.ToShortTimeString() + ": End.");
-                    w.WriteLine("--------[END]--------\n");
+                    w.WriteLine(DateTime.Now.ToLongDateString() + " | " + DateTime.Now.ToLongTimeString() + " '" + origin + "' : " + message);
+                    w.WriteLine("--------------------------\n");
                 }
             }
         }
