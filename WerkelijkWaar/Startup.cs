@@ -10,7 +10,7 @@ using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
-using WebSocketManager;
+// using WebSocketManager;
 
 namespace WerkelijkWaar
 {
@@ -38,9 +38,9 @@ namespace WerkelijkWaar
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddWebSocketManager();
+            // services.AddWebSocketManager();
 
-            services.AddSingleton<GameManager>();
+            // services.AddSingleton<GameManager>();
             services.Configure<CookiePolicyOptions>(options =>
             {
                 // This lambda determines whether user consent for non-essential cookies is needed for a given request.
@@ -67,8 +67,8 @@ namespace WerkelijkWaar
                 app.UseHsts();
             }
 
-            app.UseWebSockets();
-            app.MapWebSocketManager("/game", serviceProvider.GetService<GameHandler>());
+            // app.UseWebSockets();
+            // app.MapWebSocketManager("/game", serviceProvider.GetService<GameHandler>());
 
             app.UseHttpsRedirection();
             app.UseStaticFiles();
