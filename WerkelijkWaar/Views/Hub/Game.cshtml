@@ -12,6 +12,7 @@
             <input id="usernameHolder" type="hidden" value="@Model.User.Username" />
             <input id="roomCodeHolder" type="hidden" value="" />
             <input id="roleIdHolder" type="hidden" value="@Model.User.RoleId" />
+            <p id="connectionIdHolder" style="position: absolute; bottom: 0px; left: 120px;">CID: x</p>
             @if (Model.User.RoleId == 0)
             {
                 <!-- #region Student -->
@@ -130,7 +131,7 @@
                                         <p id="storyText" style="color: black; padding: 10px;">Verhaal</p>
                                     </div>
                                     <div class="game game-write write-column">
-                                        <input id="writtenStoryTitle" type="text" placeholder="Titel"/>
+                                        <input id="writtenStoryTitle" type="text" placeholder="Titel" />
                                         <textarea id="writtenStoryText" placeholder="Verhaal"></textarea>
                                     </div>
                                 </div>
@@ -244,6 +245,7 @@
                 <div id="game-connected" style="display: none;">
                     <div style="display: flex; flex-direction: column;">
                         <h2 id="gameCode" class="subtitle">Jouw spelcode is:</h2>
+                        <h2 class="subtitle">Wachten op minimaal zes spelers...</h2>
                         @*<ul id="playerList" style="display: flex; justify-content: space-around; border: 1px solid black; list-style-type: none; padding: 0; text-align: center;"></ul>*@
                         <ul id="playerList" style="display: flex; justify-content: space-around; border: 1px solid black; border-radius: 25px; list-style-type: none; text-align: center; padding: 0; margin-left: auto; margin-right: auto; width: 20vw;"></ul>
                         <p id="playerCount" class="before-input">0 spelers zijn verbonden.</p>
@@ -351,6 +353,6 @@
 </body>
 
 @section Scripts {
-    <script data-main="scripts/main" src="https://rawgit.com/radu-matei/websocket-manager/master/src/WebSocketManager.Client.TS/dist/WebSocketManager.js"></script>
+    <script src="~/lib/signalr/dist/browser/signalr.js"></script>
     <script src="~/js/game.js" language="javascript" type="text/javascript"></script>
 }

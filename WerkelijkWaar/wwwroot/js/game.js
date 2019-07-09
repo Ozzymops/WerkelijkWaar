@@ -7,7 +7,7 @@
 
 $(document).ready(function () {
     // #region Variables
-    var mySocketId = "";
+    var myId;
     var userId = $('#userIdHolder').val().trim();
     var username = $('#usernameHolder').val().trim();
     var currentRoomCode = $('#roomCodeHolder').val().trim();
@@ -17,7 +17,6 @@ $(document).ready(function () {
     var tickInterval = 0;
     var timer = 0;
     var currentTimer;
-    var inRoom = false;
     var powerupDrawer = false;
 
     var myGroup = 0;
@@ -30,172 +29,171 @@ $(document).ready(function () {
     var currentGroup = '';
     // #endregion
 
-    // #region WebSockets
-    var connection = new WebSocketManager.Connection('wss://10.0.0.51:44357/game');
-    connection.enableLogging = false;
+    // #region SignalR
+    var connection = new signalR.HubConnectionBuilder().withUrl("/gameHub").build();
+    connection.serverTimeoutInMilliseconds = 120000; // 120 second?
 
-    // -- On connect: add connection to global list. Also clean current data with .trim()
-    connection.connectionMethods.onConnected = () => {
-        console.log("Connection established: your socket ID = " + connection.connectionId);
-        mySocketId = connection.connectionId;
-        connection.invoke('AddConnection', connection.connectionId);
-    }
-
-    // -- Start
-    connection.start();
+    // -- On connect: add connection to global list.
+    connection.start().then(function () {
+        
+    })
     // #endregion
 
     // #region Connection
+    // -- Response to RetrieveConnectionId: set your connection ID
+    connection.on('retrieveConnectionId', function (connectionId) {
+        myId = connectionId;
+
+        $('#connectionIdHolder').html("CID: " + myId);
+    })
+
     // -- Response to PingToServer: ping to server to inform you're not idle
-    connection.clientMethods['pingToServer'] = (socketId) => {
-        if (mySocketId == socketId) {
-            connection.invoke('AddPong', connection.connectionId);
+    connection.on('pingToServer', function (connectionId) {
+        if (myId == connectionId) {
+            connection.invoke('AddPong', myId);
         }
-    }
+    })
     // #endregion
 
     // #region Communication
     // -- Response to SetStateMessage: change statusMessage <p> text
-    connection.clientMethods['setStateMessage'] = (socketId, message) => {
-        if (mySocketId == socketId) {
+    connection.on('setStateMessage', function (connectionId, message) {
+        if (myId == connectionId) {
             $('#statusMessage').html = message;
         }
-    }
+    })
     // #endregion
 
     // #region Rooms
     // -- Response to HostRoom
-    connection.clientMethods['hostRoom'] = (socketId, roomCode) => {
-        if (mySocketId == socketId) {
-            console.log("Loading lobby...");
-
-            HostRoom(roomCode);
-        }
-    }
+    connection.on('hostRoom', function (roomCode) {
+        HostRoom(roomCode);
+    })
 
     // -- Response to JoinRoom
-    connection.clientMethods['joinRoom'] = (socketId, roomCode) => {
-        if (mySocketId == socketId) {
-            console.log("Loading lobby...");
+    connection.on('joinRoom', function (roomCode) {
+        JoinRoom(roomCode);
+    })
 
-            JoinRoom(roomCode);
-        }
-    }
-
-    // -- Response to RetrieveConfigurationDataForTutorial
-    connection.clientMethods['retrieveConfigurationDataForTutorial'] = (roomCode, followersPerAnswer, followersPerVote, followersLost, moneyPerFollower) => {
+    // -- Response to RetrievePlayerList
+    connection.on('retrievePlayerList', function (ownerConnectionId, roomCode, playerList) {
         if (currentRoomCode == roomCode) {
-            RetrieveConfigurationDataForTutorial(followersPerAnswer, followersPerVote, followersLost, moneyPerFollower);
+            RetrievePlayerList(ownerConnectionId, playerList);
         }
-    }
+    })
 
     // -- Response to LeaveRoom
-    connection.clientMethods['leaveRoom'] = (socketId, kicked) => {
-        if (mySocketId == socketId) {
+    connection.on('leaveRoom', function (connectionId, kicked) {
+        console.log('Targeted connection ID: ' + connectionId);
+        console.log('My connection ID: ' + myId);
+
+        if (myId == connectionId) {
             console.log("Removed from lobby.");
 
             LeaveRoom(kicked);
         }
-    }
+    })
+    // #endregion
 
-    // -- Response to RetrievePlayerList
-    connection.clientMethods['retrievePlayerList'] = (ownerSocketId, roomCode, playerList) => {
+    // #region Visuals
+    // -- Response to RetrieveConfigurationDataForTutorial
+    connection.on('retrieveConfigurationDataForTutorial', function (roomCode, followersPerAnswer, followersPerVote, followersLost, moneyPerFollower) {
         if (currentRoomCode == roomCode) {
-            RetrievePlayerList(ownerSocketId, playerList);
+            RetrieveConfigurationDataForTutorial(followersPerAnswer, followersPerVote, followersLost, moneyPerFollower);
         }
-    }
+    })
     // #endregion
 
     // #region Game
     // -- Response to StartGame
-    connection.clientMethods['startGame'] = (roomCode, gameGroup) => {
+    connection.on('startGame', function (roomCode, gameGroup) {
         if (currentRoomCode == roomCode) {
             StartGame(gameGroup);
         }
-    }
+    })
 
     // -- Response to WritePhase
-    connection.clientMethods['writePhase'] = (roomCode) => {
+    connection.on('writePhase', function (roomCode) {
         if (currentRoomCode == roomCode) {
             WritePhase();
         }
-    }
+    })
 
     // -- Response to RetrieveRootStory
-    connection.clientMethods['retrieveRootStory'] = (roomCode, socketId, rootStory) => {
+    connection.on('retrieveRootStory', function (roomCode, socketId, rootStory) {
         if (currentRoomCode == roomCode) {
-            if (mySocketId == socketId) {
+            if (myId == socketId) {
                 RetrieveRootStory(rootStory);
             }
         }
-    }
+    })
 
     // -- Response to RetrieveWrittenStories
-    connection.clientMethods['retrieveWrittenStories'] = (roomCode, stories) => {
+    connection.on('retrieveWrittenStories', function (roomCode, stories) {
         if (currentRoomCode == roomCode) {
             RetrieveWrittenStories(stories);
         }
-    }
+    })
 
     // -- Response to ReadPhase
-    connection.clientMethods['readPhase'] = (roomCode, socketId, gameGroup, thisGroup) => {
+    connection.on('readPhase', function (roomCode, socketId, gameGroup, thisGroup) {
         if (currentRoomCode == roomCode) {
-            if (mySocketId == socketId) {
+            if (myId == socketId) {
                 ReadPhase(gameGroup, thisGroup);
             }
         }
-    }
+    })
 
     // -- Response to StartTimer
-    connection.clientMethods['startTimer'] = (roomCode, time) => {
+    connection.on('startTimer', function (roomCode, time) {
         if (currentRoomCode == roomCode) {
             StartTimer(time);
         }
-    }
+    })
 
     // -- Response to StopTimer
-    connection.clientMethods['stopTimer'] = (roomCode) => {
+    connection.on('stopTimer', function (roomCode) {
         if (currentRoomCode == roomCode) {
             StopTimer();
         }
-    }
+    })
 
     // -- Response to UpdateScore
-    connection.clientMethods['updateScore'] = (roomCode, socketId, result, cash, followers, followerChange, cashGain, ranking, end, allowed) => {
+    connection.on('updateScore', function (roomCode, socketId, result, cash, followers, followerChange, cashGain, ranking, end, allowed) {
         if (currentRoomCode == roomCode) {
-            if (mySocketId == socketId || roleId == 1) {
+            if (myId == socketId || roleId == 1) {
                 UpdateScore(socketId, result, cash, followers, followerChange, cashGain, ranking, end, allowed);
             }
         }
-    }
+    })
 
     // -- Response to PowerupVisuals
-    connection.clientMethods['powerupVisuals'] = (roomCode, powerupsAllowed, powerupsCosts) => {
+    connection.on('powerupVisuals', function (roomCode, powerupsAllowed, powerupsCosts) {
         if (currentRoomCode == roomCode) {
             UpdatePowerups(powerupsAllowed, powerupsCosts);
         }
-    }
+    })
 
     // -- Response to ActivatePowerup
-    connection.clientMethods['activatePowerup'] = (socketId, roomCode, powerup, cash) => {
+    connection.on('activatePowerup', function (socketId, roomCode, powerup, cash) {
         if (currentRoomCode == roomCode) {
-            if (mySocketId == socketId) {
+            if (myId == socketId) {
                 ActivatePowerup(powerup, cash);
             }
         }
-    }
+    })
 
     // -- Response to CrossOutWrongAnswers
-    connection.clientMethods['crossOutWrongAnswers'] = (socketId, roomCode, answers) => {
+    connection.on('crossOutWrongAnswers', function (socketId, roomCode, answers) {
         if (currentRoomCode == roomCode) {
-            if (mySocketId == socketId) {
+            if (myId == socketId) {
                 CrossOutWrongAnswers(answers);
             }
         }
-    }
+    })
     // #endregion
 
-    // #region Client Methods
+    // #region JavaScript functions
     function HideNavigationBars() {
         $('#html').css('background-color', '#7b6ea4');
         $('#body').css('background-color', '#7b6ea4');
@@ -295,7 +293,10 @@ $(document).ready(function () {
         $('#moneyGainedPerFollowerString').html('= €' + moneyGainedPerFollower + '-');
     }
 
-    function RetrievePlayerList(ownerSocketId, playerList) {
+    function RetrievePlayerList(ownerConnectionId, playerList) {
+        console.log("Owner connection ID = " + ownerConnectionId);
+        console.log("My connection ID = " + myId);
+
         $('#playerList').empty();
 
         var nameList = JSON.parse(playerList);
@@ -303,11 +304,14 @@ $(document).ready(function () {
         for (var name in nameList) {
             var nameString = nameList[name].split(':|!');
 
-            if (mySocketId == ownerSocketId) {
+            if (myId == ownerConnectionId) {
+                console.log("Connection ID matched!");
                 $('#playerList').append('<li>' + nameString[0] + '<input class="form-button-orange" onClick="$.kickUser(' + "'" + nameString[1] + "'" + ')" type="button" value="Kick" style="width: 50px; height: 30px;" />' + '</li>');
             }
             else {
-                if (mySocketId == nameString[1]) {
+                console.log("Connection ID did not match.");
+
+                if (myId == nameString[1]) {
                     $('#playerList').append('<li style="color: red;">' + nameString[0] + '</li>');
                 }
                 else {
@@ -347,7 +351,7 @@ $(document).ready(function () {
             case 3:
                 $('#game-waiting').css('display', 'block');
                 if (roleId != 1) {
-                    connection.invoke('ReadyUpPlayer', mySocketId, currentRoomCode);
+                    connection.invoke('ReadyUpPlayer', myId, currentRoomCode);
                 }
                 break;
 
@@ -570,7 +574,7 @@ $(document).ready(function () {
         $('#write-finished').css('display', 'block');
 
         var story = storySource + "_+_" + $('#writtenStoryTitle').val().trim() + "_+_" + $('#writtenStoryText').val().trim();
-        connection.invoke('UploadStory', mySocketId, currentRoomCode, story);
+        connection.invoke('UploadStory', myId, currentRoomCode, story);
     }
 
     function UploadAnswer() {
@@ -584,14 +588,14 @@ $(document).ready(function () {
             $('#game-read').css('display', 'block');
             $('#read-finished').css('display', 'block');
 
-            connection.invoke('UploadAnswer', mySocketId, currentRoomCode, selectedAnswer);
+            connection.invoke('UploadAnswer', myId, currentRoomCode, selectedAnswer);
 
             maxAnswers = 1;
             selectedAnswer = '';
         }
     }
 
-    function UpdateScore(socketId, result, cash, followers, followerChange, cashGain, ranking, end, allowed) {
+    function UpdateScore(connectionId, result, cash, followers, followerChange, cashGain, ranking, end, allowed) {
         HideAll();
 
         StopTimer();
@@ -645,11 +649,11 @@ $(document).ready(function () {
         }
 
         if (allowed || roleId == 0) {
-            setTimeout(function () { ShowLeaderboard(socketId, ranking, end); }, 5000);
+            setTimeout(function () { ShowLeaderboard(connectionId, ranking, end); }, 5000);
         }
     }
 
-    function ShowLeaderboard(socketId, ranking, end) {
+    function ShowLeaderboard(connectionId, ranking, end) {
         HideAll();
 
         $('#html').css('background-color', '#f5b91a');
@@ -674,7 +678,7 @@ $(document).ready(function () {
             for (var rank in rankList) {
                 var rankContent = rankList[rank].split(':|!');
 
-                if (mySocketId == rankContent[1]) {
+                if (myId == rankContent[1]) {
                     $('#rankString').html('Jij bent nummer ' + rankContent[0]);
                 }
             }
@@ -687,11 +691,11 @@ $(document).ready(function () {
             setTimeout(EndGame, 10000);
         }
         else {
-            setTimeout(function () { ResetColours(socketId); }, 5000);
-        }       
+            setTimeout(function () { ResetColours(connectionId); }, 5000);
+        }
     }
 
-    function ResetColours(socketId) {
+    function ResetColours(connectionId) {
         $('#html').css('background-color', '#7b6ea4');
         $('#body').css('background-color', '#7b6ea4');
 
@@ -775,7 +779,7 @@ $(document).ready(function () {
     }
 
     function CrossOutWrongAnswers(answers) {
-        var stories = document.getElementById('storyList').getElementsByTagName('input');      
+        var stories = document.getElementById('storyList').getElementsByTagName('input');
         var answerList = JSON.parse(answers);
 
         console.log("answer list: " + answerList);
@@ -797,33 +801,29 @@ $(document).ready(function () {
 
     // #region Buttons/Input
     $('#btn-hostLobby').click(function () {
-        connection.invoke('AddConnection', connection.connectionId);
-
         if (username.length != 0) {
-            connection.invoke('HostRoom', userId, mySocketId, username);
+            connection.invoke('HostRoom', userId, username);
         }
     });
 
     $('#btn-joinLobby').click(function () {
-        connection.invoke('AddConnection', mySocketId);
-
         currentRoomCode = $('#roomCodeInput').val().trim();
 
         if (username.length != 0 && currentRoomCode.length != 0) {
-            connection.invoke('JoinRoom', userId, mySocketId, username, currentRoomCode);
+            connection.invoke('JoinRoom', userId, username, currentRoomCode);
         }
     });
 
     $('#btn-leaveLobby').click(function () {
-        connection.invoke('LeaveRoom', userId, mySocketId, currentRoomCode, false);
+        connection.invoke('LeaveRoom', userId, myId, currentRoomCode, false);
     });
 
     $('#btn-leaveGameOnEnd').click(function () {
-        connection.invoke('LeaveRoom', userId, mySocketId, currentRoomCode, false);
+        connection.invoke('LeaveRoom', userId, myId, currentRoomCode, false);
     });
 
     $('#btn-startGame').click(function () {
-        connection.invoke('StartGame', mySocketId, currentRoomCode);
+        connection.invoke('StartGame', myId, currentRoomCode);
     });
 
     $('.btn-continueTutorial').click(function () {
@@ -848,36 +848,36 @@ $(document).ready(function () {
 
     $('#btn-activatePowerup-1').click(function () {
         if (currentRoomCode.length != 0) {
-            connection.invoke("ActivatePowerup", mySocketId, currentRoomCode, 1)
+            connection.invoke("ActivatePowerup", myId, currentRoomCode, 1)
         }
     });
 
     $('#btn-activatePowerup-2').click(function () {
         if (currentRoomCode.length != 0) {
-            connection.invoke("ActivatePowerup", mySocketId, currentRoomCode, 2)
+            connection.invoke("ActivatePowerup", myId, currentRoomCode, 2)
         }
     });
 
     $('#btn-activatePowerup-3').click(function () {
         console.log('3');
-        connection.invoke('ActivatePowerup', mySocketId, currentRoomCode, '3');
+        connection.invoke('ActivatePowerup', myId, currentRoomCode, '3');
     });
 
     $('#btn-activatePowerup-4').click(function () {
         if (currentRoomCode.length != 0) {
-            connection.invoke("ActivatePowerup", mySocketId, currentRoomCode, 4)
+            connection.invoke("ActivatePowerup", myId, currentRoomCode, 4)
         }
     });
 
     $('#btn-activatePowerup-5').click(function () {
         if (currentRoomCode.length != 0) {
-            connection.invoke("ActivatePowerup", mySocketId, currentRoomCode, 5)
+            connection.invoke("ActivatePowerup", myId, currentRoomCode, 5)
         }
     });
 
-    $.kickUser = function (socketId) {
+    $.kickUser = function (connectionId) {
         if (currentRoomCode.length != 0) {
-            connection.invoke("LeaveRoom", userId, mySocketId, currentRoomCode, true);
+            connection.invoke("LeaveRoom", userId, connectionId, currentRoomCode, true);
         }
     }
     // #endregion

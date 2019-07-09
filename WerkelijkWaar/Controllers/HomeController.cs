@@ -59,7 +59,8 @@ namespace WerkelijkWaar.Controllers
         /// <returns>View</returns>
         public IActionResult GameInfo()
         {
-            return View();
+            // return View();
+            return View("SignalRTest");
         }
 
         /// <summary>

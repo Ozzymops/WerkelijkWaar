@@ -60,9 +60,9 @@ namespace WerkelijkWaar.Classes
 
         // Game
         /// <summary>
-        /// Current unique socket ID
+        /// Current unique connection ID
         /// </summary>
-        public string SocketId { get; set; }
+        public string ConnectionId { get; set; }
 
         /// <summary>
         /// Assigned game group

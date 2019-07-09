@@ -350,7 +350,7 @@ namespace WerkelijkWaar.Classes
                     // Create empty Score list
                     foreach (User user in Users)
                     {
-                        Score tempScore = new Score { OwnerId = user.Id, SocketId = user.SocketId, Answers = "", AttainedVotes = 0, CashAmount = 0.00, CorrectAnswers = "", GameType = 0, FollowerAmount = 0, Date = DateTime.Now };
+                        Score tempScore = new Score { OwnerId = user.Id, ConnectionId = user.ConnectionId, Answers = "", AttainedVotes = 0, CashAmount = 0.00, CorrectAnswers = "", GameType = 0, FollowerAmount = 0, Date = DateTime.Now };
                         SelectedAnswers.Add(tempScore);
                     }
 

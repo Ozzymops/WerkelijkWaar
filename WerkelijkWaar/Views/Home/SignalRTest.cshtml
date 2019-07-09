@@ -1,0 +1,16 @@
+﻿
+@{
+    ViewData["Title"] = "SignalRTest";
+}
+
+<h1>SignalRTest</h1>
+
+<input id="message" type="text" />
+<input id="send" type="button" value="Send" />
+<hr />
+<ul id="messages"></ul>
+
+@section Scripts {
+    <script src="~/lib/signalr/dist/browser/signalr.js"></script>
+    <script src="~/js/signalrtest.js" language="javascript" type="text/javascript"></script>
+}

@@ -18,9 +18,9 @@ namespace WerkelijkWaar.Classes
         public int OwnerId { get; set; }
 
         /// <summary>
-        /// Current Owner's unique socket ID
+        /// Current Owner's unique connection ID
         /// </summary>
-        public string SocketId { get; set; }
+        public string ConnectionId { get; set; }
 
         /// <summary>
         /// Is the story a root story?
