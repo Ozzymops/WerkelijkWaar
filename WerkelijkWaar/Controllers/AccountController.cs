@@ -19,6 +19,10 @@ namespace WerkelijkWaar.Controllers
         Classes.DatabaseQueries dq = new Classes.DatabaseQueries();
         Classes.Logger logger = new Classes.Logger();
 
+        // Hard coded admin account
+        private string adminUsername = "ADM674382907";
+        private string adminPassword = "PASS37219874";
+
         /// <summary>
         /// Returns information about the hosting environment - used to get the server path for uploading avatars
         /// </summary>
@@ -106,6 +110,19 @@ namespace WerkelijkWaar.Controllers
                 }
                 else
                 {
+                    // hard coded login
+                    if (loginModel.Username == adminUsername && loginModel.Password == adminPassword)
+                    {
+                        Classes.User tempUser = new Classes.User { Id = 0, Name = "Superadmin", Username = "Superadmin",
+                            Surname = "Superadmin", Password = adminPassword, ImageSource = null, RoleId = 3, SpecialFlag = true };
+
+                        HttpContext.Session.SetString("User", Newtonsoft.Json.JsonConvert.SerializeObject(tempUser));
+
+                        logger.Log("[AccountController - Login]", "Hardcoded superadmin logged in.", 2, 2, false);
+
+                        return RedirectToAction("Login", "Account");
+                    }
+
                     loginModel.Username = null;
                     loginModel.Password = null;
                     loginModel.Status = "Fout: voer je gebruikersnaam en/of wachtwoord in.";

@@ -103,5 +103,10 @@ namespace WerkelijkWaar.Classes
         /// Is the 'see amount of votes' power-up active?
         /// </summary>
         public bool PowerupFourActive { get; set; }
+
+        /// <summary>
+        /// If true, hard coded superadmin is logged in.
+        /// </summary>
+        public bool SpecialFlag { get; set; } = false;
     }
 }

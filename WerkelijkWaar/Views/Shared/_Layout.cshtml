@@ -51,12 +51,15 @@
                     {
                         <img class="layout top-bar-profile" src="~/content/image/Follower.png" alt="Profielfoto niet gevonden" title="Profielfoto niet gevonden" />
                     }
-                    <div>
-                        <p class="layout top-bar-profile" style="margin-top: 25px;">Welkom, @user.Name!</p>
+                <div>
+                    <p class="layout top-bar-profile" style="margin-top: 25px;">Welkom, @user.Name!</p>
+                    @if (!user.SpecialFlag)
+                    {
                         <form style="margin-top: -10px;">
                             <input asp-controller="Account" asp-action="AccountView" class="layout top-bar-profile" type="submit" value="Account" />
                         </form>
-                    </div>
+                    }
+                </div>
                 </div>
                 <div class="layout top-bar-logout">
                     <p class="layout top-bar-logout">Uitloggen</p>
